@@ -1,3 +1,7 @@
 pydantic
 instructor
 openai
+
+# jsons and schemas
+jsonpath-ng
+genson
