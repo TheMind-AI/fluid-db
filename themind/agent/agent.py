@@ -11,7 +11,7 @@ class Agent(object):
         # init Available Tools
         
     def run(self, uid: str, user_message: Message, thread: Thread):
-    
+        
         # create context for agent
         # get schema from StructMemory
         # get past Thread messages
@@ -27,3 +27,14 @@ class Agent(object):
             # to pick the function with its params
         
         # return the function
+
+
+if __name__ == '__main__':
+    
+    agent = Agent()
+    
+    uid = 'test'
+    thread = Thread.new_with_system_prompt(uid)
+    new_message = Message.user_message(text='hello')
+    
+    agent.run(uid=uid, user_message=new_message, thread=thread)

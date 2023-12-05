@@ -16,3 +16,7 @@ class Message(BaseModel):
     
     text: str
     role: Role
+    
+    @classmethod
+    def user_message(cls, message: str):
+        return cls(text=message, role=Role.USER)

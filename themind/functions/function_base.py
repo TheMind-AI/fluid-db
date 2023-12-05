@@ -3,8 +3,9 @@ import abc
 
 class FunctionBase(object):
     
-    def __call__(self):
-        pass
+    name: str
+    description: str
+    args_schema: Type[BaseModel]
     
     @abc.abstractmethod
     def run():
