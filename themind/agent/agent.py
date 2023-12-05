@@ -16,14 +16,11 @@ class Agent(object):
         # get schema from StructMemory
         # get past Thread messages
         
-        # run f:think to get the next function to run
-        
-        # for all functions run it:
-            # running functions async
-    
-         # how determine if done?
+        # run f:think_next_step to get the next function to run
+        # and run this until you get sent_message_to_user function which ends everything the agent run
+
             
-    def think(user_message: str, context: str) -> List[Function]:
+    def think_next_step(user_message: str, context: str) -> List[Function]:
         
         # reason about next step
             # call LLM
