@@ -9,48 +9,53 @@ from themind.llm.openai_llm import OpenAILLM
 
 
 class JsonPathExpr(BaseModel):
-    jsonPath: str = Field(..., description="Valid json path to query a json object based on provided schema")
+    jsonPath: str = Field(..., description="Valid JSON path to query a JSON object based on the provided schema.")
 
 
 class StructuredJsonMemory(MemoryBase):
 
-    def __init__(self, id: str):
-        self.id = id
+    def __init__(self):
         self.memory = {}
-        self._load_memory()
 
         self.llm = OpenAILLM()
 
-    def query(self, jsonPath: str) -> list:
+    def get_memory(self, uid: str):
+        if uid not in self.memory:
+            self._load_memory(uid)
+        return self.memory[uid]
+
+    def query(self, uid: str, json_path: str) -> list:
         
-        jsonPath = self.maybe_repair_jsonpath_expr(jsonPath)
+        jsonpath_expr = self.load_maybe_repair_jsonpath_expr(json_path)
         
-        jsonpath_expr = parse(jsonPath)
-        
-        matches = [match.value for match in jsonpath_expr.find(self.memory)]
+        matches = [match.value for match in jsonpath_expr.find(self.get_memory(uid))]
 
         return matches
     
-    def maybe_repair_jsonpath_expr(self, query: str) -> str:
+    def load_maybe_repair_jsonpath_expr(self, query: str) -> str:
         try:
             jsonpath_expr = jsonpath_ng.parse(query)
-        except Exception as e:
+        except Exception:
             prompt = f"""Invalid JSONPath query: {query}. 
             Please enter a valid JSONPath query based on this json schema: {self.schema()}"""
             response_model = self.llm.instruction_instructor(prompt, JsonPathExpr)
             jsonpath_expr = parse(response_model.jsonPath)
         
         return jsonpath_expr
-        
-    
-    def schema(self):
+
+    def schema(self, uid: str):
         builder = SchemaBuilder()
-        builder.add_object(self.memory)
+        
+        builder.add_object(self.get_memory(uid))
+        
         schema = builder.to_schema()
+    
         self._remove_required(schema)
         print(json.dumps(schema, indent=4))
+        
         schema = self._compress_schema(schema)
         print(json.dumps(schema, indent=4))
+        
         return schema
     
     def update(self, path: str, new_data: dict):
@@ -59,20 +64,20 @@ class StructuredJsonMemory(MemoryBase):
     def query_lang_prompt(self) -> str:
         return "For querying the memory, always use jsonPath. For example, to query all baz values in this json: {'foo': [{'baz': 1}, {'baz': 2}]} use foo[*].baz as the query parameter"
 
-    def add_value(self, path: str, value: any):
+    def add_value(self, uid: str, path: str, value: any):
         keys = path.split('.')
-        temp = self.memory
+        temp = self.get_memory(uid)
 
         for key in keys[:-1]:
             temp = temp.setdefault(key, {})
 
         temp[keys[-1]] = value
 
-        self._save_memory()
+        self._save_memory(uid, temp)
 
-    def append_to_list(self, path: str, value: any):
+    def append_to_list(self, uid: str, path: str, value: any):
         keys = path.split('.')
-        temp = self.memory
+        temp = self.get_memory(uid)
 
         for key in keys[:-1]:
             temp = temp.setdefault(key, {})
@@ -85,23 +90,27 @@ class StructuredJsonMemory(MemoryBase):
         else:
             temp[keys[-1]] = [value]
 
-        self._save_memory()
+        self._save_memory(uid, temp)
 
-    def _load_memory(self):
-        file_path = self._memory_file_path()
+    def _load_memory(self, uid: str):
+        file_path = self._memory_file_path(uid)
         if os.path.exists(file_path):
             with open(file_path, 'r') as f:
-                self.memory = json.load(f)
+                self.memory[uid] = json.load(f)
+        else:
+            self.memory[uid] = {}
     
-    def _memory_file_path(self):
+    def _memory_file_path(self, uid: str):
         base_dir = os.path.dirname(os.path.realpath(__file__))
-        file_path = os.path.join(base_dir, "data", f"{self.id}.json")
+        file_path = os.path.join(base_dir, "data", f"{uid}.json")
 
         return file_path
     
-    def _save_memory(self):
-        with open(self._memory_file_path(), 'w') as f:
-            json.dump(self.memory, f, indent=4)
+    def _save_memory(self, uid: str, new_memory: dict):
+        file_path = self._memory_file_path(uid)
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
+        with open(file_path, 'w') as f:
+            json.dump(new_memory, f, indent=4)
 
     def _compress_schema(self, schema):
         compressed_schema = {}
@@ -126,14 +135,20 @@ class StructuredJsonMemory(MemoryBase):
 
 
 if __name__ == "__main__":
-    memory = StructuredJsonMemory("1")
-    res = memory.query("name")
-    # memory.append_to_list("events", {
-    #         "location": "",
-    #         "time": "18:00",
-    #         "theme": "AI"
-    #     })
-    # memory.append_to_list("test_list", {"location": "Golden Gate", "time": "12:00"})
+    uid = '1'
+
+    memory = StructuredJsonMemory()
+
+    res = memory.query(uid, "name")
+    memory.append_to_list(uid, "events", {
+            "location": "",
+            "time": "18:00",
+            "theme": "AI"
+        })
+    memory.append_to_list(uid, "test_list", {"location": "Golden Gate", "time": "12:00"})
     
-    print(memory.memory)
-    print(memory.get_schema())
+    res = memory.query(uid, "events")
+    print(res)
+    
+    print(memory.get_memory(uid))
+    print(memory.schema(uid))
