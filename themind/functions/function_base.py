@@ -12,3 +12,13 @@ class FunctionBase(object):
     @abc.abstractmethod
     def run():
         raise NotImplementedError()
+
+    def openai_schema(self):
+        return {
+            "type": "function",
+            "function": {
+                "name": self.name,
+                "description": self.description,
+                "parameters": self.args_schema.model_json_schema()
+            }
+        }

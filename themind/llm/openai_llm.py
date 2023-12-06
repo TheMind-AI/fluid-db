@@ -62,15 +62,21 @@ class OpenAILLM(object):
         openai_tools = []
         for function in functions:
             # TODO: implement openai_schema
+            print(function)
             openai_tools.append(function.openai_schema())
-        
+
+        print(openai_tools)
+        print(messages)
+
         response = self.client.chat.completions.create(
             model=OpenAIModel.GPT4_TURBO.value,
             messages=messages,
             tools=openai_tools,            
             tool_choice="auto",
         )
-        
+
+        print(response)
+
         response_message = response.choices[0].message
         tool_calls = response_message.tool_calls
 

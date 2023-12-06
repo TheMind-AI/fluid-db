@@ -7,7 +7,7 @@ from themind.schema.function import Function
 
 
 class Role(Enum):
-    ASSISTANT = "assistent"
+    ASSISTANT = "assistant"
     USER = "user"
     SYSTEM = "system"
     TOOL = "tool"

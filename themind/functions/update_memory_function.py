@@ -3,11 +3,16 @@ from pydantic import BaseModel, Field
 from themind.functions.function_base import FunctionBase
 
 
+class UpdateMemoryFunctionArguments(BaseModel):
+    uid: str = Field(..., description="User id")
+    query: str = Field(..., description="Query to fetch memory")
+
+
 class UpdateMemoryFunction(FunctionBase):
 
-    name: str = "update-core-memory"
+    name: str = "update-memory"
     description: str = "Tool to update the structured memory of the user."
-    args_schema: Type[BaseModel] = None
+    args_schema: Type[BaseModel] = UpdateMemoryFunctionArguments
 
     def __init__(self):
         super().__init__()

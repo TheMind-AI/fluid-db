@@ -1,15 +1,19 @@
 from typing import Type
+from pydantic.fields import Field
 from pydantic import BaseModel
 from themind.llm.openai_llm import OpenAILLM
 from themind.functions.function_base import FunctionBase
 
 
+class SendMessageFunctionArguments(BaseModel):
+    uid: str = Field(..., description="User id")
+
+
 class SendMessageFunction(FunctionBase):
 
-    
-    name: str = "Retrive Memory"
-    description: str = "Tool to retrive memory from the user"
-    args_schema: Type[BaseModel] = None
+    name: str = "send-message-to-user"
+    description: str = "This function sends a message to the user."
+    args_schema: Type[BaseModel] = SendMessageFunctionArguments
     
     def __init__(self, llm=OpenAILLM()):
         super().__init__()

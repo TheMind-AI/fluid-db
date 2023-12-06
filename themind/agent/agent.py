@@ -44,15 +44,14 @@ class Agent(object):
         # TODO: fix memory_schema to accept uid, here we need to pass the uid
         memory_schema = self.structured_memory.schema()
         
-        prompt = """
-        This is a schema representation of my structured memory: {memory_schema}
+        prompt = """This is a schema representation of my structured memory: {memory_schema}
         """.format(memory_schema=memory_schema)
         
-        thread.add_message(message=Message.user_message(content=prompt))
+        thread.add_message(message=Message.assistent_message(content=prompt))
         
         # TODO: impl to_openai_messages
         messages = thread.to_openai_messages()
-        function_calls, reponse_text = self.llm.choose_function_call(messages=[messages], functions=self.functions)
+        function_calls, reponse_text = self.llm.choose_function_call(messages=messages, functions=self.functions)
         
         print(function_calls)
         print(reponse_text)
