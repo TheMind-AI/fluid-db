@@ -1,4 +1,6 @@
 import abc
+from pydantic import BaseModel
+from typing import Type
 
 
 class FunctionBase(object):

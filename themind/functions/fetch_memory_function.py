@@ -2,7 +2,7 @@ from typing import Type
 from pydantic import BaseModel, Field
 from themind.functions.function_base import FunctionBase
 from themind.retrievers.dummy_retriever import DummyRetriever
-from themind.retrievers.retriever_base import RetriverBase
+from themind.retrievers.retriever_base import RetrieverBase
 
 
 class FetchMemoryFunctionArguments(BaseModel):
@@ -17,7 +17,7 @@ class FetchMemoryFunction(FunctionBase):
     description: str = "Tool to retrive memory from the user"
     args_schema: Type[BaseModel] = FetchMemoryFunctionArguments
     
-    def __init__(self, retriver: RetriverBase = DummyRetriever()):
+    def __init__(self, retriver: RetrieverBase = DummyRetriever()):
         super().__init__()
         self.retriver = retriver
         

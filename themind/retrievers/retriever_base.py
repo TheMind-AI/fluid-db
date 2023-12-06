@@ -1,6 +1,7 @@
 import abc
 
-class RetrieverBase:
+
+class RetrieverBase(object):
     
     def __init__(self):
         pass

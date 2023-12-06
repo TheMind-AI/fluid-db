@@ -4,52 +4,60 @@ from themind.schema.message import Message
 from themind.llm.openai_llm import OpenAILLM
 from themind.schema.function import Function
 from themind.prompts.agent_prompt import AgentPrompt
-from themind.memory.struct_memory import StructuredMemory
+from themind.memory.structured_json_memory import StructuredJsonMemory
+from themind.functions.send_message_function import SendMessageFunction
+from themind.functions.fetch_memory_function import FetchMemoryFunction
+from themind.functions.update_memory_function import UpdateMemoryFunction
 
 
 class Agent(object):
 
     def __init__(self):
-        self.structed_memory = StructuredMemory()
+        self.structured_memory = StructuredJsonMemory(id='test')
         self.llm = OpenAILLM()
         
-        # TODO: init functions
-        self.functions = []
+        self.functions = [SendMessageFunction(), FetchMemoryFunction(), UpdateMemoryFunction()]
         
         self.functions_map = {}
-        for function in self.available_functions:
+        for function in self.functions:
             self.functions_map[function.name] = function
 
-    def run(self, uid: str, user_message: Message, thread: Thread):
+    def run(self, uid: str, thread: Thread):
         
-        # TODO: when to append to thread?
+        # TODO: update here the thread
         
         function_calls = []
-        while [call.name for call in function_calls] not in 'send_message':
-            function_calls = self.think_next_step(thread=thread)
+        while SendMessageFunction().name not in [call.name for call in function_calls]:
+            function_calls, reponse_text = self.think_next_step(uid=uid, thread=thread)
+            
+            thread.add_message(message=Message.function_message(content=reponse_text, functions=function_calls))
+            
             for function_call in function_calls:
+                # TODO: doesn't support streaming now!
                 reponse = self.functions_map[function_call.name].run(**function_call.args)
-                # TODO: appended to thread as assistent msg
+                thread.add_message(message=Message.assistent_message(content=reponse))
         
         return reponse
+
+    def think_next_step(self, uid: str, thread: Thread) -> List[Function]:
         
-            
-    def think_next_step(self, thread: Thread) -> List[Function]:
+        # TODO: fix memory_schema to accept uid, here we need to pass the uid
+        memory_schema = self.structured_memory.schema()
         
-        # not needed for now?
-        # prompt = AgentPrompt.v1.format(message=message, thread=thread)
+        prompt = """
+        This is a schema representation of my structured memory: {memory_schema}
+        """.format(memory_schema=memory_schema)
         
-        # TODO: append memory schema function calling decision.
-        memory_schema = self.structed_memory.get_schema(uid=uid)
+        thread.add_message(message=Message.user_message(content=prompt))
         
         # TODO: impl to_openai_messages
         messages = thread.to_openai_messages()
-        function_calls, reponse_text = self.llm.choose_function_call(messages=[messages], functions=self.available_functions)
+        function_calls, reponse_text = self.llm.choose_function_call(messages=[messages], functions=self.functions)
         
         print(function_calls)
         print(reponse_text)
         
-        return function_calls
+        return function_calls, reponse_text
 
 
 if __name__ == '__main__':
@@ -57,7 +65,10 @@ if __name__ == '__main__':
     agent = Agent()
     
     uid = 'test'
-    thread = Thread.new_with_system_prompt(uid)
-    new_message = Message.user_message(text='hello')
     
-    agent.run(uid=uid, user_message=new_message, thread=thread)
+    thread = Thread.new_with_system_prompt(uid)
+    
+    new_message = Message.user_message(content='hello')
+    thread.add_message(message=new_message)
+    
+    agent.run(uid=uid, thread=thread)

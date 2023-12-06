@@ -12,6 +12,9 @@ from themind.prompts.system_prompt import SystemPrompt
 from themind.functions.function_base import FunctionBase
 
 
+load_dotenv()
+
+
 class OpenAIModel(Enum): 
     GPT3_TURBO = 'gpt-3.5-turbo-1106'
     GPT4_TURBO = 'gpt-4-1106-preview'
@@ -21,12 +24,11 @@ class OpenAILLM(object):
 
     def __init__(self):
         
-        load_dotenv()
-        
         self.client = OpenAI(
             api_key=os.environ.get("OPENAI_API_KEY"),
         )
-        self.instructor_client = instructor.Instructor(self.client)
+
+        self.instructor_client = instructor.patch(self.client)
 
     @backoff.on_exception(backoff.expo, openai.RateLimitError)
     def instruction(self, prompt, model: OpenAIModel = OpenAIModel.GPT4_TURBO, temperature=0):
@@ -55,10 +57,11 @@ class OpenAILLM(object):
         return response.choices[0].message.content
     
     @backoff.on_exception(backoff.expo, openai.RateLimitError)
-    def choose_function_call(self, messages, functions: List[FunctionBase]) -> Tuple(List[Function], str):
+    def choose_function_call(self, messages, functions: List[FunctionBase]) -> Tuple[List[Function], str]:
         
         openai_tools = []
         for function in functions:
+            # TODO: implement openai_schema
             openai_tools.append(function.openai_schema())
         
         response = self.client.chat.completions.create(
