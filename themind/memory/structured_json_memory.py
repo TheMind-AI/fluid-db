@@ -28,10 +28,10 @@ class StructuredJsonMemory(MemoryBase):
         print(json.dumps(schema, indent=4))
         return schema
     
-    def update(path: str, new_data: dict):
+    def update(self, path: str, new_data: dict):
         pass
 
-    def query_lang_prompt() -> str:
+    def query_lang_prompt(self) -> str:
         return "For querying the memory, always use jsonPath. For example, to query all baz values in this json: {'foo': [{'baz': 1}, {'baz': 2}]} use foo[*].baz as the query parameter"
 
     def add_value(self, path: str, value: any):

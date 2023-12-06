@@ -5,16 +5,16 @@ class MemoryBase(object):
     id: str
 
     @abc.abstractmethod
-    def query(query: str) -> list:
+    def query(self, query: str) -> list:
         raise NotImplementedError()
     
     @abc.abstractmethod
-    def schema() -> str:
+    def schema(self) -> str:
         raise NotImplementedError()
     
     @abc.abstractmethod
-    def update(path: str, new_data: dict):
+    def update(self, path: str, new_data: dict):
         raise NotImplementedError()
     
-    def query_lang_prompt() -> str:
+    def query_lang_prompt(self) -> str:
         raise NotImplementedError()
