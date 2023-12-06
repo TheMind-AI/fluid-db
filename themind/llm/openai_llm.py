@@ -12,9 +12,6 @@ from themind.prompts.system_prompt import SystemPrompt
 from themind.functions.function_base import FunctionBase
 
 
-instructor.patch()
-
-
 class OpenAIModel(Enum): 
     GPT3_TURBO = 'gpt-3.5-turbo-1106'
     GPT4_TURBO = 'gpt-4-1106-preview'
@@ -29,9 +26,10 @@ class OpenAILLM(object):
         self.client = OpenAI(
             api_key=os.environ.get("OPENAI_API_KEY"),
         )
+        self.instructor_client = instructor.Instructor(self.client)
 
     @backoff.on_exception(backoff.expo, openai.RateLimitError)
-    def instraction(self, prompt, model: OpenAIModel = OpenAIModel.GPT4_TURBO, temperature=0):
+    def instruction(self, prompt, model: OpenAIModel = OpenAIModel.GPT4_TURBO, temperature=0):
         print(model)
         response = self.client.chat.completions.create(
             model=model.value,
@@ -44,8 +42,8 @@ class OpenAILLM(object):
         return response.choices[0].message.content
 
     @backoff.on_exception(backoff.expo, openai.RateLimitError)
-    def instraction_instructor(self, prompt, response_model, model: OpenAIModel = OpenAIModel.GPT4_TURBO, temperature=0):
-        response = self.client.chat.completions.create(
+    def instruction_instructor(self, prompt, response_model, model: OpenAIModel = OpenAIModel.GPT4_TURBO, temperature=0):
+        response = self.instructor_client.chat.completions.create(
             model=model,
             temperature=temperature,
             messages=[
