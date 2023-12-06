@@ -2,16 +2,37 @@ import os
 import json
 from jsonpath_ng import parse
 from genson import SchemaBuilder
+from themind.memory.memory_base import MemoryBase
 
-
-class StructuredMemory:
+class StructuredJsonMemory(MemoryBase):
 
 
     def __init__(self, id: str):
         self.id = id
         self.memory = {}
-        self.schema = ""
         self._load_memory()
+
+    def query(self, jsonPath: str) -> list:
+        jsonpath_expr = parse(jsonPath)
+        matches = [match.value for match in jsonpath_expr.find(self.memory)]
+
+        return matches
+    
+    def schema(self):
+        builder = SchemaBuilder()
+        builder.add_object(self.memory)
+        schema = builder.to_schema()
+        self._remove_required(schema)
+        print(json.dumps(schema, indent=4))
+        schema = self._compress_schema(schema)
+        print(json.dumps(schema, indent=4))
+        return schema
+    
+    def update(self, path: str, new_data: dict):
+        pass
+
+    def query_lang_prompt(self) -> str:
+        return "For querying the memory, always use jsonPath. For example, to query all baz values in this json: {'foo': [{'baz': 1}, {'baz': 2}]} use foo[*].baz as the query parameter"
 
     def add_value(self, path: str, value: any):
         keys = path.split('.')
@@ -41,15 +62,6 @@ class StructuredMemory:
 
         self._save_memory()
 
-    def get_schema(self):
-        builder = SchemaBuilder()
-        builder.add_object(self.memory)
-        schema = builder.to_schema()
-        self._remove_required(schema)
-        print(json.dumps(schema, indent=4))
-        schema = self._compress_schema(schema)
-        print(json.dumps(schema, indent=4))
-        return schema
 
     def _load_memory(self):
         file_path = self._memory_file_path()
@@ -67,11 +79,6 @@ class StructuredMemory:
         with open(self._memory_file_path(), 'w') as f:
             json.dump(self.memory, f, indent=4)
 
-    def query(self, jsonPath: str) -> list:
-        jsonpath_expr = parse(jsonPath)
-        matches = [match.value for match in jsonpath_expr.find(self.memory)]
-
-        return matches
     
     def _compress_schema(self, schema):
         compressed_schema = {}
@@ -96,7 +103,7 @@ class StructuredMemory:
 
 
 if __name__ == "__main__":
-    memory = StructuredMemory("1")
+    memory = StructuredJsonMemory("1")
     res = memory.query("name")
     # memory.append_to_list("events", {
     #         "location": "",
