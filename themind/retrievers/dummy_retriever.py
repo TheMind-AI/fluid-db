@@ -1,5 +1,5 @@
 import abc
-from themind.memory.struct_memory import StructuredMemory
+from themind.memory.structured_json_memory import StructuredJsonMemory
 from themind.retrievers.retriever_base import RetriverBase
 
 
@@ -8,7 +8,7 @@ class DummyRetriever(RetriverBase):
     def __init__(self):
         super().__init__()
         
-        self.struct_memory = StructuredMemory()
+        self.struct_memory = StructuredJsonMemory()
     
     @abc.abstractmethod
     def retrieve(self, uid: str, query: str, context: str):

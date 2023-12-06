@@ -1,4 +1,4 @@
-from themind.memory.struct_memory import StructMemory
+from themind.memory.structured_json_memory import StructMemory
 from themind.schema.thread import Thread
 from themind.schema.message import Message
 
@@ -6,6 +6,7 @@ from themind.schema.message import Message
 class Agent(object):
 
     def __init__(self):
+        # self.struct_memory = StructMemory()
         # init LLM
         # init StructMemory
         # init Available Tools
@@ -27,6 +28,8 @@ class Agent(object):
             # to pick the function with its params
         
         # return the function
+
+
 
 
 if __name__ == '__main__':

@@ -28,7 +28,7 @@ class OpenAILLM(object):
         )
 
     @backoff.on_exception(backoff.expo, openai.RateLimitError)
-    def instraction(self, prompt, model: OpenAIModel = OpenAIModel.GPT4_TURBO, temperature=0):
+    def instruction(self, prompt, model: OpenAIModel = OpenAIModel.GPT4_TURBO, temperature=0):
         print(model)
         response = self.client.chat.completions.create(
             model=model.value,
@@ -41,7 +41,7 @@ class OpenAILLM(object):
         return response.choices[0].message.content
 
     @backoff.on_exception(backoff.expo, openai.RateLimitError)
-    def instraction_instructor(self, prompt, response_model, model: OpenAIModel = OpenAIModel.GPT4_TURBO, temperature=0):
+    def instruction_instructor(self, prompt, response_model, model: OpenAIModel = OpenAIModel.GPT4_TURBO, temperature=0):
         response = self.client.chat.completions.create(
             model=model,
             temperature=temperature,
