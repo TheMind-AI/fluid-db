@@ -7,5 +7,5 @@ class RetrieverBase(object):
         pass
     
     @abc.abstractmethod
-    def retrieve(self, uid: str, query: str, context: str):
+    def retrieve(self, uid: str, query: str):
         raise NotImplementedError("Subclasses should implement this!")

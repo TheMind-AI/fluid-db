@@ -1,22 +1,47 @@
 import os
 import json
+import jsonpath_ng
+from pydantic import BaseModel, Field
 from jsonpath_ng import parse
 from genson import SchemaBuilder
 from themind.memory.memory_base import MemoryBase
+from themind.llm.openai_llm import OpenAILLM
+
+
+class JsonPathExpr(BaseModel):
+    jsonPath: str = Field(..., description="Valid json path to query a json object based on provided schema")
+
 
 class StructuredJsonMemory(MemoryBase):
-
 
     def __init__(self, id: str):
         self.id = id
         self.memory = {}
         self._load_memory()
 
+        self.llm = OpenAILLM()
+
     def query(self, jsonPath: str) -> list:
+        
+        jsonPath = self.maybe_repair_jsonpath_expr(jsonPath)
+        
         jsonpath_expr = parse(jsonPath)
+        
         matches = [match.value for match in jsonpath_expr.find(self.memory)]
 
         return matches
+    
+    def maybe_repair_jsonpath_expr(self, query: str) -> str:
+        try:
+            jsonpath_expr = jsonpath_ng.parse(query)
+        except Exception as e:
+            prompt = f"""Invalid JSONPath query: {query}. 
+            Please enter a valid JSONPath query based on this json schema: {self.schema()}"""
+            response_model = self.llm.instruction_instructor(prompt, JsonPathExpr)
+            jsonpath_expr = parse(response_model.jsonPath)
+        
+        return jsonpath_expr
+        
     
     def schema(self):
         builder = SchemaBuilder()
@@ -62,7 +87,6 @@ class StructuredJsonMemory(MemoryBase):
 
         self._save_memory()
 
-
     def _load_memory(self):
         file_path = self._memory_file_path()
         if os.path.exists(file_path):
@@ -79,7 +103,6 @@ class StructuredJsonMemory(MemoryBase):
         with open(self._memory_file_path(), 'w') as f:
             json.dump(self.memory, f, indent=4)
 
-    
     def _compress_schema(self, schema):
         compressed_schema = {}
         for key, value in schema.items():

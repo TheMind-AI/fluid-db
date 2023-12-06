@@ -11,8 +11,9 @@ class DummyRetriever(RetrieverBase):
         self.struct_memory = StructuredJsonMemory(id='test')
     
     @abc.abstractmethod
-    def retrieve(self, uid: str, query: str, context: str):
-        raise NotImplementedError()
-        # fetch json reduced schema
-        # ask ai to generate a jsonpath query based on the context and reduced json schema
-        # run it and return the data
+    def retrieve(self, uid: str, query: str):
+        
+        results = self.struct_memory.query(jsonPath=query)
+        
+        return results
+

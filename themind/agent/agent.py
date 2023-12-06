@@ -37,7 +37,7 @@ class Agent(object):
             thread.add_message(message=Message.function_message(content='', functions=function_calls))
             
             for function_call in function_calls:
-                # TODO: doesn't support streaming now!
+                function_call.args['uid'] = uid
                 response = self.functions_map[function_call.name].run(**function_call.args)
                 thread.add_message(message=Message.assistent_message(content=response))
         

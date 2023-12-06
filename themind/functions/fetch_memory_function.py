@@ -20,6 +20,6 @@ class FetchMemoryFunction(FunctionBase):
         self.retriever = retriever
         
     def run(self, uid: str, query: str):
-        return self.retriever.retrive(uid=uid, query=query)
+        return self.retriever.retrieve(uid=uid, query=query)
 
 
