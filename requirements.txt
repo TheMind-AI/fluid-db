@@ -1,7 +1,12 @@
+python-dotenv
+
 pydantic
 instructor
 openai
+backoff
 
 # jsons and schemas
 jsonpath-ng
 genson
+
+

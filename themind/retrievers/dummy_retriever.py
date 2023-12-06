@@ -1,8 +1,9 @@
 import abc
-from themind.memory.structured_memory import StructuredMemory
+from themind.memory.struct_memory import StructuredMemory
+from themind.retrievers.retriever_base import RetriverBase
 
 
-class DummyRetriever:
+class DummyRetriever(RetriverBase):
     
     def __init__(self):
         super().__init__()
