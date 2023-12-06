@@ -85,7 +85,7 @@ class OpenAILLM(object):
             for tool_call in tool_calls:
                 f_name = tool_call.function.name
                 f_args = json.loads(tool_call.function.arguments)
-                function = Function(f_name, f_args) 
+                function = Function(name=f_name, args=f_args)
                 functions_to_call.append(function)
 
         return functions_to_call, response_message.content

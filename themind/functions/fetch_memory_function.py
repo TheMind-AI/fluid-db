@@ -6,7 +6,6 @@ from themind.retrievers.retriever_base import RetrieverBase
 
 
 class FetchMemoryFunctionArguments(BaseModel):
-    uid: str = Field(..., description="User id")
     query: str = Field(..., description="Query to fetch memory")
 
 

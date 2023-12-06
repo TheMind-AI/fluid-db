@@ -6,7 +6,7 @@ from themind.functions.function_base import FunctionBase
 
 
 class SendMessageFunctionArguments(BaseModel):
-    uid: str = Field(..., description="User id")
+    pass
 
 
 class SendMessageFunction(FunctionBase):

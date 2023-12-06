@@ -4,8 +4,7 @@ from themind.functions.function_base import FunctionBase
 
 
 class UpdateMemoryFunctionArguments(BaseModel):
-    uid: str = Field(..., description="User id")
-    query: str = Field(..., description="Query to fetch memory")
+    query: str = Field(..., description="Information to update or save in the memory.")
 
 
 class UpdateMemoryFunction(FunctionBase):

@@ -28,16 +28,20 @@ class Agent(object):
         
         function_calls = []
         while SendMessageFunction().name not in [call.name for call in function_calls]:
-            function_calls, reponse_text = self.think_next_step(uid=uid, thread=thread)
-            
-            thread.add_message(message=Message.function_message(content=reponse_text, functions=function_calls))
+            function_calls, response_text = self.think_next_step(uid=uid, thread=thread)
+
+            if response_text:
+                thread.add_message(message=Message.assistent_message(content=response_text))
+                return response_text
+
+            thread.add_message(message=Message.function_message(content='', functions=function_calls))
             
             for function_call in function_calls:
                 # TODO: doesn't support streaming now!
-                reponse = self.functions_map[function_call.name].run(**function_call.args)
-                thread.add_message(message=Message.assistent_message(content=reponse))
+                response = self.functions_map[function_call.name].run(**function_call.args)
+                thread.add_message(message=Message.assistent_message(content=response))
         
-        return reponse
+        return response
 
     def think_next_step(self, uid: str, thread: Thread) -> List[Function]:
         
@@ -51,12 +55,12 @@ class Agent(object):
         
         # TODO: impl to_openai_messages
         messages = thread.to_openai_messages()
-        function_calls, reponse_text = self.llm.choose_function_call(messages=messages, functions=self.functions)
+        function_calls, response_text = self.llm.choose_function_call(messages=messages, functions=self.functions)
         
         print(function_calls)
-        print(reponse_text)
+        print(response_text)
         
-        return function_calls, reponse_text
+        return function_calls, response_text
 
 
 if __name__ == '__main__':
@@ -64,10 +68,11 @@ if __name__ == '__main__':
     agent = Agent()
     
     uid = 'test'
+    message = 'what exams do i have tomrrow? I like skateboarding.'
     
     thread = Thread.new_with_system_prompt(uid)
     
-    new_message = Message.user_message(content='hello')
+    new_message = Message.user_message(content=message)
     thread.add_message(message=new_message)
     
     agent.run(uid=uid, thread=thread)
