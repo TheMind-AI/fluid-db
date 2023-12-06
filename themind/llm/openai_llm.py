@@ -69,7 +69,7 @@ class OpenAILLM(object):
             tools=openai_tools,            
             tool_choice="auto",
         )
-
+        
         response_message = response.choices[0].message
         tool_calls = response_message.tool_calls
 
