@@ -1,32 +1,55 @@
-from themind.memory.struct_memory import StructMemory
+from typing import List
 from themind.schema.thread import Thread
 from themind.schema.message import Message
+from themind.llm.openai_llm import OpenAILLM
+from themind.schema.function import Function
+from themind.prompts.agent_prompt import AgentPrompt
+from themind.memory.struct_memory import StructuredMemory
 
 
 class Agent(object):
 
     def __init__(self):
-        # init LLM
-        # init StructMemory
-        # init Available Tools
+        self.structed_memory = StructuredMemory()
+        self.llm = OpenAILLM()
         
+        # TODO: init functions
+        self.functions = []
+        
+        self.functions_map = {}
+        for function in self.available_functions:
+            self.functions_map[function.name] = function
+
     def run(self, uid: str, user_message: Message, thread: Thread):
         
-        # create context for agent
-        # get schema from StructMemory
-        # get past Thread messages
+        # TODO: when to append to thread?
         
-        # run f:think_next_step to get the next function to run
-        # and run this until you get sent_message_to_user function which ends everything the agent run
-
+        function_calls = []
+        while [call.name for call in function_calls] not in 'send_message':
+            function_calls = self.think_next_step(thread=thread)
+            for function_call in function_calls:
+                reponse = self.functions_map[function_call.name].run(**function_call.args)
+                # TODO: appended to thread as assistent msg
+        
+        return reponse
+        
             
-    def think_next_step(user_message: str, context: str) -> List[Function]:
+    def think_next_step(self, thread: Thread) -> List[Function]:
         
-        # reason about next step
-            # call LLM
-            # to pick the function with its params
+        # not needed for now?
+        # prompt = AgentPrompt.v1.format(message=message, thread=thread)
         
-        # return the function
+        # TODO: append memory schema function calling decision.
+        memory_schema = self.structed_memory.get_schema(uid=uid)
+        
+        # TODO: impl to_openai_messages
+        messages = thread.to_openai_messages()
+        function_calls, reponse_text = self.llm.choose_function_call(messages=[messages], functions=self.available_functions)
+        
+        print(function_calls)
+        print(reponse_text)
+        
+        return function_calls
 
 
 if __name__ == '__main__':

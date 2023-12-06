@@ -8,6 +8,7 @@ class Role(Enum):
     ASSISTANT = "assistent"
     USER = "user"
     SYSTEM = "system"
+    TOOL = "tool"
 
 
 class Message(BaseModel):

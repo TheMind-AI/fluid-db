@@ -3,6 +3,7 @@ import json
 from jsonpath_ng import parse
 from genson import SchemaBuilder
 
+
 class StructuredMemory:
 
 
