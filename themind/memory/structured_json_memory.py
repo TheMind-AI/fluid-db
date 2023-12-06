@@ -26,18 +26,18 @@ class StructuredJsonMemory(MemoryBase):
 
     def query(self, uid: str, json_path: str) -> list:
         
-        jsonpath_expr = self.load_maybe_repair_jsonpath_expr(json_path)
+        jsonpath_expr = self.load_maybe_repair_jsonpath_expr(uid, json_path)
         
         matches = [match.value for match in jsonpath_expr.find(self.get_memory(uid))]
 
         return matches
     
-    def load_maybe_repair_jsonpath_expr(self, query: str) -> str:
+    def load_maybe_repair_jsonpath_expr(self, uid: str, query: str) -> str:
         try:
             jsonpath_expr = jsonpath_ng.parse(query)
         except Exception:
             prompt = f"""Invalid JSONPath query: {query}. 
-            Please enter a valid JSONPath query based on this json schema: {self.schema()}"""
+            Please enter a valid JSONPath query based on this json schema: {self.schema(uid)}"""
             response_model = self.llm.instruction_instructor(prompt, JsonPathExpr)
             jsonpath_expr = parse(response_model.jsonPath)
         

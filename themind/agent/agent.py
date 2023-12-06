@@ -13,7 +13,7 @@ from themind.functions.update_memory_function import UpdateMemoryFunction
 class Agent(object):
 
     def __init__(self):
-        self.structured_memory = StructuredJsonMemory(id='test')
+        self.structured_memory = StructuredJsonMemory()
         self.llm = OpenAILLM()
         
         self.functions = [SendMessageFunction(), FetchMemoryFunction(), UpdateMemoryFunction()]
@@ -45,8 +45,7 @@ class Agent(object):
 
     def think_next_step(self, uid: str, thread: Thread) -> List[Function]:
         
-        # TODO: fix memory_schema to accept uid, here we need to pass the uid
-        memory_schema = self.structured_memory.schema()
+        memory_schema = self.structured_memory.schema(uid=uid)
         
         prompt = """This is a schema representation of my structured memory: {memory_schema}
         """.format(memory_schema=memory_schema)

@@ -8,12 +8,12 @@ class DummyRetriever(RetrieverBase):
     def __init__(self):
         super().__init__()
         
-        self.struct_memory = StructuredJsonMemory(id='test')
+        self.struct_memory = StructuredJsonMemory()
     
     @abc.abstractmethod
     def retrieve(self, uid: str, query: str):
         
-        results = self.struct_memory.query(jsonPath=query)
+        results = self.struct_memory.query(uid=uid, json_path=query)
         
         return results
 
