@@ -36,7 +36,7 @@ class StructuredJsonMemory(MemoryBase):
 
         return matches
     
-    def load_maybe_repair_jsonpath_expr(self, uid: str, query: str) -> str:
+    def load_maybe_repair_jsonpath_expr(self, uid: str, query: str):
 
         # jsonpath_ng does not support single quotes, bard said
         query = query.replace("'", '"')
@@ -71,8 +71,17 @@ class StructuredJsonMemory(MemoryBase):
         
         return schema
     
-    def update(self, uid: str, path: str, new_data: dict):
-        pass
+    def update(self, uid: str, json_path: str, new_data: dict) -> dict:
+        try:
+            jsonpath_expr = self.load_maybe_repair_jsonpath_expr(uid, json_path)
+        except Exception as e:
+            return f"Invalid JSONPath query: {json_path}, error {e}."
+
+        memory = self.get_memory(uid)
+        jsonpath_expr.update(memory, new_data)
+
+        return memory
+
 
     def query_lang_prompt(self) -> str:
         return "For querying the memory, always use jsonPath. For example, to query all baz values in this json: {'foo': [{'baz': 1}, {'baz': 2}]} use foo[*].baz as the query parameter"
