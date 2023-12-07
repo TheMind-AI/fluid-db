@@ -12,7 +12,7 @@ class FetchMemoryFunctionArguments(BaseModel):
 class FetchMemoryFunction(FunctionBase):
     
     name: str = "retrieve-memory"
-    description: str = "Tool to retrieve memories from the user's structured memory"
+    description: str = "Tool to retrieve memories from the user's structured memory. It uses JSONPath to query the memory; write the query based on the provided JSON schema."
     args_schema: Type[BaseModel] = FetchMemoryFunctionArguments
     
     def __init__(self, retriever: RetrieverBase = DummyRetriever()):

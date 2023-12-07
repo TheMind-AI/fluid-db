@@ -46,7 +46,7 @@ class OpenAILLM(object):
     @backoff.on_exception(backoff.expo, openai.RateLimitError)
     def instruction_instructor(self, prompt, response_model, model: OpenAIModel = OpenAIModel.GPT4_TURBO, temperature=0):
         response = self.instructor_client.chat.completions.create(
-            model=model,
+            model=model.value,
             temperature=temperature,
             messages=[
                 {"role": "system", "content": SystemPrompt.default},
@@ -54,7 +54,7 @@ class OpenAILLM(object):
             ],
             response_model=response_model
         )
-        return response.choices[0].message.content
+        return response
     
     @backoff.on_exception(backoff.expo, openai.RateLimitError)
     def choose_function_call(self, messages, functions: List[FunctionBase]) -> Tuple[List[Function], str]:

@@ -39,6 +39,7 @@ class Agent(object):
             for function_call in function_calls:
                 function_call.args['uid'] = uid
                 response = self.functions_map[function_call.name].run(**function_call.args)
+                print(response)
                 thread.add_message(message=Message.assistent_message(content=response))
         
         return response
@@ -47,16 +48,14 @@ class Agent(object):
         
         memory_schema = self.structured_memory.schema(uid=uid)
         
-        prompt = """This is a schema representation of my structured memory: {memory_schema}
-        """.format(memory_schema=memory_schema)
+        prompt = """This is a JSON schema representation of my structured memory: {memory_schema}
+        Always make queries based on this schema.""".format(memory_schema=memory_schema)
         
-        thread.add_message(message=Message.assistent_message(content=prompt))
-        
-        # TODO: impl to_openai_messages
+        thread.add_message(message=Message.user_message(content=prompt))
+
         messages = thread.to_openai_messages()
         function_calls, response_text = self.llm.choose_function_call(messages=messages, functions=self.functions)
-        
-        print(function_calls)
+
         print(response_text)
         
         return function_calls, response_text

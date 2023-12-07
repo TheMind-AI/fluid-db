@@ -6,6 +6,7 @@ from jsonpath_ng import parse
 from genson import SchemaBuilder
 from themind.memory.memory_base import MemoryBase
 from themind.llm.openai_llm import OpenAILLM
+import jsonpath_ng.ext
 
 
 class JsonPathExpr(BaseModel):
@@ -25,22 +26,34 @@ class StructuredJsonMemory(MemoryBase):
         return self.memory[uid]
 
     def query(self, uid: str, json_path: str) -> list:
-        
-        jsonpath_expr = self.load_maybe_repair_jsonpath_expr(uid, json_path)
+
+        try:
+            jsonpath_expr = self.load_maybe_repair_jsonpath_expr(uid, json_path)
+        except Exception as e:
+            return f"Invalid JSONPath query: {json_path}, error {e}."
         
         matches = [match.value for match in jsonpath_expr.find(self.get_memory(uid))]
 
         return matches
     
     def load_maybe_repair_jsonpath_expr(self, uid: str, query: str) -> str:
+
+        # jsonpath_ng does not support single quotes, bard said
+        query = query.replace("'", '"')
+
         try:
-            jsonpath_expr = jsonpath_ng.parse(query)
-        except Exception:
-            prompt = f"""Invalid JSONPath query: {query}. 
+            print(query)
+            jsonpath_expr = jsonpath_ng.ext.parse(query)
+        except Exception as e:
+            prompt = f"""Invalid JSONPath query: {query}, error {e}. 
             Please enter a valid JSONPath query based on this json schema: {self.schema(uid)}"""
             response_model = self.llm.instruction_instructor(prompt, JsonPathExpr)
-            jsonpath_expr = parse(response_model.jsonPath)
-        
+            assert isinstance(response_model, JsonPathExpr)
+            try:
+                jsonpath_expr = jsonpath_ng.ext.parse(response_model.jsonPath)
+            except Exception as e:
+                raise ValueError(f"Invalid JSONPath query: {response_model.jsonPath}, error {e}.")
+
         return jsonpath_expr
 
     def schema(self, uid: str):
@@ -58,7 +71,7 @@ class StructuredJsonMemory(MemoryBase):
         
         return schema
     
-    def update(self, path: str, new_data: dict):
+    def update(self, uid: str, path: str, new_data: dict):
         pass
 
     def query_lang_prompt(self) -> str:

@@ -15,5 +15,5 @@ class DummyRetriever(RetrieverBase):
         
         results = self.struct_memory.query(uid=uid, json_path=query)
         
-        return results
+        return str(results)
 
