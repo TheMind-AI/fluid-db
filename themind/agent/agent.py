@@ -41,12 +41,13 @@ class Agent(object):
             user_message=thread.messages[-1].content, memory_schema=self.structured_memory.schema(uid=uid)
         )
         assert isinstance(update_memory_obj, UpdateMemoryModel)
+        print(update_memory_obj)
 
         print(update_memory_obj.data)
         data_dict = json.loads(update_memory_obj.data)
         print(data_dict)
 
-        self.structured_memory.update(uid=uid, json_path=update_memory_obj.jsonpath_query, new_data=update_memory_obj.data)
+        self.structured_memory.update(uid=uid, json_path=update_memory_obj.jsonpath_query, new_data=data_dict)
 
         print(self.structured_memory.get_memory(uid=uid))
 
