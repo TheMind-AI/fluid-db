@@ -65,7 +65,7 @@ class StructuredJsonMemory(MemoryBase):
         schema = builder.to_schema()
     
         self._remove_required(schema)
-        print(json.dumps(schema, indent=4))
+        # print(json.dumps(schema, indent=4))
         
         schema = self._compress_schema(schema)
         # print(json.dumps(schema, indent=4))

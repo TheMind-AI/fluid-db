@@ -99,8 +99,8 @@ if __name__ == '__main__':
     
     uid = 'test'
     #message = 'what exams do i have tomrrow? I like skateboarding.'
-    #message = 'i will be working tommrrow because i need to send a report to my inverstors. They will be happy to see the report.'
-    message = 'what should i work on tmrw?'
+    message = 'i will be working tommrrow because i need to send a report to my inverstors. They will be happy to see the report.'
+    # message = 'what should i work on tmrw?'
     
     thread = Thread.new_with_system_prompt(uid)
     
