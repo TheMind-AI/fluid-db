@@ -55,6 +55,8 @@ class FetchMemoryFunction(FunctionBase):
         Always use strings in lowercase when querying and filtering based on values. If you're comparing strings, use regex match: =~ to maximize chances of finding the data.
 
         If the data you're asked for are not in the schema, only reply "NA"
+        
+        Don't fetch only only one key/value, always fetch the whole object. For example, if you're asked for the name of the user, don't return only the name, return the whole object.
 
         Always run an internal dialogue before returning the query.
 
