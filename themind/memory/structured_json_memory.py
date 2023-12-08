@@ -156,8 +156,7 @@ class StructuredJsonMemory(MemoryBase):
                 self._remove_required(value)
             if 'items' in value:
                 self._remove_required(value['items'])
-
-
+                
 
 def main():
 
