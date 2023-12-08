@@ -42,7 +42,7 @@ class StructuredJsonMemory(MemoryBase):
         query = query.replace("'", '"')
 
         try:
-            print(query)
+            # print(query)
             jsonpath_expr = jsonpath_ng.ext.parse(query)
         except Exception as e:
             prompt = f"""Invalid JSONPath query: {query}, error {e}. 
@@ -64,13 +64,13 @@ class StructuredJsonMemory(MemoryBase):
         schema = builder.to_schema()
     
         self._remove_required(schema)
-        print(json.dumps(schema, indent=4))
+        # print(json.dumps(schema, indent=4))
         
         schema = self._compress_schema(schema)
-        print(json.dumps(schema, indent=4))
+        # print(json.dumps(schema, indent=4))
         
         return schema
-    
+
     def update(self, uid: str, json_path: str, new_data: dict) -> dict:
         try:
             jsonpath_expr = self.load_maybe_repair_jsonpath_expr(uid, json_path)
@@ -78,7 +78,9 @@ class StructuredJsonMemory(MemoryBase):
             return f"Invalid JSONPath query: {json_path}, error {e}."
 
         memory = self.get_memory(uid)
-        jsonpath_expr.update(memory, new_data)
+        jsonpath_expr.update_or_create(memory, new_data)
+
+        self._save_memory(uid, memory)
 
         return memory
 
@@ -156,21 +158,107 @@ class StructuredJsonMemory(MemoryBase):
                 self._remove_required(value['items'])
 
 
+
+def main():
+
+    # memory = StructuredJsonMemory()
+    #
+    # schema = memory.schema("2")
+    # print("SCHEMA:")
+    # print(json.dumps(schema, indent=2))
+    #
+    # memory_data = memory.get_memory("2")
+    # print("MEMORY DATA:")
+    # print(json.dumps(memory_data, indent=2))
+    #
+    # memory.append("2", "$.phones", {"name": "Jakub", "number": "123"})
+    #
+    # memory_data = memory.get_memory("2")
+    # print("MEMORY DATA:")
+    # print(json.dumps(memory_data, indent=2))
+    #
+    # return
+
+    def mod_func(orig, data, field):
+        data[field] = {
+            "name": orig["name"],
+            "numbers": [
+                orig["number"]
+            ]
+        }
+
+    data = {
+      "phones": [
+        {
+          "name": "Adam",
+          "number": "123456"
+        },
+        {
+          "name": "David",
+          "number": "654321"
+        }
+      ],
+      "user": {
+        "name": "David"
+      },
+      "events": [
+        "Founders Inc Christmas Party",
+        "Christmas Eve"
+      ]
+    }
+
+    def update(json_path: str, data, val):
+        expr = jsonpath_ng.ext.parse(json_path)
+        # expr.find_or_create(data)
+        expr.update_or_create(data, val)
+
+
+    # update("user.last_name", data, "Mokos")
+    # update("phones[*]", data, mod_func)
+    # update('phones[?name = "Adam"].number', data, "722264238")
+
+    update("events_new", data, [{"name": "AI Summit", "date": "2023-12-12"}])
+
+    print(json.dumps(data, indent=4))
+
+
+    # expr = parse("user.last_name")
+    # print([f.value for f in expr.find(data)])
+    #
+    # expr.update(data, "David")
+
+
+    # expr = parse("events[*]")
+    # print([f.value for f in expr.find(data)])
+    #
+    # expr.update(data, "David")
+
+    # expr = parse("phones[*]")
+    # expr.update(data, mod_func)
+
+    # print(json.dumps(data, indent=4))
+
+    # uid = '1'
+    #
+    # memory = StructuredJsonMemory()
+    #
+    # res = memory.query(uid, "name")
+    # memory.append_to_list(uid, "events", {
+    #         "location": "",
+    #         "time": "18:00",
+    #         "theme": "AI"
+    #     })
+    # memory.append_to_list(uid, "test_list", {"location": "Golden Gate", "time": "12:00"})
+    #
+    # res = memory.query(uid, "events")
+    # print(res)
+    #
+    # print(memory.get_memory(uid))
+    # print(memory.schema(uid))
+
+
 if __name__ == "__main__":
-    uid = '1'
+    main()
 
-    memory = StructuredJsonMemory()
 
-    res = memory.query(uid, "name")
-    memory.append_to_list(uid, "events", {
-            "location": "",
-            "time": "18:00",
-            "theme": "AI"
-        })
-    memory.append_to_list(uid, "test_list", {"location": "Golden Gate", "time": "12:00"})
-    
-    res = memory.query(uid, "events")
-    print(res)
-    
-    print(memory.get_memory(uid))
-    print(memory.schema(uid))
+

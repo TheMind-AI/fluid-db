@@ -13,10 +13,6 @@ class MemoryBase(object):
         raise NotImplementedError()
 
     @abc.abstractmethod
-    def append(self, uid: str, path: str, new_data: dict):
-        raise NotImplementedError()
-    
-    @abc.abstractmethod
     def update(self, uid: str, path: str, new_data: dict):
         raise NotImplementedError()
 
