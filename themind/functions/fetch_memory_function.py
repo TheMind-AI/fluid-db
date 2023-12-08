@@ -10,7 +10,7 @@ from themind.retrievers.retriever_base import RetrieverBase
 class FetchMemoryModel(BaseModel):
     reasoning: str = Field(..., description="Max 100 character compressed reasoning for the answer")
     #is_fetching: bool = Field(..., description="True if the function is fetching memory")
-    jsonpath_query: str = Field(..., description="JSONPath query to fetch memory based on the provided memory JSON schema")
+    jsonpath_query: str = Field(..., description="jsonpath-ng query to fetch memory based on the provided memory JSON schema")
 
 
 class FetchMemoryFunctionArguments(BaseModel):
@@ -47,8 +47,8 @@ class FetchMemoryFunction(FunctionBase):
         Today's date is {datetime.now().strftime('%Y-%m-%d')}
         Time now: {datetime.now().strftime('%I:%M %p')}
         
-        You are a query builder, AI that generates JsonPath query from natural language.
-
+        You are a query builder, AI that generates JsonPath query from natural language. We're using jsonpath-ng.
+        
         You receive a json schema and a natural description of the data you need to fetch and you return the jsonpath query based on the model.
         It's important to write queries that support this JSON schema. Don't query key/values which are not present in this provided json schema.
         
@@ -65,6 +65,50 @@ class FetchMemoryFunction(FunctionBase):
         
         Here is the user message:
         {user_message}
+        
+        ---
+
+        Examples:
+        
+        SCHEMA:
+        {{
+          "phones": [
+            {{
+              "name": "string",
+              "number": "string"
+            }}
+          ],
+          "user": {{
+            "name": "string"
+          }},
+          "events": [
+            {{
+              "name": "string",
+              "date": "string",
+              "price": "number"
+            }}
+          ]
+        }}
+        
+        QUESTION:
+        What's Adam's phone number?
+        
+        QUERY:
+        $.phones[?name = "adam"].number
+        
+        QUESTION:
+        What events are happening tomorrow?
+        
+        QUERY:
+        $.events[?date = "2023-12-08"] or
+        $.events[?(@.date = "2023-12-08")]
+        
+        QUESTION:
+        What do all upcoming events cost?
+        
+        QUERY:
+        $.events[?(@.date >= "2023-12-07")].price
+        
         """
         return self.llm.instruction_instructor(prompt, FetchMemoryModel)
 

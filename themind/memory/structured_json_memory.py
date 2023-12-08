@@ -40,9 +40,10 @@ class StructuredJsonMemory(MemoryBase):
 
         # jsonpath_ng does not support single quotes, bard said
         query = query.replace("'", '"')
+        # jsonpath_ng should work with ==, but it doesn't
+        query = query.replace("==", "=")
 
         try:
-            # print(query)
             jsonpath_expr = jsonpath_ng.ext.parse(query)
         except Exception as e:
             prompt = f"""Invalid JSONPath query: {query}, error {e}. 
