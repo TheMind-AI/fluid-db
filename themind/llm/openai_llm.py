@@ -7,7 +7,7 @@ from enum import Enum
 import openai
 from openai import OpenAI
 from dotenv import load_dotenv
-from typing import List, Tuple
+from typing import List, Tuple, Callable
 from themind.schema.function import Function
 from themind.prompts.system_prompt import SystemPrompt
 from themind.functions.function_base import FunctionBase
@@ -91,12 +91,47 @@ class OpenAILLM(object):
 
         return functions_to_call, response_message.content
 
+    @backoff.on_exception(backoff.expo, openai.RateLimitError)
+    def chat(self, messages: List[dict], model: OpenAIModel = OpenAIModel.GPT4_TURBO, temperature=0.6,
+             stream=False, on_complete: Callable[[str], None] = lambda x: None):
+        response = self.client.chat.completions.create(
+            model=model.value,
+            messages=messages,
+            max_tokens=1000,
+            temperature=temperature,
+            # max_tokens=length_function(messages),
+            stream=stream
+        )
+        if stream:
+            return self.process_completion_stream(response, on_complete=on_complete)
+
+        return response.choices[0].message.content
+
     def get_embedding(self, text):
         response = self.client.embeddings.create(
             model="text-embedding-ada-002",
             input=text
         )
         return response.data[0].embedding
+
+    def process_completion_stream(self, completion: dict, on_complete: Callable[[str], None]):
+        full_response = ""
+        for response in completion:
+            if response.choices is None:
+                raise Exception("ChatGPT API returned no choices")
+            if len(response.choices) == 0:
+                raise Exception("ChatGPT API returned no choices")
+
+            delta = response.choices[0].delta
+
+            if delta.role is not None:
+                continue
+
+            if delta.content is not None:
+                yield delta.content
+                full_response += delta.content
+
+        on_complete(full_response)
 
 
 

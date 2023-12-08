@@ -55,6 +55,7 @@ class FetchMemoryFunction(FunctionBase):
         
         Store date data always in format this format: YYYY-MM-DD
         Store time data always in format this format: HH:MM 
+        Today is {datetime.now().strftime("%Y-%m-%d")}
         
         Always run an internal dialogue before returning the query.
 

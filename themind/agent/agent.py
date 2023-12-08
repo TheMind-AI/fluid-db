@@ -34,7 +34,19 @@ class Agent(object):
         else:
             print('NO FETCH RESULTS')
             
-        self.run_update_memory(uid=uid, thread=thread)
+        #self.run_update_memory(uid=uid, thread=thread)
+
+        if results:
+            thread.add_message(message=Message.user_message(content=results))
+        else:
+            thread.add_message(message=Message.user_message(content='No results found.'))
+
+        print(thread.to_openai_messages())
+        response = self.llm.chat(messages=thread.to_openai_messages(), stream=True)
+
+        # print the chat stream
+        for message in response:
+            print(message, end='')
 
     def run_fetch_memory(self, uid: str, thread: Thread):
         fetch_memory_obj = self.fetch_memory_function.maybe_fetch_memory(
@@ -104,8 +116,8 @@ if __name__ == '__main__':
     
     uid = 'test'
     #message = 'what exams do i have tomrrow? I like skateboarding.'
-    message = 'i will be working tommrrow because i need to send a report to my inverstors. They will be happy to see the report.'
-    # message = 'what should i work on tmrw?'
+    #message = 'i will be working tommrrow because i need to send a report to my inverstors. They will be happy to see the report.'
+    message = 'what should i work on tmrw?'
     
     thread = Thread.new_with_system_prompt(uid)
     
