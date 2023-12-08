@@ -6,8 +6,8 @@ from themind.schema.function import Function
 from themind.prompts.agent_prompt import AgentPrompt
 from themind.memory.structured_json_memory import StructuredJsonMemory
 from themind.functions.send_message_function import SendMessageFunction
-from themind.functions.fetch_memory_function import FetchMemoryFunction
-from themind.functions.update_memory_function import UpdateMemoryFunction
+from themind.functions.fetch_memory_function import FetchMemoryFunction, FetchMemoryModel
+from themind.functions.update_memory_function import UpdateMemoryFunction, UpdateMemoryModel
 
 
 class Agent(object):
@@ -16,16 +16,44 @@ class Agent(object):
         self.structured_memory = StructuredJsonMemory()
         self.llm = OpenAILLM()
         
-        self.functions = [SendMessageFunction(), FetchMemoryFunction(), UpdateMemoryFunction()]
+        self.update_memory_function = UpdateMemoryFunction()
+        self.fetch_memory_function = FetchMemoryFunction()
+        
+        self.functions = [self.fetch_memory_function, self.update_memory_function]
         
         self.functions_map = {}
         for function in self.functions:
             self.functions_map[function.name] = function
+            
+    def run_v2(self, uid: str, thread: Thread):
+
+        fetch_memory_obj = self.fetch_memory_function.maybe_fetch_memory(
+            user_message=thread.messages[-1].content, memory_schema=self.structured_memory.schema(uid=uid)
+        )
+        assert isinstance(fetch_memory_obj, FetchMemoryModel)
+
+        print(fetch_memory_obj)
+
+        self.fetch_memory_function.run(uid=uid, jsonpath_query=fetch_memory_obj.jsonpath_query)
+        
+        update_memory_obj = self.update_memory_function.maybe_update_memory(
+            user_message=thread.messages[-1].content, memory_schema=self.structured_memory.schema(uid=uid)
+        )
+        assert isinstance(update_memory_obj, UpdateMemoryModel)
+
+        print(update_memory_obj)
 
     def run(self, uid: str, thread: Thread):
-        
-        # TODO: update here the thread
-        
+
+        memory_schema = self.structured_memory.schema(uid=uid)
+        prompt = """This is a JSON schema representation of my structured memory: {memory_schema}
+                It's important to write queries that support this JSON schema. Don't query key/values which are not present in this provided json schema.
+                If a user presents you with new information that is not likely present in the JSON schema, update the schema to include the new information.
+                The new data which will be added to the memory should be well organized, like senior database engineer would do it.
+                The instraction is a python script how to update the memory.
+                """.format(memory_schema=memory_schema)
+        thread.add_message(message=Message.user_message(content=prompt))
+
         function_calls = []
         while SendMessageFunction().name not in [call.name for call in function_calls]:
             function_calls, response_text = self.think_next_step(uid=uid, thread=thread)
@@ -45,13 +73,6 @@ class Agent(object):
         return response
 
     def think_next_step(self, uid: str, thread: Thread) -> List[Function]:
-        
-        memory_schema = self.structured_memory.schema(uid=uid)
-        
-        prompt = """This is a JSON schema representation of my structured memory: {memory_schema}
-        Always make queries based on this schema.""".format(memory_schema=memory_schema)
-        
-        thread.add_message(message=Message.user_message(content=prompt))
 
         messages = thread.to_openai_messages()
         function_calls, response_text = self.llm.choose_function_call(messages=messages, functions=self.functions)
@@ -66,11 +87,13 @@ if __name__ == '__main__':
     agent = Agent()
     
     uid = 'test'
-    message = 'what exams do i have tomrrow? I like skateboarding.'
+    #message = 'what exams do i have tomrrow? I like skateboarding.'
+    message = 'i will be working tommrrow because i need to send a report to my inverstors. They will be happy to see the report.'
     
     thread = Thread.new_with_system_prompt(uid)
     
     new_message = Message.user_message(content=message)
     thread.add_message(message=new_message)
     
-    agent.run(uid=uid, thread=thread)
+    #agent.run(uid=uid, thread=thread)
+    agent.run_v2(uid=uid, thread=thread)

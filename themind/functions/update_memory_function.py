@@ -1,23 +1,97 @@
 from typing import Type
+from marvin import ai_model
+from marvin import ai_fn
 from pydantic import BaseModel, Field
 from themind.functions.function_base import FunctionBase
 
 
+@ai_model
+class UpdateMemoryModel(BaseModel):
+    reasoning: str = Field(..., description="Max 100 character compressed reasoning for the answer")
+    #is_fetching: bool = Field(..., description="True if the function is fetching memory")
+    jsonpath_query: str = Field(..., description="JSONPath query to fetch memory based on the provided memory JSON schema")
+
+
 class UpdateMemoryFunctionArguments(BaseModel):
-    query: str = Field(..., description="Information to update or save in the memory.")
+    data: str = Field(..., description="Data that will be updated or written to the structured memory.")
+    instruction: str = Field(..., description="Instructions on how to write to the structured memory based on the existing JSON memory schema.")
 
 
 class UpdateMemoryFunction(FunctionBase):
 
     name: str = "update-memory"
-    description: str = "Tool to update the structured memory of the user."
+    description: str = "Tool to update or write to the structured memory of the user."
     args_schema: Type[BaseModel] = UpdateMemoryFunctionArguments
 
     def __init__(self):
         super().__init__()
         
-    def run(self, uid: str, message: str):
-        raise NotImplementedError()
-    
-        # run internal dialog how to update the core memory
-        # update scheme & the json
+    def run(self, uid: str, data: dict, instruction: str):
+
+        print(data)
+        print(instruction)
+
+        raise 'Memory update'
+
+    def maybe_update_memory(self, user_message: str, memory_schema: str) -> UpdateMemoryModel:
+        f"""
+        You are a database updater, AI that generates update query from natural language.
+
+        You receive a json schema and a natural description of the data you need to store and you return the jsonpath and new value based on the model.
+
+        Date is always in format YYYY-MM-DD
+        Today's date is 2023-12-07
+        Time now: 4:57 PM
+
+        Always use strings in lowercase when querying and filtering based on values. If you're comparing strings, use regex match: =~ to maximize chances of finding the data.
+
+        If you can't save data because the schema needs to be updated, create a new path for the new data with appendix "_new". For example, appending object {{"name":"david", "relationship":''friend"}} to a list "relatives" of type ["string"] requires you to create a new list "relatives_new" with the first object [{{"name":"david", "relationship":''friend"}}]
+
+        Always run an internal dialogue before returning the query.
+
+        Here is the user memory JSON schema:
+        {memory_schema}
+                
+        Here is the user message:
+        {user_message}
+        
+        ---
+
+        Examples:
+
+        SCHEMA:
+        {{
+        "phones": [
+            {{
+            "name": "string",
+            "number": "string"
+            }}
+        ],
+        "user": {{
+            "name": "string"
+        }},
+        "events": [
+            {{
+            "name": "string",
+            "date": "string",
+            "price": "number"
+            }}
+        ]
+        }}
+
+        REQUEST: Adam's phone number is 722263238.
+        QUERY: $.phones[?name = "adam"].number
+        DATA: 722264238
+
+        REQUEST: My last name is Zvada.
+        QUERY: $.user.last_name
+        DATA: Zvada
+
+        REQUEST: Adam's phone number has +420 prefix.
+        QUERY: $.phones[?name = "adam"].prefix
+        DATA: +420
+
+        REQUEST: I'm going to a Christmas party tomorrow which costs 20 usd to entry.
+        QUERY: $.events_new
+        DATA: {{"name": "Christmas party", "date": "2023-12-08", "price": {{"currency": "USD", "value": 20}}}}
+        """
