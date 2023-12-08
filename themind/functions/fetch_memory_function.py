@@ -47,7 +47,7 @@ class FetchMemoryFunction(FunctionBase):
         Today's date is {datetime.now().strftime('%Y-%m-%d')}
         Time now: {datetime.now().strftime('%I:%M %p')}
         
-        You are a query builder, AI that generates JsonPath query from natural language. We're using jsonpath-ng.
+        You are a query builder, AI that generates JsonPath query from natural language. You're using jsonpath-ng to query the structured memory.
         
         You receive a json schema and a natural description of the data you need to fetch and you return the jsonpath query based on the model.
         It's important to write queries that support this JSON schema. Don't query key/values which are not present in this provided json schema.
