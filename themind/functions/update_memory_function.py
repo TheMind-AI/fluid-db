@@ -1,3 +1,4 @@
+from datetime import datetime, timedelta
 from typing import Type
 from pydantic import BaseModel, Field
 from themind.llm.openai_llm import OpenAILLM
@@ -39,8 +40,8 @@ class UpdateMemoryFunction(FunctionBase):
         You receive a json schema and a natural description of the data you need to store and you return the jsonpath and new value based on the model.
 
         Date is always in format YYYY-MM-DD
-        Today's date is 2023-12-07
-        Time now: 4:57 PM
+        Today's date is {datetime.now().strftime('%Y-%m-%d')}
+        Time now: {datetime.now().strftime('%I:%M %p')}
 
         Always use strings in lowercase when querying and filtering based on values. If you're comparing strings, use regex match: =~ to maximize chances of finding the data.
 
@@ -48,12 +49,6 @@ class UpdateMemoryFunction(FunctionBase):
 
         Always run an internal dialogue before returning the query.
 
-        Here is the user memory JSON schema:
-        {memory_schema}
-                
-        Here is the user message:
-        {user_message}
-        
         ---
 
         Examples:
@@ -92,6 +87,16 @@ class UpdateMemoryFunction(FunctionBase):
 
         REQUEST: I'm going to a Christmas party tomorrow which costs 20 usd to entry.
         QUERY: $.events_new
-        DATA: {{"name": "Christmas party", "date": "2023-12-08", "price": {{"currency": "USD", "value": 20}}}}
+        DATA: {{"name": "Christmas party", "date": "{(datetime.now() + timedelta(days=1)).strftime('%Y-%m-%d')}", "price": {{"currency": "USD", "value": 20}}}}
+        
+        ----
+        
+        SCHEMA:
+        {memory_schema}
+        
+        REQUEST: {user_message}
+        QUERY:
+        DATA: 
+        
         """
         return self.llm.instruction_instructor(prompt, UpdateMemoryModel)
