@@ -4,6 +4,7 @@ import openai
 import backoff
 import instructor
 from enum import Enum
+import openai
 from openai import OpenAI
 from dotenv import load_dotenv
 from typing import List, Tuple
@@ -24,7 +25,7 @@ class OpenAILLM(object):
 
     def __init__(self):
         
-        self.client = OpenAI(
+        self.client = openai.OpenAI(
             api_key=os.environ.get("OPENAI_API_KEY"),
         )
 

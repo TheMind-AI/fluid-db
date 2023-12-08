@@ -1,11 +1,9 @@
 from typing import Type
-from marvin import ai_model
-from marvin import ai_fn
 from pydantic import BaseModel, Field
+from themind.llm.openai_llm import OpenAILLM
 from themind.functions.function_base import FunctionBase
 
 
-@ai_model
 class UpdateMemoryModel(BaseModel):
     reasoning: str = Field(..., description="Max 100 character compressed reasoning for the answer")
     #is_fetching: bool = Field(..., description="True if the function is fetching memory")
@@ -25,6 +23,7 @@ class UpdateMemoryFunction(FunctionBase):
 
     def __init__(self):
         super().__init__()
+        self.llm = OpenAILLM()
         
     def run(self, uid: str, data: dict, instruction: str):
 
@@ -34,7 +33,7 @@ class UpdateMemoryFunction(FunctionBase):
         raise 'Memory update'
 
     def maybe_update_memory(self, user_message: str, memory_schema: str) -> UpdateMemoryModel:
-        f"""
+        prompt = f"""
         You are a database updater, AI that generates update query from natural language.
 
         You receive a json schema and a natural description of the data you need to store and you return the jsonpath and new value based on the model.
@@ -95,3 +94,4 @@ class UpdateMemoryFunction(FunctionBase):
         QUERY: $.events_new
         DATA: {{"name": "Christmas party", "date": "2023-12-08", "price": {{"currency": "USD", "value": 20}}}}
         """
+        return self.llm.instruction_instructor(prompt, UpdateMemoryModel)

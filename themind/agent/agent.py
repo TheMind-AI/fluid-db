@@ -84,14 +84,6 @@ class Agent(object):
 
 if __name__ == '__main__':
     
-    # THIS HAS TO BE SET BEFORE RUNNING THE AGENT
-    import marvin
-    import os
-    from dotenv import load_dotenv
-    load_dotenv()
-    
-    marvin.settings.openai.api_key = os.environ.get("OPENAI_API_KEY")
-    
     agent = Agent()
     
     uid = 'test'

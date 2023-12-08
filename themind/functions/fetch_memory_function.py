@@ -1,14 +1,12 @@
 from typing import Type
 from pydantic import BaseModel, Field
-from marvin import ai_model
-from marvin import ai_fn
 from datetime import datetime
+from themind.llm.openai_llm import OpenAILLM
 from themind.functions.function_base import FunctionBase
 from themind.retrievers.dummy_retriever import DummyRetriever
 from themind.retrievers.retriever_base import RetrieverBase
 
 
-@ai_model
 class FetchMemoryModel(BaseModel):
     reasoning: str = Field(..., description="Max 100 character compressed reasoning for the answer")
     #is_fetching: bool = Field(..., description="True if the function is fetching memory")
@@ -34,14 +32,14 @@ class FetchMemoryFunction(FunctionBase):
     def __init__(self, retriever: RetrieverBase = DummyRetriever()):
         super().__init__()
         self.retriever = retriever
+        self.llm = OpenAILLM()
 
     def run(self, uid: str, query: str):
         return self.retriever.retrieve(uid=uid, query=query)
     
     # REMINDER: we'll need to deal with timezones here
-    @ai_fn
     def maybe_fetch_memory(self, user_message: str, memory_schema: str) -> FetchMemoryModel:
-        f"""
+        prompt = f"""
         You are a query builder, AI that generates JsonPath query from natural language.
 
         You receive a json schema and a natural description of the data you need to fetch and you return the jsonpath query based on the model.
@@ -62,5 +60,7 @@ class FetchMemoryFunction(FunctionBase):
         Here is the user message:
         {user_message}
         """
+        return self.llm.instruction_instructor(prompt, FetchMemoryModel)
+
 
 
