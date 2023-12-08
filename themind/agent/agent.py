@@ -34,7 +34,7 @@ class Agent(object):
 
         print(fetch_memory_obj)
 
-        self.fetch_memory_function.run(uid=uid, jsonpath_query=fetch_memory_obj.jsonpath_query)
+        self.fetch_memory_function.run(uid=uid, query=fetch_memory_obj.jsonpath_query)
         
         update_memory_obj = self.update_memory_function.maybe_update_memory(
             user_message=thread.messages[-1].content, memory_schema=self.structured_memory.schema(uid=uid)

@@ -35,6 +35,8 @@ class FetchMemoryFunction(FunctionBase):
         self.llm = OpenAILLM()
 
     def run(self, uid: str, query: str):
+        if query == 'NA':
+            return None
         return self.retriever.retrieve(uid=uid, query=query)
     
     # REMINDER: we'll need to deal with timezones here
