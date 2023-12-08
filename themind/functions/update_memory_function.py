@@ -7,8 +7,8 @@ from themind.functions.function_base import FunctionBase
 
 class UpdateMemoryModel(BaseModel):
     reasoning: str = Field(..., description="Max 100 character compressed reasoning for the answer")
-    data: str = Field(..., description="Data that will be updated or written to the structured memory.")
-    jsonpath_query: str = Field(..., description="JSONPath query to fetch memory based on the provided memory JSON schema")
+    jsonpath_query: str = Field(..., description="JSONPath query path where the data will be updated/added")
+    data: str = Field(..., description="Data that will be updated or written to the specified jsonpath.")
 
 
 class UpdateMemoryFunctionArguments(BaseModel):
@@ -36,19 +36,19 @@ class UpdateMemoryFunction(FunctionBase):
     # REMINDER: we'll need to deal with timezones here
     def maybe_update_memory(self, user_message: str, memory_schema: str) -> UpdateMemoryModel:
         prompt = f"""
-        You are a database updater, AI that generates update query from natural language.
+        You are a database updater, AI that generates update query and new data structure from natural language.
 
-        You receive a json schema and a natural description of the data you need to store and you return the jsonpath and new value based on the model.
+        You receive a json schema and a natural description of the data you need to store and you return the jsonpath and data to store based on the model.
+        You return a jsonPath which is the location where the new data will be put and the new data object.
+        Don't put the jsonpath in the data, the object will be automatically created on the path you specify.
+        Always use strings in lowercase when querying and filtering based on values. If you're comparing strings, use regex match: =~ to maximize chances of finding the data.
+        If you can't save data because the schema needs to be updated, create a new path for the new data with appendix "_new". For example, appending object {{"name":"david", "relationship":''friend"}} to a list "relatives" of type ["string"] requires you to create a new list "relatives_new" with the first object [{{"name":"david", "relationship":''friend"}}]
 
         Date is always in format YYYY-MM-DD
         Today's date is {datetime.now().strftime('%Y-%m-%d')}
         Time now: {datetime.now().strftime('%I:%M %p')}
-
-        Always use strings in lowercase when querying and filtering based on values. If you're comparing strings, use regex match: =~ to maximize chances of finding the data.
-
-        If you can't save data because the schema needs to be updated, create a new path for the new data with appendix "_new". For example, appending object {{"name":"david", "relationship":''friend"}} to a list "relatives" of type ["string"] requires you to create a new list "relatives_new" with the first object [{{"name":"david", "relationship":''friend"}}]
-
-        Always run an internal dialogue before returning the query.
+        
+        Always run an internal dialogue before returning the query and data.
 
         ---
 

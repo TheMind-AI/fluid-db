@@ -64,7 +64,7 @@ class StructuredJsonMemory(MemoryBase):
         schema = builder.to_schema()
     
         self._remove_required(schema)
-        # print(json.dumps(schema, indent=4))
+        print(json.dumps(schema, indent=4))
         
         schema = self._compress_schema(schema)
         # print(json.dumps(schema, indent=4))
@@ -141,7 +141,7 @@ class StructuredJsonMemory(MemoryBase):
         if "type" in schema.keys():
             if schema["type"] == "object" and "properties" in schema:
                 compressed_schema = self._compress_schema(schema["properties"])
-            elif schema["type"] == "array" and "array" in schema:
+            elif schema["type"] == "array" and "items" in schema:
                 compressed_schema = [self._compress_schema(schema["items"])]
             elif schema["type"] == "object":
                 compressed_schema = {}
@@ -163,11 +163,11 @@ class StructuredJsonMemory(MemoryBase):
 
 def main():
 
-    # memory = StructuredJsonMemory()
-    #
-    # schema = memory.schema("2")
-    # print("SCHEMA:")
-    # print(json.dumps(schema, indent=2))
+    memory = StructuredJsonMemory()
+
+    schema = memory.schema("3")
+    print("SCHEMA:")
+    print(json.dumps(schema, indent=2))
     #
     # memory_data = memory.get_memory("2")
     # print("MEMORY DATA:")
@@ -219,9 +219,9 @@ def main():
     # update("phones[*]", data, mod_func)
     # update('phones[?name = "Adam"].number', data, "722264238")
 
-    update("events_new", data, [{"name": "AI Summit", "date": "2023-12-12"}])
-
-    print(json.dumps(data, indent=4))
+    # update("events_new", data, [{"name": "AI Summit", "date": "2023-12-12"}])
+    #
+    # print(json.dumps(data, indent=4))
 
 
     # expr = parse("user.last_name")
