@@ -32,6 +32,7 @@ class UpdateMemoryFunction(FunctionBase):
 
         raise 'Memory update'
 
+    # REMINDER: we'll need to deal with timezones here
     def maybe_update_memory(self, user_message: str, memory_schema: str) -> UpdateMemoryModel:
         prompt = f"""
         You are a database updater, AI that generates update query from natural language.
