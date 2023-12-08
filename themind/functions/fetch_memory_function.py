@@ -9,7 +9,6 @@ from themind.retrievers.retriever_base import RetrieverBase
 
 class FetchMemoryModel(BaseModel):
     reasoning: str = Field(..., description="Max 100 character compressed reasoning for the answer")
-    #is_fetching: bool = Field(..., description="True if the function is fetching memory")
     jsonpath_query: str = Field(..., description="jsonpath-ng query to fetch memory based on the provided memory JSON schema")
 
 
@@ -43,10 +42,6 @@ class FetchMemoryFunction(FunctionBase):
     def maybe_fetch_memory(self, user_message: str, memory_schema: str) -> FetchMemoryModel:
         print(memory_schema)
         prompt = f"""
-        Date is always in format YYYY-MM-DD
-        Today's date is {datetime.now().strftime('%Y-%m-%d')}
-        Time now: {datetime.now().strftime('%I:%M %p')}
-        
         You are a query builder, AI that generates JsonPath query from natural language. You're using jsonpath-ng to query the structured memory.
         
         You receive a json schema and a natural description of the data you need to fetch and you return the jsonpath query based on the model.
@@ -57,7 +52,10 @@ class FetchMemoryFunction(FunctionBase):
         If the data you're asked for are not in the schema, only reply "NA"
         
         Don't fetch only only one key/value, always fetch the whole object. For example, if you're asked for the name of the user, don't return only the name, return the whole object.
-
+        
+        Store date data always in format this format: YYYY-MM-DD
+        Store time data always in format this format: HH:MM 
+        
         Always run an internal dialogue before returning the query.
 
         Here is the user memory JSON schema:

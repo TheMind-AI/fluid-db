@@ -37,10 +37,6 @@ class UpdateMemoryFunction(FunctionBase):
     def maybe_update_memory(self, user_message: str, memory_schema: str) -> UpdateMemoryModel:
         prompt = f"""
         You are a database updater, AI that generates update query and new data structure from natural language.
-
-        Today's date is {datetime.now().strftime('%Y-%m-%d')}
-        Time now: {datetime.now().strftime('%I:%M %p')}
-        Date is always in format YYYY-MM-DD
         
         You receive a json schema and a natural description of the data you need to store and you return the jsonpath and data to store based on the model.
         You return a jsonPath which is the location where the new data will be put and the new data object.
@@ -48,6 +44,10 @@ class UpdateMemoryFunction(FunctionBase):
         Don't put the jsonpath in the data, the object will be automatically created on the path you specify.
         Always use strings in lowercase when querying and filtering based on values. If you're comparing strings, use regex match: =~ to maximize chances of finding the data.
         If there are similar data in the schema but the data don't fit the current schema, create a new path for the new data with appendix "_new". For example, appending object {{"name":"david", "relationship":''friend"}} to a list "relatives" of type ["string"] requires you to create a new list "relatives_new" with the first object [{{"name":"david", "relationship":''friend"}}]
+        
+        Store date data always in format this format: YYYY-MM-DD
+        Store time data always in format this format: HH:MM 
+
         
         Always run an internal dialogue before returning the query and data.
         
