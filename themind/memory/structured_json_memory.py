@@ -79,7 +79,13 @@ class StructuredJsonMemory(MemoryBase):
             return f"Invalid JSONPath query: {json_path}, error {e}."
 
         memory = self.get_memory(uid)
-        jsonpath_expr.update_or_create(memory, new_data)
+        res = jsonpath_expr.find(memory)
+        if res and type(res[0].value) == list:
+            new_new_data = res[0].value
+            new_new_data.append(new_data)
+            jsonpath_expr.update_or_create(memory, new_new_data)
+        else:
+            jsonpath_expr.update_or_create(memory, new_data)
 
         self._save_memory(uid, memory)
 
@@ -88,34 +94,6 @@ class StructuredJsonMemory(MemoryBase):
 
     def query_lang_prompt(self) -> str:
         return "For querying the memory, always use jsonPath. For example, to query all baz values in this json: {'foo': [{'baz': 1}, {'baz': 2}]} use foo[*].baz as the query parameter"
-
-    def add_value(self, uid: str, path: str, value: any):
-        keys = path.split('.')
-        temp = self.get_memory(uid)
-
-        for key in keys[:-1]:
-            temp = temp.setdefault(key, {})
-
-        temp[keys[-1]] = value
-
-        self._save_memory(uid, temp)
-
-    def append_to_list(self, uid: str, path: str, value: any):
-        keys = path.split('.')
-        temp = self.get_memory(uid)
-
-        for key in keys[:-1]:
-            temp = temp.setdefault(key, {})
-
-        if keys[-1] in temp:
-            if isinstance(temp[keys[-1]], list):
-                temp[keys[-1]].append(value)
-            else:
-                raise ValueError(f"Value at {path} is not a list.")
-        else:
-            temp[keys[-1]] = [value]
-
-        self._save_memory(uid, temp)
 
     def _load_memory(self, uid: str):
         file_path = self._memory_file_path(uid)
@@ -166,9 +144,13 @@ def main():
 
     memory = StructuredJsonMemory()
 
-    schema = memory.schema("3")
+    schema = memory.schema("2")
     print("SCHEMA:")
     print(json.dumps(schema, indent=2))
+
+    memory.update("2", "$.phones", {"name": "Jirka", "number": "122"})
+
+    # print(json.dumps(schema, indent=2))
     #
     # memory_data = memory.get_memory("2")
     # print("MEMORY DATA:")
@@ -176,9 +158,9 @@ def main():
     #
     # memory.append("2", "$.phones", {"name": "Jakub", "number": "123"})
     #
-    # memory_data = memory.get_memory("2")
-    # print("MEMORY DATA:")
-    # print(json.dumps(memory_data, indent=2))
+    memory_data = memory.get_memory("2")
+    print("MEMORY DATA:")
+    print(json.dumps(memory_data, indent=2))
     #
     # return
 
@@ -216,7 +198,7 @@ def main():
         expr.update_or_create(data, val)
 
 
-    # update("user.last_name", data, "Mokos")
+    # update("events", data, "Mokos")
     # update("phones[*]", data, mod_func)
     # update('phones[?name = "Adam"].number', data, "722264238")
 
