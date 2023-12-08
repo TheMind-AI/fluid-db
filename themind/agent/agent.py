@@ -28,6 +28,15 @@ class Agent(object):
             
     def run_v2(self, uid: str, thread: Thread):
 
+        results = self.run_fetch_memory(uid=uid, thread=thread)
+        if results:
+            print('FETCHED: ', results)
+        else:
+            print('NO FETCH RESULTS')
+            
+        self.run_update_memory(uid=uid, thread=thread)
+
+    def run_fetch_memory(self, uid: str, thread: Thread):
         fetch_memory_obj = self.fetch_memory_function.maybe_fetch_memory(
             user_message=thread.messages[-1].content, memory_schema=self.structured_memory.schema(uid=uid)
         )
@@ -36,22 +45,18 @@ class Agent(object):
         print(fetch_memory_obj)
 
         results = self.fetch_memory_function.run(uid=uid, query=fetch_memory_obj.jsonpath_query)
-        if results:
-            print('FETCHED: ')
-            print(results)
-        
-        update_memory_obj = self.update_memory_function.maybe_update_memory(
+            
+        return results
+
+    def run_update_memory(self, uid: str, thread: Thread):
+        reason, query, data = self.update_memory_function.maybe_update_memory(
             user_message=thread.messages[-1].content, memory_schema=self.structured_memory.schema(uid=uid)
         )
-        assert isinstance(update_memory_obj, UpdateMemoryModel)
-        print(update_memory_obj)
+        print(reason)
+        print(query)
+        print(data)
 
-        print(update_memory_obj.data)
-        data_dict = json.loads(update_memory_obj.data)
-        print(data_dict)
-
-        self.structured_memory.update(uid=uid, json_path=update_memory_obj.jsonpath_query, new_data=data_dict)
-
+        self.structured_memory.update(uid=uid, json_path=query, new_data=data)
         print(self.structured_memory.get_memory(uid=uid))
 
     def run(self, uid: str, thread: Thread):

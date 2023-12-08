@@ -1,3 +1,4 @@
+import json
 from datetime import datetime, timedelta
 from typing import Type
 from pydantic import BaseModel, Field
@@ -104,4 +105,9 @@ class UpdateMemoryFunction(FunctionBase):
         DATA: 
         
         """
-        return self.llm.instruction_instructor(prompt, UpdateMemoryModel)
+        model = self.llm.instruction_instructor(prompt, UpdateMemoryModel)
+        assert isinstance(model, UpdateMemoryModel)
+        
+        data_dict = json.loads(model.data)
+        
+        return model.reasoning, model.jsonpath_query, data_dict
