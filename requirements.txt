@@ -1,9 +1,9 @@
 python-dotenv
 
 pydantic
-instructor
+instructor==0.4.2
 
-openai
+openai==1.3.7
 backoff
 
 # jsons and schemas

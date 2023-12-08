@@ -139,10 +139,12 @@ class StructuredJsonMemory(MemoryBase):
     def _compress_schema(self, schema):
         compressed_schema = {}
         if "type" in schema.keys():
-            if schema["type"] == "object":
+            if schema["type"] == "object" and "properties" in schema:
                 compressed_schema = self._compress_schema(schema["properties"])
-            elif schema["type"] == "array":
+            elif schema["type"] == "array" and "array" in schema:
                 compressed_schema = [self._compress_schema(schema["items"])]
+            elif schema["type"] == "object":
+                compressed_schema = {}
             else:
                 compressed_schema = schema["type"]
         else:
