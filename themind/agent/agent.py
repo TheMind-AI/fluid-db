@@ -35,7 +35,10 @@ class Agent(object):
 
         print(fetch_memory_obj)
 
-        self.fetch_memory_function.run(uid=uid, query=fetch_memory_obj.jsonpath_query)
+        results = self.fetch_memory_function.run(uid=uid, query=fetch_memory_obj.jsonpath_query)
+        if results:
+            print('FETCHED: ')
+            print(results)
         
         update_memory_obj = self.update_memory_function.maybe_update_memory(
             user_message=thread.messages[-1].content, memory_schema=self.structured_memory.schema(uid=uid)
@@ -96,7 +99,8 @@ if __name__ == '__main__':
     
     uid = 'test'
     #message = 'what exams do i have tomrrow? I like skateboarding.'
-    message = 'i will be working tommrrow because i need to send a report to my inverstors. They will be happy to see the report.'
+    #message = 'i will be working tommrrow because i need to send a report to my inverstors. They will be happy to see the report.'
+    message = 'what should i work on tmrw?'
     
     thread = Thread.new_with_system_prompt(uid)
     
