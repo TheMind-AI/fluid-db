@@ -1,3 +1,4 @@
+import json
 from typing import List
 from themind.schema.thread import Thread
 from themind.schema.message import Message
@@ -41,7 +42,13 @@ class Agent(object):
         )
         assert isinstance(update_memory_obj, UpdateMemoryModel)
 
-        print(update_memory_obj)
+        print(update_memory_obj.data)
+        data_dict = json.loads(update_memory_obj.data)
+        print(data_dict)
+
+        self.structured_memory.update(uid=uid, json_path=update_memory_obj.jsonpath_query, new_data=update_memory_obj.data)
+
+        print(self.structured_memory.get_memory(uid=uid))
 
     def run(self, uid: str, thread: Thread):
 

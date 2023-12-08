@@ -7,7 +7,7 @@ from themind.functions.function_base import FunctionBase
 
 class UpdateMemoryModel(BaseModel):
     reasoning: str = Field(..., description="Max 100 character compressed reasoning for the answer")
-    #is_fetching: bool = Field(..., description="True if the function is fetching memory")
+    data: str = Field(..., description="Data that will be updated or written to the structured memory.")
     jsonpath_query: str = Field(..., description="JSONPath query to fetch memory based on the provided memory JSON schema")
 
 
