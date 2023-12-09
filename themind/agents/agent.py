@@ -10,7 +10,7 @@ from themind.functions.send_message_function import SendMessageFunction
 from themind.functions.fetch_memory_function import FetchMemoryFunction, FetchMemoryModel
 from themind.functions.update_memory_function import UpdateMemoryFunction, UpdateMemoryModel
 
-
+# DEPRECTED
 class Agent(object):
 
     def __init__(self):
@@ -28,25 +28,25 @@ class Agent(object):
             
     def run_v2(self, uid: str, thread: Thread):
 
-        results = self.run_fetch_memory(uid=uid, thread=thread)
-        if results:
-            print('FETCHED: ', results)
-        else:
-            print('NO FETCH RESULTS')
+        # results = self.run_fetch_memory(uid=uid, thread=thread)
+        # if results:
+        #     print('FETCHED: ', results)
+        # else:
+        #     print('NO FETCH RESULTS')
             
-        #self.run_update_memory(uid=uid, thread=thread)
+        self.run_update_memory(uid=uid, thread=thread)
 
-        if results:
-            thread.add_message(message=Message.user_message(content=results))
-        else:
-            thread.add_message(message=Message.user_message(content='No results found.'))
-
-        print(thread.to_openai_messages())
-        response = self.llm.chat(messages=thread.to_openai_messages(), stream=True)
-
-        # print the chat stream
-        for message in response:
-            print(message, end='')
+        # if results:
+        #     thread.add_message(message=Message.user_message(content=results))
+        # else:
+        #     thread.add_message(message=Message.user_message(content='No results found.'))
+        #
+        # print(thread.to_openai_messages())
+        # response = self.llm.chat(messages=thread.to_openai_messages(), stream=True)
+        # print(response)
+        # # print the chat stream
+        # for message in response:
+        #     print(message, end='')
 
     def run_fetch_memory(self, uid: str, thread: Thread):
         fetch_memory_obj = self.fetch_memory_function.maybe_fetch_memory(
@@ -118,7 +118,23 @@ if __name__ == '__main__':
     #message = 'what exams do i have tomrrow? I like skateboarding.'
     #message = 'i will be working tommrrow because i need to send a report to my inverstors. They will be happy to see the report.'
     message = 'what should i work on tmrw?'
-    
+    message = """
+    FluidDB is a database for AI apps.
+
+    LLM OS - TheMemory is FluidDB. It's a Dynamic File System.
+
+    In the Future you won’t be thinking which database to use, this is all abstracted away from you, AI takes care of it.
+
+    Data has a structure and AI can infer it."""
+    message = """
+    Is it possible to run compressed chain of thought?
+
+    Goal: reduce the number of generated tokens while still giving the LLM time to think
+
+    Benefit: UX boost - better & faster AI replies
+    """
+    #message = 'fluiddb is a project i work on.'
+
     thread = Thread.new_with_system_prompt(uid)
     
     new_message = Message.user_message(content=message)

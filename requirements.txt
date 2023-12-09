@@ -10,4 +10,10 @@ backoff
 jsonpath-ng
 genson
 
+# api & server
+fastapi
+gunicorn
+uvicorn
 
+# database
+firebase-admin
