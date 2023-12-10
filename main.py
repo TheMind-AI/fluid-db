@@ -2,12 +2,10 @@ import uvicorn
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from themind.api.routes import routers
-from app.core.config import settings
 
 app = FastAPI(
-    title=settings.PROJECT_NAME,
-    openapi_url=f"{settings.API_V1_STR}/openapi.json",
-    #openapi_tags=settings.TAGS_METADATA
+    title='TheMind',
+    openapi_url=f"/api/v1/openapi.json",
 )
 
 app.add_middleware(
@@ -20,12 +18,10 @@ app.add_middleware(
 
 app.include_router(routers)
 
-
 if __name__ == '__main__':
     uvicorn.run(
         'main:app',
-        host=settings.HOST,
-        port=settings.PORT,
-        #debug=settings.DEBUG,
-        reload=settings.DEBUG
+        host='0.0.0.0',
+        port=8081,
+        reload=True
     )

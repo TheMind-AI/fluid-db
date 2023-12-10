@@ -39,8 +39,9 @@ async def chat_stream(body: MessageBody):
     if body.thread_id is None:
         pass
         # create a new thread id
-    
-    chat_agent = ChatAgent()
+
+    from themind.firebase_app import firebase_app
+    chat_agent = ChatAgent(firebase_app)
     response_stream, thread_id = chat_agent.chat(body.uid, body.thread_id, body.content, body.location)
     
     return sse_response(response_stream, thread_id=thread_id)

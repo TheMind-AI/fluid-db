@@ -8,10 +8,9 @@ from themind.database.firestore.thread_repository import ThreadRepository
 
 class ChatAgent(object):
 
-
-    def __init__(self):
+    def __init__(self, firebase_app):
         self.llm = OpenAILLM()
-        self.thread_repo = ThreadRepository()
+        self.thread_repo = ThreadRepository(firebase_app)
 
         self.struct_memory_agent = StructMemoryAgent()
 

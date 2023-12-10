@@ -1,6 +1,7 @@
 from typing import Optional
-from themind.database.firestore_base import FirestoreBase
-from themind.schema.user import User  # Assuming you have a User schema
+from themind.database.firestore.firestore_base import FirestoreBase
+from themind.schema.user import User
+from google.cloud.firestore_v1.base_query import FieldFilter
 
 
 class UserRepository(FirestoreBase):
@@ -18,6 +19,19 @@ class UserRepository(FirestoreBase):
             return None
         return User(**user_obj)
 
-    def create_user(self, user: User) -> str:
+    def get_user_by_email(self, email: str) -> Optional[User]:
         collection_ref = self.collection_ref()
-        return self.create(ref=collection_ref, data=user.model_dump())
+        query = collection_ref.where(filter=FieldFilter('email', '==', email)).stream()
+        for result in query:
+            return User(**result.to_dict())
+        return None
+
+    def create_user(self, user: User) -> User:
+        existing_user = self.get_user_by_email(user.email)
+        if existing_user is not None:
+            raise Exception(f"A user with email {user.email} already exists.")
+
+        collection_ref = self.collection_ref()
+        user_dict = self.create(ref=collection_ref, data=user.model_dump())
+
+        return User(**user_dict)
