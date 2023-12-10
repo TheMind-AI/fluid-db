@@ -1,10 +1,7 @@
 import uvicorn
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
-from ratelimit import RateLimitMiddleware
-
-from app.api.middleware.rate_limit import authenticate, _redis_backend, FREE_RULE, PREMIUM_RULE, subscription_429
-from app.api.routes import routers
+from themind.api.routes import routers
 from app.core.config import settings
 
 app = FastAPI(
