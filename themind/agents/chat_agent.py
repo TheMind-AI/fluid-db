@@ -58,3 +58,18 @@ class ChatAgent(object):
         thread = self.thread_repo.get_thread(uid=uid, thread_id=thread_id)
         thread.add_message(message=Message.assistent_message(content=reply))
         self.thread_repo.update_thread(uid=uid, thread=thread)
+
+
+if __name__ == '__main__':
+
+    from themind.firebase_app import firebase_app
+    chat_agent = ChatAgent(firebase_app)
+
+    uid = 'yP02mdoU5gV8Hj8TJjq1'
+    content = 'ahoj my name is adam'
+
+    response_stream, thread_id = chat_agent.chat(uid, content)
+
+    print(thread_id)
+    for message in response_stream:
+        print(message, end='')

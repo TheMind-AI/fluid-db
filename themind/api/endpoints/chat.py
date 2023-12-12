@@ -29,7 +29,7 @@ class MessageBody(BaseModel):
     location: Optional[Location] = None
 
 
-@router.post("/chat")
+@router.post("/")
 async def chat_stream(body: MessageBody):
 
     # TOOD: improve this to use logger
