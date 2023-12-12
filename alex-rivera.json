@@ -175,7 +175,7 @@
       {
         "Project": "Maintainer of a popular GitHub project",
         "StartDate": "2018-03-05"
-      },
+      }
     ]
   },
   "PersonalProjectsAndHobbies": [
@@ -201,7 +201,7 @@
         "Attending robotics conferences",
         "Contributing to open source robotics projects",
         "Writing articles on robotics for tech blogs",
-        "Mentoring aspiring roboticists",
+        "Mentoring aspiring roboticists"
       ]
     }
   ],
@@ -541,6 +541,6 @@
         "Twitter": "@aidenfest",
         "Instagram": "@aid"
       }
-    },
+    }
   ]
 }
