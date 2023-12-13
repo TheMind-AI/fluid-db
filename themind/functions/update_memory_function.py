@@ -122,18 +122,22 @@ class UpdateMemoryFunction(FunctionBase):
         return f"""
         You are a query builder, AI that generates JsonPath query from natural language. You're using jsonpath-ng to query the structured memory.
         
-        You receive a json schema and a natural description of the data you need to fetch and you return the jsonpath query based on the model.
-        It's important to write queries that support this JSON schema. Don't query key/values which are not present in this provided json schema.
+        Current datetime is {datetime.now().strftime("%Y-%m-%d %H:%M")}
         
-        Always use strings in lowercase when querying and filtering based on values. If you're comparing strings, use regex match: =~ to maximize chances of finding the data.
-
-        If the data you're asked for are not in the schema, only reply "NA"
+        The jsonpath-ng uses the following language:
+        - Nested object: $.objects.nested_object
+        - Array: $.objects.some_array[*]
+        - Sorted: $.objects[\\some_field], $.objects[\\some_field,/other_field]
+        - Filter: $.objects[?some_field =~ "foobar"], $.objects[?(@some_field > 5)] (make sure to put strings and regex into quotes)
         
-        Don't fetch only only one key/value, always fetch the whole object. For example, if you're asked for the name of the user, don't return only the name, return the whole object.
+        You receive a json model schema and a description of the data you need to fetch and you return jsonpath queries for relevant data.
+        Because you don't know what's in the data, write multiple queries to get as much relevant info as possible, trying to filter based on different strings etc. You can use regex match (=~) to maximize chances of finding the data.
+        ALWAYS write queries that support the JSON schema. NEVER query key/values which are not present in the provided json schema.
+        Always fetch the whole object from an array, not just a single value. For example, if you're asked for the name of the user, don't return only the name, return the whole object.
         
-        Store date data always in format this format: YYYY-MM-DD
-        Store time data always in format this format: HH:MM 
-        Today is {datetime.now().strftime("%Y-%m-%d")}
+        If the data you're asked for are not in the schema, return an empty array []
+        Always expect date in this format: YYYY-MM-DD
+        Always expect time in this format: HH:MM 
         
         Always run an internal dialogue before returning the query.
 
@@ -161,25 +165,18 @@ class UpdateMemoryFunction(FunctionBase):
           ]
         }}
         
-        QUESTION:
+        REQUEST:
         What's Adam's phone number?
         
         QUERY:
         $.phones[?name = "adam"].number
         
-        QUESTION:
+        REQUEST:
         What events are happening tomorrow?
         
         QUERY:
-        $.events[?date = "2023-12-08"] or
         $.events[?(@.date = "2023-12-08")]
-        
-        QUESTION:
-        What do all upcoming events cost?
-        
-        QUERY:
-        $.events[?(@.date >= "2023-12-07")].price
-        
+
         ---
         
         SCHEMA:
@@ -195,6 +192,8 @@ class UpdateMemoryFunction(FunctionBase):
         return f"""
         You are a senior database architect, that creates queries and new data structures from natural language.
         
+        Current datetime is {datetime.now().strftime("%Y-%m-%d %H:%M")}
+        
         Take the message you received from the user and create a query and data to store in the structured memory.
         Try to append data to the existing schema where possible.
         When it's not possible to fit the data to the current schema make sure to include the description of the new field you create.
@@ -203,11 +202,10 @@ class UpdateMemoryFunction(FunctionBase):
         Don't put the jsonpath in the data, the object will be automatically created on the path you specify.
         Always use strings in lowercase when querying and filtering based on values. If you're comparing strings, use regex match: =~ to maximize chances of finding the data.
         
-        If there are similar data in the schema but the data don't fit the current schema, create a new path for the new data with appendix "_new". 
-        For example, appending object {{"name":"david", "relationship":"friend"}} to a list "relatives" of type ["string"] requires you to create a new list "relatives_new" with the first object [{{"name":"david", "relationship":''friend"}}]
+        If there are similar data in the schema but the data don't fit the current schema, create a new schema and make it inconsistent. Make sure to write a description of the new object schema.
         
-        Store date data always in this format: YYYY-MM-DD
-        Store time data always in this format: HH:MM 
+        Always store date in this format: YYYY-MM-DD
+        Always store time in this format: HH:MM
 
         Always run an internal dialogue before returning the query and data.
         
@@ -236,8 +234,8 @@ class UpdateMemoryFunction(FunctionBase):
         }}
 
         REQUEST: Adam's phone number is 722263238.
-        QUERY: $.phones[?name = "adam"].number
-        DATA: 722264238
+        QUERY: $.phones
+        DATA: {{"name": "adam", "number": "722264238"}}
 
         REQUEST: My last name is Zvada.
         QUERY: $.user.last_name
@@ -265,7 +263,4 @@ class UpdateMemoryFunction(FunctionBase):
         {schema_descriptions if schema_descriptions else ""}
         
         REQUEST: {user_message}
-        QUERY:
-        DATA: 
-        
         """
