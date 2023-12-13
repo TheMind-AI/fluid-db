@@ -1,0 +1,10 @@
+cff-version: 0.0.1
+message: "If you use this software, please cite it as below."
+title: "FluidDB"
+url: "https://github.com/themind-ai/fluid-db"
+authors:
+- family-names: "Zvada"
+  given-names: "Adam"
+  orcid: "https://orcid.org/0009-0001-5907-9513"
+- family-names: Mokos"
+  given-names: "David"
