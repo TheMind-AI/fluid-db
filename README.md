@@ -6,9 +6,9 @@
 </h3>
 
 ---
-> Research repo for experimenting with the concept of a fluid database.
+Research repo for experimenting with the concept of a fluid database.
 
-![llm-os](./assets/FluidDB.png)
+![llm-os](./assets/llm-os.jpeg)
 
 ### What is Fluid Database?
 
