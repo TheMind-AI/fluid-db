@@ -8,10 +8,13 @@ from themind.memory.structured_json_memory import JsonPathExpr, StructuredJsonMe
 
 def main():
 
-    func = UpdateMemoryFunction()
-    uid = "test2"
 
-    func.run(uid, "Adams phone number is 722238738")
+
+
+    # func = UpdateMemoryFunction()
+    # uid = "test2"
+    #
+    # func.run(uid, "Adams phone number is 722238738")
 
     # print(repr(JsonPathExpr(json_path='$.phone')))
 
@@ -79,6 +82,10 @@ def main():
         "Christmas Eve"
       ]
     }
+
+    expr = jsonpath_ng.ext.parse("$.phones[?(@.name =~ 'Adam')]|$.user")
+
+    print([v.value for v in expr.find(data)])
 
     # try:
     #     expr = jsonpath_ng.ext.parse("$.phone)")

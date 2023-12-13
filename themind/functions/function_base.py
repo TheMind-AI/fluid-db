@@ -10,7 +10,7 @@ class FunctionBase(object):
     args_schema: Type[BaseModel]
     
     @abc.abstractmethod
-    def run():
+    def run(self):
         raise NotImplementedError()
 
     def openai_schema(self):

@@ -45,10 +45,11 @@ class OpenAILLM(object):
         return response.choices[0].message.content
 
     @backoff.on_exception(backoff.expo, openai.RateLimitError)
-    def instruction_instructor(self, prompt, response_model, model: OpenAIModel = OpenAIModel.GPT4_TURBO, temperature=0):
+    def instruction_instructor(self, prompt, response_model, model: OpenAIModel = OpenAIModel.GPT4_TURBO, temperature=0, max_retries=1):
         response = self.instructor_client.chat.completions.create(
             model=model.value,
             temperature=temperature,
+            max_retries=2,
             messages=[
                 {"role": "system", "content": SystemPrompt.default},
                 {"role": "user", "content": prompt}
