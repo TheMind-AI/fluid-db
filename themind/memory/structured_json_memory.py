@@ -1,23 +1,35 @@
 import os
 import json
+import re
+
 import jsonpath_ng
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 from jsonpath_ng import parse
 from genson import SchemaBuilder
-from themind.memory.memory_base import MemoryBase
 from themind.llm.openai_llm import OpenAILLM
 import jsonpath_ng.ext
 
 
 class JsonPathExpr(BaseModel):
-    jsonPath: str = Field(..., description="Valid JSON path to query a JSON object based on the provided schema.")
+    json_path: str = Field(
+        ...,
+        description="Valid JsonPath to query a JSON object based on the provided schema.",
+    )
+
+    @classmethod
+    @field_validator("json_path")
+    def validate_json_path(cls, v):
+        try:
+            _ = StructuredJsonMemory.parse_jsonpath_expr(v)
+        except ValueError as e:
+            raise e
+        return v
 
 
-class StructuredJsonMemory(MemoryBase):
+class StructuredJsonMemory:
 
     def __init__(self):
         self.memory = {}
-
         self.llm = OpenAILLM()
 
     def get_memory(self, uid: str):
@@ -26,74 +38,82 @@ class StructuredJsonMemory(MemoryBase):
         return self.memory[uid]
 
     def query(self, uid: str, json_path: str) -> list:
-
-        try:
-            jsonpath_expr = self.load_maybe_repair_jsonpath_expr(uid, json_path)
-        except Exception as e:
-            return f"Invalid JSONPath query: {json_path}, error {e}."
-        
-        matches = [match.value for match in jsonpath_expr.find(self.get_memory(uid))]
-
+        expr = self.parse_jsonpath_expr(json_path)
+        matches = [match.value for match in expr.find(self.get_memory(uid))]
         return matches
-    
-    def load_maybe_repair_jsonpath_expr(self, uid: str, query: str):
 
-        # jsonpath_ng does not support single quotes, bard said
-        query = query.replace("'", '"')
-        # jsonpath_ng should work with ==, but it doesn't
-        query = query.replace("==", "=")
-
-        try:
-            jsonpath_expr = jsonpath_ng.ext.parse(query)
-        except Exception as e:
-            prompt = f"""Invalid JSONPath query: {query}, error {e}. 
-            Please enter a valid JSONPath query based on this json schema: {self.schema(uid)}"""
-            response_model = self.llm.instruction_instructor(prompt, JsonPathExpr)
-            assert isinstance(response_model, JsonPathExpr)
-            try:
-                jsonpath_expr = jsonpath_ng.ext.parse(response_model.jsonPath)
-            except Exception as e:
-                raise ValueError(f"Invalid JSONPath query: {response_model.jsonPath}, error {e}.")
-
-        return jsonpath_expr
-
-    def schema(self, uid: str):
-        builder = SchemaBuilder()
-        
-        builder.add_object(self.get_memory(uid))
-        
-        schema = builder.to_schema()
-    
-        self._remove_required(schema)
-        # print(json.dumps(schema, indent=4))
-        
-        schema = self._compress_schema(schema)
-        # print(json.dumps(schema, indent=4))
-        
-        return schema
-
-    def update(self, uid: str, json_path: str, new_data: dict) -> dict:
-        try:
-            jsonpath_expr = self.load_maybe_repair_jsonpath_expr(uid, json_path)
-        except Exception as e:
-            return f"Invalid JSONPath query: {json_path}, error {e}."
+    def update(self, uid: str, json_path: str, new_data: dict, data_description: str = "") -> dict:
+        expr = self.parse_jsonpath_expr(json_path)
 
         memory = self.get_memory(uid)
-        res = jsonpath_expr.find(memory)
+        res = expr.find(memory)
         if res and type(res[0].value) == list:
+            # Append to existing list
             new_new_data = res[0].value
             new_new_data.append(new_data)
-            jsonpath_expr.update_or_create(memory, new_new_data)
+            expr.update_or_create(memory, new_new_data)
         else:
-            jsonpath_expr.update_or_create(memory, new_data)
+            # Create new field/list
+            expr.update_or_create(memory, new_data)
 
         self._save_memory(uid, memory)
 
+        if data_description:
+            self._save_description(uid, json_path, data_description)
+
         return memory
 
+    def schema(self, uid: str):
+        builder = SchemaBuilder()
 
-    def query_lang_prompt(self) -> str:
-        return "For querying the memory, always use jsonPath. For example, to query all baz values in this json: {'foo': [{'baz': 1}, {'baz': 2}]} use foo[*].baz as the query parameter"
+        builder.add_object(self.get_memory(uid))
+
+        schema = builder.to_schema()
+
+        self._remove_required(schema)
+        # print(json.dumps(schema, indent=4))
+
+        try:
+            schema = self._compress_schema(schema)
+        except Exception as e:
+            print(e)
+            pass
+
+        return schema
+
+    def _save_description(self, uid: str, json_path: str, description: str):
+        file_path = self._descriptions_file_path(uid)
+        if os.path.exists(file_path):
+            with open(file_path, 'r') as f:
+                descriptions = json.load(f)
+        else:
+            descriptions = {}
+
+        simple_path = self.simplify_jsonpath(json_path)
+        expr = self.parse_jsonpath_expr(simple_path)
+        expr.update_or_create(descriptions, description)
+
+        os.makedirs(os.path.dirname(file_path), exist_ok=True)
+        with open(file_path, 'w') as f:
+            json.dump(descriptions, f, indent=2)
+
+    def get_descriptions(self, uid: str):
+        file_path = self._descriptions_file_path(uid)
+        if os.path.exists(file_path):
+            with open(file_path, 'r') as f:
+                descriptions = json.load(f)
+            return descriptions
+        return {}
+
+    @staticmethod
+    def parse_jsonpath_expr(json_path: str):
+        json_path = json_path.replace("'", '"')
+        try:
+            jsonpath_expr = jsonpath_ng.ext.parse(json_path)
+        except Exception as e:
+            raise ValueError(f"Invalid JsonPath query: {json_path}, error: {e}")
+
+        return jsonpath_expr
 
     def _load_memory(self, uid: str):
         file_path = self._memory_file_path(uid)
@@ -102,13 +122,35 @@ class StructuredJsonMemory(MemoryBase):
                 self.memory[uid] = json.load(f)
         else:
             self.memory[uid] = {}
-    
-    def _memory_file_path(self, uid: str):
+
+    @staticmethod
+    def _memory_file_path(uid: str):
         base_dir = os.path.dirname(os.path.realpath(__file__))
         file_path = os.path.join(base_dir, "data", f"{uid}.json")
 
         return file_path
-    
+
+    @staticmethod
+    def _descriptions_file_path(uid: str):
+        base_dir = os.path.dirname(os.path.realpath(__file__))
+        file_path = os.path.join(base_dir, "data", f"{uid}-desc.json")
+
+        return file_path
+
+    @staticmethod
+    def simplify_jsonpath(jsonpath: str):
+        clean_path = jsonpath
+
+        clean_path = re.sub(r'\[.*?\]', '', clean_path)
+        clean_path = re.sub(r'`.*?`', '', clean_path)
+
+        return clean_path
+        #
+        # parts = clean_path.lstrip('$').split('.')
+        # simplified_parts = [part for part in parts if part]
+        #
+        # return simplified_parts
+
     def _save_memory(self, uid: str, new_memory: dict):
         file_path = self._memory_file_path(uid)
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
@@ -117,6 +159,9 @@ class StructuredJsonMemory(MemoryBase):
 
     def _compress_schema(self, schema):
         compressed_schema = {}
+        if type(schema) == list:
+            return [self._compress_schema(v) for v in schema]
+
         if "type" in schema.keys():
             if schema["type"] == "object" and "properties" in schema:
                 compressed_schema = self._compress_schema(schema["properties"])
@@ -138,112 +183,3 @@ class StructuredJsonMemory(MemoryBase):
                 self._remove_required(value)
             if 'items' in value:
                 self._remove_required(value['items'])
-                
-
-def main():
-
-    memory = StructuredJsonMemory()
-
-    schema = memory.schema("2")
-    print("SCHEMA:")
-    print(json.dumps(schema, indent=2))
-
-    memory.update("2", "$.phones", {"name": "Jirka", "number": "122"})
-
-    # print(json.dumps(schema, indent=2))
-    #
-    # memory_data = memory.get_memory("2")
-    # print("MEMORY DATA:")
-    # print(json.dumps(memory_data, indent=2))
-    #
-    # memory.append("2", "$.phones", {"name": "Jakub", "number": "123"})
-    #
-    memory_data = memory.get_memory("2")
-    print("MEMORY DATA:")
-    print(json.dumps(memory_data, indent=2))
-    #
-    # return
-
-    def mod_func(orig, data, field):
-        data[field] = {
-            "name": orig["name"],
-            "numbers": [
-                orig["number"]
-            ]
-        }
-
-    data = {
-      "phones": [
-        {
-          "name": "Adam",
-          "number": "123456"
-        },
-        {
-          "name": "David",
-          "number": "654321"
-        }
-      ],
-      "user": {
-        "name": "David"
-      },
-      "events": [
-        "Founders Inc Christmas Party",
-        "Christmas Eve"
-      ]
-    }
-
-    def update(json_path: str, data, val):
-        expr = jsonpath_ng.ext.parse(json_path)
-        # expr.find_or_create(data)
-        expr.update_or_create(data, val)
-
-
-    # update("events", data, "Mokos")
-    # update("phones[*]", data, mod_func)
-    # update('phones[?name = "Adam"].number', data, "722264238")
-
-    # update("events_new", data, [{"name": "AI Summit", "date": "2023-12-12"}])
-    #
-    # print(json.dumps(data, indent=4))
-
-
-    # expr = parse("user.last_name")
-    # print([f.value for f in expr.find(data)])
-    #
-    # expr.update(data, "David")
-
-
-    # expr = parse("events[*]")
-    # print([f.value for f in expr.find(data)])
-    #
-    # expr.update(data, "David")
-
-    # expr = parse("phones[*]")
-    # expr.update(data, mod_func)
-
-    # print(json.dumps(data, indent=4))
-
-    # uid = '1'
-    #
-    # memory = StructuredJsonMemory()
-    #
-    # res = memory.query(uid, "name")
-    # memory.append_to_list(uid, "events", {
-    #         "location": "",
-    #         "time": "18:00",
-    #         "theme": "AI"
-    #     })
-    # memory.append_to_list(uid, "test_list", {"location": "Golden Gate", "time": "12:00"})
-    #
-    # res = memory.query(uid, "events")
-    # print(res)
-    #
-    # print(memory.get_memory(uid))
-    # print(memory.schema(uid))
-
-
-if __name__ == "__main__":
-    main()
-
-
-
