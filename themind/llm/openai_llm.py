@@ -49,7 +49,7 @@ class OpenAILLM(object):
         response = self.instructor_client.chat.completions.create(
             model=model.value,
             temperature=temperature,
-            max_retries=2,
+            max_retries=max_retries,
             messages=[
                 {"role": "system", "content": SystemPrompt.default},
                 {"role": "user", "content": prompt}

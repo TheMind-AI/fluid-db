@@ -14,7 +14,7 @@ class UpdateMemoryModel(BaseModel):
     description: str = Field(..., description="Description of the newly created fields/objects/arrays")
 
     @classmethod
-    @field_validator("json_path")
+    @field_validator("json_path", mode="before")
     def validate_json_path(cls, v):
         try:
             StructuredJsonMemory.parse_jsonpath_expr(v)
@@ -23,7 +23,7 @@ class UpdateMemoryModel(BaseModel):
         return v
 
     @classmethod
-    @field_validator("data")
+    @field_validator("data", mode="before")
     def validate_data(cls, v):
         try:
             json.loads(v)
@@ -36,7 +36,7 @@ class FetchMemoryModel(BaseModel):
     json_path_list: List[str] = Field(..., description="List of JsonPath expressions for fetching relevant data")
 
     @classmethod
-    @field_validator("json_path_list")
+    @field_validator("json_path_list", mode="before")
     def validate_json_path_list(cls, v):
         if type(v) != list or len(v) == 0:
             raise ValueError("json_path_list is not a valid list. It has to abe a list with at least one jsonpath expression")
@@ -131,9 +131,11 @@ class UpdateMemoryFunction(FunctionBase):
         - Filter: $.objects[?some_field =~ "foobar"], $.objects[?(@some_field > 5)] (make sure to put strings and regex into quotes)
         
         You receive a json model schema and a description of the data you need to fetch and you return jsonpath queries for relevant data.
-        Because you don't know what's in the data, write multiple queries to get as much relevant info as possible, trying to filter based on different strings etc. You can use regex match (=~) to maximize chances of finding the data.
+        Because you don't know what's in the data, write multiple queries to get as much relevant info as possible, trying to filter based on different strings etc.
+        Make sure to put strings and regex in quotes when filtering. The regex needs to be string in quotes. It will be evaluated in python re.search function.
+        You can use regex match (=~) to maximize chances of finding the data.
         ALWAYS write queries that support the JSON schema. NEVER query key/values which are not present in the provided json schema.
-        Always fetch the whole object from an array, not just a single value. For example, if you're asked for the name of the user, don't return only the name, return the whole object.
+        ALWAYS fetch the whole object from an array, not just a single value. For example, if you're asked for the name of the user, don't return only the name, return the whole object.
         
         If the data you're asked for are not in the schema, return an empty array []
         Always expect date in this format: YYYY-MM-DD
@@ -168,15 +170,19 @@ class UpdateMemoryFunction(FunctionBase):
         REQUEST:
         What's Adam's phone number?
         
-        QUERY:
-        $.phones[?name = "adam"].number
+        QUERIES:
+        $.phones[?name = "adam"]
+        $.phones[?name = "Adam"]
+        
+        Notes: fetching whole objects, not just phone number, trying different names to get most data.
         
         REQUEST:
         What events are happening tomorrow?
         
         QUERY:
         $.events[?(@.date = "2023-12-08")]
-
+        
+        Notes: fetching whole objects
         ---
         
         SCHEMA:
@@ -196,6 +202,7 @@ class UpdateMemoryFunction(FunctionBase):
         
         Take the message you received from the user and create a query and data to store in the structured memory.
         Try to append data to the existing schema where possible.
+        Only edit data when you're sure that the data are there. Otherwise append whole new objects.
         When it's not possible to fit the data to the current schema make sure to include the description of the new field you create.
         
         Always think about using the memory in the future. You should create lists when we might append more objects of similar type in the future. To create a list the data should be a list: [new data]
@@ -236,22 +243,28 @@ class UpdateMemoryFunction(FunctionBase):
         REQUEST: Adam's phone number is 722263238.
         QUERY: $.phones
         DATA: {{"name": "adam", "number": "722264238"}}
+        Notes: appending whole object as I don't know if object with name adam is in the list
 
         REQUEST: My last name is Zvada.
         QUERY: $.user.last_name
         DATA: Zvada
+        Notes: I can straight edit here as I know the whole user object
 
         REQUEST: Adam's phone number has +420 prefix.
         QUERY: $.phones[?name = "adam"].prefix
         DATA: +420
+        Notes: I can do this ONLY if I'm sure object {{"name": "adam", .. other fields}} exists.
 
         REQUEST: I'm going to a Christmas party tomorrow which costs 20 usd to entry.
-        QUERY: $.events_new
+        QUERY: $.events
         DATA: {{"name": "Christmas party", "date": "{(datetime.now() + timedelta(days=1)).strftime('%Y-%m-%d')}", "price": {{"currency": "USD", "value": 20}}}}
+        DESCRIPTIONS: Events the user is attending
+        Notes: The price data doesn't fit the model, I will update the model a bit and push it there
         
         REQUEST: What is my brother's name?
         QUERY: NA
         DATA: {{}}
+        Notes: This is not in the schema.
         
         ---
         

@@ -3,28 +3,9 @@ import json
 import re
 
 import jsonpath_ng
-from pydantic import BaseModel, Field, field_validator
-from jsonpath_ng import parse
 from genson import SchemaBuilder
 from themind.llm.openai_llm import OpenAILLM
 import jsonpath_ng.ext
-
-
-class JsonPathExpr(BaseModel):
-    json_path: str = Field(
-        ...,
-        description="Valid JsonPath to query a JSON object based on the provided schema.",
-    )
-
-    @classmethod
-    @field_validator("json_path")
-    def validate_json_path(cls, v):
-        try:
-            _ = StructuredJsonMemory.parse_jsonpath_expr(v)
-        except ValueError as e:
-            raise e
-        return v
-
 
 class StructuredJsonMemory:
 
@@ -50,7 +31,10 @@ class StructuredJsonMemory:
         if res and type(res[0].value) == list:
             # Append to existing list
             new_new_data = res[0].value
-            new_new_data.append(new_data)
+            if type(new_data) == list:
+                [new_new_data.append(d) for d in new_data]
+            else:
+                new_new_data.append(new_data)
             expr.update_or_create(memory, new_new_data)
         else:
             # Create new field/list
