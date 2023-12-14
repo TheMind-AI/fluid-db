@@ -38,7 +38,7 @@ def process_json(obj, parent_path='', results=None):
     return results
 
 # Process the JSON data
-json_path = "/Users/zvada/Documents/TheMind/themind-memory/alex-rivera.json"
+json_path = "/data/alex-rivera.json"
 with open(json_path, 'r') as file:
     json_obj = json.load(file)
 
