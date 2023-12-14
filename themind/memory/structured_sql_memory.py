@@ -40,7 +40,24 @@ class StructuredSQLMemory:
         self.db = sqlite3.connect(f'{uid}.db')
         return self.db
 
+    def dump(self, uid):
+        db = self.db_connection(uid)
 
+        db.text_factory = str
+        cur = db.cursor()
+
+        table_names = cur.execute("SELECT name FROM sqlite_master WHERE type='table';").fetchall()
+        table_names = list(map(lambda l: l[0], table_names))
+
+        for table_name in table_names:
+            print(table_name)
+            print()
+
+            result = cur.execute(f"SELECT * from '{table_name}'").fetchall()
+            print(result)
+
+        cur.close()
+        db.close()
 
 
 if __name__ == '__main__':

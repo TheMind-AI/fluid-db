@@ -72,6 +72,10 @@ def main():
         {
           "name": "David",
           "number": "654321"
+        },
+        {
+            "name": "David Mokos",
+            "number": "654321"
         }
       ],
       "user": {
@@ -83,7 +87,9 @@ def main():
       ]
     }
 
-    expr = jsonpath_ng.ext.parse("$.phones[?(@.name =~ 'Adam')]|$.user")
+
+
+    expr = jsonpath_ng.ext.parse('$.phones[?name =~ "david mokos"]')
 
     print([v.value for v in expr.find(data)])
 

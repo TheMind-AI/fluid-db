@@ -163,7 +163,7 @@ cython_debug/
 
 # Memory files for users
 themind/memory/data/*
-themind/memory/*.db
+*.db
 
 firebase-pk.json
 ```

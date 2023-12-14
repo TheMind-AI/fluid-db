@@ -16,15 +16,15 @@ class SQLQueryModel(BaseModel):
 
 
 
-class UpdateMemoryFunctionArguments(BaseModel):
+class UpdateSQLMemoryFunctionArguments(BaseModel):
     reasoning: str = Field(..., description="Max 100 character compressed reasoning for the answer")
     user_message: str = Field(..., description="The data in human language that should be stored")
 
 
-class UpdateMemoryFunction(FunctionBase):
+class UpdateSQLMemoryFunction(FunctionBase):
     name: str = "update-memory"
     description: str = "Tool to update or write to the structured memory of the user."
-    args_schema: Type[BaseModel] = UpdateMemoryFunctionArguments
+    args_schema: Type[BaseModel] = UpdateSQLMemoryFunctionArguments
 
     def __init__(self):
         super().__init__()
@@ -42,19 +42,23 @@ class UpdateMemoryFunction(FunctionBase):
         print(schema)
 
         # First fetch data
-        fetch_result = self.maybe_fetch_data(user_message, schema)
-        print("==FETCH==")
-        print(" REASONING:", fetch_result.reasoning)
-        print(" QUERIES:", fetch_result.queries)
+        if schema:
+            fetch_result = self.maybe_fetch_data(user_message, schema)
+            print("==FETCH==")
+            print(" REASONING:", fetch_result.reasoning)
+            print(" QUERIES:", fetch_result.sql_queries)
+            fetched_data = [memory.query(uid, q) for q in fetch_result.sql_queries]
+        else:
+            fetched_data = ""
 
-        fetched_data = [memory.query(uid, q) for q in fetch_result.sql_queries]
+        schema = memory.schema(uid)
 
         llm_result = self.maybe_update_memory(user_message, schema, fetched_data)
         print("==UPDATE==")
         print(" REASONING:", llm_result.reasoning)
         print(" QUERIES:", llm_result.sql_queries)
 
-        update = [memory.query(uid, q) for q in fetch_result.sql_queries]
+        update = [memory.query(uid, q) for q in llm_result.sql_queries]
 
         print(update)
         print("Done")
@@ -79,161 +83,49 @@ class UpdateMemoryFunction(FunctionBase):
         return model
 
     @staticmethod
-    def _retrieve_memory_prompt(user_message: str, memory_schema: str):
+    def _retrieve_memory_prompt(user_message: str, memory_schema: str = ""):
         return f"""
-        You are a query builder, AI that generates JsonPath query from natural language. You're using jsonpath-ng to query the structured memory.
+        You are a senior SQL master, AI that generates SQL Queries from natural language. You're using SQL for sqlite3 to query the database.
         
         Current datetime is {datetime.now().strftime("%Y-%m-%d %H:%M")}
         
-        The jsonpath-ng uses the following language:
-        - Nested object: $.objects.nested_object
-        - Array: $.objects.some_array[*]
-        - Sorted: $.objects[\\some_field], $.objects[\\some_field,/other_field]
-        - Filter: $.objects[?some_field =~ "foobar"], $.objects[?(@some_field > 5)] (make sure to put strings and regex into quotes)
-        
-        You receive a json model schema and a description of the data you need to fetch and you return jsonpath queries for relevant data.
-        Because you don't know what's in the data, write multiple queries to get as much relevant info as possible, trying to filter based on different strings etc.
-        Make sure to put strings and regex in quotes when filtering. The regex needs to be string in quotes. It will be evaluated in python re.search function.
-        You can use regex match (=~) to maximize chances of finding the data.
-        ALWAYS write queries that support the JSON schema. NEVER query key/values which are not present in the provided json schema.
-        ALWAYS fetch the whole object from an array, not just a single value. For example, if you're asked for the name of the user, don't return only the name, return the whole object.
-        
-        If the data you're asked for are not in the schema, return an empty array []
-        Always expect date in this format: YYYY-MM-DD
-        Always expect time in this format: HH:MM 
+        For the given request, return the list of SQL SELECT queries that retrieve the most relevant information from the sqlite database.
+        You don't know what's in the data, write multiple queries to get as much relevant info as possible.
+        ALWAYS write SELECT queries that support the database schema.
+        ALWAYS fetch the whole row (*) with the SELECT statement, not just a single column.
+        If the data you're asked for are clearly not in the schema, return an empty string.
         
         Always run an internal dialogue before returning the query.
-
-        ---
-
-        Examples:
         
-        SCHEMA:
-        {{
-          "phones": [
-            {{
-              "name": "string",
-              "number": "string"
-            }}
-          ],
-          "user": {{
-            "name": "string"
-          }},
-          "events": [
-            {{
-              "name": "string",
-              "date": "string",
-              "price": "number"
-            }}
-          ]
-        }}
-        
-        REQUEST:
-        What's Adam's phone number?
-        
-        QUERIES:
-        $.phones[?name = "adam"]
-        $.phones[?name = "Adam"]
-        
-        Notes: fetching whole objects, not just phone number, trying different names to get most data.
-        
-        REQUEST:
-        What events are happening tomorrow?
-        
-        QUERY:
-        $.events[?(@.date = "2023-12-08")]
-        
-        Notes: fetching whole objects
         ---
         
-        SCHEMA:
-        {memory_schema}
-
+        SQL TABLES SCHEMA:
+        {memory_schema if memory_schema else "There are no tables in the DB."}
         
-        REQUEST: {user_message}
-        
+        USER REQUEST: {user_message}
         """
 
     @staticmethod
     def _update_memory_prompt(user_message: str, memory_schema: str, fetched_data=None):
         return f"""
-        You are a senior database architect, that creates queries and new data structures from natural language.
+        You are a senior SQL database architect, AI that creates the best schema for data provided using SQL for sqlite3.
         
         Current datetime is {datetime.now().strftime("%Y-%m-%d %H:%M")}
         
-        Take the message you received from the user and create a query and data to store in the structured memory.
-        Try to append data to the existing schema where possible.
-        Only edit data when you're sure that the data are there. Otherwise append whole new objects.
-        When it's not possible to fit the data to the current schema make sure to include the description of the new field you create.
+        For the given user request you will return the list of SQL queries that store the information to sqlite database.
+        ALWAYS think step by step. Run an internal dialogue before returning the queries.
         
-        Always think about using the memory in the future. You should create lists when we might append more objects of similar type in the future. To create a list the data should be a list: [new data]
-        Don't put the jsonpath in the data, the object will be automatically created on the path you specify.
-        Always use strings in lowercase when querying and filtering based on values. If you're comparing strings, use regex match: =~ to maximize chances of finding the data.
-        
-        If there are similar data in the schema but the data don't fit the current schema, create a new schema and make it inconsistent. Make sure to write a description of the new object schema.
-        
-        Always store date in this format: YYYY-MM-DD
-        Always store time in this format: HH:MM
-
-        Always run an internal dialogue before returning the query and data.
+        You receive the user request. First, think about how to store the data based on the database schema.
+        If the data conform to the schema simply insert the new data using INSERT INTO statement.
+        If you need new columns make sure to create them first using ALTER TABLE ADD COLUMN. The order of queries matters!
+        If the data needs a new table make sure to create the new table first using CREATE TABLE. The order of queries matters!
+        Make sure to keep the relationships between the tables using the correct ids.
         
         ---
-
-        Examples:
-
-        SCHEMA:
-        {{
-        "phones": [
-            {{
-                "name": "string",
-                "number": "string"
-            }}
-        ],
-        "user": {{
-            "name": "string"
-        }},
-        "events": [
-            {{
-                "name": "string",
-                "date": "string",
-                "price": "number"
-            }}
-        ]
-        }}
-
-        REQUEST: Adam's phone number is 722263238.
-        QUERY: $.phones
-        DATA: {{"name": "adam", "number": "722264238"}}
-        Notes: appending whole object as I don't know if object with name adam is in the list
-
-        REQUEST: My last name is Zvada.
-        QUERY: $.user.last_name
-        DATA: Zvada
-        Notes: I can straight edit here as I know the whole user object
-
-        REQUEST: Adam's phone number has +420 prefix.
-        QUERY: $.phones[?name = "adam"].prefix
-        DATA: +420
-        Notes: I can do this ONLY if I'm sure object {{"name": "adam", .. other fields}} exists.
-
-        REQUEST: I'm going to a Christmas party tomorrow which costs 20 usd to entry.
-        QUERY: $.events
-        DATA: {{"name": "Christmas party", "date": "{(datetime.now() + timedelta(days=1)).strftime('%Y-%m-%d')}", "price": {{"currency": "USD", "value": 20}}}}
-        DESCRIPTIONS: Events the user is attending
-        Notes: The price data doesn't fit the model, I will update the model a bit and push it there
+        SQL TABLES SCHEMA:
+        {memory_schema if memory_schema else "No tables yet in the DB."}
         
-        REQUEST: What is my brother's name?
-        QUERY: NA
-        DATA: {{}}
-        Notes: This is not in the schema.
+        {f"RELEVANT DATA FROM sqlite DB: {fetched_data}" if fetched_data else ""}
         
-        ---
-        
-        These are some relevant data from the memory:
-        {fetched_data}
-        
-        SCHEMA:
-        {memory_schema}
-        
-        REQUEST: {user_message}
+        USER REQUEST: {user_message}
         """
