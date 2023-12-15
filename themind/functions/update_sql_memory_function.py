@@ -93,6 +93,7 @@ class UpdateSQLMemoryFunction(FunctionBase):
         You don't know what's in the data, write multiple queries to get as much relevant info as possible.
         ALWAYS write SELECT queries that support the database schema.
         ALWAYS fetch the whole row (*) with the SELECT statement, not just a single column.
+        When filtering using strings, use LIKE to maximize chances of finding the data. More data is always better.
         If the data you're asked for are clearly not in the schema, return an empty string.
         
         Always run an internal dialogue before returning the query.
@@ -117,10 +118,13 @@ class UpdateSQLMemoryFunction(FunctionBase):
         
         You receive the user request. First, think about how to store the data based on the database schema.
         If the data conform to the schema simply insert the new data using INSERT INTO statement.
-        If you need new columns make sure to create them first using ALTER TABLE ADD COLUMN. The order of queries matters!
-        If the data needs a new table make sure to create the new table first using CREATE TABLE. The order of queries matters!
+        If you need new columns make sure to create them first using ALTER TABLE ADD COLUMN. Then make sure to INSERT the data in the next query. The order of queries matters!
+        If the data needs a new table make sure to create the new table first using CREATE TABLE. Then make sure to INSERT the data in the next query. The order of queries matters!
         Make sure to keep the relationships between the tables using the correct ids.
+        If you don't get relevant data in the prompt assume there are none and INSERT all data as they're new. If you have relevant data you can update the existing data using UPDATE queries.
         
+        ALWAYS remember to insert the data if you created new table or added columns. If you don't store the data in one of the queries the data will be lost forever!
+
         ---
         SQL TABLES SCHEMA:
         {memory_schema if memory_schema else "No tables yet in the DB."}

@@ -25,6 +25,8 @@ class StructuredSQLMemory:
         table_names = list(map(lambda l: l[0], table_names))
 
         for table_name in table_names:
+            if "sqlite_" in table_name:
+                continue
             schema_str += f"{table_name}\n"
             result = cur.execute(f"PRAGMA table_info('{table_name}')").fetchall()
             for r in result:
@@ -50,11 +52,12 @@ class StructuredSQLMemory:
         table_names = list(map(lambda l: l[0], table_names))
 
         for table_name in table_names:
+            if "sqlite_" in table_name:
+                continue
             print(table_name)
-            print()
-
             result = cur.execute(f"SELECT * from '{table_name}'").fetchall()
             print(result)
+            print()
 
         cur.close()
         db.close()
