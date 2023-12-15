@@ -37,13 +37,17 @@ def process_json(obj, parent_path='', results=None):
 
     return results
 
-# Process the JSON data
-json_path = "/data/alex-rivera.json"
-with open(json_path, 'r') as file:
-    json_obj = json.load(file)
 
-processed_data = process_json(json_obj)
+if __name__ == '__main__':
 
-# Output the processed data
-for obj, embedding in processed_data:
-    print(json.dumps(obj, indent=4), "Embedding:", embedding)
+    # Process the JSON data
+    json_path = "/data/alex-rivera.json"
+    with open(json_path, 'r') as file:
+        json_obj = json.load(file)
+
+    processed_data = process_json(json_obj)
+
+    # Output the processed data
+    for obj, embedding in processed_data:
+        print(json.dumps(obj, indent=4), "Embedding:", embedding)
+

@@ -17,3 +17,5 @@ uvicorn
 
 # database
 firebase-admin
+
+pandas

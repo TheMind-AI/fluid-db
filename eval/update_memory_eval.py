@@ -27,6 +27,9 @@ class UpdateMemoryEval:
         func.run(self.uid, "Adams last name is Zvada")
         func.run(self.uid, "Adam Zvada, the only Adam I know, lives in Prague and SF, Cali")
 
+        func.run(self.uid, "Cool resource on RAG by LLamaIndex, best practicies https://docs.google.com/presentation/d/1IJ1bpoLmHfFzKM3Ef6OoWGwvrwDwLV7EcoOHxLZzizE/edit?usp=sharing")
+        func.run(self.uid, "Gold nugget on how to find influencers by David Park https://x.com/Davidjpark96/status/1733739827508777305?s=20")
+
         print("FINAL MEMORY")
         StructuredSQLMemory().dump(self.uid)
 
