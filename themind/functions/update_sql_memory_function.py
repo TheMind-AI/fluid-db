@@ -9,7 +9,7 @@ from themind.memory.structured_sql_memory import StructuredSQLMemory
 
 
 class SQLQueryModel(BaseModel):
-    reasoning: str = Field(..., description="Max 100 character compressed reasoning for the answer")
+    reasoning: str = Field(..., description="Full step by step reasoning, max 250 characters")
     sql_queries: List[str] = Field(..., description="SQL Queries to execute")
 
     # TODO: SQL Query validation
@@ -30,7 +30,7 @@ class UpdateSQLMemoryFunction(FunctionBase):
         super().__init__()
         self.llm = OpenAILLM()
         
-    def run(self, uid: str, user_message: str):
+    def run(self, uid: str, user_message: str, prev_requests: str = None):
 
         print("RUN, user_message:", user_message)
 
@@ -43,7 +43,7 @@ class UpdateSQLMemoryFunction(FunctionBase):
 
         # First fetch data
         if schema:
-            fetch_result = self.maybe_fetch_data(user_message, schema)
+            fetch_result = self.maybe_fetch_data(user_message, schema, prev_requests=prev_requests)
             print("==FETCH==")
             print(" REASONING:", fetch_result.reasoning)
             print(" QUERIES:", fetch_result.sql_queries)
@@ -55,7 +55,7 @@ class UpdateSQLMemoryFunction(FunctionBase):
 
         schema = memory.schema(uid)
 
-        llm_result = self.maybe_update_memory(user_message, schema, fetched_data, prev_reasoning)
+        llm_result = self.maybe_update_memory(user_message, schema, fetched_data, prev_reasoning=prev_reasoning, prev_requests=prev_requests)
         print("==UPDATE==")
         print(" REASONING:", llm_result.reasoning)
         print(" QUERIES:", llm_result.sql_queries)
@@ -66,18 +66,18 @@ class UpdateSQLMemoryFunction(FunctionBase):
         print("Done")
 
     # REMINDER: we'll need to deal with timezones here
-    def maybe_update_memory(self, user_message: str, memory_schema: str, fetched_data=None, prev_reasoning: str = None) -> SQLQueryModel:
+    def maybe_update_memory(self, user_message: str, memory_schema: str, fetched_data=None, prev_reasoning: str = None, prev_requests: str = None) -> SQLQueryModel:
 
-        prompt = self._update_memory_prompt(user_message, memory_schema, fetched_data, prev_reasoning)
+        prompt = self._update_memory_prompt(user_message, memory_schema, fetched_data, prev_reasoning, prev_requests)
 
         model = self.llm.instruction_instructor(prompt, SQLQueryModel, max_retries=3)
         assert isinstance(model, SQLQueryModel)
 
         return model
 
-    def maybe_fetch_data(self, user_message: str, memory_schema: str) -> SQLQueryModel:
+    def maybe_fetch_data(self, user_message: str, memory_schema: str, prev_requests: str = None) -> SQLQueryModel:
 
-        prompt = self._retrieve_memory_prompt(user_message, memory_schema)
+        prompt = self._retrieve_memory_prompt(user_message, memory_schema, prev_requests)
 
         model = self.llm.instruction_instructor(prompt, SQLQueryModel, max_retries=3)
         assert isinstance(model, SQLQueryModel)
@@ -85,7 +85,7 @@ class UpdateSQLMemoryFunction(FunctionBase):
         return model
 
     @staticmethod
-    def _retrieve_memory_prompt(user_message: str, memory_schema: str = ""):
+    def _retrieve_memory_prompt(user_message: str, memory_schema: str = "", prev_requests: str = None):
         return f"""
         You are a senior SQL master, AI that generates SQL Queries from natural language. You're using SQL for sqlite3 to query the database.
         
@@ -93,7 +93,8 @@ class UpdateSQLMemoryFunction(FunctionBase):
         
         For the given request, return the list of SQL SELECT queries that retrieve the most relevant information from the sqlite database.
         You don't know what's in the data, write multiple queries to get as much relevant info as possible.
-        ALWAYS write SELECT queries that support the database schema.
+        ALWAYS write SELECT queries that support the SQL TABLES SCHEMA, never make educated guesses.
+        NEVER SELECT columns that do not exist in SQL TABLES SCHEMA, such query would kill innocent people.
         ALWAYS fetch the whole row (*) with the SELECT statement, not just a single column.
         When filtering using strings, use LIKE to maximize chances of finding the data. More data is always better.
         If the data you're asked for are clearly not in the schema, return an empty string.
@@ -102,6 +103,9 @@ class UpdateSQLMemoryFunction(FunctionBase):
         
         ---
         
+        PREVIOUS USER REQUESTS:
+        {prev_requests if prev_requests else "None"}
+        
         SQL TABLES SCHEMA:
         {memory_schema if memory_schema else "There are no tables in the DB."}
         
@@ -109,7 +113,7 @@ class UpdateSQLMemoryFunction(FunctionBase):
         """
 
     @staticmethod
-    def _update_memory_prompt(user_message: str, memory_schema: str, fetched_data=None, prev_reasoning: str = None):
+    def _update_memory_prompt(user_message: str, memory_schema: str, fetched_data=None, prev_reasoning: str = None, prev_requests: str = None):
         return f"""
         You are a senior SQL database architect, AI that creates the best schema for data provided using SQL for sqlite3.
         
@@ -121,6 +125,8 @@ class UpdateSQLMemoryFunction(FunctionBase):
         You receive the user request. First, think about how to store the data based on the database schema.
         If the data conform to the schema simply insert the new data using INSERT INTO statement.
         If you need new columns make sure to create them first using ALTER TABLE ADD COLUMN. Then make sure to INSERT the data in the next query. The order of queries matters!
+        NEVER make educated guesses, ONLY INSERT data if the columns exist in the SQL TABLES SCHEMA, otherwise create them first.
+        You can't INSERT or UPDATE a column that does not exist yet. First you must ALTER TABLE ADD COLUMN. Otherwise an error will occur and innocent people will die.
         If the data needs a new table make sure to create the new table first using CREATE TABLE. Then make sure to INSERT the data in the next query. The order of queries matters!
         Make sure to keep the relationships between the tables using the correct ids.
         If you don't get relevant data in the prompt assume there are none and INSERT all data as they're new. If you have relevant data you can update the existing data using UPDATE queries.
@@ -128,6 +134,9 @@ class UpdateSQLMemoryFunction(FunctionBase):
         ALWAYS remember to insert the data if you created new table or added columns. If you don't store the data in one of the queries the data will be lost forever!
 
         ---
+        PREVIOUS USER REQUESTS:
+        {prev_requests if prev_requests else "None"}
+        
         SQL TABLES SCHEMA:
         {memory_schema if memory_schema else "No tables yet in the DB."}
         

@@ -18,8 +18,9 @@ class UpdateMemoryEval:
         # func = UpdateMemoryFunction()
         func = UpdateSQLMemoryFunction()
 
-        for sentence in sentences:
-            func.run(self.uid, sentence)
+        for idx, sentence in enumerate(sentences):
+            prev_sentences = "\n  ".join(sentences[:idx])
+            func.run(self.uid, sentence, prev_requests=prev_sentences)
 
         print("FINAL MEMORY")
         StructuredSQLMemory().dump(self.uid)
