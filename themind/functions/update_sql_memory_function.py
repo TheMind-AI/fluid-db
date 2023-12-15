@@ -47,13 +47,15 @@ class UpdateSQLMemoryFunction(FunctionBase):
             print("==FETCH==")
             print(" REASONING:", fetch_result.reasoning)
             print(" QUERIES:", fetch_result.sql_queries)
+            prev_reasoning = fetch_result.reasoning
             fetched_data = [memory.query(uid, q) for q in fetch_result.sql_queries]
         else:
+            prev_reasoning = ""
             fetched_data = ""
 
         schema = memory.schema(uid)
 
-        llm_result = self.maybe_update_memory(user_message, schema, fetched_data)
+        llm_result = self.maybe_update_memory(user_message, schema, fetched_data, prev_reasoning)
         print("==UPDATE==")
         print(" REASONING:", llm_result.reasoning)
         print(" QUERIES:", llm_result.sql_queries)
@@ -64,9 +66,9 @@ class UpdateSQLMemoryFunction(FunctionBase):
         print("Done")
 
     # REMINDER: we'll need to deal with timezones here
-    def maybe_update_memory(self, user_message: str, memory_schema: str, fetched_data=None) -> SQLQueryModel:
+    def maybe_update_memory(self, user_message: str, memory_schema: str, fetched_data=None, prev_reasoning: str = None) -> SQLQueryModel:
 
-        prompt = self._update_memory_prompt(user_message, memory_schema, fetched_data)
+        prompt = self._update_memory_prompt(user_message, memory_schema, fetched_data, prev_reasoning)
 
         model = self.llm.instruction_instructor(prompt, SQLQueryModel, max_retries=3)
         assert isinstance(model, SQLQueryModel)
@@ -107,7 +109,7 @@ class UpdateSQLMemoryFunction(FunctionBase):
         """
 
     @staticmethod
-    def _update_memory_prompt(user_message: str, memory_schema: str, fetched_data=None):
+    def _update_memory_prompt(user_message: str, memory_schema: str, fetched_data=None, prev_reasoning: str = None):
         return f"""
         You are a senior SQL database architect, AI that creates the best schema for data provided using SQL for sqlite3.
         
@@ -128,6 +130,8 @@ class UpdateSQLMemoryFunction(FunctionBase):
         ---
         SQL TABLES SCHEMA:
         {memory_schema if memory_schema else "No tables yet in the DB."}
+        
+        {f"Initial thoughts: {prev_reasoning}" if prev_reasoning else ""}
         
         {f"RELEVANT DATA FROM sqlite DB: {fetched_data}" if fetched_data else ""}
         
