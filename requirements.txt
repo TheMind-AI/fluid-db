@@ -19,3 +19,4 @@ uvicorn
 firebase-admin
 
 pandas
+pymongo
