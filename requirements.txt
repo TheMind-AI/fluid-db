@@ -19,6 +19,8 @@ uvicorn
 firebase-admin
 
 pandas
+pymongo
+
 
 #vectorstore
 chromadb
