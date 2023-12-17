@@ -19,3 +19,8 @@ uvicorn
 firebase-admin
 
 pandas
+
+#vectorstore
+chromadb
+langchain
+
