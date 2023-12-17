@@ -16,9 +16,26 @@ class StructuredMongoMemory:
         return result
 
     def schema(self, uid: str) -> str:
-        self.db_connection(uid)
-        collections = self.db.list_collection_names()
-        schema_str = "\n".join(collections)
+        db = self.db_connection(uid)
+        collections = db.list_collection_names()
+        schema_str = ""
+        for collection_name in collections:
+            collection = db[collection_name]
+            schema_obj = collection.find_one()
+            schema_str += f"Collection: {collection_name}\n"
+            schema_str += self.get_schema(schema_obj, "")
+            schema_str += "\n"
+        return schema_str
+
+    def get_schema(self, obj, indent):
+        schema_str = ""
+        for key in obj:
+            if not callable(obj[key]):
+                if isinstance(obj[key], dict):
+                    schema_str += f"{indent}{key}: Object\n"
+                    schema_str += self.get_schema(obj[key], indent + "\t")
+                else:
+                    schema_str += f"{indent}{key}: {type(obj[key]).__name__}\n"
         return schema_str
 
     def db_connection(self, uid):
@@ -38,3 +55,8 @@ class StructuredMongoMemory:
             for doc in result:
                 print(doc)
             print()
+
+
+if __name__ == '__main__':
+    m = StructuredMongoMemory()
+    m.dump("test")

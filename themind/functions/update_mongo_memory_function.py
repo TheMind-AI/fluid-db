@@ -8,23 +8,22 @@ from themind.memory.structured_json_memory import StructuredJsonMemory
 from themind.memory.structured_sql_memory import StructuredSQLMemory
 
 
-class SQLQueryModel(BaseModel):
+class MongoQueryModel(BaseModel):
     reasoning: str = Field(..., description="Full step by step reasoning, max 250 characters")
-    sql_queries: List[str] = Field(..., description="SQL Queries to execute")
+    mql_queries: List[str] = Field(..., description="Mongo MQL Queries to execute")
 
-    # TODO: SQL Query validation
+    # TODO: MQL Query validation
 
 
-
-class UpdateSQLMemoryFunctionArguments(BaseModel):
+class UpdateMongoMemoryFunctionArguments(BaseModel):
     reasoning: str = Field(..., description="Max 100 character compressed reasoning for the answer")
     user_message: str = Field(..., description="The data in human language that should be stored")
 
 
-class UpdateSQLMemoryFunction(FunctionBase):
+class UpdateMongoMemoryFunction(FunctionBase):
     name: str = "update-memory"
     description: str = "Tool to update or write to the structured memory of the user."
-    args_schema: Type[BaseModel] = UpdateSQLMemoryFunctionArguments
+    args_schema: Type[BaseModel] = UpdateMongoMemoryFunctionArguments
 
     def __init__(self):
         super().__init__()
@@ -46,9 +45,9 @@ class UpdateSQLMemoryFunction(FunctionBase):
             fetch_result = self.maybe_fetch_data(user_message, schema, prev_requests=prev_requests)
             print("==FETCH==")
             print(" REASONING:", fetch_result.reasoning)
-            print(" QUERIES:", fetch_result.sql_queries)
+            print(" QUERIES:", fetch_result.mql_queries)
             prev_reasoning = fetch_result.reasoning
-            fetched_data = [memory.query(uid, q) for q in fetch_result.sql_queries]
+            fetched_data = [memory.query(uid, q) for q in fetch_result.mql_queries]
         else:
             prev_reasoning = ""
             fetched_data = ""
@@ -58,45 +57,45 @@ class UpdateSQLMemoryFunction(FunctionBase):
         llm_result = self.maybe_update_memory(user_message, schema, fetched_data, prev_reasoning=prev_reasoning, prev_requests=prev_requests)
         print("==UPDATE==")
         print(" REASONING:", llm_result.reasoning)
-        print(" QUERIES:", llm_result.sql_queries)
+        print(" QUERIES:", llm_result.mql_queries)
 
-        update = [memory.query(uid, q) for q in llm_result.sql_queries]
+        update = [memory.query(uid, q) for q in llm_result.mql_queries]
 
         print(update)
         print("Done")
 
     # REMINDER: we'll need to deal with timezones here
-    def maybe_update_memory(self, user_message: str, memory_schema: str, fetched_data=None, prev_reasoning: str = None, prev_requests: str = None) -> SQLQueryModel:
+    def maybe_update_memory(self, user_message: str, memory_schema: str, fetched_data=None, prev_reasoning: str = None, prev_requests: str = None) -> MongoQueryModel:
 
         prompt = self._update_memory_prompt(user_message, memory_schema, fetched_data, prev_reasoning, prev_requests)
 
-        model = self.llm.instruction_instructor(prompt, SQLQueryModel, max_retries=3)
-        assert isinstance(model, SQLQueryModel)
+        model = self.llm.instruction_instructor(prompt, MongoQueryModel, max_retries=3)
+        assert isinstance(model, MongoQueryModel)
 
         return model
 
-    def maybe_fetch_data(self, user_message: str, memory_schema: str, prev_requests: str = None) -> SQLQueryModel:
+    def maybe_fetch_data(self, user_message: str, memory_schema: str, prev_requests: str = None) -> MongoQueryModel:
 
         prompt = self._retrieve_memory_prompt(user_message, memory_schema, prev_requests)
 
-        model = self.llm.instruction_instructor(prompt, SQLQueryModel, max_retries=3)
-        assert isinstance(model, SQLQueryModel)
+        model = self.llm.instruction_instructor(prompt, MongoQueryModel, max_retries=3)
+        assert isinstance(model, MongoQueryModel)
 
         return model
 
     @staticmethod
     def _retrieve_memory_prompt(user_message: str, memory_schema: str = "", prev_requests: str = None):
         return f"""
-        You are a senior SQL master, AI that generates SQL Queries from natural language. You're using SQL for sqlite3 to query the database.
+        You are a senior MongoDB Database Architect, AI that generates MQL Mongo Queries from natural language. You're using MQL for MongoDB to query the database.
         
         Current datetime is {datetime.now().strftime("%Y-%m-%d %H:%M")}
         
-        For the given request, return the list of SQL SELECT queries that retrieve the most relevant information from the sqlite database.
-        You don't know what's in the data, write multiple queries to get as much relevant info as possible.
-        ALWAYS write SELECT queries that support the SQL TABLES SCHEMA, never make educated guesses.
-        NEVER SELECT columns that do not exist in SQL TABLES SCHEMA, such query would kill innocent people.
-        ALWAYS fetch the whole row (*) with the SELECT statement, not just a single column.
-        When filtering using strings, use LIKE to maximize chances of finding the data. More data is always better.
+        For the given request, return the list of MQL queries that retrieve the most relevant documents from MongoDB.
+        You don't know what's in the data, write multiple queries to get as many relevant documents as possible.
+        ALWAYS write queries that support the MONGODB COLLECTIONS SCHEMA, never make educated guesses.
+        NEVER SELECT by fields that do not exist in MONGODB COLLECTIONS SCHEMA, such query would kill innocent people.
+        ALWAYS fetch the whole document with the, not just a single field.
+        When filtering using strings, use regex to maximize chances of finding the data. More data is always better.
         If the data you're asked for are clearly not in the schema, return an empty string.
         
         Always run an internal dialogue before returning the query.
@@ -106,8 +105,8 @@ class UpdateSQLMemoryFunction(FunctionBase):
         PREVIOUS USER REQUESTS:
         {prev_requests if prev_requests else "None"}
         
-        SQL TABLES SCHEMA:
-        {memory_schema if memory_schema else "There are no tables in the DB."}
+        MONGODB COLLECTIONS SCHEMA:
+        {memory_schema if memory_schema else "There are no collections in MongoDB."}
         
         USER REQUEST: {user_message}
         """
@@ -115,34 +114,28 @@ class UpdateSQLMemoryFunction(FunctionBase):
     @staticmethod
     def _update_memory_prompt(user_message: str, memory_schema: str, fetched_data=None, prev_reasoning: str = None, prev_requests: str = None):
         return f"""
-        You are a senior SQL database architect, AI that creates the best schema for data provided using SQL for sqlite3.
+        You are a senior MongoDB Database Architect, AI that creates the best schema for data provided using MQL for MongoDB.
         
         Current datetime is {datetime.now().strftime("%Y-%m-%d %H:%M")}
         
-        For the given user request you will return the list of SQL queries that store the information to sqlite database.
+        For the given user request you will return the list of MongoDB MQL queries that store the information to MongoDB database.
         ALWAYS think step by step. Run an internal dialogue before returning the queries.
         
-        You receive the user request. First, think about how to store the data based on the database schema.
-        If the data conform to the schema simply insert the new data using INSERT INTO statement.
-        If you need new columns make sure to create them first using ALTER TABLE ADD COLUMN. Then make sure to INSERT the data in the next query. The order of queries matters!
-        NEVER make educated guesses, ONLY INSERT data if the columns exist in the SQL TABLES SCHEMA, otherwise create them first.
-        You can't INSERT or UPDATE a column that does not exist yet. First you must ALTER TABLE ADD COLUMN. Otherwise an error will occur and innocent people will die.
-        If the data needs a new table make sure to create the new table first using CREATE TABLE. Then make sure to INSERT the data in the next query. The order of queries matters!
-        Make sure to keep the relationships between the tables using the correct ids.
-        If you don't get relevant data in the prompt assume there are none and INSERT all data as they're new. If you have relevant data you can update the existing data using UPDATE queries.
+        You receive the user request. First, think about how to store the data based on the MongoDB collection schema.
+        If there is the right collection for the data, insert them. Try to stick to the schema.
+        If the data needs a new collection make sure to create the collection first.
         
-        ALWAYS remember to insert the data if you created new table or added columns. If you don't store the data in one of the queries the data will be lost forever!
-
+        
         ---
         PREVIOUS USER REQUESTS:
         {prev_requests if prev_requests else "None"}
         
-        SQL TABLES SCHEMA:
-        {memory_schema if memory_schema else "No tables yet in the DB."}
+        MONGODB COLLECTIONS SCHEMA:
+        {memory_schema if memory_schema else "There are no collections in MongoDB."}
         
         {f"Initial thoughts: {prev_reasoning}" if prev_reasoning else ""}
         
-        {f"RELEVANT DATA FROM sqlite DB: {fetched_data}" if fetched_data else ""}
+        {f"RELEVANT DATA FROM MongoDB: {fetched_data}" if fetched_data else ""}
         
         USER REQUEST: {user_message}
         """
