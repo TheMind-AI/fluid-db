@@ -1,32 +1,33 @@
-from themind.llm.openai_llm import OpenAILLM
 from inspect import signature
+from pydantic.main import create_model
+from themind.llm.openai_llm import OpenAILLM
 
-def instruct(allow_thinking: bool = False):
+
+def instruct(func):
     
-    def decorator(func):
+    def wrapper(*args, **kwargs):
 
-        def wrapper(*args, **kwargs):
-            # Get the docstring from the function
-            docstring = func.__doc__
+        # Get the docstring from the function
+        docstring = func.__doc__
 
-            # Get the function signature
-            sig = signature(func)
+        # Get the function signature
+        sig = signature(func)
 
-            # Bind the function arguments to their values
-            bound_args = sig.bind(*args, **kwargs)
-            bound_args.apply_defaults()
+        # Create a Pydantic model from the return annotation
+        return_annotation = sig.return_annotation
+        ResponseModel = create_model('ResponseModel', result=(return_annotation, ...))
+        
+        # Bind the function arguments to their values
+        bound_args = sig.bind(*args, **kwargs)
+        bound_args.apply_defaults()
 
-            # Format the docstring with the arguments
-            formatted_docstring = docstring.format_map(bound_args.arguments)
+        # Format the docstring with the arguments
+        formatted_docstring = docstring.format_map(bound_args.arguments)
 
-            # Create an instance of OpenAILLM
-            openai_llm = OpenAILLM()
+        # run the OI call with reponse model
+        openai_llm = OpenAILLM()
+        result = openai_llm.instruction_instructor(formatted_docstring, response_model=ResponseModel)
 
-            # Use the formatted docstring as the prompt for the instruction method
-            result = openai_llm.instruction(formatted_docstring)
+        return result
 
-            return result
-
-        return wrapper
-    
-    return decorator
+    return wrapper
