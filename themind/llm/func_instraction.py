@@ -2,7 +2,19 @@ from inspect import signature
 from pydantic.main import create_model
 from themind.llm.openai_llm import OpenAILLM
 from pydantic import BaseModel
+from dotenv import load_dotenv
 
+# Load OI api key for the embeddings
+load_dotenv()
+
+
+# How I wanna extend this:
+# 1. allow thinking mode - run CoT before the answer
+# 2. allow to pass the model name
+# 3. add function calling
+# 4. inject personality
+# 5. inject conversation context
+# 6. allow streaming
 
 def instruct(func):
     

@@ -5,16 +5,9 @@ from langchain_core.documents import Document
 from dotenv import load_dotenv
 from themind.llm.func_instraction import instruct
 from pydantic import BaseModel
-
-
-# Load OI api key for the embeddings
-load_dotenv()
-
-
-class QAModel(BaseModel):
-    reasoning: List[str]
-    question: List[str]
-    answers: List[str]
+import csv
+from themind.vectorstores.chunking.question_answer_strategy import QuestionChunkingStrategy
+from themind.vectorstores.chunking.chunking_strategy import ChunkingStrategy
 
 
 class VectorStore(object):
@@ -22,48 +15,43 @@ class VectorStore(object):
     def __init__(self, local_storage_dir: str = "./"):
         self.vectorstore = Chroma(collection_name="all-data", persist_directory=local_storage_dir, embedding_function=OpenAIEmbeddings())
     
-    def ingest(self, uid: str, data: List[str], chunking_strategy: str = "questions"):
+    def ingest(self, uid: str, data: List[str], chunking_strategy: ChunkingStrategy = QuestionChunkingStrategy):
 
         # Question & Answear strategy
         # for each chunk, crete a list a question and answear from the text, similar how embeddings are being trained!
 
-        @instruct
-        def find_question(text: str) -> QAModel:
-            """
-            Give me all the questions that can be answered based on the TEXT below.
-            Use only the information you have in the TEXT. Don't add anything else.
-            
-            If you generate the question reply, use the same tone of voice as the TEXT.
-
-            Here is the TEXT: 
-            {text}
-            """
-
-        chunks = []
         for chunk in data:
-            question = find_question(chunk)
-
             print('Chunk: ' + chunk)
-            print(question)
+            docs = chunking_strategy.chunk(uid, chunk)
+            if len(docs) == 0:
+                print('No documents were created for this chunk')
+                continue
 
-            if len(question.question) != len(question.answers):
-                raise ValueError("The number of questions and answers do not match.")
-            
-            for q, a in zip(question.question, question.answers):
-                content = f"{q}\n{a}"
-                print('Content: ')
-                print(content)
-                doc = Document(page_content=content, metadata={"uid": uid})
-                chunks.append(doc)
+            # append metadata to its document
+            for doc in docs:
+                doc.metadata['uid'] = uid
+                # doc.metadata['location'] = location
+                # doc.metadata['created_at'] = created_at
 
-            print('Added chunk to vectorstore')
-            self.vectorstore.add_documents(chunks)
+            self.vectorstore.add_documents(docs)
 
-    
+        print('Added chunk to vectorstore')
+
     def query(self, uid: str, query: str):
-        output = self.vectorstore.similarity_search(query="Alex is .. old", k=3, filters={"uid": uid})
-        
-        return output
+        output = self.vectorstore.similarity_search(query=query, k=10, filters={"uid": uid})
+
+        print(output)
+
+        @instruct
+        def answer(query: str, texts: List[str]) -> str:
+            """
+            This was a query user made: {query}
+            This is a context we have: {texts}
+
+            Reply:
+            """
+
+        return answer(query, [o.page_content for o in output])
     
 
 if __name__ == '__main__':
@@ -79,7 +67,8 @@ if __name__ == '__main__':
     
     vec.ingest(uid, sentences)
     
-    output = vec.query(uid, "Alex is .. old")
+    # output = vec.query(uid, "what should i give laura for christmas?")
+    output = vec.query(uid, "what is alex's favorite food?")
     
     print(output)    
 
