@@ -2,10 +2,10 @@ import json
 import pandas as pd
 from typing import List
 from datetime import datetime
-from themind.functions.update_memory_function import UpdateMemoryFunction
-from themind.functions.update_sql_memory_function import UpdateSQLMemoryFunction
-from themind.memory.structured_json_memory import StructuredJsonMemory
-from themind.memory.structured_sql_memory import StructuredSQLMemory
+from fluiddb.functions.update_memory_function import UpdateMemoryFunction
+from fluiddb.functions.update_sql_memory_function import UpdateSQLMemoryFunction
+from fluiddb.memory.structured_json_memory import StructuredJsonMemory
+from fluiddb.memory.structured_sql_memory import StructuredSQLMemory
 
 
 class UpdateMemoryEval:

@@ -19,6 +19,15 @@ Key features:
 - Flexible Querying: Supports both traditional query languages and intuitive natural language queries.
 - Versatile Data Input: Enables data entry in natural language, as well as in semi-structured formats.
 
+### FluidDB MVP - TODO
+- [ ] FluidDBAgent
+- [ ] Datbases engines
+- [ ] Eval System
+- [ ] CLI
+- [ ] Router - Structured / Unstructured
+- [ ] ColBERT
+
+
 #### FluidDB Example
 
 FluidDB saves unstructured data in a structured form.
