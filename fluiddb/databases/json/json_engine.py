@@ -7,7 +7,7 @@ from genson import SchemaBuilder
 from themind.llm.openai_llm import OpenAILLM
 import jsonpath_ng.ext
 
-class StructuredJsonMemory:
+class JsonEngine:
 
     def __init__(self):
         self.memory = {}

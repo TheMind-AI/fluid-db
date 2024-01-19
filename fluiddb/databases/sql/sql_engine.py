@@ -1,10 +1,18 @@
 import sqlite3
+from fluiddb.database.database_engine import DatabaseEngine
 
-
-class StructuredSQLMemory:
+class SQLEngine(DatabaseEngine):
 
     def __init__(self):
         self.db = None
+
+    @property
+    def engine_name(self) -> str:
+        return "SQL"
+        
+    def db_connection(self, uid):
+        self.db = sqlite3.connect(f'{uid}.db')
+        return self.db
 
     def query(self, uid: str, query: str):
         db = self.db_connection(uid)
@@ -36,12 +44,7 @@ class StructuredSQLMemory:
         db.close()
 
         return schema_str
-
-
-    def db_connection(self, uid):
-        self.db = sqlite3.connect(f'{uid}.db')
-        return self.db
-
+    
     def dump(self, uid):
         db = self.db_connection(uid)
 
@@ -64,7 +67,7 @@ class StructuredSQLMemory:
 
 
 if __name__ == '__main__':
-    memory = StructuredSQLMemory()
+    memory = SQLEngine()
 
     # db = memory.db_connection("test")
     # cursor = db.cursor()

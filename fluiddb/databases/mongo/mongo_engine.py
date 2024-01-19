@@ -4,7 +4,7 @@ import os
 
 load_dotenv()
 
-class StructuredMongoMemory:
+class MongoEngine:
 
     def __init__(self):
         self.client = None

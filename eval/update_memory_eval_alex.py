@@ -4,8 +4,8 @@ from typing import List
 from datetime import datetime
 from fluiddb.functions.update_memory_function import UpdateMemoryFunction
 from fluiddb.functions.update_sql_memory_function import UpdateSQLMemoryFunction
-from fluiddb.memory.structured_json_memory import StructuredJsonMemory
-from fluiddb.memory.structured_sql_memory import StructuredSQLMemory
+from fluiddb.database.json.json_engine import StructuredJsonMemory
+from fluiddb.database.sql.structured_sql_memory import StructuredSQLMemory
 
 
 class UpdateMemoryEval:

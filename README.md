@@ -21,8 +21,8 @@ Key features:
 
 ### FluidDB MVP - TODO
 - [ ] FluidDBAgent
-- [ ] Datbases engines
-- [ ] Eval System
+- [ ] Inject Datbases Engine
+- [ ] Eval Memory System
 - [ ] CLI
 - [ ] Router - Structured / Unstructured
 - [ ] ColBERT
