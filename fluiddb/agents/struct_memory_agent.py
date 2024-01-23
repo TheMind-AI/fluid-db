@@ -5,6 +5,7 @@ from themind.functions.fetch_memory_function import FetchMemoryFunction, FetchMe
 from themind.functions.update_memory_function import UpdateMemoryFunction, UpdateMemoryModel
 
 
+# DEPRECTED
 class StructMemoryAgent(object):
 
     def __init__(self):

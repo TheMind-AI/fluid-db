@@ -6,6 +6,7 @@ from themind.agents.struct_memory_agent import StructMemoryAgent
 from themind.services.thread_service import ThreadService
 
 
+# DEPRECATED
 class ChatAgent(object):
 
     def __init__(self, firebase_app):
