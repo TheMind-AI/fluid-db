@@ -1,29 +1,31 @@
 import sqlite3
 from fluiddb.database.database_engine import DatabaseEngine
 
+
 class SQLEngine(DatabaseEngine):
 
-    def __init__(self):
+    def __init__(self, db_id: str):
         self.db = None
+        self.db_id = db_id
 
     @property
     def engine_name(self) -> str:
         return "SQL"
         
-    def db_connection(self, uid):
-        self.db = sqlite3.connect(f'{uid}.db')
+    def db_connection(self, db_id: str):
+        self.db = sqlite3.connect(f'{self.db_id}.db')
         return self.db
 
-    def query(self, uid: str, query: str):
-        db = self.db_connection(uid)
+    def query(self, query: str):
+        db = self.db_connection(self.db_id)
         cur = db.cursor()
         result = cur.execute(query).fetchall()
         db.commit()
         db.close()
         return result
 
-    def schema(self, uid: str) -> str:
-        db = self.db_connection(uid)
+    def schema(self) -> str:
+        db = self.db_connection(self.db_id)
         schema_str = ""
 
         db.text_factory = str
@@ -45,8 +47,8 @@ class SQLEngine(DatabaseEngine):
 
         return schema_str
     
-    def dump(self, uid):
-        db = self.db_connection(uid)
+    def dump(self):
+        db = self.db_connection(self.db_id)
 
         db.text_factory = str
         cur = db.cursor()

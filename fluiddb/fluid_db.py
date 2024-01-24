@@ -8,16 +8,13 @@ from fluiddb.agents.db_agent import DBAgent
 
 class FluidDB(object):
 
-    def __init__(self, db_agent: DBAgent):
+    def __init__(self, db_id: str, db_agent: DBAgent):
         self.db_agent = db_agent    
         # TODO: add datbase id to know to which db it should connect
         # TODO: will be exdecuted by vectorstore/colbert agent
     
-    def save(self, text: str, force_save: bool = False):
-        if force_save:
-            self.db_agent.save(text)
-        else:
-            self.db_agent.maybe_save(text)
+    def save(self, text: str):
+        self.db_agent.save(text)
     
     def fetch(self, query: str, metadata: dict = {}):
         self.db_agent.fetch(query, metadata)
