@@ -1,14 +1,9 @@
-from fluiddb.schema.thread import Thread
-from fluiddb.llm.openai_llm import OpenAILLM
-from fluiddb.database.json.json_engine import StructuredJsonMemory
-from fluiddb.functions.fetch_memory_function import FetchMemoryFunction, FetchMemoryModel
-from fluiddb.functions.update_memory_function import UpdateMemoryFunction, UpdateMemoryModel
 from fluiddb.agents.db_agent import DBAgent
 
 
 class FluidDB(object):
 
-    def __init__(self, db_id: str, db_agent: DBAgent):
+    def __init__(self, db_agent: DBAgent):
         self.db_agent = db_agent    
         # TODO: add datbase id to know to which db it should connect
         # TODO: will be exdecuted by vectorstore/colbert agent
@@ -22,7 +17,12 @@ class FluidDB(object):
 
 if __name__ == '__main__':
 
-    fluid_db = FluidDB()
+    from fluiddb.agents.sql_agent import SQLAgent
+    
+    db_id = 'adamzvada'
+    sql_agent = SQLAgent(db_id)
+    
+    fluid_db = FluidDB(db_agent=sql_agent)
     
     fluid_db.save("Adams phone number is 722238738")
     fluid_db.save("David Mokos phone is 733544390")

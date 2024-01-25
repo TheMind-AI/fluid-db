@@ -1,5 +1,5 @@
 import sqlite3
-from fluiddb.database.database_engine import DatabaseEngine
+from fluiddb.databases.database_engine import DatabaseEngine
 
 
 class SQLEngine(DatabaseEngine):
@@ -12,12 +12,12 @@ class SQLEngine(DatabaseEngine):
     def engine_name(self) -> str:
         return "SQL"
         
-    def db_connection(self, db_id: str):
+    def connect(self, db_id: str):
         self.db = sqlite3.connect(f'{self.db_id}.db')
         return self.db
 
     def query(self, query: str):
-        db = self.db_connection(self.db_id)
+        db = self.connect(self.db_id)
         cur = db.cursor()
         result = cur.execute(query).fetchall()
         db.commit()
@@ -25,7 +25,7 @@ class SQLEngine(DatabaseEngine):
         return result
 
     def schema(self) -> str:
-        db = self.db_connection(self.db_id)
+        db = self.connect(self.db_id)
         schema_str = ""
 
         db.text_factory = str
@@ -48,7 +48,7 @@ class SQLEngine(DatabaseEngine):
         return schema_str
     
     def dump(self):
-        db = self.db_connection(self.db_id)
+        db = self.connect(self.db_id)
 
         db.text_factory = str
         cur = db.cursor()
@@ -71,7 +71,7 @@ class SQLEngine(DatabaseEngine):
 if __name__ == '__main__':
     memory = SQLEngine()
 
-    # db = memory.db_connection("test")
+    # db = memory.connect("test")
     # cursor = db.cursor()
     # cursor.execute('''
     #     CREATE TABLE if not exists test_table(

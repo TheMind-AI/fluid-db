@@ -8,9 +8,9 @@ import openai
 from openai import OpenAI
 from dotenv import load_dotenv
 from typing import List, Tuple, Callable
-from themind.schema.function import Function
-from themind.prompts.system_prompt import SystemPrompt
-from themind.functions.function_base import FunctionBase
+from fluiddb.schema.function import Function
+from fluiddb.prompts.system_prompt import SystemPrompt
+from fluiddb.functions.function_base import FunctionBase
 
 
 load_dotenv()
