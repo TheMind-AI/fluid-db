@@ -58,5 +58,5 @@ class MongoEngine:
 
 
 if __name__ == '__main__':
-    m = StructuredMongoMemory()
+    m = MongoEngine()
     m.dump("test")

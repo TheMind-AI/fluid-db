@@ -2,6 +2,8 @@ import json
 import pandas as pd
 from typing import List
 from datetime import datetime
+from fluiddb.agents.json_agent import JSONMemoryAgent
+from fluiddb.agents.sql_agent import SQLMemoryAgent
 from fluiddb.functions.update_memory_function import UpdateMemoryFunction
 from fluiddb.functions.update_sql_memory_function import UpdateSQLMemoryFunction
 from fluiddb.databases.sql.sql_engine import SQLEngine
@@ -15,8 +17,9 @@ class UpdateMemoryEval:
         # self.uid = "2023-12-14-14-58-36"
 
     def run(self, sentences: List[str]):
-        #func = UpdateMemoryFunction()
-        func = UpdateSQLMemoryFunction()
+        
+        # memory_agent = JSONMemoryAgent(db_id=self.uid)
+        memory_agent = SQLMemoryAgent(db_id=self.uid)
 
         for idx, sentence in enumerate(sentences):
             prev_sentences = "\n  ".join(sentences[:idx])
@@ -24,8 +27,7 @@ class UpdateMemoryEval:
             
             messages = [{"role": "user", "content": sentence}]
             
-            func.run(uid=self.uid, messages=messages)
-            
+            memory_agent.save(db_id=self.uid, messages=messages)
 
         print("FINAL MEMORY")
         JSONEngine(self.uid).dump()

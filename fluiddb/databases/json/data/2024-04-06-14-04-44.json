@@ -1,0 +1,13 @@
+{
+    "user": {
+        "education": [
+            {
+                "name": "University of Toronto",
+                "degree": "B.Sc.",
+                "field": "computer science",
+                "graduation_year": "2010",
+                "age_at_graduation": 35
+            }
+        ]
+    }
+}

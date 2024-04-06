@@ -2,9 +2,9 @@ import json
 from datetime import datetime, timedelta
 from typing import Type, List
 from pydantic import BaseModel, Field, field_validator
-from themind.llm.openai_llm import OpenAILLM
-from themind.functions.function_base import FunctionBase
-from themind.memory.structured_json_memory import StructuredJsonMemory
+from fluiddb.llm.openai_llm import OpenAILLM
+from fluiddb.functions.function_base import FunctionBase
+from fluiddb.databases.json.json_engine import JSONEngine
 
 
 class UpdateMemoryModel(BaseModel):
@@ -17,7 +17,7 @@ class UpdateMemoryModel(BaseModel):
     @field_validator("json_path", mode="before")
     def validate_json_path(cls, v):
         try:
-            StructuredJsonMemory.parse_jsonpath_expr(v)
+            JSONEngine.parse_jsonpath_expr(v)
         except ValueError as e:
             raise e
         return v
@@ -41,7 +41,7 @@ class FetchMemoryModel(BaseModel):
         if type(v) != list or len(v) == 0:
             raise ValueError("json_path_list is not a valid list. It has to abe a list with at least one jsonpath expression")
         try:
-            [StructuredJsonMemory.parse_jsonpath_expr(expr) for expr in v]
+            [JSONEngine.parse_jsonpath_expr(expr) for expr in v]
         except ValueError as e:
             raise e
         return v
@@ -62,35 +62,34 @@ class UpdateMemoryFunction(FunctionBase):
         super().__init__()
         self.llm = OpenAILLM()
         
-    def run(self, uid: str, user_message: str):
+    def run(self, uid: str, messages: List[str]):
 
-        print("RUN, user_message:", user_message)
+        print("RUN, messages:", messages)
 
-        memory = StructuredJsonMemory()
+        # TODO: decide how init with id gonna work
+        memory = JSONEngine(uid)
 
-        schema = memory.schema(uid)
-        schema_descriptions = memory.get_descriptions(uid)
+        schema = memory.schema(db_id=uid)
+        schema_descriptions = memory.get_descriptions(db_id=uid)
 
         print("SCHEMA:")
         print(json.dumps(schema, indent=2))
         print(json.dumps(schema_descriptions, indent=2))
 
         # First fetch data
-        fetch_result = self.maybe_fetch_data(user_message, schema, schema_descriptions)
+        fetch_result = self.maybe_fetch_data(messages, schema, schema_descriptions)
         print("==FETCH==")
         print(" REASONING:", fetch_result.reasoning)
         print(" JSON PATH LIST:", fetch_result.json_path_list)
 
         fetched_data = {json_path: memory.query(uid, json_path) for json_path in fetch_result.json_path_list}
 
-
-        llm_result = self.maybe_update_memory(user_message, schema, fetched_data, schema_descriptions)
+        llm_result = self.maybe_update_memory(messages, schema, fetched_data, schema_descriptions)
         print("==UPDATE==")
         print(" REASONING:", llm_result.reasoning)
         print(" JSON PATH:", llm_result.json_path)
         print(" DATA:", llm_result.data)
         print(" DESCRIPTION:", llm_result.description)
-
 
         data = json.loads(llm_result.data)
 

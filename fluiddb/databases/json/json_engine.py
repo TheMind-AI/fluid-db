@@ -1,32 +1,33 @@
 import os
 import json
 import re
-
 import jsonpath_ng
 from genson import SchemaBuilder
-from themind.llm.openai_llm import OpenAILLM
 import jsonpath_ng.ext
+from fluiddb.llm.openai_llm import OpenAILLM
 
-class JsonEngine:
 
-    def __init__(self):
+class JSONEngine:
+
+    def __init__(self, db_id: str):
         self.memory = {}
         self.llm = OpenAILLM()
+        self.db_id = db_id
 
-    def get_memory(self, uid: str):
-        if uid not in self.memory:
-            self._load_memory(uid)
-        return self.memory[uid]
+    def get_memory(self, db_id: str):
+        if db_id not in self.memory:
+            self._load_memory(db_id)
+        return self.memory[db_id]
 
-    def query(self, uid: str, json_path: str) -> list:
+    def query(self, db_id: str, json_path: str) -> list:
         expr = self.parse_jsonpath_expr(json_path)
-        matches = [match.value for match in expr.find(self.get_memory(uid))]
+        matches = [match.value for match in expr.find(self.get_memory(db_id))]
         return matches
 
-    def update(self, uid: str, json_path: str, new_data: dict, data_description: str = "") -> dict:
+    def update(self, db_id: str, json_path: str, new_data: dict, data_description: str = "") -> dict:
         expr = self.parse_jsonpath_expr(json_path)
 
-        memory = self.get_memory(uid)
+        memory = self.get_memory(db_id)
         res = expr.find(memory)
         if res and type(res[0].value) == list:
             # Append to existing list
@@ -40,22 +41,24 @@ class JsonEngine:
             # Create new field/list
             expr.update_or_create(memory, new_data)
 
-        self._save_memory(uid, memory)
+        self._save_memory(db_id, memory)
 
         if data_description:
-            self._save_description(uid, json_path, data_description)
+            self._save_description(db_id, json_path, data_description)
 
         return memory
 
-    def schema(self, uid: str):
+    def schema(self, db_id: str):
         builder = SchemaBuilder()
 
-        builder.add_object(self.get_memory(uid))
+        builder.add_object(
+            self.get_memory(db_id)
+        )
 
         schema = builder.to_schema()
 
         self._remove_required(schema)
-        # print(json.dumps(schema, indent=4))
+        print(json.dumps(schema, indent=4))
 
         try:
             schema = self._compress_schema(schema)
@@ -65,14 +68,18 @@ class JsonEngine:
 
         return schema
 
-    def _save_description(self, uid: str, json_path: str, description: str):
-        file_path = self._descriptions_file_path(uid)
+    def _save_description(self, db_id: str, json_path: str, description: str):
+        file_path = self._descriptions_file_path(db_id)
         if os.path.exists(file_path):
             with open(file_path, 'r') as f:
                 descriptions = json.load(f)
         else:
             descriptions = {}
 
+        print("JSON PATH:", json_path)
+        print("DESCRIPTION:", description)
+        print("DESCRIPTIONS:", descriptions)
+        
         simple_path = self.simplify_jsonpath(json_path)
         expr = self.parse_jsonpath_expr(simple_path)
         expr.update_or_create(descriptions, description)
@@ -81,8 +88,8 @@ class JsonEngine:
         with open(file_path, 'w') as f:
             json.dump(descriptions, f, indent=2)
 
-    def get_descriptions(self, uid: str):
-        file_path = self._descriptions_file_path(uid)
+    def get_descriptions(self, db_id: str):
+        file_path = self._descriptions_file_path(db_id)
         if os.path.exists(file_path):
             with open(file_path, 'r') as f:
                 descriptions = json.load(f)
@@ -99,30 +106,27 @@ class JsonEngine:
 
         return jsonpath_expr
 
-    def _load_memory(self, uid: str):
-        file_path = self._memory_file_path(uid)
+    def _load_memory(self, db_id: str):
+        file_path = self._memory_file_path(db_id)
         if os.path.exists(file_path):
             with open(file_path, 'r') as f:
-                self.memory[uid] = json.load(f)
+                self.memory[db_id] = json.load(f)
         else:
-            self.memory[uid] = {}
+            self.memory[db_id] = {}
 
-    @staticmethod
-    def _memory_file_path(uid: str):
+    def _memory_file_path(self, db_id):
         base_dir = os.path.dirname(os.path.realpath(__file__))
-        file_path = os.path.join(base_dir, "data", f"{uid}.json")
+        file_path = os.path.join(base_dir, "data", f"{db_id}.json")
 
         return file_path
 
-    @staticmethod
-    def _descriptions_file_path(uid: str):
+    def _descriptions_file_path(self, db_id: str):
         base_dir = os.path.dirname(os.path.realpath(__file__))
-        file_path = os.path.join(base_dir, "data", f"{uid}-desc.json")
+        file_path = os.path.join(base_dir, "data", f"{db_id}-desc.json")
 
         return file_path
 
-    @staticmethod
-    def simplify_jsonpath(jsonpath: str):
+    def simplify_jsonpath(self, jsonpath: str):
         clean_path = jsonpath
 
         clean_path = re.sub(r'\[.*?\]', '', clean_path)
@@ -135,8 +139,8 @@ class JsonEngine:
         #
         # return simplified_parts
 
-    def _save_memory(self, uid: str, new_memory: dict):
-        file_path = self._memory_file_path(uid)
+    def _save_memory(self, db_id: str, new_memory: dict):
+        file_path = self._memory_file_path(db_id)
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
         with open(file_path, 'w') as f:
             json.dump(new_memory, f, indent=4)

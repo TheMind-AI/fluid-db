@@ -18,11 +18,13 @@ class FluidDB(object):
 if __name__ == '__main__':
 
     from fluiddb.agents.sql_agent import SQLAgent
+    from fluiddb.agents.json_agent import JSONAgent
     
-    db_id = 'adamzvada'
-    sql_agent = SQLAgent(db_id)
+    db_id = 'adamzvada-json'
+    #sql_agent = SQLAgent(db_id)
+    json_agent = JSONAgent(db_id)
     
-    fluid_db = FluidDB(db_agent=sql_agent)
+    fluid_db = FluidDB(db_agent=json_agent)
     
     fluid_db.save("Adams phone number is 722238738")
     fluid_db.save("David Mokos phone is 733544390")

@@ -1,6 +1,6 @@
 import abc
 from pydantic import BaseModel
-from typing import Type
+from typing import List, Type
 
 
 class FunctionBase(object):
@@ -10,7 +10,7 @@ class FunctionBase(object):
     args_schema: Type[BaseModel]
     
     @abc.abstractmethod
-    def run(self):
+    def run(self, uid: str, messages: List[str]):
         raise NotImplementedError()
 
     def openai_schema(self):

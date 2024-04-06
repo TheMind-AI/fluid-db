@@ -13,38 +13,38 @@ class SQLQueryModel(BaseModel):
     # TODO: SQL Query validation
 
 
-class SQLAgent(DBAgent):
+class SQLMemoryAgent(DBAgent):
     
     def __init__(self, db_id: str):
         super().__init__()
         self.llm = OpenAILLM()
         self.db_engine = SQLEngine(db_id)
 
-    def save(self, text: str, context: Optional[str] = None):
+    def save(self, db_id: str, messages: List[dict], context: Optional[str] = None):
         
-        schema = self.db_engine.schema()
+        schema = self.db_engine.schema(db_id)
         
         print("SCHEMA:")
         print(schema)
 
         # TODO: should be used fetch method
         if schema:
-            fetch_result = self.maybe_fetch_data(text, schema, prev_requests=context)
+            fetch_result = self.maybe_fetch_data(messages, schema, prev_requests=context)
             print("==FETCH==")
             print(" REASONING:", fetch_result.reasoning)
             print(" QUERIES:", fetch_result.sql_queries)
             prev_reasoning = fetch_result.reasoning
-            fetched_data = [self.db_engine.query(q) for q in fetch_result.sql_queries]
+            fetched_data = [self.db_engine.query(db_id, q) for q in fetch_result.sql_queries]
         else:
             prev_reasoning = ""
             fetched_data = ""
 
-        llm_result = self.maybe_update_memory(text, schema, fetched_data, prev_reasoning=prev_reasoning, prev_requests=context)
+        llm_result = self.maybe_update_memory(messages, schema, fetched_data, prev_reasoning=prev_reasoning, prev_requests=context)
         print("==UPDATE==")
         print(" REASONING:", llm_result.reasoning)
         print(" QUERIES:", llm_result.sql_queries)
 
-        update = [self.db_engine.query(q) for q in llm_result.sql_queries]
+        update = [self.db_engine.query(db_id, q) for q in llm_result.sql_queries]
 
         print(update)
         print("Done")

@@ -16,16 +16,16 @@ class SQLEngine(DatabaseEngine):
         self.db = sqlite3.connect(f'{self.db_id}.db')
         return self.db
 
-    def query(self, query: str):
-        db = self.connect(self.db_id)
+    def query(self, db_id: str, query: str):
+        db = self.connect(db_id)
         cur = db.cursor()
         result = cur.execute(query).fetchall()
         db.commit()
         db.close()
         return result
 
-    def schema(self) -> str:
-        db = self.connect(self.db_id)
+    def schema(self, db_id: str) -> str:
+        db = self.connect(db_id)
         schema_str = ""
 
         db.text_factory = str
@@ -47,8 +47,8 @@ class SQLEngine(DatabaseEngine):
 
         return schema_str
     
-    def dump(self):
-        db = self.connect(self.db_id)
+    def dump(self, db_id: str):
+        db = self.connect(db_id)
 
         db.text_factory = str
         cur = db.cursor()

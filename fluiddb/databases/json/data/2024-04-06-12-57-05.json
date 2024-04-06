@@ -1,0 +1,13 @@
+{
+    "education": [
+        {
+            "name": "alex rivera",
+            "age": 35,
+            "nationality": "canadian",
+            "field": "computer science",
+            "degree": "b.sc.",
+            "institution": "university of toronto",
+            "year": "2010"
+        }
+    ]
+}

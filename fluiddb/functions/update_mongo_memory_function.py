@@ -4,8 +4,9 @@ from typing import Type, List
 from pydantic import BaseModel, Field, field_validator
 from themind.llm.openai_llm import OpenAILLM
 from themind.functions.function_base import FunctionBase
-from themind.memory.structured_json_memory import StructuredJsonMemory
-from themind.memory.structured_sql_memory import StructuredSQLMemory
+from fluiddb.databases.sql.sql_engine import SQLEngine
+from fluiddb.databases.mongo.mongo_engine import MongoEngine
+from fluiddb.databases.json.json_engine import JSONEngine
 
 
 class MongoQueryModel(BaseModel):
@@ -33,7 +34,7 @@ class UpdateMongoMemoryFunction(FunctionBase):
 
         print("RUN, user_message:", user_message)
 
-        memory = StructuredSQLMemory()
+        memory = MongoEngine()
 
         schema = memory.schema(uid)
 

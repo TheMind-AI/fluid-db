@@ -1,0 +1,13 @@
+{
+    "user": {
+        "name": "alex rivera",
+        "age": "35",
+        "nationality": "canadian",
+        "education": [
+            {
+                "course": "advanced algorithms",
+                "completion_date": "2009-05"
+            }
+        ]
+    }
+}

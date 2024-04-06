@@ -2,10 +2,10 @@ import json
 from datetime import datetime, timedelta
 from typing import Type, List
 from pydantic import BaseModel, Field, field_validator
-from themind.llm.openai_llm import OpenAILLM
-from themind.functions.function_base import FunctionBase
-from themind.memory.structured_json_memory import StructuredJsonMemory
-from themind.memory.structured_sql_memory import StructuredSQLMemory
+from fluiddb.llm.openai_llm import OpenAILLM
+from fluiddb.functions.function_base import FunctionBase
+from fluiddb.databases.sql.sql_engine import SQLEngine
+from fluiddb.databases.json.json_engine import JSONEngine
 
 
 class SQLQueryModel(BaseModel):
@@ -30,11 +30,11 @@ class UpdateSQLMemoryFunction(FunctionBase):
         super().__init__()
         self.llm = OpenAILLM()
         
-    def run(self, uid: str, user_message: str, prev_requests: str = None):
+    def run(self, uid: str, messages: List[dict]):
 
-        print("RUN, user_message:", user_message)
+        print("RUN, user_message:", messages)
 
-        memory = StructuredSQLMemory()
+        memory = SQLEngine(db_id=uid)
 
         schema = memory.schema(uid)
 
@@ -43,7 +43,7 @@ class UpdateSQLMemoryFunction(FunctionBase):
 
         # First fetch data
         if schema:
-            fetch_result = self.maybe_fetch_data(user_message, schema, prev_requests=prev_requests)
+            fetch_result = self.maybe_fetch_data(messages, schema)
             print("==FETCH==")
             print(" REASONING:", fetch_result.reasoning)
             print(" QUERIES:", fetch_result.sql_queries)
@@ -55,7 +55,7 @@ class UpdateSQLMemoryFunction(FunctionBase):
 
         schema = memory.schema(uid)
 
-        llm_result = self.maybe_update_memory(user_message, schema, fetched_data, prev_reasoning=prev_reasoning, prev_requests=prev_requests)
+        llm_result = self.maybe_update_memory(messages, schema, fetched_data, prev_reasoning=prev_reasoning)
         print("==UPDATE==")
         print(" REASONING:", llm_result.reasoning)
         print(" QUERIES:", llm_result.sql_queries)
