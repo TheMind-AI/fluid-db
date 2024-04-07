@@ -44,7 +44,8 @@ class JSONEngine:
         self._save_memory(db_id, memory)
 
         if data_description:
-            self._save_description(db_id, json_path, data_description)
+            pass
+            # self._save_description(db_id, json_path, data_description)
 
         return memory
 

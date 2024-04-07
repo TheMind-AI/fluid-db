@@ -1,0 +1,17 @@
+{
+    "people": [
+        {
+            "name": "Alex Rivera",
+            "age": 35,
+            "nationality": "Canadian",
+            "field": "computer science",
+            "education": [
+                {
+                    "degree": "B.Sc.",
+                    "institution": "University of Toronto",
+                    "year": 2010
+                }
+            ]
+        }
+    ]
+}

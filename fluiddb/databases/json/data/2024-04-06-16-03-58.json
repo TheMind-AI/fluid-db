@@ -1,0 +1,15 @@
+{
+    "people": {
+        "education": [
+            {
+                "name": "alex",
+                "courses": [
+                    {
+                        "name": "advanced algorithms",
+                        "completion_date": "2009-05"
+                    }
+                ]
+            }
+        ]
+    }
+}

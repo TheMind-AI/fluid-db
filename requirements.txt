@@ -8,7 +8,7 @@ openai
 backoff
 
 # jsons and schemas
-jsonpath-ng
+jsonpath-ng==1.6.0 # update_or
 genson
 
 # api & server

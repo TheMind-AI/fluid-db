@@ -1,0 +1,23 @@
+{
+    "people": [
+        {
+            "name": "alex rivera",
+            "age": 35,
+            "nationality": "canadian",
+            "education": [
+                {
+                    "name": "alex rivera",
+                    "degree": "b.sc.",
+                    "field": "computer science",
+                    "institution": "university of toronto",
+                    "year": "2010"
+                },
+                {
+                    "name": "alex rivera",
+                    "course": "advanced algorithms",
+                    "completion_date": "2009-05"
+                }
+            ]
+        }
+    ]
+}

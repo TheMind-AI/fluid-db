@@ -1,0 +1,17 @@
+{
+    "user": [
+        {
+            "name": "Alex Rivera",
+            "age": 35,
+            "nationality": "Canadian",
+            "education": [
+                {
+                    "level": "B.Sc.",
+                    "field": "computer science",
+                    "institution": "University of Toronto",
+                    "year": 2010
+                }
+            ]
+        }
+    ]
+}

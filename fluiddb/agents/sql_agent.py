@@ -23,7 +23,7 @@ class SQLMemoryAgent(DBAgent):
     def save(self, db_id: str, messages: List[dict], context: Optional[str] = None):
         
         schema = self.db_engine.schema(db_id)
-        
+
         print("SCHEMA:")
         print(schema)
 
@@ -34,7 +34,7 @@ class SQLMemoryAgent(DBAgent):
             print(" REASONING:", fetch_result.reasoning)
             print(" QUERIES:", fetch_result.sql_queries)
             prev_reasoning = fetch_result.reasoning
-            fetched_data = [self.db_engine.query(db_id, q) for q in fetch_result.sql_queries]
+            fetched_data = [self.db_engine.query(q) for q in fetch_result.sql_queries]
         else:
             prev_reasoning = ""
             fetched_data = ""

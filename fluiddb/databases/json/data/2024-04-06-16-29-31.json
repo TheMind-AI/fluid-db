@@ -1,0 +1,21 @@
+{
+    "user_profiles": [
+        {
+            "name": "alex rivera",
+            "age": 35,
+            "nationality": "canadian",
+            "education": [
+                {
+                    "degree": "b.sc.",
+                    "field": "computer science",
+                    "institution": "university of toronto",
+                    "year": "2010"
+                },
+                {
+                    "field": "Advanced Algorithms",
+                    "year": "2009-05"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "user": {
+        "education": [
+            {
+                "name": "University of Toronto",
+                "degree": "B.Sc.",
+                "field": "computer science",
+                "year": "2010"
+            },
+            {
+                "name": "Advanced Algorithms",
+                "year": "2009",
+                "month": "May"
+            }
+        ]
+    }
+}

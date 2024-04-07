@@ -1,0 +1,11 @@
+{
+    "education": [
+        {
+            "name": "Alex Rivera",
+            "degree": "B.Sc.",
+            "field": "computer science",
+            "institution": "University of Toronto",
+            "year": "2010"
+        }
+    ]
+}

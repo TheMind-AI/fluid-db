@@ -1,0 +1,17 @@
+{
+    "users": [
+        {
+            "name": "Alex Rivera",
+            "age": 35,
+            "nationality": "Canadian",
+            "education": [
+                {
+                    "degree": "B.Sc.",
+                    "field_of_study": "computer science",
+                    "institution": "University of Toronto",
+                    "year_completed": 2010
+                }
+            ]
+        }
+    ]
+}
