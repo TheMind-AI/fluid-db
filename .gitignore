@@ -166,4 +166,6 @@ themind/memory/data/*
 *.db
 
 firebase-pk.json
-```
+
+.DS_Store
+data/.DS_Store

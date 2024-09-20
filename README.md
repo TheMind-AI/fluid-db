@@ -12,20 +12,28 @@ Research repo for experimenting with the concept of a fluid database.
 
 ### What is Fluid Database?
 
-Fluid database is a concept for databases that can update their schema based on the ingested data.
+FluidDB (Fluid Database) is a concept for databases that dynamically update its schema based on the ingested data.
+It's here for you to build truly personalized AI agents by giving them memory.
+
+LLM + FluidDB = Personalized AI
+
 
 Key features:
 - Adaptive Schema: Automatically adjusts its structure based on the data being ingested.
 - Flexible Querying: Supports both traditional query languages and intuitive natural language queries.
 - Versatile Data Input: Enables data entry in natural language, as well as in semi-structured formats.
 
-### FluidDB MVP - TODO
-- [ ] FluidDBAgent
-- [ ] Inject Datbases Engine
-- [ ] Eval Memory System
+
+Want to see it in action? Check out the [MIND Apps](https://themind.ai/).
+
+#### Roadmap
+
+- [ ] FluidDB Client
+- [ ] Databases Engine
 - [ ] CLI
-- [ ] Router - Structured / Unstructured
-- [ ] ColBERT
+- [ ] Router
+- [ ] Eval System
+- [ ] Hosted Service
 
 
 #### FluidDB Example
