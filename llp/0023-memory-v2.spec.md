@@ -191,7 +191,7 @@ SDK and adapter packages. This supersedes the earlier inferred public-package sp
   JavaScript and declarations must not import any retired `@fluiddb/*` package.
 - `dist/fluiddb/` is the only publishable directory; `dist/tarballs/` contains exactly one tarball. It includes
   JavaScript, declarations, README, Apache-2.0 LICENSE, NOTICE and portable skills. The published consolidated
-  preview under `next` is `@fluiddb/fluiddb@1.0.0-next.3`. The thirteen already published `1.0.0-next.0` packages are recorded
+  preview under `next` is `@fluiddb/fluiddb@1.0.0-next.4`. The thirteen already published `1.0.0-next.0` packages are recorded
   in LLP 0023.003.
 - `zod` and the official MCP server SDK are external dependencies. PostgreSQL and Node Firestore clients are
   optional peers supplied by the host. Root and Firestore REST imports work without those drivers, Node APIs or
@@ -203,6 +203,15 @@ SDK and adapter packages. This supersedes the earlier inferred public-package sp
 - Publication requires npm name access and authentication. The read-only release check validates the artifact
   and prints one command without publishing. A registry 404 is not proof a name is publishable: npm rejected
   plain `fluiddb` as too similar to the existing `fluid.db` package.
+
+[confirmed] (Adam Zvada, 2026-09-29): publish the combined npm package automatically from GitHub release tags.
+[observed] `.github/workflows/publish.yml` calls the shared verification workflow for `v1.0.0-next.*` tags.
+The tag must equal the artifact version. Verification uploads one tested tarball only after package, runtime and
+reference checks; the adapter job must also pass before publishing. A separate job uses npm's package-specific
+GitHub OIDC trust for `TheMind-AI/fluid-db`, workflow `publish.yml`, with direct publishing allowed. No npm token
+is stored in GitHub. A final job checks the exact published version with an empty npm cache. New versions still
+require deliberate source-version updates and a tag; ordinary branch pushes never publish. npm trust setup and
+release commands are in `docs/releasing.md`.
 
 Feedback remains an explicit external support channel independent of memory. Portable skills share one catalog
 across CLI, MCP and public Worker routes (LLP 0023.002).

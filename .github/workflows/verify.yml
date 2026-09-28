@@ -2,6 +2,8 @@ name: Verify
 on:
   pull_request:
   push:
+    branches: ["**"]
+  workflow_call:
 
 permissions:
   contents: read
@@ -23,6 +25,20 @@ jobs:
       - run: bun run verify:packages
       - run: ./ref-check
         working-directory: .
+      - name: Validate release artifact
+        run: bun run release:check
+      - name: Match package to release tag
+        if: startsWith(github.ref, 'refs/tags/')
+        run: bun run release:check
+        env:
+          FLUID_RELEASE_TAG: ${{ github.ref_name }}
+      - uses: actions/upload-artifact@v4
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          name: fluiddb-package
+          path: dist/tarballs/*.tgz
+          if-no-files-found: error
+          retention-days: 7
 
   adapters:
     runs-on: ubuntu-latest
