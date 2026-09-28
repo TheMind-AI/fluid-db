@@ -1,0 +1,470 @@
+{
+ "flagged": 33,
+ "served": [
+  "p001",
+  "p005",
+  "p008",
+  "p009",
+  "p015",
+  "p020",
+  "p027",
+  "p033",
+  "p034",
+  "p035",
+  "p036",
+  "p037",
+  "p038",
+  "p039",
+  "p040",
+  "p041",
+  "p042",
+  "p043",
+  "p046"
+ ],
+ "migrations": [
+  {
+   "round": 0,
+   "op": "derive_column",
+   "table": "expenses",
+   "column": "dining_occasion",
+   "serves": [
+    "p001",
+    "p005",
+    "p008",
+    "p009",
+    "p015",
+    "p033",
+    "p036",
+    "p038",
+    "p041",
+    "p042",
+    "p043",
+    "p046"
+   ],
+   "why": "Makes lunch, dinner, and drinks occasions clean filters instead of relying on free-text descriptions or counting all dining expenses.",
+   "dropped_rules": [
+    {
+     "column": "category",
+     "regex": "^dining$",
+     "value": "other_dining"
+    }
+   ],
+   "undecided": [
+    "{\"person_id\": 1, \"category\": \"coffee\", \"date\": \"2024-04-01\", \"amount\": 125.0, \"currency\": \"CZK\", \"merchant\": \"Café Savoy\", \"description\": \"C",
+    "{\"person_id\": 1, \"category\": \"coffee\", \"date\": \"2024-04-01\", \"amount\": 95.0, \"currency\": \"CZK\", \"merchant\": \"Doubleshot\", \"description\": \"Co",
+    "{\"person_id\": 1, \"category\": \"subscription\", \"date\": \"2024-04-01\", \"amount\": 169.0, \"currency\": \"CZK\", \"merchant\": \"Spotify\", \"description\":",
+    "{\"person_id\": 1, \"category\": \"transport\", \"date\": \"2024-04-01\", \"amount\": 140.0, \"currency\": \"CZK\", \"merchant\": \"Bolt\", \"description\": \"Ride",
+    "{\"person_id\": 1, \"category\": \"coffee\", \"date\": \"2024-04-02\", \"amount\": 125.0, \"currency\": \"CZK\", \"merchant\": \"Doubleshot\", \"description\": \"C"
+   ],
+   "spec": {
+    "table": "expenses",
+    "column": "dining_occasion",
+    "description": "Classifies dining expenses by the occasion described in the record.",
+    "values": [
+     "lunch",
+     "dinner",
+     "drinks",
+     "other_dining"
+    ],
+    "rules": [
+     {
+      "column": "description",
+      "regex": "(?i)\\blunch\\b",
+      "value": "lunch"
+     },
+     {
+      "column": "_message",
+      "regex": "(?i)\\blunch\\b",
+      "value": "lunch"
+     },
+     {
+      "column": "description",
+      "regex": "(?i)\\bdinner\\b",
+      "value": "dinner"
+     },
+     {
+      "column": "_message",
+      "regex": "(?i)\\bdinner\\b",
+      "value": "dinner"
+     },
+     {
+      "column": "description",
+      "regex": "(?i)\\b(beer|beers|drink|drinks)\\b",
+      "value": "drinks"
+     },
+     {
+      "column": "_message",
+      "regex": "(?i)\\b(beer|beers|drink|drinks)\\b",
+      "value": "drinks"
+     }
+    ],
+    "scope": {
+     "column": "category",
+     "regex": "^dining$"
+    },
+    "supersedes": [
+     "description"
+    ]
+   },
+   "stats": {
+    "rows": 959,
+    "in_scope": 959,
+    "rules": 892,
+    "association": 67,
+    "jev": 0,
+    "empty": 0,
+    "distribution": {
+     "lunch": 582,
+     "dinner": 242,
+     "drinks": 135
+    },
+    "spot_check": {
+     "n": 40,
+     "agree": 1.0,
+     "disagreements": []
+    }
+   },
+   "replay": {
+    "questions": 12,
+    "health_before": 0.486,
+    "health_after": 0.786,
+    "gain": 0.3,
+    "worse": 0,
+    "per_question": [
+     {
+      "q": "How much did I spend on lunches out this year?",
+      "before": 0.52,
+      "after": 0.76
+     },
+     {
+      "q": "How much did I spend on lunches out last month?",
+      "before": 0.59,
+      "after": 0.87
+     },
+     {
+      "q": "What was my total lunches out spend in June 2024?",
+      "before": 0.62,
+      "after": 0.9
+     },
+     {
+      "q": "How many times did I go out for drinks in 2025?",
+      "before": 0.33,
+      "after": 0.85
+     },
+     {
+      "q": "How many times did I go out for drinks in September 2026?",
+      "before": 0.65,
+      "after": 0.87
+     },
+     {
+      "q": "What's the most I've spent on a single lunch in Prague?",
+      "before": 0.41,
+      "after": 0.62
+     },
+     {
+      "q": "What was my most expensive dinner in Prague?",
+      "before": 0.39,
+      "after": 0.62
+     },
+     {
+      "q": "What was my most expensive night of drinks in Prague?",
+      "before": 0.13,
+      "after": 0.52
+     },
+     {
+      "q": "What's my average dinner bill in November 2024?",
+      "before": 0.6,
+      "after": 0.85
+     },
+     {
+      "q": "How much did a night of drinks cost me on average in November 2024?",
+      "before": 0.42,
+      "after": 0.88
+     },
+     {
+      "q": "What's my average dinner bill in June 2024?",
+      "before": 0.59,
+      "after": 0.83
+     },
+     {
+      "q": "How much did a lunch cost me on average last month?",
+      "before": 0.58,
+      "after": 0.86
+     }
+    ]
+   },
+   "kept": true,
+   "reason": null
+  },
+  {
+   "round": 0,
+   "op": "derive_column",
+   "table": "expenses",
+   "column": "ride_provider_group",
+   "serves": [
+    "p002",
+    "p004",
+    "p006",
+    "p016"
+   ],
+   "why": "Provides one clean filter for questions that combine Uber and Bolt rides.",
+   "dropped_rules": [
+    {
+     "column": "merchant",
+     "regex": "(?i)\\b(uber|bolt)\\b",
+     "value": "uber_or_bolt"
+    },
+    {
+     "column": "category",
+     "regex": "^transport$",
+     "value": "other_transport"
+    }
+   ],
+   "undecided": [
+    "{\"person_id\": 1, \"category\": \"coffee\", \"date\": \"2024-04-01\", \"amount\": 125.0, \"currency\": \"CZK\", \"merchant\": \"Café Savoy\", \"description\": \"C",
+    "{\"person_id\": 1, \"category\": \"coffee\", \"date\": \"2024-04-01\", \"amount\": 95.0, \"currency\": \"CZK\", \"merchant\": \"Doubleshot\", \"description\": \"Co",
+    "{\"person_id\": 1, \"category\": \"subscription\", \"date\": \"2024-04-01\", \"amount\": 169.0, \"currency\": \"CZK\", \"merchant\": \"Spotify\", \"description\":",
+    "{\"person_id\": 1, \"category\": \"dining\", \"date\": \"2024-04-01\", \"amount\": 2480.0, \"currency\": \"CZK\", \"merchant\": \"Café Imperial\", \"description\"",
+    "{\"person_id\": 1, \"category\": \"dining\", \"date\": \"2024-04-01\", \"amount\": 385.0, \"currency\": \"CZK\", \"merchant\": \"Pho Vietnam\", \"description\": \""
+   ],
+   "spec": {
+    "table": "expenses",
+    "column": "ride_provider_group",
+    "description": "Groups transport expenses from Uber or Bolt together.",
+    "values": [
+     "uber_or_bolt",
+     "other_transport"
+    ],
+    "rules": [],
+    "scope": {
+     "column": "category",
+     "regex": "^transport$"
+    },
+    "supersedes": []
+   },
+   "stats": {
+    "rows": 490,
+    "in_scope": 490,
+    "rules": 0,
+    "association": 0,
+    "jev": 490,
+    "empty": 0,
+    "distribution": {
+     "uber_or_bolt": 490
+    }
+   },
+   "kept": false,
+   "reason": "rules agree with Jev on 0% of a sample (< 85%)"
+  },
+  {
+   "round": 0,
+   "op": "canonicalize",
+   "table": "expenses",
+   "column": "merchant",
+   "serves": [
+    "p020",
+    "p027"
+   ],
+   "why": "Merges spelling variants that split visits and spending for Café Imperial and Onesip Coffee.",
+   "stats": {
+    "pairs": 4,
+    "checked": [
+     {
+      "a": "Café Imperial",
+      "b": "Imperial",
+      "p": 0.96
+     },
+     {
+      "a": "Note: ☕ Onesip",
+      "b": "Onesip",
+      "p": 0.96
+     },
+     {
+      "a": "Onesip",
+      "b": "Onesip Coffee",
+      "p": 0.96
+     },
+     {
+      "a": "Onesip",
+      "b": "fyi coffee at Onesip",
+      "p": 0.84
+     }
+    ],
+    "merged": [
+     {
+      "from": "Imperial",
+      "to": "Café Imperial",
+      "rows": 4
+     },
+     {
+      "from": "Note: ☕ Onesip",
+      "to": "Onesip Coffee",
+      "rows": 7
+     },
+     {
+      "from": "Onesip",
+      "to": "Onesip Coffee",
+      "rows": 17
+     },
+     {
+      "from": "fyi coffee at Onesip",
+      "to": "Onesip Coffee",
+      "rows": 3
+     }
+    ]
+   },
+   "replay": {
+    "questions": 2,
+    "health_before": 0.635,
+    "health_after": 0.88,
+    "gain": 0.245,
+    "worse": 0,
+    "per_question": [
+     {
+      "q": "How many visits to Cafe Imperial in 2024?",
+      "before": 0.62,
+      "after": 0.88
+     },
+     {
+      "q": "How much did I spend at Onesip Coffee?",
+      "before": 0.65,
+      "after": 0.88
+     }
+    ]
+   },
+   "kept": true,
+   "reason": null
+  },
+  {
+   "round": 1,
+   "op": "derive_column",
+   "table": "expenses",
+   "column": "ride_service_group",
+   "serves": [
+    "p002",
+    "p004",
+    "p006",
+    "p016"
+   ],
+   "why": "A single clean rideshare value lets combined Uber-and-Bolt questions filter the matching expenses without relying on free-text descriptions or counting all transport expenses.",
+   "kept": false,
+   "reason": "1 values"
+  },
+  {
+   "round": 1,
+   "op": "derive_column",
+   "table": "expenses",
+   "column": "expense_location",
+   "serves": [
+    "p034",
+    "p035",
+    "p037",
+    "p039",
+    "p040"
+   ],
+   "why": "Adds a clean city filter for grocery, coffee, and ride questions. Rows without an explicit city can be assigned using merchant/place association and classification.",
+   "dropped_rules": [],
+   "undecided": [
+    "{\"person_id\": 1, \"category\": \"subscription\", \"date\": \"2024-04-01\", \"amount\": 169.0, \"currency\": \"CZK\", \"merchant\": \"Spotify\", \"description\":",
+    "{\"person_id\": 1, \"category\": \"dining\", \"date\": \"2024-04-01\", \"amount\": 2480.0, \"currency\": \"CZK\", \"merchant\": \"Café Imperial\", \"description\"",
+    "{\"person_id\": 1, \"category\": \"dining\", \"date\": \"2024-04-01\", \"amount\": 385.0, \"currency\": \"CZK\", \"merchant\": \"Pho Vietnam\", \"description\": \"",
+    "{\"person_id\": 1, \"category\": \"dining\", \"date\": \"2024-04-02\", \"amount\": 229.0, \"currency\": \"CZK\", \"merchant\": \"Pho Vietnam\", \"description\": \"",
+    "{\"person_id\": 1, \"category\": \"dining\", \"date\": \"2024-04-03\", \"amount\": 189.0, \"currency\": \"CZK\", \"merchant\": \"Pho Vietnam\", \"description\": \""
+   ],
+   "spec": {
+    "table": "expenses",
+    "column": "expense_location",
+    "description": "The city associated with an expense.",
+    "values": [
+     "prague",
+     "san francisco"
+    ],
+    "rules": [
+     {
+      "column": "description",
+      "regex": "(?i)san francisco",
+      "value": "san francisco"
+     },
+     {
+      "column": "_message",
+      "regex": "(?i)san francisco",
+      "value": "san francisco"
+     },
+     {
+      "column": "description",
+      "regex": "(?i)prague",
+      "value": "prague"
+     },
+     {
+      "column": "_message",
+      "regex": "(?i)prague",
+      "value": "prague"
+     }
+    ],
+    "scope": {
+     "column": "category",
+     "regex": "^(groceries|coffee|transport)$"
+    },
+    "supersedes": [
+     "description"
+    ]
+   },
+   "stats": {
+    "rows": 1705,
+    "in_scope": 1705,
+    "rules": 48,
+    "association": 1142,
+    "jev": 402,
+    "empty": 113,
+    "distribution": {
+     "prague": 1374,
+     "san francisco": 218
+    },
+    "spot_check": {
+     "n": 40,
+     "agree": 1.0,
+     "disagreements": []
+    }
+   },
+   "replay": {
+    "questions": 5,
+    "health_before": 0.486,
+    "health_after": 0.694,
+    "gain": 0.208,
+    "worse": 1,
+    "per_question": [
+     {
+      "q": "What was my most expensive grocery run in San Francisco?",
+      "before": 0.22,
+      "after": 0.83
+     },
+     {
+      "q": "What's the most I've spent on a single grocery run in Prague?",
+      "before": 0.69,
+      "after": 0.91
+     },
+     {
+      "q": "What's the most I've spent on a single coffee in Prague?",
+      "before": 0.57,
+      "after": 0.86
+     },
+     {
+      "q": "What's the most I've spent on a single ride in San Francisco?",
+      "before": 0.48,
+      "after": 0.01
+     },
+     {
+      "q": "What was my most expensive ride in Prague?",
+      "before": 0.47,
+      "after": 0.86
+     }
+    ]
+   },
+   "kept": true,
+   "reason": null
+  }
+ ],
+ "prompt_chars": 51793,
+ "cost": 0.04334,
+ "model": "openai:gpt-6-luna"
+}

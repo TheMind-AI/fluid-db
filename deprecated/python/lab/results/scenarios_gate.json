@@ -1,0 +1,30 @@
+{
+ "support": {
+  "round4": {
+   "facts_written": 0.9119,
+   "facts": 636,
+   "chat_stopped": 1.0,
+   "chat": 39
+  },
+  "neutral": {
+   "facts_written": 1.0,
+   "facts": 636,
+   "chat_stopped": 0.7949,
+   "chat": 39
+  }
+ },
+ "life": {
+  "round4": {
+   "facts_written": 1.0,
+   "facts": 553,
+   "chat_stopped": 0.9787,
+   "chat": 47
+  },
+  "neutral": {
+   "facts_written": 1.0,
+   "facts": 553,
+   "chat_stopped": 0.7021,
+   "chat": 47
+  }
+ }
+}

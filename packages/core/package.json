@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@fluiddb/core",
+  "version": "1.0.0-next.4",
+  "description": "FluidDB core: the ports and the memory (windows, statements, links, dossier, picker, detector)",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./local": "./src/local.ts",
+    "./testing": "./src/testing.ts",
+    "./conformance": "./src/conformance.ts",
+    "./records": "./src/records.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p .",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@fluiddb/schema": "workspace:*",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@types/bun": "catalog:",
+    "typescript": "catalog:"
+  },
+  "private": true,
+  "license": "Apache-2.0"
+}

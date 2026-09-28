@@ -1,0 +1,378 @@
+[
+ {
+  "id": 17,
+  "holder": "I",
+  "stance": "felt",
+  "target": "unspecified",
+  "target_kind": "other",
+  "detail": "nice"
+ },
+ {
+  "id": 19,
+  "holder": "Acme",
+  "stance": "likes",
+  "target": "email updates",
+  "target_kind": "other",
+  "detail": "Wants every update by email; never by phone call"
+ },
+ {
+  "id": 28,
+  "holder": "[forgotten]",
+  "stance": "rated",
+  "target": "support interaction #1043",
+  "target_kind": "other",
+  "detail": "5/5 — “fast and friendly”"
+ },
+ {
+  "id": 43,
+  "holder": "Ben Ortiz",
+  "stance": "rated",
+  "target": "support interaction #1046",
+  "target_kind": "other",
+  "detail": "3/5 — “ok”"
+ },
+ {
+  "id": 51,
+  "holder": "Nora at Globex",
+  "stance": "likes",
+  "target": "phone calls before 10am; email otherwise",
+  "target_kind": "other",
+  "detail": "Prefers a phone call before 10am, email otherwise"
+ },
+ {
+  "id": 101,
+  "holder": "Dana (Umbrella)",
+  "stance": "dislikes",
+  "target": "being cc'd on internal threads",
+  "target_kind": "other",
+  "detail": "Complained about being cc'd again; don't cc her"
+ },
+ {
+  "id": 106,
+  "holder": "[forgotten]",
+  "stance": "rated",
+  "target": "support interaction #1063",
+  "target_kind": "other",
+  "detail": "5/5 — “fast and friendly”"
+ },
+ {
+  "id": 109,
+  "holder": "Acme",
+  "stance": "likes",
+  "target": "SSO for 200 more seats and audit logs",
+  "target_kind": "other",
+  "detail": "Wants SSO for 200 more seats and asked about audit logs"
+ },
+ {
+  "id": 114,
+  "holder": "Tom Reed",
+  "stance": "rated",
+  "target": "support interaction #1064",
+  "target_kind": "other",
+  "detail": "5/5 — “fast and friendly”"
+ },
+ {
+  "id": 123,
+  "holder": "Rita Moss",
+  "stance": "rated",
+  "target": "support interaction #1070",
+  "target_kind": "other",
+  "detail": "5/5 — “fast and friendly”"
+ },
+ {
+  "id": 141,
+  "holder": "Rita Moss",
+  "stance": "rated",
+  "target": "support interaction #1072",
+  "target_kind": "other",
+  "detail": "5/5 — “fast and friendly”"
+ },
+ {
+  "id": 145,
+  "holder": "[forgotten]",
+  "stance": "rated",
+  "target": "support interaction #1076",
+  "target_kind": "other",
+  "detail": "3/5 — “ok”"
+ },
+ {
+  "id": 147,
+  "holder": "Rita Moss",
+  "stance": "rated",
+  "target": "support interaction #1069",
+  "target_kind": "other",
+  "detail": "4/5 — “good, took a bit long”"
+ },
+ {
+  "id": 164,
+  "holder": "Dana Cole",
+  "stance": "rated",
+  "target": "support interaction #1079",
+  "target_kind": "other",
+  "detail": "4/5 — “good, took a bit long”"
+ },
+ {
+  "id": 185,
+  "holder": "Tom Reed",
+  "stance": "rated",
+  "target": "support interaction #1084",
+  "target_kind": "other",
+  "detail": "4/5 — “good, took a bit long”"
+ },
+ {
+  "id": 189,
+  "holder": "Tom Reed",
+  "stance": "rated",
+  "target": "support interaction",
+  "target_kind": "other",
+  "detail": "4/5; “good, took a bit long”"
+ },
+ {
+  "id": 209,
+  "holder": "Dana Cole",
+  "stance": "rated",
+  "target": "support interaction",
+  "target_kind": "other",
+  "detail": "5/5; “fast and friendly”"
+ },
+ {
+  "id": 220,
+  "holder": "Tom Reed",
+  "stance": "rated",
+  "target": "support interaction",
+  "target_kind": "other",
+  "detail": "4/5; “good, took a bit long”"
+ },
+ {
+  "id": 227,
+  "holder": "[forgotten]",
+  "stance": "rated",
+  "target": "support interaction",
+  "target_kind": "other",
+  "detail": "4/5; “good, took a bit long”"
+ },
+ {
+  "id": 240,
+  "holder": "Nora Blake",
+  "stance": "rated",
+  "target": "support interaction",
+  "target_kind": "other",
+  "detail": "5/5; “fast and friendly”"
+ },
+ {
+  "id": 261,
+  "holder": "none",
+  "stance": "none",
+  "target": "none",
+  "target_kind": "other",
+  "detail": ""
+ },
+ {
+  "id": 269,
+  "holder": "Ivy Park",
+  "stance": "rated",
+  "target": "support interaction",
+  "target_kind": "other",
+  "detail": "5/5; “fast and friendly”"
+ },
+ {
+  "id": 279,
+  "holder": "[forgotten]",
+  "stance": "rated",
+  "target": "support interaction",
+  "target_kind": "other",
+  "detail": "4/5; “good, took a bit long”"
+ },
+ {
+  "id": 313,
+  "holder": "Acme",
+  "stance": "felt",
+  "target": "integration tickets",
+  "target_kind": "other",
+  "detail": "Two tickets were slow"
+ },
+ {
+  "id": 330,
+  "holder": "Nora Blake",
+  "stance": "rated",
+  "target": "support interaction",
+  "target_kind": "other",
+  "detail": "5/5; “fast and friendly”"
+ },
+ {
+  "id": 338,
+  "holder": "Nora Blake",
+  "stance": "rated",
+  "target": "support interaction",
+  "target_kind": "other",
+  "detail": "5/5; “fast and friendly”"
+ },
+ {
+  "id": 361,
+  "holder": "Ben Ortiz",
+  "stance": "rated",
+  "target": "support interaction",
+  "target_kind": "other",
+  "detail": "5/5; “fast and friendly”"
+ },
+ {
+  "id": 393,
+  "holder": "Tom Reed",
+  "stance": "rated",
+  "target": "support interaction",
+  "target_kind": "other",
+  "detail": "5/5; “fast and friendly”"
+ },
+ {
+  "id": 401,
+  "holder": "Gavin Lee",
+  "stance": "rated",
+  "target": "support interaction",
+  "target_kind": "other",
+  "detail": "5/5; “fast and friendly”"
+ },
+ {
+  "id": 412,
+  "holder": "Ben Ortiz",
+  "stance": "rated",
+  "target": "support interaction",
+  "target_kind": "other",
+  "detail": "5/5; “fast and friendly”"
+ },
+ {
+  "id": 413,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": "“nice” (no specific target)"
+ },
+ {
+  "id": 431,
+  "holder": "Ben Ortiz",
+  "stance": "rated",
+  "target": "support interaction #1138",
+  "target_kind": "other",
+  "detail": "4/5; “good, took a bit long”"
+ },
+ {
+  "id": 461,
+  "holder": "Gavin Lee",
+  "stance": "rated",
+  "target": "support interaction #1150",
+  "target_kind": "other",
+  "detail": "4/5; “good, took a bit long”"
+ },
+ {
+  "id": 484,
+  "holder": "Dana Cole",
+  "stance": "rated",
+  "target": "support interaction #1154",
+  "target_kind": "other",
+  "detail": "4/5; “good, took a bit long”"
+ },
+ {
+  "id": 485,
+  "holder": "Tom Reed",
+  "stance": "rated",
+  "target": "support interaction #1155",
+  "target_kind": "other",
+  "detail": "3/5; “ok”"
+ },
+ {
+  "id": 493,
+  "holder": "Tom Reed",
+  "stance": "rated",
+  "target": "support interaction #1159",
+  "target_kind": "other",
+  "detail": "5/5; “fast and friendly”"
+ },
+ {
+  "id": 497,
+  "holder": "Dana Cole",
+  "stance": "rated",
+  "target": "support interaction #1160",
+  "target_kind": "other",
+  "detail": "4/5; “good, took a bit long”"
+ },
+ {
+  "id": 520,
+  "holder": "Dana Cole",
+  "stance": "rated",
+  "target": "support interaction #1164",
+  "target_kind": "other",
+  "detail": "5/5; “fast and friendly”"
+ },
+ {
+  "id": 541,
+  "holder": "Dana Cole",
+  "stance": "rated",
+  "target": "support interaction #1162",
+  "target_kind": "other",
+  "detail": "5/5; “fast and friendly”"
+ },
+ {
+  "id": 555,
+  "holder": "Nora Blake",
+  "stance": "rated",
+  "target": "support interaction #1168",
+  "target_kind": "other",
+  "detail": "4/5; “good, took a bit long”"
+ },
+ {
+  "id": 571,
+  "holder": "I",
+  "stance": "likes",
+  "target": "Acme renewal outlook",
+  "target_kind": "other",
+  "detail": "Looks good"
+ },
+ {
+  "id": 573,
+  "holder": "Tom Reed",
+  "stance": "rated",
+  "target": "support interaction #1178",
+  "target_kind": "other",
+  "detail": "5/5; “fast and friendly”"
+ },
+ {
+  "id": 584,
+  "holder": "Dana Cole",
+  "stance": "rated",
+  "target": "support interaction #1181",
+  "target_kind": "other",
+  "detail": "5/5; “fast and friendly”"
+ },
+ {
+  "id": 604,
+  "holder": "Ivy Park",
+  "stance": "rated",
+  "target": "support interaction #1185",
+  "target_kind": "other",
+  "detail": "5/5; “fast and friendly”"
+ },
+ {
+  "id": 649,
+  "holder": "Ivy Park",
+  "stance": "rated",
+  "target": "support interaction #1190",
+  "target_kind": "other",
+  "detail": "5/5; “fast and friendly”"
+ },
+ {
+  "id": 657,
+  "holder": "Nora Blake",
+  "stance": "rated",
+  "target": "CSAT survey result for #1197",
+  "target_kind": "other",
+  "detail": "3/5; comment: “ok”"
+ },
+ {
+  "id": 664,
+  "holder": "Mira Hahn",
+  "stance": "rated",
+  "target": "CSAT survey result for #1193",
+  "target_kind": "other",
+  "detail": "4/5; comment: “good, took a bit long”"
+ }
+]

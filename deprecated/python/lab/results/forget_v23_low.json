@@ -1,0 +1,1418 @@
+{
+ "db": "runs/year__v23__gpt-6-luna__low/db.sqlite",
+ "records_with_needles_before": {
+  "row": 36,
+  "history": 1,
+  "log": 48
+ },
+ "summary": {
+  "planner": {
+   "requests_fully_erased": 3,
+   "requests_erased_from_rows": 7,
+   "leaking_records": {
+    "row": 0,
+    "history": 26,
+    "log": 34
+   },
+   "keeps_kept": "15/15",
+   "cost": 0.0052
+  },
+  "planner+jev": {
+   "requests_fully_erased": 6,
+   "requests_erased_from_rows": 8,
+   "leaking_records": {
+    "row": 0,
+    "history": 0,
+    "log": 2
+   },
+   "keeps_kept": "15/15",
+   "cost": 0.2101,
+   "audit_changed_records": 64,
+   "audit_collateral_records": 6
+  },
+  "planner+propagate": {
+   "requests_fully_erased": 8,
+   "requests_erased_from_rows": 8,
+   "leaking_records": {
+    "row": 0,
+    "history": 0,
+    "log": 0
+   },
+   "keeps_kept": "15/15",
+   "cost": 0.0052,
+   "changed_records": 60,
+   "collateral_records": 0
+  }
+ },
+ "collateral": {
+  "changed": 64,
+  "collateral": 6,
+  "requests": [
+   {
+    "request": "forget Tom's phone numbers, both the old one and the new one",
+    "changed": 1,
+    "collateral": 1,
+    "examples": [
+     "log _log#51: [2025-10-20T20:39] met [forgotten], CTO at Rohlik, at a meetup. his number is +420 602 555 777 => [2025-10-20T20:39] met [forgotten], CTO at Rohlik, at a meetup. his number is [forgotten]"
+    ]
+   },
+   {
+    "request": "please delete everything about Oscar Lind from memory",
+    "changed": 2,
+    "collateral": 0,
+    "examples": []
+   },
+   {
+    "request": "forget David's email address",
+    "changed": 0,
+    "collateral": 0,
+    "examples": []
+   },
+   {
+    "request": "erase my old Czech phone number, I don't use it anymore",
+    "changed": 4,
+    "collateral": 4,
+    "examples": [
+     "row contact_methods#9: contact_methods#9 {\"person\": \"Marco (people#11)\", \"type\": \"phone\", \"value\": \"+420 731 000 444\"} => contact_methods#9 {\"person\": \"Marco (people#11)\", \"type\": \"phone\"}",
+     "history contact_methods#6: contact_methods#4 {\"person\": \"Tom Novak (people#5)\", \"type\": \"phone\", \"value\": \"+420 777 999 000\"} | earlier value: '+420 777 123 456' -> '+ => <removed>",
+     "history tasks#10: tasks#6 {\"title\": \"Cancel Czech phone plan\", \"due_date\": \"2026-05-01\", \"status\": \"done\", \"person\": \"1\"} | earlier status: 'pending' -> 'done => <removed>",
+     "log _log#242: [2026-01-20T09:19] Marco (my barber) number is +420 731 000 444 => [2026-01-20T09:19] Marco (my barber) number is [forgotten]"
+    ]
+   },
+   {
+    "request": "forget everything about Raj",
+    "changed": 1,
+    "collateral": 0,
+    "examples": []
+   },
+   {
+    "request": "delete all my Blue Bottle purchases",
+    "changed": 53,
+    "collateral": 0,
+    "examples": []
+   },
+   {
+    "request": "forget the passport renewal, it's done and I don't want it stored",
+    "changed": 2,
+    "collateral": 0,
+    "examples": []
+   },
+   {
+    "request": "forget Lucas Meyer's email",
+    "changed": 1,
+    "collateral": 1,
+    "examples": [
+     "log _log#818: [2026-09-30T21:30] forget Lucas Meyer's email => [2026-09-30T21:30] forget [forgotten]"
+    ]
+   }
+  ]
+ },
+ "requests": [
+  {
+   "request": "forget Tom's phone numbers, both the old one and the new one",
+   "before": {
+    "leaks": {
+     "row": 1,
+     "history": 1,
+     "log": 2
+    },
+    "kept": 3,
+    "keeps": 3,
+    "rows": 659
+   },
+   "planner": {
+    "ops": [
+     {
+      "op": "forget",
+      "table": "contact_methods",
+      "row_id": 4,
+      "redact": [
+       "Tom",
+       "+420 777 999 000"
+      ]
+     }
+    ],
+    "write_s": 0.01,
+    "after": {
+     "leaks": {
+      "row": 0,
+      "history": 0,
+      "log": 1
+     },
+     "kept": 3,
+     "keeps": 3,
+     "rows": 658
+    },
+    "cost": 0.00073
+   },
+   "planner+jev": {
+    "ops": [
+     {
+      "op": "forget",
+      "table": "contact_methods",
+      "row_id": 4,
+      "redact": [
+       "Tom",
+       "+420 777 999 000"
+      ]
+     }
+    ],
+    "write_s": 0.01,
+    "audit": {
+     "rows_deleted": 0,
+     "fields_cleared": 0,
+     "history_dropped": 0,
+     "log_rewritten": 3,
+     "flagged": 3,
+     "records_checked": 1493,
+     "audit_s": 0.1
+    },
+    "after": {
+     "leaks": {
+      "row": 0,
+      "history": 0,
+      "log": 1
+     },
+     "kept": 3,
+     "keeps": 3,
+     "rows": 658
+    },
+    "cost": 0.02656
+   },
+   "planner+propagate": {
+    "ops": [
+     {
+      "op": "forget",
+      "table": "contact_methods",
+      "row_id": 4,
+      "redact": [
+       "Tom",
+       "+420 777 999 000"
+      ]
+     }
+    ],
+    "write_s": 0.01,
+    "audit": {
+     "erased_rows": 1,
+     "values": 2,
+     "log_redacted": 1,
+     "history_dropped": 0,
+     "propagate_s": 0.062
+    },
+    "after": {
+     "leaks": {
+      "row": 0,
+      "history": 0,
+      "log": 0
+     },
+     "kept": 3,
+     "keeps": 3,
+     "rows": 658
+    },
+    "cost": 0.00073
+   }
+  },
+  {
+   "request": "please delete everything about Oscar Lind from memory",
+   "before": {
+    "leaks": {
+     "row": 2,
+     "history": 0,
+     "log": 2
+    },
+    "kept": 2,
+    "keeps": 2,
+    "rows": 659
+   },
+   "planner": {
+    "ops": [
+     {
+      "op": "forget",
+      "table": "people",
+      "row_id": 10,
+      "redact": [
+       "Oscar Lind"
+      ]
+     }
+    ],
+    "write_s": 0.01,
+    "after": {
+     "leaks": {
+      "row": 0,
+      "history": 0,
+      "log": 2
+     },
+     "kept": 2,
+     "keeps": 2,
+     "rows": 655
+    },
+    "cost": 0.00056
+   },
+   "planner+jev": {
+    "ops": [
+     {
+      "op": "forget",
+      "table": "people",
+      "row_id": 10,
+      "redact": [
+       "Oscar Lind"
+      ]
+     }
+    ],
+    "write_s": 0.01,
+    "audit": {
+     "rows_deleted": 0,
+     "fields_cleared": 0,
+     "history_dropped": 0,
+     "log_rewritten": 3,
+     "flagged": 3,
+     "records_checked": 1491,
+     "audit_s": 0.1
+    },
+    "after": {
+     "leaks": {
+      "row": 0,
+      "history": 0,
+      "log": 0
+     },
+     "kept": 2,
+     "keeps": 2,
+     "rows": 655
+    },
+    "cost": 0.02597
+   },
+   "planner+propagate": {
+    "ops": [
+     {
+      "op": "forget",
+      "table": "people",
+      "row_id": 10,
+      "redact": [
+       "Oscar Lind"
+      ]
+     }
+    ],
+    "write_s": 0.01,
+    "audit": {
+     "erased_rows": 4,
+     "values": 4,
+     "log_redacted": 2,
+     "history_dropped": 0,
+     "propagate_s": 0.063
+    },
+    "after": {
+     "leaks": {
+      "row": 0,
+      "history": 0,
+      "log": 0
+     },
+     "kept": 2,
+     "keeps": 2,
+     "rows": 655
+    },
+    "cost": 0.00056
+   }
+  },
+  {
+   "request": "forget David's email address",
+   "before": {
+    "leaks": {
+     "row": 1,
+     "history": 0,
+     "log": 13
+    },
+    "kept": 2,
+    "keeps": 2,
+    "rows": 659
+   },
+   "planner": {
+    "ops": [
+     {
+      "op": "forget",
+      "table": "contact_methods",
+      "row_id": 3,
+      "redact": [
+       "david@nebula.ai"
+      ]
+     }
+    ],
+    "write_s": 0.01,
+    "after": {
+     "leaks": {
+      "row": 0,
+      "history": 0,
+      "log": 0
+     },
+     "kept": 2,
+     "keeps": 2,
+     "rows": 658
+    },
+    "cost": 0.00061
+   },
+   "planner+jev": {
+    "ops": [
+     {
+      "op": "forget",
+      "table": "contact_methods",
+      "row_id": 3,
+      "redact": [
+       "david@nebula.ai"
+      ]
+     }
+    ],
+    "write_s": 0.01,
+    "audit": {
+     "rows_deleted": 0,
+     "fields_cleared": 0,
+     "history_dropped": 0,
+     "log_rewritten": 13,
+     "flagged": 13,
+     "records_checked": 1494,
+     "audit_s": 0.1
+    },
+    "after": {
+     "leaks": {
+      "row": 0,
+      "history": 0,
+      "log": 0
+     },
+     "kept": 2,
+     "keeps": 2,
+     "rows": 658
+    },
+    "cost": 0.02635
+   },
+   "planner+propagate": {
+    "ops": [
+     {
+      "op": "forget",
+      "table": "contact_methods",
+      "row_id": 3,
+      "redact": [
+       "david@nebula.ai"
+      ]
+     }
+    ],
+    "write_s": 0.01,
+    "audit": {
+     "erased_rows": 1,
+     "values": 1,
+     "log_redacted": 0,
+     "history_dropped": 0,
+     "propagate_s": 0.061
+    },
+    "after": {
+     "leaks": {
+      "row": 0,
+      "history": 0,
+      "log": 0
+     },
+     "kept": 2,
+     "keeps": 2,
+     "rows": 658
+    },
+    "cost": 0.00061
+   }
+  },
+  {
+   "request": "erase my old Czech phone number, I don't use it anymore",
+   "before": {
+    "leaks": {
+     "row": 1,
+     "history": 0,
+     "log": 1
+    },
+    "kept": 3,
+    "keeps": 3,
+    "rows": 659
+   },
+   "planner": {
+    "ops": [
+     {
+      "op": "forget",
+      "table": "contact_methods",
+      "row_id": 1,
+      "redact": [
+       "+420 722 238 738"
+      ]
+     }
+    ],
+    "write_s": 0.01,
+    "after": {
+     "leaks": {
+      "row": 0,
+      "history": 0,
+      "log": 0
+     },
+     "kept": 3,
+     "keeps": 3,
+     "rows": 658
+    },
+    "cost": 0.00053
+   },
+   "planner+jev": {
+    "ops": [
+     {
+      "op": "forget",
+      "table": "contact_methods",
+      "row_id": 1,
+      "redact": [
+       "+420 722 238 738"
+      ]
+     }
+    ],
+    "write_s": 0.01,
+    "audit": {
+     "rows_deleted": 0,
+     "fields_cleared": 1,
+     "history_dropped": 2,
+     "log_rewritten": 5,
+     "flagged": 9,
+     "records_checked": 1494,
+     "audit_s": 0.1
+    },
+    "after": {
+     "leaks": {
+      "row": 0,
+      "history": 0,
+      "log": 0
+     },
+     "kept": 3,
+     "keeps": 3,
+     "rows": 658
+    },
+    "cost": 0.02637
+   },
+   "planner+propagate": {
+    "ops": [
+     {
+      "op": "forget",
+      "table": "contact_methods",
+      "row_id": 1,
+      "redact": [
+       "+420 722 238 738"
+      ]
+     }
+    ],
+    "write_s": 0.01,
+    "audit": {
+     "erased_rows": 1,
+     "values": 1,
+     "log_redacted": 0,
+     "history_dropped": 0,
+     "propagate_s": 0.062
+    },
+    "after": {
+     "leaks": {
+      "row": 0,
+      "history": 0,
+      "log": 0
+     },
+     "kept": 3,
+     "keeps": 3,
+     "rows": 658
+    },
+    "cost": 0.00053
+   }
+  },
+  {
+   "request": "forget everything about Raj",
+   "before": {
+    "leaks": {
+     "row": 3,
+     "history": 0,
+     "log": 1
+    },
+    "kept": 2,
+    "keeps": 2,
+    "rows": 659
+   },
+   "planner": {
+    "ops": [
+     {
+      "op": "forget",
+      "table": "emails",
+      "row_id": 3,
+      "redact": [
+       "Raj Gupta"
+      ]
+     },
+     {
+      "op": "forget",
+      "table": "people",
+      "row_id": 15,
+      "redact": [
+       "Raj Gupta"
+      ]
+     },
+     {
+      "op": "forget",
+      "table": "leases",
+      "row_id": 1,
+      "redact": [
+       "Raj Gupta"
+      ]
+     }
+    ],
+    "write_s": 0.01,
+    "after": {
+     "leaks": {
+      "row": 0,
+      "history": 0,
+      "log": 2
+     },
+     "kept": 2,
+     "keeps": 2,
+     "rows": 654
+    },
+    "cost": 0.0006
+   },
+   "planner+jev": {
+    "ops": [
+     {
+      "op": "forget",
+      "table": "emails",
+      "row_id": 3,
+      "redact": [
+       "Raj Gupta"
+      ]
+     },
+     {
+      "op": "forget",
+      "table": "people",
+      "row_id": 15,
+      "redact": [
+       "Raj Gupta"
+      ]
+     },
+     {
+      "op": "forget",
+      "table": "leases",
+      "row_id": 1,
+      "redact": [
+       "Raj Gupta"
+      ]
+     }
+    ],
+    "write_s": 0.01,
+    "audit": {
+     "rows_deleted": 0,
+     "fields_cleared": 0,
+     "history_dropped": 0,
+     "log_rewritten": 2,
+     "flagged": 2,
+     "records_checked": 1490,
+     "audit_s": 0.1
+    },
+    "after": {
+     "leaks": {
+      "row": 0,
+      "history": 0,
+      "log": 1
+     },
+     "kept": 2,
+     "keeps": 2,
+     "rows": 654
+    },
+    "cost": 0.02578
+   },
+   "planner+propagate": {
+    "ops": [
+     {
+      "op": "forget",
+      "table": "emails",
+      "row_id": 3,
+      "redact": [
+       "Raj Gupta"
+      ]
+     },
+     {
+      "op": "forget",
+      "table": "people",
+      "row_id": 15,
+      "redact": [
+       "Raj Gupta"
+      ]
+     },
+     {
+      "op": "forget",
+      "table": "leases",
+      "row_id": 1,
+      "redact": [
+       "Raj Gupta"
+      ]
+     }
+    ],
+    "write_s": 0.01,
+    "audit": {
+     "erased_rows": 5,
+     "values": 7,
+     "log_redacted": 2,
+     "history_dropped": 0,
+     "propagate_s": 0.068
+    },
+    "after": {
+     "leaks": {
+      "row": 0,
+      "history": 0,
+      "log": 0
+     },
+     "kept": 2,
+     "keeps": 2,
+     "rows": 654
+    },
+    "cost": 0.0006
+   }
+  },
+  {
+   "request": "delete all my Blue Bottle purchases",
+   "before": {
+    "leaks": {
+     "row": 26,
+     "history": 0,
+     "log": 26
+    },
+    "kept": 1,
+    "keeps": 1,
+    "rows": 659
+   },
+   "planner": {
+    "ops": [
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 295,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 362,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 394,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 203,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 205,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 228,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 239,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 255,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 262,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 280,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 281,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 292,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 299,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 308,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 322,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 330,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 339,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 348,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 357,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 381,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 266,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 311,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 334,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 353,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 376,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 406,
+      "redact": []
+     }
+    ],
+    "write_s": 0.01,
+    "after": {
+     "leaks": {
+      "row": 0,
+      "history": 26,
+      "log": 27
+     },
+     "kept": 1,
+     "keeps": 1,
+     "rows": 633
+    },
+    "cost": 0.00105
+   },
+   "planner+jev": {
+    "ops": [
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 295,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 362,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 394,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 203,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 205,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 228,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 239,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 255,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 262,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 280,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 281,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 292,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 299,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 308,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 322,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 330,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 339,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 348,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 357,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 381,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 266,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 311,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 334,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 353,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 376,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 406,
+      "redact": []
+     }
+    ],
+    "write_s": 0.01,
+    "audit": {
+     "rows_deleted": 0,
+     "fields_cleared": 0,
+     "history_dropped": 26,
+     "log_rewritten": 30,
+     "flagged": 56,
+     "records_checked": 1495,
+     "audit_s": 0.1
+    },
+    "after": {
+     "leaks": {
+      "row": 0,
+      "history": 0,
+      "log": 0
+     },
+     "kept": 1,
+     "keeps": 1,
+     "rows": 633
+    },
+    "cost": 0.02685
+   },
+   "planner+propagate": {
+    "ops": [
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 295,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 362,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 394,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 203,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 205,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 228,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 239,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 255,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 262,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 280,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 281,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 292,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 299,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 308,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 322,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 330,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 339,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 348,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 357,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 381,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 266,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 311,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 334,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 353,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 376,
+      "redact": []
+     },
+     {
+      "op": "delete",
+      "table": "expenses",
+      "row_id": 406,
+      "redact": []
+     }
+    ],
+    "write_s": 0.1,
+    "audit": {
+     "erased_rows": 26,
+     "values": 7,
+     "log_redacted": 27,
+     "history_dropped": 26,
+     "propagate_s": 0.08
+    },
+    "after": {
+     "leaks": {
+      "row": 0,
+      "history": 0,
+      "log": 0
+     },
+     "kept": 1,
+     "keeps": 1,
+     "rows": 633
+    },
+    "cost": 0.00105
+   }
+  },
+  {
+   "request": "forget the passport renewal, it's done and I don't want it stored",
+   "before": {
+    "leaks": {
+     "row": 1,
+     "history": 0,
+     "log": 2
+    },
+    "kept": 1,
+    "keeps": 1,
+    "rows": 659
+   },
+   "planner": {
+    "ops": [
+     {
+      "op": "forget",
+      "table": "tasks",
+      "row_id": 1,
+      "redact": [
+       "passport renewal",
+       "Renew passport"
+      ]
+     }
+    ],
+    "write_s": 0.01,
+    "after": {
+     "leaks": {
+      "row": 0,
+      "history": 0,
+      "log": 2
+     },
+     "kept": 1,
+     "keeps": 1,
+     "rows": 658
+    },
+    "cost": 0.00058
+   },
+   "planner+jev": {
+    "ops": [
+     {
+      "op": "forget",
+      "table": "tasks",
+      "row_id": 1,
+      "redact": [
+       "passport renewal",
+       "Renew passport"
+      ]
+     }
+    ],
+    "write_s": 0.01,
+    "audit": {
+     "rows_deleted": 0,
+     "fields_cleared": 0,
+     "history_dropped": 0,
+     "log_rewritten": 3,
+     "flagged": 3,
+     "records_checked": 1493,
+     "audit_s": 0.1
+    },
+    "after": {
+     "leaks": {
+      "row": 0,
+      "history": 0,
+      "log": 0
+     },
+     "kept": 1,
+     "keeps": 1,
+     "rows": 658
+    },
+    "cost": 0.02646
+   },
+   "planner+propagate": {
+    "ops": [
+     {
+      "op": "forget",
+      "table": "tasks",
+      "row_id": 1,
+      "redact": [
+       "passport renewal",
+       "Renew passport"
+      ]
+     }
+    ],
+    "write_s": 0.01,
+    "audit": {
+     "erased_rows": 1,
+     "values": 1,
+     "log_redacted": 2,
+     "history_dropped": 0,
+     "propagate_s": 0.063
+    },
+    "after": {
+     "leaks": {
+      "row": 0,
+      "history": 0,
+      "log": 0
+     },
+     "kept": 1,
+     "keeps": 1,
+     "rows": 658
+    },
+    "cost": 0.00058
+   }
+  },
+  {
+   "request": "forget Lucas Meyer's email",
+   "before": {
+    "leaks": {
+     "row": 1,
+     "history": 0,
+     "log": 1
+    },
+    "kept": 1,
+    "keeps": 1,
+    "rows": 659
+   },
+   "planner": {
+    "ops": [
+     {
+      "op": "forget",
+      "table": "contact_methods",
+      "row_id": 7,
+      "redact": [
+       "lucas@sequoia.com"
+      ]
+     }
+    ],
+    "write_s": 0.01,
+    "after": {
+     "leaks": {
+      "row": 0,
+      "history": 0,
+      "log": 0
+     },
+     "kept": 1,
+     "keeps": 1,
+     "rows": 658
+    },
+    "cost": 0.00057
+   },
+   "planner+jev": {
+    "ops": [
+     {
+      "op": "forget",
+      "table": "contact_methods",
+      "row_id": 7,
+      "redact": [
+       "lucas@sequoia.com"
+      ]
+     }
+    ],
+    "write_s": 0.01,
+    "audit": {
+     "rows_deleted": 0,
+     "fields_cleared": 0,
+     "history_dropped": 0,
+     "log_rewritten": 1,
+     "flagged": 1,
+     "records_checked": 1494,
+     "audit_s": 0.1
+    },
+    "after": {
+     "leaks": {
+      "row": 0,
+      "history": 0,
+      "log": 0
+     },
+     "kept": 1,
+     "keeps": 1,
+     "rows": 658
+    },
+    "cost": 0.0258
+   },
+   "planner+propagate": {
+    "ops": [
+     {
+      "op": "forget",
+      "table": "contact_methods",
+      "row_id": 7,
+      "redact": [
+       "lucas@sequoia.com"
+      ]
+     }
+    ],
+    "write_s": 0.01,
+    "audit": {
+     "erased_rows": 1,
+     "values": 1,
+     "log_redacted": 0,
+     "history_dropped": 0,
+     "propagate_s": 0.063
+    },
+    "after": {
+     "leaks": {
+      "row": 0,
+      "history": 0,
+      "log": 0
+     },
+     "kept": 1,
+     "keeps": 1,
+     "rows": 658
+    },
+    "cost": 0.00057
+   }
+  }
+ ]
+}

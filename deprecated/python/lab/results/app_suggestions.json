@@ -1,0 +1,12 @@
+{
+ "rows": 100,
+ "wrong_rows": 74,
+ "suggested": 99,
+ "all_fields_right": 99,
+ "fixes_every_wrong_field": 71,
+ "touches_right_row": 25,
+ "field_accuracy": {
+  "date": "43/43",
+  "with": "85/85"
+ }
+}

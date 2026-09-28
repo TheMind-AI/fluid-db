@@ -1,0 +1,137 @@
+{
+ "scenario": "support@v25",
+ "messages": 675,
+ "truth_records": 614,
+ "write_accuracy": 0.886,
+ "tiers": {
+  "C": 437,
+  "C-skip": 31,
+  "A": 207
+ },
+ "tier_a_after_bootstrap": 0.373,
+ "by_kind": {
+  "coverage": {
+   "ok": 1,
+   "of": 1,
+   "acc": 1.0
+  },
+  "csat": {
+   "ok": 32,
+   "of": 38,
+   "acc": 0.842
+  },
+  "meeting": {
+   "ok": 4,
+   "of": 4,
+   "acc": 1.0
+  },
+  "meeting_note": {
+   "ok": 3,
+   "of": 3,
+   "acc": 1.0
+  },
+  "plans": {
+   "ok": 1,
+   "of": 1,
+   "acc": 1.0
+  },
+  "pref": {
+   "ok": 4,
+   "of": 4,
+   "acc": 1.0
+  },
+  "promise": {
+   "ok": 3,
+   "of": 4,
+   "acc": 0.75
+  },
+  "promise_done": {
+   "ok": 2,
+   "of": 2,
+   "acc": 1.0
+  },
+  "refund": {
+   "ok": 8,
+   "of": 9,
+   "acc": 0.889
+  },
+  "sla": {
+   "ok": 1,
+   "of": 1,
+   "acc": 1.0
+  },
+  "team": {
+   "ok": 1,
+   "of": 1,
+   "acc": 1.0
+  },
+  "team_change": {
+   "ok": 1,
+   "of": 2,
+   "acc": 0.5
+  },
+  "ticket_escalate": {
+   "ok": 20,
+   "of": 22,
+   "acc": 0.909
+  },
+  "ticket_new": {
+   "ok": 148,
+   "of": 166,
+   "acc": 0.892
+  },
+  "ticket_reopen": {
+   "ok": 17,
+   "of": 17,
+   "acc": 1.0
+  },
+  "ticket_resolve": {
+   "ok": 155,
+   "of": 173,
+   "acc": 0.896
+  },
+  "ticket_triage": {
+   "ok": 143,
+   "of": 166,
+   "acc": 0.861
+  }
+ },
+ "by_tier": {
+  "A": 0.9212,
+  "C": 0.8686
+ },
+ "top_misses": {
+  "ticket_resolve: no row": 18,
+  "ticket_triage: no row": 17,
+  "ticket_new: no row": 16,
+  "csat: no row": 5,
+  "ticket_triage.assignee": 3,
+  "ticket_triage.priority": 3,
+  "ticket_escalate: no row": 2,
+  "ticket_new.ticket": 1,
+  "ticket_new.subject": 1,
+  "ticket_new.date": 1,
+  "refund: no row": 1,
+  "csat.ticket": 1
+ },
+ "forget": [
+  {
+   "request": "Initech asked us to erase Carl Weber's personal data under GDPR — please forget ",
+   "left_behind": []
+  }
+ ],
+ "tables": {
+  "communication_preferences": 4,
+  "csat_surveys": 33,
+  "emails": 1,
+  "events": 23,
+  "expenses": 8,
+  "organizations": 8,
+  "people": 12,
+  "responsibilities": 7,
+  "service_level_agreements": 2,
+  "tasks": 2,
+  "tickets": 151
+ },
+ "ingest_spent": 0.4227
+}

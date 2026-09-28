@@ -1,0 +1,3986 @@
+[
+ {
+  "id": 2,
+  "kind": "done",
+  "title": "Team sync",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 4,
+  "kind": "commitment",
+  "title": "Handle ticket #1042",
+  "owner": "Sam Okafor",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 5,
+  "kind": "reminder",
+  "title": "Investigate ticket #1041: Salesforce sync error",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 6,
+  "kind": "commitment",
+  "title": "Handle ticket #1041",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 7,
+  "kind": "reminder",
+  "title": "Investigate ticket #1044: SSO login loop with Okta",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 8,
+  "kind": "commitment",
+  "title": "Handle ticket #1044",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 10,
+  "kind": "done",
+  "title": "Fix ticket #1044: missing group mapping",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 11,
+  "kind": "reminder",
+  "title": "Investigate ticket #1043: Zoom links missing from invites",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 12,
+  "kind": "reminder",
+  "title": "Investigate ticket #1045: charged twice this month",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 13,
+  "kind": "commitment",
+  "title": "Handle ticket #1043",
+  "owner": "Priya Shah",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 14,
+  "kind": "commitment",
+  "title": "Handle ticket #1045",
+  "owner": "Leo Martins",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 16,
+  "kind": "commitment",
+  "title": "Handle ticket #1046",
+  "owner": "Sam Okafor",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 18,
+  "kind": "done",
+  "title": "Resolve ticket #1042",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 19,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 20,
+  "kind": "reminder",
+  "title": "Review refund request for unused seats (ticket #1047)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 21,
+  "kind": "commitment",
+  "title": "Handle ticket #1047",
+  "owner": "Leo",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 22,
+  "kind": "done",
+  "title": "Close ticket #1041",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 24,
+  "kind": "commitment",
+  "title": "Handle ticket #1048",
+  "owner": "Sam",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 25,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 26,
+  "kind": "done",
+  "title": "Resolve ticket #1045",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 27,
+  "kind": "done",
+  "title": "Close ticket #1043",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 29,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 30,
+  "kind": "done",
+  "title": "Resolve ticket #1047",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 33,
+  "kind": "commitment",
+  "title": "Handle ticket #1049",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 34,
+  "kind": "commitment",
+  "title": "Handle ticket #1050",
+  "owner": "Sam Okafor",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 36,
+  "kind": "done",
+  "title": "Ticket #1048 closed (timezone setting)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 37,
+  "kind": "commitment",
+  "title": "Handle ticket #1051",
+  "owner": "Sam Okafor",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 38,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 39,
+  "kind": "commitment",
+  "title": "Handle ticket #1052",
+  "owner": "Leo",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 40,
+  "kind": "done",
+  "title": "Ticket #1049 closed (wrong ACS URL)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 41,
+  "kind": "done",
+  "title": "Ticket #1050 closed (slow report query)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 42,
+  "kind": "done",
+  "title": "Ticket #1046 resolved (cache misses after a deploy)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 44,
+  "kind": "done",
+  "title": "Ticket #1051 resolved (slow report query)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 45,
+  "kind": "reminder",
+  "title": "Look into the mobile app booking problem (ticket #1054)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 46,
+  "kind": "commitment",
+  "title": "Handle ticket #1054",
+  "owner": "Sam Okafor",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 47,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 48,
+  "kind": "none",
+  "title": "Reports being charged twice and asks for help",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 49,
+  "kind": "commitment",
+  "title": "Handle ticket #1053",
+  "owner": "Leo",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 50,
+  "kind": "reminder",
+  "title": "Review what was said about this",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 51,
+  "kind": "none",
+  "title": "Reports Nora's preferred contact method",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 53,
+  "kind": "commitment",
+  "title": "Handle ticket #1055",
+  "owner": "Sam",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 55,
+  "kind": "commitment",
+  "title": "Investigate ticket #1053",
+  "owner": "Engineering",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 56,
+  "kind": "commitment",
+  "title": "Handle ticket #1056",
+  "owner": "Leo Martins",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 57,
+  "kind": "done",
+  "title": "Refund Initech $120 for the January sync outage",
+  "owner": "",
+  "when": "2026-01-22",
+  "where": ""
+ },
+ {
+  "id": 58,
+  "kind": "done",
+  "title": "Resolve ticket #1052",
+  "owner": "",
+  "when": "2026-01-23",
+  "where": ""
+ },
+ {
+  "id": 59,
+  "kind": "none",
+  "title": "Reports missing Zoom links in invites and asks for help",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 60,
+  "kind": "commitment",
+  "title": "Handle ticket #1057",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 61,
+  "kind": "done",
+  "title": "Fix ticket #1054",
+  "owner": "",
+  "when": "2026-01-23",
+  "where": ""
+ },
+ {
+  "id": 62,
+  "kind": "done",
+  "title": "#1055: cache misses after a deploy",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 63,
+  "kind": "done",
+  "title": "Team sync",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 64,
+  "kind": "appointment",
+  "title": "QBR with Acme Corp",
+  "owner": "",
+  "when": "2026-02-05T15:00",
+  "where": "Zoom"
+ },
+ {
+  "id": 66,
+  "kind": "done",
+  "title": "#1059: timezone bug in the sync",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 67,
+  "kind": "commitment",
+  "title": "Handle #1059",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 69,
+  "kind": "commitment",
+  "title": "Fix #1058",
+  "owner": "Leo Martins",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 70,
+  "kind": "done",
+  "title": "#1058: expired card token",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 74,
+  "kind": "commitment",
+  "title": "Handle #1060",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 75,
+  "kind": "done",
+  "title": "#1060: calendar API quota",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 77,
+  "kind": "commitment",
+  "title": "Handle #1061",
+  "owner": "Leo",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 78,
+  "kind": "done",
+  "title": "#1056: stale seat count",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 80,
+  "kind": "done",
+  "title": "#1061: stale seat count",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 81,
+  "kind": "done",
+  "title": "Close ticket #1053: expired card token",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 85,
+  "kind": "commitment",
+  "title": "Handle ticket #1062",
+  "owner": "Leo Martins",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 86,
+  "kind": "commitment",
+  "title": "Handle ticket #1063",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 87,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 88,
+  "kind": "commitment",
+  "title": "Handle ticket #1064",
+  "owner": "Sam",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 89,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 90,
+  "kind": "done",
+  "title": "Resolve ticket #1057: timezone bug in sync",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 91,
+  "kind": "done",
+  "title": "Resolve ticket #1062: expired card token",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 94,
+  "kind": "done",
+  "title": "Resolve ticket #1059",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 96,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 97,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 98,
+  "kind": "commitment",
+  "title": "Handle ticket #1065",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 99,
+  "kind": "done",
+  "title": "Ticket #1060 resolved",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 100,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 101,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 102,
+  "kind": "commitment",
+  "title": "Handle ticket #1066",
+  "owner": "Leo",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 104,
+  "kind": "commitment",
+  "title": "Handle ticket #1067",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 105,
+  "kind": "done",
+  "title": "Ticket #1063 closed",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 108,
+  "kind": "done",
+  "title": "Ticket #1053 resolved",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 109,
+  "kind": "done",
+  "title": "QBR with Acme",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 110,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 111,
+  "kind": "commitment",
+  "title": "Handle ticket #1068",
+  "owner": "Sam",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 112,
+  "kind": "done",
+  "title": "Ticket #1064 closed",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 113,
+  "kind": "done",
+  "title": "Ticket #1066 closed",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 115,
+  "kind": "done",
+  "title": "Fix timezone bug in the sync",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 117,
+  "kind": "commitment",
+  "title": "Resolve ticket #1070",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 118,
+  "kind": "done",
+  "title": "Resolve ticket #1070 (timezone bug in the sync)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 119,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 120,
+  "kind": "commitment",
+  "title": "Investigate SAML certificate expiration",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 121,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 122,
+  "kind": "commitment",
+  "title": "Investigate duplicated Google Calendar events",
+  "owner": "Priya Shah",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 125,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 126,
+  "kind": "commitment",
+  "title": "Investigate missing Zoom links in invites",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 127,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 128,
+  "kind": "commitment",
+  "title": "Process refund for unused seats",
+  "owner": "Leo",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 129,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 131,
+  "kind": "commitment",
+  "title": "Handle ticket #1074 (P1)",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 133,
+  "kind": "commitment",
+  "title": "Handle ticket #1075 (P3)",
+  "owner": "Sam",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 134,
+  "kind": "done",
+  "title": "Resolve ticket #1071",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 136,
+  "kind": "done",
+  "title": "Close ticket #1072",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 137,
+  "kind": "commitment",
+  "title": "Handle ticket #1076 (P1)",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 138,
+  "kind": "done",
+  "title": "Resolve ticket #1067",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 140,
+  "kind": "done",
+  "title": "Resolve ticket #1074",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 142,
+  "kind": "reminder",
+  "title": "Investigate the wrong seat count on the invoice (ticket #1077)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 143,
+  "kind": "commitment",
+  "title": "Handle ticket #1077 (P2)",
+  "owner": "Leo",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 144,
+  "kind": "done",
+  "title": "Close ticket #1076",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 146,
+  "kind": "done",
+  "title": "Resolve missing group mapping",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 147,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 148,
+  "kind": "done",
+  "title": "Fix bug in the 5.2 release",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 151,
+  "kind": "commitment",
+  "title": "Work on ticket #1078",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 154,
+  "kind": "done",
+  "title": "Close ticket #1073",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 155,
+  "kind": "commitment",
+  "title": "Work on ticket #1079",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 156,
+  "kind": "commitment",
+  "title": "Work on ticket #1080",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 157,
+  "kind": "commitment",
+  "title": "Look into failing webhook deliveries",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 158,
+  "kind": "commitment",
+  "title": "Work on ticket #1081",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 159,
+  "kind": "done",
+  "title": "Resolve timezone setting issue on ticket #1075",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 160,
+  "kind": "done",
+  "title": "Fix stale seat count issue on ticket #1077",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 161,
+  "kind": "done",
+  "title": "Resolve calendar API quota issue on ticket #1079",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 163,
+  "kind": "commitment",
+  "title": "Investigate ticket #1082",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 165,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 166,
+  "kind": "commitment",
+  "title": "Investigate ticket #1083",
+  "owner": "Leo",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 167,
+  "kind": "done",
+  "title": "Resolve ticket #1078: calendar API quota",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 169,
+  "kind": "commitment",
+  "title": "Investigate ticket #1084",
+  "owner": "Sam",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 170,
+  "kind": "done",
+  "title": "Close ticket #1082: calendar API quota",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 171,
+  "kind": "done",
+  "title": "Resolve ticket #1083: stale seat count",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 173,
+  "kind": "commitment",
+  "title": "Investigate ticket #1086",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 175,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 176,
+  "kind": "commitment",
+  "title": "Investigate ticket #1085",
+  "owner": "Leo",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 178,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 179,
+  "kind": "commitment",
+  "title": "Investigate ticket #1088",
+  "owner": "Leo",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 181,
+  "kind": "commitment",
+  "title": "Handle ticket #1087",
+  "owner": "Priya Shah",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 182,
+  "kind": "done",
+  "title": "Close ticket #1080",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 183,
+  "kind": "done",
+  "title": "Close ticket #1084",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 184,
+  "kind": "done",
+  "title": "Fix ticket #1087 (missing group mapping)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 186,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 187,
+  "kind": "commitment",
+  "title": "Handle ticket #1089",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 188,
+  "kind": "done",
+  "title": "Close ticket #1081",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 191,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 192,
+  "kind": "commitment",
+  "title": "Handle ticket #1090",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 193,
+  "kind": "done",
+  "title": "Fix ticket #1086 (timezone bug in the sync)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 194,
+  "kind": "done",
+  "title": "Resolve ticket #1087",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 195,
+  "kind": "done",
+  "title": "Resolve ticket #1085 (duplicate charge from payment retry)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 196,
+  "kind": "done",
+  "title": "Fix timezone bug in the sync (#1089)",
+  "owner": "",
+  "when": "2026-03-01",
+  "where": ""
+ },
+ {
+  "id": 197,
+  "kind": "none",
+  "title": "Team sync completed; focus on billing backlog",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 199,
+  "kind": "commitment",
+  "title": "Handle ticket #1091",
+  "owner": "Sam Okafor",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 201,
+  "kind": "reminder",
+  "title": "Investigate the wrong time zone in the app (#1092)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 202,
+  "kind": "commitment",
+  "title": "Investigate ticket #1092",
+  "owner": "Sam Okafor",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 203,
+  "kind": "done",
+  "title": "Close ticket #1090",
+  "owner": "",
+  "when": "2026-03-05",
+  "where": ""
+ },
+ {
+  "id": 205,
+  "kind": "reminder",
+  "title": "Look into the refund for unused seats (#1093)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 206,
+  "kind": "done",
+  "title": "Fix bug in the 5.2 release (#1092)",
+  "owner": "",
+  "when": "2026-03-05",
+  "where": ""
+ },
+ {
+  "id": 207,
+  "kind": "commitment",
+  "title": "Handle ticket #1093: refund for unused seats",
+  "owner": "Leo",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 208,
+  "kind": "done",
+  "title": "Resolve duplicate charge from the payment retry (#1088)",
+  "owner": "",
+  "when": "2026-03-05",
+  "where": ""
+ },
+ {
+  "id": 211,
+  "kind": "none",
+  "title": "Team sync completed; focus on mobile crashes",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 213,
+  "kind": "done",
+  "title": "Close ticket #1094",
+  "owner": "",
+  "when": "2026-03-09",
+  "where": ""
+ },
+ {
+  "id": 214,
+  "kind": "commitment",
+  "title": "Handle ticket #1095",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 215,
+  "kind": "commitment",
+  "title": "Deliver the CSV export fix to Nora (Globex)",
+  "owner": "",
+  "when": "2026-03-13",
+  "where": ""
+ },
+ {
+  "id": 217,
+  "kind": "done",
+  "title": "Refund Acme Corp $1,250 for the February double charge",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 218,
+  "kind": "commitment",
+  "title": "Handle ticket #1094",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 219,
+  "kind": "done",
+  "title": "Close ticket #1091 (slow report query)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 221,
+  "kind": "reminder",
+  "title": "Help with refund for unused seats (ticket #1096)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 222,
+  "kind": "done",
+  "title": "Resolve ticket #1092",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 223,
+  "kind": "done",
+  "title": "Resolve ticket #1093 (duplicate charge)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 224,
+  "kind": "commitment",
+  "title": "Handle ticket #1096",
+  "owner": "Leo",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 225,
+  "kind": "reminder",
+  "title": "Look into the double charge (ticket #1097)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 226,
+  "kind": "commitment",
+  "title": "Handle ticket #1097",
+  "owner": "Leo Martins",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 229,
+  "kind": "commitment",
+  "title": "Handle ticket #1099",
+  "owner": "Leo Martins",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 230,
+  "kind": "done",
+  "title": "Close ticket #1096 (stale seat count)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 232,
+  "kind": "commitment",
+  "title": "Handle ticket #1098",
+  "owner": "Leo",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 234,
+  "kind": "commitment",
+  "title": "Handle ticket #1100",
+  "owner": "Sam",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 236,
+  "kind": "commitment",
+  "title": "Handle ticket #1101",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 237,
+  "kind": "commitment",
+  "title": "Send Nora the Globex CSV",
+  "owner": "",
+  "when": "2026-03-19",
+  "where": ""
+ },
+ {
+  "id": 238,
+  "kind": "done",
+  "title": "Fix and resolve ticket #1097 (expired card token)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 239,
+  "kind": "done",
+  "title": "Close ticket #1095 (timezone bug in sync)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 241,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 242,
+  "kind": "done",
+  "title": "Team sync",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 243,
+  "kind": "done",
+  "title": "Fix and resolve ticket #1099 (expired card token)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 244,
+  "kind": "commitment",
+  "title": "Handle ticket #1103 (Zoom links missing from invites)",
+  "owner": "Priya Shah",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 245,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 246,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 248,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 249,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 250,
+  "kind": "commitment",
+  "title": "Look into missing VAT on invoice (#1105)",
+  "owner": "Leo Martins",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 252,
+  "kind": "done",
+  "title": "Resolve ticket #1105",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 253,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 254,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 255,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 256,
+  "kind": "commitment",
+  "title": "Look into credit card update issue (#1106)",
+  "owner": "Leo",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 257,
+  "kind": "done",
+  "title": "Close ticket #1098",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 259,
+  "kind": "done",
+  "title": "Resolve ticket #1106",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 260,
+  "kind": "commitment",
+  "title": "Escalate ticket #1104 to engineering",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 261,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 262,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 263,
+  "kind": "commitment",
+  "title": "Handle ticket #1108: Android notifications arrive late",
+  "owner": "Sam",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 264,
+  "kind": "done",
+  "title": "Ticket #1101: missing group mapping",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 266,
+  "kind": "done",
+  "title": "Ticket #1100: cache misses after a deploy",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 267,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 268,
+  "kind": "done",
+  "title": "Ticket #1108: bug in the 5.2 release",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 271,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 272,
+  "kind": "commitment",
+  "title": "Handle ticket #1109: refund for unused seats",
+  "owner": "Leo Martins",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 273,
+  "kind": "appointment",
+  "title": "QBR with Acme Corp",
+  "owner": "",
+  "when": "2026-04-02T15:00",
+  "where": "Zoom"
+ },
+ {
+  "id": 274,
+  "kind": "done",
+  "title": "Ticket #1102: push certificate problem",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 275,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 277,
+  "kind": "done",
+  "title": "Fix expired SAML certificate (#1104)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 278,
+  "kind": "commitment",
+  "title": "Handle ticket #1110",
+  "owner": "Leo",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 281,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 282,
+  "kind": "done",
+  "title": "Resolve webhook delivery issue (#1111)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 283,
+  "kind": "commitment",
+  "title": "Handle ticket #1111",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 284,
+  "kind": "done",
+  "title": "Close ticket #1103 (expired OAuth token)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 285,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 286,
+  "kind": "commitment",
+  "title": "Handle ticket #1112",
+  "owner": "Priya Shah",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 287,
+  "kind": "done",
+  "title": "Fix stale seat count (#1109)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 289,
+  "kind": "done",
+  "title": "Resolve ticket #1106",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 290,
+  "kind": "done",
+  "title": "Close ticket #1107 (timezone setting)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 292,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 293,
+  "kind": "commitment",
+  "title": "Handle ticket #1114",
+  "owner": "Priya Shah",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 294,
+  "kind": "commitment",
+  "title": "Handle ticket #1113",
+  "owner": "Sam Okafor",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 297,
+  "kind": "done",
+  "title": "Resolve ticket #1113 (timezone setting)",
+  "owner": "Sam Okafor",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 299,
+  "kind": "done",
+  "title": "Team sync",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 300,
+  "kind": "done",
+  "title": "Resolve ticket #1114 (timezone bug in the sync)",
+  "owner": "Priya Shah",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 301,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 302,
+  "kind": "commitment",
+  "title": "Handle ticket #1115 (booking page loads slowly)",
+  "owner": "Sam Okafor",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 303,
+  "kind": "done",
+  "title": "Resolve ticket #1115 (cache misses after a deploy)",
+  "owner": "Sam Okafor",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 304,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 305,
+  "kind": "done",
+  "title": "Resolve ticket #1102",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 307,
+  "kind": "commitment",
+  "title": "Handle ticket #1116",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 310,
+  "kind": "commitment",
+  "title": "Handle ticket #1117",
+  "owner": "Sam",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 311,
+  "kind": "none",
+  "title": "Asked to look into Salesforce sync error",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 312,
+  "kind": "commitment",
+  "title": "Handle ticket #1118: Salesforce sync error",
+  "owner": "Priya Shah",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 313,
+  "kind": "done",
+  "title": "QBR with Acme",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 315,
+  "kind": "commitment",
+  "title": "Handle ticket #1119",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 316,
+  "kind": "none",
+  "title": "Reports webhook deliveries failing",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 317,
+  "kind": "done",
+  "title": "Resolve ticket #1116: timezone bug in the sync",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 318,
+  "kind": "commitment",
+  "title": "Handle ticket #1120: webhook deliveries failing",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 319,
+  "kind": "done",
+  "title": "Resolve ticket #1118: calendar API quota",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 321,
+  "kind": "commitment",
+  "title": "Investigate ticket #1118",
+  "owner": "Engineering",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 324,
+  "kind": "none",
+  "title": "Asked to look into duplicated Google Calendar events",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 325,
+  "kind": "commitment",
+  "title": "Handle ticket #1123",
+  "owner": "Priya Shah",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 326,
+  "kind": "commitment",
+  "title": "Handle ticket #1122: duplicated Google Calendar events",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 328,
+  "kind": "done",
+  "title": "Resolve #1119: wrong ACS URL",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 329,
+  "kind": "commitment",
+  "title": "Handle ticket #1121",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 331,
+  "kind": "done",
+  "title": "Resolve #1115",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 332,
+  "kind": "done",
+  "title": "Fix timezone bug in sync (#1120)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 334,
+  "kind": "commitment",
+  "title": "Handle ticket #1124",
+  "owner": "Sam",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 335,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 336,
+  "kind": "done",
+  "title": "Close #1123: calendar API quota",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 337,
+  "kind": "commitment",
+  "title": "Handle escalated ticket #1124",
+  "owner": "Engineering",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 339,
+  "kind": "commitment",
+  "title": "Handle escalated ticket #1121",
+  "owner": "Engineering",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 340,
+  "kind": "done",
+  "title": "Close #1117: slow report query",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 342,
+  "kind": "commitment",
+  "title": "Handle ticket #1127",
+  "owner": "Sam",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 343,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 344,
+  "kind": "commitment",
+  "title": "Handle ticket #1125 (P1)",
+  "owner": "Leo",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 345,
+  "kind": "done",
+  "title": "Fix timezone bug in sync for ticket #1122",
+  "owner": "",
+  "when": "2026-04-10",
+  "where": ""
+ },
+ {
+  "id": 346,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 347,
+  "kind": "commitment",
+  "title": "Handle ticket #1126 (P2)",
+  "owner": "Sam",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 348,
+  "kind": "done",
+  "title": "Fix bug in the 5.2 release for ticket #1127",
+  "owner": "",
+  "when": "2026-04-11",
+  "where": ""
+ },
+ {
+  "id": 349,
+  "kind": "cancel",
+  "title": "Close ticket #1125 (duplicate charge from payment retry)",
+  "owner": "",
+  "when": "2026-04-12",
+  "where": ""
+ },
+ {
+  "id": 350,
+  "kind": "done",
+  "title": "Fix timezone setting for ticket #1124",
+  "owner": "",
+  "when": "2026-04-12",
+  "where": ""
+ },
+ {
+  "id": 351,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 352,
+  "kind": "commitment",
+  "title": "Handle ticket #1128 (P3)",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 353,
+  "kind": "plan",
+  "title": "Leo's last day",
+  "owner": "Leo",
+  "when": "2026-04-30",
+  "where": ""
+ },
+ {
+  "id": 353,
+  "kind": "plan",
+  "title": "Ana Silva starts and takes over billing",
+  "owner": "Ana Silva",
+  "when": "2026-05-04",
+  "where": ""
+ },
+ {
+  "id": 354,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 355,
+  "kind": "done",
+  "title": "Resolve ticket #1121 (calendar API quota)",
+  "owner": "",
+  "when": "2026-04-14",
+  "where": ""
+ },
+ {
+  "id": 357,
+  "kind": "commitment",
+  "title": "Handle ticket #1130",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 359,
+  "kind": "commitment",
+  "title": "Handle ticket #1129",
+  "owner": "Sam",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 360,
+  "kind": "done",
+  "title": "Fix and resolve ticket #1128",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 361,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 362,
+  "kind": "done",
+  "title": "Refund Initech $240 for the April SSO outage",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 363,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 364,
+  "kind": "commitment",
+  "title": "Handle ticket #1131",
+  "owner": "Leo Martins",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 366,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 368,
+  "kind": "commitment",
+  "title": "Handle ticket #1133",
+  "owner": "Leo Martins",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 370,
+  "kind": "done",
+  "title": "Fix and resolve ticket #1126",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 371,
+  "kind": "commitment",
+  "title": "Handle ticket #1132",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 372,
+  "kind": "done",
+  "title": "Fix and resolve ticket #1132",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 374,
+  "kind": "done",
+  "title": "Fix bug in the 5.2 release (#1129)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 375,
+  "kind": "done",
+  "title": "Team sync",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 376,
+  "kind": "done",
+  "title": "Resolve expired card token issue (#1135)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 378,
+  "kind": "commitment",
+  "title": "Handle ticket #1135",
+  "owner": "Leo",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 379,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 380,
+  "kind": "commitment",
+  "title": "Add Tom to the status page beta",
+  "owner": "",
+  "when": "2026-05-15",
+  "where": ""
+ },
+ {
+  "id": 382,
+  "kind": "commitment",
+  "title": "Handle ticket #1134",
+  "owner": "Priya Shah",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 384,
+  "kind": "commitment",
+  "title": "Handle ticket #1136",
+  "owner": "Sam",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 385,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 386,
+  "kind": "done",
+  "title": "Resolve expired SAML certificate issue (#1130)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 387,
+  "kind": "commitment",
+  "title": "Handle ticket #1137",
+  "owner": "Sam",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 389,
+  "kind": "done",
+  "title": "Fix calendar API quota issue (#1134)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 390,
+  "kind": "done",
+  "title": "Resolve #1133: stale seat count",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 391,
+  "kind": "commitment",
+  "title": "Resolve #1138",
+  "owner": "Leo Martins",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 392,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 394,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 396,
+  "kind": "commitment",
+  "title": "Resolve #1139",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 397,
+  "kind": "done",
+  "title": "Resolve #1131: stale seat count",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 398,
+  "kind": "done",
+  "title": "Resolve #1126",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 400,
+  "kind": "commitment",
+  "title": "Resolve #1140",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 402,
+  "kind": "done",
+  "title": "Close #1140: expired OAuth token",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 403,
+  "kind": "done",
+  "title": "Resolve #1137: timezone setting",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 404,
+  "kind": "done",
+  "title": "Resolve #1138: stale seat count",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 405,
+  "kind": "done",
+  "title": "Team sync",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 406,
+  "kind": "reminder",
+  "title": "Investigate Salesforce sync error (#1142)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 407,
+  "kind": "reminder",
+  "title": "Investigate iOS app crashes on login (#1141)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 408,
+  "kind": "commitment",
+  "title": "Handle Salesforce sync error (#1142)",
+  "owner": "Priya Shah",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 409,
+  "kind": "done",
+  "title": "Resolve cache misses after a deploy (#1136)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 410,
+  "kind": "commitment",
+  "title": "Handle iOS app crashes on login (#1141)",
+  "owner": "Sam Okafor",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 411,
+  "kind": "plan",
+  "title": "Move Sam to night-shift 24/7 coverage (22:00–06:00)",
+  "owner": "Sam",
+  "when": "2026-05-01",
+  "where": ""
+ },
+ {
+  "id": 414,
+  "kind": "done",
+  "title": "Resolve Salesforce sync error (#1142)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 415,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 416,
+  "kind": "reminder",
+  "title": "Investigate reports timing out (#1143)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 417,
+  "kind": "commitment",
+  "title": "Handle reports timing out (#1143)",
+  "owner": "Sam",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 421,
+  "kind": "commitment",
+  "title": "Handle ticket #1144",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 423,
+  "kind": "commitment",
+  "title": "Handle ticket #1145",
+  "owner": "Sam",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 424,
+  "kind": "done",
+  "title": "Resolve ticket #1139",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 426,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 427,
+  "kind": "commitment",
+  "title": "Investigate webhook delivery failures (#1147)",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 428,
+  "kind": "done",
+  "title": "Resolve ticket #1138",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 430,
+  "kind": "commitment",
+  "title": "Handle ticket #1146",
+  "owner": "Sam",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 432,
+  "kind": "done",
+  "title": "Resolve ticket #1145",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 433,
+  "kind": "done",
+  "title": "Fix ticket #1141",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 434,
+  "kind": "commitment",
+  "title": "Handle escalated ticket #1144",
+  "owner": "engineering",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 436,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 437,
+  "kind": "commitment",
+  "title": "Investigate Outlook sync issue (#1148)",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 439,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 440,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 441,
+  "kind": "commitment",
+  "title": "Handle ticket #1149",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 442,
+  "kind": "commitment",
+  "title": "Handle ticket #1150",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 444,
+  "kind": "commitment",
+  "title": "Investigate missing VAT on invoice (ticket #1151)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 445,
+  "kind": "commitment",
+  "title": "Handle ticket #1151",
+  "owner": "Ana",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 446,
+  "kind": "done",
+  "title": "Resolve ticket #1144",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 448,
+  "kind": "commitment",
+  "title": "Handle ticket #1152",
+  "owner": "Ana",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 450,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 451,
+  "kind": "done",
+  "title": "Resolve ticket #1143",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 452,
+  "kind": "commitment",
+  "title": "Investigate Azure AD sign-in issue for new users (ticket #1153)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 453,
+  "kind": "commitment",
+  "title": "Handle ticket #1153",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 455,
+  "kind": "done",
+  "title": "Resolve ticket #1151",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 456,
+  "kind": "done",
+  "title": "Close ticket #1146",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 457,
+  "kind": "done",
+  "title": "Ticket #1147 closed: calendar API quota",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 458,
+  "kind": "done",
+  "title": "Ticket #1150 resolved: expired OAuth token",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 459,
+  "kind": "done",
+  "title": "Ticket #1145 resolved",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 460,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 462,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 463,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 465,
+  "kind": "commitment",
+  "title": "Look into late Android notifications (ticket #1154)",
+  "owner": "Sam Okafor",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 467,
+  "kind": "done",
+  "title": "Ticket #1144 resolved",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 468,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 469,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 470,
+  "kind": "commitment",
+  "title": "Handle missing Zoom links in invites (ticket #1156)",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 471,
+  "kind": "commitment",
+  "title": "Handle missing Zoom links in invites (ticket #1157)",
+  "owner": "Priya Shah",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 473,
+  "kind": "done",
+  "title": "Close ticket #1152: stale seat count",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 475,
+  "kind": "done",
+  "title": "Close ticket #1148: timezone bug in the sync",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 476,
+  "kind": "done",
+  "title": "Resolve ticket #1149: timezone bug in the sync",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 477,
+  "kind": "commitment",
+  "title": "Handle ticket #1158",
+  "owner": "Priya Shah",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 478,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 479,
+  "kind": "commitment",
+  "title": "Handle ticket #1159: duplicated Google Calendar events",
+  "owner": "Priya Shah",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 480,
+  "kind": "done",
+  "title": "Resolve ticket #1158: expired SAML certificate",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 481,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 482,
+  "kind": "done",
+  "title": "Resolve ticket #1155: expired OAuth token",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 483,
+  "kind": "done",
+  "title": "Resolve ticket #1154: bug in the 5.2 release",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 486,
+  "kind": "done",
+  "title": "Resolve ticket #1157: timezone bug in the sync",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 487,
+  "kind": "commitment",
+  "title": "Investigate ticket #1159: duplicated Google Calendar events",
+  "owner": "Engineering",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 488,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 489,
+  "kind": "commitment",
+  "title": "Resolve ticket #1160",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 491,
+  "kind": "done",
+  "title": "Fix ticket #1156",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 492,
+  "kind": "done",
+  "title": "Resolve ticket #1159",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 495,
+  "kind": "done",
+  "title": "Resolve ticket #1153",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 496,
+  "kind": "done",
+  "title": "Resolve ticket #1160",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 500,
+  "kind": "commitment",
+  "title": "Handle ticket #1161",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 501,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 502,
+  "kind": "commitment",
+  "title": "Resolve ticket #1163",
+  "owner": "Priya Shah",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 503,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 504,
+  "kind": "commitment",
+  "title": "Resolve ticket #1162",
+  "owner": "Sam",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 506,
+  "kind": "done",
+  "title": "Resolve ticket #1162",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 508,
+  "kind": "done",
+  "title": "Resolve ticket #1161 (expired SAML certificate)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 510,
+  "kind": "commitment",
+  "title": "Escalate ticket #1163 to engineering (P1)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 511,
+  "kind": "done",
+  "title": "Resolve ticket #1148",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 512,
+  "kind": "commitment",
+  "title": "Escalate ticket #1161 to engineering (P1)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 513,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 514,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 515,
+  "kind": "commitment",
+  "title": "Handle ticket #1165",
+  "owner": "Ana",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 517,
+  "kind": "done",
+  "title": "Close ticket #1164 (timezone bug in sync)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 518,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 519,
+  "kind": "commitment",
+  "title": "Handle ticket #1164",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 522,
+  "kind": "done",
+  "title": "Resolve ticket #1157",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 523,
+  "kind": "appointment",
+  "title": "QBR with Acme Corp",
+  "owner": "Tom Reed",
+  "when": "2026-06-04T15:00",
+  "where": "Zoom"
+ },
+ {
+  "id": 524,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 525,
+  "kind": "commitment",
+  "title": "Resolve ticket #1167",
+  "owner": "Priya Shah",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 526,
+  "kind": "done",
+  "title": "Resolve ticket #1167",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 527,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 528,
+  "kind": "commitment",
+  "title": "Investigate ticket #1166",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 530,
+  "kind": "commitment",
+  "title": "Handle ticket #1168",
+  "owner": "Sam",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 532,
+  "kind": "commitment",
+  "title": "Handle ticket #1169",
+  "owner": "Priya Shah",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 533,
+  "kind": "done",
+  "title": "Resolve ticket #1153",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 534,
+  "kind": "commitment",
+  "title": "Investigate ticket #1168",
+  "owner": "Engineering",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 536,
+  "kind": "done",
+  "title": "Fix calendar API quota issue on ticket #1163",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 538,
+  "kind": "done",
+  "title": "Resolve ticket #1162",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 539,
+  "kind": "commitment",
+  "title": "Handle ticket #1170",
+  "owner": "Sam",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 543,
+  "kind": "done",
+  "title": "Resolve ticket #1165: expired card token",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 544,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 545,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 546,
+  "kind": "commitment",
+  "title": "Investigate ticket #1171: iOS app crashes on login",
+  "owner": "Sam",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 547,
+  "kind": "done",
+  "title": "Resolve ticket #1169: expired OAuth token",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 548,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 549,
+  "kind": "commitment",
+  "title": "Handle ticket #1173: Google Calendar events duplicated",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 551,
+  "kind": "commitment",
+  "title": "Handle ticket #1172",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 552,
+  "kind": "done",
+  "title": "Resolve ticket #1173: expired OAuth token",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 553,
+  "kind": "done",
+  "title": "Resolve ticket #1166: wrong ACS URL",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 554,
+  "kind": "done",
+  "title": "Resolve ticket #1168: timezone setting",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 556,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 557,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 558,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 559,
+  "kind": "commitment",
+  "title": "Investigate duplicated Google Calendar events",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 560,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 561,
+  "kind": "commitment",
+  "title": "Investigate late Android notifications",
+  "owner": "Sam",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 563,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 564,
+  "kind": "done",
+  "title": "Ticket #1170",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 565,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 566,
+  "kind": "commitment",
+  "title": "Investigate expired SAML certificate",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 567,
+  "kind": "done",
+  "title": "Ticket #1171",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 570,
+  "kind": "commitment",
+  "title": "Handle ticket #1179",
+  "owner": "Ana Silva",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 571,
+  "kind": "done",
+  "title": "QBR with Acme",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 572,
+  "kind": "done",
+  "title": "Resolve #1178 (wrong ACS URL)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 575,
+  "kind": "commitment",
+  "title": "Send Dana a written root-cause report on the June 3 outage",
+  "owner": "",
+  "when": "2026-07-03",
+  "where": ""
+ },
+ {
+  "id": 576,
+  "kind": "commitment",
+  "title": "Handle ticket #1181 (P2)",
+  "owner": "Sam",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 577,
+  "kind": "done",
+  "title": "Close #1181 (cache misses after a deploy)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 578,
+  "kind": "done",
+  "title": "Resolve #1179 (duplicate charge from payment retry)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 580,
+  "kind": "commitment",
+  "title": "Handle ticket #1180 (P3)",
+  "owner": "Sam",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 582,
+  "kind": "commitment",
+  "title": "Investigate #1179 (P1)",
+  "owner": "engineering",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 583,
+  "kind": "commitment",
+  "title": "Handle ticket #1182 (P2)",
+  "owner": "Sam",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 585,
+  "kind": "done",
+  "title": "Resolve #1172 (expired OAuth token)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 587,
+  "kind": "commitment",
+  "title": "Handle ticket #1183 (P2)",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 589,
+  "kind": "none",
+  "title": "Ask what is on my plate today",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 590,
+  "kind": "none",
+  "title": "Report SSO login loop with Okta",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 591,
+  "kind": "commitment",
+  "title": "Handle ticket #1184",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 592,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 593,
+  "kind": "done",
+  "title": "Resolve ticket #1180: push certificate problem",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 594,
+  "kind": "done",
+  "title": "Resolve ticket #1174: stale seat count",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 595,
+  "kind": "done",
+  "title": "Fix ticket #1177: duplicate charge from payment retry",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 598,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 599,
+  "kind": "done",
+  "title": "Close ticket #1175: timezone setting",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 600,
+  "kind": "done",
+  "title": "Resolve ticket #1176: expired OAuth token",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 602,
+  "kind": "commitment",
+  "title": "Handle ticket #1185",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 603,
+  "kind": "done",
+  "title": "Fix ticket #1182: cache misses after a deploy",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 604,
+  "kind": "done",
+  "title": "Fix ticket #1185: timezone bug in the sync",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 607,
+  "kind": "commitment",
+  "title": "Investigate SSO login loop with Okta (ticket #1187)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 608,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 609,
+  "kind": "commitment",
+  "title": "Handle ticket #1187",
+  "owner": "Priya Shah",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 610,
+  "kind": "commitment",
+  "title": "Handle ticket #1186",
+  "owner": "Ana",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 611,
+  "kind": "done",
+  "title": "Resolve ticket #1184 (missing group mapping)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 612,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 613,
+  "kind": "commitment",
+  "title": "Handle ticket #1188",
+  "owner": "Sam Okafor",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 614,
+  "kind": "done",
+  "title": "Resolve ticket #1183 (expired SAML certificate)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 615,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 616,
+  "kind": "commitment",
+  "title": "Handle ticket #1190",
+  "owner": "Sam Okafor",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 617,
+  "kind": "commitment",
+  "title": "Investigate ticket #1186",
+  "owner": "Engineering",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 619,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 620,
+  "kind": "commitment",
+  "title": "Handle ticket #1189",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 622,
+  "kind": "commitment",
+  "title": "Handle ticket #1191",
+  "owner": "Priya Shah",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 624,
+  "kind": "commitment",
+  "title": "Handle ticket #1192",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 625,
+  "kind": "commitment",
+  "title": "Investigate ticket #1189",
+  "owner": "Engineering",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 626,
+  "kind": "done",
+  "title": "Resolve ticket #1184",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 628,
+  "kind": "commitment",
+  "title": "Handle ticket #1193",
+  "owner": "Sam",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 629,
+  "kind": "done",
+  "title": "Fix ticket #1187 (expired SAML certificate)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 631,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 632,
+  "kind": "appointment",
+  "title": "QBR with Acme Corp",
+  "owner": "",
+  "when": "2026-07-02T15:00",
+  "where": "Zoom"
+ },
+ {
+  "id": 633,
+  "kind": "commitment",
+  "title": "Handle ticket #1194",
+  "owner": "Ana",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 635,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 636,
+  "kind": "commitment",
+  "title": "Handle ticket #1196",
+  "owner": "Priya Shah",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 637,
+  "kind": "commitment",
+  "title": "Handle ticket #1195",
+  "owner": "Ana Silva",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 638,
+  "kind": "done",
+  "title": "Close #1189 (timezone bug in the sync)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 640,
+  "kind": "commitment",
+  "title": "Investigate #1194",
+  "owner": "Engineering",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 641,
+  "kind": "commitment",
+  "title": "Investigate #1196",
+  "owner": "Engineering",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 643,
+  "kind": "commitment",
+  "title": "Handle #1198",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 645,
+  "kind": "done",
+  "title": "Resolve #1190 (slow report query)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 646,
+  "kind": "done",
+  "title": "Resolve #1186 (expired card token)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 648,
+  "kind": "commitment",
+  "title": "Handle #1199",
+  "owner": "Ana Silva",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 649,
+  "kind": "commitment",
+  "title": "Handle #1197",
+  "owner": "Sam",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 650,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 652,
+  "kind": "commitment",
+  "title": "Handle #1201",
+  "owner": "Sam",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 653,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 654,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 655,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 656,
+  "kind": "commitment",
+  "title": "Handle ticket #1200: SSO login loop with Okta",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 657,
+  "kind": "done",
+  "title": "Fix ticket #1197: push certificate problem",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 659,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 660,
+  "kind": "commitment",
+  "title": "Handle ticket #1202: wrong seat count on invoice",
+  "owner": "Ana Silva",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 661,
+  "kind": "done",
+  "title": "Fix ticket #1193: timezone setting",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 662,
+  "kind": "done",
+  "title": "Resolve ticket #1199: stale seat count",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 663,
+  "kind": "done",
+  "title": "Resolve ticket #1188: timezone setting",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 664,
+  "kind": "done",
+  "title": "Resolve ticket #1192: missing group mapping",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 666,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 667,
+  "kind": "commitment",
+  "title": "Handle ticket #1203: duplicated Google Calendar events",
+  "owner": "Priya",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 668,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 669,
+  "kind": "commitment",
+  "title": "Handle ticket #1204",
+  "owner": "Priya Shah",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 670,
+  "kind": "done",
+  "title": "Close ticket #1203 (expired OAuth token)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 671,
+  "kind": "done",
+  "title": "Close ticket #1191 (calendar API quota)",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 672,
+  "kind": "done",
+  "title": "Team sync",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 673,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 674,
+  "kind": "commitment",
+  "title": "Handle ticket #1205",
+  "owner": "Ana",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 676,
+  "kind": "commitment",
+  "title": "Handle ticket #1206",
+  "owner": "Sam Okafor",
+  "when": "",
+  "where": ""
+ }
+]

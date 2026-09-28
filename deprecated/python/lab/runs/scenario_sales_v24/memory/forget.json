@@ -1,0 +1,14 @@
+{
+ "requests": 1,
+ "whole_messages": [
+  54
+ ],
+ "strings": [],
+ "rows_deleted": [],
+ "values_erased": 1,
+ "whole_messages_refused": [],
+ "strings_refused": [
+  "Fabrikam",
+  "Hannah Weiss"
+ ]
+}

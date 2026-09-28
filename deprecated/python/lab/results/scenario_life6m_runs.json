@@ -1,0 +1,2924 @@
+{
+ "facts_log": {
+  "rows": [
+   {
+    "id": "cx01",
+    "type": "semantic_current",
+    "question": "What is my phone number?",
+    "gold": "+1 415 555 0199",
+    "answer": "Your phone number is +1 415 555 0199.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 1698,
+    "answer_tokens_in": 881,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx02",
+    "type": "semantic_current",
+    "question": "What is David's US phone number?",
+    "gold": "+1 628 688 4995 (corrected from +1 628 688 4994)",
+    "answer": "David's US phone number is +1 628 688 4995.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2148,
+    "answer_tokens_in": 1054,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx03",
+    "type": "semantic_current",
+    "question": "Where does Eva work?",
+    "gold": "Gensler (in San Francisco)",
+    "answer": "Eva works at Gensler.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2319,
+    "answer_tokens_in": 1123,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx04",
+    "type": "semantic_history",
+    "question": "What US number did I first have for David, before the correction?",
+    "gold": "+1 628 688 4994",
+    "answer": "David’s US number was +1 628 688 4994 before the correction.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2359,
+    "answer_tokens_in": 1123,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx05",
+    "type": "semantic_history",
+    "question": "Where did Klára live before she moved to London?",
+    "gold": "Berlin",
+    "answer": "Klára lived in Berlin before moving to London.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2153,
+    "answer_tokens_in": 1055,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx06",
+    "type": "semantic_history",
+    "question": "Which book did I read right before Atomic Habits?",
+    "gold": "Dune by Frank Herbert (finished May 11, 5/5)",
+    "answer": "Dune by Frank Herbert.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2469,
+    "answer_tokens_in": 1141,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx07",
+    "type": "aggregate",
+    "question": "How much did I spend on coffee since moving to San Francisco?",
+    "gold": "$1,071.00 (191 purchases)",
+    "answer": "The database shows **$1,478.24** spent on coffee in San Francisco since April 2026 (193 expenses).",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3616,
+    "answer_tokens_in": 1603,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx08",
+    "type": "aggregate",
+    "question": "How many times did I go climbing from April through September 2026?",
+    "gold": "42",
+    "answer": "You went climbing 42 times from April through September 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2312,
+    "answer_tokens_in": 1078,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx09",
+    "type": "aggregate",
+    "question": "What was my average sleep in July 2026?",
+    "gold": "6.99 hours (30 nights)",
+    "answer": "Your average sleep in July 2026 was 419.5 minutes per session (about 6 hours 59 minutes), across 30 sessions.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2270,
+    "answer_tokens_in": 1055,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx10",
+    "type": "episodic_event",
+    "question": "What did I do on June 23, 2026?",
+    "gold": "Coffee at Philz Coffee, lunch at Deli Board, climbing at Mission Cliffs, dinner with Eva at Flour + Water ($96.80), watched Sinners (4/5), Uber home",
+    "answer": "On June 23, you slept 7h 45m, climbed at Mission Cliffs, had lunch at Deli Board, ate at Flour + Water with Eva, watched *Sinners* (rated 4/5), and took an Uber home. You also logged a Philz Coffee purchase for $6.75.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2129,
+    "answer_tokens_in": 1084,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx11",
+    "type": "episodic_event",
+    "question": "Where did I meet Priya Patel?",
+    "gold": "At a YC mixer (Apr 22, 2026)",
+    "answer": "You met Priya Patel at a YC mixer on April 22, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2927,
+    "answer_tokens_in": 1311,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx12",
+    "type": "episodic_event",
+    "question": "What happened on July 12, 2026?",
+    "gold": "I proposed to Eva and she said yes: we got engaged",
+    "answer": "On July 12, 2026, you weighed 74.0 kg and slept 8 hours. You went climbing at Mission Cliffs with Nina, got engaged to Eva, and rated *Marty Supreme* 4/5; you also noted coffee purchases, ordered running shoes, and had beers at Bar Agricole with Dave.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2223,
+    "answer_tokens_in": 1106,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx13",
+    "type": "episodic_time",
+    "question": "When did Eva move to San Francisco?",
+    "gold": "May 20, 2026",
+    "answer": "Eva moved to San Francisco on May 20, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3310,
+    "answer_tokens_in": 1461,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx14",
+    "type": "episodic_time",
+    "question": "When did Oscar leave Nebula?",
+    "gold": "August 15, 2026",
+    "answer": "Oscar left Nebula on August 15, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3238,
+    "answer_tokens_in": 1406,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx15",
+    "type": "episodic_time",
+    "question": "When did I join Mission Cliffs?",
+    "gold": "April 3, 2026",
+    "answer": "You joined Mission Cliffs on April 3, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 1827,
+    "answer_tokens_in": 908,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx16",
+    "type": "routine",
+    "question": "Which days of the week do I usually go climbing?",
+    "gold": "Tuesdays and Fridays (sometimes Sundays)",
+    "answer": "You usually go climbing on Tuesdays and Fridays; there are also a couple of Sunday sessions in the records.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2376,
+    "answer_tokens_in": 1178,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx17",
+    "type": "routine",
+    "question": "Who do I usually climb with these days?",
+    "gold": "Nina (Nina Rossi)",
+    "answer": "You usually climb with Nina at Mission Cliffs. The latest record is from September 29, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2158,
+    "answer_tokens_in": 1017,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx18",
+    "type": "routine",
+    "question": "How much does a coffee usually cost me in San Francisco?",
+    "gold": "about $5.50",
+    "answer": "You usually spend about **$7.66 per coffee** in San Francisco, based on 193 recorded purchases.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3829,
+    "answer_tokens_in": 1682,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx19",
+    "type": "prospective",
+    "question": "What reminders are still open?",
+    "gold": "Get my SF driver's license (was due Jun 30) and book the wedding venue (due Oct 31)",
+    "answer": "Open reminders: get a San Francisco driver’s license (due June 30, 2026) and book the wedding venue (due October 31, 2026).",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 1497,
+    "answer_tokens_in": 792,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx20",
+    "type": "prospective",
+    "question": "What's my next meeting?",
+    "gold": "The Nebula board meeting on Thu Oct 1, 2026 at 16:00, 1 Mission St, San Francisco",
+    "answer": "Your next meeting is the Nebula board meeting with David Mokos on October 1, 2026, from 4:00 to 5:30 PM at 1 Mission St, San Francisco.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2716,
+    "answer_tokens_in": 1221,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx21",
+    "type": "prospective",
+    "question": "When and where is the Series A kickoff?",
+    "gold": "Fri Oct 9, 2026 at 10:00 at the Northwind office, 2 Embarcadero Center (with Sarah Kim)",
+    "answer": "The Series A kickoff is Friday, October 9, 2026, at 10:00 a.m. at the Northwind office, 2 Embarcadero Center.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2654,
+    "answer_tokens_in": 1212,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx22",
+    "type": "preference",
+    "question": "Which movies did I rate 5/5 since April?",
+    "gold": "Dune: Part Two, Flow, Perfect Days, The Wild Robot",
+    "answer": "The Wild Robot.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 1134,
+    "answer_tokens_in": 685,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx23",
+    "type": "preference",
+    "question": "How did I rate Dune, the book?",
+    "gold": "5/5",
+    "answer": "You rated *Dune* by Frank Herbert 5 out of 5.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 1775,
+    "answer_tokens_in": 949,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx24",
+    "type": "preference",
+    "question": "What did I love about the Lisbon trip?",
+    "gold": "The pastéis de nata at Manteigaria (an amazing trip)",
+    "answer": "You loved the pastéis de nata at Manteigaria—they were “unreal.”",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2349,
+    "answer_tokens_in": 1068,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx25",
+    "type": "source",
+    "question": "What did the Lisbon hotel cost, and for which dates?",
+    "gold": "$980, Memmo Alfama, May 22-26, 2026 (2 guests)",
+    "answer": "The Memmo Alfama Hotel cost $980 for May 22–26, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2859,
+    "answer_tokens_in": 1267,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx26",
+    "type": "source",
+    "question": "How much were the flights to Lisbon?",
+    "gold": "$1,340 in total, SFO to LIS for Eva and me",
+    "answer": "The flights to Lisbon cost $1,340 total for you and Eva.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2405,
+    "answer_tokens_in": 1130,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx27",
+    "type": "source",
+    "question": "Who introduced me to Mark Chen, and what does he do?",
+    "gold": "Priya Patel; he runs partnerships at Stripe",
+    "answer": "Priya Patel introduced you to Mark Chen. He runs partnerships at Stripe.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2436,
+    "answer_tokens_in": 1105,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx28",
+    "type": "period",
+    "question": "What book was I reading when Eva moved to San Francisco?",
+    "gold": "Atomic Habits by James Clear",
+    "answer": "Dune by Frank Herbert. You started reading it on April 18, before Eva moved to San Francisco on May 20.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2289,
+    "answer_tokens_in": 1066,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx29",
+    "type": "period",
+    "question": "Where was I living when I got engaged?",
+    "gold": "San Francisco (1450 Valencia St)",
+    "answer": "I don’t know. The evidence says you got engaged to Eva on July 12, 2026, but doesn’t say where you were living then.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 676,
+    "answer_tokens_in": 504,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx30",
+    "type": "period",
+    "question": "What were the big events of my first three months in San Francisco?",
+    "gold": "Any three of: joined Mission Cliffs (Apr 3), got a US number (Apr 10), met Priya Patel (Apr 22), Eva got the job at Gensler (May 4) and moved to SF (May 20), the Lisbon trip (May 22-26), Klára moved to London (Jun 10)",
+    "answer": "You moved into 1450 Valencia St. in San Francisco on April 1, 2026. In your first three months there (April–June), the recorded events were Nebula board meetings on May 7 and June 4, and a dentist appointment with Dr. Lee on June 3.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3042,
+    "answer_tokens_in": 1321,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx31",
+    "type": "metamemory",
+    "question": "What is Nina's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2246,
+    "answer_tokens_in": 1092,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx32",
+    "type": "metamemory",
+    "question": "What's Sarah Kim's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2125,
+    "answer_tokens_in": 1043,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx33",
+    "type": "metamemory",
+    "question": "What car do I drive?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 592,
+    "answer_tokens_in": 489,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx34",
+    "type": "forgotten",
+    "question": "What's Marco's phone number?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 1742,
+    "answer_tokens_in": 905,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx35",
+    "type": "forgotten",
+    "question": "What's my barber's phone number?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 1723,
+    "answer_tokens_in": 885,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx36",
+    "type": "forgotten",
+    "question": "Who is Jan Dvořák?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 569,
+    "answer_tokens_in": 498,
+    "route_latency_s": null
+   }
+  ],
+  "n": 36,
+  "accuracy": 81.9,
+  "new_spend": 0.01813
+ },
+ "brain_jev_recall": {
+  "rows": [
+   {
+    "id": "cx01",
+    "type": "semantic_current",
+    "question": "What is my phone number?",
+    "gold": "+1 415 555 0199",
+    "answer": "Your phone number is +1 415 555 0199.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 1698,
+    "answer_tokens_in": 881,
+    "route_latency_s": 0.325390100479126
+   },
+   {
+    "id": "cx02",
+    "type": "semantic_current",
+    "question": "What is David's US phone number?",
+    "gold": "+1 628 688 4995 (corrected from +1 628 688 4994)",
+    "answer": "David's US phone number is +1 628 688 4995.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2148,
+    "answer_tokens_in": 1054,
+    "route_latency_s": 0.304689884185791
+   },
+   {
+    "id": "cx03",
+    "type": "semantic_current",
+    "question": "Where does Eva work?",
+    "gold": "Gensler (in San Francisco)",
+    "answer": "Eva works at Gensler in San Francisco.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "periods",
+     "episodes"
+    ],
+    "evidence_chars": 8475,
+    "answer_tokens_in": 3186,
+    "route_latency_s": 0.25797295570373535
+   },
+   {
+    "id": "cx04",
+    "type": "semantic_history",
+    "question": "What US number did I first have for David, before the correction?",
+    "gold": "+1 628 688 4994",
+    "answer": "David’s US number was +1 628 688 4994 before the correction.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2359,
+    "answer_tokens_in": 1123,
+    "route_latency_s": 0.3574371337890625
+   },
+   {
+    "id": "cx05",
+    "type": "semantic_history",
+    "question": "Where did Klára live before she moved to London?",
+    "gold": "Berlin",
+    "answer": "Klára lived in Berlin before moving to London on June 10, 2026.",
+    "score": 1.0,
+    "stores": [
+     "periods",
+     "facts",
+     "episodes",
+     "log"
+    ],
+    "evidence_chars": 9907,
+    "answer_tokens_in": 3652,
+    "route_latency_s": 0.41854381561279297
+   },
+   {
+    "id": "cx06",
+    "type": "semantic_history",
+    "question": "Which book did I read right before Atomic Habits?",
+    "gold": "Dune by Frank Herbert (finished May 11, 5/5)",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes"
+    ],
+    "evidence_chars": 5828,
+    "answer_tokens_in": 2301,
+    "route_latency_s": 0.32439684867858887
+   },
+   {
+    "id": "cx07",
+    "type": "aggregate",
+    "question": "How much did I spend on coffee since moving to San Francisco?",
+    "gold": "$1,071.00 (191 purchases)",
+    "answer": "You spent **$1,478.24** on coffee in San Francisco since moving there on April 1, 2026 (193 recorded expenses).",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "periods",
+     "episodes"
+    ],
+    "evidence_chars": 10532,
+    "answer_tokens_in": 3904,
+    "route_latency_s": 0.38709187507629395
+   },
+   {
+    "id": "cx08",
+    "type": "aggregate",
+    "question": "How many times did I go climbing from April through September 2026?",
+    "gold": "42",
+    "answer": "You went climbing 42 times from April through September 2026.",
+    "score": 1.0,
+    "stores": [
+     "episodes",
+     "facts",
+     "periods",
+     "log"
+    ],
+    "evidence_chars": 9420,
+    "answer_tokens_in": 3442,
+    "route_latency_s": 0.41903185844421387
+   },
+   {
+    "id": "cx09",
+    "type": "aggregate",
+    "question": "What was my average sleep in July 2026?",
+    "gold": "6.99 hours (30 nights)",
+    "answer": "Your average sleep in July 2026 was **419.5 minutes per session**—about **6 hours 59 minutes**, across 30 recorded sessions.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "periods"
+    ],
+    "evidence_chars": 5215,
+    "answer_tokens_in": 1955,
+    "route_latency_s": 0.2934880256652832
+   },
+   {
+    "id": "cx10",
+    "type": "episodic_event",
+    "question": "What did I do on June 23, 2026?",
+    "gold": "Coffee at Philz Coffee, lunch at Deli Board, climbing at Mission Cliffs, dinner with Eva at Flour + Water ($96.80), watched Sinners (4/5), Uber home",
+    "answer": "On June 23, you slept 7 hours 45 minutes, climbed at Mission Cliffs, had lunch at Deli Board ($14.50) and dinner at Flour + Water with Eva ($96.80), watched *Sinners* (rated 4/5), and took a $32.15 Uber home. You also logged two Philz coffees ($6.75 and $5.50); the 5K and Four Barrel coffee were from June 22.",
+    "score": 1.0,
+    "stores": [
+     "episodes",
+     "log",
+     "intentions",
+     "periods"
+    ],
+    "evidence_chars": 9741,
+    "answer_tokens_in": 3635,
+    "route_latency_s": 0.28463220596313477
+   },
+   {
+    "id": "cx11",
+    "type": "episodic_event",
+    "question": "Where did I meet Priya Patel?",
+    "gold": "At a YC mixer (Apr 22, 2026)",
+    "answer": "You met Priya Patel at a YC mixer on April 22, 2026.",
+    "score": 1.0,
+    "stores": [
+     "episodes",
+     "log",
+     "periods"
+    ],
+    "evidence_chars": 7747,
+    "answer_tokens_in": 2909,
+    "route_latency_s": 0.23172211647033691
+   },
+   {
+    "id": "cx12",
+    "type": "episodic_event",
+    "question": "What happened on July 12, 2026?",
+    "gold": "I proposed to Eva and she said yes: we got engaged",
+    "answer": "On July 12, 2026, Adam weighed 74.0 kg and slept 8 hours, climbed at Mission Cliffs with Nina, and proposed to Eva—she said yes, and they got engaged. He also bought coffee at Réveille ($6.75) and Philz ($5.50), ordered running shoes for $122.89, rated *Marty Supreme* 4/5, and had beers with Dave at Bar Agricole ($19.43).",
+    "score": 1.0,
+    "stores": [
+     "episodes",
+     "periods",
+     "log",
+     "intentions"
+    ],
+    "evidence_chars": 8985,
+    "answer_tokens_in": 3338,
+    "route_latency_s": 0.2439870834350586
+   },
+   {
+    "id": "cx13",
+    "type": "episodic_time",
+    "question": "When did Eva move to San Francisco?",
+    "gold": "May 20, 2026",
+    "answer": "Eva moved to San Francisco on May 20, 2026.",
+    "score": 1.0,
+    "stores": [
+     "periods",
+     "facts",
+     "episodes",
+     "log"
+    ],
+    "evidence_chars": 10756,
+    "answer_tokens_in": 3968,
+    "route_latency_s": 0.26358604431152344
+   },
+   {
+    "id": "cx14",
+    "type": "episodic_time",
+    "question": "When did Oscar leave Nebula?",
+    "gold": "August 15, 2026",
+    "answer": "Oscar left Nebula on August 15, 2026, to join Stripe as a PM.",
+    "score": 1.0,
+    "stores": [
+     "periods",
+     "episodes",
+     "log",
+     "facts"
+    ],
+    "evidence_chars": 9750,
+    "answer_tokens_in": 3592,
+    "route_latency_s": 0.33368396759033203
+   },
+   {
+    "id": "cx15",
+    "type": "episodic_time",
+    "question": "When did I join Mission Cliffs?",
+    "gold": "April 3, 2026",
+    "answer": "You joined Mission Cliffs on April 3, 2026, for $110 per month.",
+    "score": 1.0,
+    "stores": [
+     "periods",
+     "facts",
+     "log",
+     "episodes"
+    ],
+    "evidence_chars": 7196,
+    "answer_tokens_in": 2658,
+    "route_latency_s": 0.2989940643310547
+   },
+   {
+    "id": "cx16",
+    "type": "routine",
+    "question": "Which days of the week do I usually go climbing?",
+    "gold": "Tuesdays and Fridays (sometimes Sundays)",
+    "answer": "You usually go climbing on Tuesdays and Fridays, and sometimes Sundays.",
+    "score": 1.0,
+    "stores": [
+     "routines",
+     "episodes",
+     "log",
+     "facts"
+    ],
+    "evidence_chars": 7537,
+    "answer_tokens_in": 2916,
+    "route_latency_s": 0.2563509941101074
+   },
+   {
+    "id": "cx17",
+    "type": "routine",
+    "question": "Who do I usually climb with these days?",
+    "gold": "Nina (Nina Rossi)",
+    "answer": "You usually climb with Nina at Mission Cliffs.",
+    "score": 1.0,
+    "stores": [
+     "routines",
+     "episodes",
+     "log"
+    ],
+    "evidence_chars": 4908,
+    "answer_tokens_in": 1950,
+    "route_latency_s": 0.3420112133026123
+   },
+   {
+    "id": "cx18",
+    "type": "routine",
+    "question": "How much does a coffee usually cost me in San Francisco?",
+    "gold": "about $5.50",
+    "answer": "Your logged San Francisco coffees average **$7.66** each across 193 expenses. Typically, though, you pay about **$5.50**.",
+    "score": 1.0,
+    "stores": [
+     "routines",
+     "facts",
+     "episodes",
+     "log"
+    ],
+    "evidence_chars": 10089,
+    "answer_tokens_in": 3788,
+    "route_latency_s": 0.27536797523498535
+   },
+   {
+    "id": "cx19",
+    "type": "prospective",
+    "question": "What reminders are still open?",
+    "gold": "Get my SF driver's license (was due Jun 30) and book the wedding venue (due Oct 31)",
+    "answer": "Open reminders: Get SF driver’s license (past due since 2026-06-30), book the wedding venue (due 2026-10-31), and order kitchen stuff from Target (no due date listed).",
+    "score": 0.5,
+    "stores": [
+     "intentions"
+    ],
+    "evidence_chars": 925,
+    "answer_tokens_in": 598,
+    "route_latency_s": 0.2284541130065918
+   },
+   {
+    "id": "cx20",
+    "type": "prospective",
+    "question": "What's my next meeting?",
+    "gold": "The Nebula board meeting on Thu Oct 1, 2026 at 16:00, 1 Mission St, San Francisco",
+    "answer": "Your next meeting is the Nebula board meeting on October 1 at 4:00 PM, at 1 Mission St, San Francisco.",
+    "score": 1.0,
+    "stores": [
+     "intentions",
+     "log"
+    ],
+    "evidence_chars": 1707,
+    "answer_tokens_in": 869,
+    "route_latency_s": 0.2772970199584961
+   },
+   {
+    "id": "cx21",
+    "type": "prospective",
+    "question": "When and where is the Series A kickoff?",
+    "gold": "Fri Oct 9, 2026 at 10:00 at the Northwind office, 2 Embarcadero Center (with Sarah Kim)",
+    "answer": "The Series A kickoff is October 9, 2026, at 10:00 a.m. at the Northwind office, 2 Embarcadero Center.",
+    "score": 1.0,
+    "stores": [
+     "intentions",
+     "log",
+     "episodes",
+     "facts"
+    ],
+    "evidence_chars": 5984,
+    "answer_tokens_in": 2419,
+    "route_latency_s": 0.2346630096435547
+   },
+   {
+    "id": "cx22",
+    "type": "preference",
+    "question": "Which movies did I rate 5/5 since April?",
+    "gold": "Dune: Part Two, Flow, Perfect Days, The Wild Robot",
+    "answer": "Flow and The Wild Robot.",
+    "score": 0.5,
+    "stores": [
+     "preferences",
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 1733,
+    "answer_tokens_in": 940,
+    "route_latency_s": 0.4477992057800293
+   },
+   {
+    "id": "cx23",
+    "type": "preference",
+    "question": "How did I rate Dune, the book?",
+    "gold": "5/5",
+    "answer": "You rated *Dune* by Frank Herbert 5/5.",
+    "score": 1.0,
+    "stores": [
+     "preferences",
+     "facts",
+     "log",
+     "episodes"
+    ],
+    "evidence_chars": 5907,
+    "answer_tokens_in": 2453,
+    "route_latency_s": 0.37163710594177246
+   },
+   {
+    "id": "cx24",
+    "type": "preference",
+    "question": "What did I love about the Lisbon trip?",
+    "gold": "The pastéis de nata at Manteigaria (an amazing trip)",
+    "answer": "You loved the pastéis de nata at Manteigaria, saying they were unreal.",
+    "score": 1.0,
+    "stores": [
+     "preferences",
+     "episodes",
+     "log"
+    ],
+    "evidence_chars": 4205,
+    "answer_tokens_in": 1774,
+    "route_latency_s": 0.2750058174133301
+   },
+   {
+    "id": "cx25",
+    "type": "source",
+    "question": "What did the Lisbon hotel cost, and for which dates?",
+    "gold": "$980, Memmo Alfama, May 22-26, 2026 (2 guests)",
+    "answer": "The Memmo Alfama Hotel cost $980. It was booked for May 22–26, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes"
+    ],
+    "evidence_chars": 6343,
+    "answer_tokens_in": 2484,
+    "route_latency_s": 0.29265499114990234
+   },
+   {
+    "id": "cx26",
+    "type": "source",
+    "question": "How much were the flights to Lisbon?",
+    "gold": "$1,340 in total, SFO to LIS for Eva and me",
+    "answer": "The flights to Lisbon cost $1,340 total for you and Eva.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes"
+    ],
+    "evidence_chars": 5862,
+    "answer_tokens_in": 2328,
+    "route_latency_s": 0.5306751728057861
+   },
+   {
+    "id": "cx27",
+    "type": "source",
+    "question": "Who introduced me to Mark Chen, and what does he do?",
+    "gold": "Priya Patel; he runs partnerships at Stripe",
+    "answer": "Priya Patel introduced you to Mark Chen. He runs partnerships at Stripe.",
+    "score": 1.0,
+    "stores": [
+     "log",
+     "episodes",
+     "facts",
+     "periods"
+    ],
+    "evidence_chars": 9112,
+    "answer_tokens_in": 3350,
+    "route_latency_s": 0.47124624252319336
+   },
+   {
+    "id": "cx28",
+    "type": "period",
+    "question": "What book was I reading when Eva moved to San Francisco?",
+    "gold": "Atomic Habits by James Clear",
+    "answer": "You were reading *Atomic Habits* by James Clear when Eva moved to San Francisco on May 20, 2026.",
+    "score": 1.0,
+    "stores": [
+     "episodes",
+     "log",
+     "facts",
+     "periods"
+    ],
+    "evidence_chars": 9609,
+    "answer_tokens_in": 3482,
+    "route_latency_s": 0.2818789482116699
+   },
+   {
+    "id": "cx29",
+    "type": "period",
+    "question": "Where was I living when I got engaged?",
+    "gold": "San Francisco (1450 Valencia St)",
+    "answer": "You were living at 1450 Valencia St. in San Francisco when you got engaged on July 12, 2026.",
+    "score": 1.0,
+    "stores": [
+     "periods",
+     "episodes",
+     "log",
+     "facts"
+    ],
+    "evidence_chars": 6815,
+    "answer_tokens_in": 2550,
+    "route_latency_s": 0.46121716499328613
+   },
+   {
+    "id": "cx30",
+    "type": "period",
+    "question": "What were the big events of my first three months in San Francisco?",
+    "gold": "Any three of: joined Mission Cliffs (Apr 3), got a US number (Apr 10), met Priya Patel (Apr 22), Eva got the job at Gensler (May 4) and moved to SF (May 20), the Lisbon trip (May 22-26), Klára moved to London (Jun 10)",
+    "answer": "You moved into your place at 1450 Valencia St. on April 1, joined Mission Cliffs on April 3, and got your U.S. phone number on April 10. Eva got a job at Gensler and moved to San Francisco on May 20; you were engaged by July 12, at the end of your first three months.",
+    "score": 0.5,
+    "stores": [
+     "periods",
+     "episodes",
+     "log",
+     "facts"
+    ],
+    "evidence_chars": 9640,
+    "answer_tokens_in": 3497,
+    "route_latency_s": 0.3888430595397949
+   },
+   {
+    "id": "cx31",
+    "type": "metamemory",
+    "question": "What is Nina's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2246,
+    "answer_tokens_in": 1092,
+    "route_latency_s": 0.23750710487365723
+   },
+   {
+    "id": "cx32",
+    "type": "metamemory",
+    "question": "What's Sarah Kim's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2125,
+    "answer_tokens_in": 1043,
+    "route_latency_s": 0.25166893005371094
+   },
+   {
+    "id": "cx33",
+    "type": "metamemory",
+    "question": "What car do I drive?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "log",
+     "episodes",
+     "facts",
+     "periods"
+    ],
+    "evidence_chars": 3705,
+    "answer_tokens_in": 1561,
+    "route_latency_s": 0.2588069438934326
+   },
+   {
+    "id": "cx34",
+    "type": "forgotten",
+    "question": "What's Marco's phone number?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 1742,
+    "answer_tokens_in": 905,
+    "route_latency_s": 0.44589710235595703
+   },
+   {
+    "id": "cx35",
+    "type": "forgotten",
+    "question": "What's my barber's phone number?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 1723,
+    "answer_tokens_in": 885,
+    "route_latency_s": 0.23803305625915527
+   },
+   {
+    "id": "cx36",
+    "type": "forgotten",
+    "question": "Who is Jan Dvořák?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes"
+    ],
+    "evidence_chars": 3416,
+    "answer_tokens_in": 1524,
+    "route_latency_s": 0.32721590995788574
+   }
+  ],
+  "n": 36,
+  "accuracy": 90.3,
+  "new_spend": 0.00863
+ },
+ "brain_all": {
+  "rows": [
+   {
+    "id": "cx01",
+    "type": "semantic_current",
+    "question": "What is my phone number?",
+    "gold": "+1 415 555 0199",
+    "answer": "Your phone number is +1 415 555 0199.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 7818,
+    "answer_tokens_in": 2955,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx02",
+    "type": "semantic_current",
+    "question": "What is David's US phone number?",
+    "gold": "+1 628 688 4995 (corrected from +1 628 688 4994)",
+    "answer": "David’s US phone number is +1 628 688 4995.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 9777,
+    "answer_tokens_in": 3639,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx03",
+    "type": "semantic_current",
+    "question": "Where does Eva work?",
+    "gold": "Gensler (in San Francisco)",
+    "answer": "Eva works at Gensler in San Francisco.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 10964,
+    "answer_tokens_in": 3982,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx04",
+    "type": "semantic_history",
+    "question": "What US number did I first have for David, before the correction?",
+    "gold": "+1 628 688 4994",
+    "answer": "David’s original US number was +1 628 688 4994, before it was corrected to +1 628 688 4995.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 12433,
+    "answer_tokens_in": 4251,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx05",
+    "type": "semantic_history",
+    "question": "Where did Klára live before she moved to London?",
+    "gold": "Berlin",
+    "answer": "Klára lived in Berlin before moving to London on June 10, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 12582,
+    "answer_tokens_in": 3995,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx06",
+    "type": "semantic_history",
+    "question": "Which book did I read right before Atomic Habits?",
+    "gold": "Dune by Frank Herbert (finished May 11, 5/5)",
+    "answer": "Dune by Frank Herbert.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 9554,
+    "answer_tokens_in": 3531,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx07",
+    "type": "aggregate",
+    "question": "How much did I spend on coffee since moving to San Francisco?",
+    "gold": "$1,071.00 (191 purchases)",
+    "answer": "You spent **$1,478.24** on coffee in San Francisco since moving there on April 1, 2026.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 14314,
+    "answer_tokens_in": 4875,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx08",
+    "type": "aggregate",
+    "question": "How many times did I go climbing from April through September 2026?",
+    "gold": "42",
+    "answer": "You went climbing 42 times from April through September 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 12916,
+    "answer_tokens_in": 4407,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx09",
+    "type": "aggregate",
+    "question": "What was my average sleep in July 2026?",
+    "gold": "6.99 hours (30 nights)",
+    "answer": "Your average sleep in July 2026 was **419.5 minutes per session**—about **6 hours 59 minutes**, across 30 sleep sessions.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 12594,
+    "answer_tokens_in": 4261,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx10",
+    "type": "episodic_event",
+    "question": "What did I do on June 23, 2026?",
+    "gold": "Coffee at Philz Coffee, lunch at Deli Board, climbing at Mission Cliffs, dinner with Eva at Flour + Water ($96.80), watched Sinners (4/5), Uber home",
+    "answer": "On June 23, you slept 7 hours 45 minutes, had coffee at Philz Coffee ($6.75), lunch at Deli Board ($14.50), climbed at Mission Cliffs, had dinner at Flour + Water with Eva ($96.80), watched *Sinners* and rated it 4/5, and took a $32.15 Uber home. You also mentioned that the previous day you ran a 5K in 26:36 and had coffee at Four Barrel ($6.00) and Philz Coffee ($5.50).",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 13992,
+    "answer_tokens_in": 4729,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx11",
+    "type": "episodic_event",
+    "question": "Where did I meet Priya Patel?",
+    "gold": "At a YC mixer (Apr 22, 2026)",
+    "answer": "You met Priya Patel at a YC mixer on April 22, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 12700,
+    "answer_tokens_in": 4561,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx12",
+    "type": "episodic_event",
+    "question": "What happened on July 12, 2026?",
+    "gold": "I proposed to Eva and she said yes: we got engaged",
+    "answer": "On July 12, 2026, Adam weighed 74.0 kg and slept 8 hours, climbed at Mission Cliffs with Nina, and proposed to Eva—she said yes, and they became engaged. He also bought coffee at Réveille ($6.75) and Philz ($5.50), ordered running shoes for $122.89, rated *Marty Supreme* 4/5, and had beers with Dave at Bar Agricole ($19.43); he also logged a $26.83 Uber from the day before.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 13256,
+    "answer_tokens_in": 4617,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx13",
+    "type": "episodic_time",
+    "question": "When did Eva move to San Francisco?",
+    "gold": "May 20, 2026",
+    "answer": "Eva moved to San Francisco on May 20, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 14183,
+    "answer_tokens_in": 4660,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx14",
+    "type": "episodic_time",
+    "question": "When did Oscar leave Nebula?",
+    "gold": "August 15, 2026",
+    "answer": "Oscar left Nebula on August 15, 2026, to join Stripe as a PM.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 10444,
+    "answer_tokens_in": 3835,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx15",
+    "type": "episodic_time",
+    "question": "When did I join Mission Cliffs?",
+    "gold": "April 3, 2026",
+    "answer": "You joined Mission Cliffs on April 3, 2026, for $110 per month.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 10016,
+    "answer_tokens_in": 3606,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx16",
+    "type": "routine",
+    "question": "Which days of the week do I usually go climbing?",
+    "gold": "Tuesdays and Fridays (sometimes Sundays)",
+    "answer": "You usually go climbing on Tuesdays and Fridays, and sometimes Sundays.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 11742,
+    "answer_tokens_in": 4059,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx17",
+    "type": "routine",
+    "question": "Who do I usually climb with these days?",
+    "gold": "Nina (Nina Rossi)",
+    "answer": "You usually climb with Nina at Mission Cliffs. Recent logs, including September 29, show you climbing together.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 10161,
+    "answer_tokens_in": 3429,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx18",
+    "type": "routine",
+    "question": "How much does a coffee usually cost me in San Francisco?",
+    "gold": "about $5.50",
+    "answer": "You usually spend about **$5.50 per coffee** in San Francisco, based on your recorded routine.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 14306,
+    "answer_tokens_in": 5151,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx19",
+    "type": "prospective",
+    "question": "What reminders are still open?",
+    "gold": "Get my SF driver's license (was due Jun 30) and book the wedding venue (due Oct 31)",
+    "answer": "Open reminders: Get an SF driver’s license (due June 30, 2026; past due), book the wedding venue (due October 31, 2026), and order kitchen stuff from Target (no due date recorded).",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 8346,
+    "answer_tokens_in": 3092,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx20",
+    "type": "prospective",
+    "question": "What's my next meeting?",
+    "gold": "The Nebula board meeting on Thu Oct 1, 2026 at 16:00, 1 Mission St, San Francisco",
+    "answer": "Your next meeting is the Nebula board meeting with David Mokos on Thursday, October 1, from 4:00 to 5:30 PM at 1 Mission St, San Francisco.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 9849,
+    "answer_tokens_in": 3581,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx21",
+    "type": "prospective",
+    "question": "When and where is the Series A kickoff?",
+    "gold": "Fri Oct 9, 2026 at 10:00 at the Northwind office, 2 Embarcadero Center (with Sarah Kim)",
+    "answer": "The Series A kickoff is Friday, October 9, 2026, at 10:00 a.m. at the Northwind office, 2 Embarcadero Center.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 12309,
+    "answer_tokens_in": 4222,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx22",
+    "type": "preference",
+    "question": "Which movies did I rate 5/5 since April?",
+    "gold": "Dune: Part Two, Flow, Perfect Days, The Wild Robot",
+    "answer": "You rated *Flow*, *The Wild Robot*, and *Perfect Days* 5/5 since April.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 8171,
+    "answer_tokens_in": 3108,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx23",
+    "type": "preference",
+    "question": "How did I rate Dune, the book?",
+    "gold": "5/5",
+    "answer": "You rated *Dune* by Frank Herbert 5/5.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 9848,
+    "answer_tokens_in": 3712,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx24",
+    "type": "preference",
+    "question": "What did I love about the Lisbon trip?",
+    "gold": "The pastéis de nata at Manteigaria (an amazing trip)",
+    "answer": "You loved the trip overall and especially the pastéis de nata at Manteigaria—you said they were “unreal.”",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 11763,
+    "answer_tokens_in": 4008,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx25",
+    "type": "source",
+    "question": "What did the Lisbon hotel cost, and for which dates?",
+    "gold": "$980, Memmo Alfama, May 22-26, 2026 (2 guests)",
+    "answer": "The Memmo Alfama Hotel cost $980, for May 22–26, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 13651,
+    "answer_tokens_in": 4426,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx26",
+    "type": "source",
+    "question": "How much were the flights to Lisbon?",
+    "gold": "$1,340 in total, SFO to LIS for Eva and me",
+    "answer": "The flights to Lisbon cost **$1,340 total** for you and Eva.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 13313,
+    "answer_tokens_in": 4245,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx27",
+    "type": "source",
+    "question": "Who introduced me to Mark Chen, and what does he do?",
+    "gold": "Priya Patel; he runs partnerships at Stripe",
+    "answer": "Priya Patel introduced you to Mark Chen. He runs partnerships at Stripe.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 11286,
+    "answer_tokens_in": 3778,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx28",
+    "type": "period",
+    "question": "What book was I reading when Eva moved to San Francisco?",
+    "gold": "Atomic Habits by James Clear",
+    "answer": "You were reading Atomic Habits by James Clear when Eva moved to San Francisco on May 20, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 13276,
+    "answer_tokens_in": 4167,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx29",
+    "type": "period",
+    "question": "Where was I living when I got engaged?",
+    "gold": "San Francisco (1450 Valencia St)",
+    "answer": "You were living in San Francisco when you got engaged on July 12, 2026.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 9351,
+    "answer_tokens_in": 3344,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx30",
+    "type": "period",
+    "question": "What were the big events of my first three months in San Francisco?",
+    "gold": "Any three of: joined Mission Cliffs (Apr 3), got a US number (Apr 10), met Priya Patel (Apr 22), Eva got the job at Gensler (May 4) and moved to SF (May 20), the Lisbon trip (May 22-26), Klára moved to London (Jun 10)",
+    "answer": "You moved into 1450 Valencia St. in San Francisco on April 1, 2026, and joined Mission Cliffs on April 3. Eva got a job at Gensler and moved to SF on May 20; you were engaged on July 12, after proposing to her.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 13710,
+    "answer_tokens_in": 4574,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx31",
+    "type": "metamemory",
+    "question": "What is Nina's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 11145,
+    "answer_tokens_in": 4070,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx32",
+    "type": "metamemory",
+    "question": "What's Sarah Kim's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 8263,
+    "answer_tokens_in": 3145,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx33",
+    "type": "metamemory",
+    "question": "What car do I drive?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 3705,
+    "answer_tokens_in": 1561,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx34",
+    "type": "forgotten",
+    "question": "What's Marco's phone number?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 7335,
+    "answer_tokens_in": 2794,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx35",
+    "type": "forgotten",
+    "question": "What's my barber's phone number?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 7345,
+    "answer_tokens_in": 2792,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx36",
+    "type": "forgotten",
+    "question": "Who is Jan Dvořák?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 5183,
+    "answer_tokens_in": 2099,
+    "route_latency_s": null
+   }
+  ],
+  "n": 36,
+  "accuracy": 90.3,
+  "new_spend": 0.01449
+ },
+ "full_context": {
+  "rows": [
+   {
+    "id": "cx01",
+    "type": "semantic_current",
+    "question": "What is my phone number?",
+    "gold": "+1 415 555 0199",
+    "answer": "Your phone number is +1 415 555 0199.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25601,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx02",
+    "type": "semantic_current",
+    "question": "What is David's US phone number?",
+    "gold": "+1 628 688 4995 (corrected from +1 628 688 4994)",
+    "answer": "David’s US phone number is +1 628 688 4995.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25603,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx03",
+    "type": "semantic_current",
+    "question": "Where does Eva work?",
+    "gold": "Gensler (in San Francisco)",
+    "answer": "Eva works at Gensler in San Francisco.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25600,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx04",
+    "type": "semantic_history",
+    "question": "What US number did I first have for David, before the correction?",
+    "gold": "+1 628 688 4994",
+    "answer": "David’s number was first recorded as **+1 628 688 4994**; it was later corrected to **+1 628 688 4995**.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25609,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx05",
+    "type": "semantic_history",
+    "question": "Where did Klára live before she moved to London?",
+    "gold": "Berlin",
+    "answer": "Klára lived in Berlin before moving to London for her new job.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25606,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx06",
+    "type": "semantic_history",
+    "question": "Which book did I read right before Atomic Habits?",
+    "gold": "Dune by Frank Herbert (finished May 11, 5/5)",
+    "answer": "You read *Dune* by Frank Herbert right before *Atomic Habits*.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25606,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx07",
+    "type": "aggregate",
+    "question": "How much did I spend on coffee since moving to San Francisco?",
+    "gold": "$1,071.00 (191 purchases)",
+    "answer": "I don’t know. The log lists individual coffee purchases, but it doesn’t provide a total.",
+    "score": 0.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25608,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx08",
+    "type": "aggregate",
+    "question": "How many times did I go climbing from April through September 2026?",
+    "gold": "42",
+    "answer": "You went climbing **40 times** from April through September 2026.",
+    "score": 0.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25610,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx09",
+    "type": "aggregate",
+    "question": "What was my average sleep in July 2026?",
+    "gold": "6.99 hours (30 nights)",
+    "answer": "Your average recorded sleep in July 2026 was about **6 hours 59 minutes per night** (30 entries).",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25606,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx10",
+    "type": "episodic_event",
+    "question": "What did I do on June 23, 2026?",
+    "gold": "Coffee at Philz Coffee, lunch at Deli Board, climbing at Mission Cliffs, dinner with Eva at Flour + Water ($96.80), watched Sinners (4/5), Uber home",
+    "answer": "On June 23, you slept 7 hours 45 minutes, had coffee at Philz, lunch at Deli Board ($14.50), went climbing at Mission Cliffs, and had dinner at Flour + Water with Eva ($96.80). You also watched *Sinners* (4/5) and took an Uber home ($32.15).",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25608,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx11",
+    "type": "episodic_event",
+    "question": "Where did I meet Priya Patel?",
+    "gold": "At a YC mixer (Apr 22, 2026)",
+    "answer": "You met Priya Patel at a YC mixer.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25603,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx12",
+    "type": "episodic_event",
+    "question": "What happened on July 12, 2026?",
+    "gold": "I proposed to Eva and she said yes: we got engaged",
+    "answer": "On July 12, you and Eva got engaged— you proposed, and she said yes! You also had 8 hours of sleep, weighed 74.0 kg, climbed at Mission Cliffs with Nina, watched *Marty Supreme* (4/5), and had drinks with Nina at Bar Agricole ($26.09) and Dave ($19.43).",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25606,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx13",
+    "type": "episodic_time",
+    "question": "When did Eva move to San Francisco?",
+    "gold": "May 20, 2026",
+    "answer": "Eva was planning to move to San Francisco on May 20, 2026.",
+    "score": 0.5,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25603,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx14",
+    "type": "episodic_time",
+    "question": "When did Oscar leave Nebula?",
+    "gold": "August 15, 2026",
+    "answer": "Oscar left Nebula on August 15, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25602,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx15",
+    "type": "episodic_time",
+    "question": "When did I join Mission Cliffs?",
+    "gold": "April 3, 2026",
+    "answer": "You joined Mission Cliffs on April 3, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25603,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx16",
+    "type": "routine",
+    "question": "Which days of the week do I usually go climbing?",
+    "gold": "Tuesdays and Fridays (sometimes Sundays)",
+    "answer": "You usually go climbing on Tuesdays and Fridays, and sometimes Sundays.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25606,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx17",
+    "type": "routine",
+    "question": "Who do I usually climb with these days?",
+    "gold": "Nina (Nina Rossi)",
+    "answer": "You usually climb with Nina at Mission Cliffs.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25604,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx18",
+    "type": "routine",
+    "question": "How much does a coffee usually cost me in San Francisco?",
+    "gold": "about $5.50",
+    "answer": "A coffee usually costs you about $5.50 in San Francisco; most of your recent purchases are around $4.50–$6.75.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25607,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx19",
+    "type": "prospective",
+    "question": "What reminders are still open?",
+    "gold": "Get my SF driver's license (was due Jun 30) and book the wedding venue (due Oct 31)",
+    "answer": "The open reminder is to book the wedding venue by October 31, 2026.",
+    "score": 0.5,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25601,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx20",
+    "type": "prospective",
+    "question": "What's my next meeting?",
+    "gold": "The Nebula board meeting on Thu Oct 1, 2026 at 16:00, 1 Mission St, San Francisco",
+    "answer": "Your next meeting is the Nebula board meeting on Thursday, October 1, 2026, from 4:00 to 5:30 PM at 1 Mission St, San Francisco.",
+    "score": 0.5,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25600,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx21",
+    "type": "prospective",
+    "question": "When and where is the Series A kickoff?",
+    "gold": "Fri Oct 9, 2026 at 10:00 at the Northwind office, 2 Embarcadero Center (with Sarah Kim)",
+    "answer": "The Series A kickoff with Sarah Kim is Friday, October 9, at 10:00 a.m. at the Northwind office, 2 Embarcadero Center.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25604,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx22",
+    "type": "preference",
+    "question": "Which movies did I rate 5/5 since April?",
+    "gold": "Dune: Part Two, Flow, Perfect Days, The Wild Robot",
+    "answer": "You rated **Flow**, **The Wild Robot**, and **Dune: Part Two** 5/5 since April.",
+    "score": 0.5,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25607,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx23",
+    "type": "preference",
+    "question": "How did I rate Dune, the book?",
+    "gold": "5/5",
+    "answer": "You rated *Dune* 5/5.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25605,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx24",
+    "type": "preference",
+    "question": "What did I love about the Lisbon trip?",
+    "gold": "The pastéis de nata at Manteigaria (an amazing trip)",
+    "answer": "You loved the pastéis de nata at Manteigaria—they were “unreal.”",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25604,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx25",
+    "type": "source",
+    "question": "What did the Lisbon hotel cost, and for which dates?",
+    "gold": "$980, Memmo Alfama, May 22-26, 2026 (2 guests)",
+    "answer": "The Lisbon hotel cost $980 total for May 22–26, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25607,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx26",
+    "type": "source",
+    "question": "How much were the flights to Lisbon?",
+    "gold": "$1,340 in total, SFO to LIS for Eva and me",
+    "answer": "The SFO–Lisbon flights for you and Eva cost **$1,340 total**.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25603,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx27",
+    "type": "source",
+    "question": "Who introduced me to Mark Chen, and what does he do?",
+    "gold": "Priya Patel; he runs partnerships at Stripe",
+    "answer": "Priya Patel introduced you to Mark Chen; he runs partnerships at Stripe.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25608,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx28",
+    "type": "period",
+    "question": "What book was I reading when Eva moved to San Francisco?",
+    "gold": "Atomic Habits by James Clear",
+    "answer": "I don’t know. Eva’s move to San Francisco is noted for May 20, but there’s no record of what book you were reading then.",
+    "score": 0.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25607,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx29",
+    "type": "period",
+    "question": "Where was I living when I got engaged?",
+    "gold": "San Francisco (1450 Valencia St)",
+    "answer": "You were living in San Francisco when you got engaged on July 12, 2026.",
+    "score": 0.5,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25604,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx30",
+    "type": "period",
+    "question": "What were the big events of my first three months in San Francisco?",
+    "gold": "Any three of: joined Mission Cliffs (Apr 3), got a US number (Apr 10), met Priya Patel (Apr 22), Eva got the job at Gensler (May 4) and moved to SF (May 20), the Lisbon trip (May 22-26), Klára moved to London (Jun 10)",
+    "answer": "Your first three months in San Francisco (April–June 2026) began with landing and moving into your place at **1450 Valencia St.** on April 1; you joined **Mission Cliffs** and started climbing with Nina, and met Stripe engineering manager **Priya Patel** at a YC mixer. **Eva got a job at Gensler and moved to SF on May 20**, and you took a Lisbon trip with her from May 22–26.",
+    "score": 0.5,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25609,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx31",
+    "type": "metamemory",
+    "question": "What is Nina's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25602,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx32",
+    "type": "metamemory",
+    "question": "What's Sarah Kim's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25602,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx33",
+    "type": "metamemory",
+    "question": "What car do I drive?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don’t know.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25601,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx34",
+    "type": "forgotten",
+    "question": "What's Marco's phone number?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25601,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx35",
+    "type": "forgotten",
+    "question": "What's my barber's phone number?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don’t know.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25602,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx36",
+    "type": "forgotten",
+    "question": "Who is Jan Dvořák?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25603,
+    "route_latency_s": null
+   }
+  ],
+  "n": 36,
+  "accuracy": 83.3,
+  "new_spend": 0.0937
+ },
+ "full_facts": {
+  "rows": [
+   {
+    "id": "cx01",
+    "type": "semantic_current",
+    "question": "What is my phone number?",
+    "gold": "+1 415 555 0199",
+    "answer": "Your main phone number is +1 415 555 0199.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 58214,
+    "answer_tokens_in": 25971,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx02",
+    "type": "semantic_current",
+    "question": "What is David's US phone number?",
+    "gold": "+1 628 688 4995 (corrected from +1 628 688 4994)",
+    "answer": "David’s US phone number is +1 628 688 4995.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 58615,
+    "answer_tokens_in": 26104,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx03",
+    "type": "semantic_current",
+    "question": "Where does Eva work?",
+    "gold": "Gensler (in San Francisco)",
+    "answer": "Eva works at Gensler in San Francisco.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 58945,
+    "answer_tokens_in": 26198,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx04",
+    "type": "semantic_history",
+    "question": "What US number did I first have for David, before the correction?",
+    "gold": "+1 628 688 4994",
+    "answer": "Before the correction, David’s US number was +1 628 688 4994.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 58846,
+    "answer_tokens_in": 26186,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx05",
+    "type": "semantic_history",
+    "question": "Where did Klára live before she moved to London?",
+    "gold": "Berlin",
+    "answer": "Klára lived in Berlin before moving to London.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 58661,
+    "answer_tokens_in": 26112,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx06",
+    "type": "semantic_history",
+    "question": "Which book did I read right before Atomic Habits?",
+    "gold": "Dune by Frank Herbert (finished May 11, 5/5)",
+    "answer": "You read *Dune* by Frank Herbert right before *Atomic Habits*.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 58780,
+    "answer_tokens_in": 26144,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx07",
+    "type": "aggregate",
+    "question": "How much did I spend on coffee since moving to San Francisco?",
+    "gold": "$1,071.00 (191 purchases)",
+    "answer": "You’ve spent **$1,478.24** on coffee in San Francisco since moving there, across 193 recorded purchases.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 59345,
+    "answer_tokens_in": 26340,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx08",
+    "type": "aggregate",
+    "question": "How many times did I go climbing from April through September 2026?",
+    "gold": "42",
+    "answer": "You went climbing **42 times** from April through September 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 58753,
+    "answer_tokens_in": 26135,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx09",
+    "type": "aggregate",
+    "question": "What was my average sleep in July 2026?",
+    "gold": "6.99 hours (30 nights)",
+    "answer": "Your average sleep in July 2026 was **419.5 minutes**, or about **6 hours 59 minutes per night**, across 30 recorded nights.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 58785,
+    "answer_tokens_in": 26149,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx10",
+    "type": "episodic_event",
+    "question": "What did I do on June 23, 2026?",
+    "gold": "Coffee at Philz Coffee, lunch at Deli Board, climbing at Mission Cliffs, dinner with Eva at Flour + Water ($96.80), watched Sinners (4/5), Uber home",
+    "answer": "On June 23, you slept 7 hours 45 minutes, climbed at Mission Cliffs, had lunch at Deli Board ($14.50) and dinner at Flour + Water with Eva ($96.80), watched *Sinners* (4/5), and took an Uber home ($32.15). You also logged a 5K run in 26:36, but said that was the day before.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 58123,
+    "answer_tokens_in": 25940,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx11",
+    "type": "episodic_event",
+    "question": "Where did I meet Priya Patel?",
+    "gold": "At a YC mixer (Apr 22, 2026)",
+    "answer": "You met Priya Patel at a YC mixer on April 22, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 59324,
+    "answer_tokens_in": 26341,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx12",
+    "type": "episodic_event",
+    "question": "What happened on July 12, 2026?",
+    "gold": "I proposed to Eva and she said yes: we got engaged",
+    "answer": "On July 12, you and Eva got engaged after you proposed and she said yes. You also slept 8 hours, weighed 74.0 kg, had coffee at Réveille and Philz, went climbing at Mission Cliffs with Nina, ordered running shoes for $122.89, watched *Marty Supreme* (4/5), and had drinks with Nina and beers with Dave.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 58217,
+    "answer_tokens_in": 25968,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx13",
+    "type": "episodic_time",
+    "question": "When did Eva move to San Francisco?",
+    "gold": "May 20, 2026",
+    "answer": "Eva moved to San Francisco on May 20, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 59260,
+    "answer_tokens_in": 26307,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx14",
+    "type": "episodic_time",
+    "question": "When did Oscar leave Nebula?",
+    "gold": "August 15, 2026",
+    "answer": "Oscar left Nebula on August 15, 2026, to join Stripe as a PM.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 58999,
+    "answer_tokens_in": 26241,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx15",
+    "type": "episodic_time",
+    "question": "When did I join Mission Cliffs?",
+    "gold": "April 3, 2026",
+    "answer": "You joined Mission Cliffs on April 3, 2026, with a membership costing $110 per month.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 58350,
+    "answer_tokens_in": 26002,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx16",
+    "type": "routine",
+    "question": "Which days of the week do I usually go climbing?",
+    "gold": "Tuesdays and Fridays (sometimes Sundays)",
+    "answer": "You usually go climbing on Tuesdays and Fridays, and sometimes on Sundays.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 59016,
+    "answer_tokens_in": 26279,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx17",
+    "type": "routine",
+    "question": "Who do I usually climb with these days?",
+    "gold": "Nina (Nina Rossi)",
+    "answer": "You usually climb with Nina at Mission Cliffs.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 58644,
+    "answer_tokens_in": 26100,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx18",
+    "type": "routine",
+    "question": "How much does a coffee usually cost me in San Francisco?",
+    "gold": "about $5.50",
+    "answer": "Your coffee in San Francisco averages about **$7.66 per purchase**, based on 193 recorded expenses.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 59488,
+    "answer_tokens_in": 26384,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx19",
+    "type": "prospective",
+    "question": "What reminders are still open?",
+    "gold": "Get my SF driver's license (was due Jun 30) and book the wedding venue (due Oct 31)",
+    "answer": "The open reminders are to get your San Francisco driver’s license (due June 30, 2026) and book the wedding venue (due October 31, 2026).",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 58028,
+    "answer_tokens_in": 25895,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx20",
+    "type": "prospective",
+    "question": "What's my next meeting?",
+    "gold": "The Nebula board meeting on Thu Oct 1, 2026 at 16:00, 1 Mission St, San Francisco",
+    "answer": "Your next meeting is the Nebula board meeting with David Mokos, tomorrow, October 1, from 4:00–5:30 p.m. at 1 Mission St, San Francisco.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 59268,
+    "answer_tokens_in": 26333,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx21",
+    "type": "prospective",
+    "question": "When and where is the Series A kickoff?",
+    "gold": "Fri Oct 9, 2026 at 10:00 at the Northwind office, 2 Embarcadero Center (with Sarah Kim)",
+    "answer": "The Series A kickoff is Friday, October 9, 2026, at 10:00 a.m. at the Northwind office, 2 Embarcadero Center.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 59089,
+    "answer_tokens_in": 26250,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx22",
+    "type": "preference",
+    "question": "Which movies did I rate 5/5 since April?",
+    "gold": "Dune: Part Two, Flow, Perfect Days, The Wild Robot",
+    "answer": "Since April, you rated **The Wild Robot**, **Dune**, **Perfect Days**, and **Dune: Part Two** 5/5.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 58124,
+    "answer_tokens_in": 25952,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx23",
+    "type": "preference",
+    "question": "How did I rate Dune, the book?",
+    "gold": "5/5",
+    "answer": "You rated Frank Herbert’s *Dune* 5 out of 5.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 58292,
+    "answer_tokens_in": 26006,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx24",
+    "type": "preference",
+    "question": "What did I love about the Lisbon trip?",
+    "gold": "The pastéis de nata at Manteigaria (an amazing trip)",
+    "answer": "You loved the pastéis de nata at Manteigaria in Lisbon—you said they were unreal.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 58838,
+    "answer_tokens_in": 26155,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx25",
+    "type": "source",
+    "question": "What did the Lisbon hotel cost, and for which dates?",
+    "gold": "$980, Memmo Alfama, May 22-26, 2026 (2 guests)",
+    "answer": "The Memmo Alfama Hotel cost **$980 USD** for **May 22–26, 2026** (check-in May 22, check-out May 26).",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 59080,
+    "answer_tokens_in": 26242,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx26",
+    "type": "source",
+    "question": "How much were the flights to Lisbon?",
+    "gold": "$1,340 in total, SFO to LIS for Eva and me",
+    "answer": "The flights to Lisbon for you and Eva cost $1,340 total.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 58902,
+    "answer_tokens_in": 26185,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx27",
+    "type": "source",
+    "question": "Who introduced me to Mark Chen, and what does he do?",
+    "gold": "Priya Patel; he runs partnerships at Stripe",
+    "answer": "Priya Patel introduced you to Mark Chen. He runs partnerships at Stripe.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 58815,
+    "answer_tokens_in": 26144,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx28",
+    "type": "period",
+    "question": "What book was I reading when Eva moved to San Francisco?",
+    "gold": "Atomic Habits by James Clear",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 58651,
+    "answer_tokens_in": 26097,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx29",
+    "type": "period",
+    "question": "Where was I living when I got engaged?",
+    "gold": "San Francisco (1450 Valencia St)",
+    "answer": "You were living in San Francisco when you got engaged on July 12, 2026.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 57593,
+    "answer_tokens_in": 25743,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx30",
+    "type": "period",
+    "question": "What were the big events of my first three months in San Francisco?",
+    "gold": "Any three of: joined Mission Cliffs (Apr 3), got a US number (Apr 10), met Priya Patel (Apr 22), Eva got the job at Gensler (May 4) and moved to SF (May 20), the Lisbon trip (May 22-26), Klára moved to London (Jun 10)",
+    "answer": "You moved into your new place at 1450 Valencia St. on April 1, joined Mission Cliffs, got a U.S. phone number, and met Priya Patel at a YC mixer. In May, Eva got a job at Gensler and moved to San Francisco; you also took a Lisbon trip with her from May 22–26.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 59579,
+    "answer_tokens_in": 26424,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx31",
+    "type": "metamemory",
+    "question": "What is Nina's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 58713,
+    "answer_tokens_in": 26142,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx32",
+    "type": "metamemory",
+    "question": "What's Sarah Kim's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 58524,
+    "answer_tokens_in": 26080,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx33",
+    "type": "metamemory",
+    "question": "What car do I drive?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don’t know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25601,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx34",
+    "type": "forgotten",
+    "question": "What's Marco's phone number?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 58185,
+    "answer_tokens_in": 25961,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx35",
+    "type": "forgotten",
+    "question": "What's my barber's phone number?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 58214,
+    "answer_tokens_in": 25972,
+    "route_latency_s": null
+   },
+   {
+    "id": "cx36",
+    "type": "forgotten",
+    "question": "Who is Jan Dvořák?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log_all"
+    ],
+    "evidence_chars": 57144,
+    "answer_tokens_in": 25603,
+    "route_latency_s": null
+   }
+  ],
+  "n": 36,
+  "accuracy": 86.1,
+  "new_spend": 0.08982
+ }
+}

@@ -1,0 +1,17 @@
+{
+ "requests": 2,
+ "whole_messages": [
+  110,
+  594
+ ],
+ "strings": [
+  "+420 731 000 444"
+ ],
+ "rows_deleted": [
+  "organizations#3",
+  "contact_methods#9"
+ ],
+ "values_erased": 2,
+ "whole_messages_refused": [],
+ "strings_refused": []
+}

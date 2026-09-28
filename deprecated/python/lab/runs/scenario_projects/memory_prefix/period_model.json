@@ -1,0 +1,84 @@
+{
+ "periods": [
+  {
+   "start": "2026-02-10",
+   "end": "2026-03-23",
+   "label": "Atlas migration decision: Postgres logical replication"
+  },
+  {
+   "start": "2026-03-24",
+   "end": "2026-06-30",
+   "label": "Atlas migration decision: dual writes"
+  },
+  {
+   "start": "2026-03-03",
+   "end": "2026-04-19",
+   "label": "Beacon is being built in React Native"
+  },
+  {
+   "start": "2026-04-20",
+   "end": "2026-06-14",
+   "label": "Beacon beta live; 500 testers invited"
+  },
+  {
+   "start": "2026-06-15",
+   "end": "2026-06-30",
+   "label": "Beacon GA shipped"
+  },
+  {
+   "start": "2026-03-16",
+   "end": "2026-04-05",
+   "label": "Jonas Weber accepted the senior backend offer and was due to start Apr 6"
+  },
+  {
+   "start": "2026-04-06",
+   "end": "2026-05-31",
+   "label": "Jonas Weber is on the team as senior backend"
+  },
+  {
+   "start": "2026-06-01",
+   "end": "2026-06-30",
+   "label": "Platform team: Aisha (lead), Raj, and Jonas; Aisha owns Atlas"
+  },
+  {
+   "start": "2026-06-01",
+   "end": "2026-06-30",
+   "label": "Apps team: Mei (lead) and Tom"
+  },
+  {
+   "start": "2026-04-14",
+   "end": "2026-06-30",
+   "label": "Comet invoicing is moving to Stripe Billing"
+  },
+  {
+   "start": "2026-05-11",
+   "end": "2026-06-30",
+   "label": "Jonas takes over Comet while Tom is out"
+  },
+  {
+   "start": "2026-05-07",
+   "end": "2026-05-14",
+   "label": "Aisha's database-alerts task is delayed; new target date is May 15"
+  },
+  {
+   "start": "2026-06-15",
+   "end": "2026-06-30",
+   "label": "Jonas is assigned the Comet runbook, due Jul 10"
+  },
+  {
+   "start": "2026-06-18",
+   "end": "2026-06-30",
+   "label": "Jonas's Comet test-invoice migration is delayed; new target date is Jul 3"
+  }
+ ],
+ "breaks": [
+  {
+   "date": "2026-04-06",
+   "why": "Jonas Weber started as senior backend."
+  },
+  {
+   "date": "2026-06-01",
+   "why": "The group split into Platform and Apps, with new team assignments and Aisha taking ownership of Atlas."
+  }
+ ]
+}

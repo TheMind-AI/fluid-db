@@ -1,0 +1,835 @@
+{
+ "2026-01-05": {
+  "gist": "The Q1 quota is $150k new ARR; Sara Nguyen is the manager and Omar Haddad the sales engineer. A pipeline review with Sara left 1 open deal, and a referral lead came in for Fabrikam: Hannah Weiss, Director of Ops, with about 60 users.",
+  "ids": [
+   1,
+   2,
+   3,
+   4
+  ]
+ },
+ "2026-01-08": {
+  "gist": "The user asked to be reminded later about what they had said.",
+  "ids": [
+   5
+  ]
+ },
+ "2026-01-09": {
+  "gist": "The user asked what was on their plate that day.",
+  "ids": [
+   6
+  ]
+ },
+ "2026-01-12": {
+  "gist": "A discovery call with Hannah at Fabrikam established that they need on-prem deployment; the next step is a demo.",
+  "ids": [
+   7
+  ]
+ },
+ "2026-01-14": {
+  "gist": "The user asked to be reminded later about what they had said. Contoso CFO Mark Liu wants everything in writing, with no verbal commitments.",
+  "ids": [
+   8,
+   9
+  ]
+ },
+ "2026-01-16": {
+  "gist": "Priya Raman at Contoso prefers Slack over email.",
+  "ids": [
+   10
+  ]
+ },
+ "2026-01-19": {
+  "gist": "The user asked what was on their plate that day.",
+  "ids": [
+   11
+  ]
+ },
+ "2026-01-20": {
+  "gist": "A Lumen demo for Fabrikam was scheduled for January 22, 2026, from 14:00 to 15:00, with Hannah Weiss and Omar Haddad attending and Daniel Park organizing.",
+  "ids": [
+   12
+  ]
+ },
+ "2026-01-21": {
+  "gist": "The user asked what was on their plate that day.",
+  "ids": [
+   13
+  ]
+ },
+ "2026-01-22": {
+  "gist": "The Fabrikam demo with Omar was overall positive, though there were many questions about the need for on-prem deployment.",
+  "ids": [
+   14
+  ]
+ },
+ "2026-01-26": {
+  "gist": "A pipeline review with Sara left 1 open deal; the user later replied “ok.”",
+  "ids": [
+   15,
+   16
+  ]
+ },
+ "2026-01-28": {
+  "gist": "The user replied “ok.”",
+  "ids": [
+   17
+  ]
+ },
+ "2026-01-29": {
+  "gist": "Received a referral lead for Lucerne Publishing: Emma Stone (CFO), about 20 users.",
+  "ids": [
+   18
+  ]
+ },
+ "2026-01-30": {
+  "gist": "Sent Fabrikam a proposal for 60 seats at $90,000 ARR, with a target close date of Feb 21, 2026.",
+  "ids": [
+   19
+  ]
+ },
+ "2026-02-03": {
+  "gist": "Sent the message “morning.”",
+  "ids": [
+   20
+  ]
+ },
+ "2026-02-05": {
+  "gist": "Had a discovery call with Emma at Lucerne Publishing; she was worried about SSO, and the next step is a demo.",
+  "ids": [
+   21
+  ]
+ },
+ "2026-02-06": {
+  "gist": "Woodgrove Bank requires on-prem deployment and no cloud at all.",
+  "ids": [
+   22
+  ]
+ },
+ "2026-02-09": {
+  "gist": "Completed a pipeline review with Sara and had 2 open deals. Later said “brb, lunch.”",
+  "ids": [
+   23,
+   24
+  ]
+ },
+ "2026-02-10": {
+  "gist": "Received an inbound lead from Litware: Sven Dahl, Head of BI, with about 60 seats.",
+  "ids": [
+   25
+  ]
+ },
+ "2026-02-11": {
+  "gist": "Received an inbound lead from Contoso: Priya Raman (VP Engineering), about 80 users. Also sent “lol.”",
+  "ids": [
+   26,
+   27
+  ]
+ },
+ "2026-02-13": {
+  "gist": "Received an outbound lead from Proseware: Arjun Mehta (Data Manager), about 60 users. Scheduled a Lumen demo for Lucerne Publishing on 2026-02-17 from 14:00 to 15:00, with Emma Stone and Omar Haddad attending and Daniel Park organizing.",
+  "ids": [
+   28,
+   29,
+   30
+  ]
+ },
+ "2026-02-16": {
+  "gist": "Completed a pipeline review with Sara and had 6 open deals; added outbound lead Alpine Ski House, Lena Fischer (Head of Finance), about 60 users. Sven at Litware was worried about SSO and the next step is a demo; Arjun at Proseware wanted a longer pilot and the next step is a demo. Negotiated Fabrikam’s discount to 15%, bringing ARR to $76,500; Sara approved the one-time discount for a 12-month term only.",
+  "ids": [
+   31,
+   32,
+   33,
+   34,
+   35,
+   36
+  ]
+ },
+ "2026-02-17": {
+  "gist": "The Lucerne Publishing demo went well; Omar showed the dashboards, and the deal moved to demo stage.",
+  "ids": [
+   37
+  ]
+ },
+ "2026-02-18": {
+  "gist": "Had a discovery call with Priya at Contoso; she was concerned about data residency in the EU, and the next step is a demo.",
+  "ids": [
+   38
+  ]
+ },
+ "2026-02-19": {
+  "gist": "Scheduled a Lumen demo for Contoso on February 24, 2026, from 2:00–3:00 PM with Priya Raman and Omar Haddad, organized by Daniel Park. On a discovery call with Lena at Alpine Ski House, learned the price was above their budget; the next step was a demo.",
+  "ids": [
+   39,
+   40
+  ]
+ },
+ "2026-02-20": {
+  "gist": "Sent a thumbs-up.",
+  "ids": [
+   41
+  ]
+ },
+ "2026-02-21": {
+  "gist": "Scheduled a Lumen demo for Litware on February 26, 2026, from 2:00–3:00 PM with Sven Dahl and Omar Haddad, organized by Daniel Park.",
+  "ids": [
+   42
+  ]
+ },
+ "2026-02-24": {
+  "gist": "The Contoso demo with Omar was overall positive, though they had many questions about data residency in the EU. Closed Fabrikam as won for $76,500 ARR.",
+  "ids": [
+   43,
+   44,
+   45
+  ]
+ },
+ "2026-02-25": {
+  "gist": "Sent Lucerne Publishing a proposal for 20 seats at $30,000 ARR, with a target close date of April 3, 2026.",
+  "ids": [
+   46
+  ]
+ },
+ "2026-02-26": {
+  "gist": "Scheduled a Lumen demo for Proseware on March 3, 2026, from 2:00–3:00 PM with Arjun Mehta and Omar Haddad, organized by Daniel Park. The Litware demo with Omar was done, and they liked the alerts.",
+  "ids": [
+   47,
+   48
+  ]
+ },
+ "2026-02-27": {
+  "gist": "Scheduled a Lumen demo for Alpine Ski House on March 3, 2026, from 2:00–3:00 PM with Lena Fischer and Omar Haddad, organized by Daniel Park.",
+  "ids": [
+   49
+  ]
+ },
+ "2026-03-02": {
+  "gist": "Completed a pipeline review with Sara; there were 5 open deals. Sent Contoso a proposal for 80 seats at $120,000 ARR, targeting close on April 8, 2026.",
+  "ids": [
+   50,
+   51,
+   52
+  ]
+ },
+ "2026-03-03": {
+  "gist": "The Alpine Ski House demo went well: Omar showed the dashboards, and the deal moved to demo stage. The Proseware demo with Omar was overall positive, with many questions and a request for a longer pilot.",
+  "ids": [
+   53,
+   54,
+   55
+  ]
+ },
+ "2026-03-04": {
+  "gist": "Asked what was on the day's plate. Litware chose Quantix, so the deal was lost.",
+  "ids": [
+   56,
+   57
+  ]
+ },
+ "2026-03-05": {
+  "gist": "Asked the assistant to forget a note about Fabrikam's layoffs, saying it was confidential.",
+  "ids": [
+   58
+  ]
+ },
+ "2026-03-09": {
+  "gist": "Completed a pipeline review with Sara; there were 5 open deals. Received an outbound lead from Wingtip: Grace Kim, Analytics Lead, with about 20 seats; was negotiating with Lucerne Publishing at no discount for $30,000 ARR.",
+  "ids": [
+   59,
+   60,
+   61,
+   62
+  ]
+ },
+ "2026-03-11": {
+  "gist": "Sent Alpine Ski House a proposal for 60 seats at $90,000 ARR, targeting a close on Apr 14, 2026.",
+  "ids": [
+   63
+  ]
+ },
+ "2026-03-13": {
+  "gist": "Had a discovery call with Grace at Wingtip; their team already uses spreadsheets, and the next step is a demo. Proseware chose DataForge, so the deal was lost.",
+  "ids": [
+   64,
+   65
+  ]
+ },
+ "2026-03-16": {
+  "gist": "Received an inbound lead from Woodgrove Bank: Claire Dubois, CIO, with about 60 users. Completed a pipeline review with Sara (5 open deals) and negotiated with Contoso at $120,000 ARR with no discount.",
+  "ids": [
+   66,
+   67,
+   68
+  ]
+ },
+ "2026-03-17": {
+  "gist": "Negotiated with Alpine Ski House, offering a 5% discount and reducing the ARR to $85,500.",
+  "ids": [
+   69
+  ]
+ },
+ "2026-03-18": {
+  "gist": "Paul Grant, CFO of Wingtip, emailed Daniel Park that Wingtip’s analytics budget is frozen until the Q3 planning cycle and can be revisited in September; the message was acknowledged.",
+  "ids": [
+   70,
+   71
+  ]
+ },
+ "2026-03-20": {
+  "gist": "Asked for a summary of the week and added an outbound lead: Humongous Insurance, Mark Evans (VP Data), with about 80 users.",
+  "ids": [
+   72,
+   73
+  ]
+ },
+ "2026-03-22": {
+  "gist": "Scheduled a Lumen demo for Wingtip on March 26, 2026, from 2:00 to 3:00 PM, with Grace Kim and Omar Haddad.",
+  "ids": [
+   74
+  ]
+ },
+ "2026-03-23": {
+  "gist": "Received a referral lead from Adventure Works: Mia Lopez, COO, with about 20 seats; completed a pipeline review with Sara (7 open deals). Discovery with Claire at Woodgrove Bank identified a need for Salesforce integration, with a demo as the next step.",
+  "ids": [
+   75,
+   76,
+   77
+  ]
+ },
+ "2026-03-25": {
+  "gist": "Received an inbound lead from Munson's Pickles: Dale Munson, Owner, with about 80 seats. Discovery with Mark at Humongous Insurance surfaced concerns about SSO, with a demo as the next step.",
+  "ids": [
+   78,
+   79
+  ]
+ },
+ "2026-03-26": {
+  "gist": "Completed the Wingtip demo with Omar; they liked the alerts.",
+  "ids": [
+   80
+  ]
+ },
+ "2026-03-27": {
+  "gist": "Discovery with Mia at Adventure Works identified a need for Salesforce integration, with a demo as the next step; also added an outbound lead, Bellows College’s James Ward, Director of IR, with about 60 seats. Starting April 1, Daniel will cover EMEA accounts in addition to North America.",
+  "ids": [
+   81,
+   82,
+   83,
+   84
+  ]
+ },
+ "2026-03-29": {
+  "gist": "Scheduled a Lumen demo for Woodgrove Bank on April 2, 2026, from 2:00 to 3:00 PM, with Claire Dubois and Omar Haddad.",
+  "ids": [
+   85
+  ]
+ },
+ "2026-03-30": {
+  "gist": "Received an inbound lead from Pablo Ruiz, Owner of Coho Winery (~40 seats); completed a pipeline review with Sara, with 10 open deals. Discovery call with Dale at Munson's Pickles surfaced interest in a longer pilot, with a demo as the next step.",
+  "ids": [
+   86,
+   87,
+   88
+  ]
+ },
+ "2026-03-31": {
+  "gist": "Scheduled a Lumen demo for Humongous Insurance on 2026-04-02 from 14:00 to 15:00 with Mark Evans and Omar Haddad. Received a Q1 commission statement from comp@lumen.io: the commission rate is 10%, paid with the April payroll; the credited closed-won ARR was in an attachment.",
+  "ids": [
+   89,
+   90,
+   91
+  ]
+ },
+ "2026-04-01": {
+  "gist": "No substantive activity recorded.",
+  "ids": [
+   92
+  ]
+ },
+ "2026-04-02": {
+  "gist": "Received an inbound lead from Nina Petrov, VP Product at Relecloud (~40 users); Pablo at Coho Winery was worried about SSO, and a demo was the next step. Woodgrove Bank and Humongous Insurance demos with Omar were overall positive, with questions about Salesforce integration and SSO, respectively; lost Lucerne Publishing to Quantix at the last step.",
+  "ids": [
+   93,
+   94,
+   95,
+   96,
+   97
+  ]
+ },
+ "2026-04-03": {
+  "gist": "James at Bellows College said the team already uses spreadsheets, and a demo was the next step; scheduled its demo with James Ward and Omar Haddad for 2026-04-07 from 14:00 to 15:00. Also scheduled an Adventure Works demo with Mia Lopez and Omar Haddad for the same date and time, and asked, “what's on my plate today?”",
+  "ids": [
+   98,
+   99,
+   100,
+   101
+  ]
+ },
+ "2026-04-05": {
+  "gist": "Scheduled a Lumen demo for Munson's Pickles with Dale Munson and Omar Haddad on 2026-04-09 from 14:00 to 15:00.",
+  "ids": [
+   102
+  ]
+ },
+ "2026-04-06": {
+  "gist": "Completed a pipeline review with Sara, with 11 open deals; added outbound leads Luis Ortega, Head of Data at Northwind Traders (~60 seats), and Ruth Adler, COO at Consolidated Messenger (~120 seats). Sent Wingtip a proposal for 20 seats at $30,000 ARR, target close May 3, 2026, and Woodgrove Bank a proposal for 60 seats at $90,000 ARR, target close May 8, 2026; lost Contoso to Quantix at the last step.",
+  "ids": [
+   103,
+   104,
+   105,
+   106,
+   107,
+   108
+  ]
+ },
+ "2026-04-07": {
+  "gist": "Sent Humongous Insurance a proposal for 80 seats at $120,000 ARR, target close May 9, 2026. The Bellows College and Adventure Works demos with Omar were completed; both liked the alerts.",
+  "ids": [
+   109,
+   110,
+   111
+  ]
+ },
+ "2026-04-08": {
+  "gist": "Received an inbound lead from Owen Brooks, CTO of Tailspin Toys (~40 seats).",
+  "ids": [
+   112,
+   113
+  ]
+ },
+ "2026-04-09": {
+  "gist": "Nina at Relecloud said they need on-prem deployment, with a demo as the next step. The Munson's Pickles demo went well: Omar showed the dashboards, and the opportunity moved to demo stage.",
+  "ids": [
+   114,
+   115
+  ]
+ },
+ "2026-04-10": {
+  "gist": "Added an outbound lead, Ravi Nair, Director of Analytics at Blue Yonder Airlines (about 40 users). Sent Adventure Works a proposal for 20 seats at $30,000 ARR, target close May 1, 2026.",
+  "ids": [
+   116,
+   117
+  ]
+ },
+ "2026-04-11": {
+  "gist": "Scheduled a Lumen demo for Coho Winery with Pablo Ruiz and Omar Haddad on 2026-04-14 from 14:00 to 15:00.",
+  "ids": [
+   118
+  ]
+ },
+ "2026-04-13": {
+  "gist": "Received a VanArsdel referral for Tom Hale, Head of IT, at about 20 seats; completed a pipeline review with Sara (13 open deals) and discovery calls with Luis at Northwind Traders (SSO concern), Ruth at Consolidated Messenger (on-prem deployment), and Owen at Tailspin Toys (team uses spreadsheets), each with a demo as the next step. Negotiated Woodgrove Bank at $90,000 ARR with no discount and Wingtip at $28,500 ARR with a 5% discount; Alpine Ski House signed for $85,500 ARR, and a 60-seat, $90,000 ARR proposal went to Bellows College with a May 3, 2026 target close.",
+  "ids": [
+   119,
+   120,
+   121,
+   122,
+   123,
+   124,
+   125,
+   126,
+   127
+  ]
+ },
+ "2026-04-14": {
+  "gist": "Held a discovery call with Ravi at Blue Yonder Airlines; price was above budget and a demo was the next step. Omar’s Coho Winery demo drew lots of questions about SSO and was overall positive.",
+  "ids": [
+   128,
+   129
+  ]
+ },
+ "2026-04-15": {
+  "gist": "Received a referral lead for Southridge Video: Carlos Vega, CTO, with about 40 users.",
+  "ids": [
+   130
+  ]
+ },
+ "2026-04-16": {
+  "gist": "Scheduled a Lumen demo for Relecloud on April 21, 2026, 2:00–3:00 PM, with Nina Petrov and Omar Haddad; Daniel Park organized it.",
+  "ids": [
+   131
+  ]
+ },
+ "2026-04-17": {
+  "gist": "Sent Munson's Pickles a proposal for 80 seats at $120,000 ARR, targeting close on May 24, 2026.",
+  "ids": [
+   132
+  ]
+ },
+ "2026-04-18": {
+  "gist": "Scheduled a Lumen demo for Tailspin Toys on April 21, 2026, 2:00–3:00 PM, with Owen Brooks and Omar Haddad; Daniel Park organized it.",
+  "ids": [
+   133
+  ]
+ },
+ "2026-04-19": {
+  "gist": "Scheduled Lumen demos for Northwind Traders and Consolidated Messenger on April 23, 2026, both from 2:00–3:00 PM, with Omar Haddad and, respectively, Luis Ortega and Ruth Adler; Daniel Park organized both.",
+  "ids": [
+   134,
+   135
+  ]
+ },
+ "2026-04-20": {
+  "gist": "Received notice that Lumen’s list price will rise from $1,500 to $1,800 per seat per year on May 1, while proposals sent before then keep the old price for 60 days; completed a pipeline review with Sara (14 open deals). Tom at VanArsdel said price was above budget on a discovery call, with a demo as the next step.",
+  "ids": [
+   136,
+   137,
+   138,
+   139
+  ]
+ },
+ "2026-04-21": {
+  "gist": "Received an inbound lead from Datum Corp: Aiko Sato, Head of Analytics, with about 60 users. Omar’s Relecloud demo drew lots of questions about on-prem deployment and was overall positive; his Tailspin Toys demo also went well, with questions about the team’s use of spreadsheets.",
+  "ids": [
+   140,
+   141,
+   142
+  ]
+ },
+ "2026-04-22": {
+  "gist": "Carlos at Southridge Video said they need Salesforce integration on a discovery call, with a demo as the next step; negotiated Humongous Insurance to $102,000 ARR with a 15% discount and Bellows College to $76,500 ARR with a 15% discount. Sara approved each discount once, for a 12-month term only.",
+  "ids": [
+   143,
+   144,
+   145,
+   146,
+   147
+  ]
+ },
+ "2026-04-23": {
+  "gist": "Sent Coho Winery a 40-seat proposal for $60,000 ARR targeting May 13, 2026, and scheduled a Blue Yonder Airlines demo with Ravi Nair and Omar Haddad for April 28, 2026, 2:00–3:00 PM. Negotiated Adventure Works to $25,500 ARR with a 15% discount, later approved by Sara once for a 12-month term only; the Northwind Traders demo with Omar went well and they liked the alerts, while the Consolidated Messenger demo went well, showed dashboards, and moved to demo stage.",
+  "ids": [
+   148,
+   149,
+   150,
+   151,
+   152,
+   153,
+   154
+  ]
+ },
+ "2026-04-24": {
+  "gist": "Scheduled a Lumen demo for Southridge Video with Carlos Vega and Omar Haddad on April 28, 2026, 2:00–3:00 PM; Daniel Park organized it.",
+  "ids": [
+   155
+  ]
+ },
+ "2026-04-25": {
+  "gist": "Adventure Works’ close date slipped to May 18, 2026, due to legal review.",
+  "ids": [
+   156
+  ]
+ },
+ "2026-04-27": {
+  "gist": "Daniel completed a pipeline review with Sara, with 15 open deals. He scheduled a Lumen demo for VanArsdel on April 30, 2026, with Tom Hale and Omar Haddad; discussed Salesforce integration with Aiko at Datum Corp and agreed the next step was a demo; sent proposals to Northwind Traders (60 seats, $90,000 ARR, target close May 24, 2026) and Tailspin Toys (40 seats, $60,000 ARR, target close May 28, 2026); and negotiated with Munson’s Pickles at $120,000 ARR with no discount.",
+  "ids": [
+   157,
+   158,
+   159,
+   160,
+   161,
+   162
+  ]
+ },
+ "2026-04-28": {
+  "gist": "Blue Yonder Airlines’ demo went well, with Omar showing the dashboards, and the deal moved to demo stage; Southridge Video’s demo with Omar was overall positive, though they had many questions about Salesforce integration. Coho Winery’s terms were negotiated to a 15% discount and $51,000 ARR, and Sara approved the discount as one-time for a 12-month term only.",
+  "ids": [
+   163,
+   164,
+   165,
+   166
+  ]
+ },
+ "2026-04-29": {
+  "gist": "Munson’s Pickles’ close date slipped to June 19, 2026, due to legal review. Daniel sent Relecloud a proposal for 40 seats and $60,000 ARR, targeting May 31, 2026, and lost Wingtip to Quantix at the last step.",
+  "ids": [
+   167,
+   168,
+   169
+  ]
+ },
+ "2026-04-30": {
+  "gist": "VanArsdel’s demo went well, with Omar showing the dashboards, and the deal moved to demo stage.",
+  "ids": [
+   170,
+   171
+  ]
+ },
+ "2026-05-01": {
+  "gist": "No notable business update was recorded.",
+  "ids": [
+   172
+  ]
+ },
+ "2026-05-02": {
+  "gist": "Daniel scheduled a Lumen demo for Datum Corp on May 5, 2026, with Aiko Sato and Omar Haddad.",
+  "ids": [
+   173
+  ]
+ },
+ "2026-05-04": {
+  "gist": "Daniel completed a pipeline review with Sara, with 14 open deals. He sent proposals to Blue Yonder Airlines (40 seats, $60,000 ARR, target close June 9, 2026) and Consolidated Messenger (120 seats, $180,000 ARR, target close June 10, 2026), and negotiated Tailspin Toys to a 5% discount and $57,000 ARR.",
+  "ids": [
+   174,
+   175,
+   176,
+   177,
+   178
+  ]
+ },
+ "2026-05-05": {
+  "gist": "Daniel negotiated Northwind Traders at $90,000 ARR with no discount; Datum Corp’s demo with Omar was overall positive despite many questions about Salesforce integration. Woodgrove Bank closed won at $90,000 ARR.",
+  "ids": [
+   179,
+   180,
+   181
+  ]
+ },
+ "2026-05-06": {
+  "gist": "Daniel asked for a summary of the week.",
+  "ids": [
+   182
+  ]
+ },
+ "2026-05-08": {
+  "gist": "Daniel sent proposals to VanArsdel (20 seats, $30,000 ARR, target close June 9, 2026) and Southridge Video (40 seats, $60,000 ARR, target close June 3, 2026).",
+  "ids": [
+   183,
+   184,
+   185
+  ]
+ },
+ "2026-05-11": {
+  "gist": "Daniel completed a pipeline review with Sara, with 11 open deals. He negotiated Consolidated Messenger to a 15% discount and $153,000 ARR, with Sara approving it as one-time for a 12-month term only; sent Datum Corp a proposal for 60 seats and $90,000 ARR, targeting June 15, 2026; and set a reminder to send Tailspin the case study by May 15. He lost Humongous Insurance to DataForge at the last step and closed Coho Winery won at $51,000 ARR.",
+  "ids": [
+   186,
+   187,
+   188,
+   189,
+   190,
+   191,
+   192
+  ]
+ },
+ "2026-05-12": {
+  "gist": "Received a new inbound lead from Trey Research: Yuki Tanaka, Research Lead, for about 60 users.",
+  "ids": [
+   193
+  ]
+ },
+ "2026-05-13": {
+  "gist": "Negotiated a one-time 15% discount for VanArsdel, bringing the price to $25,500 ARR; Sara Nguyen approved it for a 12-month term only.",
+  "ids": [
+   194,
+   195
+  ]
+ },
+ "2026-05-14": {
+  "gist": "Negotiated a one-time 10% discount for Relecloud, bringing the price to $54,000 ARR; Sara Nguyen approved it for a 12-month term only. Adventure Works signed for $25,500 ARR, and a case study was sent to Tailspin.",
+  "ids": [
+   196,
+   197,
+   198,
+   199
+  ]
+ },
+ "2026-05-15": {
+  "gist": "Negotiated with Blue Yonder Airlines at $60,000 ARR with no discount, then asked for a summary of the week.",
+  "ids": [
+   200,
+   201
+  ]
+ },
+ "2026-05-17": {
+  "gist": "Blue Yonder Airlines’ close date slipped to Jun 30, 2026, due to legal review.",
+  "ids": [
+   202
+  ]
+ },
+ "2026-05-18": {
+  "gist": "Completed a pipeline review with Sara and had 10 open deals; lost Bellows College to Quantix at the last step. Mentioned taking a lunch break.",
+  "ids": [
+   203,
+   204,
+   205
+  ]
+ },
+ "2026-05-19": {
+  "gist": "Negotiated a one-time 15% discount for Southridge Video, bringing the price to $51,000 ARR; Sara Nguyen approved it for a 12-month term only. On a discovery call, Yuki at Trey Research said the price was above their budget, and the next step was a demo.",
+  "ids": [
+   206,
+   207,
+   208,
+   209
+  ]
+ },
+ "2026-05-20": {
+  "gist": "Asked what was on the agenda for the day.",
+  "ids": [
+   210
+  ]
+ },
+ "2026-05-21": {
+  "gist": "Southridge Video’s close date slipped to Jun 25, 2026, due to legal review.",
+  "ids": [
+   211
+  ]
+ },
+ "2026-05-22": {
+  "gist": "Negotiated a one-time 10% discount for Datum Corp, bringing the price to $81,000 ARR; Sara Nguyen approved it for a 12-month term only.",
+  "ids": [
+   212,
+   213
+  ]
+ },
+ "2026-05-25": {
+  "gist": "Completed a pipeline review with Sara and had 8 open deals. Tailspin Toys signed for $57,000 ARR, and Northwind Traders closed won for $90,000 ARR.",
+  "ids": [
+   214,
+   215,
+   216
+  ]
+ },
+ "2026-05-27": {
+  "gist": "Sent a brief acknowledgment: “ok.”",
+  "ids": [
+   217
+  ]
+ },
+ "2026-05-29": {
+  "gist": "Received inbound leads from Nate Cole, VP Ops at Fourth Coffee (~80 seats), and Sofia Rossi, Supply Chain Lead at Wide World Importers (~120 seats).",
+  "ids": [
+   218,
+   219
+  ]
+ },
+ "2026-05-31": {
+  "gist": "Scheduled a Lumen demo for Trey Research on June 2, 2026, from 14:00 to 15:00, with Yuki Tanaka and Omar Haddad; Daniel Park organized it.",
+  "ids": [
+   220
+  ]
+ },
+ "2026-06-01": {
+  "gist": "Completed a pipeline review with Sara: 9 open deals. Discovery calls with Nate at Fourth Coffee (concerned about SSO) and Sofia at Wide World Importers (needs Salesforce integration) both ended with a demo as the next step; Relecloud was lost to Quantix at the last step.",
+  "ids": [
+   221,
+   222,
+   223,
+   224
+  ]
+ },
+ "2026-06-02": {
+  "gist": "Completed the Trey Research demo with Omar; they liked the alerts. The user noted, “nice.”",
+  "ids": [
+   225,
+   226
+  ]
+ },
+ "2026-06-04": {
+  "gist": "VanArsdel signed for $25,500 ARR.",
+  "ids": [
+   227,
+   228
+  ]
+ },
+ "2026-06-05": {
+  "gist": "Lost Consolidated Messenger to Quantix at the last step.",
+  "ids": [
+   229
+  ]
+ },
+ "2026-06-08": {
+  "gist": "Completed a pipeline review with Sara: 7 open deals, and scheduled a Lumen demo for Fourth Coffee on June 11, 2026, from 14:00 to 15:00, with Nate Cole and Omar Haddad. Sent Trey Research a proposal for 60 seats at $108,000 ARR, with a target close of Jul 13, 2026.",
+  "ids": [
+   230,
+   231,
+   232
+  ]
+ },
+ "2026-06-11": {
+  "gist": "Asked for a reminder of what had been discussed; later completed the Fourth Coffee demo with Omar. There were lots of questions about SSO, but the overall reaction was positive.",
+  "ids": [
+   233,
+   234
+  ]
+ },
+ "2026-06-12": {
+  "gist": "Scheduled a Lumen demo for Wide World Importers on June 16, 2026, from 14:00 to 15:00, with Sofia Rossi and Omar Haddad. Datum Corp signed for $81,000 ARR.",
+  "ids": [
+   235,
+   236
+  ]
+ },
+ "2026-06-15": {
+  "gist": "Completed a pipeline review with Sara: 6 open deals.",
+  "ids": [
+   237
+  ]
+ },
+ "2026-06-16": {
+  "gist": "Sent Fourth Coffee a proposal for 80 seats at $144,000 ARR, with a target close of Jul 24, 2026. Completed the Wide World Importers demo with Omar; they liked the alerts.",
+  "ids": [
+   238,
+   239
+  ]
+ },
+ "2026-06-17": {
+  "gist": "Negotiated with Trey Research: a 5% discount brought the proposal to $102,600 ARR.",
+  "ids": [
+   240
+  ]
+ },
+ "2026-06-18": {
+  "gist": "Munson's Pickles signed a deal worth $120,000 ARR.",
+  "ids": [
+   241
+  ]
+ },
+ "2026-06-22": {
+  "gist": "Completed a pipeline review with Sara, with 4 open deals. Negotiated with Fourth Coffee at $144,000 ARR with no discount, owed Woodgrove Bank a security questionnaire by Jul 2, and Southridge Video signed for $51,000 ARR.",
+  "ids": [
+   242,
+   243,
+   244,
+   245
+  ]
+ },
+ "2026-06-23": {
+  "gist": "No notable update; the message was “ok.”",
+  "ids": [
+   246
+  ]
+ },
+ "2026-06-24": {
+  "gist": "Sent Wide World Importers a proposal for 120 seats at $216,000 ARR, targeting close on Jul 24, 2026.",
+  "ids": [
+   247
+  ]
+ },
+ "2026-06-25": {
+  "gist": "Blue Yonder Airlines signed for $60,000 ARR. A Fabrikam onboarding check-in with Hannah Weiss was scheduled for Jul 6, 2026, 11:00–11:30; the other messages were “morning.”",
+  "ids": [
+   248,
+   249,
+   250
+  ]
+ },
+ "2026-06-26": {
+  "gist": "The message was “lol.”",
+  "ids": [
+   251
+  ]
+ },
+ "2026-06-29": {
+  "gist": "Completed a pipeline review with Sara, with 3 open deals.",
+  "ids": [
+   252
+  ]
+ },
+ "2026-06-30": {
+  "gist": "The message was “lol.”",
+  "ids": [
+   253
+  ]
+ }
+}

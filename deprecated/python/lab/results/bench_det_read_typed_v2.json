@@ -1,0 +1,2180 @@
+{
+ "summary": {
+  "deterministic_accuracy": 0.7333,
+  "wall_p50_s": 0.01,
+  "wall_p90_s": 0.013,
+  "cost_per_question": 0.000419,
+  "speculation_hit_rate": 0.767,
+  "luna_agent_accuracy": 0.8167,
+  "sol_agent_accuracy": 0.9167,
+  "by_threshold": [
+   {
+    "threshold": 0.0,
+    "answered_without_llm": 52,
+    "accuracy_of_those": 0.7885,
+    "hybrid_accuracy_with_luna_agent_fallback": 0.8
+   },
+   {
+    "threshold": 0.2,
+    "answered_without_llm": 45,
+    "accuracy_of_those": 0.8222,
+    "hybrid_accuracy_with_luna_agent_fallback": 0.8083
+   },
+   {
+    "threshold": 0.3,
+    "answered_without_llm": 41,
+    "accuracy_of_those": 0.8415,
+    "hybrid_accuracy_with_luna_agent_fallback": 0.8167
+   },
+   {
+    "threshold": 0.4,
+    "answered_without_llm": 31,
+    "accuracy_of_those": 0.8548,
+    "hybrid_accuracy_with_luna_agent_fallback": 0.825
+   },
+   {
+    "threshold": 0.5,
+    "answered_without_llm": 21,
+    "accuracy_of_those": 0.8571,
+    "hybrid_accuracy_with_luna_agent_fallback": 0.8417
+   },
+   {
+    "threshold": 0.6,
+    "answered_without_llm": 17,
+    "accuracy_of_those": 0.8824,
+    "hybrid_accuracy_with_luna_agent_fallback": 0.825
+   },
+   {
+    "threshold": 0.7,
+    "answered_without_llm": 15,
+    "accuracy_of_those": 0.8667,
+    "hybrid_accuracy_with_luna_agent_fallback": 0.8167
+   },
+   {
+    "threshold": 0.8,
+    "answered_without_llm": 11,
+    "accuracy_of_those": 0.8182,
+    "hybrid_accuracy_with_luna_agent_fallback": 0.8167
+   }
+  ],
+  "by_verifier": [
+   {
+    "threshold": 0.5,
+    "answered_without_llm": 46,
+    "accuracy_of_those": 0.8587,
+    "hybrid_accuracy_with_luna_agent_fallback": 0.825
+   },
+   {
+    "threshold": 0.6,
+    "answered_without_llm": 46,
+    "accuracy_of_those": 0.8587,
+    "hybrid_accuracy_with_luna_agent_fallback": 0.825
+   },
+   {
+    "threshold": 0.7,
+    "answered_without_llm": 43,
+    "accuracy_of_those": 0.8488,
+    "hybrid_accuracy_with_luna_agent_fallback": 0.8083
+   },
+   {
+    "threshold": 0.8,
+    "answered_without_llm": 35,
+    "accuracy_of_those": 0.8571,
+    "hybrid_accuracy_with_luna_agent_fallback": 0.825
+   },
+   {
+    "threshold": 0.9,
+    "answered_without_llm": 11,
+    "accuracy_of_those": 0.8636,
+    "hybrid_accuracy_with_luna_agent_fallback": 0.825
+   }
+  ],
+  "by_category": {
+   "aggregation": 0.571,
+   "current": 0.909,
+   "forgotten": 0.5,
+   "history": 0.812,
+   "relationships": 0.6,
+   "semi_structured": 1.0,
+   "status": 0.7,
+   "temporal": 0.857,
+   "unanswerable": 0.5
+  }
+ },
+ "results": [
+  {
+   "answer": "+1 415 555 0199 — 2026-04-10T12:19 {\"person\": \"Adam Zvada\", \"type\": \"phone\", \"value\": \"+1 415 555 0199\", \"is_primary\": 1}",
+   "table": "contact_methods",
+   "column": "value",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "type": "phone"
+   },
+   "period": "all",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "contact_methods",
+     "filters": {
+      "person_id": "Adam Zvada",
+      "type": "phone"
+     },
+     "period": "all",
+     "rows": 2
+    }
+   ],
+   "verified": 0.87,
+   "op": "latest",
+   "confidence": 0.89,
+   "speculation_hit": true,
+   "question": "What is my phone number?",
+   "gold": "+1 415 555 0199",
+   "category": "current",
+   "score": 1.0,
+   "wall_s": 0.008,
+   "jev_s": 0.557
+  },
+  {
+   "answer": "+420 777 999 000 — 2026-02-10T19:00 {\"person\": \"Tom Novak\", \"type\": \"phone\", \"value\": \"+420 777 999 000\"}",
+   "table": "contact_methods",
+   "column": "value",
+   "filters": {
+    "person_id": "Tom Novak",
+    "type": "phone"
+   },
+   "period": "all",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "contact_methods",
+     "filters": {
+      "person_id": "Tom Novak",
+      "type": "phone"
+     },
+     "period": "all",
+     "rows": 1
+    }
+   ],
+   "verified": 0.89,
+   "op": "latest",
+   "confidence": 0.92,
+   "speculation_hit": true,
+   "question": "What is Tom's phone number?",
+   "gold": "+420 777 999 000",
+   "category": "current",
+   "score": 1.0,
+   "wall_s": 0.01,
+   "jev_s": 0.557
+  },
+  {
+   "answer": "1450 Valencia St — 2026-04-01 {\"address\": \"1450 Valencia St\", \"start_date\": \"2026-04-01\", \"rent_amount\": 3200.0, \"currency\": \"USD\", \"billing_period\": \"monthly\", \"rent_due_day\": 1, \"security_deposit\": 4800.0, \"person\": \"Raj Gupta\", \"move_in_date\": \"2026-04-01\"}",
+   "table": "leases",
+   "column": "address",
+   "filters": {},
+   "period": "all",
+   "relaxed": 1,
+   "steps": [
+    {
+     "table": "leases",
+     "filters": {
+      "person_id": "Adam Zvada"
+     },
+     "period": "all",
+     "rows": 0
+    },
+    {
+     "table": "leases",
+     "filters": {},
+     "period": "all",
+     "rows": 1
+    }
+   ],
+   "verified": 0.81,
+   "op": "latest",
+   "confidence": 0.28,
+   "speculation_hit": false,
+   "question": "Where do I live?",
+   "gold": "1450 Valencia St, San Francisco",
+   "category": "current",
+   "score": 0.5,
+   "wall_s": 0.011,
+   "jev_s": 0.557
+  },
+  {
+   "answer": "Gensler — 2026-05-04T19:42 {\"person\": \"Eva\", \"organization\": \"Gensler\", \"role\": \"employee\"}",
+   "table": "organization_memberships",
+   "column": "organization_id",
+   "filters": {
+    "person_id": "Eva"
+   },
+   "period": "all",
+   "relaxed": 2,
+   "steps": [
+    {
+     "table": "people",
+     "filters": {
+      "name": "Eva",
+      "relationship": "fiancée"
+     },
+     "period": "all",
+     "rows": 0
+    },
+    {
+     "table": "people",
+     "filters": {
+      "name": "Eva"
+     },
+     "period": "all",
+     "rows": 0
+    },
+    {
+     "table": "organization_memberships",
+     "filters": {
+      "person_id": "Eva"
+     },
+     "period": "all",
+     "rows": 2
+    }
+   ],
+   "verified": 0.82,
+   "op": "latest",
+   "confidence": 0.0,
+   "speculation_hit": true,
+   "question": "Where does Eva (my partner) work?",
+   "gold": "Gensler",
+   "category": "current",
+   "score": 1.0,
+   "wall_s": 0.007,
+   "jev_s": 0.557
+  },
+  {
+   "answer": "London — 2026-06-10T20:01 {\"name\": \"Klára\", \"relationship\": \"sister\", \"birthday\": \"12-02\", \"residence\": \"London\", \"job_details\": \"new job\"}",
+   "table": "people",
+   "column": "residence",
+   "filters": {
+    "name": "Klára",
+    "relationship": "sister"
+   },
+   "period": "all",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "people",
+     "filters": {
+      "name": "Klára",
+      "relationship": "sister"
+     },
+     "period": "all",
+     "rows": 1
+    }
+   ],
+   "verified": 0.9,
+   "op": "latest",
+   "confidence": 0.76,
+   "speculation_hit": true,
+   "question": "Where does my sister Klára live?",
+   "gold": "London",
+   "category": "current",
+   "score": 1.0,
+   "wall_s": 0.011,
+   "jev_s": 0.557
+  },
+  {
+   "answer": "110.0 — 2026-04-03T18:12 {\"person\": \"Adam Zvada\", \"place\": \"Mission Cliffs\", \"category\": \"climbing gym\", \"amount\": 110.0, \"currency\": \"USD\", \"billing_period\": \"monthly\", \"status\": \"active\"}",
+   "table": "memberships",
+   "column": "amount",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "climbing gym",
+    "status": "active"
+   },
+   "period": "all",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "memberships",
+     "filters": {
+      "person_id": "Adam Zvada",
+      "category": "climbing gym",
+      "status": "active"
+     },
+     "period": "all",
+     "rows": 1
+    }
+   ],
+   "verified": 0.91,
+   "op": "latest",
+   "confidence": 0.33,
+   "speculation_hit": true,
+   "question": "Which climbing gym am I a member of, and what does it cost?",
+   "gold": "Mission Cliffs ($110/month)",
+   "category": "current",
+   "score": 1.0,
+   "wall_s": 0.011,
+   "jev_s": 0.557
+  },
+  {
+   "answer": "The Three-Body Problem — 2026-07-27T22:00 {\"title\": \"The Three-Body Problem\", \"author\": \"Liu Cixin\"}",
+   "table": "books",
+   "column": "title",
+   "filters": {},
+   "period": "all",
+   "relaxed": 1,
+   "steps": [
+    {
+     "table": "books",
+     "filters": {},
+     "period": "in:2026-09",
+     "rows": 0
+    },
+    {
+     "table": "books",
+     "filters": {},
+     "period": "all",
+     "rows": 13
+    }
+   ],
+   "verified": 0.67,
+   "op": "latest",
+   "confidence": 0.552,
+   "speculation_hit": true,
+   "question": "What book am I reading right now?",
+   "gold": "The Three-Body Problem",
+   "category": "current",
+   "score": 1.0,
+   "wall_s": 0.008,
+   "jev_s": 0.471
+  },
+  {
+   "answer": "+1 628 688 4995 — 2026-08-20T10:04 {\"person\": \"David Mokos\", \"type\": \"phone\", \"value\": \"+1 628 688 4995\"}",
+   "table": "contact_methods",
+   "column": "value",
+   "filters": {
+    "person_id": "David Mokos",
+    "type": "phone"
+   },
+   "period": "all",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "contact_methods",
+     "filters": {
+      "person_id": "David Mokos",
+      "type": "phone"
+     },
+     "period": "all",
+     "rows": 2
+    }
+   ],
+   "verified": 0.88,
+   "op": "latest",
+   "confidence": 0.95,
+   "speculation_hit": true,
+   "question": "What is David's US phone number?",
+   "gold": "+1 628 688 4995 (corrected from +1 628 688 4994)",
+   "category": "current",
+   "score": 1.0,
+   "wall_s": 0.01,
+   "jev_s": 0.471
+  },
+  {
+   "answer": "engagement — 2026-07-12 {\"person\": \"Eva\", \"category\": \"engagement\", \"date\": \"2026-07-12\"}",
+   "table": "interactions",
+   "column": "category",
+   "filters": {
+    "person_id": "Eva"
+   },
+   "period": "all",
+   "relaxed": 1,
+   "steps": [
+    {
+     "table": "interactions",
+     "filters": {
+      "person_id": "Eva"
+     },
+     "period": "in:2026-09",
+     "rows": 0
+    },
+    {
+     "table": "interactions",
+     "filters": {
+      "person_id": "Eva"
+     },
+     "period": "all",
+     "rows": 1
+    }
+   ],
+   "verified": 0.85,
+   "op": "latest",
+   "confidence": 0.368,
+   "speculation_hit": true,
+   "question": "What is my relationship with Eva now?",
+   "gold": "Engaged: she is my fiancée (since Jul 12, 2026)",
+   "category": "current",
+   "score": 1.0,
+   "wall_s": 0.009,
+   "jev_s": 0.471
+  },
+  {
+   "answer": "2026-08-15T11:35:00 — 2026-01-12T10:27 {\"person\": \"Oscar Lind\", \"organization\": \"Nebula\", \"role\": \"product manager\", \"valid_to\": \"2026-08-15T11:35:00\"}",
+   "table": "organization_memberships",
+   "column": "valid_to",
+   "filters": {
+    "person_id": "Oscar Lind",
+    "organization_id": "Nebula"
+   },
+   "period": "all",
+   "relaxed": 1,
+   "steps": [
+    {
+     "table": "organization_memberships",
+     "filters": {
+      "person_id": "Oscar Lind",
+      "organization_id": "Nebula"
+     },
+     "period": "in:2026-09",
+     "rows": 0
+    },
+    {
+     "table": "organization_memberships",
+     "filters": {
+      "person_id": "Oscar Lind",
+      "organization_id": "Nebula"
+     },
+     "period": "all",
+     "rows": 1
+    }
+   ],
+   "verified": 0.78,
+   "op": "latest",
+   "confidence": 0.456,
+   "speculation_hit": false,
+   "question": "Is Oscar Lind still at Nebula?",
+   "gold": "No, he left on Aug 15, 2026 to join Stripe as a PM",
+   "category": "current",
+   "score": 0.5,
+   "wall_s": 0.012,
+   "jev_s": 0.381
+  },
+  {
+   "answer": "Lease for 1450 Valencia St starts 2026-04-01. Rent $3,200 per month, due on the 1st. Security deposit $4,800. Raj Gupta invited Adam to call anytime at +1 415 555 0187. — 2026-03-20T16:12 {\"from_email\": \"raj.gupta@gmail.com\", \"to_email\": \"adam@nebula.ai\", \"subject\": \"Lease for 1450 Valencia St\", \"datetime\": \"2026-03-20T16:12\", \"body_details\": \"Lease for 1450 Valencia St starts 2026-04-01. Rent $3,200 per month, due on the 1st. Security deposit $4,800. Raj Gupta invited Adam to call a",
+   "table": "emails",
+   "column": "body_details",
+   "filters": {
+    "subject": "Lease for 1450 Valencia St",
+    "body_details": "Lease for 1450 Valencia St starts 2026-04-01. Rent $3,200 per month, due on the 1st. Security deposit $4,800. Raj Gupta invited Adam to call anytime at +1 415 555 0187."
+   },
+   "period": "all",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "emails",
+     "filters": {
+      "subject": "Lease for 1450 Valencia St",
+      "body_details": "Lease for 1450 Valencia St starts 2026-04-01. Rent $3,200 per month, due on the 1st. Security deposit $4,800. Raj Gupta invited Adam to call anytime at +1 415 555 0187."
+     },
+     "period": "all",
+     "rows": 1
+    }
+   ],
+   "verified": 0.81,
+   "op": "latest",
+   "confidence": 0.0,
+   "speculation_hit": false,
+   "question": "How much is my rent and who is my landlord?",
+   "gold": "$3,200/month; landlord Raj Gupta (+1 415 555 0187)",
+   "category": "current",
+   "score": 1.0,
+   "wall_s": 0.008,
+   "jev_s": 0.381
+  },
+  {
+   "answer": "+420 722 238 738 — 2026-04-10T12:19 {\"person\": \"Adam Zvada\", \"type\": \"phone\", \"value\": \"+420 722 238 738\", \"valid_to\": \"2026-04-10T12:19:00\"}",
+   "table": "contact_methods",
+   "column": "value",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "type": "phone"
+   },
+   "period": "all",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "contact_methods",
+     "filters": {
+      "person_id": "Adam Zvada",
+      "type": "phone"
+     },
+     "period": "all",
+     "rows": 2
+    }
+   ],
+   "verified": 0.71,
+   "op": "previous",
+   "confidence": 0.7,
+   "speculation_hit": true,
+   "question": "What was my phone number before my current one?",
+   "gold": "+420 722 238 738",
+   "category": "history",
+   "score": 1.0,
+   "wall_s": 0.01,
+   "jev_s": 0.381
+  },
+  {
+   "answer": "+420 777 123 456 (before: {\"person\": \"Tom Novak\", \"type\": \"phone\", \"value\": \"+420 777 999 000\"})",
+   "table": "contact_methods",
+   "column": "value",
+   "filters": {
+    "person_id": "Tom Novak",
+    "type": "phone"
+   },
+   "period": "all",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "contact_methods",
+     "filters": {
+      "person_id": "Tom Novak",
+      "type": "phone"
+     },
+     "period": "all",
+     "rows": 1
+    }
+   ],
+   "verified": 0.72,
+   "op": "previous",
+   "confidence": 0.72,
+   "speculation_hit": true,
+   "question": "What was Tom's previous phone number?",
+   "gold": "+420 777 123 456",
+   "category": "history",
+   "score": 1.0,
+   "wall_s": 0.009,
+   "jev_s": 0.381
+  },
+  {
+   "answer": "Smíchoff — 2026-03-31 {\"person\": \"Adam Zvada\", \"place\": \"Smíchoff\", \"category\": \"climbing gym\", \"amount\": 1190.0, \"currency\": \"CZK\", \"billing_period\": \"monthly\", \"status\": \"ended\", \"end_date\": \"2026-03-31\", \"valid_to\": \"2026-04-03T18:12:00\"}",
+   "table": "memberships",
+   "column": "place_id",
+   "filters": {
+    "person_id": "Adam Zvada"
+   },
+   "period": "all",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "memberships",
+     "filters": {
+      "person_id": "Adam Zvada"
+     },
+     "period": "all",
+     "rows": 2
+    }
+   ],
+   "verified": 0.14,
+   "op": "previous",
+   "confidence": 0.31,
+   "speculation_hit": false,
+   "question": "Where did I live before San Francisco?",
+   "gold": "Prague",
+   "category": "history",
+   "score": 0.5,
+   "wall_s": 0.011,
+   "jev_s": 0.813
+  },
+  {
+   "answer": "Studio Kvadrat — 2025-10-06T20:12 {\"person\": \"Eva\", \"organization\": \"Studio Kvadrat\", \"role\": \"architect\", \"valid_to\": \"2026-05-04T19:42:00\"}",
+   "table": "organization_memberships",
+   "column": "organization_id",
+   "filters": {
+    "person_id": "Eva"
+   },
+   "period": "all",
+   "relaxed": 2,
+   "steps": [
+    {
+     "table": "people",
+     "filters": {
+      "name": "Eva",
+      "job_details": "Joining Stripe as a PM; left Nebula on 2026-08-15"
+     },
+     "period": "all",
+     "rows": 0
+    },
+    {
+     "table": "people",
+     "filters": {
+      "name": "Eva"
+     },
+     "period": "all",
+     "rows": 0
+    },
+    {
+     "table": "organization_memberships",
+     "filters": {
+      "person_id": "Eva"
+     },
+     "period": "all",
+     "rows": 2
+    }
+   ],
+   "verified": 0.4,
+   "op": "previous",
+   "confidence": 0.0,
+   "speculation_hit": true,
+   "question": "Where did Eva work before her current job?",
+   "gold": "Studio Kvadrat",
+   "category": "history",
+   "score": 1.0,
+   "wall_s": 0.01,
+   "jev_s": 0.346
+  },
+  {
+   "answer": "Berlin (before: {\"name\": \"Klára\", \"relationship\": \"sister\", \"birthday\": \"12-02\", \"residence\": \"London\", \"job_details\": \"new job\"})",
+   "table": "people",
+   "column": "residence",
+   "filters": {
+    "name": "Klára"
+   },
+   "period": "all",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "people",
+     "filters": {
+      "name": "Klára"
+     },
+     "period": "all",
+     "rows": 1
+    }
+   ],
+   "verified": 0.62,
+   "op": "previous",
+   "confidence": 0.45,
+   "speculation_hit": true,
+   "question": "Where did Klára live before?",
+   "gold": "Berlin",
+   "category": "history",
+   "score": 1.0,
+   "wall_s": 0.007,
+   "jev_s": 0.346
+  },
+  {
+   "answer": "2026-04-01 — 2026-04-01 {\"address\": \"1450 Valencia St\", \"start_date\": \"2026-04-01\", \"rent_amount\": 3200.0, \"currency\": \"USD\", \"billing_period\": \"monthly\", \"rent_due_day\": 1, \"security_deposit\": 4800.0, \"person\": \"Raj Gupta\", \"move_in_date\": \"2026-04-01\"}",
+   "table": "leases",
+   "column": "move_in_date",
+   "filters": {},
+   "period": "all",
+   "relaxed": 1,
+   "steps": [
+    {
+     "table": "leases",
+     "filters": {
+      "person_id": "Adam Zvada"
+     },
+     "period": "all",
+     "rows": 0
+    },
+    {
+     "table": "leases",
+     "filters": {},
+     "period": "all",
+     "rows": 1
+    }
+   ],
+   "verified": 0.76,
+   "op": "earliest",
+   "confidence": 0.48,
+   "speculation_hit": false,
+   "question": "When did I move to San Francisco?",
+   "gold": "April 1, 2026 (flew UA 8843 on Mar 31)",
+   "category": "history",
+   "score": 1.0,
+   "wall_s": 0.009,
+   "jev_s": 0.813
+  },
+  {
+   "answer": "I don't know.",
+   "table": "memberships",
+   "column": null,
+   "filters": {},
+   "period": "all",
+   "relaxed": 3,
+   "steps": [
+    {
+     "table": "memberships",
+     "filters": {
+      "person_id": "Adam Zvada",
+      "place_id": "Prague"
+     },
+     "period": "all",
+     "rows": 0
+    },
+    {
+     "table": "memberships",
+     "filters": {
+      "place_id": "Prague"
+     },
+     "period": "all",
+     "rows": 0
+    },
+    {
+     "table": "people",
+     "filters": {
+      "name": "Adam Zvada"
+     },
+     "period": "all",
+     "rows": 0
+    }
+   ],
+   "verified": null,
+   "op": "list",
+   "confidence": 0.246,
+   "speculation_hit": true,
+   "question": "Which gym was I a member of in Prague?",
+   "gold": "Smíchoff (1190 CZK/month, ended March 2026)",
+   "category": "history",
+   "score": 0.0,
+   "wall_s": 0.007,
+   "jev_s": 0.813
+  },
+  {
+   "answer": "54:48 — 2025-10-27 {\"category\": \"running\", \"activity\": \"10 km in 54:48\", \"date\": \"2025-10-27\", \"distance_km\": 10.0, \"duration_s\": \"54:48\"}",
+   "table": "workouts",
+   "column": "duration_s",
+   "filters": {
+    "category": "running",
+    "distance_km": "10"
+   },
+   "period": "all",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "workouts",
+     "filters": {
+      "category": "running",
+      "distance_km": "10"
+     },
+     "period": "all",
+     "rows": 27
+    }
+   ],
+   "verified": 0.79,
+   "op": "earliest",
+   "confidence": 0.94,
+   "speculation_hit": false,
+   "question": "What was my time on the first 10k run I ever logged?",
+   "gold": "54:48 (Oct 27, 2025)",
+   "category": "history",
+   "score": 1.0,
+   "wall_s": 0.009,
+   "jev_s": 0.813
+  },
+  {
+   "answer": "1,025.00 CZK (10 rows)",
+   "table": "expenses",
+   "column": "amount",
+   "filters": {
+    "category": "coffee",
+    "item": "coffee"
+   },
+   "period": "in:2025-11",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "expenses",
+     "filters": {
+      "category": "coffee",
+      "item": "coffee"
+     },
+     "period": "in:2025-11",
+     "rows": 10
+    }
+   ],
+   "verified": 0.84,
+   "op": "sum",
+   "confidence": 0.99,
+   "speculation_hit": true,
+   "question": "How much did I spend on coffee in November 2025?",
+   "gold": "1,025 CZK (10 purchases)",
+   "category": "aggregation",
+   "score": 1.0,
+   "wall_s": 0.01,
+   "jev_s": 0.813
+  },
+  {
+   "answer": "317.76 USD (4 rows)",
+   "table": "expenses",
+   "column": "amount",
+   "filters": {
+    "category": "groceries",
+    "item": "groceries"
+   },
+   "period": "in:2026-05",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "expenses",
+     "filters": {
+      "category": "groceries",
+      "item": "groceries"
+     },
+     "period": "in:2026-05",
+     "rows": 4
+    }
+   ],
+   "verified": 0.87,
+   "op": "sum",
+   "confidence": 0.96,
+   "speculation_hit": true,
+   "question": "How much did I spend on groceries in May 2026?",
+   "gold": "$317.76 (4 purchases)",
+   "category": "aggregation",
+   "score": 1.0,
+   "wall_s": 0.01,
+   "jev_s": 0.364
+  },
+  {
+   "answer": "59.99 USD (3 rows)",
+   "table": "expenses",
+   "column": "amount",
+   "filters": {
+    "category": "transportation",
+    "merchant": "Uber",
+    "item": "ride"
+   },
+   "period": "in:2026-06",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "expenses",
+     "filters": {
+      "category": "transportation",
+      "merchant": "Uber",
+      "item": "ride"
+     },
+     "period": "in:2026-06",
+     "rows": 3
+    }
+   ],
+   "verified": 0.87,
+   "op": "sum",
+   "confidence": 0.5,
+   "speculation_hit": true,
+   "question": "How much did I spend on rides (Uber/Bolt) in June 2026?",
+   "gold": "$155.98 (7 purchases)",
+   "category": "aggregation",
+   "score": 0.0,
+   "wall_s": 0.012,
+   "jev_s": 0.364
+  },
+  {
+   "answer": "162.25 USD (8 rows)",
+   "table": "expenses",
+   "column": "amount",
+   "filters": {
+    "category": "dining",
+    "item": "lunch"
+   },
+   "period": "in:2026-08",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "expenses",
+     "filters": {
+      "category": "dining",
+      "item": "lunch"
+     },
+     "period": "in:2026-08",
+     "rows": 8
+    }
+   ],
+   "verified": 0.86,
+   "op": "sum",
+   "confidence": 0.98,
+   "speculation_hit": true,
+   "question": "How much did I spend on lunch in August 2026?",
+   "gold": "$162.25 (8 purchases)",
+   "category": "aggregation",
+   "score": 1.0,
+   "wall_s": 0.013,
+   "jev_s": 0.364
+  },
+  {
+   "answer": "5",
+   "table": "workouts",
+   "column": "date",
+   "filters": {
+    "category": "climbing"
+   },
+   "period": "in:2026-01",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "workouts",
+     "filters": {
+      "category": "climbing"
+     },
+     "period": "in:2026-01",
+     "rows": 5
+    }
+   ],
+   "verified": 0.88,
+   "op": "count",
+   "confidence": 0.43,
+   "speculation_hit": true,
+   "question": "How many times did I go climbing in January 2026?",
+   "gold": "5",
+   "category": "aggregation",
+   "score": 1.0,
+   "wall_s": 0.013,
+   "jev_s": 0.379
+  },
+  {
+   "answer": "7",
+   "table": "workouts",
+   "column": "date",
+   "filters": {
+    "category": "climbing"
+   },
+   "period": "in:2026-07",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "workouts",
+     "filters": {
+      "category": "climbing"
+     },
+     "period": "in:2026-07",
+     "rows": 7
+    }
+   ],
+   "verified": 0.87,
+   "op": "count",
+   "confidence": 0.4,
+   "speculation_hit": true,
+   "question": "How many times did I go climbing in July 2026?",
+   "gold": "7",
+   "category": "aggregation",
+   "score": 1.0,
+   "wall_s": 0.012,
+   "jev_s": 0.379
+  },
+  {
+   "answer": "52:06 — 2026-06-25 {\"category\": \"running\", \"activity\": \"10 km in 52:06 (new PB)\", \"date\": \"2026-06-25\", \"distance_km\": 10.0, \"duration_s\": \"52:06\"}",
+   "table": "workouts",
+   "column": "duration_s",
+   "filters": {
+    "category": "running",
+    "distance_km": "10"
+   },
+   "period": "all",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "workouts",
+     "filters": {
+      "category": "running",
+      "distance_km": "10"
+     },
+     "period": "all",
+     "rows": 27
+    }
+   ],
+   "verified": 0.91,
+   "op": "min",
+   "confidence": 0.85,
+   "speculation_hit": false,
+   "question": "What's my best 10k time?",
+   "gold": "52:06 (Jun 25, 2026)",
+   "category": "aggregation",
+   "score": 1.0,
+   "wall_s": 0.012,
+   "jev_s": 0.406
+  },
+  {
+   "answer": "3.0 — 2026-07-03 {\"category\": \"climbing\", \"activity\": \"sent a 7a route\", \"date\": \"2026-07-03\", \"place\": \"Mission Cliffs\", \"companion\": \"Nina\", \"climbing_level_rank\": 3.0}",
+   "table": "workouts",
+   "column": "climbing_level_rank",
+   "filters": {
+    "category": "climbing"
+   },
+   "period": "all",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "workouts",
+     "filters": {
+      "category": "climbing"
+     },
+     "period": "all",
+     "rows": 3
+    }
+   ],
+   "verified": 0.73,
+   "op": "max",
+   "confidence": 0.75,
+   "speculation_hit": true,
+   "question": "What's the hardest climbing grade I've sent?",
+   "gold": "7a (Jul 03, 2026)",
+   "category": "aggregation",
+   "score": 1.0,
+   "wall_s": 0.011,
+   "jev_s": 0.406
+  },
+  {
+   "answer": "4",
+   "table": "books",
+   "column": "rating",
+   "filters": {
+    "status": "finished",
+    "rating": "5"
+   },
+   "period": "all",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "books",
+     "filters": {
+      "status": "finished",
+      "rating": "5"
+     },
+     "period": "all",
+     "rows": 4
+    }
+   ],
+   "verified": 0.18,
+   "op": "count",
+   "confidence": 0.36,
+   "speculation_hit": true,
+   "question": "How many books have I finished, and which did I rate 5/5?",
+   "gold": "10 finished; 5/5: Thinking, Fast and Slow, Project Hail Mary, Shoe Dog, Dune",
+   "category": "aggregation",
+   "score": 0.0,
+   "wall_s": 0.01,
+   "jev_s": 0.406
+  },
+  {
+   "answer": "7",
+   "table": "expenses",
+   "column": "__row__",
+   "filters": {
+    "category": "dining",
+    "item": "dinner",
+    "companion": "Eva"
+   },
+   "period": "year:2026",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "expenses",
+     "filters": {
+      "category": "dining",
+      "item": "dinner",
+      "companion": "Eva"
+     },
+     "period": "year:2026",
+     "rows": 7
+    }
+   ],
+   "verified": 0.84,
+   "op": "count",
+   "confidence": 0.29,
+   "speculation_hit": false,
+   "question": "How many dinners out did I have with Eva in 2026?",
+   "gold": "8",
+   "category": "aggregation",
+   "score": 0.0,
+   "wall_s": 0.011,
+   "jev_s": 0.406
+  },
+  {
+   "answer": "3,200.00 USD (1 rows)",
+   "table": "leases",
+   "column": "rent_amount",
+   "filters": {},
+   "period": "all",
+   "relaxed": 1,
+   "steps": [
+    {
+     "table": "leases",
+     "filters": {
+      "person_id": "Adam Zvada"
+     },
+     "period": "all",
+     "rows": 0
+    },
+    {
+     "table": "leases",
+     "filters": {},
+     "period": "all",
+     "rows": 1
+    }
+   ],
+   "verified": 0.75,
+   "op": "sum",
+   "confidence": 0.432,
+   "speculation_hit": true,
+   "question": "How much rent have I paid in total?",
+   "gold": "$19,200 (6 months × $3,200)",
+   "category": "aggregation",
+   "score": 0.0,
+   "wall_s": 0.012,
+   "jev_s": 0.406
+  },
+  {
+   "answer": "I don't know.",
+   "table": "expenses",
+   "column": null,
+   "filters": {},
+   "period": "all",
+   "relaxed": 2,
+   "steps": [
+    {
+     "table": "expenses",
+     "filters": {
+      "category": "travel",
+      "item": "UA 8843 flight (confirmation K7QX2P)",
+      "location": "Lisbon"
+     },
+     "period": "all",
+     "rows": 0
+    },
+    {
+     "table": "emails",
+     "filters": {
+      "subject": "Booking confirmed: Memmo Alfama",
+      "body_details": "Memmo Alfama Hotel, Lisbon. Check-in 2026-05-22, check-out 2026-05-26. 2 guests. Total $980.00."
+     },
+     "period": "all",
+     "rows": 1
+    }
+   ],
+   "verified": null,
+   "op": "sum",
+   "confidence": 0.275,
+   "speculation_hit": false,
+   "question": "How much did the Lisbon trip cost for flights plus hotel?",
+   "gold": "$2,320 ($1,340 flights + $980 hotel)",
+   "category": "aggregation",
+   "score": 0.0,
+   "wall_s": 0.012,
+   "jev_s": 0.406
+  },
+  {
+   "answer": "143.50 USD (26 rows)",
+   "table": "expenses",
+   "column": "amount",
+   "filters": {
+    "merchant": "Blue Bottle"
+   },
+   "period": "all",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "expenses",
+     "filters": {
+      "merchant": "Blue Bottle"
+     },
+     "period": "all",
+     "rows": 26
+    }
+   ],
+   "verified": 0.81,
+   "op": "sum",
+   "confidence": 0.97,
+   "speculation_hit": true,
+   "question": "How much have I spent at Blue Bottle in total?",
+   "gold": "$148.75 (27 visits)",
+   "category": "aggregation",
+   "score": 0.0,
+   "wall_s": 0.013,
+   "jev_s": 0.347
+  },
+  {
+   "answer": "39",
+   "table": "workouts",
+   "column": "category",
+   "filters": {
+    "category": "climbing"
+   },
+   "period": "since:2026-04",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "workouts",
+     "filters": {
+      "category": "climbing"
+     },
+     "period": "since:2026-04",
+     "rows": 39
+    }
+   ],
+   "verified": 0.83,
+   "op": "count",
+   "confidence": 0.36,
+   "speculation_hit": true,
+   "question": "How many times have I gone climbing since moving to SF?",
+   "gold": "39",
+   "category": "aggregation",
+   "score": 1.0,
+   "wall_s": 0.012,
+   "jev_s": 0.347
+  },
+  {
+   "answer": "I don't know.",
+   "table": "interactions",
+   "column": null,
+   "filters": {},
+   "period": "all",
+   "relaxed": 4,
+   "steps": [
+    {
+     "table": "interactions",
+     "filters": {
+      "person_id": "Ondřej Král"
+     },
+     "period": "all",
+     "rows": 0
+    },
+    {
+     "table": "expenses",
+     "filters": {
+      "category": "dining",
+      "item": "dinner",
+      "companion": "Ondra"
+     },
+     "period": "all",
+     "rows": 0
+    },
+    {
+     "table": "expenses",
+     "filters": {
+      "item": "dinner",
+      "companion": "Ondra"
+     },
+     "period": "all",
+     "rows": 0
+    },
+    {
+     "table": "expenses",
+     "filters": {
+      "item": "dinner"
+     },
+     "period": "all",
+     "rows": 0
+    }
+   ],
+   "verified": null,
+   "op": "latest",
+   "confidence": 0.139,
+   "speculation_hit": true,
+   "question": "When did I last have dinner with Ondra?",
+   "gold": "Mar 28, 2026 at Eska",
+   "category": "temporal",
+   "score": 0.0,
+   "wall_s": 0.018,
+   "jev_s": 0.437
+  },
+  {
+   "answer": "2026-10-01T16:00 — 2026-10-01T16:00 {\"category\": \"meeting\", \"title\": \"Nebula board meeting\", \"start_datetime\": \"2026-10-01T16:00\", \"end_datetime\": \"2026-10-01T17:30\", \"location\": \"1 Mission St, San Francisco\", \"organization\": \"Nebula\", \"organizer_person\": \"David Mokos\"}",
+   "table": "events",
+   "column": "start_datetime",
+   "filters": {
+    "category": "meeting",
+    "title": "Nebula board meeting",
+    "organization_id": "Nebula"
+   },
+   "period": "future",
+   "relaxed": 1,
+   "steps": [
+    {
+     "table": "events",
+     "filters": {
+      "category": "meeting",
+      "title": "Nebula board meeting",
+      "location": "Nebula office, Karlín, Prague",
+      "organization_id": "Nebula"
+     },
+     "period": "future",
+     "rows": 0
+    },
+    {
+     "table": "events",
+     "filters": {
+      "category": "meeting",
+      "title": "Nebula board meeting",
+      "organization_id": "Nebula"
+     },
+     "period": "future",
+     "rows": 1
+    }
+   ],
+   "verified": 0.63,
+   "op": "next",
+   "confidence": 0.424,
+   "speculation_hit": true,
+   "question": "When and where is the next Nebula board meeting?",
+   "gold": "Thu Oct 01, 2026 at 16:00, 1 Mission St, San Francisco",
+   "category": "temporal",
+   "score": 1.0,
+   "wall_s": 0.016,
+   "jev_s": 0.437
+  },
+  {
+   "answer": "Dentist appointment with Dr. Lee at Castro Dental — 2026-06-03T09:30 {\"category\": \"appointment\", \"title\": \"Dentist appointment with Dr. Lee at Castro Dental\", \"start_datetime\": \"2026-06-03T09:30\", \"location\": \"SF\", \"organization\": \"Castro Dental\", \"organizer_person\": \"Dr. Lee\"}",
+   "table": "events",
+   "column": "title",
+   "filters": {
+    "category": "appointment"
+   },
+   "period": "all",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "events",
+     "filters": {
+      "category": "appointment"
+     },
+     "period": "all",
+     "rows": 4
+    }
+   ],
+   "verified": 0.9,
+   "op": "latest",
+   "confidence": 0.44,
+   "speculation_hit": true,
+   "question": "When was my last dentist appointment, and with whom?",
+   "gold": "Jun 03, 2026 with Dr. Lee",
+   "category": "temporal",
+   "score": 1.0,
+   "wall_s": 0.015,
+   "jev_s": 0.437
+  },
+  {
+   "answer": "2025-11-05 {\"person\": \"Lucas Meyer\", \"category\": \"met at Web Summit\", \"date\": \"2025-11-05\", \"organization\": \"5\"}",
+   "table": "interactions",
+   "column": "__row__",
+   "filters": {
+    "person_id": "Lucas Meyer",
+    "category": "met at Web Summit"
+   },
+   "period": "all",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "interactions",
+     "filters": {
+      "person_id": "Lucas Meyer",
+      "category": "met at Web Summit"
+     },
+     "period": "all",
+     "rows": 1
+    }
+   ],
+   "verified": 0.8,
+   "op": "earliest",
+   "confidence": 0.52,
+   "speculation_hit": false,
+   "question": "When did I first meet Lucas Meyer, and where?",
+   "gold": "Nov 5, 2025 at Web Summit",
+   "category": "temporal",
+   "score": 1.0,
+   "wall_s": 0.015,
+   "jev_s": 0.437
+  },
+  {
+   "answer": "2026-07-12 — 2026-07-12 {\"person\": \"Eva\", \"category\": \"engagement\", \"date\": \"2026-07-12\"}",
+   "table": "interactions",
+   "column": "date",
+   "filters": {
+    "category": "engagement"
+   },
+   "period": "all",
+   "relaxed": 1,
+   "steps": [
+    {
+     "table": "interactions",
+     "filters": {
+      "person_id": "Adam Zvada",
+      "category": "engagement"
+     },
+     "period": "all",
+     "rows": 0
+    },
+    {
+     "table": "interactions",
+     "filters": {
+      "category": "engagement"
+     },
+     "period": "all",
+     "rows": 1
+    }
+   ],
+   "verified": 0.81,
+   "op": "earliest",
+   "confidence": 0.336,
+   "speculation_hit": false,
+   "question": "When did I get engaged?",
+   "gold": "July 12, 2026",
+   "category": "temporal",
+   "score": 1.0,
+   "wall_s": 0.014,
+   "jev_s": 0.437
+  },
+  {
+   "answer": "Nebula board meeting; Series A kickoff",
+   "table": "events",
+   "column": "title",
+   "filters": {},
+   "period": "in:2026-10",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "events",
+     "filters": {},
+     "period": "in:2026-10",
+     "rows": 2
+    }
+   ],
+   "verified": 0.81,
+   "op": "list",
+   "confidence": 0.0,
+   "speculation_hit": false,
+   "question": "What's on my calendar for October 2026?",
+   "gold": "Nebula board meeting Thu Oct 1 at 16:00 (1 Mission St) and the Series A kickoff with Sarah Kim Fri Oct 9 at 10:00",
+   "category": "temporal",
+   "score": 1.0,
+   "wall_s": 0.013,
+   "jev_s": 0.437
+  },
+  {
+   "answer": "2026-01-21T14:00 — 2026-01-21T14:00 {\"category\": \"call\", \"title\": \"Call with Lucas Meyer\", \"start_datetime\": \"2026-01-21T14:00\", \"organization\": \"Sequoia\"}",
+   "table": "events",
+   "column": "start_datetime",
+   "filters": {
+    "category": "call",
+    "title": "Call with Lucas Meyer"
+   },
+   "period": "all",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "events",
+     "filters": {
+      "category": "call",
+      "title": "Call with Lucas Meyer"
+     },
+     "period": "all",
+     "rows": 1
+    }
+   ],
+   "verified": 0.85,
+   "op": "latest",
+   "confidence": 0.44,
+   "speculation_hit": true,
+   "question": "When was the call with Lucas Meyer?",
+   "gold": "Wed Jan 21, 2026 at 14:00 (moved from Jan 14 at 10:00)",
+   "category": "temporal",
+   "score": 1.0,
+   "wall_s": 0.009,
+   "jev_s": 0.393
+  },
+  {
+   "answer": "I don't know.",
+   "table": "funding_rounds",
+   "column": null,
+   "filters": {},
+   "period": "in:2026-02",
+   "relaxed": 6,
+   "steps": [
+    {
+     "table": "funding_rounds",
+     "filters": {
+      "category": "seed",
+      "organization_id": "Nebula",
+      "lead_person_id": "Adam Zvada"
+     },
+     "period": "in:2026-02",
+     "rows": 0
+    },
+    {
+     "table": "funding_rounds",
+     "filters": {
+      "category": "seed",
+      "organization_id": "Nebula",
+      "lead_person_id": "Adam Zvada"
+     },
+     "period": "all",
+     "rows": 0
+    },
+    {
+     "table": "funding_rounds",
+     "filters": {
+      "category": "seed",
+      "organization_id": "Nebula"
+     },
+     "period": "all",
+     "rows": 0
+    },
+    {
+     "table": "funding_rounds",
+     "filters": {
+      "organization_id": "Nebula"
+     },
+     "period": "all",
+     "rows": 0
+    },
+    {
+     "table": "interactions",
+     "filters": {
+      "organization_id": "Nebula"
+     },
+     "period": "in:2026-02",
+     "rows": 0
+    },
+    {
+     "table": "interactions",
+     "filters": {
+      "organization_id": "Nebula"
+     },
+     "period": "all",
+     "rows": 0
+    }
+   ],
+   "verified": null,
+   "op": "latest",
+   "confidence": 0.079,
+   "speculation_hit": true,
+   "question": "Who led Nebula's seed round, and how much did we raise?",
+   "gold": "Northwind Ventures (Sarah Kim), $3M",
+   "category": "relationships",
+   "score": 0.0,
+   "wall_s": 0.008,
+   "jev_s": 0.393
+  },
+  {
+   "answer": "lucas@sequoia.com — 2025-11-05T18:26 {\"person\": \"Lucas Meyer\", \"type\": \"email\", \"value\": \"lucas@sequoia.com\"}",
+   "table": "contact_methods",
+   "column": "value",
+   "filters": {
+    "person_id": "Lucas Meyer",
+    "type": "email"
+   },
+   "period": "all",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "contact_methods",
+     "filters": {
+      "person_id": "Lucas Meyer",
+      "type": "email"
+     },
+     "period": "all",
+     "rows": 1
+    }
+   ],
+   "verified": 0.86,
+   "op": "latest",
+   "confidence": 0.91,
+   "speculation_hit": false,
+   "question": "What's Lucas Meyer's email?",
+   "gold": "lucas@sequoia.com",
+   "category": "relationships",
+   "score": 1.0,
+   "wall_s": 0.008,
+   "jev_s": 0.393
+  },
+  {
+   "answer": "Draft term sheet for Nebula seed: $3M at a $15M post-money valuation; 1x non-participating preference. Sarah Kim is a Partner at Northwind Ventures.",
+   "table": "emails",
+   "column": "body_details",
+   "filters": {
+    "from_email": "sarah@northwind.vc",
+    "subject": "Term sheet draft",
+    "body_details": "Draft term sheet for Nebula seed: $3M at a $15M post-money valuation; 1x non-participating preference. Sarah Kim is a Partner at Northwind Ventures."
+   },
+   "period": "in:2026-02",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "emails",
+     "filters": {
+      "from_email": "sarah@northwind.vc",
+      "subject": "Term sheet draft",
+      "body_details": "Draft term sheet for Nebula seed: $3M at a $15M post-money valuation; 1x non-participating preference. Sarah Kim is a Partner at Northwind Ventures."
+     },
+     "period": "in:2026-02",
+     "rows": 1
+    }
+   ],
+   "verified": 0.82,
+   "op": "list",
+   "confidence": 0.68,
+   "speculation_hit": true,
+   "question": "What were the terms in Sarah's term sheet draft?",
+   "gold": "$3M at a $15M post-money valuation, 1x non-participating preference",
+   "category": "semi_structured",
+   "score": 1.0,
+   "wall_s": 0.008,
+   "jev_s": 0.315
+  },
+  {
+   "answer": "I don't know.",
+   "table": "people",
+   "column": null,
+   "filters": {},
+   "period": "all",
+   "relaxed": 2,
+   "steps": [
+    {
+     "table": "people",
+     "filters": {
+      "name": "Eva Green"
+     },
+     "period": "all",
+     "rows": 0
+    },
+    {
+     "table": "interactions",
+     "filters": {
+      "person_id": "Eva Green"
+     },
+     "period": "all",
+     "rows": 0
+    }
+   ],
+   "verified": null,
+   "op": "profile",
+   "confidence": 0.122,
+   "speculation_hit": true,
+   "question": "Who is Eva Green?",
+   "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+   "category": "relationships",
+   "score": 0.0,
+   "wall_s": 0.007,
+   "jev_s": 0.339
+  },
+  {
+   "answer": "introduced by Priya Patel",
+   "table": "interactions",
+   "column": "category",
+   "filters": {
+    "person_id": "Mark Chen",
+    "category": "introduced by Priya Patel"
+   },
+   "period": "all",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "interactions",
+     "filters": {
+      "person_id": "Mark Chen",
+      "category": "introduced by Priya Patel"
+     },
+     "period": "all",
+     "rows": 1
+    }
+   ],
+   "verified": 0.85,
+   "op": "list",
+   "confidence": 0.35,
+   "speculation_hit": true,
+   "question": "Who introduced me to Mark Chen?",
+   "gold": "Priya Patel (Stripe)",
+   "category": "relationships",
+   "score": 1.0,
+   "wall_s": 0.008,
+   "jev_s": 0.339
+  },
+  {
+   "answer": "Tom; Nina",
+   "table": "workouts",
+   "column": "companion",
+   "filters": {
+    "category": "climbing"
+   },
+   "period": "all",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "workouts",
+     "filters": {
+      "category": "climbing"
+     },
+     "period": "all",
+     "rows": 63
+    }
+   ],
+   "verified": 0.9,
+   "op": "list",
+   "confidence": 0.64,
+   "speculation_hit": true,
+   "question": "Who are my climbing partners?",
+   "gold": "Tom Novak (Prague) and Nina Rossi (SF)",
+   "category": "relationships",
+   "score": 1.0,
+   "wall_s": 0.009,
+   "jev_s": 0.339
+  },
+  {
+   "answer": "Confirmation K7QX2P. UA 8843 from Prague (PRG) to San Francisco (SFO), Tue Mar 31 2026, departs 10:05. Total paid: 18,450 CZK. — 2026-03-10T14:03 {\"from_email\": \"no-reply@united.com\", \"to_email\": \"adam@nebula.ai\", \"subject\": \"Your trip confirmation K7QX2P\", \"datetime\": \"2026-03-10T14:03\", \"body_details\": \"Confirmation K7QX2P. UA 8843 from Prague (PRG) to San Francisco (SFO), Tue Mar 31 2026, departs 10:05. Total paid: 18,450 CZK.\"}",
+   "table": "emails",
+   "column": "body_details",
+   "filters": {
+    "to_email": "adam@nebula.ai",
+    "subject": "Your trip confirmation K7QX2P",
+    "body_details": "Confirmation K7QX2P. UA 8843 from Prague (PRG) to San Francisco (SFO), Tue Mar 31 2026, departs 10:05. Total paid: 18,450 CZK."
+   },
+   "period": "all",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "emails",
+     "filters": {
+      "to_email": "adam@nebula.ai",
+      "subject": "Your trip confirmation K7QX2P",
+      "body_details": "Confirmation K7QX2P. UA 8843 from Prague (PRG) to San Francisco (SFO), Tue Mar 31 2026, departs 10:05. Total paid: 18,450 CZK."
+     },
+     "period": "all",
+     "rows": 1
+    }
+   ],
+   "verified": 0.94,
+   "op": "latest",
+   "confidence": 0.22,
+   "speculation_hit": true,
+   "question": "What's the confirmation code for my flight to San Francisco?",
+   "gold": "K7QX2P (United UA 8843)",
+   "category": "semi_structured",
+   "score": 1.0,
+   "wall_s": 0.009,
+   "jev_s": 0.339
+  },
+  {
+   "answer": "4800.0 — 2026-04-01 {\"address\": \"1450 Valencia St\", \"start_date\": \"2026-04-01\", \"rent_amount\": 3200.0, \"currency\": \"USD\", \"billing_period\": \"monthly\", \"rent_due_day\": 1, \"security_deposit\": 4800.0, \"person\": \"Raj Gupta\", \"move_in_date\": \"2026-04-01\"}",
+   "table": "leases",
+   "column": "security_deposit",
+   "filters": {},
+   "period": "all",
+   "relaxed": 1,
+   "steps": [
+    {
+     "table": "leases",
+     "filters": {
+      "person_id": "Adam Zvada"
+     },
+     "period": "all",
+     "rows": 0
+    },
+    {
+     "table": "leases",
+     "filters": {},
+     "period": "all",
+     "rows": 1
+    }
+   ],
+   "verified": 0.92,
+   "op": "latest",
+   "confidence": 0.496,
+   "speculation_hit": true,
+   "question": "How big was the security deposit for my apartment?",
+   "gold": "$4,800",
+   "category": "semi_structured",
+   "score": 1.0,
+   "wall_s": 0.009,
+   "jev_s": 0.339
+  },
+  {
+   "answer": "Memmo Alfama Hotel, Lisbon. Check-in 2026-05-22, check-out 2026-05-26. 2 guests. Total $980.00. — 2026-05-02T09:30 {\"from_email\": \"reservations@memmo.pt\", \"to_email\": \"adam@nebula.ai\", \"subject\": \"Booking confirmed: Memmo Alfama\", \"datetime\": \"2026-05-02T09:30\", \"body_details\": \"Memmo Alfama Hotel, Lisbon. Check-in 2026-05-22, check-out 2026-05-26. 2 guests. Total $980.00.\"}",
+   "table": "emails",
+   "column": "body_details",
+   "filters": {
+    "subject": "Booking confirmed: Memmo Alfama",
+    "body_details": "Memmo Alfama Hotel, Lisbon. Check-in 2026-05-22, check-out 2026-05-26. 2 guests. Total $980.00."
+   },
+   "period": "all",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "emails",
+     "filters": {
+      "subject": "Booking confirmed: Memmo Alfama",
+      "body_details": "Memmo Alfama Hotel, Lisbon. Check-in 2026-05-22, check-out 2026-05-26. 2 guests. Total $980.00."
+     },
+     "period": "all",
+     "rows": 1
+    }
+   ],
+   "verified": 0.94,
+   "op": "latest",
+   "confidence": 0.38,
+   "speculation_hit": true,
+   "question": "Which hotel did we stay at in Lisbon?",
+   "gold": "Memmo Alfama (May 22-26, 2026)",
+   "category": "semi_structured",
+   "score": 1.0,
+   "wall_s": 0.011,
+   "jev_s": 0.335
+  },
+  {
+   "answer": "Renew passport — 2025-12-15 {\"title\": \"Renew passport\", \"due_date\": \"2025-12-15\", \"status\": \"done\"}",
+   "table": "tasks",
+   "column": "title",
+   "filters": {
+    "title": "Renew passport"
+   },
+   "period": "all",
+   "relaxed": 1,
+   "steps": [
+    {
+     "table": "tasks",
+     "filters": {
+      "title": "Renew passport",
+      "person_id": "Adam Zvada"
+     },
+     "period": "all",
+     "rows": 0
+    },
+    {
+     "table": "tasks",
+     "filters": {
+      "title": "Renew passport"
+     },
+     "period": "all",
+     "rows": 1
+    }
+   ],
+   "verified": 0.91,
+   "op": "latest",
+   "confidence": 0.344,
+   "speculation_hit": true,
+   "question": "Did I renew my passport?",
+   "gold": "Yes, done on Dec 3, 2025",
+   "category": "status",
+   "score": 0.5,
+   "wall_s": 0.01,
+   "jev_s": 0.335
+  },
+  {
+   "answer": "cancelled — 2026-02-18T08:30 {\"category\": \"appointment\", \"title\": \"Dentist appointment with Dr. Horák\", \"start_datetime\": \"2026-02-18T08:30\", \"status\": \"cancelled\"}",
+   "table": "events",
+   "column": "status",
+   "filters": {
+    "category": "appointment"
+   },
+   "period": "in:2026-02",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "events",
+     "filters": {
+      "category": "appointment"
+     },
+     "period": "in:2026-02",
+     "rows": 1
+    }
+   ],
+   "verified": 0.94,
+   "op": "latest",
+   "confidence": 0.32,
+   "speculation_hit": true,
+   "question": "What happened to the February dentist appointment?",
+   "gold": "Cancelled (it was Feb 18 with Dr. Horák)",
+   "category": "status",
+   "score": 1.0,
+   "wall_s": 0.01,
+   "jev_s": 0.388
+  },
+  {
+   "answer": "Get SF driver's license — 2026-06-30 {\"title\": \"Get SF driver's license\", \"due_date\": \"2026-06-30\", \"status\": \"pending\", \"person\": \"1\"}",
+   "table": "tasks",
+   "column": "title",
+   "filters": {
+    "title": "Get SF driver's license",
+    "person_id": "Adam Zvada"
+   },
+   "period": "all",
+   "relaxed": 1,
+   "steps": [
+    {
+     "table": "tasks",
+     "filters": {
+      "title": "Get SF driver's license",
+      "person_id": "Adam Zvada"
+     },
+     "period": "in:2026-09",
+     "rows": 0
+    },
+    {
+     "table": "tasks",
+     "filters": {
+      "title": "Get SF driver's license",
+      "person_id": "Adam Zvada"
+     },
+     "period": "all",
+     "rows": 1
+    }
+   ],
+   "verified": 0.75,
+   "op": "latest",
+   "confidence": 0.224,
+   "speculation_hit": true,
+   "question": "Do I still have to get my SF driver's license?",
+   "gold": "Yes, still open (was due Jun 30)",
+   "category": "status",
+   "score": 1.0,
+   "wall_s": 0.011,
+   "jev_s": 0.388
+  },
+  {
+   "answer": "pending — 2026-10-31 {\"title\": \"Book the wedding venue\", \"due_date\": \"2026-10-31\", \"status\": \"pending\"}",
+   "table": "tasks",
+   "column": "status",
+   "filters": {
+    "title": "Book the wedding venue"
+   },
+   "period": "all",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "tasks",
+     "filters": {
+      "title": "Book the wedding venue"
+     },
+     "period": "all",
+     "rows": 1
+    }
+   ],
+   "verified": 0.82,
+   "op": "latest",
+   "confidence": 0.52,
+   "speculation_hit": true,
+   "question": "Is the wedding venue booked?",
+   "gold": "No, still open (due Oct 31)",
+   "category": "status",
+   "score": 1.0,
+   "wall_s": 0.009,
+   "jev_s": 0.388
+  },
+  {
+   "answer": "Castro Dental — 2026-05-25T10:00 {\"name\": \"Castro Dental\", \"category\": \"dental practice\"}",
+   "table": "organizations",
+   "column": "name",
+   "filters": {},
+   "period": "all",
+   "relaxed": 3,
+   "steps": [
+    {
+     "table": "books",
+     "filters": {
+      "title": "The Three-Body Problem",
+      "author": "Liu Cixin",
+      "status": "finished"
+     },
+     "period": "all",
+     "rows": 0
+    },
+    {
+     "table": "books",
+     "filters": {
+      "title": "The Three-Body Problem",
+      "status": "finished"
+     },
+     "period": "all",
+     "rows": 0
+    },
+    {
+     "table": "books",
+     "filters": {
+      "title": "The Three-Body Problem"
+     },
+     "period": "all",
+     "rows": 0
+    },
+    {
+     "table": "organizations",
+     "filters": {},
+     "period": "all",
+     "rows": 9
+    }
+   ],
+   "verified": 0.01,
+   "op": "latest",
+   "confidence": 0.0,
+   "speculation_hit": true,
+   "question": "Did I finish The Three-Body Problem?",
+   "gold": "No, still reading it",
+   "category": "status",
+   "score": 0.0,
+   "wall_s": 0.011,
+   "jev_s": 0.388
+  },
+  {
+   "answer": "I don't know.",
+   "table": "people",
+   "column": null,
+   "filters": {},
+   "period": "all",
+   "relaxed": 0,
+   "steps": [],
+   "verified": null,
+   "op": "profile",
+   "confidence": 0.26,
+   "speculation_hit": false,
+   "question": "Who is Jan Dvořák?",
+   "gold": "UNKNOWN: the user asked to forget him",
+   "category": "forgotten",
+   "score": 1.0,
+   "wall_s": 0.007,
+   "jev_s": 0.388
+  },
+  {
+   "answer": "+420 731 000 444 — 2026-01-20T09:19 {\"person\": \"Marco\", \"type\": \"phone\", \"value\": \"+420 731 000 444\"}",
+   "table": "contact_methods",
+   "column": "value",
+   "filters": {
+    "person_id": "Marco",
+    "type": "phone"
+   },
+   "period": "all",
+   "relaxed": 0,
+   "steps": [
+    {
+     "table": "contact_methods",
+     "filters": {
+      "person_id": "Marco",
+      "type": "phone"
+     },
+     "period": "all",
+     "rows": 1
+    }
+   ],
+   "verified": 0.91,
+   "op": "latest",
+   "confidence": 0.93,
+   "speculation_hit": true,
+   "question": "What's Marco's phone number?",
+   "gold": "UNKNOWN: the user asked to forget it",
+   "category": "forgotten",
+   "score": 0.0,
+   "wall_s": 0.008,
+   "jev_s": 0.388
+  },
+  {
+   "answer": "I don't know.",
+   "table": "none",
+   "column": null,
+   "filters": {},
+   "period": "all",
+   "relaxed": 0,
+   "steps": [],
+   "verified": null,
+   "op": "latest",
+   "confidence": 0.8,
+   "speculation_hit": true,
+   "question": "What's my blood type?",
+   "gold": "UNKNOWN: never mentioned",
+   "category": "unanswerable",
+   "score": 1.0,
+   "wall_s": 0.005,
+   "jev_s": 0.338
+  },
+  {
+   "answer": "2025-11-02T17:01 {\"name\": \"Ondřej Král\", \"relationship\": \"college friend\"}",
+   "table": "people",
+   "column": "__row__",
+   "filters": {
+    "name": "Ondřej Král"
+   },
+   "period": "all",
+   "relaxed": 1,
+   "steps": [
+    {
+     "table": "contact_methods",
+     "filters": {
+      "person_id": "Ondřej Král",
+      "type": "email"
+     },
+     "period": "all",
+     "rows": 0
+    },
+    {
+     "table": "people",
+     "filters": {
+      "name": "Ondřej Král"
+     },
+     "period": "all",
+     "rows": 1
+    }
+   ],
+   "verified": 0.02,
+   "op": "latest",
+   "confidence": 0.0,
+   "speculation_hit": true,
+   "question": "What's Ondra's email address?",
+   "gold": "UNKNOWN: never mentioned",
+   "category": "unanswerable",
+   "score": 0.0,
+   "wall_s": 0.004,
+   "jev_s": 0.355
+  },
+  {
+   "answer": "I don't know.",
+   "table": "none",
+   "column": null,
+   "filters": {},
+   "period": "all",
+   "relaxed": 0,
+   "steps": [],
+   "verified": null,
+   "op": "latest",
+   "confidence": 0.5,
+   "speculation_hit": true,
+   "question": "How much does Eva earn?",
+   "gold": "UNKNOWN: never mentioned",
+   "category": "unanswerable",
+   "score": 1.0,
+   "wall_s": 0.004,
+   "jev_s": 0.31
+  },
+  {
+   "answer": "2026-03-02T10:25 {\"person\": \"Nina Rossi\", \"type\": \"email\", \"value\": \"nina@nebula.ai\"}",
+   "table": "contact_methods",
+   "column": "__row__",
+   "filters": {
+    "person_id": "Nina Rossi"
+   },
+   "period": "all",
+   "relaxed": 1,
+   "steps": [
+    {
+     "table": "people",
+     "filters": {
+      "name": "Nina Rossi"
+     },
+     "period": "all",
+     "rows": 0
+    },
+    {
+     "table": "contact_methods",
+     "filters": {
+      "person_id": "Nina Rossi"
+     },
+     "period": "all",
+     "rows": 1
+    }
+   ],
+   "verified": 0.03,
+   "op": "latest",
+   "confidence": 0.0,
+   "speculation_hit": true,
+   "question": "What's Nina's birthday?",
+   "gold": "UNKNOWN: never mentioned",
+   "category": "unanswerable",
+   "score": 0.0,
+   "wall_s": 0.002,
+   "jev_s": 0.355
+  }
+ ]
+}

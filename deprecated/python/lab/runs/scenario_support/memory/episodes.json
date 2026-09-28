@@ -1,0 +1,1487 @@
+{
+ "2026-01-05": {
+  "gist": "Priya Shah handles integrations and SSO, Leo Martins billing, and Sam Okafor mobile and performance; the team sync ended with 2 tickets open and a focus on integrations. Ticket #1042 from Tom Reed at Acme Corp, about late Android notifications, was assigned to Sam Okafor (P2); ticket #1041 from an unnamed Initech contact, about a Salesforce sync error, was assigned to Priya (P3).",
+  "ids": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ]
+ },
+ "2026-01-06": {
+  "gist": "Nora Blake at Globex reported an SSO login loop with Okta in ticket #1044; Priya was assigned (P3), and it was resolved after a missing group mapping was fixed. The team noted plan tiers: Acme Corp and Umbrella Health are Enterprise; Globex, Initech, Wayne Retail and Soylent Foods are Pro; Stark Logistics and Hooli are Starter. Two more tickets came from unnamed Initech contacts: #1043 about missing Zoom links, assigned to Priya Shah (P3), and #1045 about being charged twice, assigned to Leo Martins (P3).",
+  "ids": [
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14
+  ]
+ },
+ "2026-01-07": {
+  "gist": "Ben Ortiz at Wayne Retail reported that reports time out in ticket #1046; it was assigned to Sam Okafor (P2).",
+  "ids": [
+   15,
+   16
+  ]
+ },
+ "2026-01-08": {
+  "gist": "Ticket #1042 was resolved after a timezone setting was fixed. Acme Corp wants every update by email and never by phone call; the user also wrote “nice.”",
+  "ids": [
+   17,
+   18,
+   19
+  ]
+ },
+ "2026-01-09": {
+  "gist": "Dana Cole at Umbrella Health reported a refund request for unused seats in ticket #1047, assigned to Leo (P3); ticket #1041 from Initech was closed as a timezone bug in the sync. Nora Blake at Globex reported that she couldn't book from the mobile app in ticket #1048, assigned to Sam (P3); the user later asked, “what's on my plate today?”",
+  "ids": [
+   20,
+   21,
+   22,
+   23,
+   24,
+   25
+  ]
+ },
+ "2026-01-10": {
+  "gist": "Ticket #1045 was resolved after an expired card token was fixed, and ticket #1043 was closed because of an expired OAuth token.",
+  "ids": [
+   26,
+   27
+  ]
+ },
+ "2026-01-11": {
+  "gist": "Ticket #1043 received a 5/5 CSAT survey from an unnamed respondent, with the comment “fast and friendly.”",
+  "ids": [
+   28
+  ]
+ },
+ "2026-01-12": {
+  "gist": "The team sync ended with 4 tickets open and a focus on integrations; ticket #1047 was resolved after a duplicate charge from the payment retry was fixed. Ivy Park at Stark Logistics reported an SSO login loop with Okta in ticket #1049, assigned to Priya (P3); Tom Reed at Acme Corp reported a slow booking page in ticket #1050, assigned to Sam Okafor (P3).",
+  "ids": [
+   29,
+   30,
+   31,
+   32,
+   33,
+   34
+  ]
+ },
+ "2026-01-13": {
+  "gist": "Tom Reed at Acme Corp reported a slow booking page again in ticket #1051, assigned to Sam Okafor (P3); ticket #1048 was closed because of a timezone setting.",
+  "ids": [
+   35,
+   36,
+   37
+  ]
+ },
+ "2026-01-15": {
+  "gist": "Nora Blake at Globex reported a refund request for unused seats in ticket #1052, assigned to Leo (P2). Ticket #1049 was closed because of a wrong ACS URL, and #1050 was closed after a slow report query.",
+  "ids": [
+   38,
+   39,
+   40,
+   41
+  ]
+ },
+ "2026-01-16": {
+  "gist": "Ticket #1046 was resolved after cache misses following a deploy were fixed.",
+  "ids": [
+   42
+  ]
+ },
+ "2026-01-17": {
+  "gist": "Ben Ortiz gave ticket #1046 a 3/5 CSAT rating with the comment “ok.” Ticket #1051 was resolved after a slow report query was fixed.",
+  "ids": [
+   43,
+   44
+  ]
+ },
+ "2026-01-19": {
+  "gist": "Ticket #1054 from an unnamed Initech contact about mobile-app booking trouble was assigned to Sam Okafor at P2; the team sync had 3 tickets open and focused on SSO. Ticket #1053 from Nora Blake at Globex about being charged twice went to Leo at P3, and you asked to be reminded later what had been said about it.",
+  "ids": [
+   45,
+   46,
+   47,
+   48,
+   49,
+   50
+  ]
+ },
+ "2026-01-20": {
+  "gist": "Nora Blake at Globex prefers a phone call before 10am and email otherwise.",
+  "ids": [
+   51
+  ]
+ },
+ "2026-01-21": {
+  "gist": "Ticket #1055 from Ben Ortiz at Wayne Retail about reports timing out was assigned to Sam at P3.",
+  "ids": [
+   52,
+   53
+  ]
+ },
+ "2026-01-22": {
+  "gist": "Ben Ortiz at Wayne Retail reported that his team could not update its credit card, blocking a few people; ticket #1056 went to Leo Martins at P2. Ticket #1053 was escalated to engineering at P1, and Initech received a $120 refund for the January sync outage.",
+  "ids": [
+   54,
+   55,
+   56,
+   57
+  ]
+ },
+ "2026-01-23": {
+  "gist": "Ticket #1052 was resolved as a duplicate charge caused by a payment retry; Tom Reed at Acme Corp reported missing Zoom links in invites after the previous day's update, and ticket #1057 went to Priya at P2. Ticket #1054 was fixed as a bug in the 5.2 release and resolved.",
+  "ids": [
+   58,
+   59,
+   60,
+   61
+  ]
+ },
+ "2026-01-24": {
+  "gist": "Ticket #1055 was resolved; the cause was cache misses after a deploy.",
+  "ids": [
+   62
+  ]
+ },
+ "2026-01-26": {
+  "gist": "The team sync had 4 tickets open and focused on the billing backlog; a QBR with Acme Corp was scheduled on Zoom for 2026-02-05 from 15:00 to 16:00, organized by Tom Reed. Tom also reported duplicated Google Calendar events in ticket #1059, which was closed as a timezone bug in the sync and then assigned to Priya at P3; Nora Blake at Globex reported a wrong invoice seat count in #1058, assigned to Leo Martins at P3 and fixed as an expired card token.",
+  "ids": [
+   63,
+   64,
+   65,
+   66,
+   67,
+   68,
+   69,
+   70
+  ]
+ },
+ "2026-01-27": {
+  "gist": "Ticket #1059 was escalated to engineering at P1, and you sent a thumbs-up. Dana Cole at Umbrella Health reported duplicated Google Calendar events in #1060, which was assigned to Priya at P2.",
+  "ids": [
+   71,
+   72,
+   73,
+   74
+  ]
+ },
+ "2026-01-28": {
+  "gist": "Ticket #1060 was closed as a calendar API quota issue; an unnamed Initech contact reported a wrong invoice seat count in #1061, assigned to Leo at P2 and closed as a stale seat count. Ticket #1056 was resolved as a stale seat count, #1058 was escalated to engineering at P1, and #1053 was closed as an expired card token.",
+  "ids": [
+   75,
+   76,
+   77,
+   78,
+   79,
+   80,
+   81
+  ]
+ },
+ "2026-01-29": {
+  "gist": "Acme Corp said ticket #1059 was back, so it was reopened; an unnamed Initech contact reported failing webhook deliveries in #1063, assigned to Priya at P1. Gavin Lee at Hooli reported being unable to update the credit card in #1062, assigned to Leo Martins at P3.",
+  "ids": [
+   82,
+   83,
+   84,
+   85,
+   86
+  ]
+ },
+ "2026-01-30": {
+  "gist": "Tom Reed at Acme Corp reported late Android notifications in #1064, assigned to Sam at P2; Umbrella Health said #1060 was back, so it was reopened. Ticket #1057 was fixed as a timezone bug in the sync and resolved, and #1062 was fixed as an expired card token and resolved.",
+  "ids": [
+   87,
+   88,
+   89,
+   90,
+   91
+  ]
+ },
+ "2026-02-01": {
+  "gist": "Globex said ticket #1053 was back, so it was reopened; ticket #1062 was escalated to engineering at P1. Ticket #1059 was resolved again, for good this time.",
+  "ids": [
+   92,
+   93,
+   94
+  ]
+ },
+ "2026-02-02": {
+  "gist": "Monday sync showed the backlog at 4. Nora Blake of Globex opened ticket #1065 for failing webhook deliveries after an update; it was assigned to Priya (P2), and #1060 was resolved again, “for good this time.”",
+  "ids": [
+   95,
+   96,
+   97,
+   98,
+   99
+  ]
+ },
+ "2026-02-03": {
+  "gist": "Ben Ortiz of Wayne Retail opened ticket #1066 about being charged twice, and it was assigned to Leo (P3). Dana of Umbrella complained about being cc’d on internal threads again, with a note not to do that.",
+  "ids": [
+   100,
+   101,
+   102
+  ]
+ },
+ "2026-02-04": {
+  "gist": "Tom Reed of Acme Corp opened ticket #1067 for Outlook sync stopping after an update; it was assigned to Priya (P3). Ticket #1063 was closed as a timezone bug in the sync.",
+  "ids": [
+   103,
+   104,
+   105
+  ]
+ },
+ "2026-02-05": {
+  "gist": "Ticket #1063 received a 5/5 CSAT from an unnamed respondent, who called the service “fast and friendly”; #1053 was resolved again, “for good this time.” The Acme QBR was completed, and they wanted SSO for 200 more seats and asked about audit logs.",
+  "ids": [
+   106,
+   107,
+   108,
+   109
+  ]
+ },
+ "2026-02-06": {
+  "gist": "Gavin Lee of Hooli opened ticket #1068 about the iOS app crashing on login and blocking a few people; it was assigned to Sam (P2).",
+  "ids": [
+   110,
+   111
+  ]
+ },
+ "2026-02-07": {
+  "gist": "Ticket #1064 was closed as a bug in the 5.2 release, and #1066 was closed because of an expired card token.",
+  "ids": [
+   112,
+   113
+  ]
+ },
+ "2026-02-08": {
+  "gist": "Ticket #1064 received a 5/5 CSAT from Tom Reed, who called the service “fast and friendly.” Ticket #1065 was resolved after fixing a timezone bug in the sync.",
+  "ids": [
+   114,
+   115
+  ]
+ },
+ "2026-02-09": {
+  "gist": "Rita Moss of Soylent Foods opened #1070 for duplicated Google Calendar events; Priya (P3) handled it, and it was resolved as a timezone bug in the sync. Rita also opened #1069 for an expired SAML certificate, which Priya (P3) received.",
+  "ids": [
+   116,
+   117,
+   118,
+   119,
+   120
+  ]
+ },
+ "2026-02-10": {
+  "gist": "Rita Moss of Soylent Foods opened #1072 for duplicated Google Calendar events, assigned to Priya Shah (P2); she later gave it a 5/5 CSAT for #1070, saying “fast and friendly.” An Umbrella rule was noted: never paste patient data into tickets (HIPAA). Tom Reed of Acme Corp opened #1071 for missing Zoom links in invites, assigned to Priya (P2).",
+  "ids": [
+   121,
+   122,
+   123,
+   124,
+   125,
+   126
+  ]
+ },
+ "2026-02-11": {
+  "gist": "An unnamed Initech contact opened #1073 for a refund for unused seats, assigned to Leo (P2). Gavin Lee of Hooli opened #1074 for an SSO login loop with Okta, assigned to Priya (P1) and later resolved due to a missing group mapping; Ivy Park of Stark Logistics opened #1075 about the wrong time zone in the app, assigned to Sam (P3). Ticket #1069 was escalated to engineering as P1, and #1071 was resolved after fixing an expired OAuth token.",
+  "ids": [
+   127,
+   128,
+   129,
+   130,
+   131,
+   132,
+   133,
+   134
+  ]
+ },
+ "2026-02-12": {
+  "gist": "An unnamed Initech contact opened #1076 for a Salesforce sync error, assigned to Priya (P1); it was later closed as a timezone bug in the sync. Ticket #1072 was closed due to a calendar API quota, and #1067 was resolved for the same reason. Globex was refunded $480 for unused seats, and #1074 was resolved due to a missing group mapping.",
+  "ids": [
+   135,
+   136,
+   137,
+   138,
+   139,
+   140
+  ]
+ },
+ "2026-02-13": {
+  "gist": "Ticket #1072 received a 5/5 CSAT from Rita Moss, who called the service “fast and friendly.” Rita of Soylent Foods opened #1077 for an invoice showing the wrong seat count; Leo (P2) was assigned, and #1076 was closed as a timezone bug in the sync.",
+  "ids": [
+   141,
+   142,
+   143,
+   144
+  ]
+ },
+ "2026-02-14": {
+  "gist": "Ticket #1076 received a 3/5 CSAT from [forgotten] with the comment “ok.” Ticket #1069 was resolved for a missing group mapping.",
+  "ids": [
+   145,
+   146
+  ]
+ },
+ "2026-02-15": {
+  "gist": "Rita Moss gave ticket #1069 a 4/5 CSAT, saying “good, took a bit long.” Ticket #1068, a bug in the 5.2 release, was fixed and resolved.",
+  "ids": [
+   147,
+   148
+  ]
+ },
+ "2026-02-16": {
+  "gist": "At Monday sync, the backlog was 5. New tickets came from Ben Ortiz at Wayne Retail (#1078, webhook deliveries failing) and Dana Cole at Umbrella Health (#1079, duplicated Google Calendar events; #1080, Outlook sync stopped); all three were assigned to Priya, with priorities P2, P2, and P3. Ticket #1073 was closed as a stale seat count.",
+  "ids": [
+   149,
+   150,
+   151,
+   152,
+   153,
+   154,
+   155,
+   156
+  ]
+ },
+ "2026-02-17": {
+  "gist": "Tom Reed at Acme Corp reported failing webhook deliveries in ticket #1081, assigned to Priya at P1. Tickets #1075 (timezone setting) and #1077 (stale seat count) were resolved.",
+  "ids": [
+   157,
+   158,
+   159,
+   160
+  ]
+ },
+ "2026-02-18": {
+  "gist": "Ticket #1079 was resolved for a calendar API quota. A new duplicated Google Calendar events ticket, #1082, came from [forgotten] at Initech and was assigned to Priya at P3.",
+  "ids": [
+   161,
+   162,
+   163
+  ]
+ },
+ "2026-02-19": {
+  "gist": "Dana Cole gave ticket #1079 a 4/5 CSAT, saying “good, took a bit long.” [forgotten] at Initech reported being unable to update the credit card in ticket #1083, assigned to Leo at P3; ticket #1078 was resolved for a calendar API quota.",
+  "ids": [
+   164,
+   165,
+   166,
+   167
+  ]
+ },
+ "2026-02-20": {
+  "gist": "Tom Reed at Acme Corp reported being unable to book from the mobile app in ticket #1084, assigned to Sam at P2.",
+  "ids": [
+   168,
+   169
+  ]
+ },
+ "2026-02-21": {
+  "gist": "Ticket #1082 was closed as a calendar API quota.",
+  "ids": [
+   170
+  ]
+ },
+ "2026-02-22": {
+  "gist": "Ticket #1083 was resolved for a stale seat count.",
+  "ids": [
+   171
+  ]
+ },
+ "2026-02-23": {
+  "gist": "Gavin Lee at Hooli reported failing webhook deliveries in ticket #1086, assigned to Priya at P2. Monday sync noted the backlog was 5. Nora Blake at Globex reported being unable to update the credit card in ticket #1085, assigned to Leo at P3.",
+  "ids": [
+   172,
+   173,
+   174,
+   175,
+   176
+  ]
+ },
+ "2026-02-24": {
+  "gist": "After the message “ok cool,” Dana Cole at Umbrella Health reported missing VAT on an invoice in ticket #1088, assigned to Leo at P2. Tom Reed at Acme Corp reported an SSO login loop with Okta after the previous day’s update in ticket #1087, assigned to Priya Shah at P2.",
+  "ids": [
+   177,
+   178,
+   179,
+   180,
+   181
+  ]
+ },
+ "2026-02-25": {
+  "gist": "Tickets #1080 and #1084 were closed due to an expired OAuth token and a push certificate problem, respectively. Ticket #1087 was fixed for a missing group mapping and resolved.",
+  "ids": [
+   182,
+   183,
+   184
+  ]
+ },
+ "2026-02-26": {
+  "gist": "Tom Reed rated ticket #1084 4/5, saying it was good but took a bit long. A new Salesforce sync error ticket #1089 came from Rita Moss at Soylent Foods, was assigned to Priya as P2, and #1081 was closed because of an expired OAuth token.",
+  "ids": [
+   185,
+   186,
+   187,
+   188
+  ]
+ },
+ "2026-02-27": {
+  "gist": "Tom Reed rated #1081 4/5, saying it was good but took a bit long, and Acme said reopened ticket #1087 was back. Tom Reed of Acme Corp reported a Salesforce sync error after the previous day's update in new ticket #1090, which was assigned to Priya as P2.",
+  "ids": [
+   189,
+   190,
+   191,
+   192
+  ]
+ },
+ "2026-02-28": {
+  "gist": "Ticket #1086 was resolved after a timezone bug in the sync was fixed, #1087 was resolved again for good, and #1085 was resolved as a duplicate charge from the payment retry.",
+  "ids": [
+   193,
+   194,
+   195
+  ]
+ },
+ "2026-03-01": {
+  "gist": "Ticket #1089 was resolved after a timezone bug in the sync was fixed.",
+  "ids": [
+   196
+  ]
+ },
+ "2026-03-02": {
+  "gist": "The team sync noted 3 tickets open and a focus on the billing backlog. Tom Reed of Acme Corp reported that reports timed out in new ticket #1091, assigned to Sam Okafor as P3.",
+  "ids": [
+   197,
+   198,
+   199
+  ]
+ },
+ "2026-03-03": {
+  "gist": "Ticket #1091 was escalated to engineering and raised to P1. Tom Reed of Acme Corp reported that the app showed the wrong time zone in new ticket #1092, assigned to Sam Okafor as P3.",
+  "ids": [
+   200,
+   201,
+   202
+  ]
+ },
+ "2026-03-05": {
+  "gist": "Ticket #1090 was closed as a timezone bug in the sync, #1092 was fixed and resolved as a bug in the 5.2 release, and #1088 was resolved as a duplicate payment-retry charge. A new unused-seats refund ticket #1093 came from an unnamed Initech contact and was assigned to Leo as P3; the messages also included “lol.”",
+  "ids": [
+   203,
+   204,
+   205,
+   206,
+   207,
+   208
+  ]
+ },
+ "2026-03-06": {
+  "gist": "Dana Cole rated #1088 5/5, calling the service “fast and friendly.”",
+  "ids": [
+   209
+  ]
+ },
+ "2026-03-08": {
+  "gist": "Acme said ticket #1092 was back, and it was reopened.",
+  "ids": [
+   210
+  ]
+ },
+ "2026-03-09": {
+  "gist": "The team sync noted 3 tickets open and a focus on mobile crashes; Nora Blake of Globex reported duplicated Google Calendar events in new ticket #1095, assigned to Priya as P2, and was promised the CSV export fix by Friday Mar 13. Ticket #1094 was closed as an expired OAuth token before a new Outlook sync ticket with the same number came from Tom Reed of Acme Corp and was assigned to Priya as P2; Acme Corp was refunded $1,250 for February's double charge, and #1091 was closed as a slow report query.",
+  "ids": [
+   211,
+   212,
+   213,
+   214,
+   215,
+   216,
+   217,
+   218,
+   219
+  ]
+ },
+ "2026-03-10": {
+  "gist": "Tom Reed rated #1091 4/5, saying it was good but took a bit long; his Acme Corp unused-seats refund ticket #1096 was assigned to Leo as P2 and later closed as a stale seat count. Ticket #1092 was resolved again for good, #1093 was resolved as a duplicate payment-retry charge, and Ivy Park of Stark Logistics reported being charged twice this month in #1097, assigned to Leo Martins as P2.",
+  "ids": [
+   220,
+   221,
+   222,
+   223,
+   224,
+   225,
+   226
+  ]
+ },
+ "2026-03-11": {
+  "gist": "An unnamed customer rated #1093 4/5, saying it was good but took a bit long; Nora Blake of Globex reported the wrong seat count on an invoice in #1099, assigned to Leo Martins as P3. A new charged-twice ticket #1098 came from an unnamed Initech contact after an update and was assigned to Leo as P2, while #1096 was closed as a stale seat count.",
+  "ids": [
+   227,
+   228,
+   229,
+   230,
+   231,
+   232
+  ]
+ },
+ "2026-03-12": {
+  "gist": "Ivy Park of Stark Logistics reported that reports had been timing out since that morning in ticket #1100; it was assigned to Sam at P2.",
+  "ids": [
+   233,
+   234
+  ]
+ },
+ "2026-03-13": {
+  "gist": "Ben Ortiz of Wayne Retail reported that new users could not sign in with Azure AD in ticket #1101, assigned to Priya at P3. The Globex CSV deadline was missed, and Nora was told the new ETA was Mar 19.",
+  "ids": [
+   235,
+   236,
+   237
+  ]
+ },
+ "2026-03-14": {
+  "gist": "Ticket #1097 was resolved after fixing an expired card token, and #1095 was closed as a timezone bug in the sync.",
+  "ids": [
+   238,
+   239
+  ]
+ },
+ "2026-03-15": {
+  "gist": "Nora Blake gave ticket #1095 a 5/5 CSAT rating, saying it was “fast and friendly.”",
+  "ids": [
+   240
+  ]
+ },
+ "2026-03-16": {
+  "gist": "Dana Cole of Umbrella Health reported missing Zoom links in invites (#1103), assigned to Priya Shah at P2; Tom Reed of Acme Corp reported a mobile-app booking issue (#1102), given to Sam at P2; and an unnamed Initech contact reported an Okta SSO login loop (#1104), assigned to Priya at P2. The team sync noted 6 open tickets and a focus on integrations; #1099 was resolved after fixing an expired card token.",
+  "ids": [
+   241,
+   242,
+   243,
+   244,
+   245,
+   246,
+   247,
+   248
+  ]
+ },
+ "2026-03-17": {
+  "gist": "Dana Cole of Umbrella Health reported missing VAT on an invoice in ticket #1105, assigned to Leo Martins at P1 and resolved after fixing a stale seat count. A separate “morning” message was sent.",
+  "ids": [
+   249,
+   250,
+   251,
+   252
+  ]
+ },
+ "2026-03-18": {
+  "gist": "Dana Cole of Umbrella Health reported that the iOS app crashed on login after the previous day’s update (#1107), assigned to Sam at P2; Tom Reed of Acme Corp reported a credit-card update issue (#1106), given to Leo at P3. Ticket #1098 was closed as an expired card token.",
+  "ids": [
+   253,
+   254,
+   255,
+   256,
+   257
+  ]
+ },
+ "2026-03-19": {
+  "gist": "Ticket #1106 was resolved after identifying a duplicate charge from the payment retry, then escalated to engineering at P1; #1104 was also escalated to engineering at P1. The CSV export fix shipped, and Nora confirmed it worked; there was also a “hmm” message.",
+  "ids": [
+   258,
+   259,
+   260,
+   261
+  ]
+ },
+ "2026-03-20": {
+  "gist": "Ivy Park of Stark Logistics reported late Android notifications after the previous day’s update in ticket #1108, assigned to Sam at P3; #1101 was closed as a missing group mapping. A “thanks!” message was sent.",
+  "ids": [
+   262,
+   263,
+   264,
+   265
+  ]
+ },
+ "2026-03-21": {
+  "gist": "Ticket #1100 was closed as cache misses after a deploy, and #1106 was escalated to engineering at P1.",
+  "ids": [
+   266,
+   267
+  ]
+ },
+ "2026-03-22": {
+  "gist": "Ticket #1108 was closed as a bug in the 5.2 release.",
+  "ids": [
+   268
+  ]
+ },
+ "2026-03-23": {
+  "gist": "Ivy Park gave ticket #1108 a 5/5 CSAT rating, saying it was “fast and friendly”; Monday sync reported a backlog of 6. Nora Blake of Globex reported a refund request for unused seats in #1109, assigned to Leo Martins at P3; a QBR with Acme Corp was scheduled for April 2, 2026, 15:00–16:00 on Zoom, organized by Tom Reed. Ticket #1102 was closed as a push certificate problem, #1104 was resolved after fixing an expired SAML certificate, and Rita Moss of Soylent Foods reported a wrong seat count on an invoice in #1110, given to Leo at P2; a “thanks!” message was also sent.",
+  "ids": [
+   269,
+   270,
+   271,
+   272,
+   273,
+   274,
+   275,
+   276,
+   277,
+   278
+  ]
+ },
+ "2026-03-24": {
+  "gist": "Received a 4/5 CSAT for #1104 from [forgotten], with the comment “good, took a bit long”; Acme reported #1106 was back. Opened Dana Cole’s Umbrella Health ticket #1111 for failing webhook deliveries, resolved it as a timezone bug in the sync and routed it to Priya at P2; closed #1103 because of an expired OAuth token.",
+  "ids": [
+   279,
+   280,
+   281,
+   282,
+   283,
+   284
+  ]
+ },
+ "2026-03-25": {
+  "gist": "Dana Cole of Umbrella Health opened #1112 for webhook deliveries failing since that morning; it was assigned to Priya Shah at P2. Resolved #1109 for a stale seat count, then noted a lunch break.",
+  "ids": [
+   285,
+   286,
+   287,
+   288
+  ]
+ },
+ "2026-03-26": {
+  "gist": "Resolved #1106 again, this time “for good.”",
+  "ids": [
+   289
+  ]
+ },
+ "2026-03-27": {
+  "gist": "Closed #1107 because of a timezone setting. Opened #1114 for [forgotten] at Initech about failing webhooks after the previous day’s update and assigned it to Priya Shah at P2; opened Ben Ortiz’s Wayne Retail ticket #1113 for iOS app crashes on login and assigned it to Sam Okafor at P3.",
+  "ids": [
+   290,
+   291,
+   292,
+   293,
+   294
+  ]
+ },
+ "2026-03-28": {
+  "gist": "Acme said #1102 was back; closed #1110 because of an expired card token and #1113 because of a timezone setting.",
+  "ids": [
+   295,
+   296,
+   297
+  ]
+ },
+ "2026-03-29": {
+  "gist": "Closed #1112 because of a calendar API quota.",
+  "ids": [
+   298
+  ]
+ },
+ "2026-03-30": {
+  "gist": "Team sync focused on the billing backlog, with 1 ticket open; closed #1114 for a timezone bug in the sync. Dana Cole of Umbrella Health opened #1115 for a slow booking page, assigned to Sam Okafor at P1 and closed because of cache misses after a deploy; refunded Hooli $60 for a plan downgrade and resolved #1102 again, “for good.”",
+  "ids": [
+   299,
+   300,
+   301,
+   302,
+   303,
+   304,
+   305
+  ]
+ },
+ "2026-03-31": {
+  "gist": "Dana Cole of Umbrella Health opened #1116 for failing webhook deliveries, which was routed to Priya at P2. The day’s other note was “ok.”",
+  "ids": [
+   306,
+   307,
+   308
+  ]
+ },
+ "2026-04-01": {
+  "gist": "Ivy Park of Stark Logistics opened #1117 because search takes 20 seconds after the previous day’s update; it was given to Sam at P2.",
+  "ids": [
+   309,
+   310
+  ]
+ },
+ "2026-04-02": {
+  "gist": "Ivy Park of Stark Logistics opened #1118 for a Salesforce sync error, assigned to Priya Shah at P2; a QBR with Acme surfaced two slow integration tickets and a request for a named billing contact. Nora Blake of Globex opened #1119 for an expired SAML certificate, assigned to Priya at P3.",
+  "ids": [
+   311,
+   312,
+   313,
+   314,
+   315
+  ]
+ },
+ "2026-04-03": {
+  "gist": "Tom Reed of Acme Corp opened #1120 for failing webhook deliveries, routed to Priya at P2; #1116 was resolved as a timezone bug in the sync. Resolved #1118 because of a calendar API quota.",
+  "ids": [
+   316,
+   317,
+   318,
+   319
+  ]
+ },
+ "2026-04-04": {
+  "gist": "Umbrella reported #1115 was back, and #1118 was escalated to engineering at P1.",
+  "ids": [
+   320,
+   321
+  ]
+ },
+ "2026-04-06": {
+  "gist": "The backlog was 6. Priya Shah was assigned Globex’s #1123 Salesforce sync error (P2) and Acme Corp’s #1122 duplicated Google Calendar events (P2); Nora Blake’s Globex Outlook sync ticket #1121 was assigned to Priya (P3), and #1119 was resolved due to a wrong ACS URL.",
+  "ids": [
+   322,
+   323,
+   324,
+   325,
+   326,
+   327,
+   328,
+   329
+  ]
+ },
+ "2026-04-07": {
+  "gist": "Nora Blake gave ticket #1119 a 5/5 CSAT rating, saying “fast and friendly.” Ticket #1115 was resolved again, for good, and #1120 was fixed for a timezone bug in the sync.",
+  "ids": [
+   330,
+   331,
+   332
+  ]
+ },
+ "2026-04-08": {
+  "gist": "A new Initech ticket, #1124, reported that the mobile app could not book after the previous day’s update; it was assigned to Sam (P2). The user asked to be reminded what they had said about “this” later, and #1123 was closed due to a calendar API quota.",
+  "ids": [
+   333,
+   334,
+   335,
+   336
+  ]
+ },
+ "2026-04-09": {
+  "gist": "Ticket #1124 was escalated to engineering as P1, and #1121 was also escalated to engineering as P1. Nora Blake gave #1123 a 5/5 CSAT rating, saying “fast and friendly.”",
+  "ids": [
+   337,
+   338,
+   339
+  ]
+ },
+ "2026-04-10": {
+  "gist": "Ticket #1117 was closed due to a slow report query. Wayne Retail’s Ben Ortiz reported the wrong time zone in #1127, assigned to Sam (P2); Globex’s Nora Blake reported unused-seat refunds in #1125, assigned to Leo (P1); and Hooli’s Gavin Lee reported the wrong time zone in #1126, assigned to Sam (P2). Acme Corp’s #1122 was fixed for a timezone bug in the sync.",
+  "ids": [
+   340,
+   341,
+   342,
+   343,
+   344,
+   345,
+   346,
+   347
+  ]
+ },
+ "2026-04-11": {
+  "gist": "Wayne Retail’s #1127 was fixed for a bug in the 5.2 release and resolved.",
+  "ids": [
+   348
+  ]
+ },
+ "2026-04-12": {
+  "gist": "Ticket #1125 was closed because of a duplicate charge from the payment retry, and Initech’s #1124 was fixed by correcting a timezone setting.",
+  "ids": [
+   349,
+   350
+  ]
+ },
+ "2026-04-13": {
+  "gist": "Wayne Retail’s Ben Ortiz reported failing webhook deliveries in #1128, assigned to Priya (P3). The user noted that Leo’s last day is Apr 30 and Ana Silva starts May 4 to take over billing.",
+  "ids": [
+   351,
+   352,
+   353
+  ]
+ },
+ "2026-04-14": {
+  "gist": "The user asked what was on their plate today; Globex’s #1121 was resolved due to a calendar API quota. Acme Corp’s Tom Reed reported an Okta SSO login loop in #1130, assigned to Priya (P2), and Umbrella Health reported a mobile-app booking issue in #1129, assigned to Sam (P2).",
+  "ids": [
+   354,
+   355,
+   356,
+   357,
+   358,
+   359
+  ]
+ },
+ "2026-04-15": {
+  "gist": "Ticket #1128 was fixed due to a calendar API quota and resolved.",
+  "ids": [
+   360
+  ]
+ },
+ "2026-04-16": {
+  "gist": "Initech was refunded $240 for the April SSO outage. Acme Corp’s Tom Reed reported being charged twice in #1131, assigned to Leo Martins (P3); the user also wrote “hmm.”",
+  "ids": [
+   361,
+   362,
+   363,
+   364,
+   365
+  ]
+ },
+ "2026-04-17": {
+  "gist": "The user again asked to be reminded what they had said about “this” later. Acme Corp’s Tom Reed reported missing VAT on invoice in #1133, assigned to Leo Martins (P2); Globex’s Nora Blake reported duplicated Google Calendar events in #1132, which Priya was assigned (P3) and fixed due to an expired OAuth token. Hooli’s #1126 was also fixed for a bug in the 5.2 release.",
+  "ids": [
+   366,
+   367,
+   368,
+   369,
+   370,
+   371,
+   372
+  ]
+ },
+ "2026-04-19": {
+  "gist": "Reopened #1126 after Hooli reported the issue was back. Closed #1129, identified as a bug in the 5.2 release.",
+  "ids": [
+   373,
+   374
+  ]
+ },
+ "2026-04-20": {
+  "gist": "The team sync found 5 open tickets, with a focus on integrations; #1135 was closed as an expired card token, then a new #1135 came in from Nora Blake (Globex) about being charged twice and was assigned to Leo, P2. Promised Tom (Acme) a place in the status page beta by May 15; Dana Cole (Umbrella Health) reported duplicated Google Calendar events in #1134, assigned to Priya Shah, P3, and asked for a weekly summary.",
+  "ids": [
+   375,
+   376,
+   377,
+   378,
+   379,
+   380,
+   381,
+   382
+  ]
+ },
+ "2026-04-21": {
+  "gist": "Ben Ortiz (Wayne Retail) reported reports timing out in #1136 (assigned to Sam, P2) and missing VAT on an invoice in #1138 (assigned to Leo Martins, P2); Dana Cole (Umbrella Health) reported iOS login crashes in #1137 (assigned to Sam, P3). Closed #1130 for an expired SAML certificate, resolved #1134 due to a calendar API quota and #1133 due to a stale seat count, and asked what was on their plate.",
+  "ids": [
+   383,
+   384,
+   385,
+   386,
+   387,
+   388,
+   389,
+   390,
+   391,
+   392
+  ]
+ },
+ "2026-04-22": {
+  "gist": "Tom Reed gave #1130 a 5/5 CSAT rating, saying service was “fast and friendly.” Asked for a weekly summary.",
+  "ids": [
+   393,
+   394
+  ]
+ },
+ "2026-04-23": {
+  "gist": "Nora Blake (Globex) reported duplicated Google Calendar events in #1139, assigned to Priya, P2; #1131 was resolved due to a stale seat count. Resolved #1126 again, this time for good.",
+  "ids": [
+   395,
+   396,
+   397,
+   398
+  ]
+ },
+ "2026-04-24": {
+  "gist": "Ben Ortiz (Wayne Retail) reported missing Zoom links in #1140, assigned to Priya, P2; it was closed as an expired OAuth token. Gavin Lee gave #1126 a 5/5 CSAT rating (“fast and friendly”), and #1137 was resolved due to a timezone setting.",
+  "ids": [
+   399,
+   400,
+   401,
+   402,
+   403
+  ]
+ },
+ "2026-04-25": {
+  "gist": "Resolved #1138, identifying a stale seat count as the cause.",
+  "ids": [
+   404
+  ]
+ },
+ "2026-04-27": {
+  "gist": "The team sync found 4 open tickets, with a focus on SSO; Ivy Park (Stark Logistics) reported a Salesforce sync error in #1142 (assigned to Priya Shah, P3), and Rita Moss (Soylent Foods) reported iOS login crashes in #1141 (assigned to Sam Okafor, P3). Resolved #1136 due to cache misses after a deploy; announced that 24/7 coverage starts May 1, with Sam moving to the 22:00-06:00 night shift.",
+  "ids": [
+   405,
+   406,
+   407,
+   408,
+   409,
+   410,
+   411
+  ]
+ },
+ "2026-04-28": {
+  "gist": "Ben Ortiz gave #1136 a 5/5 CSAT rating, saying service was “fast and friendly.” Closed #1142, identifying a timezone bug in the sync.",
+  "ids": [
+   412,
+   413,
+   414
+  ]
+ },
+ "2026-04-29": {
+  "gist": "Asked what was on their plate; Dana Cole (Umbrella Health) reported reports timing out in #1143, assigned to Sam, P2.",
+  "ids": [
+   415,
+   416,
+   417
+  ]
+ },
+ "2026-04-30": {
+  "gist": "Wayne reported #1138 was back, reopening it; Rita Moss (Soylent Foods) reported Outlook sync stopping in #1144 (assigned to Priya, P3), and Ivy Park (Stark Logistics) reported the app showing the wrong time zone in #1145 (assigned to Sam, P3). Closed #1139 due to a calendar API quota.",
+  "ids": [
+   418,
+   419,
+   420,
+   421,
+   422,
+   423,
+   424
+  ]
+ },
+ "2026-05-01": {
+  "gist": "Tom Reed (Acme Corp) reported failing webhook deliveries in #1147 (assigned to Priya, P3) and late Android notifications in #1146 (assigned to Sam, P3). Resolved #1138 again, for good this time.",
+  "ids": [
+   425,
+   426,
+   427,
+   428,
+   429,
+   430
+  ]
+ },
+ "2026-05-02": {
+  "gist": "Ben Ortiz rated ticket #1138 4/5, saying it was “good, took a bit long.”",
+  "ids": [
+   431
+  ]
+ },
+ "2026-05-03": {
+  "gist": "Ticket #1145 was closed for a push certificate problem, and #1141 was fixed and resolved for the same issue. Ticket #1144 was escalated to engineering as P1.",
+  "ids": [
+   432,
+   433,
+   434
+  ]
+ },
+ "2026-05-04": {
+  "gist": "Ana Silva started and took ownership of the billing queue. Tom Reed of Acme Corp reported Outlook sync stopped in ticket #1148, which was assigned to Priya at P2.",
+  "ids": [
+   435,
+   436,
+   437,
+   438
+  ]
+ },
+ "2026-05-05": {
+  "gist": "Tom Reed of Acme Corp reported Outlook sync stopped in #1149, and Gavin Lee of Hooli reported duplicated Google Calendar events in #1150. Both tickets were assigned to Priya at P3.",
+  "ids": [
+   439,
+   440,
+   441,
+   442
+  ]
+ },
+ "2026-05-06": {
+  "gist": "Ticket #1145 was reopened after Stark said the issue was back. Nora Blake of Globex reported missing VAT on an invoice in #1151, assigned to Ana at P2; #1144 was fixed for an expired OAuth token and resolved.",
+  "ids": [
+   443,
+   444,
+   445,
+   446
+  ]
+ },
+ "2026-05-07": {
+  "gist": "Nora Blake of Globex reported being unable to update a credit card in #1152, which was assigned to Ana at P3. Wayne Retail was refunded $310 for a duplicate invoice.",
+  "ids": [
+   447,
+   448,
+   449,
+   450
+  ]
+ },
+ "2026-05-08": {
+  "gist": "Ticket #1143 was fixed for a slow report query and resolved. An unnamed Initech contact reported new users unable to sign in with Azure AD in #1153, assigned to Priya at P3.",
+  "ids": [
+   451,
+   452,
+   453
+  ]
+ },
+ "2026-05-09": {
+  "gist": "Ticket #1144 was reopened after Soylent said the issue was back; #1151 was resolved as a stale seat count, and #1146 was closed for a push certificate problem.",
+  "ids": [
+   454,
+   455,
+   456
+  ]
+ },
+ "2026-05-10": {
+  "gist": "Ticket #1147 was closed for a calendar API quota, #1150 was resolved for an expired OAuth token, and #1145 was resolved again, for good this time.",
+  "ids": [
+   457,
+   458,
+   459
+  ]
+ },
+ "2026-05-11": {
+  "gist": "Tom Reed of Acme Corp reported duplicated Google Calendar events after yesterday’s update in #1155, assigned to Priya at P1; Dana Cole of Umbrella Health reported late Android notifications in #1154, assigned to Sam Okafor at P3. Gavin Lee rated #1150 4/5, saying it was “good, took a bit long”; the Monday sync noted a backlog of 6, and #1144 was resolved again, for good this time.",
+  "ids": [
+   460,
+   461,
+   462,
+   463,
+   464,
+   465,
+   466,
+   467
+  ]
+ },
+ "2026-05-12": {
+  "gist": "Gavin Lee of Hooli reported missing Zoom links in invites after yesterday’s update in #1157, assigned to Priya Shah at P2. Rita Moss of Soylent Foods reported missing Zoom links in #1156, assigned to Priya at P3.",
+  "ids": [
+   468,
+   469,
+   470,
+   471
+  ]
+ },
+ "2026-05-13": {
+  "gist": "Ticket #1152 was closed for a stale seat count; #1148 was closed and #1149 resolved for a timezone bug in the sync. Tom Reed of Acme Corp reported an SSO login loop with Okta in #1158, assigned to Priya Shah at P3.",
+  "ids": [
+   472,
+   473,
+   474,
+   475,
+   476,
+   477
+  ]
+ },
+ "2026-05-14": {
+  "gist": "Tom Reed of Acme Corp reported duplicated Google Calendar events in ticket #1159 after an update; it was assigned to Priya Shah at P3. Tom joined the status page beta, and tickets #1158 (expired SAML certificate), #1155 (expired OAuth token), and #1154 (bug in the 5.2 release) were resolved.",
+  "ids": [
+   478,
+   479,
+   480,
+   481,
+   482,
+   483
+  ]
+ },
+ "2026-05-15": {
+  "gist": "Tickets #1154 and #1155 received CSAT scores of 4/5 from Dana Cole (“good, took a bit long”) and 3/5 from Tom Reed (“ok”); #1157 and #1156 were fixed for timezone bugs in the sync. Ticket #1159 was escalated to engineering at P1 and then resolved as an expired OAuth token; Dana Cole of Umbrella Health opened #1160 for a Salesforce sync error, assigned to Priya at P2.",
+  "ids": [
+   484,
+   485,
+   486,
+   487,
+   488,
+   489,
+   490,
+   491,
+   492
+  ]
+ },
+ "2026-05-16": {
+  "gist": "Tom Reed rated the resolution of #1159 5/5 (“fast and friendly”). Ticket #1148 was reopened because Acme said the issue was back.",
+  "ids": [
+   493,
+   494
+  ]
+ },
+ "2026-05-17": {
+  "gist": "Ticket #1153 was closed because of a missing group mapping, and #1160 was resolved after a timezone bug in the sync was fixed.",
+  "ids": [
+   495,
+   496
+  ]
+ },
+ "2026-05-18": {
+  "gist": "Dana Cole rated #1160 4/5 (“good, took a bit long”); Nora Blake of Globex reported an SSO login loop with Okta in #1161, assigned to Priya at P2, and Tom Reed of Acme Corp reported missing Zoom links in invites in #1163, also assigned to Priya at P2. The Monday sync noted a backlog of 6, and Dana Cole of Umbrella Health reported iOS app crashes on login in #1162, assigned to Sam at P3.",
+  "ids": [
+   497,
+   498,
+   499,
+   500,
+   501,
+   502,
+   503,
+   504
+  ]
+ },
+ "2026-05-19": {
+  "gist": "Ticket #1162 was resolved after a push certificate problem was fixed. The person also wrote “thanks!”.",
+  "ids": [
+   505,
+   506
+  ]
+ },
+ "2026-05-20": {
+  "gist": "Ticket #1157 was reopened because Hooli said it was back, then #1157 was resolved again on May 24; #1161 was resolved due to an expired SAML certificate and later escalated to engineering at P1 on May 21. Ticket #1163 was escalated to engineering at P1, and #1148 was resolved again “for good this time.”",
+  "ids": [
+   507,
+   508,
+   509,
+   510,
+   511
+  ]
+ },
+ "2026-05-21": {
+  "gist": "Ticket #1161 was escalated to engineering at P1.",
+  "ids": [
+   512
+  ]
+ },
+ "2026-05-22": {
+  "gist": "An email from ops@brightdesk.com to support-leads@brightdesk.com announced that starting June 1, Enterprise customers would get a first response within 4 hours, 24/7, and status updates every 8 hours on P1 tickets. Dana Cole of Umbrella Health opened #1165 for being charged twice, assigned to Ana at P1; #1153 was reopened because Initech said it was back, and #1164 was closed for a timezone bug before Dana Cole opened it for duplicated Google Calendar events and it was assigned to Priya at P2.",
+  "ids": [
+   513,
+   514,
+   515,
+   516,
+   517,
+   518,
+   519
+  ]
+ },
+ "2026-05-23": {
+  "gist": "Dana Cole rated #1164 5/5 (“fast and friendly”). Ticket #1162 was reopened because Umbrella said it was back.",
+  "ids": [
+   520,
+   521
+  ]
+ },
+ "2026-05-24": {
+  "gist": "Ticket #1157 was resolved again, “for good this time.”",
+  "ids": [
+   522
+  ]
+ },
+ "2026-05-25": {
+  "gist": "A QBR with Acme Corp was scheduled for June 4, 2026, from 15:00 to 16:00 on Zoom, organized by Tom Reed. Nora Blake of Globex opened #1167 for an SSO login loop with Okta; Priya Shah was assigned it at P3 and it was closed as an expired SAML certificate, while Ivy Park of Stark Logistics opened #1166 for an expired SAML certificate, assigned to Priya at P2.",
+  "ids": [
+   523,
+   524,
+   525,
+   526,
+   527,
+   528
+  ]
+ },
+ "2026-05-26": {
+  "gist": "Received ticket #1168 from Nora Blake at Globex about the app showing the wrong time zone after an update and assigned it to Sam (P2). Received ticket #1169 from an unnamed Initech contact about duplicated Google Calendar events and assigned it to Priya Shah (P2); #1153 was resolved again, for good this time.",
+  "ids": [
+   529,
+   530,
+   531,
+   532,
+   533
+  ]
+ },
+ "2026-05-27": {
+  "gist": "Escalated #1168 to engineering as P1; resolved #1163 (a calendar API quota) and #1162 again, for good this time. Received #1170 from Ben Ortiz at Wayne Retail about search taking 20 seconds, assigned it to Sam (P1), and escalated #1166 to engineering as P1.",
+  "ids": [
+   534,
+   535,
+   536,
+   537,
+   538,
+   539,
+   540
+  ]
+ },
+ "2026-05-28": {
+  "gist": "Dana Cole gave #1162 a 5/5 CSAT, saying “fast and friendly”; #1165 was resolved (an expired card token). Refunded Umbrella Health $900 for the SLA breach on May 20.",
+  "ids": [
+   541,
+   542,
+   543,
+   544
+  ]
+ },
+ "2026-05-29": {
+  "gist": "Received #1171 from Dana Cole at Umbrella Health about iOS app crashes on login and assigned it to Sam (P3); #1169 was resolved after fixing an expired OAuth token. Received duplicated Google Calendar event tickets #1173 from Ben Ortiz at Wayne Retail (assigned to Priya, P3) and #1172 from Tom Reed at Acme Corp (assigned to Priya, P2); #1173 was resolved after fixing an expired OAuth token.",
+  "ids": [
+   545,
+   546,
+   547,
+   548,
+   549,
+   550,
+   551,
+   552
+  ]
+ },
+ "2026-05-30": {
+  "gist": "Resolved #1166 after fixing a wrong ACS URL.",
+  "ids": [
+   553
+  ]
+ },
+ "2026-05-31": {
+  "gist": "Resolved #1168 by correcting a timezone setting.",
+  "ids": [
+   554
+  ]
+ },
+ "2026-06-01": {
+  "gist": "Nora Blake gave #1168 a 4/5 CSAT, saying “good, took a bit long.” Received #1174 from an unnamed Initech contact about VAT missing on an invoice and assigned it to Ana (P2).",
+  "ids": [
+   555,
+   556,
+   557
+  ]
+ },
+ "2026-06-02": {
+  "gist": "Received #1176 from Ben Ortiz at Wayne Retail about duplicated Google Calendar events and assigned it to Priya (P3); received #1175 from an unnamed Initech contact about late Android notifications and assigned it to Sam (P2). Also received #1177 from Dana Cole at Umbrella Health about a refund for unused seats and assigned it to Ana (P3); closed #1170, caused by a missing database index.",
+  "ids": [
+   558,
+   559,
+   560,
+   561,
+   562,
+   563,
+   564
+  ]
+ },
+ "2026-06-03": {
+  "gist": "Received #1178 from Tom Reed at Acme Corp about an expired SAML certificate and assigned it to Priya (P2). Closed #1171, caused by a bug in the 5.2 release.",
+  "ids": [
+   565,
+   566,
+   567
+  ]
+ },
+ "2026-06-04": {
+  "gist": "Received #1179 from Gavin Lee at Hooli about VAT missing on an invoice and assigned it to Ana Silva (P3); resolved it after finding a duplicate charge from the payment retry, then escalated it to engineering as P1. The Acme QBR was done: renewal looked good, and they asked for a status page and monthly reports; #1178 was resolved after fixing a wrong ACS URL.",
+  "ids": [
+   568,
+   569,
+   570,
+   571,
+   572
+  ]
+ },
+ "2026-06-05": {
+  "gist": "Tom Reed gave #1178 a 5/5 CSAT, saying “fast and friendly”; received #1181 from Dana Cole at Umbrella Health about search taking 20 seconds, promised her a written root-cause report on the June 3 outage by Jul 3, then closed the ticket after finding cache misses after a deploy. Received #1180 from Ivy Park at Stark Logistics about iOS app crashes on login and assigned it to Sam (P3); received #1182 from Tom Reed at Acme Corp about reports timing out and assigned it to Sam (P2).",
+  "ids": [
+   573,
+   574,
+   575,
+   576,
+   577,
+   578,
+   579,
+   580,
+   581,
+   582,
+   583
+  ]
+ },
+ "2026-06-06": {
+  "gist": "Dana Cole gave #1181 a 5/5 CSAT, saying “fast and friendly”; #1172 was resolved after fixing an expired OAuth token.",
+  "ids": [
+   584,
+   585
+  ]
+ },
+ "2026-06-08": {
+  "gist": "Received ticket #1183 from Ben Ortiz at Wayne Retail about an SSO login loop with Okta that started after the previous day’s update; assigned it to Priya at P2. Monday sync backlog was 7.",
+  "ids": [
+   586,
+   587,
+   588
+  ]
+ },
+ "2026-06-09": {
+  "gist": "Asked what was on the day’s plate. Received ticket #1184 from Gavin Lee at Hooli about an SSO login loop with Okta and assigned it to Priya at P3.",
+  "ids": [
+   589,
+   590,
+   591
+  ]
+ },
+ "2026-06-10": {
+  "gist": "Initech requested erasure of [forgotten]’s personal data under GDPR. Resolved #1180 (push certificate problem), #1174 (stale seat count), and #1177 (duplicate charge from a payment retry).",
+  "ids": [
+   592,
+   593,
+   594,
+   595
+  ]
+ },
+ "2026-06-11": {
+  "gist": "Refunded Soylent Foods $150 for unused seats; closed #1175, a timezone setting issue, and resolved #1176, an expired OAuth token. Also wrote “hmm.”",
+  "ids": [
+   596,
+   597,
+   598,
+   599
+  ]
+ },
+ "2026-06-12": {
+  "gist": "Received ticket #1185 from Ivy Park at Stark Logistics about duplicated Google Calendar events blocking a few people; gave it to Priya at P3. Fixed and resolved #1182, cache misses after a deploy.",
+  "ids": [
+   600,
+   601,
+   602
+  ]
+ },
+ "2026-06-14": {
+  "gist": "Fixed and resolved #1185, identifying a timezone bug in the sync.",
+  "ids": [
+   603
+  ]
+ },
+ "2026-06-15": {
+  "gist": "Ivy Park gave #1185 a 5/5 CSAT, saying “fast and friendly”; Monday sync backlog was 4. Received Dana Cole’s tickets #1187 (SSO login loop with Okta) and #1186 (refund for unused seats) at Umbrella Health, assigned respectively to Priya Shah at P2 and Ana at P3, and closed Hooli’s #1184 for a missing group mapping.",
+  "ids": [
+   604,
+   605,
+   606,
+   607,
+   608,
+   609,
+   610
+  ]
+ },
+ "2026-06-16": {
+  "gist": "Received #1188 from Nora Blake at Globex about being unable to book from the mobile app; assigned it to Sam Okafor at P3. Closed #1183, identifying an expired SAML certificate.",
+  "ids": [
+   611,
+   612,
+   613
+  ]
+ },
+ "2026-06-17": {
+  "gist": "Received #1190 from Ivy Park at Stark Logistics about search taking 20 seconds and assigned it to Sam Okafor at P1; escalated Umbrella Health’s #1186 to engineering at P1, and Hooli reopened #1184. Also received Ivy’s #1189 about duplicated Google Calendar events (assigned to Priya at P3) and Nora Blake’s #1191 at Globex about missing Zoom links in invites (assigned to Priya Shah at P2).",
+  "ids": [
+   614,
+   615,
+   616,
+   617,
+   618,
+   619,
+   620,
+   621
+  ]
+ },
+ "2026-06-18": {
+  "gist": "Received #1192 from Dana Cole at Umbrella Health about an expired SAML certificate blocking a few people; gave it to Priya at P1.",
+  "ids": [
+   622,
+   623
+  ]
+ },
+ "2026-06-19": {
+  "gist": "Escalated Ivy Park’s #1189 to engineering at P1 and resolved Hooli’s #1184 again, for good. Received #1193 from Mira Hahn at Initech about Android notifications arriving late after the previous day’s update; gave it to Sam at P2.",
+  "ids": [
+   624,
+   625,
+   626,
+   627
+  ]
+ },
+ "2026-06-21": {
+  "gist": "Fixed and resolved #1187, identifying an expired SAML certificate.",
+  "ids": [
+   628
+  ]
+ },
+ "2026-06-22": {
+  "gist": "Handled support tickets amid a team sync with 9 tickets open and a focus on the billing backlog: #1194 from Nora Blake (Globex), about being charged twice, went to Ana at P3; #1196 from Tom Reed (Acme Corp), about duplicated Google Calendar events, went to Priya Shah at P3; and #1195 from Rita Moss (Soylent Foods), about a refund for unused seats, went to Ana Silva at P3. A QBR with Acme Corp was scheduled for July 2, 2026, 15:00–16:00 on Zoom, organized by Tom Reed, and #1189 was closed as a timezone bug in the sync.",
+  "ids": [
+   629,
+   630,
+   631,
+   632,
+   633,
+   634,
+   635,
+   636,
+   637,
+   638
+  ]
+ },
+ "2026-06-23": {
+  "gist": "Escalated #1194 and #1196 to engineering at P1, and assigned #1198 from Tom Reed (Acme Corp), about missing Zoom links in invites, to Priya at P3; #1199 from Mira Hahn (Initech), about being unable to update a credit card, went to Ana Silva at P1. #1197 from Nora Blake (Globex), about the wrong time zone, went to Sam at P3; #1190 (slow report query) and #1186 (expired card token) were fixed and resolved.",
+  "ids": [
+   639,
+   640,
+   641,
+   642,
+   643,
+   644,
+   645,
+   646,
+   647,
+   648
+  ]
+ },
+ "2026-06-24": {
+  "gist": "Received a 5/5 CSAT from Ivy Park for #1190, with the comment “fast and friendly.” Assigned #1201 from Dana Cole (Umbrella Health), about iOS crashes on login, to Sam at P2, and #1200 from Dana Cole, about an SSO login loop with Okta, to Priya at P2; refunded Globex $95 for a VAT correction, and resolved #1197 as a push certificate problem.",
+  "ids": [
+   649,
+   650,
+   651,
+   652,
+   653,
+   654,
+   655,
+   656
+  ]
+ },
+ "2026-06-25": {
+  "gist": "Received a 3/5 CSAT from Nora Blake for #1197 (“ok”), and assigned her new Globex ticket #1202, about the wrong invoice seat count, to Ana Silva at P3. Resolved #1193 (timezone setting), #1199 (stale seat count), #1188 (timezone setting), and #1192 (missing group mapping).",
+  "ids": [
+   657,
+   658,
+   659,
+   660,
+   661,
+   662,
+   663
+  ]
+ },
+ "2026-06-26": {
+  "gist": "Received a 4/5 CSAT from Mira Hahn for #1193 (“good, took a bit long”). Assigned #1203 from Mira Hahn (Initech), about duplicated Google Calendar events, to Priya at P2 and closed it as an expired OAuth token; assigned #1204 from Nora Blake (Globex), about webhook deliveries failing since that morning, to Priya Shah at P2, and closed #1191 as a calendar API quota.",
+  "ids": [
+   664,
+   665,
+   666,
+   667,
+   668,
+   669,
+   670
+  ]
+ },
+ "2026-06-29": {
+  "gist": "The team sync noted 10 tickets open and a focus on integrations. Assigned #1205 from Tom Reed (Acme Corp), about the wrong invoice seat count, to Ana at P2, and #1206 from Nora Blake (Globex), about search taking 20 seconds, to Sam Okafor at P2.",
+  "ids": [
+   671,
+   672,
+   673,
+   674,
+   675
+  ]
+ }
+}

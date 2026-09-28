@@ -1,0 +1,538 @@
+[
+ {
+  "id": 25,
+  "holder": "Mom",
+  "stance": "loves",
+  "target": "orchids",
+  "target_kind": "other",
+  "detail": ""
+ },
+ {
+  "id": 39,
+  "holder": "Eva",
+  "stance": "allergic to",
+  "target": "peanuts",
+  "target_kind": "food",
+  "detail": ""
+ },
+ {
+  "id": 143,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Flow",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 210,
+  "holder": "I",
+  "stance": "none",
+  "target": "Lucas Meyer",
+  "target_kind": "person",
+  "detail": "Wants to follow up in January"
+ },
+ {
+  "id": 215,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Thinking, Fast and Slow",
+  "target_kind": "book",
+  "detail": "5/5"
+ },
+ {
+  "id": 290,
+  "holder": "I",
+  "stance": "rated",
+  "target": "F1",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 327,
+  "holder": "I",
+  "stance": "rated",
+  "target": "The Brutalist",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 338,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Past Lives",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 343,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Frankenstein",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 350,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Challengers",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 392,
+  "holder": "I",
+  "stance": "rated",
+  "target": "The Pragmatic Programmer",
+  "target_kind": "book",
+  "detail": "4/5"
+ },
+ {
+  "id": 399,
+  "holder": "I",
+  "stance": "rated",
+  "target": "The Zone of Interest",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 406,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Nosferatu",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 429,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Bugonia",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 476,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": "Praised the assistant"
+ },
+ {
+  "id": 484,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Project Hail Mary",
+  "target_kind": "book",
+  "detail": "5/5"
+ },
+ {
+  "id": 491,
+  "holder": "I",
+  "stance": "rated",
+  "target": "F1",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 509,
+  "holder": "I",
+  "stance": "none",
+  "target": "nice",
+  "target_kind": "other",
+  "detail": "Says “haha nice”"
+ },
+ {
+  "id": 563,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Inside Out 2",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 620,
+  "holder": "I",
+  "stance": "rated",
+  "target": "A Real Pain",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 633,
+  "holder": "I",
+  "stance": "rated",
+  "target": "The Mom Test",
+  "target_kind": "book",
+  "detail": "4/5"
+ },
+ {
+  "id": 640,
+  "holder": "I",
+  "stance": "rated",
+  "target": "F1",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 657,
+  "holder": "I",
+  "stance": "rated",
+  "target": "The Substance",
+  "target_kind": "movie",
+  "detail": "2/5"
+ },
+ {
+  "id": 764,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Sapiens",
+  "target_kind": "book",
+  "detail": "3/5"
+ },
+ {
+  "id": 768,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Emilia Pérez",
+  "target_kind": "movie",
+  "detail": "2/5"
+ },
+ {
+  "id": 880,
+  "holder": "I",
+  "stance": "none",
+  "target": "nice",
+  "target_kind": "other",
+  "detail": "Says “haha nice”"
+ },
+ {
+  "id": 894,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Shoe Dog",
+  "target_kind": "book",
+  "detail": "5/5"
+ },
+ {
+  "id": 911,
+  "holder": "I",
+  "stance": "none",
+  "target": "nice",
+  "target_kind": "other",
+  "detail": "Says “haha nice”"
+ },
+ {
+  "id": 956,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Civil War",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 987,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Hamnet",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 1053,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Flow",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 1083,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Deep Work",
+  "target_kind": "book",
+  "detail": "4/5"
+ },
+ {
+  "id": 1153,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Oppenheimer",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 1206,
+  "holder": "I",
+  "stance": "rated",
+  "target": "The Wild Robot",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 1231,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Dune",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 1238,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Bugonia",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 1275,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Perfect Days",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 1301,
+  "holder": "I",
+  "stance": "none",
+  "target": "assistant",
+  "target_kind": "other",
+  "detail": "Praised the assistant"
+ },
+ {
+  "id": 1308,
+  "holder": "I",
+  "stance": "felt",
+  "target": "Lisbon trip",
+  "target_kind": "trip",
+  "detail": "Amazing"
+ },
+ {
+  "id": 1308,
+  "holder": "I",
+  "stance": "loves",
+  "target": "pastéis de nata at Manteigaria",
+  "target_kind": "food",
+  "detail": "Described them as unreal"
+ },
+ {
+  "id": 1348,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Nosferatu",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 1360,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Atomic Habits",
+  "target_kind": "book",
+  "detail": "3/5"
+ },
+ {
+  "id": 1375,
+  "holder": "I",
+  "stance": "none",
+  "target": "other",
+  "target_kind": "other",
+  "detail": "No preference or evaluation stated"
+ },
+ {
+  "id": 1458,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Challengers",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 1467,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Sinners",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 1473,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Frankenstein",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 1482,
+  "holder": "I",
+  "stance": "rated",
+  "target": "The Brutalist",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 1493,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Dune: Part Two",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 1534,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Inside Out 2",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 1542,
+  "holder": "I",
+  "stance": "none",
+  "target": "assistant",
+  "target_kind": "other",
+  "detail": "Said “you're the best”"
+ },
+ {
+  "id": 1551,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Anora",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 1555,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Superman",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 1564,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Zero to One",
+  "target_kind": "book",
+  "detail": "4/5"
+ },
+ {
+  "id": 1593,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Marty Supreme",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 1609,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Oppenheimer",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 1650,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Heretic",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 1681,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Superman",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 1712,
+  "holder": "I",
+  "stance": "none",
+  "target": "assistant",
+  "target_kind": "other",
+  "detail": "Said “you're the best”"
+ },
+ {
+  "id": 1741,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Weapons",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 1765,
+  "holder": "I",
+  "stance": "none",
+  "target": "assistant",
+  "target_kind": "other",
+  "detail": "Said “you're the best”"
+ },
+ {
+  "id": 1785,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Frankenstein",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 1843,
+  "holder": "I",
+  "stance": "rated",
+  "target": "The Brutalist",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 1851,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Sinners",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 1935,
+  "holder": "I",
+  "stance": "none",
+  "target": "assistant",
+  "target_kind": "other",
+  "detail": "Says “you're the best.”"
+ },
+ {
+  "id": 1957,
+  "holder": "I",
+  "stance": "none",
+  "target": "assistant",
+  "target_kind": "other",
+  "detail": "Says “you're the best.”"
+ },
+ {
+  "id": 1993,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Mickey 17",
+  "target_kind": "movie",
+  "detail": "2/5"
+ },
+ {
+  "id": 2019,
+  "holder": "I",
+  "stance": "rated",
+  "target": "The Brutalist",
+  "target_kind": "movie",
+  "detail": "3/5"
+ }
+]

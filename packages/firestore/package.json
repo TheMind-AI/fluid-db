@@ -1,0 +1,25 @@
+{
+  "name": "@fluiddb/firestore",
+  "version": "1.0.0-next.4",
+  "description": "FluidDB firestore storage adapter",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./rest": "./src/rest.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p .",
+    "test": "node --import tsx --test test/*.node.ts"
+  },
+  "dependencies": {
+    "@fluiddb/core": "workspace:*",
+    "@fluiddb/schema": "workspace:*",
+    "@google-cloud/firestore": "9.2.0"
+  },
+  "devDependencies": {
+    "@types/bun": "catalog:",
+    "typescript": "catalog:"
+  },
+  "private": true,
+  "license": "Apache-2.0"
+}

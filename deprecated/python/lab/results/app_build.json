@@ -1,0 +1,295 @@
+{
+ "views": {
+  "tile": 16,
+  "people": 1,
+  "top": 1,
+  "cross": 2,
+  "timeline": 1,
+  "inbox": 1
+ },
+ "tiles": [
+  {
+   "id": "tile1",
+   "table": "expenses",
+   "op": "sum",
+   "column": "amount",
+   "series": [
+    "category",
+    "dining_occasion"
+   ],
+   "const": {},
+   "questions": 3,
+   "sql": {
+    "ok": true,
+    "groups": 90,
+    "mismatches": 0
+   }
+  },
+  {
+   "id": "tile2",
+   "table": "expenses",
+   "op": "sum",
+   "column": "amount",
+   "series": [
+    "category"
+   ],
+   "const": {},
+   "questions": 1,
+   "sql": {
+    "ok": true,
+    "groups": 186,
+    "mismatches": 0
+   }
+  },
+  {
+   "id": "tile3",
+   "table": "expenses",
+   "op": "count",
+   "column": "__row__",
+   "series": [
+    "category",
+    "dining_occasion"
+   ],
+   "const": {},
+   "questions": 2,
+   "sql": {
+    "ok": true,
+    "groups": 90,
+    "mismatches": 0
+   }
+  },
+  {
+   "id": "tile4",
+   "table": "expenses",
+   "op": "count",
+   "column": "__row__",
+   "series": [
+    "category"
+   ],
+   "const": {},
+   "questions": 5,
+   "sql": {
+    "ok": true,
+    "groups": 186,
+    "mismatches": 0
+   }
+  },
+  {
+   "id": "tile5",
+   "table": "expenses",
+   "op": "count",
+   "column": "__row__",
+   "series": [
+    "category",
+    "merchant"
+   ],
+   "const": {},
+   "questions": 3,
+   "sql": {
+    "ok": true,
+    "groups": 810,
+    "mismatches": 0
+   }
+  },
+  {
+   "id": "tile6",
+   "table": "expenses",
+   "op": "count",
+   "column": "__row__",
+   "series": [
+    "merchant"
+   ],
+   "const": {},
+   "questions": 5,
+   "sql": {
+    "ok": true,
+    "groups": 805,
+    "mismatches": 0
+   }
+  },
+  {
+   "id": "tile7",
+   "table": "expenses",
+   "op": "sum",
+   "column": "amount",
+   "series": [
+    "merchant"
+   ],
+   "const": {},
+   "questions": 6,
+   "sql": {
+    "ok": true,
+    "groups": 805,
+    "mismatches": 0
+   }
+  },
+  {
+   "id": "tile8",
+   "table": "expenses",
+   "op": "sum",
+   "column": "amount",
+   "series": [
+    "category",
+    "merchant"
+   ],
+   "const": {},
+   "questions": 2,
+   "sql": {
+    "ok": true,
+    "groups": 810,
+    "mismatches": 0
+   }
+  },
+  {
+   "id": "tile9",
+   "table": "expenses",
+   "op": "max",
+   "column": "amount",
+   "series": [
+    "category",
+    "expense_location"
+   ],
+   "const": {},
+   "questions": 4,
+   "sql": {
+    "ok": true,
+    "groups": 84,
+    "mismatches": 0
+   }
+  },
+  {
+   "id": "tile10",
+   "table": "expenses",
+   "op": "avg",
+   "column": "amount",
+   "series": [
+    "category",
+    "dining_occasion"
+   ],
+   "const": {},
+   "questions": 5,
+   "sql": {
+    "ok": true,
+    "groups": 90,
+    "mismatches": 0
+   }
+  },
+  {
+   "id": "tile11",
+   "table": "expenses",
+   "op": "avg",
+   "column": "amount",
+   "series": [
+    "category"
+   ],
+   "const": {},
+   "questions": 2,
+   "sql": {
+    "ok": true,
+    "groups": 186,
+    "mismatches": 0
+   }
+  },
+  {
+   "id": "tile12",
+   "table": "body_measurements",
+   "op": "avg",
+   "column": "value",
+   "series": [
+    "category",
+    "unit"
+   ],
+   "const": {},
+   "questions": 8,
+   "sql": {
+    "ok": true,
+    "groups": 60,
+    "mismatches": 0
+   }
+  },
+  {
+   "id": "tile14",
+   "table": "body_measurements",
+   "op": "min",
+   "column": "value",
+   "series": [
+    "category"
+   ],
+   "const": {},
+   "questions": 8,
+   "sql": {
+    "ok": true,
+    "groups": 60,
+    "mismatches": 0
+   }
+  },
+  {
+   "id": "tile15",
+   "table": "workouts",
+   "op": "count",
+   "column": "__row__",
+   "series": [],
+   "const": {
+    "category": "run"
+   },
+   "questions": 8,
+   "sql": {
+    "ok": true,
+    "groups": 30,
+    "mismatches": 0
+   }
+  },
+  {
+   "id": "tile16",
+   "table": "events",
+   "op": "count",
+   "column": "__row__",
+   "series": [],
+   "const": {
+    "category|title": "climbing",
+    "status": "attended"
+   },
+   "questions": 2,
+   "sql": {
+    "ok": true,
+    "groups": 30,
+    "mismatches": 0
+   }
+  },
+  {
+   "id": "tile17",
+   "table": "events",
+   "op": "count",
+   "column": "__row__",
+   "series": [],
+   "const": {
+    "category|title": "climbing"
+   },
+   "questions": 6,
+   "sql": {
+    "ok": true,
+    "groups": 30,
+    "mismatches": 0
+   }
+  }
+ ],
+ "sql_ok": true,
+ "pages": [
+  "Spending",
+  "People",
+  "Health & activity",
+  "Timeline & checks"
+ ],
+ "layout_cost": 0.00049,
+ "build_seconds": 8.43,
+ "timings": {
+  "views": 0.59,
+  "render": 0.21
+ },
+ "html_kb": {
+  "index.html": 158,
+  "page2.html": 7,
+  "page3.html": 45,
+  "page4.html": 1080
+ }
+}

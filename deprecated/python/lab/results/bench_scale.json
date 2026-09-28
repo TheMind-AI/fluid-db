@@ -1,0 +1,94 @@
+{
+ "1000": {
+  "n_docs": 1108,
+  "n_queries": 35,
+  "methods": {
+   "bm25": {
+    "recall@5": 0.6333,
+    "recall@10": 0.7429,
+    "all_evidence@10": 0.6857,
+    "mrr": 0.5214
+   },
+   "embeddings": {
+    "recall@5": 0.781,
+    "recall@10": 0.7905,
+    "all_evidence@10": 0.7143,
+    "mrr": 0.7859
+   },
+   "embeddings50+jev": {
+    "recall@5": 0.8333,
+    "recall@10": 0.8333,
+    "all_evidence@10": 0.7429,
+    "mrr": 0.8508,
+    "shortlist_recall@50": 0.8952,
+    "jev_cost_per_1k_queries": 0.737,
+    "wall_per_query": 0.01
+   },
+   "bm25_100+emb_100+jev": {
+    "recall@5": 0.8571,
+    "recall@10": 0.8714,
+    "all_evidence@10": 0.7714,
+    "mrr": 0.8492,
+    "shortlist_recall": 0.9714,
+    "mean_shortlist": 169.4,
+    "jev_cost_per_1k_queries": 2.494,
+    "wall_per_query": 1.69
+   },
+   "gpt-6-luna reads all": {
+    "recall@5": 0.9571,
+    "recall@10": 0.9667,
+    "all_evidence@10": 0.9429,
+    "mrr": 0.9743,
+    "cost_per_1k_queries": 2.799,
+    "latency_mean": 2.77,
+    "input_tokens_per_query": 27316
+   }
+  }
+ },
+ "5000": {
+  "n_docs": 5108,
+  "n_queries": 35,
+  "methods": {
+   "bm25": {
+    "recall@5": 0.6238,
+    "recall@10": 0.7429,
+    "all_evidence@10": 0.6857,
+    "mrr": 0.5239
+   },
+   "embeddings": {
+    "recall@5": 0.781,
+    "recall@10": 0.781,
+    "all_evidence@10": 0.7143,
+    "mrr": 0.7611
+   },
+   "embeddings50+jev": {
+    "recall@5": 0.7714,
+    "recall@10": 0.7714,
+    "all_evidence@10": 0.7143,
+    "mrr": 0.8029,
+    "shortlist_recall@50": 0.8,
+    "jev_cost_per_1k_queries": 0.736,
+    "wall_per_query": 0.04
+   },
+   "bm25_100+emb_100+jev": {
+    "recall@5": 0.8095,
+    "recall@10": 0.8238,
+    "all_evidence@10": 0.7429,
+    "mrr": 0.8376,
+    "shortlist_recall": 0.9381,
+    "mean_shortlist": 186.7,
+    "jev_cost_per_1k_queries": 2.746,
+    "wall_per_query": 2.09
+   },
+   "gpt-6-luna reads all": {
+    "recall@5": 0.9857,
+    "recall@10": 0.9857,
+    "all_evidence@10": 0.9714,
+    "mrr": 1.0,
+    "cost_per_1k_queries": 12.472,
+    "latency_mean": 2.29,
+    "input_tokens_per_query": 124350
+   }
+  }
+ }
+}

@@ -1,0 +1,442 @@
+[
+ {
+  "id": 9,
+  "holder": "Mark Liu",
+  "stance": "likes",
+  "target": "Written communication; no verbal commitments",
+  "target_kind": "other",
+  "detail": "Wants everything in writing"
+ },
+ {
+  "id": 10,
+  "holder": "Priya Raman",
+  "stance": "likes",
+  "target": "Slack over email",
+  "target_kind": "other",
+  "detail": "Prefers Slack"
+ },
+ {
+  "id": 14,
+  "holder": "Fabrikam",
+  "stance": "likes",
+  "target": "On-prem deployment",
+  "target_kind": "other",
+  "detail": "Asked lots of questions about the need for on-prem deployment"
+ },
+ {
+  "id": 14,
+  "holder": "Fabrikam",
+  "stance": "rated",
+  "target": "Demo",
+  "target_kind": "other",
+  "detail": "Overall positive"
+ },
+ {
+  "id": 21,
+  "holder": "Emma",
+  "stance": "felt",
+  "target": "SSO",
+  "target_kind": "other",
+  "detail": "Worried about SSO"
+ },
+ {
+  "id": 22,
+  "holder": "Woodgrove Bank",
+  "stance": "likes",
+  "target": "On-prem deployment",
+  "target_kind": "other",
+  "detail": "Requires on-prem deployment and no cloud"
+ },
+ {
+  "id": 33,
+  "holder": "Sven",
+  "stance": "felt",
+  "target": "SSO",
+  "target_kind": "other",
+  "detail": "Worried about SSO"
+ },
+ {
+  "id": 34,
+  "holder": "Arjun",
+  "stance": "likes",
+  "target": "Longer pilot",
+  "target_kind": "other",
+  "detail": "Wants a longer pilot"
+ },
+ {
+  "id": 37,
+  "holder": "Lucerne Publishing",
+  "stance": "rated",
+  "target": "Demo",
+  "target_kind": "other",
+  "detail": "Went well"
+ },
+ {
+  "id": 38,
+  "holder": "Priya",
+  "stance": "felt",
+  "target": "EU data residency",
+  "target_kind": "other",
+  "detail": "Concerned about data residency in the EU"
+ },
+ {
+  "id": 40,
+  "holder": "Lena",
+  "stance": "felt",
+  "target": "Price",
+  "target_kind": "other",
+  "detail": "Price is above their budget"
+ },
+ {
+  "id": 41,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": ""
+ },
+ {
+  "id": 43,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": ""
+ },
+ {
+  "id": 44,
+  "holder": "Contoso",
+  "stance": "rated",
+  "target": "Demo",
+  "target_kind": "other",
+  "detail": "Overall positive"
+ },
+ {
+  "id": 48,
+  "holder": "Litware",
+  "stance": "likes",
+  "target": "Alerts",
+  "target_kind": "other",
+  "detail": "They liked the alerts"
+ },
+ {
+  "id": 53,
+  "holder": "Alpine Ski House",
+  "stance": "rated",
+  "target": "Demo",
+  "target_kind": "other",
+  "detail": "Went well"
+ },
+ {
+  "id": 55,
+  "holder": "Proseware",
+  "stance": "likes",
+  "target": "a longer pilot",
+  "target_kind": "activity",
+  "detail": "wanted a longer pilot"
+ },
+ {
+  "id": 55,
+  "holder": "Proseware",
+  "stance": "felt",
+  "target": "the demo",
+  "target_kind": "activity",
+  "detail": "overall positive"
+ },
+ {
+  "id": 61,
+  "holder": "I",
+  "stance": "likes",
+  "target": "the message",
+  "target_kind": "other",
+  "detail": "thumbs up"
+ },
+ {
+  "id": 65,
+  "holder": "none",
+  "stance": "none",
+  "target": "none",
+  "target_kind": "other",
+  "detail": ""
+ },
+ {
+  "id": 77,
+  "holder": "Woodgrove Bank",
+  "stance": "likes",
+  "target": "Salesforce integration",
+  "target_kind": "other",
+  "detail": "need Salesforce integration"
+ },
+ {
+  "id": 79,
+  "holder": "Humongous Insurance",
+  "stance": "felt",
+  "target": "SSO",
+  "target_kind": "other",
+  "detail": "worried about SSO"
+ },
+ {
+  "id": 80,
+  "holder": "Wingtip",
+  "stance": "likes",
+  "target": "the alerts",
+  "target_kind": "other",
+  "detail": "liked the alerts"
+ },
+ {
+  "id": 81,
+  "holder": "Adventure Works",
+  "stance": "likes",
+  "target": "Salesforce integration",
+  "target_kind": "other",
+  "detail": "need Salesforce integration"
+ },
+ {
+  "id": 88,
+  "holder": "Munson's Pickles",
+  "stance": "likes",
+  "target": "a longer pilot",
+  "target_kind": "activity",
+  "detail": "wanted a longer pilot"
+ },
+ {
+  "id": 94,
+  "holder": "Coho Winery",
+  "stance": "felt",
+  "target": "SSO",
+  "target_kind": "other",
+  "detail": "worried about SSO"
+ },
+ {
+  "id": 95,
+  "holder": "Woodgrove Bank",
+  "stance": "likes",
+  "target": "Salesforce integration",
+  "target_kind": "other",
+  "detail": "need Salesforce integration"
+ },
+ {
+  "id": 95,
+  "holder": "Woodgrove Bank",
+  "stance": "felt",
+  "target": "the demo",
+  "target_kind": "activity",
+  "detail": "overall positive"
+ },
+ {
+  "id": 96,
+  "holder": "Humongous Insurance",
+  "stance": "felt",
+  "target": "the demo",
+  "target_kind": "activity",
+  "detail": "overall positive"
+ },
+ {
+  "id": 110,
+  "holder": "Bellows College",
+  "stance": "likes",
+  "target": "the alerts",
+  "target_kind": "other",
+  "detail": "liked the alerts"
+ },
+ {
+  "id": 111,
+  "holder": "Adventure Works",
+  "stance": "likes",
+  "target": "the alerts",
+  "target_kind": "other",
+  "detail": "liked the alerts"
+ },
+ {
+  "id": 114,
+  "holder": "Relecloud",
+  "stance": "likes",
+  "target": "on-prem deployment",
+  "target_kind": "other",
+  "detail": "need on-prem deployment"
+ },
+ {
+  "id": 115,
+  "holder": "Munson's Pickles",
+  "stance": "felt",
+  "target": "the demo",
+  "target_kind": "activity",
+  "detail": "went well"
+ },
+ {
+  "id": 121,
+  "holder": "Luis",
+  "stance": "dislikes",
+  "target": "SSO",
+  "target_kind": "other",
+  "detail": "Worried about SSO"
+ },
+ {
+  "id": 124,
+  "holder": "Ruth",
+  "stance": "likes",
+  "target": "on-prem deployment",
+  "target_kind": "other",
+  "detail": "Needs on-prem deployment"
+ },
+ {
+  "id": 128,
+  "holder": "Ravi",
+  "stance": "dislikes",
+  "target": "price",
+  "target_kind": "other",
+  "detail": "Price is above their budget"
+ },
+ {
+  "id": 129,
+  "holder": "Omar",
+  "stance": "felt",
+  "target": "Coho Winery demo",
+  "target_kind": "other",
+  "detail": "Overall positive"
+ },
+ {
+  "id": 138,
+  "holder": "Tom",
+  "stance": "dislikes",
+  "target": "price",
+  "target_kind": "other",
+  "detail": "Price is above their budget"
+ },
+ {
+  "id": 141,
+  "holder": "Omar",
+  "stance": "felt",
+  "target": "Relecloud demo",
+  "target_kind": "other",
+  "detail": "Overall positive"
+ },
+ {
+  "id": 142,
+  "holder": "Omar",
+  "stance": "felt",
+  "target": "Tailspin Toys demo",
+  "target_kind": "other",
+  "detail": "Overall positive"
+ },
+ {
+  "id": 143,
+  "holder": "Carlos",
+  "stance": "likes",
+  "target": "Salesforce integration",
+  "target_kind": "other",
+  "detail": "Needs Salesforce integration"
+ },
+ {
+  "id": 152,
+  "holder": "Northwind Traders",
+  "stance": "likes",
+  "target": "alerts",
+  "target_kind": "other",
+  "detail": "They liked the alerts"
+ },
+ {
+  "id": 153,
+  "holder": "Omar",
+  "stance": "felt",
+  "target": "Consolidated Messenger demo",
+  "target_kind": "other",
+  "detail": "The demo went well"
+ },
+ {
+  "id": 159,
+  "holder": "Aiko",
+  "stance": "likes",
+  "target": "Salesforce integration",
+  "target_kind": "other",
+  "detail": "Needs Salesforce integration"
+ },
+ {
+  "id": 163,
+  "holder": "Omar",
+  "stance": "felt",
+  "target": "Blue Yonder Airlines demo",
+  "target_kind": "other",
+  "detail": "The demo went well"
+ },
+ {
+  "id": 165,
+  "holder": "Omar",
+  "stance": "felt",
+  "target": "Southridge Video demo",
+  "target_kind": "other",
+  "detail": "Overall positive"
+ },
+ {
+  "id": 170,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": ""
+ },
+ {
+  "id": 171,
+  "holder": "Omar",
+  "stance": "felt",
+  "target": "VanArsdel demo",
+  "target_kind": "other",
+  "detail": "The demo went well"
+ },
+ {
+  "id": 180,
+  "holder": "Datum Corp",
+  "stance": "likes",
+  "target": "demo",
+  "target_kind": "other",
+  "detail": "Overall positive; lots of questions about Salesforce integration"
+ },
+ {
+  "id": 208,
+  "holder": "Trey Research",
+  "stance": "dislikes",
+  "target": "price",
+  "target_kind": "other",
+  "detail": "Price is above their budget"
+ },
+ {
+  "id": 222,
+  "holder": "Fourth Coffee",
+  "stance": "felt",
+  "target": "SSO",
+  "target_kind": "other",
+  "detail": "Worried about SSO"
+ },
+ {
+  "id": 225,
+  "holder": "Trey Research",
+  "stance": "likes",
+  "target": "alerts",
+  "target_kind": "other",
+  "detail": ""
+ },
+ {
+  "id": 226,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": "No preference or evaluation stated"
+ },
+ {
+  "id": 234,
+  "holder": "Fourth Coffee",
+  "stance": "likes",
+  "target": "demo",
+  "target_kind": "other",
+  "detail": "Overall positive; lots of questions about SSO"
+ },
+ {
+  "id": 239,
+  "holder": "Wide World Importers",
+  "stance": "likes",
+  "target": "alerts",
+  "target_kind": "other",
+  "detail": ""
+ }
+]

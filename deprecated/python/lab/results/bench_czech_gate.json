@@ -1,0 +1,46 @@
+{
+ "english": {
+  "write": {
+   "accuracy": 0.9803,
+   "precision": 0.976,
+   "recall": 1.0,
+   "f1": 0.9879,
+   "false_negatives": 0,
+   "false_positives": 3
+  },
+  "intent_accuracy": 0.9342,
+  "mean_confidence": 0.952
+ },
+ "czech": {
+  "write": {
+   "accuracy": 0.9803,
+   "precision": 0.976,
+   "recall": 1.0,
+   "f1": 0.9879,
+   "false_negatives": 0,
+   "false_positives": 3
+  },
+  "intent_accuracy": 0.9276,
+  "mean_confidence": 0.951
+ },
+ "czech_errors": [
+  {
+   "cs": "Všechno nejlepší k narozeninám Davidovi, který dnes slaví 🎂",
+   "gold": "chat",
+   "pred": "chat",
+   "write": true
+  },
+  {
+   "cs": "Můžeš mi naplánovat třídenní výlet do Lisabonu?",
+   "gold": "ask",
+   "pred": "ask",
+   "write": true
+  },
+  {
+   "cs": "Hned jsem zpátky.",
+   "gold": "chat",
+   "pred": "chat",
+   "write": true
+  }
+ ]
+}

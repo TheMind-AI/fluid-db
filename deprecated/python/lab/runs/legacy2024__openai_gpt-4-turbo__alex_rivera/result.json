@@ -1,0 +1,2897 @@
+{
+ "run": "legacy2024__openai_gpt-4-turbo__alex_rivera",
+ "system": "legacy2024",
+ "model": "openai:gpt-4-turbo",
+ "dataset": "alex_rivera",
+ "opts": {},
+ "accuracy": 0.2556,
+ "by_category": {
+  "aggregation": 0.0,
+  "list": 0.375,
+  "multi_hop": 0.0,
+  "single": 0.19,
+  "temporal": 0.0,
+  "unanswerable": 1.0
+ },
+ "ingest": {
+  "messages": 45,
+  "crashes": 0,
+  "sql_errors": 10,
+  "cost": 0.8766,
+  "llm_latency_mean": 7.177,
+  "wall_mean": 7.179,
+  "llm_calls": 89,
+  "jev_calls": 0
+ },
+ "qa_cost": 0.604,
+ "qa_wall_mean": 5.289,
+ "ledger": {
+  "calls": 224,
+  "input_tokens": 137359,
+  "output_tokens": 15199,
+  "cost": 1.640598,
+  "latency": 646.042
+ },
+ "ingest_trace": [
+  {
+   "id": "a01",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 1,
+    "sql": [
+     "CREATE TABLE Person (\n    id INTEGER PRIMARY KEY AUTOINCREMENT,\n    name TEXT NOT NULL,\n    age INTEGER NOT NULL,\n    nationality TEXT NOT NULL,\n    education TEXT NOT NULL\n);",
+     "INSERT INTO Person (name, age, nationality, education) VALUES ('Alex Rivera', 35, 'Canadian', 'B.Sc. from University of Toronto, 2010');"
+    ]
+   },
+   "crashed": null,
+   "wall": 5.6,
+   "llm_latency": 5.597,
+   "cost": 0.00937,
+   "calls": [
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a02",
+   "kind": "store",
+   "trace": {
+    "errors": [
+     {
+      "phase": "update",
+      "sql": "INSERT INTO UniversityCourses (person_id, course_name, completion_date) VALUES ((SELECT id FROM Person WHERE name = 'Alex'), 'Advanced Algorithms', '2009-05')}",
+      "error": "OperationalError: unrecognized token: \"}\""
+     }
+    ],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE UniversityCourses (\n  id INTEGER PRIMARY KEY,\n  person_id INTEGER,\n  course_name TEXT,\n  completion_date TEXT,\n  FOREIGN KEY(person_id) REFERENCES Person(id)\n);",
+     "INSERT INTO UniversityCourses (person_id, course_name, completion_date) VALUES ((SELECT id FROM Person WHERE name = 'Alex'), 'Advanced Algorithms', '2009-05')}"
+    ]
+   },
+   "crashed": null,
+   "wall": 10.036,
+   "llm_latency": 10.035,
+   "cost": 0.0154,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a03",
+   "kind": "store",
+   "trace": {
+    "errors": [
+     {
+      "phase": "update",
+      "sql": "INSERT INTO Person (name, age, nationality, education) VALUES (NULL, NULL, NULL, NULL);",
+      "error": "IntegrityError: NOT NULL constraint failed: Person.name"
+     }
+    ],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO Person (name, age, nationality, education) VALUES (NULL, NULL, NULL, NULL);",
+     "INSERT INTO UniversityCourses (person_id, course_name, completion_date) VALUES (last_insert_rowid(), 'System Design', '2009-12');"
+    ]
+   },
+   "crashed": null,
+   "wall": 7.53,
+   "llm_latency": 7.529,
+   "cost": 0.016,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a04",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": []
+   },
+   "crashed": null,
+   "wall": 6.985,
+   "llm_latency": 6.984,
+   "cost": 0.01608,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a05",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE Employment (id INTEGER PRIMARY KEY, person_id INTEGER, company_name TEXT, position TEXT, start_date TEXT);",
+     "INSERT INTO Employment (person_id, company_name, position, start_date) VALUES (1, 'Innovatech', 'Software Engineer', '2010');"
+    ]
+   },
+   "crashed": null,
+   "wall": 7.605,
+   "llm_latency": 7.604,
+   "cost": 0.01695,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a06",
+   "kind": "store",
+   "trace": {
+    "errors": [
+     {
+      "phase": "update",
+      "sql": "INSERT INTO Person (name, age, nationality, education) VALUES (NULL, NULL, NULL, NULL);",
+      "error": "IntegrityError: NOT NULL constraint failed: Person.name"
+     }
+    ],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO Person (name, age, nationality, education) VALUES (NULL, NULL, NULL, NULL);",
+     "INSERT INTO Employment (person_id, company_name, position, start_date) VALUES (LAST_INSERT_ROWID(), 'Innovatech', NULL, '2010-08-01');"
+    ]
+   },
+   "crashed": null,
+   "wall": 11.471,
+   "llm_latency": 11.47,
+   "cost": 0.01991,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a07",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": []
+   },
+   "crashed": null,
+   "wall": 4.776,
+   "llm_latency": 4.775,
+   "cost": 0.01473,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a08",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "ALTER TABLE Employment ADD COLUMN teamwork_details TEXT;",
+     "INSERT INTO Employment (person_id, company_name, position, start_date, teamwork_details) VALUES (1, 'Innovatech', 'Software Engineer', '2010', 'Worked collaboratively with cross-functional teams.');"
+    ]
+   },
+   "crashed": null,
+   "wall": 6.359,
+   "llm_latency": 6.357,
+   "cost": 0.01579,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a09",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "ALTER TABLE Employment ADD COLUMN award TEXT",
+     "UPDATE Employment SET award = 'Employee of the Year' WHERE person_id = 1 AND start_date LIKE '2012%'"
+    ]
+   },
+   "crashed": null,
+   "wall": 7.326,
+   "llm_latency": 7.324,
+   "cost": 0.01715,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a10",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "ALTER TABLE Employment ADD COLUMN project_details TEXT",
+     "INSERT INTO Employment (project_details) VALUES ('He led the development of a key internal tool, marking a significant achievement in November 2012.')"
+    ]
+   },
+   "crashed": null,
+   "wall": 10.013,
+   "llm_latency": 10.011,
+   "cost": 0.01618,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a11",
+   "kind": "store",
+   "trace": {
+    "errors": [
+     {
+      "phase": "update",
+      "sql": "INSERT INTO Person (name) VALUES ('Alex');",
+      "error": "IntegrityError: NOT NULL constraint failed: Person.age"
+     }
+    ],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO Person (name) VALUES ('Alex');",
+     "INSERT INTO Employment (person_id, company_name, position, start_date) VALUES ((SELECT id FROM Person WHERE name = 'Alex'), 'TechPioneers', 'Senior Software Engineer', '2013-09');"
+    ]
+   },
+   "crashed": null,
+   "wall": 7.061,
+   "llm_latency": 7.059,
+   "cost": 0.01773,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a12",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "ALTER TABLE Employment ADD COLUMN end_date TEXT",
+     "UPDATE Employment SET end_date = '2016-06' WHERE id = 5"
+    ]
+   },
+   "crashed": null,
+   "wall": 8.58,
+   "llm_latency": 8.578,
+   "cost": 0.01856,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a13",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO Employment (person_id, project_details) VALUES (NULL, 'Designed scalable microservices architecture');"
+    ]
+   },
+   "crashed": null,
+   "wall": 6.436,
+   "llm_latency": 6.435,
+   "cost": 0.01605,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a14",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO Employment (person_id, company_name, position, start_date, teamwork_details, award, project_details, end_date) VALUES (NULL, NULL, NULL, NULL, 'Mentored junior engineers and conducted code reviews', NULL, NULL, NULL);"
+    ]
+   },
+   "crashed": null,
+   "wall": 6.255,
+   "llm_latency": 6.253,
+   "cost": 0.01659,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a15",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO Employment (person_id, project_details, start_date) VALUES (NULL, 'major performance optimization project', '2015-04-01');"
+    ]
+   },
+   "crashed": null,
+   "wall": 5.858,
+   "llm_latency": 5.855,
+   "cost": 0.01663,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a16",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE Publications (\n  id INTEGER PRIMARY KEY,\n  person_id INTEGER,\n  title TEXT,\n  publication_date TEXT,\n  topic TEXT\n);",
+     "INSERT INTO Publications (person_id, title, publication_date, topic) VALUES (NULL, NULL, 'February 2016', 'cloud computing efficiency');"
+    ]
+   },
+   "crashed": null,
+   "wall": 7.796,
+   "llm_latency": 7.794,
+   "cost": 0.01756,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a17",
+   "kind": "store",
+   "trace": {
+    "errors": [
+     {
+      "phase": "update",
+      "sql": "INSERT INTO Person (name) VALUES ('Alex');",
+      "error": "IntegrityError: NOT NULL constraint failed: Person.age"
+     }
+    ],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO Person (name) VALUES ('Alex');",
+     "INSERT INTO Employment (person_id, company_name, position) VALUES ((SELECT id FROM Person WHERE name = 'Alex'), 'EcoSolutions', 'CTO');"
+    ]
+   },
+   "crashed": null,
+   "wall": 5.196,
+   "llm_latency": 5.195,
+   "cost": 0.01739,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a18",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE Startups (\n  id INTEGER PRIMARY KEY,\n  name TEXT,\n  focus TEXT\n);",
+     "INSERT INTO Startups (name, focus) VALUES ('Unnamed Startup', 'developing eco-friendly tech solutions');"
+    ]
+   },
+   "crashed": null,
+   "wall": 8.267,
+   "llm_latency": 8.264,
+   "cost": 0.01966,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a19",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "ALTER TABLE Startups ADD COLUMN revenue_growth TEXT",
+     "UPDATE Startups SET revenue_growth = '200% in first year' WHERE name = 'EcoSolutions'"
+    ]
+   },
+   "crashed": null,
+   "wall": 7.993,
+   "llm_latency": 7.991,
+   "cost": 0.0195,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a20",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "ALTER TABLE Startups ADD COLUMN user_base INTEGER",
+     "UPDATE Startups SET user_base = 10000 WHERE id = 1"
+    ]
+   },
+   "crashed": null,
+   "wall": 5.367,
+   "llm_latency": 5.364,
+   "cost": 0.01759,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a21",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE ProgrammingLanguages (\n  id INTEGER PRIMARY KEY,\n  person_id INTEGER,\n  language TEXT\n);",
+     "INSERT INTO ProgrammingLanguages (person_id, language) VALUES (1, 'Python'), (1, 'Java'), (1, 'JavaScript'), (1, 'C#');"
+    ]
+   },
+   "crashed": null,
+   "wall": 9.409,
+   "llm_latency": 9.407,
+   "cost": 0.02096,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a22",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": []
+   },
+   "crashed": null,
+   "wall": 4.435,
+   "llm_latency": 4.433,
+   "cost": 0.0171,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a23",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE DatabaseKnowledge (\n  id INTEGER PRIMARY KEY,\n  person_id INTEGER,\n  database_name TEXT\n);",
+     "INSERT INTO DatabaseKnowledge (person_id, database_name) VALUES (1, 'MySQL'), (1, 'MongoDB'), (1, 'PostgreSQL');"
+    ]
+   },
+   "crashed": null,
+   "wall": 8.004,
+   "llm_latency": 8.002,
+   "cost": 0.01984,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a24",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE CloudPlatforms (\n  id INTEGER PRIMARY KEY,\n  person_id INTEGER,\n  platform_name TEXT\n);"
+    ]
+   },
+   "crashed": null,
+   "wall": 6.106,
+   "llm_latency": 6.104,
+   "cost": 0.01674,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a25",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE DevOpsSkills (id INTEGER PRIMARY KEY, person_id INTEGER, skill TEXT);",
+     "INSERT INTO DevOpsSkills (person_id, skill) VALUES (1, 'Docker'), (1, 'Kubernetes'), (1, 'CI/CD pipelines');"
+    ]
+   },
+   "crashed": null,
+   "wall": 8.474,
+   "llm_latency": 8.472,
+   "cost": 0.02116,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a26",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE IoTProjects (\n  id INTEGER PRIMARY KEY,\n  person_id INTEGER,\n  project_name TEXT,\n  project_type TEXT,\n  details TEXT\n);",
+     "INSERT INTO IoTProjects (person_id, project_name, project_type, details) VALUES (NULL, 'SmartHome System', 'IoT', 'Automating home environments.');"
+    ]
+   },
+   "crashed": null,
+   "wall": 6.349,
+   "llm_latency": 6.347,
+   "cost": 0.02037,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a27",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "UPDATE IoTProjects SET details = 'Automating home environments. Successfully deployed in over 100 homes by June 2018.' WHERE id = 1;"
+    ]
+   },
+   "crashed": null,
+   "wall": 5.303,
+   "llm_latency": 5.301,
+   "cost": 0.02061,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a28",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "SELECT * FROM IoTProjects WHERE project_name LIKE '%Health Tracker%';",
+     "SELECT * FROM Employment WHERE project_details LIKE '%Health Tracker%';"
+    ]
+   },
+   "crashed": null,
+   "wall": 6.561,
+   "llm_latency": 6.56,
+   "cost": 0.01965,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a29",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE HealthTrackerApp (\n  id INTEGER PRIMARY KEY,\n  app_name TEXT,\n  description TEXT\n);",
+     "INSERT INTO HealthTrackerApp (app_name, description) VALUES ('Health Tracker App', 'A mobile application for tracking health metrics.');"
+    ]
+   },
+   "crashed": null,
+   "wall": 6.816,
+   "llm_latency": 6.814,
+   "cost": 0.01965,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a30",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "ALTER TABLE HealthTrackerApp ADD COLUMN downloads INTEGER",
+     "INSERT INTO HealthTrackerApp (downloads) VALUES (50000)"
+    ]
+   },
+   "crashed": null,
+   "wall": 5.251,
+   "llm_latency": 5.249,
+   "cost": 0.01941,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a31",
+   "kind": "store",
+   "trace": {
+    "errors": [
+     {
+      "phase": "update",
+      "sql": "INSERT INTO Person (name) VALUES ('Alex');",
+      "error": "IntegrityError: NOT NULL constraint failed: Person.age"
+     }
+    ],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO Person (name) VALUES ('Alex');",
+     "INSERT INTO UniversityCourses (person_id, course_name, completion_date) VALUES ((SELECT id FROM Person WHERE name = 'Alex'), 'Advanced Machine Learning', '2020-03');"
+    ]
+   },
+   "crashed": null,
+   "wall": 6.854,
+   "llm_latency": 6.852,
+   "cost": 0.02158,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a32",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO UniversityCourses (person_id, course_name, completion_date) VALUES ((SELECT id FROM Person WHERE name = 'John Doe'), 'Cloud Computing Specialization', '2020-11-30');"
+    ]
+   },
+   "crashed": null,
+   "wall": 6.419,
+   "llm_latency": 6.417,
+   "cost": 0.02024,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a33",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO CloudPlatforms (person_id, platform_name) VALUES ((SELECT id FROM Person WHERE name = 'John Doe'), 'AWS');",
+     "INSERT INTO DevOpsSkills (person_id, skill) VALUES ((SELECT id FROM Person WHERE name = 'John Doe'), 'Certified Scrum Master');"
+    ]
+   },
+   "crashed": null,
+   "wall": 7.327,
+   "llm_latency": 7.324,
+   "cost": 0.0209,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a34",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE Conferences (\n  id INTEGER PRIMARY KEY,\n  person_id INTEGER,\n  conference_name TEXT,\n  attendance_date TEXT\n);",
+     "INSERT INTO Conferences (person_id, conference_name, attendance_date) VALUES (1, 'TechCrunch Disrupt', '2019-09');"
+    ]
+   },
+   "crashed": null,
+   "wall": 7.806,
+   "llm_latency": 7.804,
+   "cost": 0.0231,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a35",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO Conferences (person_id, conference_name, attendance_date) VALUES ((SELECT id FROM Person ORDER BY id DESC LIMIT 1), 'Google I/O', '2020-05-01');"
+    ]
+   },
+   "crashed": null,
+   "wall": 6.26,
+   "llm_latency": 6.259,
+   "cost": 0.02096,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a36",
+   "kind": "store",
+   "trace": {
+    "errors": [
+     {
+      "phase": "update",
+      "sql": "INSERT INTO Person (name) VALUES ('Unknown');",
+      "error": "IntegrityError: NOT NULL constraint failed: Person.age"
+     }
+    ],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO Person (name) VALUES ('Unknown');",
+     "INSERT INTO Conferences (person_id, conference_name, attendance_date) VALUES ((SELECT last_insert_rowid()), 'CloudExpo', '2018-10');"
+    ]
+   },
+   "crashed": null,
+   "wall": 6.133,
+   "llm_latency": 6.131,
+   "cost": 0.02271,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a37",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "SELECT person_id FROM Conferences WHERE conference_name = 'DevOps Days' AND attendance_date = '2019-04'"
+    ]
+   },
+   "crashed": null,
+   "wall": 4.052,
+   "llm_latency": 4.051,
+   "cost": 0.02031,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a38",
+   "kind": "store",
+   "trace": {
+    "errors": [
+     {
+      "phase": "update",
+      "sql": "INSERT INTO Person (name, age, nationality, education) VALUES ('Sarah Chen', NULL, NULL, NULL);",
+      "error": "IntegrityError: NOT NULL constraint failed: Person.age"
+     }
+    ],
+    "llm_calls": 2,
+    "sql": [
+     "SELECT id FROM Person WHERE name = 'Sarah Chen';",
+     "CREATE TABLE Friends (id INTEGER PRIMARY KEY, person_id INTEGER, friend_id INTEGER);",
+     "INSERT INTO Person (name, age, nationality, education) VALUES ('Sarah Chen', NULL, NULL, NULL);",
+     "INSERT INTO Friends (person_id, friend_id) VALUES (1, (SELECT id FROM Person WHERE name = 'Sarah Chen'));"
+    ]
+   },
+   "crashed": null,
+   "wall": 10.192,
+   "llm_latency": 10.19,
+   "cost": 0.02668,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a39",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "SELECT Person.id, Person.name, Employment.position FROM Person JOIN Employment ON Person.id = Employment.person_id WHERE Person.name LIKE '%Michael Johnson%' AND Employment.position LIKE '%Product Manager%';"
+    ]
+   },
+   "crashed": null,
+   "wall": 5.847,
+   "llm_latency": 5.845,
+   "cost": 0.02143,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a40",
+   "kind": "store",
+   "trace": {
+    "errors": [
+     {
+      "phase": "update",
+      "sql": "INSERT INTO Person (name, age, nationality, education) VALUES ('Emily Davis', NULL, NULL, NULL);",
+      "error": "IntegrityError: NOT NULL constraint failed: Person.age"
+     }
+    ],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO Person (name, age, nationality, education) VALUES ('Emily Davis', NULL, NULL, NULL);",
+     "INSERT INTO Employment (person_id, company_name, position, start_date, teamwork_details, award, project_details, end_date) VALUES ((SELECT id FROM Person WHERE name = 'Emily Davis'), 'Unnamed Startup', 'Marketing Specialist', NULL, NULL, NULL, NULL, NULL);"
+    ]
+   },
+   "crashed": null,
+   "wall": 8.45,
+   "llm_latency": 8.448,
+   "cost": 0.02461,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a41",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "SELECT id FROM Person WHERE name = 'Laura Smith';",
+     "SELECT id FROM Person WHERE name = 'Daniel Martinez';"
+    ]
+   },
+   "crashed": null,
+   "wall": 7.015,
+   "llm_latency": 7.014,
+   "cost": 0.02187,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a42",
+   "kind": "store",
+   "trace": {
+    "errors": [
+     {
+      "phase": "update",
+      "sql": "INSERT INTO Testimonials (person_id, content) VALUES (1, 'Alex Rivera\\'s journey is a testament to his dedication, skill, and passion for technology and innovation.');",
+      "error": "OperationalError: near \"s\": syntax error"
+     }
+    ],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE Testimonials (\n  id INTEGER PRIMARY KEY,\n  person_id INTEGER,\n  content TEXT\n);",
+     "INSERT INTO Testimonials (person_id, content) VALUES (1, 'Alex Rivera\\'s journey is a testament to his dedication, skill, and passion for technology and innovation.');"
+    ]
+   },
+   "crashed": null,
+   "wall": 12.622,
+   "llm_latency": 12.619,
+   "cost": 0.03105,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a43",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "UPDATE Employment SET teamwork_details = 'Aspires to grow to a global scale' WHERE company_name = 'EcoSolutions';"
+    ]
+   },
+   "crashed": null,
+   "wall": 6.871,
+   "llm_latency": 6.869,
+   "cost": 0.02197,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a44",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE SustainableTechLeadership (\n  id INTEGER PRIMARY KEY,\n  person_id INTEGER,\n  goal TEXT,\n  strategy TEXT,\n  progress TEXT\n);"
+    ]
+   },
+   "crashed": null,
+   "wall": 7.514,
+   "llm_latency": 7.512,
+   "cost": 0.02441,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "a45",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO Startups (name, focus) VALUES ('Tech Incubator', 'Emerging Technologies');"
+    ]
+   },
+   "crashed": null,
+   "wall": 6.467,
+   "llm_latency": 6.464,
+   "cost": 0.02447,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  }
+ ],
+ "qa": [
+  {
+   "id": "q01",
+   "category": "single",
+   "question": "How old is Alex Rivera?",
+   "answer": "35",
+   "evidence": [
+    "a01"
+   ],
+   "system_answer": "Alex Rivera is 35 years old.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer gives 35, which matches the gold answer.",
+   "wall": 4.278,
+   "context": [
+    {
+     "sql": "SELECT * FROM Person WHERE name LIKE '%Alex Rivera%';",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Alex Rivera",
+       "age": 35,
+       "nationality": "Canadian",
+       "education": "B.Sc. from University of Toronto, 2010"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q02",
+   "category": "single",
+   "question": "What is Alex's nationality?",
+   "answer": "Canadian",
+   "evidence": [
+    "a01"
+   ],
+   "system_answer": "Alex Rivera's nationality is Canadian.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer states Canadian, which matches the gold answer.",
+   "wall": 4.056,
+   "context": [
+    {
+     "sql": "SELECT * FROM Person WHERE name LIKE '%Alex%';",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Alex Rivera",
+       "age": 35,
+       "nationality": "Canadian",
+       "education": "B.Sc. from University of Toronto, 2010"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q03",
+   "category": "single",
+   "question": "Which university did Alex graduate from, with what degree, and when?",
+   "answer": "University of Toronto, B.Sc. in computer science, 2010",
+   "evidence": [
+    "a01"
+   ],
+   "system_answer": "Alex Rivera graduated from the University of Toronto with a B.Sc. in 2010.",
+   "verdict": "partial",
+   "score": 0.5,
+   "judge_reason": "University and year are correct and the degree type B.Sc. is right, but the answer omits the field, computer science, which is part of the gold answer.",
+   "wall": 5.157,
+   "context": [
+    {
+     "sql": "SELECT * FROM Person WHERE name LIKE '%Alex%';",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Alex Rivera",
+       "age": 35,
+       "nationality": "Canadian",
+       "education": "B.Sc. from University of Toronto, 2010"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM UniversityCourses WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Alex%');",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "course_name": "System Design",
+       "completion_date": "2009-12"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q04",
+   "category": "single",
+   "question": "When did Alex complete the Advanced Algorithms course?",
+   "answer": "May 2009",
+   "evidence": [
+    "a02"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer is a real fact (May 2009), but the answer says it doesn't know.",
+   "wall": 4.562,
+   "context": [
+    {
+     "sql": "SELECT * FROM UniversityCourses JOIN Person ON UniversityCourses.person_id = Person.id WHERE Person.name LIKE '%Alex%' AND UniversityCourses.course_name LIKE '%Advanced Algorithms%'",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q05",
+   "category": "single",
+   "question": "When did Alex complete the System Design course?",
+   "answer": "December 2009",
+   "evidence": [
+    "a03"
+   ],
+   "system_answer": "Alex completed the System Design course in December 2009.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer gives December 2009, which matches the gold answer.",
+   "wall": 4.763,
+   "context": [
+    {
+     "sql": "SELECT * FROM UniversityCourses JOIN Person ON UniversityCourses.person_id = Person.id WHERE Person.name LIKE '%Alex%' AND UniversityCourses.course_name LIKE '%System Design%'",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "course_name": "System Design",
+       "completion_date": "2009-12",
+       "name": "Alex Rivera",
+       "age": 35,
+       "nationality": "Canadian",
+       "education": "B.Sc. from University of Toronto, 2010"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q06",
+   "category": "single",
+   "question": "What skills did Alex's university courses lay the foundation for?",
+   "answer": "Problem solving, team leadership, project management, and agile methodologies",
+   "evidence": [
+    "a04"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer states a real fact, but the response says 'I don't know', so it gives none of the listed skills.",
+   "wall": 10.802,
+   "context": [
+    {
+     "sql": "SELECT * FROM Person WHERE name LIKE 'Alex';",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM UniversityCourses WHERE person_id IN (SELECT id FROM Person WHERE name LIKE 'Alex');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM ProgrammingLanguages WHERE person_id IN (SELECT id FROM Person WHERE name LIKE 'Alex');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM DatabaseKnowledge WHERE person_id IN (SELECT id FROM Person WHERE name LIKE 'Alex');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM CloudPlatforms WHERE person_id IN (SELECT id FROM Person WHERE name LIKE 'Alex');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM DevOpsSkills WHERE person_id IN (SELECT id FROM Person WHERE name LIKE 'Alex');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM IoTProjects WHERE person_id IN (SELECT id FROM Person WHERE name LIKE 'Alex');",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q07",
+   "category": "single",
+   "question": "What was Alex's role at Innovatech?",
+   "answer": "Software Engineer",
+   "evidence": [
+    "a05"
+   ],
+   "system_answer": "Alex Rivera's role at Innovatech was Software Engineer.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer gives Alex's role at Innovatech as Software Engineer, which matches the gold answer.",
+   "wall": 4.196,
+   "context": [
+    {
+     "sql": "SELECT Employment.* FROM Employment JOIN Person ON Employment.person_id = Person.id WHERE Person.name LIKE '%Alex%' AND Employment.company_name LIKE '%Innovatech%'",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "company_name": "Innovatech",
+       "position": "Software Engineer",
+       "start_date": "2010",
+       "teamwork_details": null,
+       "award": null,
+       "project_details": null,
+       "end_date": null
+      },
+      {
+       "id": 2,
+       "person_id": 1,
+       "company_name": "Innovatech",
+       "position": null,
+       "start_date": "2010-08-01",
+       "teamwork_details": null,
+       "award": null,
+       "project_details": null,
+       "end_date": null
+      },
+      {
+       "id": 3,
+       "person_id": 1,
+       "company_name": "Innovatech",
+       "position": "Software Engineer",
+       "start_date": "2010",
+       "teamwork_details": "Worked collaboratively with cross-functional teams.",
+       "award": null,
+       "project_details": null,
+       "end_date": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q08",
+   "category": "single",
+   "question": "When did Alex work at Innovatech?",
+   "answer": "August 2010 to July 2013",
+   "evidence": [
+    "a06"
+   ],
+   "system_answer": "Alex Rivera started working at Innovatech in 2010 and is still employed there as of the latest data available.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The answer gets the 2010 start year right but leaves out August. It also says Alex is still employed at Innovatech, which contradicts the gold end date of July 2013.",
+   "wall": 5.081,
+   "context": [
+    {
+     "sql": "SELECT * FROM Employment JOIN Person ON Employment.person_id = Person.id WHERE Person.name LIKE '%Alex%' AND Employment.company_name LIKE '%Innovatech%'",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "company_name": "Innovatech",
+       "position": "Software Engineer",
+       "start_date": "2010",
+       "teamwork_details": null,
+       "award": null,
+       "project_details": null,
+       "end_date": null,
+       "name": "Alex Rivera",
+       "age": 35,
+       "nationality": "Canadian",
+       "education": "B.Sc. from University of Toronto, 2010"
+      },
+      {
+       "id": 1,
+       "person_id": 1,
+       "company_name": "Innovatech",
+       "position": null,
+       "start_date": "2010-08-01",
+       "teamwork_details": null,
+       "award": null,
+       "project_details": null,
+       "end_date": null,
+       "name": "Alex Rivera",
+       "age": 35,
+       "nationality": "Canadian",
+       "education": "B.Sc. from University of Toronto, 2010"
+      },
+      {
+       "id": 1,
+       "person_id": 1,
+       "company_name": "Innovatech",
+       "position": "Software Engineer",
+       "start_date": "2010",
+       "teamwork_details": "Worked collaboratively with cross-functional teams.",
+       "award": null,
+       "project_details": null,
+       "end_date": null,
+       "name": "Alex Rivera",
+       "age": 35,
+       "nationality": "Canadian",
+       "education": "B.Sc. from University of Toronto, 2010"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q09",
+   "category": "single",
+   "question": "What award did Alex receive, and when?",
+   "answer": "Employee of the Year, December 2012",
+   "evidence": [
+    "a09"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer is a real fact (Employee of the Year, December 2012), but the answer says 'I don't know'.",
+   "wall": 4.153,
+   "context": [
+    {
+     "sql": "SELECT * FROM Person WHERE name LIKE '%Alex%';",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Alex Rivera",
+       "age": 35,
+       "nationality": "Canadian",
+       "education": "B.Sc. from University of Toronto, 2010"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM Employment WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Alex%') AND award IS NOT NULL;",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q10",
+   "category": "single",
+   "question": "When did Alex join TechPioneers, and in what role?",
+   "answer": "September 2013, as a Senior Software Engineer",
+   "evidence": [
+    "a11"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer gives a real fact (September 2013, Senior Software Engineer), and the answer says 'I don't know', which misses both the date and the role.",
+   "wall": 4.119,
+   "context": [
+    {
+     "sql": "SELECT * FROM Employment JOIN Person ON Employment.person_id = Person.id WHERE Person.name LIKE '%Alex%' AND Employment.company_name LIKE '%TechPioneers%'",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q11",
+   "category": "single",
+   "question": "Until when did Alex work at TechPioneers?",
+   "answer": "June 2016",
+   "evidence": [
+    "a12"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer is a real fact (June 2016), but the response says it doesn't know.",
+   "wall": 3.879,
+   "context": [
+    {
+     "sql": "SELECT Employment.* FROM Employment JOIN Person ON Employment.person_id = Person.id WHERE Person.name LIKE 'Alex' AND Employment.company_name LIKE 'TechPioneers'",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q12",
+   "category": "single",
+   "question": "What did Alex spearhead in April 2015?",
+   "answer": "A major performance optimization project",
+   "evidence": [
+    "a15"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "Gold answer is a real fact (a major performance optimization project); the answer says 'I don't know'.",
+   "wall": 8.513,
+   "context": [
+    {
+     "sql": "SELECT * FROM Employment JOIN Person ON Employment.person_id = Person.id WHERE Person.name LIKE '%Alex%' AND (Employment.start_date LIKE '%2015-04%' OR Employment.end_date LIKE '%2015-04%');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM IoTProjects JOIN Person ON IoTProjects.person_id = Person.id WHERE Person.name LIKE '%Alex%' AND IoTProjects.details LIKE '%2015-04%';",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM SustainableTechLeadership JOIN Person ON SustainableTechLeadership.person_id = Person.id WHERE Person.name LIKE '%Alex%' AND SustainableTechLeadership.progress LIKE '%2015-04%';",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q13",
+   "category": "single",
+   "question": "What topic did Alex publish research on, and when?",
+   "answer": "Cloud computing efficiency, February 2016",
+   "evidence": [
+    "a16"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer is a known fact (cloud computing efficiency, February 2016), but the response says 'I don't know' and gives neither the topic nor the date.",
+   "wall": 5.042,
+   "context": [
+    {
+     "sql": "SELECT * FROM Person INNER JOIN Publications ON Person.id = Publications.person_id WHERE Person.name LIKE '%Alex%';",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q14",
+   "category": "single",
+   "question": "What is Alex's role at EcoSolutions?",
+   "answer": "Co-founder and CTO",
+   "evidence": [
+    "a17"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer is a real fact (Co-founder and CTO), but the answer says 'I don't know'.",
+   "wall": 9.107,
+   "context": [
+    {
+     "sql": "SELECT Employment.* FROM Employment JOIN Person ON Employment.person_id = Person.id WHERE Person.name LIKE 'Alex' AND Employment.company_name LIKE 'EcoSolutions';",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q15",
+   "category": "single",
+   "question": "What does EcoSolutions focus on?",
+   "answer": "Developing eco-friendly tech solutions",
+   "evidence": [
+    "a18"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "Gold answer is a real fact; the answer says it doesn't know.",
+   "wall": 4.082,
+   "context": [
+    {
+     "sql": "SELECT * FROM Startups WHERE name LIKE '%EcoSolutions%'",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q16",
+   "category": "single",
+   "question": "How much did EcoSolutions' revenue grow in its first year?",
+   "answer": "200%",
+   "evidence": [
+    "a19"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "Gold answer is 200%; the answer says 'I don't know' and gives no value.",
+   "wall": 3.657,
+   "context": [
+    {
+     "sql": "SELECT * FROM Startups WHERE name LIKE '%EcoSolutions%'",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q17",
+   "category": "single",
+   "question": "How fast did EcoSolutions' user base grow?",
+   "answer": "To 10,000 users in six months",
+   "evidence": [
+    "a20"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer is a real fact (10,000 users in six months), but the answer says 'I don't know'.",
+   "wall": 4.78,
+   "context": [
+    {
+     "sql": "SELECT * FROM Startups WHERE name LIKE '%EcoSolutions%';",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q18",
+   "category": "list",
+   "question": "Which programming languages is Alex proficient in?",
+   "answer": "Python, Java, JavaScript, and C#",
+   "evidence": [
+    "a21"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer lists four languages (Python, Java, JavaScript, C#), but the response says 'I don't know' and gives none of them.",
+   "wall": 3.215,
+   "context": [
+    {
+     "sql": "SELECT * FROM ProgrammingLanguages JOIN Person ON ProgrammingLanguages.person_id = Person.id WHERE Person.name LIKE 'Alex'",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q19",
+   "category": "list",
+   "question": "Which frameworks and tools is Alex skilled in?",
+   "answer": "React, Node.js, .NET, and Django",
+   "evidence": [
+    "a22"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "Gold answer is a real fact (React, Node.js, .NET, Django); answer says I don't know.",
+   "wall": 6.716,
+   "context": [
+    {
+     "sql": "SELECT * FROM Person WHERE name LIKE '%Alex%';",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Alex Rivera",
+       "age": 35,
+       "nationality": "Canadian",
+       "education": "B.Sc. from University of Toronto, 2010"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM ProgrammingLanguages WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Alex%');",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "language": "Python"
+      },
+      {
+       "id": 2,
+       "person_id": 1,
+       "language": "Java"
+      },
+      {
+       "id": 3,
+       "person_id": 1,
+       "language": "JavaScript"
+      },
+      {
+       "id": 4,
+       "person_id": 1,
+       "language": "C#"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM DatabaseKnowledge WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Alex%');",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "database_name": "MySQL"
+      },
+      {
+       "id": 2,
+       "person_id": 1,
+       "database_name": "MongoDB"
+      },
+      {
+       "id": 3,
+       "person_id": 1,
+       "database_name": "PostgreSQL"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM CloudPlatforms WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Alex%');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM DevOpsSkills WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Alex%');",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "skill": "Docker"
+      },
+      {
+       "id": 2,
+       "person_id": 1,
+       "skill": "Kubernetes"
+      },
+      {
+       "id": 3,
+       "person_id": 1,
+       "skill": "CI/CD pipelines"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q20",
+   "category": "list",
+   "question": "Which databases does Alex know?",
+   "answer": "MySQL, MongoDB, and PostgreSQL",
+   "evidence": [
+    "a23"
+   ],
+   "system_answer": "Alex Rivera knows MySQL, MongoDB, and PostgreSQL.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer names all three databases in the gold answer, MySQL, MongoDB and PostgreSQL, and adds nothing that contradicts it.",
+   "wall": 3.859,
+   "context": [
+    {
+     "sql": "SELECT * FROM Person JOIN DatabaseKnowledge ON Person.id = DatabaseKnowledge.person_id WHERE Person.name LIKE '%Alex%'",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Alex Rivera",
+       "age": 35,
+       "nationality": "Canadian",
+       "education": "B.Sc. from University of Toronto, 2010",
+       "person_id": 1,
+       "database_name": "MySQL"
+      },
+      {
+       "id": 2,
+       "name": "Alex Rivera",
+       "age": 35,
+       "nationality": "Canadian",
+       "education": "B.Sc. from University of Toronto, 2010",
+       "person_id": 1,
+       "database_name": "MongoDB"
+      },
+      {
+       "id": 3,
+       "name": "Alex Rivera",
+       "age": 35,
+       "nationality": "Canadian",
+       "education": "B.Sc. from University of Toronto, 2010",
+       "person_id": 1,
+       "database_name": "PostgreSQL"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q21",
+   "category": "list",
+   "question": "Which cloud platforms is Alex proficient in?",
+   "answer": "AWS and Azure",
+   "evidence": [
+    "a24"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer is AWS and Azure, but the response says it doesn't know, so it misses the key fact.",
+   "wall": 4.978,
+   "context": [
+    {
+     "sql": "SELECT * FROM Person WHERE name LIKE '%Alex%';",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Alex Rivera",
+       "age": 35,
+       "nationality": "Canadian",
+       "education": "B.Sc. from University of Toronto, 2010"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM CloudPlatforms WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Alex%');",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q22",
+   "category": "list",
+   "question": "Which DevOps technologies is Alex skilled in?",
+   "answer": "Docker, Kubernetes, and CI/CD pipelines",
+   "evidence": [
+    "a25"
+   ],
+   "system_answer": "Alex Rivera is skilled in Docker, Kubernetes, and CI/CD pipelines.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer names all three technologies in the gold answer: Docker, Kubernetes, and CI/CD pipelines. Nothing in it contradicts the gold.",
+   "wall": 3.866,
+   "context": [
+    {
+     "sql": "SELECT DevOpsSkills.* FROM DevOpsSkills JOIN Person ON DevOpsSkills.person_id = Person.id WHERE Person.name LIKE '%Alex%'",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "skill": "Docker"
+      },
+      {
+       "id": 2,
+       "person_id": 1,
+       "skill": "Kubernetes"
+      },
+      {
+       "id": 3,
+       "person_id": 1,
+       "skill": "CI/CD pipelines"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q23",
+   "category": "single",
+   "question": "What is the SmartHome System and how widely was it deployed?",
+   "answer": "An IoT project for automating home environments, deployed in over 100 homes by June 2018",
+   "evidence": [
+    "a26",
+    "a27"
+   ],
+   "system_answer": "The SmartHome System is an IoT project focused on automating home environments. It was successfully deployed in over 100 homes by June 2018.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "Matches all key facts: IoT home automation project, over 100 homes by June 2018.",
+   "wall": 5.421,
+   "context": [
+    {
+     "sql": "SELECT * FROM IoTProjects WHERE project_name LIKE '%SmartHome%';",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": null,
+       "project_name": "SmartHome System",
+       "project_type": "IoT",
+       "details": "Automating home environments. Successfully deployed in over 100 homes by June 2018."
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q24",
+   "category": "single",
+   "question": "What was Alex's role in the Health Tracker App?",
+   "answer": "He managed its development (project manager)",
+   "evidence": [
+    "a28"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer states a real fact: Alex managed the app's development as project manager. The answer says 'I don't know', which misses that key fact.",
+   "wall": 4.033,
+   "context": [],
+   "extra": {}
+  },
+  {
+   "id": "q25",
+   "category": "single",
+   "question": "When did the Health Tracker App launch, and how many downloads did it reach?",
+   "answer": "Launched January 2019, reached 50,000 downloads within its first year",
+   "evidence": [
+    "a30"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "Gold answer has real facts (launched January 2019, 50,000 downloads in the first year). The response says 'I don't know', which counts as incorrect.",
+   "wall": 3.567,
+   "context": [
+    {
+     "sql": "SELECT * FROM HealthTrackerApp;",
+     "rows": [
+      {
+       "id": 1,
+       "app_name": "Health Tracker App",
+       "description": "A mobile application for tracking health metrics.",
+       "downloads": null
+      },
+      {
+       "id": 2,
+       "app_name": null,
+       "description": null,
+       "downloads": 50000
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q26",
+   "category": "single",
+   "question": "When did Alex complete the Cloud Computing Specialization?",
+   "answer": "November 2020",
+   "evidence": [
+    "a32"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer is a real fact, November 2020, but the response says it doesn't know.",
+   "wall": 5.594,
+   "context": [
+    {
+     "sql": "SELECT UniversityCourses.* FROM UniversityCourses JOIN Person ON UniversityCourses.person_id = Person.id WHERE Person.name LIKE '%Alex%' AND UniversityCourses.course_name LIKE '%Cloud Computing Specialization%'",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q27",
+   "category": "single",
+   "question": "When did Alex complete the Advanced Machine Learning course?",
+   "answer": "March 2020",
+   "evidence": [
+    "a31"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer gives a real fact (March 2020), but the answer says 'I don't know', which counts as incorrect under the rules.",
+   "wall": 4.364,
+   "context": [
+    {
+     "sql": "SELECT * FROM UniversityCourses JOIN Person ON UniversityCourses.person_id = Person.id WHERE Person.name LIKE '%Alex%' AND UniversityCourses.course_name LIKE '%Advanced Machine Learning%'",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q28",
+   "category": "list",
+   "question": "Which certifications does Alex hold?",
+   "answer": "AWS Certified Solutions Architect and Certified Scrum Master",
+   "evidence": [
+    "a33"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer lists two certifications: AWS Certified Solutions Architect and Certified Scrum Master. The answer says 'I don't know', which misses the fact entirely.",
+   "wall": 5.191,
+   "context": [
+    {
+     "sql": "SELECT * FROM Person WHERE name LIKE '%Alex%';",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Alex Rivera",
+       "age": 35,
+       "nationality": "Canadian",
+       "education": "B.Sc. from University of Toronto, 2010"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM UniversityCourses WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Alex%');",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "course_name": "System Design",
+       "completion_date": "2009-12"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM Employment WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Alex%');",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "company_name": "Innovatech",
+       "position": "Software Engineer",
+       "start_date": "2010",
+       "teamwork_details": null,
+       "award": null,
+       "project_details": null,
+       "end_date": null
+      },
+      {
+       "id": 2,
+       "person_id": 1,
+       "company_name": "Innovatech",
+       "position": null,
+       "start_date": "2010-08-01",
+       "teamwork_details": null,
+       "award": null,
+       "project_details": null,
+       "end_date": null
+      },
+      {
+       "id": 3,
+       "person_id": 1,
+       "company_name": "Innovatech",
+       "position": "Software Engineer",
+       "start_date": "2010",
+       "teamwork_details": "Worked collaboratively with cross-functional teams.",
+       "award": null,
+       "project_details": null,
+       "end_date": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q29",
+   "category": "list",
+   "question": "Which conferences did Alex attend, and when?",
+   "answer": "TechCrunch Disrupt (September 2019) and Google I/O (May 2020)",
+   "evidence": [
+    "a34",
+    "a35"
+   ],
+   "system_answer": "Alex Rivera attended the following conferences:\n- TechCrunch Disrupt in September 2019\n- Google I/O on May 1, 2020",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer names both conferences with matching times: TechCrunch Disrupt in September 2019 and Google I/O in May 2020. The specific day given for Google I/O (May 1) adds detail without contradicting the gold answer.",
+   "wall": 4.808,
+   "context": [
+    {
+     "sql": "SELECT * FROM Person WHERE name LIKE '%Alex%';",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Alex Rivera",
+       "age": 35,
+       "nationality": "Canadian",
+       "education": "B.Sc. from University of Toronto, 2010"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM Conferences WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Alex%');",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "conference_name": "TechCrunch Disrupt",
+       "attendance_date": "2019-09"
+      },
+      {
+       "id": 2,
+       "person_id": 1,
+       "conference_name": "Google I/O",
+       "attendance_date": "2020-05-01"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q30",
+   "category": "single",
+   "question": "Where did Alex give a keynote, on what topic, and when?",
+   "answer": "CloudExpo, on Cloud Innovation, October 2018",
+   "evidence": [
+    "a36"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer is a real fact (CloudExpo, Cloud Innovation, October 2018), so replying 'I don't know' does not supply it.",
+   "wall": 4.201,
+   "context": [
+    {
+     "sql": "SELECT * FROM Conferences JOIN Person ON Conferences.person_id = Person.id WHERE Person.name LIKE '%Alex%'",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "conference_name": "TechCrunch Disrupt",
+       "attendance_date": "2019-09",
+       "name": "Alex Rivera",
+       "age": 35,
+       "nationality": "Canadian",
+       "education": "B.Sc. from University of Toronto, 2010"
+      },
+      {
+       "id": 1,
+       "person_id": 1,
+       "conference_name": "Google I/O",
+       "attendance_date": "2020-05-01",
+       "name": "Alex Rivera",
+       "age": 35,
+       "nationality": "Canadian",
+       "education": "B.Sc. from University of Toronto, 2010"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q31",
+   "category": "single",
+   "question": "What was Alex's role at DevOps Days?",
+   "answer": "Panelist (April 2019)",
+   "evidence": [
+    "a37"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer is a real fact (Alex was a panelist, April 2019), and the answer says 'I don't know'.",
+   "wall": 4.816,
+   "context": [
+    {
+     "sql": "SELECT * FROM Employment JOIN Person ON Employment.person_id = Person.id WHERE Person.name LIKE '%Alex%' AND Employment.company_name LIKE '%DevOps Days%'",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q32",
+   "category": "single",
+   "question": "Who is Sarah Chen?",
+   "answer": "A Data Scientist Alex met in college",
+   "evidence": [
+    "a38"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "Gold answer is a real fact; answer says I don't know.",
+   "wall": 11.602,
+   "context": [
+    {
+     "sql": "SELECT * FROM Person WHERE name LIKE '%Sarah Chen%';",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM UniversityCourses WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Sarah Chen%');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM Employment WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Sarah Chen%');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM Publications WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Sarah Chen%');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM ProgrammingLanguages WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Sarah Chen%');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM DatabaseKnowledge WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Sarah Chen%');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM CloudPlatforms WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Sarah Chen%');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM DevOpsSkills WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Sarah Chen%');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM IoTProjects WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Sarah Chen%');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM Conferences WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Sarah Chen%');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM Friends WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Sarah Chen%');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM Testimonials WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Sarah Chen%');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM SustainableTechLeadership WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Sarah Chen%');",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q33",
+   "category": "single",
+   "question": "What does Michael Johnson do, and how does Alex know him?",
+   "answer": "Product Manager, a former co-worker",
+   "evidence": [
+    "a39"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer gives a real fact (Product Manager, former co-worker), but the answer says 'I don't know', which counts as incorrect.",
+   "wall": 6.289,
+   "context": [
+    {
+     "sql": "SELECT * FROM Person WHERE name LIKE '%Michael Johnson%';",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM Employment WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Michael Johnson%');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM UniversityCourses WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Michael Johnson%');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM Friends WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Michael Johnson%') AND friend_id IN (SELECT id FROM Person WHERE name LIKE '%Alex%');",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q34",
+   "category": "single",
+   "question": "Who is Emily Davis?",
+   "answer": "A Marketing Specialist Alex collaborates with at his startup",
+   "evidence": [
+    "a40"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "Gold is a real fact; answer says I don't know.",
+   "wall": 11.017,
+   "context": [
+    {
+     "sql": "SELECT * FROM Person WHERE name LIKE '%Emily Davis%';",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM UniversityCourses WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Emily Davis%');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM Employment WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Emily Davis%');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM Publications WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Emily Davis%');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM ProgrammingLanguages WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Emily Davis%');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM DatabaseKnowledge WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Emily Davis%');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM CloudPlatforms WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Emily Davis%');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM DevOpsSkills WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Emily Davis%');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM IoTProjects WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Emily Davis%');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM Conferences WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Emily Davis%');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM Friends WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Emily Davis%');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM Testimonials WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Emily Davis%');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM SustainableTechLeadership WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Emily Davis%');",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q35",
+   "category": "single",
+   "question": "Which of Alex's friends is a graphic designer?",
+   "answer": "Daniel Martinez, his neighbor",
+   "evidence": [
+    "a41"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer gives a real fact (Daniel Martinez, his neighbor), but the answer says 'I don't know', which counts as incorrect.",
+   "wall": 5.003,
+   "context": [
+    {
+     "sql": "SELECT * FROM Person WHERE name LIKE 'Alex';",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM Friends WHERE person_id IN (SELECT id FROM Person WHERE name LIKE 'Alex');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM Employment WHERE position LIKE 'graphic designer' AND person_id IN (SELECT friend_id FROM Friends WHERE person_id IN (SELECT id FROM Person WHERE name LIKE 'Alex'));",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q36",
+   "category": "single",
+   "question": "What does Laura Smith do?",
+   "answer": "She is a Fitness Trainer",
+   "evidence": [
+    "a41"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer gives a real fact (Fitness Trainer), but the response says 'I don't know' and so misses the key fact.",
+   "wall": 6.932,
+   "context": [
+    {
+     "sql": "SELECT * FROM Person WHERE name LIKE '%Laura Smith%';",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM Employment WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Laura Smith%');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM UniversityCourses WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Laura Smith%');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM Publications WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Laura Smith%');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM Conferences WHERE person_id IN (SELECT id FROM Person WHERE name LIKE '%Laura Smith%');",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q37",
+   "category": "list",
+   "question": "What are Alex's goals and aspirations?",
+   "answer": "Grow EcoSolutions to a global scale, become a thought leader in sustainable technology, and establish a tech incubator for emerging technologies",
+   "evidence": [
+    "a43",
+    "a44",
+    "a45"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer states real goals, but the response says 'I don't know' and gives none of them.",
+   "wall": 4.904,
+   "context": [
+    {
+     "sql": "SELECT * FROM SustainableTechLeadership stl JOIN Person p ON stl.person_id = p.id WHERE p.name LIKE '%Alex%'",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q38",
+   "category": "aggregation",
+   "question": "How many companies did Alex work at as an employee before co-founding EcoSolutions?",
+   "answer": "Two: Innovatech and TechPioneers",
+   "evidence": [
+    "a05",
+    "a11",
+    "a17"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "Gold answer is a real fact (two companies: Innovatech and TechPioneers); answer says I don't know.",
+   "wall": 6.841,
+   "context": [
+    {
+     "sql": "SELECT * FROM Person WHERE name LIKE 'Alex';",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM Employment WHERE person_id IN (SELECT id FROM Person WHERE name LIKE 'Alex');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT start_date FROM Startups WHERE name LIKE 'EcoSolutions';",
+     "rows": "ERROR OperationalError: no such column: start_date"
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q39",
+   "category": "multi_hop",
+   "question": "What was Alex's job title at the company where he won Employee of the Year?",
+   "answer": "Software Engineer (at Innovatech)",
+   "evidence": [
+    "a05",
+    "a09"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer is a real fact (Software Engineer at Innovatech), but the response only says it doesn't know.",
+   "wall": 5.92,
+   "context": [
+    {
+     "sql": "SELECT Employment.* FROM Employment JOIN Person ON Employment.person_id = Person.id WHERE Person.name LIKE 'Alex' AND Employment.award LIKE '%Employee of the Year%'",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q40",
+   "category": "temporal",
+   "question": "Where was Alex working in 2014, and in what role?",
+   "answer": "TechPioneers, as a Senior Software Engineer",
+   "evidence": [
+    "a11",
+    "a12"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer is a real fact (TechPioneers, Senior Software Engineer), but the response says \"I don't know,\" which the rules count as incorrect.",
+   "wall": 4.769,
+   "context": [
+    {
+     "sql": "SELECT * FROM Person JOIN Employment ON Person.id = Employment.person_id WHERE Person.name LIKE '%Alex%' AND (Employment.start_date LIKE '2014%' OR Employment.end_date LIKE '2014%');",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q41",
+   "category": "temporal",
+   "question": "Which events did Alex attend or speak at in 2019?",
+   "answer": "DevOps Days (panelist, April 2019) and TechCrunch Disrupt (attended, September 2019)",
+   "evidence": [
+    "a34",
+    "a37"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer gives real facts: DevOps Days (panelist, April 2019) and TechCrunch Disrupt (attended, September 2019). The response says 'I don't know' and names neither event.",
+   "wall": 4.705,
+   "context": [
+    {
+     "sql": "SELECT * FROM Conferences WHERE conference_name LIKE '%2019%' AND person_id IN (SELECT id FROM Person WHERE name LIKE '%Alex%');",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q42",
+   "category": "aggregation",
+   "question": "How many of Alex's friends are mentioned, and who are they?",
+   "answer": "Five: Sarah Chen, Michael Johnson, Emily Davis, Laura Smith, and Daniel Martinez",
+   "evidence": [
+    "a38",
+    "a39",
+    "a40",
+    "a41"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer is a real fact: five friends, namely Sarah Chen, Michael Johnson, Emily Davis, Laura Smith and Daniel Martinez. The answer only says 'I don't know' and gives none of this.",
+   "wall": 3.66,
+   "context": [
+    {
+     "sql": "SELECT * FROM Person WHERE name LIKE 'Alex';",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM Friends WHERE person_id IN (SELECT id FROM Person WHERE name LIKE 'Alex');",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM Person WHERE id IN (SELECT friend_id FROM Friends WHERE person_id IN (SELECT id FROM Person WHERE name LIKE 'Alex'));",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q43",
+   "category": "unanswerable",
+   "question": "What is Alex's favorite food?",
+   "answer": "UNKNOWN: never mentioned",
+   "evidence": [],
+   "system_answer": "I don't know.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The gold answer is UNKNOWN, and the response correctly says it doesn't know rather than claiming a concrete value.",
+   "wall": 3.563,
+   "context": [],
+   "extra": {}
+  },
+  {
+   "id": "q44",
+   "category": "unanswerable",
+   "question": "What is Sarah Chen's phone number?",
+   "answer": "UNKNOWN: never mentioned",
+   "evidence": [],
+   "system_answer": "I don't know.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "Gold is UNKNOWN and the answer says it doesn't know.",
+   "wall": 3.722,
+   "context": [],
+   "extra": {}
+  },
+  {
+   "id": "q45",
+   "category": "unanswerable",
+   "question": "In which city does Alex live?",
+   "answer": "UNKNOWN: never mentioned",
+   "evidence": [],
+   "system_answer": "I don't know.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The gold answer is UNKNOWN, and the response correctly says it doesn't know.",
+   "wall": 4.223,
+   "context": [],
+   "extra": {}
+  }
+ ],
+ "db": {
+  "Person": {
+   "columns": [
+    "id",
+    "name",
+    "age",
+    "nationality",
+    "education"
+   ],
+   "rows": [
+    [
+     1,
+     "Alex Rivera",
+     35,
+     "Canadian",
+     "B.Sc. from University of Toronto, 2010"
+    ]
+   ]
+  },
+  "UniversityCourses": {
+   "columns": [
+    "id",
+    "person_id",
+    "course_name",
+    "completion_date"
+   ],
+   "rows": [
+    [
+     1,
+     1,
+     "System Design",
+     "2009-12"
+    ],
+    [
+     2,
+     null,
+     "Advanced Machine Learning",
+     "2020-03"
+    ],
+    [
+     3,
+     null,
+     "Cloud Computing Specialization",
+     "2020-11-30"
+    ]
+   ]
+  },
+  "Employment": {
+   "columns": [
+    "id",
+    "person_id",
+    "company_name",
+    "position",
+    "start_date",
+    "teamwork_details",
+    "award",
+    "project_details",
+    "end_date"
+   ],
+   "rows": [
+    [
+     1,
+     1,
+     "Innovatech",
+     "Software Engineer",
+     "2010",
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     2,
+     1,
+     "Innovatech",
+     null,
+     "2010-08-01",
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     3,
+     1,
+     "Innovatech",
+     "Software Engineer",
+     "2010",
+     "Worked collaboratively with cross-functional teams.",
+     null,
+     null,
+     null
+    ],
+    [
+     4,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "He led the development of a key internal tool, marking a significant achievement in November 2012.",
+     null
+    ],
+    [
+     5,
+     null,
+     "TechPioneers",
+     "Senior Software Engineer",
+     "2013-09",
+     null,
+     null,
+     null,
+     "2016-06"
+    ],
+    [
+     6,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     "Designed scalable microservices architecture",
+     null
+    ],
+    [
+     7,
+     null,
+     null,
+     null,
+     null,
+     "Mentored junior engineers and conducted code reviews",
+     null,
+     null,
+     null
+    ],
+    [
+     8,
+     null,
+     null,
+     null,
+     "2015-04-01",
+     null,
+     null,
+     "major performance optimization project",
+     null
+    ],
+    [
+     9,
+     null,
+     "EcoSolutions",
+     "CTO",
+     null,
+     "Aspires to grow to a global scale",
+     null,
+     null,
+     null
+    ],
+    [
+     10,
+     null,
+     "Unnamed Startup",
+     "Marketing Specialist",
+     null,
+     null,
+     null,
+     null,
+     null
+    ]
+   ]
+  },
+  "Publications": {
+   "columns": [
+    "id",
+    "person_id",
+    "title",
+    "publication_date",
+    "topic"
+   ],
+   "rows": [
+    [
+     1,
+     null,
+     null,
+     "February 2016",
+     "cloud computing efficiency"
+    ]
+   ]
+  },
+  "Startups": {
+   "columns": [
+    "id",
+    "name",
+    "focus",
+    "revenue_growth",
+    "user_base"
+   ],
+   "rows": [
+    [
+     1,
+     "Unnamed Startup",
+     "developing eco-friendly tech solutions",
+     null,
+     10000
+    ],
+    [
+     2,
+     "Tech Incubator",
+     "Emerging Technologies",
+     null,
+     null
+    ]
+   ]
+  },
+  "ProgrammingLanguages": {
+   "columns": [
+    "id",
+    "person_id",
+    "language"
+   ],
+   "rows": [
+    [
+     1,
+     1,
+     "Python"
+    ],
+    [
+     2,
+     1,
+     "Java"
+    ],
+    [
+     3,
+     1,
+     "JavaScript"
+    ],
+    [
+     4,
+     1,
+     "C#"
+    ]
+   ]
+  },
+  "DatabaseKnowledge": {
+   "columns": [
+    "id",
+    "person_id",
+    "database_name"
+   ],
+   "rows": [
+    [
+     1,
+     1,
+     "MySQL"
+    ],
+    [
+     2,
+     1,
+     "MongoDB"
+    ],
+    [
+     3,
+     1,
+     "PostgreSQL"
+    ]
+   ]
+  },
+  "CloudPlatforms": {
+   "columns": [
+    "id",
+    "person_id",
+    "platform_name"
+   ],
+   "rows": [
+    [
+     1,
+     null,
+     "AWS"
+    ]
+   ]
+  },
+  "DevOpsSkills": {
+   "columns": [
+    "id",
+    "person_id",
+    "skill"
+   ],
+   "rows": [
+    [
+     1,
+     1,
+     "Docker"
+    ],
+    [
+     2,
+     1,
+     "Kubernetes"
+    ],
+    [
+     3,
+     1,
+     "CI/CD pipelines"
+    ],
+    [
+     4,
+     null,
+     "Certified Scrum Master"
+    ]
+   ]
+  },
+  "IoTProjects": {
+   "columns": [
+    "id",
+    "person_id",
+    "project_name",
+    "project_type",
+    "details"
+   ],
+   "rows": [
+    [
+     1,
+     null,
+     "SmartHome System",
+     "IoT",
+     "Automating home environments. Successfully deployed in over 100 homes by June 2018."
+    ]
+   ]
+  },
+  "HealthTrackerApp": {
+   "columns": [
+    "id",
+    "app_name",
+    "description",
+    "downloads"
+   ],
+   "rows": [
+    [
+     1,
+     "Health Tracker App",
+     "A mobile application for tracking health metrics.",
+     null
+    ],
+    [
+     2,
+     null,
+     null,
+     50000
+    ]
+   ]
+  },
+  "Conferences": {
+   "columns": [
+    "id",
+    "person_id",
+    "conference_name",
+    "attendance_date"
+   ],
+   "rows": [
+    [
+     1,
+     1,
+     "TechCrunch Disrupt",
+     "2019-09"
+    ],
+    [
+     2,
+     1,
+     "Google I/O",
+     "2020-05-01"
+    ],
+    [
+     3,
+     2,
+     "CloudExpo",
+     "2018-10"
+    ]
+   ]
+  },
+  "Friends": {
+   "columns": [
+    "id",
+    "person_id",
+    "friend_id"
+   ],
+   "rows": [
+    [
+     1,
+     1,
+     null
+    ]
+   ]
+  },
+  "Testimonials": {
+   "columns": [
+    "id",
+    "person_id",
+    "content"
+   ],
+   "rows": []
+  },
+  "SustainableTechLeadership": {
+   "columns": [
+    "id",
+    "person_id",
+    "goal",
+    "strategy",
+    "progress"
+   ],
+   "rows": []
+  }
+ }
+}

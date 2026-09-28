@@ -1,0 +1,4785 @@
+{
+ "m6": {
+  "raw_log": {
+   "accuracy": 0.9,
+   "by_category": {
+    "aggregation": 0.938,
+    "current": 0.857,
+    "forgotten": 0.0,
+    "history": 1.0,
+    "relationships": 1.0,
+    "semi_structured": 1.0,
+    "status": 1.0,
+    "temporal": 0.875,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 10537,
+   "failures": [
+    {
+     "q": "Which climbing gym am I a member of, and what does it cost?",
+     "gold": "Smíchoff (1190 CZK/month)",
+     "got": "You were a member at Smíchoff climbing gym. It cost 1,190 CZK per month; you ended the membership, with March as your last month.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many books have I finished, and which did I rate 5/5?",
+     "gold": "6 finished; 5/5: Thinking, Fast and Slow, Project Hail Mary, Shoe Dog",
+     "got": "You’ve finished 4 books. You rated these 5/5: *Thinking, Fast and Slow* and *Project Hail Mary*.",
+     "verdict": "partial"
+    },
+    {
+     "q": "When did I last have dinner with Ondra?",
+     "gold": "Mar 28, 2026 at Eska",
+     "got": "March 28, 2026.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Who is Jan Dvořák?",
+     "gold": "UNKNOWN: the user asked to forget him",
+     "got": "Jan Dvořák was CTO at Rohlik, whom you met at a meetup. You later asked to forget his details.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "db (none)": {
+   "accuracy": 0.65,
+   "by_category": {
+    "aggregation": 0.625,
+    "current": 0.357,
+    "forgotten": 1.0,
+    "history": 1.0,
+    "relationships": 0.5,
+    "semi_structured": 1.0,
+    "status": 0.75,
+    "temporal": 0.625,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 15712,
+   "failures": [
+    {
+     "q": "What is Tom's phone number?",
+     "gold": "+420 777 999 000",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where do I live?",
+     "gold": "Prague",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where does my sister Klára live?",
+     "gold": "Berlin",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Which climbing gym am I a member of, and what does it cost?",
+     "gold": "Smíchoff (1190 CZK/month)",
+     "got": "You’re a member of Smíchoff climbing gym. It costs 1,190 CZK per month; the membership ended after March 2026.",
+     "verdict": "partial"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "Deep Work",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on coffee in November 2025?",
+     "gold": "1,025 CZK (10 purchases)",
+     "got": "You spent **900 CZK** on coffee in November 2025.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on groceries in January 2026?",
+     "gold": "6,160 CZK (5 purchases)",
+     "got": "You spent **3,430 Kč** on groceries in January 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in January 2026?",
+     "gold": "5",
+     "got": "You went climbing 4 times in January 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I last have dinner with Ondra?",
+     "gold": "Mar 28, 2026 at Eska",
+     "got": "March 28, 2026.",
+     "verdict": "partial"
+    },
+    {
+     "q": "When was my last dentist appointment, and with whom?",
+     "gold": "Nov 12, 2025 with Dr. Horák",
+     "got": "Your last recorded dentist appointment was February 18, 2026, with Dr. Horák; it was cancelled.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What's Lucas Meyer's email?",
+     "gold": "lucas@sequoia.com",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Did I renew my passport?",
+     "gold": "Yes, done on Dec 3, 2025",
+     "got": "Yes. Your passport renewal task was marked done.",
+     "verdict": "partial"
+    }
+   ]
+  },
+  "db+log (none)": {
+   "accuracy": 0.9167,
+   "by_category": {
+    "aggregation": 0.812,
+    "current": 0.857,
+    "forgotten": 1.0,
+    "history": 1.0,
+    "relationships": 1.0,
+    "semi_structured": 1.0,
+    "status": 1.0,
+    "temporal": 1.0,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 26161,
+   "failures": [
+    {
+     "q": "Which climbing gym am I a member of, and what does it cost?",
+     "gold": "Smíchoff (1190 CZK/month)",
+     "got": "Smíchoff climbing gym; the membership cost 1,190 CZK per month. It ended after March 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on groceries in January 2026?",
+     "gold": "6,160 CZK (5 purchases)",
+     "got": "You spent **3,430 Kč** on groceries in January 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many books have I finished, and which did I rate 5/5?",
+     "gold": "6 finished; 5/5: Thinking, Fast and Slow, Project Hail Mary, Shoe Dog",
+     "got": "You’ve finished **7 books**. You rated these **5/5**:\n\n- *Thinking, Fast and Slow* — Daniel Kahneman\n- *Project Hail Mary* — Andy Weir\n- *Shoe Dog* — Phil Knight",
+     "verdict": "partial"
+    }
+   ]
+  },
+  "sql (none)": {
+   "accuracy": 0.6667,
+   "by_category": {
+    "aggregation": 0.625,
+    "current": 0.357,
+    "forgotten": 1.0,
+    "history": 1.0,
+    "relationships": 0.5,
+    "semi_structured": 1.0,
+    "status": 1.0,
+    "temporal": 0.625,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 3134,
+   "failures": [
+    {
+     "q": "Where do I live?",
+     "gold": "Prague",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where does Eva (my partner) work?",
+     "gold": "Studio Kvadrat",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where does my sister Klára live?",
+     "gold": "Berlin",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Which climbing gym am I a member of, and what does it cost?",
+     "gold": "Smíchoff (1190 CZK/month)",
+     "got": "You’re a member of Smíchoff climbing gym. It costs 1,190 CZK per month; the membership ended after March 2026.",
+     "verdict": "partial"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "Deep Work",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on coffee in November 2025?",
+     "gold": "1,025 CZK (10 purchases)",
+     "got": "You spent 620 Kč on coffee in November 2025 (525 CZK + 95 Kč).",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on groceries in January 2026?",
+     "gold": "6,160 CZK (5 purchases)",
+     "got": "You spent 3,430 Kč on groceries in January 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in January 2026?",
+     "gold": "5",
+     "got": "4 times.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I last have dinner with Ondra?",
+     "gold": "Mar 28, 2026 at Eska",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When was my last dentist appointment, and with whom?",
+     "gold": "Nov 12, 2025 with Dr. Horák",
+     "got": "Your last dentist appointment was on February 18, 2026, at 08:30, with Dr. Horák.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Who led Nebula's seed round, and how much did we raise?",
+     "gold": "Northwind Ventures (Sarah Kim), $3M",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "db (low)": {
+   "accuracy": 0.7667,
+   "by_category": {
+    "aggregation": 0.875,
+    "current": 0.429,
+    "forgotten": 1.0,
+    "history": 0.5,
+    "relationships": 1.0,
+    "semi_structured": 1.0,
+    "status": 1.0,
+    "temporal": 0.75,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 16923,
+   "failures": [
+    {
+     "q": "What is my phone number?",
+     "gold": "+420 722 238 738",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What is Tom's phone number?",
+     "gold": "+420 777 999 000",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where does Eva (my partner) work?",
+     "gold": "Studio Kvadrat",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "Deep Work",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What was Tom's previous phone number?",
+     "gold": "+420 777 123 456",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on groceries in January 2026?",
+     "gold": "6,160 CZK (5 purchases)",
+     "got": "You spent **5,270 Kč** on groceries in January 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When was my last dentist appointment, and with whom?",
+     "gold": "Nov 12, 2025 with Dr. Horák",
+     "got": "I don’t know. The database lists a dentist appointment for February 18, 2026, but it was cancelled; the later planned appointment has no date. Both were with Dr. Horák.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "db+log (low)": {
+   "accuracy": 0.95,
+   "by_category": {
+    "aggregation": 1.0,
+    "current": 0.857,
+    "forgotten": 1.0,
+    "history": 1.0,
+    "relationships": 1.0,
+    "semi_structured": 1.0,
+    "status": 1.0,
+    "temporal": 0.875,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 27372,
+   "failures": [
+    {
+     "q": "Which climbing gym am I a member of, and what does it cost?",
+     "gold": "Smíchoff (1190 CZK/month)",
+     "got": "You were a member of Smíchoff climbing gym for 1,190 CZK per month. Your membership ended in March 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I last have dinner with Ondra?",
+     "gold": "Mar 28, 2026 at Eska",
+     "got": "March 28, 2026.",
+     "verdict": "partial"
+    }
+   ]
+  },
+  "sql (low)": {
+   "accuracy": 0.8,
+   "by_category": {
+    "aggregation": 0.688,
+    "current": 0.857,
+    "forgotten": 1.0,
+    "history": 1.0,
+    "relationships": 1.0,
+    "semi_structured": 1.0,
+    "status": 0.75,
+    "temporal": 0.5,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 3605,
+   "failures": [
+    {
+     "q": "What book am I reading right now?",
+     "gold": "Deep Work",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on coffee in November 2025?",
+     "gold": "1,025 CZK (10 purchases)",
+     "got": "You spent 620 Kč on coffee in November 2025.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on groceries in January 2026?",
+     "gold": "6,160 CZK (5 purchases)",
+     "got": "You spent 3,430 Kč on groceries in January 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on lunch in December 2025?",
+     "gold": "1,653 CZK (6 purchases)",
+     "got": "CZK 1,388 and Kč 265 (listed separately in your records).",
+     "verdict": "partial"
+    },
+    {
+     "q": "When and where is the next Nebula board meeting?",
+     "gold": "Thu Apr 02, 2026 at 16:00, 1 Mission St, San Francisco",
+     "got": "The next Nebula board meeting is November 6, 2025, at 4:00 PM at the Nebula office in Karlín, Prague.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When was my last dentist appointment, and with whom?",
+     "gold": "Nov 12, 2025 with Dr. Horák",
+     "got": "Your last dentist appointment was February 18, 2026, at 8:30 AM. No one was listed as accompanying you.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Did I renew my passport?",
+     "gold": "Yes, done on Dec 3, 2025",
+     "got": "Yes. Your “Renew passport” task was marked done on December 15, 2025.",
+     "verdict": "partial"
+    }
+   ]
+  },
+  "rdb (none)": {
+   "accuracy": 0.75,
+   "by_category": {
+    "aggregation": 0.625,
+    "current": 0.5,
+    "forgotten": 1.0,
+    "history": 1.0,
+    "relationships": 0.5,
+    "semi_structured": 1.0,
+    "status": 1.0,
+    "temporal": 1.0,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 15580,
+   "failures": [
+    {
+     "q": "Where do I live?",
+     "gold": "Prague",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where does my sister Klára live?",
+     "gold": "Berlin",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Which climbing gym am I a member of, and what does it cost?",
+     "gold": "Smíchoff (1190 CZK/month)",
+     "got": "You’re a member of Smíchoff climbing gym. It costs 1,190 CZK per month; the membership ended after March 2026.",
+     "verdict": "partial"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "Deep Work",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on groceries in January 2026?",
+     "gold": "6,160 CZK (5 purchases)",
+     "got": "You spent **3,430 CZK** on groceries in January 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on lunch in December 2025?",
+     "gold": "1,653 CZK (6 purchases)",
+     "got": "You spent **1,343 Kč** on lunch in December 2025.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in January 2026?",
+     "gold": "5",
+     "got": "You went climbing 4 times in January 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What's Lucas Meyer's email?",
+     "gold": "lucas@sequoia.com",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "rdb+log (none)": {
+   "accuracy": 0.9,
+   "by_category": {
+    "aggregation": 0.75,
+    "current": 0.857,
+    "forgotten": 1.0,
+    "history": 1.0,
+    "relationships": 1.0,
+    "semi_structured": 1.0,
+    "status": 1.0,
+    "temporal": 1.0,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 26029,
+   "failures": [
+    {
+     "q": "Which climbing gym am I a member of, and what does it cost?",
+     "gold": "Smíchoff (1190 CZK/month)",
+     "got": "You were a member of Smíchoff climbing gym for 1,190 CZK per month. Your membership ended after March 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on groceries in January 2026?",
+     "gold": "6,160 CZK (5 purchases)",
+     "got": "You spent **3,430 CZK** on groceries in January 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on lunch in December 2025?",
+     "gold": "1,653 CZK (6 purchases)",
+     "got": "You spent **1,343 CZK** on lunch in December 2025.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "rdb (low)": {
+   "accuracy": 0.9,
+   "by_category": {
+    "aggregation": 0.875,
+    "current": 0.857,
+    "forgotten": 1.0,
+    "history": 1.0,
+    "relationships": 1.0,
+    "semi_structured": 1.0,
+    "status": 0.75,
+    "temporal": 0.875,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 17348,
+   "failures": [
+    {
+     "q": "What book am I reading right now?",
+     "gold": "Deep Work",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on groceries in January 2026?",
+     "gold": "6,160 CZK (5 purchases)",
+     "got": "You spent **3,430 Kč** on groceries in January 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When was my last dentist appointment, and with whom?",
+     "gold": "Nov 12, 2025 with Dr. Horák",
+     "got": "Your last recorded dentist appointment was planned in San Francisco, with Dr. Horák. No date or time is listed.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Did I renew my passport?",
+     "gold": "Yes, done on Dec 3, 2025",
+     "got": "Yes. Your passport renewal task was marked done.",
+     "verdict": "partial"
+    }
+   ]
+  },
+  "rdb+log (low)": {
+   "accuracy": 0.95,
+   "by_category": {
+    "aggregation": 0.875,
+    "current": 0.929,
+    "forgotten": 1.0,
+    "history": 1.0,
+    "relationships": 1.0,
+    "semi_structured": 1.0,
+    "status": 1.0,
+    "temporal": 1.0,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 27797,
+   "failures": [
+    {
+     "q": "Which climbing gym am I a member of, and what does it cost?",
+     "gold": "Smíchoff (1190 CZK/month)",
+     "got": "You were a member of Smíchoff climbing gym. It cost 1,190 CZK per month; your membership ended after March 2026.",
+     "verdict": "partial"
+    },
+    {
+     "q": "How much did I spend on groceries in January 2026?",
+     "gold": "6,160 CZK (5 purchases)",
+     "got": "You spent **3,430 Kč** on expenses labeled groceries in January 2026.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "agent (none)": {
+   "accuracy": 0.8333,
+   "by_category": {
+    "aggregation": 0.625,
+    "current": 0.857,
+    "forgotten": 1.0,
+    "history": 1.0,
+    "relationships": 1.0,
+    "semi_structured": 1.0,
+    "status": 0.75,
+    "temporal": 0.875,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 8207,
+   "failures": [
+    {
+     "q": "Which climbing gym am I a member of, and what does it cost?",
+     "gold": "Smíchoff (1190 CZK/month)",
+     "got": "You had a monthly membership at Smíchoff climbing gym for 1,190 CZK. You ended it in March 2026; March was the last month.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on coffee in November 2025?",
+     "gold": "1,025 CZK (10 purchases)",
+     "got": "You spent **620 Kč** on coffee in November 2025 (6 transactions).",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on groceries in January 2026?",
+     "gold": "6,160 CZK (5 purchases)",
+     "got": "You spent 3,430 Kč on groceries in January 2026 (3 transactions).",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in January 2026?",
+     "gold": "5",
+     "got": "You went climbing 4 times in January 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When was my last dentist appointment, and with whom?",
+     "gold": "Nov 12, 2025 with Dr. Horák",
+     "got": "Your last dentist appointment was February 18, 2026, with Dr. Horák.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Did I renew my passport?",
+     "gold": "Yes, done on Dec 3, 2025",
+     "got": "Yes — your “Renew passport” task was marked done (due December 15, 2025).",
+     "verdict": "partial"
+    }
+   ]
+  },
+  "agent (low)": {
+   "accuracy": 0.9,
+   "by_category": {
+    "aggregation": 0.688,
+    "current": 1.0,
+    "forgotten": 1.0,
+    "history": 1.0,
+    "relationships": 1.0,
+    "semi_structured": 1.0,
+    "status": 0.75,
+    "temporal": 1.0,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 8019,
+   "failures": [
+    {
+     "q": "How much did I spend on coffee in November 2025?",
+     "gold": "1,025 CZK (10 purchases)",
+     "got": "You spent 620 Kč on coffee in November 2025.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on groceries in January 2026?",
+     "gold": "6,160 CZK (5 purchases)",
+     "got": "You spent 3,430 Kč on groceries in January 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on lunch in December 2025?",
+     "gold": "1,653 CZK (6 purchases)",
+     "got": "You spent 1,388 CZK and 265 Kč on lunch in December 2025 (6 transactions total).",
+     "verdict": "partial"
+    },
+    {
+     "q": "Did I renew my passport?",
+     "gold": "Yes, done on Dec 3, 2025",
+     "got": "Yes — your “Renew passport” task is marked done, with a due date of December 15, 2025.",
+     "verdict": "partial"
+    }
+   ]
+  },
+  "sql (v23/low)": {
+   "accuracy": 0.7667,
+   "by_category": {
+    "aggregation": 0.875,
+    "current": 0.5,
+    "forgotten": 1.0,
+    "history": 1.0,
+    "relationships": 0.5,
+    "semi_structured": 1.0,
+    "status": 0.75,
+    "temporal": 0.75,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 3787,
+   "failures": [
+    {
+     "q": "Where do I live?",
+     "gold": "Prague",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where does Eva (my partner) work?",
+     "gold": "Studio Kvadrat",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Which climbing gym am I a member of, and what does it cost?",
+     "gold": "Smíchoff (1190 CZK/month)",
+     "got": "You’re listed as a member of Smíchoff. It costs 1,190 CZK per month; the membership has ended.",
+     "verdict": "partial"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "Deep Work",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in January 2026?",
+     "gold": "5",
+     "got": "4 times.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I last have dinner with Ondra?",
+     "gold": "Mar 28, 2026 at Eska",
+     "got": "I don’t know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who led Nebula's seed round, and how much did we raise?",
+     "gold": "Northwind Ventures (Sarah Kim), $3M",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Did I renew my passport?",
+     "gold": "Yes, done on Dec 3, 2025",
+     "got": "Yes. “Renew passport” was marked done on December 15, 2025.",
+     "verdict": "partial"
+    }
+   ]
+  },
+  "agent (v23/low)": {
+   "accuracy": 0.8667,
+   "by_category": {
+    "aggregation": 0.75,
+    "current": 0.857,
+    "forgotten": 1.0,
+    "history": 1.0,
+    "relationships": 1.0,
+    "semi_structured": 1.0,
+    "status": 0.75,
+    "temporal": 0.875,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 10023,
+   "failures": [
+    {
+     "q": "What book am I reading right now?",
+     "gold": "Deep Work",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in January 2026?",
+     "gold": "5",
+     "got": "You went climbing 4 times in January 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What's my best 10k time?",
+     "gold": "53:21 (Mar 05, 2026)",
+     "got": "Your best 10k time is 54:20, on March 9, 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When was my last dentist appointment, and with whom?",
+     "gold": "Nov 12, 2025 with Dr. Horák",
+     "got": "Your last dentist appointment was February 18, 2026, with Dr. Horák.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Did I renew my passport?",
+     "gold": "Yes, done on Dec 3, 2025",
+     "got": "Yes—the “Renew passport” task is marked done. It was due December 15, 2025.",
+     "verdict": "partial"
+    }
+   ]
+  },
+  "rdb (v23/low)": {
+   "accuracy": 0.7833,
+   "by_category": {
+    "aggregation": 0.875,
+    "current": 0.429,
+    "forgotten": 1.0,
+    "history": 1.0,
+    "relationships": 1.0,
+    "semi_structured": 1.0,
+    "status": 1.0,
+    "temporal": 0.625,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 17202,
+   "failures": [
+    {
+     "q": "Where do I live?",
+     "gold": "Prague",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where does Eva (my partner) work?",
+     "gold": "Studio Kvadrat",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Which climbing gym am I a member of, and what does it cost?",
+     "gold": "Smíchoff (1190 CZK/month)",
+     "got": "Smíchoff; it cost 1,190 CZK per month. Your membership ended on March 31, 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "Deep Work",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in January 2026?",
+     "gold": "5",
+     "got": "You went climbing 4 times in January 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I last have dinner with Ondra?",
+     "gold": "Mar 28, 2026 at Eska",
+     "got": "Your last recorded dinner with Ondra was on March 11, 2026, at La Degustation.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When was my last dentist appointment, and with whom?",
+     "gold": "Nov 12, 2025 with Dr. Horák",
+     "got": "The latest listed dentist appointment was with Dr. Horák, but no date is recorded. I don't know when it was.",
+     "verdict": "partial"
+    }
+   ]
+  },
+  "rdb+log (v23/low)": {
+   "accuracy": 0.8667,
+   "by_category": {
+    "aggregation": 0.875,
+    "current": 0.714,
+    "forgotten": 1.0,
+    "history": 1.0,
+    "relationships": 1.0,
+    "semi_structured": 1.0,
+    "status": 1.0,
+    "temporal": 0.75,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 27651,
+   "failures": [
+    {
+     "q": "Which climbing gym am I a member of, and what does it cost?",
+     "gold": "Smíchoff (1190 CZK/month)",
+     "got": "You were a member of Smíchoff climbing gym for 1,190 CZK per month. The membership ended on March 31, 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "Deep Work",
+     "got": "I don’t know. The database lists *Deep Work* by Cal Newport as your new book, but doesn’t say you’ve started reading it.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in January 2026?",
+     "gold": "5",
+     "got": "You went climbing 4 times in January 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When was my last dentist appointment, and with whom?",
+     "gold": "Nov 12, 2025 with Dr. Horák",
+     "got": "I don’t know when your last dentist appointment was. The latest recorded appointment with Dr. Horák was scheduled for February 18, 2026, but you cancelled it.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "sql (v23/none)": {
+   "accuracy": 0.7,
+   "by_category": {
+    "aggregation": 0.625,
+    "current": 0.429,
+    "forgotten": 1.0,
+    "history": 1.0,
+    "relationships": 0.5,
+    "semi_structured": 1.0,
+    "status": 1.0,
+    "temporal": 0.75,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 2865,
+   "failures": [
+    {
+     "q": "Where do I live?",
+     "gold": "Prague",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where does Eva (my partner) work?",
+     "gold": "Studio Kvadrat",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Which climbing gym am I a member of, and what does it cost?",
+     "gold": "Smíchoff (1190 CZK/month)",
+     "got": "You were a member of Smíchoff climbing gym. The monthly membership cost 1,190 CZK; its status is ended.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "Deep Work",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on coffee in November 2025?",
+     "gold": "1,025 CZK (10 purchases)",
+     "got": "900 CZK",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on groceries in January 2026?",
+     "gold": "6,160 CZK (5 purchases)",
+     "got": "You spent 4,320 CZK on groceries in January 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in January 2026?",
+     "gold": "5",
+     "got": "3 times.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I last have dinner with Ondra?",
+     "gold": "Mar 28, 2026 at Eska",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who led Nebula's seed round, and how much did we raise?",
+     "gold": "Northwind Ventures (Sarah Kim), $3M",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "agent (v23/none)": {
+   "accuracy": 0.8833,
+   "by_category": {
+    "aggregation": 0.625,
+    "current": 1.0,
+    "forgotten": 1.0,
+    "history": 1.0,
+    "relationships": 1.0,
+    "semi_structured": 1.0,
+    "status": 0.75,
+    "temporal": 1.0,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 7215,
+   "failures": [
+    {
+     "q": "How much did I spend on coffee in November 2025?",
+     "gold": "1,025 CZK (10 purchases)",
+     "got": "You spent 900 CZK on coffee in November 2025.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on groceries in January 2026?",
+     "gold": "6,160 CZK (5 purchases)",
+     "got": "You spent 4,320 CZK on groceries in January 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in January 2026?",
+     "gold": "5",
+     "got": "You went climbing 3 times in January 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Did I renew my passport?",
+     "gold": "Yes, done on Dec 3, 2025",
+     "got": "Yes. Your “Renew passport” task was marked done (due December 15, 2025).",
+     "verdict": "partial"
+    }
+   ]
+  },
+  "rdb (v23/none)": {
+   "accuracy": 0.8333,
+   "by_category": {
+    "aggregation": 0.625,
+    "current": 0.714,
+    "forgotten": 1.0,
+    "history": 1.0,
+    "relationships": 1.0,
+    "semi_structured": 1.0,
+    "status": 1.0,
+    "temporal": 1.0,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 17820,
+   "failures": [
+    {
+     "q": "Where do I live?",
+     "gold": "Prague",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "Deep Work",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on coffee in November 2025?",
+     "gold": "1,025 CZK (10 purchases)",
+     "got": "You spent **900 CZK** on coffee in November 2025.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on groceries in January 2026?",
+     "gold": "6,160 CZK (5 purchases)",
+     "got": "You spent **4,320 CZK** on groceries in January 2026, based on entries with January dates.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in January 2026?",
+     "gold": "5",
+     "got": "3 documented climbs have January 2026 dates. There’s also one climbing entry with no date, so it can’t be assigned to January.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "rdb+log (v23/none)": {
+   "accuracy": 0.95,
+   "by_category": {
+    "aggregation": 0.812,
+    "current": 1.0,
+    "forgotten": 1.0,
+    "history": 1.0,
+    "relationships": 1.0,
+    "semi_structured": 1.0,
+    "status": 1.0,
+    "temporal": 1.0,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 28269,
+   "failures": [
+    {
+     "q": "How much did I spend on coffee in November 2025?",
+     "gold": "1,025 CZK (10 purchases)",
+     "got": "You spent **1,110 CZK** on coffee in November 2025.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many books have I finished, and which did I rate 5/5?",
+     "gold": "6 finished; 5/5: Thinking, Fast and Slow, Project Hail Mary, Shoe Dog",
+     "got": "You’ve finished **7 books**. You rated these **5/5**:\n\n- *Thinking, Fast and Slow*\n- *Project Hail Mary*\n- *Shoe Dog*",
+     "verdict": "partial"
+    }
+   ]
+  },
+  "mem0 top20": {
+   "accuracy": 0.8667,
+   "by_category": {
+    "aggregation": 0.625,
+    "current": 0.857,
+    "forgotten": 1.0,
+    "history": 1.0,
+    "relationships": 1.0,
+    "semi_structured": 1.0,
+    "status": 1.0,
+    "temporal": 1.0,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 898,
+   "retrieval_p50_s": 0.331,
+   "memories": 314,
+   "failures": [
+    {
+     "q": "Which climbing gym am I a member of, and what does it cost?",
+     "gold": "Smíchoff (1190 CZK/month)",
+     "got": "You were a member of Smíchoff climbing gym for 1,190 CZK per month. Your membership ended after March 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on coffee in November 2025?",
+     "gold": "1,025 CZK (10 purchases)",
+     "got": "You spent **620 CZK** on coffee in November 2025, including the November 3 purchase indicated by a coffee emoji.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on groceries in January 2026?",
+     "gold": "6,160 CZK (5 purchases)",
+     "got": "You spent 3,430 Kč on purchases explicitly recorded as groceries in January 2026. There was also an 890 Kč Albert shopping expense that wasn’t specifically identified as groceries.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many dinners out did I have with Eva in 2026?",
+     "gold": "2",
+     "got": "You had 1 dinner out with Eva in 2026.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "mem0 top100": {
+   "accuracy": 0.9,
+   "by_category": {
+    "aggregation": 0.75,
+    "current": 0.857,
+    "forgotten": 1.0,
+    "history": 1.0,
+    "relationships": 1.0,
+    "semi_structured": 1.0,
+    "status": 1.0,
+    "temporal": 1.0,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 3716,
+   "retrieval_p50_s": 0.289,
+   "memories": 314,
+   "failures": [
+    {
+     "q": "Which climbing gym am I a member of, and what does it cost?",
+     "gold": "Smíchoff (1190 CZK/month)",
+     "got": "You were a member of Smíchoff climbing gym, which cost 1,190 CZK per month. Your membership ended in March 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on groceries in January 2026?",
+     "gold": "6,160 CZK (5 purchases)",
+     "got": "You spent **4,320 Kč** on groceries in January 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many dinners out did I have with Eva in 2026?",
+     "gold": "2",
+     "got": "You had 1 confirmed dinner out with Eva in 2026: at Sasazu on March 7. There’s also a La Degustation meal with Eva recorded in January, but its date and whether it was dinner aren’t specified.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "mem0 all": {
+   "accuracy": 0.9,
+   "by_category": {
+    "aggregation": 0.875,
+    "current": 0.857,
+    "forgotten": 1.0,
+    "history": 1.0,
+    "relationships": 1.0,
+    "semi_structured": 1.0,
+    "status": 1.0,
+    "temporal": 0.75,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 11886,
+   "retrieval_p50_s": 0.0,
+   "memories": 314,
+   "failures": [
+    {
+     "q": "Which climbing gym am I a member of, and what does it cost?",
+     "gold": "Smíchoff (1190 CZK/month)",
+     "got": "Smíchoff climbing gym; it cost 1,190 CZK per month. You ended the membership, with March 2026 as the final month.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on groceries in January 2026?",
+     "gold": "6,160 CZK (5 purchases)",
+     "got": "You spent **2,540 Kč** on groceries in January 2026: 1,540 Kč at BILLA, 600 Kč at BILLA, and 1,290 Kč at Albert.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When was my last dentist appointment, and with whom?",
+     "gold": "Nov 12, 2025 with Dr. Horák",
+     "got": "I don’t know when your last dentist appointment was. Your appointment with Dr. Horák for February 18, 2026, was canceled.",
+     "verdict": "incorrect"
+    }
+   ]
+  }
+ },
+ "m12": {
+  "raw_log": {
+   "accuracy": 0.825,
+   "by_category": {
+    "aggregation": 0.786,
+    "current": 0.727,
+    "forgotten": 1.0,
+    "history": 0.875,
+    "relationships": 0.7,
+    "semi_structured": 1.0,
+    "status": 0.6,
+    "temporal": 1.0,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 21460,
+   "failures": [
+    {
+     "q": "What is my phone number?",
+     "gold": "+1 415 555 0199",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What is Tom's phone number?",
+     "gold": "+420 777 999 000",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "The Three-Body Problem",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What was my time on the first 10k run I ever logged?",
+     "gold": "54:48 (Oct 27, 2025)",
+     "got": "Your first logged 10k was 56:39, on November 13, 2025.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on groceries in May 2026?",
+     "gold": "$317.76 (4 purchases)",
+     "got": "You spent **$233.15** on groceries in May 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on lunch in August 2026?",
+     "gold": "$162.25 (8 purchases)",
+     "got": "You spent **$147.75** on lunch in August 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "You’ve spent **$143.50** at Blue Bottle.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What's Lucas Meyer's email?",
+     "gold": "lucas@sequoia.com",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who is Eva Green?",
+     "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+     "got": "Eva Green is Nebula’s designer. Her email is eva.green@nebula.ai.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Is the wedding venue booked?",
+     "gold": "No, still open (due Oct 31)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "db (none)": {
+   "accuracy": 0.65,
+   "by_category": {
+    "aggregation": 0.5,
+    "current": 0.5,
+    "forgotten": 1.0,
+    "history": 0.25,
+    "relationships": 0.9,
+    "semi_structured": 1.0,
+    "status": 0.6,
+    "temporal": 1.0,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 31333,
+   "failures": [
+    {
+     "q": "What is my phone number?",
+     "gold": "+1 415 555 0199",
+     "got": "I have two phone numbers on file: +420 722 238 738 and +1 415 555 0199 (main).",
+     "verdict": "partial"
+    },
+    {
+     "q": "What is Tom's phone number?",
+     "gold": "+420 777 999 000",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where does Eva (my partner) work?",
+     "gold": "Gensler",
+     "got": "Eva works as an architect at Studio Kvadrat and also has a job at Gensler.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where does my sister Klára live?",
+     "gold": "London",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "The Three-Body Problem",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What is David's US phone number?",
+     "gold": "+1 628 688 4995 (corrected from +1 628 688 4994)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What was my phone number before my current one?",
+     "gold": "+420 722 238 738",
+     "got": "I don’t know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What was Tom's previous phone number?",
+     "gold": "+420 777 123 456",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did I live before San Francisco?",
+     "gold": "Prague",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did Eva work before her current job?",
+     "gold": "Studio Kvadrat",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did Klára live before?",
+     "gold": "Berlin",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I move to San Francisco?",
+     "gold": "April 1, 2026 (flew UA 8843 on Mar 31)",
+     "got": "I don’t know. The database records your lease starting April 1, 2026, and a flight to San Francisco on March 31, 2026, but not your actual move date.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on groceries in May 2026?",
+     "gold": "$317.76 (4 purchases)",
+     "got": "You spent **$168.53** on groceries in May 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on lunch in August 2026?",
+     "gold": "$162.25 (8 purchases)",
+     "got": "You spent **$113.75** on lunch in August 2026, counting entries with August dates.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in January 2026?",
+     "gold": "5",
+     "got": "You went climbing 4 times in January 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in July 2026?",
+     "gold": "7",
+     "got": "You went climbing 4 times in July 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many dinners out did I have with Eva in 2026?",
+     "gold": "8",
+     "got": "You had **7 dinners out with Eva** in 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "You’ve spent **$111.50** at Blue Bottle.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times have I gone climbing since moving to SF?",
+     "gold": "39",
+     "got": "There are 30 recorded climbing outings at Mission Cliffs since your move to SF; 6 of those entries don’t have dates.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who is Eva Green?",
+     "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+     "got": "Eva Green is a designer at Nebula who started on March 16, 2026.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Is the wedding venue booked?",
+     "gold": "No, still open (due Oct 31)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "db+log (none)": {
+   "accuracy": 0.8917,
+   "by_category": {
+    "aggregation": 0.786,
+    "current": 0.909,
+    "forgotten": 1.0,
+    "history": 1.0,
+    "relationships": 0.9,
+    "semi_structured": 1.0,
+    "status": 0.8,
+    "temporal": 0.857,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 52711,
+   "failures": [
+    {
+     "q": "What book am I reading right now?",
+     "gold": "The Three-Body Problem",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on groceries in May 2026?",
+     "gold": "$317.76 (4 purchases)",
+     "got": "You spent **$253.14** on groceries in May 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "You’ve spent **$129.25** at Blue Bottle.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times have I gone climbing since moving to SF?",
+     "gold": "39",
+     "got": "You’ve gone climbing **30 times** since moving to SF.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When was my last dentist appointment, and with whom?",
+     "gold": "Jun 03, 2026 with Dr. Lee",
+     "got": "I don’t know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who is Eva Green?",
+     "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+     "got": "Eva Green is Nebula’s designer. She joined on March 16, 2026, and is a colleague—not your fiancée Eva.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "sql (none)": {
+   "accuracy": 0.525,
+   "by_category": {
+    "aggregation": 0.286,
+    "current": 0.455,
+    "forgotten": 0.5,
+    "history": 0.188,
+    "relationships": 0.7,
+    "semi_structured": 1.0,
+    "status": 0.5,
+    "temporal": 0.857,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 3240,
+   "failures": [
+    {
+     "q": "What is my phone number?",
+     "gold": "+1 415 555 0199",
+     "got": "I have two phone numbers: +420 722 238 738 and +1 415 555 0199.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Where do I live?",
+     "gold": "1450 Valencia St, San Francisco",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where does Eva (my partner) work?",
+     "gold": "Gensler",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where does my sister Klára live?",
+     "gold": "London",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "The Three-Body Problem",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What is my relationship with Eva now?",
+     "gold": "Engaged: she is my fiancée (since Jul 12, 2026)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Is Oscar Lind still at Nebula?",
+     "gold": "No, he left on Aug 15, 2026 to join Stripe as a PM",
+     "got": "No. Oscar Lind’s employment at Nebula ended on August 15, 2026.",
+     "verdict": "partial"
+    },
+    {
+     "q": "What was my phone number before my current one?",
+     "gold": "+420 722 238 738",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What was Tom's previous phone number?",
+     "gold": "+420 777 123 456",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did I live before San Francisco?",
+     "gold": "Prague",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did Eva work before her current job?",
+     "gold": "Studio Kvadrat",
+     "got": "Eva previously worked at Studio Kvadrat and Gensler.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Where did Klára live before?",
+     "gold": "Berlin",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I move to San Francisco?",
+     "gold": "April 1, 2026 (flew UA 8843 on Mar 31)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Which gym was I a member of in Prague?",
+     "gold": "Smíchoff (1190 CZK/month, ended March 2026)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on coffee in November 2025?",
+     "gold": "1,025 CZK (10 purchases)",
+     "got": "CZK 525 and Kč 95.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on groceries in May 2026?",
+     "gold": "$317.76 (4 purchases)",
+     "got": "You spent $168.53 on groceries in May 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on lunch in August 2026?",
+     "gold": "$162.25 (8 purchases)",
+     "got": "$113.75 USD.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in January 2026?",
+     "gold": "5",
+     "got": "4 times.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in July 2026?",
+     "gold": "7",
+     "got": "You went climbing 4 times in July 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many dinners out did I have with Eva in 2026?",
+     "gold": "8",
+     "got": "7 dinners.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much rent have I paid in total?",
+     "gold": "$19,200 (6 months × $3,200)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did the Lisbon trip cost for flights plus hotel?",
+     "gold": "$2,320 ($1,340 flights + $980 hotel)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "$143.50 USD",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times have I gone climbing since moving to SF?",
+     "gold": "39",
+     "got": "0 times.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I last have dinner with Ondra?",
+     "gold": "Mar 28, 2026 at Eska",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who led Nebula's seed round, and how much did we raise?",
+     "gold": "Northwind Ventures (Sarah Kim), $3M",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who is Eva Green?",
+     "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+     "got": "Eva Green is an Adam Zvada colleague who works as a designer at Nebula, starting March 16, 2026. Her email is eva.green@nebula.ai.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Did I renew my passport?",
+     "gold": "Yes, done on Dec 3, 2025",
+     "got": "Yes. Your passport renewal task is marked done, with a due date of December 15, 2025.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Is the wedding venue booked?",
+     "gold": "No, still open (due Oct 31)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What's Marco's phone number?",
+     "gold": "UNKNOWN: the user asked to forget it",
+     "got": "Marco’s phone number is +420 731 000 444.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "rdb (none)": {
+   "accuracy": 0.7,
+   "by_category": {
+    "aggregation": 0.5,
+    "current": 0.727,
+    "forgotten": 0.5,
+    "history": 0.625,
+    "relationships": 0.7,
+    "semi_structured": 1.0,
+    "status": 0.5,
+    "temporal": 1.0,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 31290,
+   "failures": [
+    {
+     "q": "Where does Eva (my partner) work?",
+     "gold": "Gensler",
+     "got": "Eva works as an architect at Studio Kvadrat.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where does my sister Klára live?",
+     "gold": "London",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "The Three-Body Problem",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did I live before San Francisco?",
+     "gold": "Prague",
+     "got": "I don’t know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did Eva work before her current job?",
+     "gold": "Studio Kvadrat",
+     "got": "Eva previously worked at Gensler.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did Klára live before?",
+     "gold": "Berlin",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on groceries in May 2026?",
+     "gold": "$317.76 (4 purchases)",
+     "got": "You spent **$168.53** on groceries in May 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on lunch in August 2026?",
+     "gold": "$162.25 (8 purchases)",
+     "got": "You spent **$113.75** on lunch in August 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in January 2026?",
+     "gold": "5",
+     "got": "You went climbing 4 times in January 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in July 2026?",
+     "gold": "7",
+     "got": "You went climbing 4 times in July 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many dinners out did I have with Eva in 2026?",
+     "gold": "8",
+     "got": "You had 7 dinners out with Eva in 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "You’ve spent **$123.25** at Blue Bottle.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times have I gone climbing since moving to SF?",
+     "gold": "39",
+     "got": "I have 17 recorded climbing sessions with dates since moving to SF. There are also undated climbing entries, so I can’t tell whether they happened after the move.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What's Lucas Meyer's email?",
+     "gold": "lucas@sequoia.com",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who is Eva Green?",
+     "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+     "got": "Eva Green is your Nebula colleague and designer. She joined on March 16, 2026.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Did I renew my passport?",
+     "gold": "Yes, done on Dec 3, 2025",
+     "got": "Yes—you renewed your passport; the task was marked done.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Is the wedding venue booked?",
+     "gold": "No, still open (due Oct 31)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What's Marco's phone number?",
+     "gold": "UNKNOWN: the user asked to forget it",
+     "got": "+420 731 000 444",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "rdb+log (none)": {
+   "accuracy": 0.85,
+   "by_category": {
+    "aggregation": 0.679,
+    "current": 0.818,
+    "forgotten": 0.5,
+    "history": 1.0,
+    "relationships": 0.9,
+    "semi_structured": 1.0,
+    "status": 0.8,
+    "temporal": 1.0,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 52668,
+   "failures": [
+    {
+     "q": "Where does Eva (my partner) work?",
+     "gold": "Gensler",
+     "got": "Eva works as an architect at Studio Kvadrat and has a job at Gensler in San Francisco.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "The Three-Body Problem",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on groceries in May 2026?",
+     "gold": "$317.76 (4 purchases)",
+     "got": "You spent **$253.14** on groceries in May 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many books have I finished, and which did I rate 5/5?",
+     "gold": "10 finished; 5/5: Thinking, Fast and Slow, Project Hail Mary, Shoe Dog, Dune",
+     "got": "You’ve finished 11 books. You rated these 5/5: *Thinking, Fast and Slow*, *Project Hail Mary*, *Shoe Dog*, and *Dune*.",
+     "verdict": "partial"
+    },
+    {
+     "q": "How many dinners out did I have with Eva in 2026?",
+     "gold": "8",
+     "got": "You had 7 dinners out with Eva in 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "You’ve spent **$123.25** at Blue Bottle.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times have I gone climbing since moving to SF?",
+     "gold": "39",
+     "got": "You’ve gone climbing 30 times since moving to SF.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who is Eva Green?",
+     "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+     "got": "Eva Green is a designer at Nebula who joined on March 16, 2026. She’s a Nebula colleague, distinct from your fiancée Eva.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don’t know. The database lists *The Three-Body Problem* but doesn’t say whether you finished it.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What's Marco's phone number?",
+     "gold": "UNKNOWN: the user asked to forget it",
+     "got": "Marco’s phone number is +420 731 000 444.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "db (low)": {
+   "accuracy": 0.7,
+   "by_category": {
+    "aggregation": 0.643,
+    "current": 0.682,
+    "forgotten": 1.0,
+    "history": 0.5,
+    "relationships": 0.7,
+    "semi_structured": 1.0,
+    "status": 0.8,
+    "temporal": 0.571,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 33731,
+   "failures": [
+    {
+     "q": "What is Tom's phone number?",
+     "gold": "+420 777 999 000",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where does Eva (my partner) work?",
+     "gold": "Gensler",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where does my sister Klára live?",
+     "gold": "London",
+     "got": "Klára lives in Berlin and London.",
+     "verdict": "partial"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "The Three-Body Problem",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What was my phone number before my current one?",
+     "gold": "+420 722 238 738",
+     "got": "Your previous phone number was +1 415 555 0199.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What was Tom's previous phone number?",
+     "gold": "+420 777 123 456",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did Eva work before her current job?",
+     "gold": "Studio Kvadrat",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I move to San Francisco?",
+     "gold": "April 1, 2026 (flew UA 8843 on Mar 31)",
+     "got": "I don’t know. The database shows you lived at 1450 Valencia St starting April 1, 2026, but it doesn’t say when you moved to San Francisco.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on groceries in May 2026?",
+     "gold": "$317.76 (4 purchases)",
+     "got": "You spent **$168.53** on groceries in May 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in July 2026?",
+     "gold": "7",
+     "got": "You went climbing 6 times in July 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many dinners out did I have with Eva in 2026?",
+     "gold": "8",
+     "got": "You had 6 dinners out with Eva in 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "You’ve spent **$123.25** at Blue Bottle.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times have I gone climbing since moving to SF?",
+     "gold": "39",
+     "got": "You’ve gone climbing **33 times** since moving to San Francisco on April 1, 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I last have dinner with Ondra?",
+     "gold": "Mar 28, 2026 at Eska",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When was my last dentist appointment, and with whom?",
+     "gold": "Jun 03, 2026 with Dr. Lee",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I get engaged?",
+     "gold": "July 12, 2026",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What's Lucas Meyer's email?",
+     "gold": "lucas@sequoia.com",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who is Eva Green?",
+     "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+     "got": "Eva Green is associated with Nebula as a designer. She had a planned move to San Francisco on May 20, 2026.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "db+log (low)": {
+   "accuracy": 0.875,
+   "by_category": {
+    "aggregation": 0.75,
+    "current": 0.818,
+    "forgotten": 1.0,
+    "history": 1.0,
+    "relationships": 0.9,
+    "semi_structured": 1.0,
+    "status": 0.7,
+    "temporal": 1.0,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 55109,
+   "failures": [
+    {
+     "q": "Where does Eva (my partner) work?",
+     "gold": "Gensler",
+     "got": "Eva works as an architect at Studio Kvadrat.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "The Three-Body Problem",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on groceries in May 2026?",
+     "gold": "$317.76 (4 purchases)",
+     "got": "You spent **$168.53** on groceries in May 2026: $99.03 at Trader Joe’s and $69.50 at Whole Foods.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many books have I finished, and which did I rate 5/5?",
+     "gold": "10 finished; 5/5: Thinking, Fast and Slow, Project Hail Mary, Shoe Dog, Dune",
+     "got": "You’ve finished **12 books**. You rated these **5/5**:\n\n- *Thinking, Fast and Slow*\n- *Project Hail Mary*\n- *Shoe Dog*\n- *Dune*",
+     "verdict": "partial"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "You’ve spent **$136.75** at Blue Bottle.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times have I gone climbing since moving to SF?",
+     "gold": "39",
+     "got": "You’ve gone climbing 20 times since moving to San Francisco, based on the workout log.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who is Eva Green?",
+     "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+     "got": "Eva Green is Nebula’s designer. She joined on March 16, 2026, and is not your fiancée Eva.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Is the wedding venue booked?",
+     "gold": "No, still open (due Oct 31)",
+     "got": "I don’t know. The database shows a reminder to book the wedding venue by October 31, but no booking confirmation.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "agent (none)": {
+   "accuracy": 0.7083,
+   "by_category": {
+    "aggregation": 0.429,
+    "current": 0.545,
+    "forgotten": 0.5,
+    "history": 0.938,
+    "relationships": 0.9,
+    "semi_structured": 1.0,
+    "status": 0.5,
+    "temporal": 1.0,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 8648,
+   "failures": [
+    {
+     "q": "What is my phone number?",
+     "gold": "+1 415 555 0199",
+     "got": "Your phone numbers on record are +420 722 238 738 and +1 415 555 0199.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Where do I live?",
+     "gold": "1450 Valencia St, San Francisco",
+     "got": "You said you live in Prague.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where does Eva (my partner) work?",
+     "gold": "Gensler",
+     "got": "Eva is listed as an architect at Studio Kvadrat and also as having a job at Gensler. The database doesn’t say which one is her current workplace.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Which climbing gym am I a member of, and what does it cost?",
+     "gold": "Mission Cliffs ($110/month)",
+     "got": "Your monthly membership is at Smíchoff climbing gym, and it costs 1,190 CZK per month.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "The Three-Body Problem",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Is Oscar Lind still at Nebula?",
+     "gold": "No, he left on Aug 15, 2026 to join Stripe as a PM",
+     "got": "No. Oscar Lind’s employment at Nebula ended on August 15, 2026.",
+     "verdict": "partial"
+    },
+    {
+     "q": "When did I move to San Francisco?",
+     "gold": "April 1, 2026 (flew UA 8843 on Mar 31)",
+     "got": "I don’t know the exact move date. Your lease started April 1, 2026; the first San Francisco expense in the records is April 11.",
+     "verdict": "partial"
+    },
+    {
+     "q": "How much did I spend on coffee in November 2025?",
+     "gold": "1,025 CZK (10 purchases)",
+     "got": "You spent 620 Kč on coffee in November 2025 (525 CZK + 95 Kč).",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on groceries in May 2026?",
+     "gold": "$317.76 (4 purchases)",
+     "got": "You spent **$168.53** on groceries in May 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on lunch in August 2026?",
+     "gold": "$162.25 (8 purchases)",
+     "got": "You spent $113.75 on lunch in August 2026 (6 transactions).",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in January 2026?",
+     "gold": "5",
+     "got": "You went climbing 4 times in January 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in July 2026?",
+     "gold": "7",
+     "got": "You went climbing 4 times in July 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many dinners out did I have with Eva in 2026?",
+     "gold": "8",
+     "got": "You had 7 dinners out with Eva in 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "You’ve spent **$143.50** at Blue Bottle across **26 transactions**.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times have I gone climbing since moving to SF?",
+     "gold": "39",
+     "got": "You’ve gone climbing 23 times since moving to San Francisco on April 1, 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who is Eva Green?",
+     "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+     "got": "Eva Green is Adam’s Nebula colleague.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Did I renew my passport?",
+     "gold": "Yes, done on Dec 3, 2025",
+     "got": "Yes — your “Renew passport” task is marked done (due December 15, 2025).",
+     "verdict": "partial"
+    },
+    {
+     "q": "Is the wedding venue booked?",
+     "gold": "No, still open (due Oct 31)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What's Marco's phone number?",
+     "gold": "UNKNOWN: the user asked to forget it",
+     "got": "+420 731 000 444",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "sql (low)": {
+   "accuracy": 0.6167,
+   "by_category": {
+    "aggregation": 0.5,
+    "current": 0.5,
+    "forgotten": 0.5,
+    "history": 0.625,
+    "relationships": 0.6,
+    "semi_structured": 1.0,
+    "status": 0.6,
+    "temporal": 0.643,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 3788,
+   "failures": [
+    {
+     "q": "What is my phone number?",
+     "gold": "+1 415 555 0199",
+     "got": "+420 722 238 738; +1 415 555 0199",
+     "verdict": "partial"
+    },
+    {
+     "q": "Where does Eva (my partner) work?",
+     "gold": "Gensler",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where does my sister Klára live?",
+     "gold": "London",
+     "got": "Berlin and London.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Which climbing gym am I a member of, and what does it cost?",
+     "gold": "Mission Cliffs ($110/month)",
+     "got": "You’re a member of **Smíchoff climbing gym**, and it costs **1,190 CZK per month**.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "The Three-Body Problem",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Is Oscar Lind still at Nebula?",
+     "gold": "No, he left on Aug 15, 2026 to join Stripe as a PM",
+     "got": "The records are mixed: one lists Oscar as a product manager at Nebula with no end date, while another says his membership ended on August 15, 2026. I can’t confirm whether he’s still there.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What was my phone number before my current one?",
+     "gold": "+420 722 238 738",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did Klára live before?",
+     "gold": "Berlin",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I move to San Francisco?",
+     "gold": "April 1, 2026 (flew UA 8843 on Mar 31)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on coffee in November 2025?",
+     "gold": "1,025 CZK (10 purchases)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on groceries in May 2026?",
+     "gold": "$317.76 (4 purchases)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in July 2026?",
+     "gold": "7",
+     "got": "You went climbing 6 times in July 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many dinners out did I have with Eva in 2026?",
+     "gold": "8",
+     "got": "7 dinners.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did the Lisbon trip cost for flights plus hotel?",
+     "gold": "$2,320 ($1,340 flights + $980 hotel)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "$136.75 USD",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times have I gone climbing since moving to SF?",
+     "gold": "39",
+     "got": "You’ve gone climbing 33 times since moving to SF.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I first meet Lucas Meyer, and where?",
+     "gold": "Nov 5, 2025 at Web Summit",
+     "got": "You first met Lucas Meyer on November 5, 2025. I don’t know where.",
+     "verdict": "partial"
+    },
+    {
+     "q": "When did I get engaged?",
+     "gold": "July 12, 2026",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When was the call with Lucas Meyer?",
+     "gold": "Wed Jan 21, 2026 at 14:00 (moved from Jan 14 at 10:00)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who led Nebula's seed round, and how much did we raise?",
+     "gold": "Northwind Ventures (Sarah Kim), $3M",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who is Eva Green?",
+     "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+     "got": "Eva Green is listed in your database, but her relationship to you is not specified.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Is the wedding venue booked?",
+     "gold": "No, still open (due Oct 31)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What's Marco's phone number?",
+     "gold": "UNKNOWN: the user asked to forget it",
+     "got": "Marco's phone number is +420 731 000 444.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "agent (low)": {
+   "accuracy": 0.75,
+   "by_category": {
+    "aggregation": 0.571,
+    "current": 0.727,
+    "forgotten": 0.5,
+    "history": 0.75,
+    "relationships": 0.9,
+    "semi_structured": 1.0,
+    "status": 0.5,
+    "temporal": 1.0,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 9575,
+   "failures": [
+    {
+     "q": "Where does my sister Klára live?",
+     "gold": "London",
+     "got": "Klára’s residence records list both Berlin and London.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Which climbing gym am I a member of, and what does it cost?",
+     "gold": "Mission Cliffs ($110/month)",
+     "got": "You’re a member of Smíchoff climbing gym. It costs 1,190 CZK per month.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "The Three-Body Problem",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did Eva work before her current job?",
+     "gold": "Studio Kvadrat",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did Klára live before?",
+     "gold": "Berlin",
+     "got": "Klára lived in Prague before.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on coffee in November 2025?",
+     "gold": "1,025 CZK (10 purchases)",
+     "got": "You spent 620 Kč on coffee in November 2025 across 6 purchases.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on groceries in May 2026?",
+     "gold": "$317.76 (4 purchases)",
+     "got": "You spent **$168.53** on groceries in May 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in July 2026?",
+     "gold": "7",
+     "got": "You went climbing 6 times in July 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many dinners out did I have with Eva in 2026?",
+     "gold": "8",
+     "got": "You had 7 dinners out with Eva in 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "You’ve spent **$136.75** at Blue Bottle across **25 transactions**.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times have I gone climbing since moving to SF?",
+     "gold": "39",
+     "got": "You’ve gone climbing 33 times since moving to San Francisco on April 1, 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who is Eva Green?",
+     "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+     "got": "Eva Green is listed in your database as a person, but there’s no other information recorded about her. She’s distinct from Eva, your fiancée.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Did I renew my passport?",
+     "gold": "Yes, done on Dec 3, 2025",
+     "got": "Yes. Your “Renew passport” task is marked done; it was due December 15, 2025.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Is the wedding venue booked?",
+     "gold": "No, still open (due Oct 31)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What's Marco's phone number?",
+     "gold": "UNKNOWN: the user asked to forget it",
+     "got": "+420 731 000 444",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "sql (v23/low)": {
+   "accuracy": 0.75,
+   "by_category": {
+    "aggregation": 0.679,
+    "current": 0.636,
+    "forgotten": 0.5,
+    "history": 0.625,
+    "relationships": 0.7,
+    "semi_structured": 1.0,
+    "status": 0.8,
+    "temporal": 1.0,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 4068,
+   "failures": [
+    {
+     "q": "What is my phone number?",
+     "gold": "+1 415 555 0199",
+     "got": "+420 722 238 738; +1 415 555 0199",
+     "verdict": "partial"
+    },
+    {
+     "q": "Where do I live?",
+     "gold": "1450 Valencia St, San Francisco",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where does Eva (my partner) work?",
+     "gold": "Gensler",
+     "got": "Eva is listed with Studio Kvadrat and Gensler.",
+     "verdict": "partial"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "The Three-Body Problem",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Is Oscar Lind still at Nebula?",
+     "gold": "No, he left on Aug 15, 2026 to join Stripe as a PM",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What was my phone number before my current one?",
+     "gold": "+420 722 238 738",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did I live before San Francisco?",
+     "gold": "Prague",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did Eva work before her current job?",
+     "gold": "Studio Kvadrat",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in January 2026?",
+     "gold": "5",
+     "got": "You went climbing 4 times in January 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many dinners out did I have with Eva in 2026?",
+     "gold": "8",
+     "got": "7 dinners.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did the Lisbon trip cost for flights plus hotel?",
+     "gold": "$2,320 ($1,340 flights + $980 hotel)",
+     "got": "I don't know. The hotel cost $980, but no flight cost is recorded.",
+     "verdict": "partial"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "$143.50 USD.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times have I gone climbing since moving to SF?",
+     "gold": "39",
+     "got": "38 times.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who led Nebula's seed round, and how much did we raise?",
+     "gold": "Northwind Ventures (Sarah Kim), $3M",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who is Eva Green?",
+     "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+     "got": "Eva Green is a designer at Nebula. Her email is eva.green@nebula.ai.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What's Marco's phone number?",
+     "gold": "UNKNOWN: the user asked to forget it",
+     "got": "Marco's phone number is +420 731 000 444.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "sol-sql (v23/low:sleep)": {
+   "accuracy": 0.7583,
+   "by_category": {
+    "aggregation": 0.857,
+    "current": 0.591,
+    "forgotten": 0.5,
+    "history": 0.625,
+    "relationships": 0.7,
+    "semi_structured": 1.0,
+    "status": 0.8,
+    "temporal": 0.786,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 4150,
+   "failures": [
+    {
+     "q": "What is my phone number?",
+     "gold": "+1 415 555 0199",
+     "got": "+1 415 555 0199 or +420 722 238 738",
+     "verdict": "partial"
+    },
+    {
+     "q": "Where do I live?",
+     "gold": "1450 Valencia St, San Francisco",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where does Eva (my partner) work?",
+     "gold": "Gensler",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "The Three-Body Problem",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Is Oscar Lind still at Nebula?",
+     "gold": "No, he left on Aug 15, 2026 to join Stripe as a PM",
+     "got": "Yes. Oscar Lind is listed as a product manager at Nebula.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What was my phone number before my current one?",
+     "gold": "+420 722 238 738",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did I live before San Francisco?",
+     "gold": "Prague",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did Eva work before her current job?",
+     "gold": "Studio Kvadrat",
+     "got": "I don’t know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many dinners out did I have with Eva in 2026?",
+     "gold": "8",
+     "got": "7.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "You’ve spent $143.50 at Blue Bottle.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I last have dinner with Ondra?",
+     "gold": "Mar 28, 2026 at Eska",
+     "got": "March 28, 2026.",
+     "verdict": "partial"
+    },
+    {
+     "q": "When did I get engaged?",
+     "gold": "July 12, 2026",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who led Nebula's seed round, and how much did we raise?",
+     "gold": "Northwind Ventures (Sarah Kim), $3M",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who is Eva Green?",
+     "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+     "got": "Eva Green is a designer at Nebula. Her email is eva.green@nebula.ai.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What's Marco's phone number?",
+     "gold": "UNKNOWN: the user asked to forget it",
+     "got": "Marco’s phone number is +420 731 000 444.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "sol-agent (v23/low:sleep)": {
+   "accuracy": 0.925,
+   "by_category": {
+    "aggregation": 0.929,
+    "current": 0.955,
+    "forgotten": 0.5,
+    "history": 1.0,
+    "relationships": 0.9,
+    "semi_structured": 1.0,
+    "status": 0.7,
+    "temporal": 1.0,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 8975,
+   "failures": [
+    {
+     "q": "Where do I live?",
+     "gold": "1450 Valencia St, San Francisco",
+     "got": "You live in San Francisco, California.",
+     "verdict": "partial"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "You’ve spent $143.50 at Blue Bottle across 26 transactions.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who is Eva Green?",
+     "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+     "got": "Eva Green is a designer at Nebula.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Did I renew my passport?",
+     "gold": "Yes, done on Dec 3, 2025",
+     "got": "Yes — your “Renew passport” task is marked done. It was due December 15, 2025.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What's Marco's phone number?",
+     "gold": "UNKNOWN: the user asked to forget it",
+     "got": "+420 731 000 444",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "sol-sql (v23/gpt-6-sol/low)": {
+   "accuracy": 0.75,
+   "by_category": {
+    "aggregation": 0.714,
+    "current": 0.636,
+    "forgotten": 0.5,
+    "history": 0.75,
+    "relationships": 0.9,
+    "semi_structured": 1.0,
+    "status": 0.5,
+    "temporal": 0.857,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 5812,
+   "failures": [
+    {
+     "q": "What is my phone number?",
+     "gold": "+1 415 555 0199",
+     "got": "+1 415 555 0199; +420 722 238 738",
+     "verdict": "partial"
+    },
+    {
+     "q": "Where does Eva (my partner) work?",
+     "gold": "Gensler",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "The Three-Body Problem",
+     "got": "Your database lists three books that aren’t marked finished: *Sapiens*, *Dune*, and *The Three-Body Problem*. It doesn’t say which one you’re reading right now.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What is my relationship with Eva now?",
+     "gold": "Engaged: she is my fiancée (since Jul 12, 2026)",
+     "got": "Your database lists two relationships with Eva: girlfriend and engaged (starting July 12, 2026). I can’t tell which is current.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Is Oscar Lind still at Nebula?",
+     "gold": "No, he left on Aug 15, 2026 to join Stripe as a PM",
+     "got": "No. Oscar Lind left Nebula on August 15, 2026.",
+     "verdict": "partial"
+    },
+    {
+     "q": "What was my phone number before my current one?",
+     "gold": "+420 722 238 738",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did Eva work before her current job?",
+     "gold": "Studio Kvadrat",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in July 2026?",
+     "gold": "7",
+     "got": "You went climbing 6 times in July 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many dinners out did I have with Eva in 2026?",
+     "gold": "8",
+     "got": "6 dinners.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "$143.50 USD",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times have I gone climbing since moving to SF?",
+     "gold": "39",
+     "got": "You’ve gone climbing 36 times since moving to SF.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I first meet Lucas Meyer, and where?",
+     "gold": "Nov 5, 2025 at Web Summit",
+     "got": "I don’t know. The record lists the meeting subject as “Web Summit,” but has no date or location.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who is Eva Green?",
+     "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+     "got": "Eva Green is a designer at Nebula.",
+     "verdict": "partial"
+    },
+    {
+     "q": "What happened to the February dentist appointment?",
+     "gold": "Cancelled (it was Feb 18 with Dr. Horák)",
+     "got": "The February 18, 2026 dentist appointment with Dr. Lee was deleted on February 16, 2026.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Is the wedding venue booked?",
+     "gold": "No, still open (due Oct 31)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What's Marco's phone number?",
+     "gold": "UNKNOWN: the user asked to forget it",
+     "got": "Marco’s phone number is +420 731 000 444.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "sol-agent (v23/gpt-6-sol/low)": {
+   "accuracy": 0.875,
+   "by_category": {
+    "aggregation": 0.786,
+    "current": 0.955,
+    "forgotten": 0.5,
+    "history": 0.875,
+    "relationships": 0.9,
+    "semi_structured": 1.0,
+    "status": 0.7,
+    "temporal": 1.0,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 12412,
+   "failures": [
+    {
+     "q": "Is Oscar Lind still at Nebula?",
+     "gold": "No, he left on Aug 15, 2026 to join Stripe as a PM",
+     "got": "No. Oscar Lind left Nebula on August 15, 2026. He was a product manager there.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Where did Eva work before her current job?",
+     "gold": "Studio Kvadrat",
+     "got": "Eva worked at Gensler before her current job at Studio Kvadrat.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in July 2026?",
+     "gold": "7",
+     "got": "You went climbing 6 times in July 2026. One additional session was planned.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "You’ve spent $143.50 at Blue Bottle in total (26 purchases).",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times have I gone climbing since moving to SF?",
+     "gold": "39",
+     "got": "You’ve gone climbing 36 times since moving to San Francisco on April 1, 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who is Eva Green?",
+     "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+     "got": "Eva Green is a designer at Nebula.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Did I renew my passport?",
+     "gold": "Yes, done on Dec 3, 2025",
+     "got": "Yes. Your “Renew passport” task is marked done; it was due December 15, 2025.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What's Marco's phone number?",
+     "gold": "UNKNOWN: the user asked to forget it",
+     "got": "Marco’s phone number is +420 731 000 444.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "mem0 top20": {
+   "accuracy": 0.7917,
+   "by_category": {
+    "aggregation": 0.393,
+    "current": 1.0,
+    "forgotten": 1.0,
+    "history": 0.75,
+    "relationships": 1.0,
+    "semi_structured": 1.0,
+    "status": 0.6,
+    "temporal": 1.0,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 925,
+   "retrieval_p50_s": 0.347,
+   "memories": 632,
+   "failures": [
+    {
+     "q": "Where did I live before San Francisco?",
+     "gold": "Prague",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did Eva work before her current job?",
+     "gold": "Studio Kvadrat",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on coffee in November 2025?",
+     "gold": "1,025 CZK (10 purchases)",
+     "got": "You spent **535 CZK** on coffee in November 2025.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on groceries in May 2026?",
+     "gold": "$317.76 (4 purchases)",
+     "got": "You spent **$168.53** on groceries in May 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on rides (Uber/Bolt) in June 2026?",
+     "gold": "$155.98 (7 purchases)",
+     "got": "You spent **$80.56 USD** on Uber rides in June 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on lunch in August 2026?",
+     "gold": "$162.25 (8 purchases)",
+     "got": "You spent **$135.75** on lunches with dates specified in August. There’s also a **$26.50** lunch recorded on August 13, but its lunch date wasn’t specified, so I can’t confirm it was in August.",
+     "verdict": "partial"
+    },
+    {
+     "q": "How many times did I go climbing in January 2026?",
+     "gold": "5",
+     "got": "You went climbing **4 times** in January 2026: January 6, 9, 13, 16, and 20.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in July 2026?",
+     "gold": "7",
+     "got": "You went climbing 5 times in July 2026. The July 28 note doesn’t confirm that the outing happened.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many dinners out did I have with Eva in 2026?",
+     "gold": "8",
+     "got": "You had 6 dinners out with Eva in 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "You’ve spent **$113.00** at Blue Bottle, counting all listed purchases.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times have I gone climbing since moving to SF?",
+     "gold": "39",
+     "got": "You’ve gone climbing 20 times since moving to SF.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Is the wedding venue booked?",
+     "gold": "No, still open (due Oct 31)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "mem0 top100": {
+   "accuracy": 0.8417,
+   "by_category": {
+    "aggregation": 0.607,
+    "current": 0.909,
+    "forgotten": 1.0,
+    "history": 1.0,
+    "relationships": 1.0,
+    "semi_structured": 1.0,
+    "status": 0.4,
+    "temporal": 1.0,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 4025,
+   "retrieval_p50_s": 0.318,
+   "memories": 632,
+   "failures": [
+    {
+     "q": "What book am I reading right now?",
+     "gold": "The Three-Body Problem",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on rides (Uber/Bolt) in June 2026?",
+     "gold": "$155.98 (7 purchases)",
+     "got": "You spent **$125.01** on rides with confirmed dates in June 2026: **$125.01 on Uber** and **$0 on Bolt**. Two Uber fares recorded in June had no ride date specified, so I haven’t included them.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on lunch in August 2026?",
+     "gold": "$162.25 (8 purchases)",
+     "got": "You spent **$135.75** on lunches with confirmed dates in August 2026. There’s also a $26.50 lunch entry recorded on August 13 with no lunch date specified, so I didn’t include it.",
+     "verdict": "partial"
+    },
+    {
+     "q": "How many times did I go climbing in July 2026?",
+     "gold": "7",
+     "got": "You went climbing **5 times** in July 2026: July 3, 7, 14, 17, and 21.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many dinners out did I have with Eva in 2026?",
+     "gold": "8",
+     "got": "You had **6 dated dinners out with Eva in 2026**. I didn’t count the dinner whose date wasn’t specified.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "You’ve spent **$145.75** at Blue Bottle, based on the recorded purchases.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times have I gone climbing since moving to SF?",
+     "gold": "39",
+     "got": "You’ve gone climbing **25 times** since moving to San Francisco, counting the outings recorded as completed.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Do I still have to get my SF driver's license?",
+     "gold": "Yes, still open (was due Jun 30)",
+     "got": "I don’t know. The database says you wanted a reminder to get your San Francisco driver’s license by June 30, 2026, but doesn’t say whether you got it.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Is the wedding venue booked?",
+     "gold": "No, still open (due Oct 31)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "mem0 all": {
+   "accuracy": 0.8,
+   "by_category": {
+    "aggregation": 0.571,
+    "current": 0.909,
+    "forgotten": 1.0,
+    "history": 0.875,
+    "relationships": 1.0,
+    "semi_structured": 1.0,
+    "status": 0.4,
+    "temporal": 0.857,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 24236,
+   "retrieval_p50_s": 0.0,
+   "memories": 632,
+   "failures": [
+    {
+     "q": "What book am I reading right now?",
+     "gold": "The Three-Body Problem",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did Eva work before her current job?",
+     "gold": "Studio Kvadrat",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on rides (Uber/Bolt) in June 2026?",
+     "gold": "$155.98 (7 purchases)",
+     "got": "You spent **$125.01** on rides in June 2026 (Uber fares with dates specified).",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on lunch in August 2026?",
+     "gold": "$162.25 (8 purchases)",
+     "got": "You spent **$135.75** on lunch in August 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in July 2026?",
+     "gold": "7",
+     "got": "You went climbing 5 times in July 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many dinners out did I have with Eva in 2026?",
+     "gold": "8",
+     "got": "You had **5 documented dinners out with Eva in 2026**: May 30, June 17, August 15, August 26, and September 9.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "You’ve spent **$93.50** at Blue Bottle.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times have I gone climbing since moving to SF?",
+     "gold": "39",
+     "got": "I have 25 recorded climbing outings since moving to San Francisco, counting the April 10 entry even though it didn’t specify the outing date.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When was my last dentist appointment, and with whom?",
+     "gold": "Jun 03, 2026 with Dr. Lee",
+     "got": "Your last recorded dentist appointment was with Dr. Horák on November 12, 2025, at 9:00.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Do I still have to get my SF driver's license?",
+     "gold": "Yes, still open (was due Jun 30)",
+     "got": "I don’t know. I have a record that you wanted a reminder to get a San Francisco driver’s license by June 30, 2026, but no record of whether you got it.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Is the wedding venue booked?",
+     "gold": "No, still open (due Oct 31)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "mem0 top100 (Sol answers)": {
+   "accuracy": 0.8833,
+   "by_category": {
+    "aggregation": 0.714,
+    "current": 1.0,
+    "forgotten": 1.0,
+    "history": 1.0,
+    "relationships": 0.9,
+    "semi_structured": 1.0,
+    "status": 0.6,
+    "temporal": 0.929,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 4025,
+   "retrieval_p50_s": 0.347,
+   "memories": 632,
+   "failures": [
+    {
+     "q": "How many times did I go climbing in July 2026?",
+     "gold": "7",
+     "got": "You went climbing **5 confirmed times** in July 2026: July 3, 7, 14, 17, and 21.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many dinners out did I have with Eva in 2026?",
+     "gold": "8",
+     "got": "You had **7 confirmed dinners out with Eva in 2026**.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "You’ve spent **$139.00** at Blue Bottle across the purchases in your records.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times have I gone climbing since moving to SF?",
+     "gold": "39",
+     "got": "You’ve gone climbing **25 confirmed times** since moving to San Francisco on April 1, 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I first meet Lucas Meyer, and where?",
+     "gold": "Nov 5, 2025 at Web Summit",
+     "got": "You first met Lucas Meyer at Web Summit. I don't know the exact date.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Who is Eva Green?",
+     "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+     "got": "Eva Green is a designer at Adam’s company, Nebula. Her email is eva.green@nebula.ai. She is not Adam’s fiancée, Eva.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Is the wedding venue booked?",
+     "gold": "No, still open (due Oct 31)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "agent (v23/low)": {
+   "accuracy": 0.8167,
+   "by_category": {
+    "aggregation": 0.714,
+    "current": 0.773,
+    "forgotten": 0.5,
+    "history": 0.75,
+    "relationships": 1.0,
+    "semi_structured": 1.0,
+    "status": 0.7,
+    "temporal": 1.0,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 10642,
+   "failures": [
+    {
+     "q": "Where do I live?",
+     "gold": "1450 Valencia St, San Francisco",
+     "got": "You live in Prague.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where does Eva (my partner) work?",
+     "gold": "Gensler",
+     "got": "Eva is listed as an employee at Gensler and as an architect at Studio Kvadrat.",
+     "verdict": "partial"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "The Three-Body Problem",
+     "got": "Atomic Habits by James Clear — you said you started reading it on June 5, 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did I live before San Francisco?",
+     "gold": "Prague",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did Eva work before her current job?",
+     "gold": "Studio Kvadrat",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in January 2026?",
+     "gold": "5",
+     "got": "You went climbing 4 times in January 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many dinners out did I have with Eva in 2026?",
+     "gold": "8",
+     "got": "You had 7 dinners out with Eva in 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "You’ve spent **$143.50** at Blue Bottle across 26 transactions.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times have I gone climbing since moving to SF?",
+     "gold": "39",
+     "got": "You’ve gone climbing 38 times since moving to San Francisco on April 1, 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Did I renew my passport?",
+     "gold": "Yes, done on Dec 3, 2025",
+     "got": "Yes. Your “Renew passport” task is marked done (due December 15, 2025).",
+     "verdict": "partial"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What's Marco's phone number?",
+     "gold": "UNKNOWN: the user asked to forget it",
+     "got": "+420 731 000 444",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "sql (v23/none)": {
+   "accuracy": 0.6417,
+   "by_category": {
+    "aggregation": 0.5,
+    "current": 0.591,
+    "forgotten": 0.5,
+    "history": 0.562,
+    "relationships": 0.9,
+    "semi_structured": 1.0,
+    "status": 0.6,
+    "temporal": 0.571,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 2900,
+   "failures": [
+    {
+     "q": "What is my phone number?",
+     "gold": "+1 415 555 0199",
+     "got": "+420 722 238 738 and +1 415 555 0199.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Where does Eva (my partner) work?",
+     "gold": "Gensler",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Which climbing gym am I a member of, and what does it cost?",
+     "gold": "Mission Cliffs ($110/month)",
+     "got": "You’re a member of Smíchoff climbing gym. It costs 1,190 CZK per month; the membership ended on March 31, 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "The Three-Body Problem",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Is Oscar Lind still at Nebula?",
+     "gold": "No, he left on Aug 15, 2026 to join Stripe as a PM",
+     "got": "I don’t know. The data shows Oscar Lind started as a product manager at Nebula on January 12, 2026, but doesn’t confirm whether he’s still there.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What was my phone number before my current one?",
+     "gold": "+420 722 238 738",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did I live before San Francisco?",
+     "gold": "Prague",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did Eva work before her current job?",
+     "gold": "Studio Kvadrat",
+     "got": "Eva’s records list Studio Kvadrat and Gensler before her current role at Nebula. The data doesn’t specify which came immediately before.",
+     "verdict": "partial"
+    },
+    {
+     "q": "When did I move to San Francisco?",
+     "gold": "April 1, 2026 (flew UA 8843 on Mar 31)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on coffee in November 2025?",
+     "gold": "1,025 CZK (10 purchases)",
+     "got": "900 CZK",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on lunch in August 2026?",
+     "gold": "$162.25 (8 purchases)",
+     "got": "You spent $135.75 on lunch in August 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in January 2026?",
+     "gold": "5",
+     "got": "3 times.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in July 2026?",
+     "gold": "7",
+     "got": "You went climbing 5 times in July 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did the Lisbon trip cost for flights plus hotel?",
+     "gold": "$2,320 ($1,340 flights + $980 hotel)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "$143.50 USD.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times have I gone climbing since moving to SF?",
+     "gold": "39",
+     "got": "26 times.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I last have dinner with Ondra?",
+     "gold": "Mar 28, 2026 at Eska",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When and where is the next Nebula board meeting?",
+     "gold": "Thu Oct 01, 2026 at 16:00, 1 Mission St, San Francisco",
+     "got": "The next listed Nebula board meeting is November 6, 2025, from 16:00 to 17:30 at the Nebula office in Karlín, Prague.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I get engaged?",
+     "gold": "July 12, 2026",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who is Eva Green?",
+     "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+     "got": "Eva Green is a designer at Nebula. Her email is eva.green@nebula.ai.",
+     "verdict": "partial"
+    },
+    {
+     "q": "What happened to the February dentist appointment?",
+     "gold": "Cancelled (it was Feb 18 with Dr. Horák)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What's Marco's phone number?",
+     "gold": "UNKNOWN: the user asked to forget it",
+     "got": "Marco’s phone number is +420 731 000 444.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "agent (v23/none)": {
+   "accuracy": 0.8083,
+   "by_category": {
+    "aggregation": 0.571,
+    "current": 0.818,
+    "forgotten": 0.5,
+    "history": 0.875,
+    "relationships": 1.0,
+    "semi_structured": 1.0,
+    "status": 0.7,
+    "temporal": 1.0,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 8393,
+   "failures": [
+    {
+     "q": "What is my phone number?",
+     "gold": "+1 415 555 0199",
+     "got": "Your phone numbers are +420 722 238 738 and +1 415 555 0199.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Where does Eva (my partner) work?",
+     "gold": "Gensler",
+     "got": "Eva is listed as an architect at Studio Kvadrat and as an employee at Gensler; the database doesn’t specify which is her current workplace.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Is Oscar Lind still at Nebula?",
+     "gold": "No, he left on Aug 15, 2026 to join Stripe as a PM",
+     "got": "The database lists Oscar Lind as a product manager at Nebula since January 12, 2026, with no departure recorded.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I move to San Francisco?",
+     "gold": "April 1, 2026 (flew UA 8843 on Mar 31)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on coffee in November 2025?",
+     "gold": "1,025 CZK (10 purchases)",
+     "got": "You spent 900 CZK on coffee in November 2025.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on lunch in August 2026?",
+     "gold": "$162.25 (8 purchases)",
+     "got": "You spent $135.75 on lunch in August 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in January 2026?",
+     "gold": "5",
+     "got": "0 times.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in July 2026?",
+     "gold": "7",
+     "got": "You went climbing 5 times in July 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "You’ve spent $143.50 USD at Blue Bottle across 26 transactions.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times have I gone climbing since moving to SF?",
+     "gold": "39",
+     "got": "You’ve gone climbing 5 times since moving to San Francisco on April 1, 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Did I renew my passport?",
+     "gold": "Yes, done on Dec 3, 2025",
+     "got": "Yes. Your “Renew passport” task is marked done; it was due December 15, 2025.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What's Marco's phone number?",
+     "gold": "UNKNOWN: the user asked to forget it",
+     "got": "+420 731 000 444",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "sql (v23/low:sleep)": {
+   "accuracy": 0.7417,
+   "by_category": {
+    "aggregation": 0.857,
+    "current": 0.727,
+    "forgotten": 0.5,
+    "history": 0.5,
+    "relationships": 0.6,
+    "semi_structured": 1.0,
+    "status": 0.5,
+    "temporal": 0.857,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 4119,
+   "failures": [
+    {
+     "q": "What is my phone number?",
+     "gold": "+1 415 555 0199",
+     "got": "+420 722 238 738; +1 415 555 0199",
+     "verdict": "partial"
+    },
+    {
+     "q": "Where does Eva (my partner) work?",
+     "gold": "Gensler",
+     "got": "Eva is listed with Studio Kvadrat and Gensler.",
+     "verdict": "partial"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "The Three-Body Problem",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Is Oscar Lind still at Nebula?",
+     "gold": "No, he left on Aug 15, 2026 to join Stripe as a PM",
+     "got": "I don’t know. The database lists Oscar Lind as a product manager at Nebula, but it doesn’t say whether he’s still there.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What was my phone number before my current one?",
+     "gold": "+420 722 238 738",
+     "got": "+1 628 688 4994",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did I live before San Francisco?",
+     "gold": "Prague",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did Eva work before her current job?",
+     "gold": "Studio Kvadrat",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I move to San Francisco?",
+     "gold": "April 1, 2026 (flew UA 8843 on Mar 31)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did the Lisbon trip cost for flights plus hotel?",
+     "gold": "$2,320 ($1,340 flights + $980 hotel)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "$143.50 USD.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I get engaged?",
+     "gold": "July 12, 2026",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who led Nebula's seed round, and how much did we raise?",
+     "gold": "Northwind Ventures (Sarah Kim), $3M",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who is Eva Green?",
+     "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Did I renew my passport?",
+     "gold": "Yes, done on Dec 3, 2025",
+     "got": "Yes. You renewed your passport; the task was marked done on December 15, 2025.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Is the wedding venue booked?",
+     "gold": "No, still open (due Oct 31)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What's Marco's phone number?",
+     "gold": "UNKNOWN: the user asked to forget it",
+     "got": "Marco’s phone number is +420 731 000 444.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "agent (v23/low:sleep)": {
+   "accuracy": 0.8333,
+   "by_category": {
+    "aggregation": 0.929,
+    "current": 0.727,
+    "forgotten": 0.5,
+    "history": 0.75,
+    "relationships": 0.9,
+    "semi_structured": 1.0,
+    "status": 0.5,
+    "temporal": 1.0,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 10182,
+   "failures": [
+    {
+     "q": "What is my phone number?",
+     "gold": "+1 415 555 0199",
+     "got": "Your phone numbers on file are +420 722 238 738 and +1 415 555 0199.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Where do I live?",
+     "gold": "1450 Valencia St, San Francisco",
+     "got": "You live in Prague.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "The Three-Body Problem",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Is Oscar Lind still at Nebula?",
+     "gold": "No, he left on Aug 15, 2026 to join Stripe as a PM",
+     "got": "No. Oscar Lind’s record says he left Nebula on August 15, 2026.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Where did I live before San Francisco?",
+     "gold": "Prague",
+     "got": "Berlin.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did Eva work before her current job?",
+     "gold": "Studio Kvadrat",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "You’ve spent **$143.50** at Blue Bottle across 26 transactions.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who is Eva Green?",
+     "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+     "got": "Eva Green is Nebula’s designer. She joined the company on March 16, 2026, and her email is eva.green@nebula.ai. She’s a different person from your fiancée, Eva.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Did I renew my passport?",
+     "gold": "Yes, done on Dec 3, 2025",
+     "got": "Yes. Your “Renew passport” task is marked done (due December 15, 2025).",
+     "verdict": "partial"
+    },
+    {
+     "q": "Is the wedding venue booked?",
+     "gold": "No, still open (due Oct 31)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What's Marco's phone number?",
+     "gold": "UNKNOWN: the user asked to forget it",
+     "got": "+420 731 000 444",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "sql (v23/none:sleep)": {
+   "accuracy": 0.65,
+   "by_category": {
+    "aggregation": 0.536,
+    "current": 0.591,
+    "forgotten": 0.5,
+    "history": 0.5,
+    "relationships": 0.9,
+    "semi_structured": 0.75,
+    "status": 0.7,
+    "temporal": 0.714,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 2868,
+   "failures": [
+    {
+     "q": "What is my phone number?",
+     "gold": "+1 415 555 0199",
+     "got": "Your phone numbers are +420 722 238 738 and +1 415 555 0199.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Where does Eva (my partner) work?",
+     "gold": "Gensler",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Which climbing gym am I a member of, and what does it cost?",
+     "gold": "Mission Cliffs ($110/month)",
+     "got": "You’re a member of Smíchoff climbing gym. The monthly membership costs 1,190 CZK. It ended on March 31, 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "The Three-Body Problem",
+     "got": "You’re reading *Thinking, Fast and Slow* by Daniel Kahneman.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Is Oscar Lind still at Nebula?",
+     "gold": "No, he left on Aug 15, 2026 to join Stripe as a PM",
+     "got": "Yes. Oscar Lind is listed as a product manager at Nebula, starting January 12, 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What was my phone number before my current one?",
+     "gold": "+420 722 238 738",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did I live before San Francisco?",
+     "gold": "Prague",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did Eva work before her current job?",
+     "gold": "Studio Kvadrat",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I move to San Francisco?",
+     "gold": "April 1, 2026 (flew UA 8843 on Mar 31)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on lunch in August 2026?",
+     "gold": "$162.25 (8 purchases)",
+     "got": "You spent $135.75 on lunch in August 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in January 2026?",
+     "gold": "5",
+     "got": "3 times.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in July 2026?",
+     "gold": "7",
+     "got": "You went climbing 5 times in July 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many books have I finished, and which did I rate 5/5?",
+     "gold": "10 finished; 5/5: Thinking, Fast and Slow, Project Hail Mary, Shoe Dog, Dune",
+     "got": "You’ve finished 9 books. You rated these 5/5: *Thinking, Fast and Slow* by Daniel Kahneman, *Project Hail Mary* by Andy Weir, *Shoe Dog* by Phil Knight, and *Dune* (author not listed).",
+     "verdict": "partial"
+    },
+    {
+     "q": "How much did the Lisbon trip cost for flights plus hotel?",
+     "gold": "$2,320 ($1,340 flights + $980 hotel)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "You’ve spent $143.50 at Blue Bottle.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times have I gone climbing since moving to SF?",
+     "gold": "39",
+     "got": "29 times.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I last have dinner with Ondra?",
+     "gold": "Mar 28, 2026 at Eska",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I get engaged?",
+     "gold": "July 12, 2026",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who is Eva Green?",
+     "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+     "got": "Eva Green is a person in Adam’s database. Her email is eva.green@nebula.ai. I don’t know her relationship to Adam or where she lives.",
+     "verdict": "partial"
+    },
+    {
+     "q": "What's the confirmation code for my flight to San Francisco?",
+     "gold": "K7QX2P (United UA 8843)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Is the wedding venue booked?",
+     "gold": "No, still open (due Oct 31)",
+     "got": "I don’t know. The database shows “Book the wedding venue” is still an open task, but it doesn’t say whether the venue is booked.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What's Marco's phone number?",
+     "gold": "UNKNOWN: the user asked to forget it",
+     "got": "Marco’s phone number is +420 731 000 444.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "agent (v23/none:sleep)": {
+   "accuracy": 0.7917,
+   "by_category": {
+    "aggregation": 0.607,
+    "current": 0.682,
+    "forgotten": 0.5,
+    "history": 1.0,
+    "relationships": 0.8,
+    "semi_structured": 1.0,
+    "status": 0.7,
+    "temporal": 1.0,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 7325,
+   "failures": [
+    {
+     "q": "What is my phone number?",
+     "gold": "+1 415 555 0199",
+     "got": "+420 722 238 738 and +1 415 555 0199",
+     "verdict": "partial"
+    },
+    {
+     "q": "Where does Eva (my partner) work?",
+     "gold": "Gensler",
+     "got": "Eva is associated with Studio Kvadrat, where she works as an architect, and Gensler, where she is listed as an employee.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Which climbing gym am I a member of, and what does it cost?",
+     "gold": "Mission Cliffs ($110/month)",
+     "got": "Your membership was at Smíchoff climbing gym for 1,190 CZK per month. You ended it, with March 2026 as the last month.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "The Three-Body Problem",
+     "got": "You’re reading *Thinking, Fast and Slow* by Daniel Kahneman.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on lunch in August 2026?",
+     "gold": "$162.25 (8 purchases)",
+     "got": "You spent $135.75 on lunch in August 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in January 2026?",
+     "gold": "5",
+     "got": "You went climbing 3 times in January 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in July 2026?",
+     "gold": "7",
+     "got": "You went climbing **1 time** in July 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many books have I finished, and which did I rate 5/5?",
+     "gold": "10 finished; 5/5: Thinking, Fast and Slow, Project Hail Mary, Shoe Dog, Dune",
+     "got": "You’ve finished 9 books. You rated these 5/5: *Thinking, Fast and Slow* by Daniel Kahneman, *Project Hail Mary* by Andy Weir, *Shoe Dog* by Phil Knight, and *Dune* (author not listed).",
+     "verdict": "partial"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "You’ve spent **$143.50 USD** at Blue Bottle in total.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times have I gone climbing since moving to SF?",
+     "gold": "39",
+     "got": "You’ve gone climbing 5 times since moving to San Francisco on April 1, 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who is Eva Green?",
+     "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Did I renew my passport?",
+     "gold": "Yes, done on Dec 3, 2025",
+     "got": "Yes. Your “Renew passport” task is marked done; it was due December 15, 2025.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What's Marco's phone number?",
+     "gold": "UNKNOWN: the user asked to forget it",
+     "got": "Marco’s phone number is +420 731 000 444.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "sql (v23/gpt-6-sol/low)": {
+   "accuracy": 0.7917,
+   "by_category": {
+    "aggregation": 0.893,
+    "current": 0.682,
+    "forgotten": 0.5,
+    "history": 0.625,
+    "relationships": 0.9,
+    "semi_structured": 1.0,
+    "status": 0.6,
+    "temporal": 0.857,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 5766,
+   "failures": [
+    {
+     "q": "What is my phone number?",
+     "gold": "+1 415 555 0199",
+     "got": "+1 415 555 0199 and +420 722 238 738",
+     "verdict": "partial"
+    },
+    {
+     "q": "Where do I live?",
+     "gold": "1450 Valencia St, San Francisco",
+     "got": "San Francisco.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Where does Eva (my partner) work?",
+     "gold": "Gensler",
+     "got": "Eva works at Studio Kvadrat and Gensler.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "The Three-Body Problem",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Is Oscar Lind still at Nebula?",
+     "gold": "No, he left on Aug 15, 2026 to join Stripe as a PM",
+     "got": "No. Oscar Lind left Nebula on August 15, 2026.",
+     "verdict": "partial"
+    },
+    {
+     "q": "What was my phone number before my current one?",
+     "gold": "+420 722 238 738",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did Eva work before her current job?",
+     "gold": "Studio Kvadrat",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I move to San Francisco?",
+     "gold": "April 1, 2026 (flew UA 8843 on Mar 31)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did the Lisbon trip cost for flights plus hotel?",
+     "gold": "$2,320 ($1,340 flights + $980 hotel)",
+     "got": "The hotel cost $980. No flight cost is recorded, so I don’t know the total for flights plus hotel.",
+     "verdict": "partial"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "$143.50 USD",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I first meet Lucas Meyer, and where?",
+     "gold": "Nov 5, 2025 at Web Summit",
+     "got": "You first met Lucas Meyer on January 21, 2026. I don’t know where.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who is Eva Green?",
+     "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+     "got": "Eva Green is a designer at Nebula.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Is the wedding venue booked?",
+     "gold": "No, still open (due Oct 31)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What's Marco's phone number?",
+     "gold": "UNKNOWN: the user asked to forget it",
+     "got": "+420 731 000 444",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "agent (v23/gpt-6-sol/low)": {
+   "accuracy": 0.7833,
+   "by_category": {
+    "aggregation": 0.929,
+    "current": 0.682,
+    "forgotten": 0.5,
+    "history": 0.625,
+    "relationships": 0.8,
+    "semi_structured": 1.0,
+    "status": 0.5,
+    "temporal": 0.857,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 14023,
+   "failures": [
+    {
+     "q": "What is my phone number?",
+     "gold": "+1 415 555 0199",
+     "got": "Your phone numbers on file are +420 722 238 738 and +1 415 555 0199.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Where do I live?",
+     "gold": "1450 Valencia St, San Francisco",
+     "got": "You live in San Francisco.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Where does Eva (my partner) work?",
+     "gold": "Gensler",
+     "got": "Eva works at Studio Kvadrat as an architect and is also listed as an employee at Gensler.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "The Three-Body Problem",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Is Oscar Lind still at Nebula?",
+     "gold": "No, he left on Aug 15, 2026 to join Stripe as a PM",
+     "got": "No. Oscar Lind left Nebula on August 15, 2026.",
+     "verdict": "partial"
+    },
+    {
+     "q": "What was my phone number before my current one?",
+     "gold": "+420 722 238 738",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did Eva work before her current job?",
+     "gold": "Studio Kvadrat",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I move to San Francisco?",
+     "gold": "April 1, 2026 (flew UA 8843 on Mar 31)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "You’ve spent **$143.50** at Blue Bottle across 26 purchases.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I first meet Lucas Meyer, and where?",
+     "gold": "Nov 5, 2025 at Web Summit",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who is Eva Green?",
+     "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Did I renew my passport?",
+     "gold": "Yes, done on Dec 3, 2025",
+     "got": "Yes. Your “Renew passport” task is marked done; it was due December 15, 2025.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Is the wedding venue booked?",
+     "gold": "No, still open (due Oct 31)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What's Marco's phone number?",
+     "gold": "UNKNOWN: the user asked to forget it",
+     "got": "+420 731 000 444",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "rdb (v23/low)": {
+   "accuracy": 0.7917,
+   "by_category": {
+    "aggregation": 0.571,
+    "current": 0.909,
+    "forgotten": 1.0,
+    "history": 0.688,
+    "relationships": 0.9,
+    "semi_structured": 1.0,
+    "status": 0.7,
+    "temporal": 0.857,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 34222,
+   "failures": [
+    {
+     "q": "What book am I reading right now?",
+     "gold": "The Three-Body Problem",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What was my phone number before my current one?",
+     "gold": "+420 722 238 738",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did Eva work before her current job?",
+     "gold": "Studio Kvadrat",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I move to San Francisco?",
+     "gold": "April 1, 2026 (flew UA 8843 on Mar 31)",
+     "got": "Your move to San Francisco is recorded as March 31, 2026, when you flew from Prague to San Francisco.",
+     "verdict": "partial"
+    },
+    {
+     "q": "How much did I spend on coffee in November 2025?",
+     "gold": "1,025 CZK (10 purchases)",
+     "got": "You spent **930 CZK** on coffee in November 2025.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on lunch in August 2026?",
+     "gold": "$162.25 (8 purchases)",
+     "got": "You spent **$135.75** on lunch in August 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in January 2026?",
+     "gold": "5",
+     "got": "You went climbing 4 times in January 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many dinners out did I have with Eva in 2026?",
+     "gold": "8",
+     "got": "You had 7 dinners out with Eva in 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "You’ve spent **$143.50** at Blue Bottle.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times have I gone climbing since moving to SF?",
+     "gold": "39",
+     "got": "You’ve gone climbing 25 times since moving to San Francisco.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I last have dinner with Ondra?",
+     "gold": "Mar 28, 2026 at Eska",
+     "got": "Your last recorded dinner with Ondra was March 11, 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who is Eva Green?",
+     "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+     "got": "Eva Green is a designer at Nebula. Her email is eva.green@nebula.ai.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Did I renew my passport?",
+     "gold": "Yes, done on Dec 3, 2025",
+     "got": "Yes. Your passport renewal task was marked done.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "rdb+log (v23/low)": {
+   "accuracy": 0.9,
+   "by_category": {
+    "aggregation": 0.786,
+    "current": 0.909,
+    "forgotten": 1.0,
+    "history": 1.0,
+    "relationships": 0.9,
+    "semi_structured": 1.0,
+    "status": 0.7,
+    "temporal": 1.0,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 55594,
+   "failures": [
+    {
+     "q": "What book am I reading right now?",
+     "gold": "The Three-Body Problem",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many dinners out did I have with Eva in 2026?",
+     "gold": "8",
+     "got": "You had 7 dinners out with Eva in 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "You’ve spent **$143.50** at Blue Bottle.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times have I gone climbing since moving to SF?",
+     "gold": "39",
+     "got": "You’ve gone climbing 38 times since moving to San Francisco.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who is Eva Green?",
+     "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+     "got": "Eva Green is Nebula’s designer. Her email is eva.green@nebula.ai.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Is the wedding venue booked?",
+     "gold": "No, still open (due Oct 31)",
+     "got": "I don’t know. The database shows a pending task to book the wedding venue by October 31, 2026, but doesn’t say whether it’s been booked.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "rdb (v23/low:sleep)": {
+   "accuracy": 0.8667,
+   "by_category": {
+    "aggregation": 0.929,
+    "current": 0.818,
+    "forgotten": 1.0,
+    "history": 0.625,
+    "relationships": 0.9,
+    "semi_structured": 1.0,
+    "status": 0.7,
+    "temporal": 1.0,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 34587,
+   "failures": [
+    {
+     "q": "Where do I live?",
+     "gold": "1450 Valencia St, San Francisco",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "The Three-Body Problem",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did I live before San Francisco?",
+     "gold": "Prague",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did Eva work before her current job?",
+     "gold": "Studio Kvadrat",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I move to San Francisco?",
+     "gold": "April 1, 2026 (flew UA 8843 on Mar 31)",
+     "got": "Your database doesn’t specify when you moved to San Francisco. I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "You’ve spent **$143.50** at Blue Bottle.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who is Eva Green?",
+     "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+     "got": "Eva Green is a designer at Nebula. Her email is eva.green@nebula.ai.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Did I renew my passport?",
+     "gold": "Yes, done on Dec 3, 2025",
+     "got": "Yes. Your “Renew passport” task was marked done.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "rdb+log (v23/low:sleep)": {
+   "accuracy": 0.9167,
+   "by_category": {
+    "aggregation": 0.821,
+    "current": 1.0,
+    "forgotten": 1.0,
+    "history": 1.0,
+    "relationships": 0.9,
+    "semi_structured": 1.0,
+    "status": 0.6,
+    "temporal": 1.0,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 55959,
+   "failures": [
+    {
+     "q": "How many books have I finished, and which did I rate 5/5?",
+     "gold": "10 finished; 5/5: Thinking, Fast and Slow, Project Hail Mary, Shoe Dog, Dune",
+     "got": "You’ve finished **11 books**. You rated these **5/5**: *Thinking, Fast and Slow*, *Project Hail Mary*, *Shoe Dog*, and *Dune*.",
+     "verdict": "partial"
+    },
+    {
+     "q": "How many dinners out did I have with Eva in 2026?",
+     "gold": "8",
+     "got": "You had 7 dinners out with Eva in 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "You’ve spent **$143.50** at Blue Bottle in total.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who is Eva Green?",
+     "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+     "got": "Eva Green is a designer at Nebula. Her email is eva.green@nebula.ai.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Is the wedding venue booked?",
+     "gold": "No, still open (due Oct 31)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "rdb (low)": {
+   "accuracy": 0.8,
+   "by_category": {
+    "aggregation": 0.643,
+    "current": 0.864,
+    "forgotten": 0.5,
+    "history": 0.75,
+    "relationships": 0.9,
+    "semi_structured": 1.0,
+    "status": 0.8,
+    "temporal": 0.857,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 34496,
+   "failures": [
+    {
+     "q": "Where does my sister Klára live?",
+     "gold": "London",
+     "got": "Klára is listed as living in Berlin and London.",
+     "verdict": "partial"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "The Three-Body Problem",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Where did I live before San Francisco?",
+     "gold": "Prague",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I move to San Francisco?",
+     "gold": "April 1, 2026 (flew UA 8843 on Mar 31)",
+     "got": "I don’t know. The database lists your San Francisco residence at 1450 Valencia St, but doesn’t give your move date.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on groceries in May 2026?",
+     "gold": "$317.76 (4 purchases)",
+     "got": "You spent **$168.53** on groceries in May 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on lunch in August 2026?",
+     "gold": "$162.25 (8 purchases)",
+     "got": "You spent **$147.75** on lunch in August 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in July 2026?",
+     "gold": "7",
+     "got": "You went climbing 6 times in July 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "You’ve spent **$136.75** at Blue Bottle.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times have I gone climbing since moving to SF?",
+     "gold": "39",
+     "got": "You’ve gone climbing **33 times** since moving to San Francisco.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I get engaged?",
+     "gold": "July 12, 2026",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who is Eva Green?",
+     "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+     "got": "Eva Green is a designer at Nebula. Her email is eva.green@nebula.ai.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What's Marco's phone number?",
+     "gold": "UNKNOWN: the user asked to forget it",
+     "got": "Marco’s phone number is +420 731 000 444.",
+     "verdict": "incorrect"
+    }
+   ]
+  },
+  "rdb+log (low)": {
+   "accuracy": 0.825,
+   "by_category": {
+    "aggregation": 0.643,
+    "current": 0.818,
+    "forgotten": 1.0,
+    "history": 1.0,
+    "relationships": 0.9,
+    "semi_structured": 1.0,
+    "status": 0.6,
+    "temporal": 0.857,
+    "unanswerable": 1.0
+   },
+   "input_tokens_per_q": 55874,
+   "failures": [
+    {
+     "q": "Where does Eva (my partner) work?",
+     "gold": "Gensler",
+     "got": "Eva works as an architect at Studio Kvadrat.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "What book am I reading right now?",
+     "gold": "The Three-Body Problem",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much did I spend on groceries in May 2026?",
+     "gold": "$317.76 (4 purchases)",
+     "got": "You spent **$168.53** on groceries in May 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in January 2026?",
+     "gold": "5",
+     "got": "You went climbing 6 times in January 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times did I go climbing in July 2026?",
+     "gold": "7",
+     "got": "You went climbing 6 times in July 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How much have I spent at Blue Bottle in total?",
+     "gold": "$148.75 (27 visits)",
+     "got": "You’ve spent **$130.00** at Blue Bottle.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "How many times have I gone climbing since moving to SF?",
+     "gold": "39",
+     "got": "You’ve logged **33 climbing sessions** since moving to San Francisco.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "When did I last have dinner with Ondra?",
+     "gold": "Mar 28, 2026 at Eska",
+     "got": "Your last recorded dinner with Ondra was at La Degustation on March 11, 2026.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Who is Eva Green?",
+     "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+     "got": "Eva Green is Nebula’s designer. Her email is eva.green@nebula.ai.",
+     "verdict": "partial"
+    },
+    {
+     "q": "Is the wedding venue booked?",
+     "gold": "No, still open (due Oct 31)",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    },
+    {
+     "q": "Did I finish The Three-Body Problem?",
+     "gold": "No, still reading it",
+     "got": "I don't know.",
+     "verdict": "incorrect"
+    }
+   ]
+  }
+ }
+}

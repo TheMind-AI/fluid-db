@@ -1,0 +1,116 @@
+{
+ "raw_log": {
+  "accuracy": 0.925,
+  "by_category": {
+   "aggregation": 1.0,
+   "delete": 0.0,
+   "deleted": 1.0,
+   "multi_hop": 0.667,
+   "semi_structured": 1.0,
+   "single": 1.0,
+   "temporal": 1.0,
+   "unanswerable": 1.0,
+   "update": 0.9
+  },
+  "tokens_per_question": 2053,
+  "cost_per_question": 0.000217,
+  "answer_latency_p50": 1.2,
+  "failures": [
+   {
+    "q": "What is Tom's phone number?",
+    "gold": "+420 777 999 000 (his new number; the old one was +420 777 123 456)",
+    "got": "I don't know.",
+    "verdict": "incorrect"
+   },
+   {
+    "q": "Do I have a dentist appointment coming up?",
+    "gold": "No. The Aug 20 appointment with Dr. Horák was cancelled.",
+    "got": "I don't know.",
+    "verdict": "incorrect"
+   },
+   {
+    "q": "What is my cofounder's email address?",
+    "gold": "david@nebula.ai",
+    "got": "I don't know.",
+    "verdict": "incorrect"
+   }
+  ],
+  "log_chars": 5217
+ },
+ "markdown": {
+  "accuracy": 0.8625,
+  "by_category": {
+   "aggregation": 1.0,
+   "delete": 0.0,
+   "deleted": 1.0,
+   "multi_hop": 0.333,
+   "semi_structured": 0.667,
+   "single": 1.0,
+   "temporal": 1.0,
+   "unanswerable": 1.0,
+   "update": 0.85
+  },
+  "tokens_per_question": 1406,
+  "cost_per_question": 0.000151,
+  "answer_latency_p50": 1.06,
+  "failures": [
+   {
+    "q": "Where do I live now?",
+    "gold": "San Francisco, at 1450 Valencia St.",
+    "got": "You live in San Francisco.",
+    "verdict": "partial"
+   },
+   {
+    "q": "What's the email of the investor I met at the Founders Dinner?",
+    "gold": "sarah@northwind.vc (Sarah Kim, Northwind Ventures)",
+    "got": "I don't know.",
+    "verdict": "incorrect"
+   },
+   {
+    "q": "Do I have a dentist appointment coming up?",
+    "gold": "No. The Aug 20 appointment with Dr. Horák was cancelled.",
+    "got": "I don't know.",
+    "verdict": "incorrect"
+   },
+   {
+    "q": "Do I own a car?",
+    "gold": "No, the 2019 Skoda Octavia was sold on Aug 28",
+    "got": "I don't know.",
+    "verdict": "incorrect"
+   },
+   {
+    "q": "What were the terms in the term sheet draft?",
+    "gold": "$3M seed round at a $15M post-money valuation",
+    "got": "I don't know.",
+    "verdict": "incorrect"
+   },
+   {
+    "q": "What is my cofounder's email address?",
+    "gold": "david@nebula.ai",
+    "got": "I don't know.",
+    "verdict": "incorrect"
+   }
+  ],
+  "memory_chars": 3990,
+  "write_latency_p50": 0.0,
+  "write_cost_per_message": 0.000487
+ },
+ "db+log": {
+  "accuracy": 1.0,
+  "by_category": {
+   "aggregation": 1.0,
+   "delete": 1.0,
+   "deleted": 1.0,
+   "multi_hop": 1.0,
+   "semi_structured": 1.0,
+   "single": 1.0,
+   "temporal": 1.0,
+   "unanswerable": 1.0,
+   "update": 1.0
+  },
+  "tokens_per_question": 5168,
+  "cost_per_question": 0.000528,
+  "answer_latency_p50": 1.21,
+  "failures": []
+ }
+}

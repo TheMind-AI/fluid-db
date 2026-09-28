@@ -1,0 +1,37 @@
+{
+ "0": {
+  "n_docs": 108,
+  "shortlist": "all memories",
+  "recall@5": 0.9381,
+  "recall@10": 0.9381,
+  "all_evidence@10": 0.8571,
+  "mrr": 0.9857,
+  "jev_cost_per_1k_queries": 0.217,
+  "jev_latency_mean": 0.33,
+  "input_tokens_per_query": 5173
+ },
+ "1000": {
+  "n_docs": 1108,
+  "shortlist": "bm25 top-100 + embeddings top-100",
+  "shortlist_recall": 0.9714,
+  "recall@5": 0.9095,
+  "recall@10": 0.9095,
+  "all_evidence@10": 0.8,
+  "mrr": 0.9571,
+  "jev_cost_per_1k_queries": 0.302,
+  "jev_latency_mean": 1.66,
+  "input_tokens_per_query": 7189
+ },
+ "5000": {
+  "n_docs": 5108,
+  "shortlist": "bm25 top-100 + embeddings top-100",
+  "shortlist_recall": 0.9381,
+  "recall@5": 0.9,
+  "recall@10": 0.9,
+  "all_evidence@10": 0.8,
+  "mrr": 0.9524,
+  "jev_cost_per_1k_queries": 0.329,
+  "jev_latency_mean": 0.34,
+  "input_tokens_per_query": 7844
+ }
+}

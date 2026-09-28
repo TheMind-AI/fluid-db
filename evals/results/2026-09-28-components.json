@@ -1,0 +1,1317 @@
+{
+  "recorded": "2026-09-28",
+  "scope": "Fictional retrieval/repetition checks, not answer quality or a provider speed benchmark",
+  "live": {
+    "dataset": "conversation-regressions-v1",
+    "datasetSha256": "2b20a356eac101db0c168b06a6bdec49b18b97215c23e1269dd5c51d3036aa4e",
+    "baseline": "vector",
+    "complete": true,
+    "runs": [
+      {
+        "id": "vector",
+        "status": "complete",
+        "components": {
+          "extract": "openai:gpt-6-luna",
+          "link": "openai:gpt-6-luna",
+          "dossier": "openai:gpt-6-luna",
+          "embedder": "openai:text-embedding-3-small",
+          "picker": "pick:search-order",
+          "detector": "shim:openai:gpt-6-luna"
+        },
+        "report": {
+          "dataset": "conversation-regressions-v1",
+          "checks": {
+            "passed": 50,
+            "total": 50
+          },
+          "latencyMs": {
+            "total": 121871.007666,
+            "recallP50": 1837.445166999998,
+            "recallP95": 2096.1825830000016
+          },
+          "detector": {
+            "precision": 1,
+            "recall": 1
+          },
+          "passed": true,
+          "metrics": {
+            "windows@2": {
+              "passed": 10,
+              "total": 10
+            },
+            "statements@3": {
+              "passed": 10,
+              "total": 10
+            },
+            "contains": {
+              "passed": 6,
+              "total": 6
+            },
+            "retoldSource": {
+              "passed": 5,
+              "total": 5
+            },
+            "retold": {
+              "passed": 10,
+              "total": 10
+            },
+            "absent": {
+              "passed": 5,
+              "total": 5
+            },
+            "empty": {
+              "passed": 1,
+              "total": 1
+            },
+            "absentSources": {
+              "passed": 3,
+              "total": 3
+            }
+          },
+          "repetition": {
+            "truePositive": 5,
+            "falsePositive": 0,
+            "falseNegative": 0,
+            "trueNegative": 5
+          },
+          "probes": [
+            {
+              "id": "sister-recall",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "contains": true
+              }
+            },
+            {
+              "id": "dog-recall",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "retoldSource": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": true,
+                "actual": true
+              }
+            },
+            {
+              "id": "work-recall",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "retoldSource": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": true,
+                "actual": true
+              }
+            },
+            {
+              "id": "studio-recall",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "contains": true
+              }
+            },
+            {
+              "id": "music-recall",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "contains": true
+              }
+            },
+            {
+              "id": "new-topic",
+              "checks": {
+                "retold": true
+              },
+              "retold": {
+                "expected": false,
+                "actual": false
+              }
+            },
+            {
+              "id": "before-future-ingest",
+              "checks": {
+                "absent": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": false,
+                "actual": false
+              }
+            },
+            {
+              "id": "empty-person",
+              "checks": {
+                "empty": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": false,
+                "actual": false
+              }
+            },
+            {
+              "id": "other-person",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "contains": true,
+                "absent": true
+              }
+            },
+            {
+              "id": "original-person",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "contains": true,
+                "absent": true
+              }
+            },
+            {
+              "id": "repeated-wording",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "retoldSource": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": true,
+                "actual": true
+              }
+            },
+            {
+              "id": "one-source-forgotten",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "retoldSource": true,
+                "absentSources": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": true,
+                "actual": true
+              }
+            },
+            {
+              "id": "all-dog-sources-forgotten",
+              "checks": {
+                "absentSources": true,
+                "absent": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": false,
+                "actual": false
+              }
+            },
+            {
+              "id": "forgotten-redelivery",
+              "checks": {
+                "absentSources": true,
+                "absent": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": false,
+                "actual": false
+              }
+            },
+            {
+              "id": "other-memory-survives",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "retoldSource": true,
+                "contains": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": true,
+                "actual": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "model",
+        "status": "complete",
+        "components": {
+          "extract": "openai:gpt-6-luna",
+          "link": "openai:gpt-6-luna",
+          "dossier": "openai:gpt-6-luna",
+          "embedder": "openai:text-embedding-3-small",
+          "picker": "pick:openai:gpt-6-luna",
+          "detector": "shim:openai:gpt-6-luna"
+        },
+        "report": {
+          "dataset": "conversation-regressions-v1",
+          "checks": {
+            "passed": 50,
+            "total": 50
+          },
+          "latencyMs": {
+            "total": 23967.608625000008,
+            "recallP50": 1661.6244580000057,
+            "recallP95": 2947.7282920000143
+          },
+          "detector": {
+            "precision": 1,
+            "recall": 1
+          },
+          "passed": true,
+          "metrics": {
+            "windows@2": {
+              "passed": 10,
+              "total": 10
+            },
+            "statements@3": {
+              "passed": 10,
+              "total": 10
+            },
+            "contains": {
+              "passed": 6,
+              "total": 6
+            },
+            "retoldSource": {
+              "passed": 5,
+              "total": 5
+            },
+            "retold": {
+              "passed": 10,
+              "total": 10
+            },
+            "absent": {
+              "passed": 5,
+              "total": 5
+            },
+            "empty": {
+              "passed": 1,
+              "total": 1
+            },
+            "absentSources": {
+              "passed": 3,
+              "total": 3
+            }
+          },
+          "repetition": {
+            "truePositive": 5,
+            "falsePositive": 0,
+            "falseNegative": 0,
+            "trueNegative": 5
+          },
+          "probes": [
+            {
+              "id": "sister-recall",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "contains": true
+              }
+            },
+            {
+              "id": "dog-recall",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "retoldSource": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": true,
+                "actual": true
+              }
+            },
+            {
+              "id": "work-recall",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "retoldSource": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": true,
+                "actual": true
+              }
+            },
+            {
+              "id": "studio-recall",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "contains": true
+              }
+            },
+            {
+              "id": "music-recall",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "contains": true
+              }
+            },
+            {
+              "id": "new-topic",
+              "checks": {
+                "retold": true
+              },
+              "retold": {
+                "expected": false,
+                "actual": false
+              }
+            },
+            {
+              "id": "before-future-ingest",
+              "checks": {
+                "absent": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": false,
+                "actual": false
+              }
+            },
+            {
+              "id": "empty-person",
+              "checks": {
+                "empty": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": false,
+                "actual": false
+              }
+            },
+            {
+              "id": "other-person",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "contains": true,
+                "absent": true
+              }
+            },
+            {
+              "id": "original-person",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "contains": true,
+                "absent": true
+              }
+            },
+            {
+              "id": "repeated-wording",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "retoldSource": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": true,
+                "actual": true
+              }
+            },
+            {
+              "id": "one-source-forgotten",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "retoldSource": true,
+                "absentSources": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": true,
+                "actual": true
+              }
+            },
+            {
+              "id": "all-dog-sources-forgotten",
+              "checks": {
+                "absentSources": true,
+                "absent": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": false,
+                "actual": false
+              }
+            },
+            {
+              "id": "forgotten-redelivery",
+              "checks": {
+                "absentSources": true,
+                "absent": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": false,
+                "actual": false
+              }
+            },
+            {
+              "id": "other-memory-survives",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "retoldSource": true,
+                "contains": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": true,
+                "actual": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "decider",
+        "status": "complete",
+        "components": {
+          "extract": "openai:gpt-6-luna",
+          "link": "openai:gpt-6-luna",
+          "dossier": "openai:gpt-6-luna",
+          "embedder": "openai:text-embedding-3-small",
+          "picker": "pick:shim:openai:gpt-6-luna",
+          "detector": "shim:openai:gpt-6-luna"
+        },
+        "report": {
+          "dataset": "conversation-regressions-v1",
+          "checks": {
+            "passed": 50,
+            "total": 50
+          },
+          "latencyMs": {
+            "total": 28804.269165999984,
+            "recallP50": 2207.1946250000037,
+            "recallP95": 3393.1750000000175
+          },
+          "detector": {
+            "precision": 1,
+            "recall": 1
+          },
+          "passed": true,
+          "metrics": {
+            "windows@2": {
+              "passed": 10,
+              "total": 10
+            },
+            "statements@3": {
+              "passed": 10,
+              "total": 10
+            },
+            "contains": {
+              "passed": 6,
+              "total": 6
+            },
+            "retoldSource": {
+              "passed": 5,
+              "total": 5
+            },
+            "retold": {
+              "passed": 10,
+              "total": 10
+            },
+            "absent": {
+              "passed": 5,
+              "total": 5
+            },
+            "empty": {
+              "passed": 1,
+              "total": 1
+            },
+            "absentSources": {
+              "passed": 3,
+              "total": 3
+            }
+          },
+          "repetition": {
+            "truePositive": 5,
+            "falsePositive": 0,
+            "falseNegative": 0,
+            "trueNegative": 5
+          },
+          "probes": [
+            {
+              "id": "sister-recall",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "contains": true
+              }
+            },
+            {
+              "id": "dog-recall",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "retoldSource": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": true,
+                "actual": true
+              }
+            },
+            {
+              "id": "work-recall",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "retoldSource": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": true,
+                "actual": true
+              }
+            },
+            {
+              "id": "studio-recall",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "contains": true
+              }
+            },
+            {
+              "id": "music-recall",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "contains": true
+              }
+            },
+            {
+              "id": "new-topic",
+              "checks": {
+                "retold": true
+              },
+              "retold": {
+                "expected": false,
+                "actual": false
+              }
+            },
+            {
+              "id": "before-future-ingest",
+              "checks": {
+                "absent": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": false,
+                "actual": false
+              }
+            },
+            {
+              "id": "empty-person",
+              "checks": {
+                "empty": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": false,
+                "actual": false
+              }
+            },
+            {
+              "id": "other-person",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "contains": true,
+                "absent": true
+              }
+            },
+            {
+              "id": "original-person",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "contains": true,
+                "absent": true
+              }
+            },
+            {
+              "id": "repeated-wording",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "retoldSource": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": true,
+                "actual": true
+              }
+            },
+            {
+              "id": "one-source-forgotten",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "retoldSource": true,
+                "absentSources": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": true,
+                "actual": true
+              }
+            },
+            {
+              "id": "all-dog-sources-forgotten",
+              "checks": {
+                "absentSources": true,
+                "absent": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": false,
+                "actual": false
+              }
+            },
+            {
+              "id": "forgotten-redelivery",
+              "checks": {
+                "absentSources": true,
+                "absent": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": false,
+                "actual": false
+              }
+            },
+            {
+              "id": "other-memory-survives",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "retoldSource": true,
+                "contains": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": true,
+                "actual": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "jev",
+        "status": "complete",
+        "components": {
+          "extract": "openai:gpt-6-luna",
+          "link": "openai:gpt-6-luna",
+          "dossier": "openai:gpt-6-luna",
+          "embedder": "openai:text-embedding-3-small",
+          "picker": "pick:jev:typesafe/jev-1.13",
+          "detector": "jev:typesafe/jev-1.13"
+        },
+        "report": {
+          "dataset": "conversation-regressions-v1",
+          "checks": {
+            "passed": 50,
+            "total": 50
+          },
+          "latencyMs": {
+            "total": 7512.2226669999945,
+            "recallP50": 324.80683299998054,
+            "recallP95": 1625.6404159999802
+          },
+          "detector": {
+            "precision": 1,
+            "recall": 1
+          },
+          "passed": true,
+          "metrics": {
+            "windows@2": {
+              "passed": 10,
+              "total": 10
+            },
+            "statements@3": {
+              "passed": 10,
+              "total": 10
+            },
+            "contains": {
+              "passed": 6,
+              "total": 6
+            },
+            "retoldSource": {
+              "passed": 5,
+              "total": 5
+            },
+            "retold": {
+              "passed": 10,
+              "total": 10
+            },
+            "absent": {
+              "passed": 5,
+              "total": 5
+            },
+            "empty": {
+              "passed": 1,
+              "total": 1
+            },
+            "absentSources": {
+              "passed": 3,
+              "total": 3
+            }
+          },
+          "repetition": {
+            "truePositive": 5,
+            "falsePositive": 0,
+            "falseNegative": 0,
+            "trueNegative": 5
+          },
+          "probes": [
+            {
+              "id": "sister-recall",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "contains": true
+              }
+            },
+            {
+              "id": "dog-recall",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "retoldSource": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": true,
+                "actual": true
+              }
+            },
+            {
+              "id": "work-recall",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "retoldSource": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": true,
+                "actual": true
+              }
+            },
+            {
+              "id": "studio-recall",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "contains": true
+              }
+            },
+            {
+              "id": "music-recall",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "contains": true
+              }
+            },
+            {
+              "id": "new-topic",
+              "checks": {
+                "retold": true
+              },
+              "retold": {
+                "expected": false,
+                "actual": false
+              }
+            },
+            {
+              "id": "before-future-ingest",
+              "checks": {
+                "absent": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": false,
+                "actual": false
+              }
+            },
+            {
+              "id": "empty-person",
+              "checks": {
+                "empty": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": false,
+                "actual": false
+              }
+            },
+            {
+              "id": "other-person",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "contains": true,
+                "absent": true
+              }
+            },
+            {
+              "id": "original-person",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "contains": true,
+                "absent": true
+              }
+            },
+            {
+              "id": "repeated-wording",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "retoldSource": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": true,
+                "actual": true
+              }
+            },
+            {
+              "id": "one-source-forgotten",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "retoldSource": true,
+                "absentSources": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": true,
+                "actual": true
+              }
+            },
+            {
+              "id": "all-dog-sources-forgotten",
+              "checks": {
+                "absentSources": true,
+                "absent": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": false,
+                "actual": false
+              }
+            },
+            {
+              "id": "forgotten-redelivery",
+              "checks": {
+                "absentSources": true,
+                "absent": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": false,
+                "actual": false
+              }
+            },
+            {
+              "id": "other-memory-survives",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "retoldSource": true,
+                "contains": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": true,
+                "actual": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "routed",
+        "status": "complete",
+        "components": {
+          "extract": "openai:gpt-6-luna",
+          "link": "openai:gpt-6-luna",
+          "dossier": "openai:gpt-6-luna",
+          "embedder": "openai:text-embedding-3-small",
+          "picker": "route:statement=pick:openai:gpt-6-luna;window=pick:jev:typesafe/jev-1.13",
+          "detector": "jev:typesafe/jev-1.13"
+        },
+        "report": {
+          "dataset": "conversation-regressions-v1",
+          "checks": {
+            "passed": 50,
+            "total": 50
+          },
+          "latencyMs": {
+            "total": 38.375,
+            "recallP50": 0.7707080000254791,
+            "recallP95": 2.5511249999981374
+          },
+          "detector": {
+            "precision": 1,
+            "recall": 1
+          },
+          "passed": true,
+          "metrics": {
+            "windows@2": {
+              "passed": 10,
+              "total": 10
+            },
+            "statements@3": {
+              "passed": 10,
+              "total": 10
+            },
+            "contains": {
+              "passed": 6,
+              "total": 6
+            },
+            "retoldSource": {
+              "passed": 5,
+              "total": 5
+            },
+            "retold": {
+              "passed": 10,
+              "total": 10
+            },
+            "absent": {
+              "passed": 5,
+              "total": 5
+            },
+            "empty": {
+              "passed": 1,
+              "total": 1
+            },
+            "absentSources": {
+              "passed": 3,
+              "total": 3
+            }
+          },
+          "repetition": {
+            "truePositive": 5,
+            "falsePositive": 0,
+            "falseNegative": 0,
+            "trueNegative": 5
+          },
+          "probes": [
+            {
+              "id": "sister-recall",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "contains": true
+              }
+            },
+            {
+              "id": "dog-recall",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "retoldSource": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": true,
+                "actual": true
+              }
+            },
+            {
+              "id": "work-recall",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "retoldSource": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": true,
+                "actual": true
+              }
+            },
+            {
+              "id": "studio-recall",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "contains": true
+              }
+            },
+            {
+              "id": "music-recall",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "contains": true
+              }
+            },
+            {
+              "id": "new-topic",
+              "checks": {
+                "retold": true
+              },
+              "retold": {
+                "expected": false,
+                "actual": false
+              }
+            },
+            {
+              "id": "before-future-ingest",
+              "checks": {
+                "absent": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": false,
+                "actual": false
+              }
+            },
+            {
+              "id": "empty-person",
+              "checks": {
+                "empty": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": false,
+                "actual": false
+              }
+            },
+            {
+              "id": "other-person",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "contains": true,
+                "absent": true
+              }
+            },
+            {
+              "id": "original-person",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "contains": true,
+                "absent": true
+              }
+            },
+            {
+              "id": "repeated-wording",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "retoldSource": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": true,
+                "actual": true
+              }
+            },
+            {
+              "id": "one-source-forgotten",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "retoldSource": true,
+                "absentSources": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": true,
+                "actual": true
+              }
+            },
+            {
+              "id": "all-dog-sources-forgotten",
+              "checks": {
+                "absentSources": true,
+                "absent": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": false,
+                "actual": false
+              }
+            },
+            {
+              "id": "forgotten-redelivery",
+              "checks": {
+                "absentSources": true,
+                "absent": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": false,
+                "actual": false
+              }
+            },
+            {
+              "id": "other-memory-survives",
+              "checks": {
+                "windows@2": true,
+                "statements@3": true,
+                "retoldSource": true,
+                "contains": true,
+                "retold": true
+              },
+              "retold": {
+                "expected": true,
+                "actual": true
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "paired": [
+      {
+        "id": "model",
+        "comparable": true,
+        "improvedChecks": 0,
+        "regressedChecks": 0,
+        "unchangedChecks": 50,
+        "changes": []
+      },
+      {
+        "id": "decider",
+        "comparable": true,
+        "improvedChecks": 0,
+        "regressedChecks": 0,
+        "unchangedChecks": 50,
+        "changes": []
+      },
+      {
+        "id": "jev",
+        "comparable": true,
+        "improvedChecks": 0,
+        "regressedChecks": 0,
+        "unchangedChecks": 50,
+        "changes": []
+      },
+      {
+        "id": "routed",
+        "comparable": true,
+        "improvedChecks": 0,
+        "regressedChecks": 0,
+        "unchangedChecks": 50,
+        "changes": []
+      }
+    ],
+    "mode": "live",
+    "config": {
+      "model": "gpt-6-luna",
+      "embedding": "text-embedding-3-small",
+      "maxOutputTokens": 4096,
+      "effort": "low",
+      "jev": {
+        "model": "typesafe/jev-1.13",
+        "inputPrice": 0.042
+      },
+      "prices": {
+        "input": 0.1,
+        "output": 0.5,
+        "embedding": 0.02
+      }
+    },
+    "usage": {
+      "cached": 358,
+      "requests": 154,
+      "reservedUsd": 0.2675663679999997,
+      "estimatedUsd": 0.014599933999999998,
+      "unknownUsage": 0,
+      "estimatedUncachedUsd": 0.044465867999999936,
+      "unpricedResponses": 0,
+      "networkMs": 233677.0357539997
+    },
+    "variantUsage": {
+      "vector": {
+        "cached": 10,
+        "requests": 70,
+        "reservedUsd": 0.11557923999999996,
+        "estimatedUsd": 0.00718286,
+        "unknownUsage": 0,
+        "estimatedUncachedUsd": 0.007456580000000001,
+        "unpricedResponses": 0,
+        "networkMs": 124816.25841799997
+      },
+      "model": {
+        "cached": 84,
+        "requests": 24,
+        "reservedUsd": 0.065877,
+        "estimatedUsd": 0.002015999999999996,
+        "unknownUsage": 0,
+        "estimatedUncachedUsd": 0.009896479999999996,
+        "unpricedResponses": 0,
+        "networkMs": 41709.11379099991
+      },
+      "decider": {
+        "cached": 84,
+        "requests": 24,
+        "reservedUsd": 0.07447259999999997,
+        "estimatedUsd": 0.004195800000000001,
+        "unknownUsage": 0,
+        "estimatedUncachedUsd": 0.012390579999999967,
+        "unpricedResponses": 0,
+        "networkMs": 52405.7262089999
+      },
+      "jev": {
+        "cached": 72,
+        "requests": 36,
+        "reservedUsd": 0.011637527999999786,
+        "estimatedUsd": 0.001205274000000001,
+        "unknownUsage": 0,
+        "estimatedUncachedUsd": 0.007004435999999985,
+        "unpricedResponses": 0,
+        "networkMs": 14745.937335999915
+      },
+      "routed": {
+        "cached": 108,
+        "requests": 0,
+        "reservedUsd": 0,
+        "estimatedUsd": 0,
+        "unknownUsage": 0,
+        "estimatedUncachedUsd": 0.007717791999999987,
+        "unpricedResponses": 0,
+        "networkMs": 0
+      }
+    }
+  },
+  "cacheReplay": {
+    "usage": {
+      "cached": 512,
+      "requests": 0,
+      "reservedUsd": 0,
+      "estimatedUsd": 0,
+      "unknownUsage": 0,
+      "estimatedUncachedUsd": 0.044465867999999936,
+      "unpricedResponses": 0,
+      "networkMs": 0
+    },
+    "allProbeChecksIdentical": true
+  }
+}

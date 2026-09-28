@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@fluiddb/providers",
+  "version": "1.0.0-next.4",
+  "description": "FluidDB providers over fetch: OpenAI-compatible models and embeddings, Jev, and a model in Jev's place",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p .",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@fluiddb/core": "workspace:*",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@types/bun": "catalog:",
+    "typescript": "catalog:"
+  },
+  "private": true,
+  "license": "Apache-2.0"
+}

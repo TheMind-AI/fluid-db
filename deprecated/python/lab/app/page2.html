@@ -1,0 +1,37 @@
+<!doctype html><html><head><meta charset="utf-8"><title>People · Adam’s dashboard</title>
+<style>
+.viz-root{color-scheme:light;--surface-1:#fcfcfb;--surface-2:#f3f2ef;--text-primary:#0b0b0b;--text-secondary:#52514e;
+ --line:#dcdad3;--series-1:#2a78d6;--series-2:#eb6834;--series-3:#1baf7a;--series-4:#eda100;--series-5:#e87ba4;--series-6:#008300;--series-7:#4a3aa7;--series-8:#e34948;}
+@media (prefers-color-scheme: dark){:root:where(:not([data-theme="light"])) .viz-root{color-scheme:dark;--surface-1:#1a1a19;
+ --surface-2:#252523;--text-primary:#fff;--text-secondary:#c3c2b7;--line:#3a3935;--series-1:#3987e5;--series-2:#d95926;--series-3:#199e70;--series-4:#c98500;--series-5:#d55181;--series-6:#008300;--series-7:#9085e9;--series-8:#e66767;}}
+body{margin:0;font:14px/1.45 -apple-system,BlinkMacSystemFont,"Inter",sans-serif}
+.viz-root{background:var(--surface-1);color:var(--text-primary);padding:28px 40px;max-width:1180px;margin:auto}
+h1{font-size:22px;margin:0 0 4px} h2{font-size:16px;margin:34px 0 10px;border-bottom:1px solid var(--line);padding-bottom:6px}
+h3.month{font-size:13px;color:var(--text-secondary);margin:14px 0 4px} .muted{color:var(--text-secondary)}
+.tl-item{display:grid;grid-template-columns:120px 150px 1fr;gap:10px;padding:3px 0;align-items:baseline}
+.tl-when{color:var(--text-secondary);font-variant-numeric:tabular-nums}
+.tl-item.two{grid-template-columns:120px 1fr}
+.chip{justify-self:start;font-size:12px;padding:1px 8px 1px 18px;border-radius:10px;background:var(--surface-2);position:relative}
+.chip:before{content:"";position:absolute;left:7px;top:6px;width:7px;height:7px;border-radius:50%;background:var(--c)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.card{background:var(--surface-2);border-radius:10px;padding:10px 14px} .card h4{margin:0 0 4px;font-size:14px}
+.card ul{margin:4px 0 0;padding-left:16px} .card li{margin:2px 0} .k{color:var(--text-secondary);font-size:12px;margin-right:4px}
+.multiples{display:flex;flex-wrap:wrap;gap:28px} figure{margin:0} figcaption{margin-bottom:6px}
+.bar{fill:var(--series-1)} .ax,.val{font-size:12px;fill:var(--text-secondary)} .val{fill:var(--text-primary)}
+.edge{fill:none;stroke:var(--line);stroke-width:1.5} .node{fill:var(--surface-2);stroke:var(--line)} .node.hub{stroke:var(--series-1)}
+.nodet{font-size:12px;fill:var(--text-primary)} .nodet .muted{fill:var(--text-secondary)}
+table{border-collapse:collapse;font-size:12px;margin-top:6px} td,th{border-bottom:1px solid var(--line);padding:3px 8px;text-align:left}
+details summary{cursor:pointer;color:var(--text-secondary);margin-top:6px} .badge{font-size:12px;color:var(--text-secondary)}
+.tbl{margin-bottom:22px}
+.month-block{padding:4px 0;border-bottom:1px solid var(--line)} .month-block summary{cursor:pointer;color:var(--text-primary)}
+.month-block .chip{margin-left:6px}
+
+.panel{margin:0}.grid{stroke:var(--line);stroke-width:1}.ln{fill:none;stroke-width:2}.dot{stroke:var(--surface-1);stroke-width:2}
+.lg{font-size:12px;color:var(--text-secondary);margin-left:10px}.lg i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:4px}
+nav a{margin-right:14px;color:var(--text-secondary);text-decoration:none} nav a:hover,nav a.on{color:var(--text-primary);font-weight:600}
+.view{margin:18px 0 30px} .view h3{margin:0 0 2px;font-size:15px} pre{white-space:pre-wrap;font-size:11px;background:var(--surface-2);padding:8px;border-radius:6px}
+.inbox.done{opacity:.45} .inbox li.hot{background:color-mix(in srgb,var(--series-4) 22%,transparent);border-radius:4px} button{font:inherit;padding:3px 10px;border-radius:6px;border:1px solid var(--line);background:var(--surface-1);color:var(--text-primary);cursor:pointer}
+</style></head><body><div class="viz-root">
+<h1>Adam’s dashboard</h1><p class="muted">Generated from <code>db.sqlite</code> on 2026-09-25: views
+from the questions you asked and from the schema; every number is computed by code from your database.</p><nav><a href="index.html">Spending</a> <a href="page2.html" class=on>People</a> <a href="page3.html">Health &amp; activity</a> <a href="page4.html">Timeline &amp; checks</a></nav>
+<h2>People</h2><p class="muted">See the people connected to your records and what is linked to each of them.</p><section class="view"><h3>People overview</h3><p class="muted">Review nine people with totals of the records linked to them.</p><div class="cards"><div class="card"><h4>Lucie</h4><ul><li><span class='k'>expenses</span> 78× · 73,420 CZK + 262.11 USD · last 2026-06-07 at Trick Dog</li><li><span class='k'>expenses · dinner</span> 40× · 62,420 CZK + 232.20 USD · last 2026-06-01 at State Bird Provisions</li><li><span class='k'>expenses · drinks</span> 38× · 11,000 CZK + 29.91 USD · last 2026-06-07 at Trick Dog</li></ul></div><div class="card"><h4>Tom Novak</h4><ul><li><span class='k'>expenses</span> 61× · 78,860 CZK · last 2026-03-27 at La Degustation</li><li><span class='k'>expenses · dinner</span> 42× · 73,180 CZK · last 2026-03-27 at La Degustation</li><li><span class='k'>expenses · drinks</span> 19× · 5,680 CZK · last 2026-01-16 at Anonymous Bar</li></ul></div><div class="card"><h4>Kuba</h4><ul><li><span class='k'>expenses</span> 60× · 68,830 CZK · last 2026-03-13 at Hemingway Bar</li><li><span class='k'>expenses · dinner</span> 45× · 64,310 CZK · last 2026-02-19 at Maso a Kobliha</li><li><span class='k'>expenses · drinks</span> 15× · 4,520 CZK · last 2026-03-13 at Hemingway Bar</li></ul></div><div class="card"><h4>Ondřej Král</h4><ul><li><span class='k'>expenses</span> 41× · 52,600 CZK · last 2026-03-18 at Eska</li><li><span class='k'>expenses · dinner</span> 28× · 49,060 CZK · last 2026-03-18 at Eska</li><li><span class='k'>expenses · drinks</span> 13× · 3,540 CZK · last 2026-01-26 at Vinograf</li></ul></div><div class="card"><h4>Dave</h4><ul><li><span class='k'>expenses</span> 33× · 31,120 CZK + 358.06 USD · last 2026-06-07 at State Bird Provisions</li><li><span class='k'>expenses · dinner</span> 18× · 26,970 CZK + 247.40 USD · last 2026-06-07 at State Bird Provisions</li><li><span class='k'>expenses · drinks</span> 15× · 4,150 CZK + 110.66 USD · last 2026-05-20 at Trick Dog</li></ul></div><div class="card"><h4>David</h4><ul><li><span class='k'>expenses</span> 26× · 29,530 CZK + 181.30 USD · last 2026-05-06 at State Bird Provisions</li><li><span class='k'>expenses · dinner</span> 16× · 26,780 CZK + 181.30 USD · last 2026-05-06 at State Bird Provisions</li><li><span class='k'>expenses · drinks</span> 10× · 2,750 CZK · last 2025-10-18 at U Hrocha</li></ul></div><div class="card"><h4>Nina Rossi</h4><ul><li><span class='k'>expenses</span> 16× · 1,207.33 USD · last 2026-06-02 at Bar Agricole</li><li><span class='k'>expenses · dinner</span> 10× · 926 USD · last 2026-05-19 at Zuni Café</li><li><span class='k'>expenses · drinks</span> 6× · 281.33 USD · last 2026-06-02 at Bar Agricole</li></ul></div><div class="card"><h4>Priya Patel</h4><ul><li><span class='k'>expenses</span> 5× · 475.85 USD · last 2026-06-04 at Trick Dog</li><li><span class='k'>expenses · dinner</span> 4× · 416.40 USD · last 2026-05-14 at Flour + Water</li><li><span class='k'>expenses · drinks</span> 1× · 59.45 USD · last 2026-06-04 at Trick Dog</li></ul></div><div class="card"><h4>Eva Green</h4><ul><li><span class='k'>expenses</span> 1× · 112 USD · last 2026-09-25 at Nopa</li></ul></div></div></section></div></body></html>

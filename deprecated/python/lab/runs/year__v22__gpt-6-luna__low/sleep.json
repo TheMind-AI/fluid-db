@@ -1,0 +1,44 @@
+{
+ "dropped_before": 19,
+ "replanned_with_ops": 7,
+ "dropped_after": 12,
+ "migrations": [
+  {
+   "reason": "Past climbing activities without a planned status belong with completed workouts; planned climbing events remain in events.",
+   "source_table": "events",
+   "where": "activity = 'climbing' AND status IS NULL AND date < CURRENT_DATE",
+   "target_table": "workouts",
+   "mapping": [
+    {
+     "target_column": "person_id",
+     "source_column": null,
+     "constant": 1
+    },
+    {
+     "target_column": "activity",
+     "source_column": "activity",
+     "constant": null
+    },
+    {
+     "target_column": "date",
+     "source_column": "date",
+     "constant": null
+    },
+    {
+     "target_column": "place_id",
+     "source_column": "place_id",
+     "constant": null
+    },
+    {
+     "target_column": "companion_person_id",
+     "source_column": "companion_person_id",
+     "constant": null
+    }
+   ],
+   "applied": 2
+  }
+ ],
+ "candidate_pairs": 3,
+ "merges": [],
+ "cost": 0.0243
+}

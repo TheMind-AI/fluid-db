@@ -1,0 +1,14 @@
+{
+ "requests": 2,
+ "whole_messages": [
+  3130,
+  3614
+ ],
+ "strings": [],
+ "rows_deleted": [
+  "organizations#3",
+  "contact_methods#9",
+  "people#16"
+ ],
+ "values_erased": 0
+}

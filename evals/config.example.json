@@ -1,0 +1,6 @@
+{
+  "model": "gpt-6-luna",
+  "embedding": "text-embedding-3-small",
+  "maxOutputTokens": 4096,
+  "effort": "low"
+}

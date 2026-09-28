@@ -1,0 +1,1024 @@
+[
+ [
+  "How much did I spend on lunches out this year?",
+  {
+   "table": "expenses",
+   "op": "sum",
+   "column": "amount",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "dining",
+    "dining_occasion": "lunch"
+   },
+   "period": "year:2026",
+   "text": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and dining_occasion = 'lunch', in 2026 (183 matching rows)"
+  }
+ ],
+ [
+  "How much did I spend on coffee last month?",
+  {
+   "table": "expenses",
+   "op": "sum",
+   "column": "amount",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "coffee"
+   },
+   "period": "in:2026-08",
+   "text": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'coffee', in 2026-08 (37 matching rows)"
+  }
+ ],
+ [
+  "How much did I spend on lunches out last month?",
+  {
+   "table": "expenses",
+   "op": "sum",
+   "column": "amount",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "dining",
+    "dining_occasion": "lunch"
+   },
+   "period": "in:2026-08",
+   "text": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and dining_occasion = 'lunch', in 2026-08 (20 matching rows)"
+  }
+ ],
+ [
+  "What was my total lunches out spend in June 2024?",
+  {
+   "table": "expenses",
+   "op": "sum",
+   "column": "amount",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "dining",
+    "dining_occasion": "lunch"
+   },
+   "period": "in:2024-06",
+   "text": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and dining_occasion = 'lunch', in 2024-06 (22 matching rows)"
+  }
+ ],
+ [
+  "How many times did I go out for drinks in 2025?",
+  {
+   "table": "expenses",
+   "op": "count",
+   "column": "dining_occasion",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "dining",
+    "dining_occasion": "drinks"
+   },
+   "period": "year:2025",
+   "text": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'dining' and dining_occasion = 'drinks', in 2025 (52 matching rows)"
+  }
+ ],
+ [
+  "How often did I do a grocery run in February 2025?",
+  {
+   "table": "expenses",
+   "op": "count",
+   "column": "occurred_at",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "groceries"
+   },
+   "period": "in:2025-02",
+   "text": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'groceries', in 2025-02 (9 matching rows)"
+  }
+ ],
+ [
+  "How many times did I buy groceries in July 2026?",
+  {
+   "table": "expenses",
+   "op": "count",
+   "column": "category",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "groceries"
+   },
+   "period": "in:2026-07",
+   "text": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'groceries', in 2026-07 (9 matching rows)"
+  }
+ ],
+ [
+  "How often did I do a grocery run this year?",
+  {
+   "table": "expenses",
+   "op": "count",
+   "column": "category",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "groceries"
+   },
+   "period": "year:2026",
+   "text": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'groceries', in 2026 (81 matching rows)"
+  }
+ ],
+ [
+  "How many times did I buy something in a shop or online in 2024?",
+  {
+   "table": "expenses",
+   "op": "count",
+   "column": "__row__",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "shopping"
+   },
+   "period": "year:2024",
+   "text": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'shopping', in 2024 (32 matching rows)"
+  }
+ ],
+ [
+  "How often did I buy a coffee this year?",
+  {
+   "table": "expenses",
+   "op": "count",
+   "column": "description",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "coffee"
+   },
+   "period": "year:2026",
+   "text": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'coffee', in 2026 (281 matching rows)"
+  }
+ ],
+ [
+  "How many times did I go out for drinks in September 2026?",
+  {
+   "table": "expenses",
+   "op": "count",
+   "column": "dining_occasion",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "dining",
+    "dining_occasion": "drinks"
+   },
+   "period": "in:2026-09",
+   "text": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'dining' and dining_occasion = 'drinks', in 2026-09 (3 matching rows)"
+  }
+ ],
+ [
+  "How many times did I go to Bistro Monk in 2024?",
+  {
+   "table": "expenses",
+   "op": "count",
+   "column": "merchant",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "dining",
+    "merchant": "Bistro Monk"
+   },
+   "period": "year:2024",
+   "text": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'dining' and merchant = 'Bistro Monk', in 2024 (25 matching rows)"
+  }
+ ],
+ [
+  "How many visits to Field in 2024?",
+  {
+   "table": "expenses",
+   "op": "count",
+   "column": "merchant",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "merchant": "Field"
+   },
+   "period": "year:2024",
+   "text": "count of rows from expenses where person_id = 'Adam Zvada' and merchant = 'Field', in 2024 (17 matching rows)"
+  }
+ ],
+ [
+  "How many times did I go to Doubleshot in 2024?",
+  {
+   "table": "expenses",
+   "op": "count",
+   "column": "merchant",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "merchant": "Doubleshot"
+   },
+   "period": "year:2024",
+   "text": "count of rows from expenses where person_id = 'Adam Zvada' and merchant = 'Doubleshot', in 2024 (38 matching rows)"
+  }
+ ],
+ [
+  "How many visits to Cafe Imperial in 2024?",
+  {
+   "table": "expenses",
+   "op": "count",
+   "column": "merchant",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "dining",
+    "merchant": "Café Imperial"
+   },
+   "period": "year:2024",
+   "text": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'dining' and merchant = 'Café Imperial', in 2024 (15 matching rows)"
+  }
+ ],
+ [
+  "How many times did I go to Sightglass?",
+  {
+   "table": "expenses",
+   "op": "count",
+   "column": "merchant",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "merchant": "Sightglass"
+   },
+   "period": "all",
+   "text": "count of rows from expenses where person_id = 'Adam Zvada' and merchant = 'Sightglass', any time (26 matching rows)"
+  }
+ ],
+ [
+  "How many visits to Bolt?",
+  {
+   "table": "expenses",
+   "op": "count",
+   "column": "merchant",
+   "filters": {
+    "category": "transport",
+    "merchant": "Bolt"
+   },
+   "period": "all",
+   "text": "count of rows from expenses where category = 'transport' and merchant = 'Bolt', any time (402 matching rows)"
+  }
+ ],
+ [
+  "How many times did I go to Café Lounge in 2024?",
+  {
+   "table": "expenses",
+   "op": "count",
+   "column": "merchant",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "merchant": "Café Lounge"
+   },
+   "period": "year:2024",
+   "text": "count of rows from expenses where person_id = 'Adam Zvada' and merchant = 'Café Lounge', in 2024 (36 matching rows)"
+  }
+ ],
+ [
+  "How many visits to Eska in 2024?",
+  {
+   "table": "expenses",
+   "op": "count",
+   "column": "merchant",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "merchant": "Eska"
+   },
+   "period": "year:2024",
+   "text": "count of rows from expenses where person_id = 'Adam Zvada' and merchant = 'Eska', in 2024 (12 matching rows)"
+  }
+ ],
+ [
+  "How much did I spend at Field in August 2024?",
+  {
+   "table": "expenses",
+   "op": "sum",
+   "column": "amount",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "merchant": "Field"
+   },
+   "period": "in:2024-08",
+   "text": "total of amount from expenses where person_id = 'Adam Zvada' and merchant = 'Field', in 2024-08 (3 matching rows)"
+  }
+ ],
+ [
+  "What did I spend in total at EMA Espresso Bar?",
+  {
+   "table": "expenses",
+   "op": "sum",
+   "column": "amount",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "merchant": "EMA Espresso Bar"
+   },
+   "period": "all",
+   "text": "total of amount from expenses where person_id = 'Adam Zvada' and merchant = 'EMA Espresso Bar', any time (100 matching rows)"
+  }
+ ],
+ [
+  "How much did I spend at Onesip Coffee?",
+  {
+   "table": "expenses",
+   "op": "sum",
+   "column": "amount",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "coffee",
+    "merchant": "Onesip Coffee"
+   },
+   "period": "all",
+   "text": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'coffee' and merchant = 'Onesip Coffee', any time (91 matching rows)"
+  }
+ ],
+ [
+  "What did I spend in total at Vinograf in 2024?",
+  {
+   "table": "expenses",
+   "op": "sum",
+   "column": "amount",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "merchant": "Vinograf"
+   },
+   "period": "year:2024",
+   "text": "total of amount from expenses where person_id = 'Adam Zvada' and merchant = 'Vinograf', in 2024 (17 matching rows)"
+  }
+ ],
+ [
+  "How much did I spend at Můj šálek kávy in 2025?",
+  {
+   "table": "expenses",
+   "op": "sum",
+   "column": "amount",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "merchant": "Můj šálek kávy"
+   },
+   "period": "year:2025",
+   "text": "total of amount from expenses where person_id = 'Adam Zvada' and merchant = 'Můj šálek kávy', in 2025 (42 matching rows)"
+  }
+ ],
+ [
+  "What did I spend in total at Field?",
+  {
+   "table": "expenses",
+   "op": "sum",
+   "column": "amount",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "merchant": "Field"
+   },
+   "period": "all",
+   "text": "total of amount from expenses where person_id = 'Adam Zvada' and merchant = 'Field', any time (36 matching rows)"
+  }
+ ],
+ [
+  "How much did I spend at Pho Vietnam in 2025?",
+  {
+   "table": "expenses",
+   "op": "sum",
+   "column": "amount",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "dining",
+    "merchant": "Pho Vietnam"
+   },
+   "period": "year:2025",
+   "text": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and merchant = 'Pho Vietnam', in 2025 (43 matching rows)"
+  }
+ ],
+ [
+  "What did I spend in total at Uber?",
+  {
+   "table": "expenses",
+   "op": "sum",
+   "column": "amount",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "merchant": "Uber"
+   },
+   "period": "all",
+   "text": "total of amount from expenses where person_id = 'Adam Zvada' and merchant = 'Uber', any time (88 matching rows)"
+  }
+ ],
+ [
+  "What was my most expensive grocery run in San Francisco?",
+  {
+   "table": "expenses",
+   "op": "max",
+   "column": "amount",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "groceries",
+    "expense_location": "san francisco"
+   },
+   "period": "all",
+   "text": "row with the largest amount from expenses where person_id = 'Adam Zvada' and category = 'groceries' and expense_location = 'san francisco', any time (30 matching rows)"
+  }
+ ],
+ [
+  "What's the most I've spent on a single grocery run in Prague?",
+  {
+   "table": "expenses",
+   "op": "max",
+   "column": "amount",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "groceries",
+    "expense_location": "prague"
+   },
+   "period": "all",
+   "text": "row with the largest amount from expenses where person_id = 'Adam Zvada' and category = 'groceries' and expense_location = 'prague', any time (211 matching rows)"
+  }
+ ],
+ [
+  "What's the most I've spent on a single coffee in Prague?",
+  {
+   "table": "expenses",
+   "op": "max",
+   "column": "amount",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "coffee",
+    "expense_location": "prague"
+   },
+   "period": "all",
+   "text": "row with the largest amount from expenses where person_id = 'Adam Zvada' and category = 'coffee' and expense_location = 'prague', any time (761 matching rows)"
+  }
+ ],
+ [
+  "What was my most expensive ride in Prague?",
+  {
+   "table": "expenses",
+   "op": "max",
+   "column": "amount",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "transport",
+    "expense_location": "prague"
+   },
+   "period": "all",
+   "text": "row with the largest amount from expenses where person_id = 'Adam Zvada' and category = 'transport' and expense_location = 'prague', any time (402 matching rows)"
+  }
+ ],
+ [
+  "What's my average dinner bill in November 2024?",
+  {
+   "table": "expenses",
+   "op": "avg",
+   "column": "amount",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "dining",
+    "dining_occasion": "dinner"
+   },
+   "period": "in:2024-11",
+   "text": "average of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and dining_occasion = 'dinner', in 2024-11 (8 matching rows)"
+  }
+ ],
+ [
+  "How much did a night of drinks cost me on average in November 2024?",
+  {
+   "table": "expenses",
+   "op": "avg",
+   "column": "amount",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "dining",
+    "dining_occasion": "drinks"
+   },
+   "period": "in:2024-11",
+   "text": "average of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and dining_occasion = 'drinks', in 2024-11 (4 matching rows)"
+  }
+ ],
+ [
+  "What's my average dinner bill in June 2024?",
+  {
+   "table": "expenses",
+   "op": "avg",
+   "column": "amount",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "dining",
+    "dining_occasion": "dinner"
+   },
+   "period": "in:2024-06",
+   "text": "average of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and dining_occasion = 'dinner', in 2024-06 (11 matching rows)"
+  }
+ ],
+ [
+  "How much did a ride cost me on average in October 2024?",
+  {
+   "table": "expenses",
+   "op": "avg",
+   "column": "amount",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "transport"
+   },
+   "period": "in:2024-10",
+   "text": "average of amount from expenses where person_id = 'Adam Zvada' and category = 'transport', in 2024-10 (16 matching rows)"
+  }
+ ],
+ [
+  "What's my average grocery run bill in October 2025?",
+  {
+   "table": "expenses",
+   "op": "avg",
+   "column": "amount",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "groceries"
+   },
+   "period": "in:2025-10",
+   "text": "average of amount from expenses where person_id = 'Adam Zvada' and category = 'groceries', in 2025-10 (9 matching rows)"
+  }
+ ],
+ [
+  "How much did a lunch cost me on average last month?",
+  {
+   "table": "expenses",
+   "op": "avg",
+   "column": "amount",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "dining",
+    "dining_occasion": "lunch"
+   },
+   "period": "in:2026-08",
+   "text": "average of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and dining_occasion = 'lunch', in 2026-08 (20 matching rows)"
+  }
+ ],
+ [
+  "How much did a night of drinks cost me on average last month?",
+  {
+   "table": "expenses",
+   "op": "avg",
+   "column": "amount",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "dining",
+    "dining_occasion": "drinks"
+   },
+   "period": "in:2026-08",
+   "text": "average of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and dining_occasion = 'drinks', in 2026-08 (4 matching rows)"
+  }
+ ],
+ [
+  "What was my average sleep in July 2024?",
+  {
+   "table": "body_measurements",
+   "op": "avg",
+   "column": "value",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "sleep",
+    "unit": "h"
+   },
+   "period": "in:2024-07",
+   "text": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2024-07 (28 matching rows)"
+  }
+ ],
+ [
+  "How many hours did I sleep on average in December 2024?",
+  {
+   "table": "body_measurements",
+   "op": "avg",
+   "column": "value",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "sleep",
+    "unit": "h"
+   },
+   "period": "in:2024-12",
+   "text": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2024-12 (30 matching rows)"
+  }
+ ],
+ [
+  "What was my average sleep in September 2025?",
+  {
+   "table": "body_measurements",
+   "op": "avg",
+   "column": "value",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "sleep",
+    "unit": "h"
+   },
+   "period": "in:2025-09",
+   "text": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2025-09 (28 matching rows)"
+  }
+ ],
+ [
+  "How many hours did I sleep on average in September 2024?",
+  {
+   "table": "body_measurements",
+   "op": "avg",
+   "column": "value",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "sleep",
+    "unit": "h"
+   },
+   "period": "in:2024-09",
+   "text": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2024-09 (28 matching rows)"
+  }
+ ],
+ [
+  "What was my average sleep in March 2025?",
+  {
+   "table": "body_measurements",
+   "op": "avg",
+   "column": "value",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "sleep",
+    "unit": "h"
+   },
+   "period": "in:2025-03",
+   "text": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2025-03 (29 matching rows)"
+  }
+ ],
+ [
+  "How many hours did I sleep on average in January 2026?",
+  {
+   "table": "body_measurements",
+   "op": "avg",
+   "column": "value",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "sleep",
+    "unit": "h"
+   },
+   "period": "in:2026-01",
+   "text": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2026-01 (28 matching rows)"
+  }
+ ],
+ [
+  "What was my average sleep in April 2025?",
+  {
+   "table": "body_measurements",
+   "op": "avg",
+   "column": "value",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "sleep",
+    "unit": "h"
+   },
+   "period": "in:2025-04",
+   "text": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2025-04 (28 matching rows)"
+  }
+ ],
+ [
+  "How many hours did I sleep on average in April 2026?",
+  {
+   "table": "body_measurements",
+   "op": "avg",
+   "column": "value",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "sleep",
+    "unit": "h"
+   },
+   "period": "in:2026-04",
+   "text": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2026-04 (26 matching rows)"
+  }
+ ],
+ [
+  "What was my lowest weight in 2024?",
+  {
+   "table": "body_measurements",
+   "op": "min",
+   "column": "value",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "weight",
+    "unit": "kg"
+   },
+   "period": "year:2024",
+   "text": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight' and unit = 'kg', in 2024 (148 matching rows)"
+  }
+ ],
+ [
+  "What's the least I weighed in 2025?",
+  {
+   "table": "body_measurements",
+   "op": "min",
+   "column": "value",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "weight"
+   },
+   "period": "year:2025",
+   "text": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight', in 2025 (172 matching rows)"
+  }
+ ],
+ [
+  "What was my lowest weight in December 2024?",
+  {
+   "table": "body_measurements",
+   "op": "min",
+   "column": "value",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "weight",
+    "unit": "kg"
+   },
+   "period": "in:2024-12",
+   "text": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight' and unit = 'kg', in 2024-12 (16 matching rows)"
+  }
+ ],
+ [
+  "What's the least I weighed this year?",
+  {
+   "table": "body_measurements",
+   "op": "min",
+   "column": "value",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "weight"
+   },
+   "period": "year:2026",
+   "text": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight', in 2026 (129 matching rows)"
+  }
+ ],
+ [
+  "What was my lowest weight in March 2026?",
+  {
+   "table": "body_measurements",
+   "op": "min",
+   "column": "value",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "weight",
+    "unit": "kg"
+   },
+   "period": "in:2026-03",
+   "text": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight' and unit = 'kg', in 2026-03 (16 matching rows)"
+  }
+ ],
+ [
+  "What's the least I weighed in September 2025?",
+  {
+   "table": "body_measurements",
+   "op": "min",
+   "column": "value",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "weight",
+    "unit": "kg"
+   },
+   "period": "in:2025-09",
+   "text": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight' and unit = 'kg', in 2025-09 (14 matching rows)"
+  }
+ ],
+ [
+  "What was my lowest weight in June 2025?",
+  {
+   "table": "body_measurements",
+   "op": "min",
+   "column": "value",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "weight",
+    "unit": "kg"
+   },
+   "period": "in:2025-06",
+   "text": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight' and unit = 'kg', in 2025-06 (14 matching rows)"
+  }
+ ],
+ [
+  "What's the least I weighed last month?",
+  {
+   "table": "body_measurements",
+   "op": "min",
+   "column": "value",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "weight",
+    "unit": "kg"
+   },
+   "period": "in:2026-08",
+   "text": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight' and unit = 'kg', in 2026-08 (16 matching rows)"
+  }
+ ],
+ [
+  "How many runs did I do in July 2025?",
+  {
+   "table": "workouts",
+   "op": "count",
+   "column": "distance",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "run"
+   },
+   "period": "in:2025-07",
+   "text": "count of rows from workouts where person_id = 'Adam Zvada' and category = 'run', in 2025-07 (4 matching rows)"
+  }
+ ],
+ [
+  "How many times did I go running this year?",
+  {
+   "table": "workouts",
+   "op": "count",
+   "column": "__row__",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "run"
+   },
+   "period": "year:2026",
+   "text": "count of rows from workouts where person_id = 'Adam Zvada' and category = 'run', in 2026 (43 matching rows)"
+  }
+ ],
+ [
+  "How many runs did I do?",
+  {
+   "table": "workouts",
+   "op": "count",
+   "column": "distance",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "run"
+   },
+   "period": "all",
+   "text": "count of rows from workouts where person_id = 'Adam Zvada' and category = 'run', any time (157 matching rows)"
+  }
+ ],
+ [
+  "How many times did I go running in 2024?",
+  {
+   "table": "workouts",
+   "op": "count",
+   "column": "__row__",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "run"
+   },
+   "period": "year:2024",
+   "text": "count of rows from workouts where person_id = 'Adam Zvada' and category = 'run', in 2024 (50 matching rows)"
+  }
+ ],
+ [
+  "How many runs did I do in November 2024?",
+  {
+   "table": "workouts",
+   "op": "count",
+   "column": "__row__",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "run"
+   },
+   "period": "in:2024-11",
+   "text": "count of rows from workouts where person_id = 'Adam Zvada' and category = 'run', in 2024-11 (6 matching rows)"
+  }
+ ],
+ [
+  "How many times did I go running in April 2024?",
+  {
+   "table": "workouts",
+   "op": "count",
+   "column": "date",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "run"
+   },
+   "period": "in:2024-04",
+   "text": "count of rows from workouts where person_id = 'Adam Zvada' and category = 'run', in 2024-04 (8 matching rows)"
+  }
+ ],
+ [
+  "How many runs did I do in May 2026?",
+  {
+   "table": "workouts",
+   "op": "count",
+   "column": "distance",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "run"
+   },
+   "period": "in:2026-05",
+   "text": "count of rows from workouts where person_id = 'Adam Zvada' and category = 'run', in 2026-05 (7 matching rows)"
+  }
+ ],
+ [
+  "How many times did I go running in June 2024?",
+  {
+   "table": "workouts",
+   "op": "count",
+   "column": "date",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "run"
+   },
+   "period": "in:2024-06",
+   "text": "count of rows from workouts where person_id = 'Adam Zvada' and category = 'run', in 2024-06 (5 matching rows)"
+  }
+ ],
+ [
+  "How many times did I go climbing in 2024?",
+  {
+   "table": "events",
+   "op": "count",
+   "column": "category",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "climbing",
+    "title": "Climbing",
+    "status": "attended"
+   },
+   "period": "year:2024",
+   "text": "count of rows from events where person_id = 'Adam Zvada' and category = 'climbing' and title = 'Climbing' and status = 'attended', in 2024 (52 matching rows)"
+  }
+ ],
+ [
+  "How many climbing sessions did I have in 2025?",
+  {
+   "table": "events",
+   "op": "count",
+   "column": "category",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "climbing",
+    "title": "Climbing"
+   },
+   "period": "year:2025",
+   "text": "count of rows from events where person_id = 'Adam Zvada' and category = 'climbing' and title = 'Climbing', in 2025 (82 matching rows)"
+  }
+ ],
+ [
+  "How many times did I go climbing in January 2026?",
+  {
+   "table": "events",
+   "op": "count",
+   "column": "category",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "climbing",
+    "title": "Climbing"
+   },
+   "period": "in:2026-01",
+   "text": "count of rows from events where person_id = 'Adam Zvada' and category = 'climbing' and title = 'Climbing', in 2026-01 (7 matching rows)"
+  }
+ ],
+ [
+  "How many climbing sessions did I have in January 2025?",
+  {
+   "table": "events",
+   "op": "count",
+   "column": "category",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "climbing",
+    "title": "Climbing"
+   },
+   "period": "in:2025-01",
+   "text": "count of rows from events where person_id = 'Adam Zvada' and category = 'climbing' and title = 'Climbing', in 2025-01 (8 matching rows)"
+  }
+ ],
+ [
+  "How many times did I go climbing this year?",
+  {
+   "table": "events",
+   "op": "count",
+   "column": "category",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "climbing",
+    "title": "Climbing",
+    "status": "attended"
+   },
+   "period": "year:2026",
+   "text": "count of rows from events where person_id = 'Adam Zvada' and category = 'climbing' and title = 'Climbing' and status = 'attended', in 2026 (44 matching rows)"
+  }
+ ],
+ [
+  "How many climbing sessions did I have in June 2025?",
+  {
+   "table": "events",
+   "op": "count",
+   "column": "category",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "climbing",
+    "title": "Climbing"
+   },
+   "period": "in:2025-06",
+   "text": "count of rows from events where person_id = 'Adam Zvada' and category = 'climbing' and title = 'Climbing', in 2025-06 (6 matching rows)"
+  }
+ ],
+ [
+  "How many times did I go climbing in May 2025?",
+  {
+   "table": "events",
+   "op": "count",
+   "column": "category",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "climbing",
+    "title": "Climbing"
+   },
+   "period": "in:2025-05",
+   "text": "count of rows from events where person_id = 'Adam Zvada' and category = 'climbing' and title = 'Climbing', in 2025-05 (7 matching rows)"
+  }
+ ],
+ [
+  "How many climbing sessions did I have in July 2025?",
+  {
+   "table": "events",
+   "op": "count",
+   "column": "category",
+   "filters": {
+    "person_id": "Adam Zvada",
+    "category": "climbing",
+    "title": "Climbing"
+   },
+   "period": "in:2025-07",
+   "text": "count of rows from events where person_id = 'Adam Zvada' and category = 'climbing' and title = 'Climbing', in 2025-07 (5 matching rows)"
+  }
+ ]
+]

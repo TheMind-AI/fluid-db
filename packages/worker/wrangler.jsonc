@@ -1,0 +1,28 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "fluiddb",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-01",
+  "observability": { "enabled": true },
+  "durable_objects": {
+    "bindings": [{ "name": "PERSON", "class_name": "Person" }],
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["Person"] }],
+  "vars": {
+    // Where people's data may go (LLP 0018#processors). Other people's conversations go to OpenAI only, with the
+    // model answering in Jev's place. To use Jev, add "openrouter,typesafe" here and set DECIDER to "jev".
+    "PROCESSORS": "openai",
+    "DECIDER": "model",
+    // Who picks what to show: Jev's closed questions ("decider", fast) or the model ranking the list ("model").
+    "PICK": "decider",
+    "MODEL": "gpt-6-luna",
+    "EMBEDDING_MODEL": "text-embedding-3-small",
+    // The product's name in transcripts, and what it is to the person.
+    "ASSISTANT": "the assistant",
+    "ROLE": "therapy assistant",
+    "THRESHOLD": "0.5",
+    // Seconds of quiet before a session's turns are ingested.
+    "INGEST_DELAY": "300",
+  },
+  // Secrets, never in this file: wrangler secret put FLUID_TOKEN, OPENAI_API_KEY, OPENROUTER_API_KEY (for Jev).
+}

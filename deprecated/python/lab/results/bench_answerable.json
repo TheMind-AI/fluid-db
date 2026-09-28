@@ -1,0 +1,109 @@
+{
+ "n": 57,
+ "n_answerable": 35,
+ "methods": {
+  "jev": {
+   "auroc": 0.9942,
+   "at_0.3": {
+    "accuracy": 0.9649,
+    "precision": 0.9459,
+    "recall": 1.0,
+    "f1": 0.9722,
+    "false_negatives": 0,
+    "false_positives": 2
+   },
+   "at_0.5": {
+    "accuracy": 0.9649,
+    "precision": 0.9714,
+    "recall": 0.9714,
+    "f1": 0.9714,
+    "false_negatives": 1,
+    "false_positives": 1
+   },
+   "at_0.7": {
+    "accuracy": 0.8947,
+    "precision": 1.0,
+    "recall": 0.8286,
+    "f1": 0.9062,
+    "false_negatives": 6,
+    "false_positives": 0
+   },
+   "cost_per_1k": 0.0246,
+   "latency_p50": 0.273,
+   "latency_mean": 0.284,
+   "calls": 57,
+   "unanswerable_scores": [
+    0.01,
+    0.02,
+    0.02,
+    0.02,
+    0.02,
+    0.03,
+    0.03,
+    0.03,
+    0.03,
+    0.03,
+    0.03,
+    0.04,
+    0.04,
+    0.04,
+    0.04,
+    0.04,
+    0.07,
+    0.1,
+    0.13,
+    0.23,
+    0.31,
+    0.55
+   ],
+   "answerable_scores_low": [
+    0.35,
+    0.53,
+    0.54,
+    0.54,
+    0.55,
+    0.61,
+    0.75,
+    0.79,
+    0.8,
+    0.86
+   ]
+  },
+  "openai:gpt-6-luna": {
+   "accuracy": 0.9825,
+   "precision": 1.0,
+   "recall": 0.9714,
+   "f1": 0.9855,
+   "false_negatives": 1,
+   "false_positives": 0,
+   "cost_per_1k": 0.0387,
+   "latency_p50": 0.883,
+   "latency_mean": 0.989,
+   "calls": 57
+  },
+  "anthropic:claude-haiku-4-5": {
+   "accuracy": 0.8947,
+   "precision": 1.0,
+   "recall": 0.8286,
+   "f1": 0.9062,
+   "false_negatives": 6,
+   "false_positives": 0,
+   "cost_per_1k": 0.487,
+   "latency_p50": 0.954,
+   "latency_mean": 1.285,
+   "calls": 57
+  },
+  "anthropic:claude-sonnet-5": {
+   "accuracy": 0.9474,
+   "precision": 0.9444,
+   "recall": 0.9714,
+   "f1": 0.9577,
+   "false_negatives": 1,
+   "false_positives": 2,
+   "cost_per_1k": 1.2744,
+   "latency_p50": 1.656,
+   "latency_mean": 1.746,
+   "calls": 57
+  }
+ }
+}

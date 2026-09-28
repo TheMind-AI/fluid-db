@@ -1,0 +1,495 @@
+{
+ "writes": {
+  "support": {
+   "messages": 675,
+   "truth_records": 614,
+   "write_accuracy": 0.8257,
+   "tier_a_after_bootstrap": 0.0,
+   "ingest_spent": 0.059,
+   "tables": {
+    "communication_preferences": 4,
+    "emails": 1,
+    "events": 17,
+    "expenses": 9,
+    "organization_policies": 2,
+    "organizations": 8,
+    "people": 11,
+    "responsibilities": 6,
+    "shifts": 1,
+    "tasks": 3,
+    "tickets": 157
+   }
+  },
+  "sales": {
+   "messages": 253,
+   "truth_records": 186,
+   "write_accuracy": 0.9409,
+   "tier_a_after_bootstrap": 0.0827,
+   "ingest_spent": 0.1662,
+   "tables": {
+    "communication_preferences": 1,
+    "emails": 13,
+    "event_attendees": 52,
+    "events": 71,
+    "organizations": 24,
+    "people": 29,
+    "sales_leads": 34,
+    "sales_targets": 1,
+    "sales_territories": 2,
+    "tasks": 2,
+    "work_relationships": 2
+   }
+  },
+  "projects": {
+   "messages": 197,
+   "truth_records": 93,
+   "write_accuracy": 0.9677,
+   "tier_a_after_bootstrap": 0.6234,
+   "ingest_spent": 0.0815,
+   "tables": {
+    "emails": 1,
+    "events": 122,
+    "hiring_plans": 1,
+    "incidents": 3,
+    "interests": 2,
+    "people": 5,
+    "preferences": 1,
+    "projects": 3,
+    "tasks": 12,
+    "team_members": 5,
+    "teams": 2
+   }
+  }
+ },
+ "reads": {
+  "support": {
+   "log_rag": {
+    "accuracy": 70.8,
+    "by_type": {
+     "semantic_current": 66.7,
+     "semantic_history": 66.7,
+     "aggregate": 0.0,
+     "episodic_event": 83.3,
+     "episodic_time": 100.0,
+     "routine": 66.7,
+     "prospective": 33.3,
+     "preference": 100.0,
+     "source": 100.0,
+     "period": 33.3,
+     "metamemory": 100.0,
+     "forgotten": 100.0
+    },
+    "answer_tokens": 632
+   },
+   "facts_log": {
+    "accuracy": 75.0,
+    "by_type": {
+     "semantic_current": 66.7,
+     "semantic_history": 83.3,
+     "aggregate": 33.3,
+     "episodic_event": 83.3,
+     "episodic_time": 100.0,
+     "routine": 50.0,
+     "prospective": 50.0,
+     "preference": 100.0,
+     "source": 100.0,
+     "period": 66.7,
+     "metamemory": 100.0,
+     "forgotten": 66.7
+    },
+    "answer_tokens": 1434
+   },
+   "hybrid_r4": {
+    "accuracy": 76.4,
+    "by_type": {
+     "semantic_current": 83.3,
+     "semantic_history": 83.3,
+     "aggregate": 33.3,
+     "episodic_event": 66.7,
+     "episodic_time": 100.0,
+     "routine": 66.7,
+     "prospective": 100.0,
+     "preference": 83.3,
+     "source": 100.0,
+     "period": 66.7,
+     "metamemory": 100.0,
+     "forgotten": 33.3
+    },
+    "answer_tokens": 0
+   },
+   "plus_computed": {
+    "accuracy": 72.2,
+    "by_type": {
+     "semantic_current": 66.7,
+     "semantic_history": 100.0,
+     "aggregate": 0.0,
+     "episodic_event": 83.3,
+     "episodic_time": 100.0,
+     "routine": 33.3,
+     "prospective": 50.0,
+     "preference": 100.0,
+     "source": 100.0,
+     "period": 66.7,
+     "metamemory": 100.0,
+     "forgotten": 66.7
+    },
+    "answer_tokens": 3681
+   },
+   "brain_jev_recall": {
+    "accuracy": 76.4,
+    "by_type": {
+     "semantic_current": 66.7,
+     "semantic_history": 66.7,
+     "aggregate": 33.3,
+     "episodic_event": 83.3,
+     "episodic_time": 100.0,
+     "routine": 66.7,
+     "prospective": 33.3,
+     "preference": 100.0,
+     "source": 100.0,
+     "period": 66.7,
+     "metamemory": 100.0,
+     "forgotten": 100.0
+    },
+    "answer_tokens": 2142
+   },
+   "brain_all": {
+    "accuracy": 77.8,
+    "by_type": {
+     "semantic_current": 66.7,
+     "semantic_history": 100.0,
+     "aggregate": 33.3,
+     "episodic_event": 83.3,
+     "episodic_time": 100.0,
+     "routine": 33.3,
+     "prospective": 50.0,
+     "preference": 100.0,
+     "source": 100.0,
+     "period": 66.7,
+     "metamemory": 100.0,
+     "forgotten": 100.0
+    },
+    "answer_tokens": 4613
+   },
+   "full_context": {
+    "accuracy": 90.3,
+    "by_type": {
+     "semantic_current": 83.3,
+     "semantic_history": 100.0,
+     "aggregate": 66.7,
+     "episodic_event": 83.3,
+     "episodic_time": 100.0,
+     "routine": 83.3,
+     "prospective": 66.7,
+     "preference": 100.0,
+     "source": 100.0,
+     "period": 100.0,
+     "metamemory": 100.0,
+     "forgotten": 100.0
+    },
+    "answer_tokens": 21109
+   }
+  },
+  "sales": {
+   "log_rag": {
+    "accuracy": 70.8,
+    "by_type": {
+     "semantic_current": 66.7,
+     "semantic_history": 100.0,
+     "aggregate": 0.0,
+     "episodic_event": 100.0,
+     "episodic_time": 100.0,
+     "routine": 66.7,
+     "prospective": 66.7,
+     "preference": 83.3,
+     "source": 66.7,
+     "period": 33.3,
+     "metamemory": 100.0,
+     "forgotten": 66.7
+    },
+    "answer_tokens": 663
+   },
+   "facts_log": {
+    "accuracy": 70.8,
+    "by_type": {
+     "semantic_current": 66.7,
+     "semantic_history": 100.0,
+     "aggregate": 0.0,
+     "episodic_event": 83.3,
+     "episodic_time": 100.0,
+     "routine": 66.7,
+     "prospective": 100.0,
+     "preference": 83.3,
+     "source": 50.0,
+     "period": 33.3,
+     "metamemory": 100.0,
+     "forgotten": 66.7
+    },
+    "answer_tokens": 1551
+   },
+   "hybrid_r4": {
+    "accuracy": 68.1,
+    "by_type": {
+     "semantic_current": 83.3,
+     "semantic_history": 83.3,
+     "aggregate": 33.3,
+     "episodic_event": 100.0,
+     "episodic_time": 83.3,
+     "routine": 66.7,
+     "prospective": 83.3,
+     "preference": 66.7,
+     "source": 50.0,
+     "period": 0.0,
+     "metamemory": 100.0,
+     "forgotten": 66.7
+    },
+    "answer_tokens": 0
+   },
+   "plus_computed": {
+    "accuracy": 76.4,
+    "by_type": {
+     "semantic_current": 66.7,
+     "semantic_history": 100.0,
+     "aggregate": 33.3,
+     "episodic_event": 83.3,
+     "episodic_time": 100.0,
+     "routine": 100.0,
+     "prospective": 100.0,
+     "preference": 83.3,
+     "source": 50.0,
+     "period": 66.7,
+     "metamemory": 66.7,
+     "forgotten": 66.7
+    },
+    "answer_tokens": 3241
+   },
+   "brain_jev_recall": {
+    "accuracy": 80.6,
+    "by_type": {
+     "semantic_current": 66.7,
+     "semantic_history": 100.0,
+     "aggregate": 66.7,
+     "episodic_event": 83.3,
+     "episodic_time": 100.0,
+     "routine": 66.7,
+     "prospective": 100.0,
+     "preference": 83.3,
+     "source": 66.7,
+     "period": 66.7,
+     "metamemory": 100.0,
+     "forgotten": 66.7
+    },
+    "answer_tokens": 2438
+   },
+   "brain_all": {
+    "accuracy": 76.4,
+    "by_type": {
+     "semantic_current": 66.7,
+     "semantic_history": 100.0,
+     "aggregate": 66.7,
+     "episodic_event": 83.3,
+     "episodic_time": 100.0,
+     "routine": 100.0,
+     "prospective": 100.0,
+     "preference": 83.3,
+     "source": 50.0,
+     "period": 66.7,
+     "metamemory": 33.3,
+     "forgotten": 66.7
+    },
+    "answer_tokens": 3813
+   },
+   "full_context": {
+    "accuracy": 91.7,
+    "by_type": {
+     "semantic_current": 100.0,
+     "semantic_history": 100.0,
+     "aggregate": 66.7,
+     "episodic_event": 100.0,
+     "episodic_time": 100.0,
+     "routine": 66.7,
+     "prospective": 100.0,
+     "preference": 83.3,
+     "source": 83.3,
+     "period": 100.0,
+     "metamemory": 100.0,
+     "forgotten": 100.0
+    },
+    "answer_tokens": 9161
+   }
+  },
+  "projects": {
+   "log_rag": {
+    "accuracy": 68.1,
+    "by_type": {
+     "semantic_current": 33.3,
+     "semantic_history": 66.7,
+     "aggregate": 66.7,
+     "episodic_event": 16.7,
+     "episodic_time": 100.0,
+     "routine": 50.0,
+     "prospective": 50.0,
+     "preference": 66.7,
+     "source": 100.0,
+     "period": 66.7,
+     "metamemory": 100.0,
+     "forgotten": 100.0
+    },
+    "answer_tokens": 587
+   },
+   "facts_log": {
+    "accuracy": 83.3,
+    "by_type": {
+     "semantic_current": 100.0,
+     "semantic_history": 100.0,
+     "aggregate": 66.7,
+     "episodic_event": 83.3,
+     "episodic_time": 100.0,
+     "routine": 66.7,
+     "prospective": 33.3,
+     "preference": 100.0,
+     "source": 83.3,
+     "period": 66.7,
+     "metamemory": 100.0,
+     "forgotten": 100.0
+    },
+    "answer_tokens": 1117
+   },
+   "hybrid_r4": {
+    "accuracy": 87.5,
+    "by_type": {
+     "semantic_current": 50.0,
+     "semantic_history": 66.7,
+     "aggregate": 100.0,
+     "episodic_event": 100.0,
+     "episodic_time": 100.0,
+     "routine": 50.0,
+     "prospective": 83.3,
+     "preference": 100.0,
+     "source": 100.0,
+     "period": 100.0,
+     "metamemory": 100.0,
+     "forgotten": 100.0
+    },
+    "answer_tokens": 0
+   },
+   "plus_computed": {
+    "accuracy": 87.5,
+    "by_type": {
+     "semantic_current": 100.0,
+     "semantic_history": 100.0,
+     "aggregate": 66.7,
+     "episodic_event": 83.3,
+     "episodic_time": 100.0,
+     "routine": 66.7,
+     "prospective": 83.3,
+     "preference": 100.0,
+     "source": 83.3,
+     "period": 66.7,
+     "metamemory": 100.0,
+     "forgotten": 100.0
+    },
+    "answer_tokens": 2795
+   },
+   "brain_jev_recall": {
+    "accuracy": 87.5,
+    "by_type": {
+     "semantic_current": 100.0,
+     "semantic_history": 100.0,
+     "aggregate": 100.0,
+     "episodic_event": 50.0,
+     "episodic_time": 100.0,
+     "routine": 83.3,
+     "prospective": 50.0,
+     "preference": 100.0,
+     "source": 100.0,
+     "period": 66.7,
+     "metamemory": 100.0,
+     "forgotten": 100.0
+    },
+    "answer_tokens": 1923
+   },
+   "brain_all": {
+    "accuracy": 91.7,
+    "by_type": {
+     "semantic_current": 100.0,
+     "semantic_history": 100.0,
+     "aggregate": 100.0,
+     "episodic_event": 100.0,
+     "episodic_time": 100.0,
+     "routine": 83.3,
+     "prospective": 66.7,
+     "preference": 100.0,
+     "source": 83.3,
+     "period": 66.7,
+     "metamemory": 100.0,
+     "forgotten": 100.0
+    },
+    "answer_tokens": 3471
+   },
+   "full_context": {
+    "accuracy": 91.7,
+    "by_type": {
+     "semantic_current": 83.3,
+     "semantic_history": 100.0,
+     "aggregate": 100.0,
+     "episodic_event": 100.0,
+     "episodic_time": 100.0,
+     "routine": 33.3,
+     "prospective": 100.0,
+     "preference": 100.0,
+     "source": 83.3,
+     "period": 100.0,
+     "metamemory": 100.0,
+     "forgotten": 100.0
+    },
+    "answer_tokens": 5278
+   }
+  }
+ },
+ "pooled": {
+  "log_rag": 69.9,
+  "facts_log": 76.4,
+  "hybrid_r4": 77.3,
+  "plus_computed": 78.7,
+  "brain_jev_recall": 81.5,
+  "brain_all": 81.9,
+  "full_context": 91.2
+ },
+ "H3": {
+  "brain_all_minus_facts_log": [
+   5.6,
+   0.0,
+   11.6
+  ],
+  "per_scenario": {
+   "support": [
+    77.8,
+    75.0
+   ],
+   "sales": [
+    76.4,
+    70.8
+   ],
+   "projects": [
+    91.7,
+    83.3
+   ]
+  }
+ },
+ "H4": {
+  "routine_period_plus_computed": 66.7,
+  "routine_period_facts_log": 58.3
+ },
+ "H5": {
+  "support": 75.0,
+  "sales": 83.3,
+  "projects": 100.0
+ },
+ "H6": {
+  "full_context": 91.2,
+  "brain_all": 81.9,
+  "full_context_aggregate": 77.8,
+  "brain_all_aggregate": 66.7
+ }
+}

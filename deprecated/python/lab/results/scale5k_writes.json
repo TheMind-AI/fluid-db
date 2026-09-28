@@ -1,0 +1,98 @@
+{
+ "by_tier": {
+  "C": {
+   "correct": 948,
+   "of": 1021,
+   "accuracy": 0.9285
+  },
+  "A": {
+   "correct": 3354,
+   "of": 3514,
+   "accuracy": 0.9545
+  },
+  "C-skip": {
+   "correct": 0,
+   "of": 2,
+   "accuracy": 0.0
+  }
+ },
+ "by_tier_kind": {
+  "A/climb": {
+   "correct": 60,
+   "of": 62,
+   "accuracy": 0.9677
+  },
+  "A/expense": {
+   "correct": 1905,
+   "of": 2063,
+   "accuracy": 0.9234
+  },
+  "A/movie": {
+   "correct": 82,
+   "of": 82,
+   "accuracy": 1.0
+  },
+  "A/run": {
+   "correct": 128,
+   "of": 128,
+   "accuracy": 1.0
+  },
+  "A/sleep": {
+   "correct": 768,
+   "of": 768,
+   "accuracy": 1.0
+  },
+  "A/weight": {
+   "correct": 411,
+   "of": 411,
+   "accuracy": 1.0
+  },
+  "C/climb": {
+   "correct": 142,
+   "of": 152,
+   "accuracy": 0.9342
+  },
+  "C/expense": {
+   "correct": 665,
+   "of": 721,
+   "accuracy": 0.9223
+  },
+  "C/movie": {
+   "correct": 13,
+   "of": 19,
+   "accuracy": 0.6842
+  },
+  "C/run": {
+   "correct": 29,
+   "of": 29,
+   "accuracy": 1.0
+  },
+  "C/sleep": {
+   "correct": 61,
+   "of": 62,
+   "accuracy": 0.9839
+  },
+  "C/weight": {
+   "correct": 38,
+   "of": 38,
+   "accuracy": 1.0
+  },
+  "C-skip/expense": {
+   "correct": 0,
+   "of": 2,
+   "accuracy": 0.0
+  }
+ },
+ "top_misses": {
+  "expense.date": 117,
+  "expense.merchant": 60,
+  "expense.with": 52,
+  "movie.no row": 6,
+  "expense.no row": 5,
+  "climb.date": 5,
+  "climb.no row": 5,
+  "climb.sent": 2,
+  "sleep.date": 1,
+  "expense.amount": 1
+ }
+}

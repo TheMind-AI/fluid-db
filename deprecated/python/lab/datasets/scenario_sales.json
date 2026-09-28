@@ -1,0 +1,3375 @@
+{
+ "name": "scenario_sales",
+ "user": "Daniel Park",
+ "description": "The notes of Daniel Park, account executive at Lumen Analytics: leads, calls, demos, proposals, negotiations, wins and losses. Jan-Jun 2026.",
+ "now": "2026-06-30T18:00:00",
+ "messages": [
+  {
+   "id": "sa0001",
+   "ts": "2026-01-05T09:36:00",
+   "kind": "store",
+   "text": "Q1 quota is $150k new ARR; Sara Nguyen is my manager and Omar Haddad my sales engineer",
+   "truth": {
+    "kind": "quota",
+    "checks": {
+     "amount": 150000.0
+    }
+   }
+  },
+  {
+   "id": "sa0002",
+   "ts": "2026-01-05T10:09:00",
+   "kind": "chitchat",
+   "text": "remind me what we said about this later"
+  },
+  {
+   "id": "sa0003",
+   "ts": "2026-01-05T10:25:00",
+   "kind": "store",
+   "text": "pipeline review with Sara done, 1 open deals"
+  },
+  {
+   "id": "sa0004",
+   "ts": "2026-01-05T10:42:00",
+   "kind": "store",
+   "text": "new referral lead: Fabrikam, Hannah Weiss (Director of Ops), about 60 users",
+   "truth": {
+    "kind": "deal_new",
+    "checks": {
+     "company": "Fabrikam",
+     "contact": [
+      "Hannah Weiss",
+      "Hannah"
+     ],
+     "date": "2026-01-05"
+    }
+   }
+  },
+  {
+   "id": "sa0005",
+   "ts": "2026-01-08T16:40:00",
+   "kind": "chitchat",
+   "text": "remind me what we said about this later"
+  },
+  {
+   "id": "sa0006",
+   "ts": "2026-01-09T16:11:00",
+   "kind": "question",
+   "text": "what's on my plate today?"
+  },
+  {
+   "id": "sa0007",
+   "ts": "2026-01-12T16:29:00",
+   "kind": "store",
+   "text": "discovery call with Hannah at Fabrikam: need on-prem deployment; next step a demo",
+   "truth": {
+    "kind": "deal_note",
+    "checks": {
+     "company": "Fabrikam"
+    }
+   }
+  },
+  {
+   "id": "sa0008",
+   "ts": "2026-01-14T11:26:00",
+   "kind": "chitchat",
+   "text": "remind me what we said about this later"
+  },
+  {
+   "id": "sa0009",
+   "ts": "2026-01-14T17:40:00",
+   "kind": "store",
+   "text": "Contoso's CFO Mark Liu wants everything in writing, no verbal commitments",
+   "truth": {
+    "kind": "pref",
+    "checks": {
+     "company": "Contoso"
+    }
+   }
+  },
+  {
+   "id": "sa0010",
+   "ts": "2026-01-16T12:39:00",
+   "kind": "store",
+   "text": "Priya Raman (Contoso) prefers Slack over email",
+   "truth": {
+    "kind": "pref",
+    "checks": {
+     "company": "Contoso"
+    }
+   }
+  },
+  {
+   "id": "sa0011",
+   "ts": "2026-01-19T12:45:00",
+   "kind": "question",
+   "text": "what's on my plate today?"
+  },
+  {
+   "id": "sa0012",
+   "ts": "2026-01-20T10:06:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Lumen demo for Fabrikam\nDTSTART:20260122T140000\nDTEND:20260122T150000\nATTENDEE;CN=Hannah Weiss\nATTENDEE;CN=Omar Haddad\nORGANIZER;CN=Daniel Park\nEND:VEVENT",
+   "truth": {
+    "kind": "demo",
+    "checks": {
+     "company": "Fabrikam",
+     "date": "2026-01-22"
+    }
+   }
+  },
+  {
+   "id": "sa0013",
+   "ts": "2026-01-21T11:03:00",
+   "kind": "question",
+   "text": "what's on my plate today?"
+  },
+  {
+   "id": "sa0014",
+   "ts": "2026-01-22T15:23:00",
+   "kind": "store",
+   "text": "Fabrikam demo with Omar: lots of questions on need on-prem deployment, overall positive",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Fabrikam",
+     "stage": "demo"
+    }
+   }
+  },
+  {
+   "id": "sa0015",
+   "ts": "2026-01-26T10:18:00",
+   "kind": "store",
+   "text": "pipeline review with Sara done, 1 open deals"
+  },
+  {
+   "id": "sa0016",
+   "ts": "2026-01-26T17:45:00",
+   "kind": "chitchat",
+   "text": "ok"
+  },
+  {
+   "id": "sa0017",
+   "ts": "2026-01-28T13:15:00",
+   "kind": "chitchat",
+   "text": "ok"
+  },
+  {
+   "id": "sa0018",
+   "ts": "2026-01-29T10:40:00",
+   "kind": "store",
+   "text": "new referral lead: Lucerne Publishing, Emma Stone (CFO), about 20 users",
+   "truth": {
+    "kind": "deal_new",
+    "checks": {
+     "company": "Lucerne Publishing",
+     "contact": [
+      "Emma Stone",
+      "Emma"
+     ],
+     "date": "2026-01-29"
+    }
+   }
+  },
+  {
+   "id": "sa0019",
+   "ts": "2026-01-30T15:04:00",
+   "kind": "store",
+   "text": "sent Fabrikam a proposal: 60 seats, $90,000 ARR, target close Feb 21, 2026",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Fabrikam",
+     "stage": "proposal",
+     "amount": 90000.0
+    }
+   }
+  },
+  {
+   "id": "sa0020",
+   "ts": "2026-02-03T16:31:00",
+   "kind": "chitchat",
+   "text": "morning"
+  },
+  {
+   "id": "sa0021",
+   "ts": "2026-02-05T11:32:00",
+   "kind": "store",
+   "text": "discovery call with Emma at Lucerne Publishing: worried about SSO; next step a demo",
+   "truth": {
+    "kind": "deal_note",
+    "checks": {
+     "company": "Lucerne Publishing"
+    }
+   }
+  },
+  {
+   "id": "sa0022",
+   "ts": "2026-02-06T11:43:00",
+   "kind": "store",
+   "text": "Woodgrove Bank requires on-prem deployment, no cloud at all",
+   "truth": {
+    "kind": "pref",
+    "checks": {
+     "company": "Woodgrove Bank"
+    }
+   }
+  },
+  {
+   "id": "sa0023",
+   "ts": "2026-02-09T10:17:00",
+   "kind": "store",
+   "text": "pipeline review with Sara done, 2 open deals"
+  },
+  {
+   "id": "sa0024",
+   "ts": "2026-02-09T17:40:00",
+   "kind": "chitchat",
+   "text": "brb, lunch"
+  },
+  {
+   "id": "sa0025",
+   "ts": "2026-02-10T11:44:00",
+   "kind": "store",
+   "text": "inbound lead from Litware — Sven Dahl, Head of BI; ~60 seats",
+   "truth": {
+    "kind": "deal_new",
+    "checks": {
+     "company": "Litware",
+     "contact": [
+      "Sven Dahl",
+      "Sven"
+     ],
+     "date": "2026-02-10"
+    }
+   }
+  },
+  {
+   "id": "sa0026",
+   "ts": "2026-02-11T11:11:00",
+   "kind": "store",
+   "text": "new inbound lead: Contoso, Priya Raman (VP Engineering), about 80 users",
+   "truth": {
+    "kind": "deal_new",
+    "checks": {
+     "company": "Contoso",
+     "contact": [
+      "Priya Raman",
+      "Priya"
+     ],
+     "date": "2026-02-11"
+    }
+   }
+  },
+  {
+   "id": "sa0027",
+   "ts": "2026-02-11T13:29:00",
+   "kind": "chitchat",
+   "text": "lol"
+  },
+  {
+   "id": "sa0028",
+   "ts": "2026-02-13T09:28:00",
+   "kind": "store",
+   "text": "new outbound lead: Proseware, Arjun Mehta (Data Manager), about 60 users",
+   "truth": {
+    "kind": "deal_new",
+    "checks": {
+     "company": "Proseware",
+     "contact": [
+      "Arjun Mehta",
+      "Arjun"
+     ],
+     "date": "2026-02-13"
+    }
+   }
+  },
+  {
+   "id": "sa0029",
+   "ts": "2026-02-13T10:28:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Lumen demo for Lucerne Publishing\nDTSTART:20260217T140000\nDTEND:20260217T150000\nATTENDEE;CN=Emma Stone\nATTENDEE;CN=Omar Haddad\nORGANIZER;CN=Daniel Park\nEND:VEVENT",
+   "truth": {
+    "kind": "demo",
+    "checks": {
+     "company": "Lucerne Publishing",
+     "date": "2026-02-17"
+    }
+   }
+  },
+  {
+   "id": "sa0030",
+   "ts": "2026-02-13T12:25:00",
+   "kind": "chitchat",
+   "text": "hmm"
+  },
+  {
+   "id": "sa0031",
+   "ts": "2026-02-16T10:10:00",
+   "kind": "store",
+   "text": "pipeline review with Sara done, 6 open deals"
+  },
+  {
+   "id": "sa0032",
+   "ts": "2026-02-16T12:18:00",
+   "kind": "store",
+   "text": "new outbound lead: Alpine Ski House, Lena Fischer (Head of Finance), about 60 users",
+   "truth": {
+    "kind": "deal_new",
+    "checks": {
+     "company": "Alpine Ski House",
+     "contact": [
+      "Lena Fischer",
+      "Lena"
+     ],
+     "date": "2026-02-16"
+    }
+   }
+  },
+  {
+   "id": "sa0033",
+   "ts": "2026-02-16T12:44:00",
+   "kind": "store",
+   "text": "discovery call with Sven at Litware: worried about SSO; next step a demo",
+   "truth": {
+    "kind": "deal_note",
+    "checks": {
+     "company": "Litware"
+    }
+   }
+  },
+  {
+   "id": "sa0034",
+   "ts": "2026-02-16T15:27:00",
+   "kind": "store",
+   "text": "discovery call with Arjun at Proseware: want a longer pilot; next step a demo",
+   "truth": {
+    "kind": "deal_note",
+    "checks": {
+     "company": "Proseware"
+    }
+   }
+  },
+  {
+   "id": "sa0035",
+   "ts": "2026-02-16T17:25:00",
+   "kind": "store",
+   "text": "negotiating with Fabrikam: 15% discount, now $76,500 ARR",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Fabrikam",
+     "stage": [
+      "negotiat"
+     ],
+     "amount": 76500.0
+    }
+   }
+  },
+  {
+   "id": "sa0036",
+   "ts": "2026-02-16T18:24:00",
+   "kind": "store",
+   "text": {
+    "type": "email",
+    "from": "sara.nguyen@lumen.io",
+    "to": "daniel.park@lumen.io",
+    "subject": "Re: Fabrikam discount",
+    "date": "2026-02-16T18:05:00",
+    "body": "Approved: 15% for Fabrikam, one-time, 12-month term only. — Sara"
+   },
+   "truth": {
+    "kind": "approval",
+    "checks": {
+     "company": "Fabrikam"
+    }
+   }
+  },
+  {
+   "id": "sa0037",
+   "ts": "2026-02-17T15:27:00",
+   "kind": "store",
+   "text": "demo with Lucerne Publishing went well, Omar showed the dashboards; moved to demo stage",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Lucerne Publishing",
+     "stage": "demo"
+    }
+   }
+  },
+  {
+   "id": "sa0038",
+   "ts": "2026-02-18T12:10:00",
+   "kind": "store",
+   "text": "discovery call with Priya at Contoso: concerned about data residency in the EU; next step a demo",
+   "truth": {
+    "kind": "deal_note",
+    "checks": {
+     "company": "Contoso"
+    }
+   }
+  },
+  {
+   "id": "sa0039",
+   "ts": "2026-02-19T10:30:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Lumen demo for Contoso\nDTSTART:20260224T140000\nDTEND:20260224T150000\nATTENDEE;CN=Priya Raman\nATTENDEE;CN=Omar Haddad\nORGANIZER;CN=Daniel Park\nEND:VEVENT",
+   "truth": {
+    "kind": "demo",
+    "checks": {
+     "company": "Contoso",
+     "date": "2026-02-24"
+    }
+   }
+  },
+  {
+   "id": "sa0040",
+   "ts": "2026-02-19T12:20:00",
+   "kind": "store",
+   "text": "discovery call with Lena at Alpine Ski House: price is above their budget; next step a demo",
+   "truth": {
+    "kind": "deal_note",
+    "checks": {
+     "company": "Alpine Ski House"
+    }
+   }
+  },
+  {
+   "id": "sa0041",
+   "ts": "2026-02-20T14:40:00",
+   "kind": "chitchat",
+   "text": "👍"
+  },
+  {
+   "id": "sa0042",
+   "ts": "2026-02-21T10:14:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Lumen demo for Litware\nDTSTART:20260226T140000\nDTEND:20260226T150000\nATTENDEE;CN=Sven Dahl\nATTENDEE;CN=Omar Haddad\nORGANIZER;CN=Daniel Park\nEND:VEVENT",
+   "truth": {
+    "kind": "demo",
+    "checks": {
+     "company": "Litware",
+     "date": "2026-02-26"
+    }
+   }
+  },
+  {
+   "id": "sa0043",
+   "ts": "2026-02-24T14:50:00",
+   "kind": "chitchat",
+   "text": "nice"
+  },
+  {
+   "id": "sa0044",
+   "ts": "2026-02-24T15:36:00",
+   "kind": "store",
+   "text": "Contoso demo with Omar: lots of questions on data residency in the EU, overall positive",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Contoso",
+     "stage": "demo"
+    }
+   }
+  },
+  {
+   "id": "sa0045",
+   "ts": "2026-02-24T16:41:00",
+   "kind": "store",
+   "text": "closed won: Fabrikam, $76,500 ARR",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Fabrikam",
+     "stage": [
+      "won",
+      "signed",
+      "closed"
+     ],
+     "amount": 76500.0
+    }
+   }
+  },
+  {
+   "id": "sa0046",
+   "ts": "2026-02-25T14:22:00",
+   "kind": "store",
+   "text": "sent Lucerne Publishing a proposal: 20 seats, $30,000 ARR, target close Apr 3, 2026",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Lucerne Publishing",
+     "stage": "proposal",
+     "amount": 30000.0
+    }
+   }
+  },
+  {
+   "id": "sa0047",
+   "ts": "2026-02-26T10:38:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Lumen demo for Proseware\nDTSTART:20260303T140000\nDTEND:20260303T150000\nATTENDEE;CN=Arjun Mehta\nATTENDEE;CN=Omar Haddad\nORGANIZER;CN=Daniel Park\nEND:VEVENT",
+   "truth": {
+    "kind": "demo",
+    "checks": {
+     "company": "Proseware",
+     "date": "2026-03-03"
+    }
+   }
+  },
+  {
+   "id": "sa0048",
+   "ts": "2026-02-26T15:11:00",
+   "kind": "store",
+   "text": "Litware demo done (with Omar). they liked the alerts",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Litware",
+     "stage": "demo"
+    }
+   }
+  },
+  {
+   "id": "sa0049",
+   "ts": "2026-02-27T10:22:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Lumen demo for Alpine Ski House\nDTSTART:20260303T140000\nDTEND:20260303T150000\nATTENDEE;CN=Lena Fischer\nATTENDEE;CN=Omar Haddad\nORGANIZER;CN=Daniel Park\nEND:VEVENT",
+   "truth": {
+    "kind": "demo",
+    "checks": {
+     "company": "Alpine Ski House",
+     "date": "2026-03-03"
+    }
+   }
+  },
+  {
+   "id": "sa0050",
+   "ts": "2026-03-02T10:01:00",
+   "kind": "chitchat",
+   "text": "lol"
+  },
+  {
+   "id": "sa0051",
+   "ts": "2026-03-02T10:12:00",
+   "kind": "store",
+   "text": "pipeline review with Sara done, 5 open deals"
+  },
+  {
+   "id": "sa0052",
+   "ts": "2026-03-02T12:07:00",
+   "kind": "store",
+   "text": "sent Contoso a proposal: 80 seats, $120,000 ARR, target close Apr 8, 2026",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Contoso",
+     "stage": "proposal",
+     "amount": 120000.0
+    }
+   }
+  },
+  {
+   "id": "sa0053",
+   "ts": "2026-03-03T15:12:00",
+   "kind": "store",
+   "text": "demo with Alpine Ski House went well, Omar showed the dashboards; moved to demo stage",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Alpine Ski House",
+     "stage": "demo"
+    }
+   }
+  },
+  {
+   "id": "sa0054",
+   "ts": "2026-03-03T15:19:00",
+   "kind": "store",
+   "text": "Hannah at Fabrikam told me in confidence they're laying off 15% of ops in April, that's why they're stalling",
+   "truth": {
+    "kind": "erased",
+    "checks": {}
+   }
+  },
+  {
+   "id": "sa0055",
+   "ts": "2026-03-03T15:33:00",
+   "kind": "store",
+   "text": "Proseware demo with Omar: lots of questions on want a longer pilot, overall positive",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Proseware",
+     "stage": "demo"
+    }
+   }
+  },
+  {
+   "id": "sa0056",
+   "ts": "2026-03-04T15:34:00",
+   "kind": "question",
+   "text": "what's on my plate today?"
+  },
+  {
+   "id": "sa0057",
+   "ts": "2026-03-04T16:08:00",
+   "kind": "store",
+   "text": "Litware went with Quantix. lost",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Litware",
+     "stage": [
+      "lost",
+      "closed_lost",
+      "closed lost"
+     ]
+    }
+   }
+  },
+  {
+   "id": "sa0058",
+   "ts": "2026-03-05T09:39:00",
+   "kind": "delete",
+   "text": "please forget what I noted about Fabrikam's layoffs, that was confidential",
+   "truth": {
+    "kind": "forget",
+    "checks": {
+     "erase": [
+      "laying off",
+      "15% of ops"
+     ]
+    }
+   }
+  },
+  {
+   "id": "sa0059",
+   "ts": "2026-03-09T10:18:00",
+   "kind": "store",
+   "text": "pipeline review with Sara done, 5 open deals"
+  },
+  {
+   "id": "sa0060",
+   "ts": "2026-03-09T11:41:00",
+   "kind": "store",
+   "text": "outbound lead from Wingtip — Grace Kim, Analytics Lead; ~20 seats",
+   "truth": {
+    "kind": "deal_new",
+    "checks": {
+     "company": "Wingtip",
+     "contact": [
+      "Grace Kim",
+      "Grace"
+     ],
+     "date": "2026-03-09"
+    }
+   }
+  },
+  {
+   "id": "sa0061",
+   "ts": "2026-03-09T14:13:00",
+   "kind": "chitchat",
+   "text": "👍"
+  },
+  {
+   "id": "sa0062",
+   "ts": "2026-03-09T14:26:00",
+   "kind": "store",
+   "text": "negotiating with Lucerne Publishing: no discount, $30,000 ARR",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Lucerne Publishing",
+     "stage": [
+      "negotiat"
+     ],
+     "amount": 30000.0
+    }
+   }
+  },
+  {
+   "id": "sa0063",
+   "ts": "2026-03-11T15:33:00",
+   "kind": "store",
+   "text": "sent Alpine Ski House a proposal: 60 seats, $90,000 ARR, target close Apr 14, 2026",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Alpine Ski House",
+     "stage": "proposal",
+     "amount": 90000.0
+    }
+   }
+  },
+  {
+   "id": "sa0064",
+   "ts": "2026-03-13T15:08:00",
+   "kind": "store",
+   "text": "discovery call with Grace at Wingtip: their team already uses spreadsheets; next step a demo",
+   "truth": {
+    "kind": "deal_note",
+    "checks": {
+     "company": "Wingtip"
+    }
+   }
+  },
+  {
+   "id": "sa0065",
+   "ts": "2026-03-13T16:13:00",
+   "kind": "store",
+   "text": "Proseware went with DataForge. lost",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Proseware",
+     "stage": [
+      "lost",
+      "closed_lost",
+      "closed lost"
+     ]
+    }
+   }
+  },
+  {
+   "id": "sa0066",
+   "ts": "2026-03-16T09:17:00",
+   "kind": "store",
+   "text": "new inbound lead: Woodgrove Bank, Claire Dubois (CIO), about 60 users",
+   "truth": {
+    "kind": "deal_new",
+    "checks": {
+     "company": "Woodgrove Bank",
+     "contact": [
+      "Claire Dubois",
+      "Claire"
+     ],
+     "date": "2026-03-16"
+    }
+   }
+  },
+  {
+   "id": "sa0067",
+   "ts": "2026-03-16T10:09:00",
+   "kind": "store",
+   "text": "pipeline review with Sara done, 5 open deals"
+  },
+  {
+   "id": "sa0068",
+   "ts": "2026-03-16T15:22:00",
+   "kind": "store",
+   "text": "negotiating with Contoso: no discount, $120,000 ARR",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Contoso",
+     "stage": [
+      "negotiat"
+     ],
+     "amount": 120000.0
+    }
+   }
+  },
+  {
+   "id": "sa0069",
+   "ts": "2026-03-17T17:11:00",
+   "kind": "store",
+   "text": "negotiating with Alpine Ski House: 5% discount, now $85,500 ARR",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Alpine Ski House",
+     "stage": [
+      "negotiat"
+     ],
+     "amount": 85500.0
+    }
+   }
+  },
+  {
+   "id": "sa0070",
+   "ts": "2026-03-18T08:34:00",
+   "kind": "store",
+   "text": {
+    "type": "email",
+    "from": "cfo@wingtip.com",
+    "to": "daniel.park@lumen.io",
+    "subject": "Budget",
+    "date": "2026-03-18T08:30:00",
+    "body": "Daniel, our analytics budget for this year is frozen until the Q3 planning cycle. We can revisit in September. — Paul Grant, CFO, Wingtip"
+   },
+   "truth": {
+    "kind": "doc",
+    "checks": {
+     "company": "Wingtip"
+    }
+   }
+  },
+  {
+   "id": "sa0071",
+   "ts": "2026-03-18T15:37:00",
+   "kind": "chitchat",
+   "text": "ok"
+  },
+  {
+   "id": "sa0072",
+   "ts": "2026-03-20T10:25:00",
+   "kind": "question",
+   "text": "can you summarize this week?"
+  },
+  {
+   "id": "sa0073",
+   "ts": "2026-03-20T11:38:00",
+   "kind": "store",
+   "text": "new outbound lead: Humongous Insurance, Mark Evans (VP Data), about 80 users",
+   "truth": {
+    "kind": "deal_new",
+    "checks": {
+     "company": "Humongous Insurance",
+     "contact": [
+      "Mark Evans",
+      "Mark"
+     ],
+     "date": "2026-03-20"
+    }
+   }
+  },
+  {
+   "id": "sa0074",
+   "ts": "2026-03-22T10:11:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Lumen demo for Wingtip\nDTSTART:20260326T140000\nDTEND:20260326T150000\nATTENDEE;CN=Grace Kim\nATTENDEE;CN=Omar Haddad\nORGANIZER;CN=Daniel Park\nEND:VEVENT",
+   "truth": {
+    "kind": "demo",
+    "checks": {
+     "company": "Wingtip",
+     "date": "2026-03-26"
+    }
+   }
+  },
+  {
+   "id": "sa0075",
+   "ts": "2026-03-23T09:42:00",
+   "kind": "store",
+   "text": "referral lead from Adventure Works — Mia Lopez, COO; ~20 seats",
+   "truth": {
+    "kind": "deal_new",
+    "checks": {
+     "company": "Adventure Works",
+     "contact": [
+      "Mia Lopez",
+      "Mia"
+     ],
+     "date": "2026-03-23"
+    }
+   }
+  },
+  {
+   "id": "sa0076",
+   "ts": "2026-03-23T10:07:00",
+   "kind": "store",
+   "text": "pipeline review with Sara done, 7 open deals"
+  },
+  {
+   "id": "sa0077",
+   "ts": "2026-03-23T12:02:00",
+   "kind": "store",
+   "text": "discovery call with Claire at Woodgrove Bank: need Salesforce integration; next step a demo",
+   "truth": {
+    "kind": "deal_note",
+    "checks": {
+     "company": "Woodgrove Bank"
+    }
+   }
+  },
+  {
+   "id": "sa0078",
+   "ts": "2026-03-25T10:04:00",
+   "kind": "store",
+   "text": "inbound lead from Munson's Pickles — Dale Munson, Owner; ~80 seats",
+   "truth": {
+    "kind": "deal_new",
+    "checks": {
+     "company": "Munson's Pickles",
+     "contact": [
+      "Dale Munson",
+      "Dale"
+     ],
+     "date": "2026-03-25"
+    }
+   }
+  },
+  {
+   "id": "sa0079",
+   "ts": "2026-03-25T11:47:00",
+   "kind": "store",
+   "text": "discovery call with Mark at Humongous Insurance: worried about SSO; next step a demo",
+   "truth": {
+    "kind": "deal_note",
+    "checks": {
+     "company": "Humongous Insurance"
+    }
+   }
+  },
+  {
+   "id": "sa0080",
+   "ts": "2026-03-26T15:22:00",
+   "kind": "store",
+   "text": "Wingtip demo done (with Omar). they liked the alerts",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Wingtip",
+     "stage": "demo"
+    }
+   }
+  },
+  {
+   "id": "sa0081",
+   "ts": "2026-03-27T10:04:00",
+   "kind": "store",
+   "text": "discovery call with Mia at Adventure Works: need Salesforce integration; next step a demo",
+   "truth": {
+    "kind": "deal_note",
+    "checks": {
+     "company": "Adventure Works"
+    }
+   }
+  },
+  {
+   "id": "sa0082",
+   "ts": "2026-03-27T10:06:00",
+   "kind": "store",
+   "text": "outbound lead from Bellows College — James Ward, Director of IR; ~60 seats",
+   "truth": {
+    "kind": "deal_new",
+    "checks": {
+     "company": "Bellows College",
+     "contact": [
+      "James Ward",
+      "James"
+     ],
+     "date": "2026-03-27"
+    }
+   }
+  },
+  {
+   "id": "sa0083",
+   "ts": "2026-03-27T12:39:00",
+   "kind": "chitchat",
+   "text": "thanks!"
+  },
+  {
+   "id": "sa0084",
+   "ts": "2026-03-27T16:07:00",
+   "kind": "store",
+   "text": "from April 1 I also cover EMEA accounts, on top of North America",
+   "truth": {
+    "kind": "territory",
+    "checks": {}
+   }
+  },
+  {
+   "id": "sa0085",
+   "ts": "2026-03-29T10:01:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Lumen demo for Woodgrove Bank\nDTSTART:20260402T140000\nDTEND:20260402T150000\nATTENDEE;CN=Claire Dubois\nATTENDEE;CN=Omar Haddad\nORGANIZER;CN=Daniel Park\nEND:VEVENT",
+   "truth": {
+    "kind": "demo",
+    "checks": {
+     "company": "Woodgrove Bank",
+     "date": "2026-04-02"
+    }
+   }
+  },
+  {
+   "id": "sa0086",
+   "ts": "2026-03-30T09:06:00",
+   "kind": "store",
+   "text": "inbound lead from Coho Winery — Pablo Ruiz, Owner; ~40 seats",
+   "truth": {
+    "kind": "deal_new",
+    "checks": {
+     "company": "Coho Winery",
+     "contact": [
+      "Pablo Ruiz",
+      "Pablo"
+     ],
+     "date": "2026-03-30"
+    }
+   }
+  },
+  {
+   "id": "sa0087",
+   "ts": "2026-03-30T10:05:00",
+   "kind": "store",
+   "text": "pipeline review with Sara done, 10 open deals"
+  },
+  {
+   "id": "sa0088",
+   "ts": "2026-03-30T11:23:00",
+   "kind": "store",
+   "text": "discovery call with Dale at Munson's Pickles: want a longer pilot; next step a demo",
+   "truth": {
+    "kind": "deal_note",
+    "checks": {
+     "company": "Munson's Pickles"
+    }
+   }
+  },
+  {
+   "id": "sa0089",
+   "ts": "2026-03-31T10:04:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Lumen demo for Humongous Insurance\nDTSTART:20260402T140000\nDTEND:20260402T150000\nATTENDEE;CN=Mark Evans\nATTENDEE;CN=Omar Haddad\nORGANIZER;CN=Daniel Park\nEND:VEVENT",
+   "truth": {
+    "kind": "demo",
+    "checks": {
+     "company": "Humongous Insurance",
+     "date": "2026-04-02"
+    }
+   }
+  },
+  {
+   "id": "sa0090",
+   "ts": "2026-03-31T11:17:00",
+   "kind": "chitchat",
+   "text": "thanks!"
+  },
+  {
+   "id": "sa0091",
+   "ts": "2026-03-31T18:01:00",
+   "kind": "store",
+   "text": {
+    "type": "email",
+    "from": "comp@lumen.io",
+    "to": "daniel.park@lumen.io",
+    "subject": "Q1 commission statement",
+    "date": "2026-03-31T18:00:00",
+    "body": "Q1 closed-won ARR credited: see attached. Commission rate 10%. Paid with the April payroll."
+   },
+   "truth": {
+    "kind": "doc",
+    "checks": {}
+   }
+  },
+  {
+   "id": "sa0092",
+   "ts": "2026-04-01T15:45:00",
+   "kind": "chitchat",
+   "text": "ok"
+  },
+  {
+   "id": "sa0093",
+   "ts": "2026-04-02T10:37:00",
+   "kind": "store",
+   "text": "new inbound lead: Relecloud, Nina Petrov (VP Product), about 40 users",
+   "truth": {
+    "kind": "deal_new",
+    "checks": {
+     "company": "Relecloud",
+     "contact": [
+      "Nina Petrov",
+      "Nina"
+     ],
+     "date": "2026-04-02"
+    }
+   }
+  },
+  {
+   "id": "sa0094",
+   "ts": "2026-04-02T13:24:00",
+   "kind": "store",
+   "text": "discovery call with Pablo at Coho Winery: worried about SSO; next step a demo",
+   "truth": {
+    "kind": "deal_note",
+    "checks": {
+     "company": "Coho Winery"
+    }
+   }
+  },
+  {
+   "id": "sa0095",
+   "ts": "2026-04-02T15:15:00",
+   "kind": "store",
+   "text": "Woodgrove Bank demo with Omar: lots of questions on need Salesforce integration, overall positive",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Woodgrove Bank",
+     "stage": "demo"
+    }
+   }
+  },
+  {
+   "id": "sa0096",
+   "ts": "2026-04-02T15:36:00",
+   "kind": "store",
+   "text": "Humongous Insurance demo with Omar: lots of questions on SSO, overall positive",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Humongous Insurance",
+     "stage": "demo"
+    }
+   }
+  },
+  {
+   "id": "sa0097",
+   "ts": "2026-04-02T16:47:00",
+   "kind": "store",
+   "text": "lost Lucerne Publishing to Quantix at the last step",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Lucerne Publishing",
+     "stage": [
+      "lost",
+      "closed_lost",
+      "closed lost"
+     ]
+    }
+   }
+  },
+  {
+   "id": "sa0098",
+   "ts": "2026-04-03T10:01:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Lumen demo for Adventure Works\nDTSTART:20260407T140000\nDTEND:20260407T150000\nATTENDEE;CN=Mia Lopez\nATTENDEE;CN=Omar Haddad\nORGANIZER;CN=Daniel Park\nEND:VEVENT",
+   "truth": {
+    "kind": "demo",
+    "checks": {
+     "company": "Adventure Works",
+     "date": "2026-04-07"
+    }
+   }
+  },
+  {
+   "id": "sa0099",
+   "ts": "2026-04-03T10:12:00",
+   "kind": "store",
+   "text": "discovery call with James at Bellows College: their team already uses spreadsheets; next step a demo",
+   "truth": {
+    "kind": "deal_note",
+    "checks": {
+     "company": "Bellows College"
+    }
+   }
+  },
+  {
+   "id": "sa0100",
+   "ts": "2026-04-03T10:43:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Lumen demo for Bellows College\nDTSTART:20260407T140000\nDTEND:20260407T150000\nATTENDEE;CN=James Ward\nATTENDEE;CN=Omar Haddad\nORGANIZER;CN=Daniel Park\nEND:VEVENT",
+   "truth": {
+    "kind": "demo",
+    "checks": {
+     "company": "Bellows College",
+     "date": "2026-04-07"
+    }
+   }
+  },
+  {
+   "id": "sa0101",
+   "ts": "2026-04-03T13:08:00",
+   "kind": "question",
+   "text": "what's on my plate today?"
+  },
+  {
+   "id": "sa0102",
+   "ts": "2026-04-05T10:23:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Lumen demo for Munson's Pickles\nDTSTART:20260409T140000\nDTEND:20260409T150000\nATTENDEE;CN=Dale Munson\nATTENDEE;CN=Omar Haddad\nORGANIZER;CN=Daniel Park\nEND:VEVENT",
+   "truth": {
+    "kind": "demo",
+    "checks": {
+     "company": "Munson's Pickles",
+     "date": "2026-04-09"
+    }
+   }
+  },
+  {
+   "id": "sa0103",
+   "ts": "2026-04-06T10:19:00",
+   "kind": "store",
+   "text": "pipeline review with Sara done, 11 open deals"
+  },
+  {
+   "id": "sa0104",
+   "ts": "2026-04-06T11:35:00",
+   "kind": "store",
+   "text": "outbound lead from Northwind Traders — Luis Ortega, Head of Data; ~60 seats",
+   "truth": {
+    "kind": "deal_new",
+    "checks": {
+     "company": "Northwind Traders",
+     "contact": [
+      "Luis Ortega",
+      "Luis"
+     ],
+     "date": "2026-04-06"
+    }
+   }
+  },
+  {
+   "id": "sa0105",
+   "ts": "2026-04-06T11:37:00",
+   "kind": "store",
+   "text": "outbound lead from Consolidated Messenger — Ruth Adler, COO; ~120 seats",
+   "truth": {
+    "kind": "deal_new",
+    "checks": {
+     "company": "Consolidated Messenger",
+     "contact": [
+      "Ruth Adler",
+      "Ruth"
+     ],
+     "date": "2026-04-06"
+    }
+   }
+  },
+  {
+   "id": "sa0106",
+   "ts": "2026-04-06T11:44:00",
+   "kind": "store",
+   "text": "sent Wingtip a proposal: 20 seats, $30,000 ARR, target close May 3, 2026",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Wingtip",
+     "stage": "proposal",
+     "amount": 30000.0
+    }
+   }
+  },
+  {
+   "id": "sa0107",
+   "ts": "2026-04-06T14:35:00",
+   "kind": "store",
+   "text": "sent Woodgrove Bank a proposal: 60 seats, $90,000 ARR, target close May 8, 2026",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Woodgrove Bank",
+     "stage": "proposal",
+     "amount": 90000.0
+    }
+   }
+  },
+  {
+   "id": "sa0108",
+   "ts": "2026-04-06T16:15:00",
+   "kind": "store",
+   "text": "lost Contoso to Quantix at the last step",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Contoso",
+     "stage": [
+      "lost",
+      "closed_lost",
+      "closed lost"
+     ]
+    }
+   }
+  },
+  {
+   "id": "sa0109",
+   "ts": "2026-04-07T11:13:00",
+   "kind": "store",
+   "text": "sent Humongous Insurance a proposal: 80 seats, $120,000 ARR, target close May 9, 2026",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Humongous Insurance",
+     "stage": "proposal",
+     "amount": 120000.0
+    }
+   }
+  },
+  {
+   "id": "sa0110",
+   "ts": "2026-04-07T15:15:00",
+   "kind": "store",
+   "text": "Bellows College demo done (with Omar). they liked the alerts",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Bellows College",
+     "stage": "demo"
+    }
+   }
+  },
+  {
+   "id": "sa0111",
+   "ts": "2026-04-07T15:34:00",
+   "kind": "store",
+   "text": "Adventure Works demo done (with Omar). they liked the alerts",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Adventure Works",
+     "stage": "demo"
+    }
+   }
+  },
+  {
+   "id": "sa0112",
+   "ts": "2026-04-08T09:02:00",
+   "kind": "store",
+   "text": "inbound lead from Tailspin Toys — Owen Brooks, CTO; ~40 seats",
+   "truth": {
+    "kind": "deal_new",
+    "checks": {
+     "company": "Tailspin Toys",
+     "contact": [
+      "Owen Brooks",
+      "Owen"
+     ],
+     "date": "2026-04-08"
+    }
+   }
+  },
+  {
+   "id": "sa0113",
+   "ts": "2026-04-08T10:30:00",
+   "kind": "chitchat",
+   "text": "lol"
+  },
+  {
+   "id": "sa0114",
+   "ts": "2026-04-09T13:07:00",
+   "kind": "store",
+   "text": "discovery call with Nina at Relecloud: need on-prem deployment; next step a demo",
+   "truth": {
+    "kind": "deal_note",
+    "checks": {
+     "company": "Relecloud"
+    }
+   }
+  },
+  {
+   "id": "sa0115",
+   "ts": "2026-04-09T15:26:00",
+   "kind": "store",
+   "text": "demo with Munson's Pickles went well, Omar showed the dashboards; moved to demo stage",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Munson's Pickles",
+     "stage": "demo"
+    }
+   }
+  },
+  {
+   "id": "sa0116",
+   "ts": "2026-04-10T10:22:00",
+   "kind": "store",
+   "text": "new outbound lead: Blue Yonder Airlines, Ravi Nair (Director of Analytics), about 40 users",
+   "truth": {
+    "kind": "deal_new",
+    "checks": {
+     "company": "Blue Yonder Airlines",
+     "contact": [
+      "Ravi Nair",
+      "Ravi"
+     ],
+     "date": "2026-04-10"
+    }
+   }
+  },
+  {
+   "id": "sa0117",
+   "ts": "2026-04-10T13:07:00",
+   "kind": "store",
+   "text": "sent Adventure Works a proposal: 20 seats, $30,000 ARR, target close May 1, 2026",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Adventure Works",
+     "stage": "proposal",
+     "amount": 30000.0
+    }
+   }
+  },
+  {
+   "id": "sa0118",
+   "ts": "2026-04-11T10:04:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Lumen demo for Coho Winery\nDTSTART:20260414T140000\nDTEND:20260414T150000\nATTENDEE;CN=Pablo Ruiz\nATTENDEE;CN=Omar Haddad\nORGANIZER;CN=Daniel Park\nEND:VEVENT",
+   "truth": {
+    "kind": "demo",
+    "checks": {
+     "company": "Coho Winery",
+     "date": "2026-04-14"
+    }
+   }
+  },
+  {
+   "id": "sa0119",
+   "ts": "2026-04-13T10:08:00",
+   "kind": "store",
+   "text": "referral lead from VanArsdel — Tom Hale, Head of IT; ~20 seats",
+   "truth": {
+    "kind": "deal_new",
+    "checks": {
+     "company": "VanArsdel",
+     "contact": [
+      "Tom Hale",
+      "Tom"
+     ],
+     "date": "2026-04-13"
+    }
+   }
+  },
+  {
+   "id": "sa0120",
+   "ts": "2026-04-13T10:19:00",
+   "kind": "store",
+   "text": "pipeline review with Sara done, 13 open deals"
+  },
+  {
+   "id": "sa0121",
+   "ts": "2026-04-13T13:18:00",
+   "kind": "store",
+   "text": "discovery call with Luis at Northwind Traders: worried about SSO; next step a demo",
+   "truth": {
+    "kind": "deal_note",
+    "checks": {
+     "company": "Northwind Traders"
+    }
+   }
+  },
+  {
+   "id": "sa0122",
+   "ts": "2026-04-13T13:35:00",
+   "kind": "store",
+   "text": "negotiating with Woodgrove Bank: no discount, $90,000 ARR",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Woodgrove Bank",
+     "stage": [
+      "negotiat"
+     ],
+     "amount": 90000.0
+    }
+   }
+  },
+  {
+   "id": "sa0123",
+   "ts": "2026-04-13T14:22:00",
+   "kind": "store",
+   "text": "negotiating with Wingtip: 5% discount, now $28,500 ARR",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Wingtip",
+     "stage": [
+      "negotiat"
+     ],
+     "amount": 28500.0
+    }
+   }
+  },
+  {
+   "id": "sa0124",
+   "ts": "2026-04-13T14:45:00",
+   "kind": "store",
+   "text": "discovery call with Ruth at Consolidated Messenger: need on-prem deployment; next step a demo",
+   "truth": {
+    "kind": "deal_note",
+    "checks": {
+     "company": "Consolidated Messenger"
+    }
+   }
+  },
+  {
+   "id": "sa0125",
+   "ts": "2026-04-13T15:21:00",
+   "kind": "store",
+   "text": "discovery call with Owen at Tailspin Toys: their team already uses spreadsheets; next step a demo",
+   "truth": {
+    "kind": "deal_note",
+    "checks": {
+     "company": "Tailspin Toys"
+    }
+   }
+  },
+  {
+   "id": "sa0126",
+   "ts": "2026-04-13T16:07:00",
+   "kind": "store",
+   "text": "Alpine Ski House signed! $85,500 ARR 🎉",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Alpine Ski House",
+     "stage": [
+      "won",
+      "signed",
+      "closed"
+     ],
+     "amount": 85500.0
+    }
+   }
+  },
+  {
+   "id": "sa0127",
+   "ts": "2026-04-13T17:14:00",
+   "kind": "store",
+   "text": "sent Bellows College a proposal: 60 seats, $90,000 ARR, target close May 3, 2026",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Bellows College",
+     "stage": "proposal",
+     "amount": 90000.0
+    }
+   }
+  },
+  {
+   "id": "sa0128",
+   "ts": "2026-04-14T15:27:00",
+   "kind": "store",
+   "text": "discovery call with Ravi at Blue Yonder Airlines: price is above their budget; next step a demo",
+   "truth": {
+    "kind": "deal_note",
+    "checks": {
+     "company": "Blue Yonder Airlines"
+    }
+   }
+  },
+  {
+   "id": "sa0129",
+   "ts": "2026-04-14T15:33:00",
+   "kind": "store",
+   "text": "Coho Winery demo with Omar: lots of questions on SSO, overall positive",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Coho Winery",
+     "stage": "demo"
+    }
+   }
+  },
+  {
+   "id": "sa0130",
+   "ts": "2026-04-15T10:31:00",
+   "kind": "store",
+   "text": "new referral lead: Southridge Video, Carlos Vega (CTO), about 40 users",
+   "truth": {
+    "kind": "deal_new",
+    "checks": {
+     "company": "Southridge Video",
+     "contact": [
+      "Carlos Vega",
+      "Carlos"
+     ],
+     "date": "2026-04-15"
+    }
+   }
+  },
+  {
+   "id": "sa0131",
+   "ts": "2026-04-16T10:30:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Lumen demo for Relecloud\nDTSTART:20260421T140000\nDTEND:20260421T150000\nATTENDEE;CN=Nina Petrov\nATTENDEE;CN=Omar Haddad\nORGANIZER;CN=Daniel Park\nEND:VEVENT",
+   "truth": {
+    "kind": "demo",
+    "checks": {
+     "company": "Relecloud",
+     "date": "2026-04-21"
+    }
+   }
+  },
+  {
+   "id": "sa0132",
+   "ts": "2026-04-17T10:40:00",
+   "kind": "store",
+   "text": "sent Munson's Pickles a proposal: 80 seats, $120,000 ARR, target close May 24, 2026",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Munson's Pickles",
+     "stage": "proposal",
+     "amount": 120000.0
+    }
+   }
+  },
+  {
+   "id": "sa0133",
+   "ts": "2026-04-18T10:27:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Lumen demo for Tailspin Toys\nDTSTART:20260421T140000\nDTEND:20260421T150000\nATTENDEE;CN=Owen Brooks\nATTENDEE;CN=Omar Haddad\nORGANIZER;CN=Daniel Park\nEND:VEVENT",
+   "truth": {
+    "kind": "demo",
+    "checks": {
+     "company": "Tailspin Toys",
+     "date": "2026-04-21"
+    }
+   }
+  },
+  {
+   "id": "sa0134",
+   "ts": "2026-04-19T10:01:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Lumen demo for Northwind Traders\nDTSTART:20260423T140000\nDTEND:20260423T150000\nATTENDEE;CN=Luis Ortega\nATTENDEE;CN=Omar Haddad\nORGANIZER;CN=Daniel Park\nEND:VEVENT",
+   "truth": {
+    "kind": "demo",
+    "checks": {
+     "company": "Northwind Traders",
+     "date": "2026-04-23"
+    }
+   }
+  },
+  {
+   "id": "sa0135",
+   "ts": "2026-04-19T10:41:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Lumen demo for Consolidated Messenger\nDTSTART:20260423T140000\nDTEND:20260423T150000\nATTENDEE;CN=Ruth Adler\nATTENDEE;CN=Omar Haddad\nORGANIZER;CN=Daniel Park\nEND:VEVENT",
+   "truth": {
+    "kind": "demo",
+    "checks": {
+     "company": "Consolidated Messenger",
+     "date": "2026-04-23"
+    }
+   }
+  },
+  {
+   "id": "sa0136",
+   "ts": "2026-04-20T09:12:00",
+   "kind": "store",
+   "text": {
+    "type": "email",
+    "from": "pricing@lumen.io",
+    "to": "sales@lumen.io",
+    "subject": "List price change on May 1",
+    "date": "2026-04-20T09:00:00",
+    "body": "From May 1 the list price goes from $1,500 to $1,800 per seat per year. Proposals sent before May 1 keep the old price for 60 days."
+   },
+   "truth": {
+    "kind": "pricing",
+    "checks": {
+     "amount": 1800.0
+    }
+   }
+  },
+  {
+   "id": "sa0137",
+   "ts": "2026-04-20T10:21:00",
+   "kind": "store",
+   "text": "pipeline review with Sara done, 14 open deals"
+  },
+  {
+   "id": "sa0138",
+   "ts": "2026-04-20T13:30:00",
+   "kind": "store",
+   "text": "discovery call with Tom at VanArsdel: price is above their budget; next step a demo",
+   "truth": {
+    "kind": "deal_note",
+    "checks": {
+     "company": "VanArsdel"
+    }
+   }
+  },
+  {
+   "id": "sa0139",
+   "ts": "2026-04-20T17:33:00",
+   "kind": "chitchat",
+   "text": "ok"
+  },
+  {
+   "id": "sa0140",
+   "ts": "2026-04-21T10:36:00",
+   "kind": "store",
+   "text": "new inbound lead: Datum Corp, Aiko Sato (Head of Analytics), about 60 users",
+   "truth": {
+    "kind": "deal_new",
+    "checks": {
+     "company": "Datum Corp",
+     "contact": [
+      "Aiko Sato",
+      "Aiko"
+     ],
+     "date": "2026-04-21"
+    }
+   }
+  },
+  {
+   "id": "sa0141",
+   "ts": "2026-04-21T15:14:00",
+   "kind": "store",
+   "text": "Relecloud demo with Omar: lots of questions on need on-prem deployment, overall positive",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Relecloud",
+     "stage": "demo"
+    }
+   }
+  },
+  {
+   "id": "sa0142",
+   "ts": "2026-04-21T15:23:00",
+   "kind": "store",
+   "text": "Tailspin Toys demo with Omar: lots of questions on their team already uses spreadsheets, overall positive",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Tailspin Toys",
+     "stage": "demo"
+    }
+   }
+  },
+  {
+   "id": "sa0143",
+   "ts": "2026-04-22T11:17:00",
+   "kind": "store",
+   "text": "discovery call with Carlos at Southridge Video: need Salesforce integration; next step a demo",
+   "truth": {
+    "kind": "deal_note",
+    "checks": {
+     "company": "Southridge Video"
+    }
+   }
+  },
+  {
+   "id": "sa0144",
+   "ts": "2026-04-22T11:21:00",
+   "kind": "store",
+   "text": "negotiating with Humongous Insurance: 15% discount, now $102,000 ARR",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Humongous Insurance",
+     "stage": [
+      "negotiat"
+     ],
+     "amount": 102000.0
+    }
+   }
+  },
+  {
+   "id": "sa0145",
+   "ts": "2026-04-22T14:15:00",
+   "kind": "store",
+   "text": "negotiating with Bellows College: 15% discount, now $76,500 ARR",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Bellows College",
+     "stage": [
+      "negotiat"
+     ],
+     "amount": 76500.0
+    }
+   }
+  },
+  {
+   "id": "sa0146",
+   "ts": "2026-04-22T18:01:00",
+   "kind": "store",
+   "text": {
+    "type": "email",
+    "from": "sara.nguyen@lumen.io",
+    "to": "daniel.park@lumen.io",
+    "subject": "Re: Bellows College discount",
+    "date": "2026-04-22T18:05:00",
+    "body": "Approved: 15% for Bellows College, one-time, 12-month term only. — Sara"
+   },
+   "truth": {
+    "kind": "approval",
+    "checks": {
+     "company": "Bellows College"
+    }
+   }
+  },
+  {
+   "id": "sa0147",
+   "ts": "2026-04-22T18:11:00",
+   "kind": "store",
+   "text": {
+    "type": "email",
+    "from": "sara.nguyen@lumen.io",
+    "to": "daniel.park@lumen.io",
+    "subject": "Re: Humongous Insurance discount",
+    "date": "2026-04-22T18:05:00",
+    "body": "Approved: 15% for Humongous Insurance, one-time, 12-month term only. — Sara"
+   },
+   "truth": {
+    "kind": "approval",
+    "checks": {
+     "company": "Humongous Insurance"
+    }
+   }
+  },
+  {
+   "id": "sa0148",
+   "ts": "2026-04-23T09:26:00",
+   "kind": "chitchat",
+   "text": "brb, lunch"
+  },
+  {
+   "id": "sa0149",
+   "ts": "2026-04-23T10:22:00",
+   "kind": "store",
+   "text": "sent Coho Winery a proposal: 40 seats, $60,000 ARR, target close May 13, 2026",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Coho Winery",
+     "stage": "proposal",
+     "amount": 60000.0
+    }
+   }
+  },
+  {
+   "id": "sa0150",
+   "ts": "2026-04-23T10:43:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Lumen demo for Blue Yonder Airlines\nDTSTART:20260428T140000\nDTEND:20260428T150000\nATTENDEE;CN=Ravi Nair\nATTENDEE;CN=Omar Haddad\nORGANIZER;CN=Daniel Park\nEND:VEVENT",
+   "truth": {
+    "kind": "demo",
+    "checks": {
+     "company": "Blue Yonder Airlines",
+     "date": "2026-04-28"
+    }
+   }
+  },
+  {
+   "id": "sa0151",
+   "ts": "2026-04-23T15:09:00",
+   "kind": "store",
+   "text": "negotiating with Adventure Works: 15% discount, now $25,500 ARR",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Adventure Works",
+     "stage": [
+      "negotiat"
+     ],
+     "amount": 25500.0
+    }
+   }
+  },
+  {
+   "id": "sa0152",
+   "ts": "2026-04-23T15:19:00",
+   "kind": "store",
+   "text": "Northwind Traders demo done (with Omar). they liked the alerts",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Northwind Traders",
+     "stage": "demo"
+    }
+   }
+  },
+  {
+   "id": "sa0153",
+   "ts": "2026-04-23T15:20:00",
+   "kind": "store",
+   "text": "demo with Consolidated Messenger went well, Omar showed the dashboards; moved to demo stage",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Consolidated Messenger",
+     "stage": "demo"
+    }
+   }
+  },
+  {
+   "id": "sa0154",
+   "ts": "2026-04-23T18:48:00",
+   "kind": "store",
+   "text": {
+    "type": "email",
+    "from": "sara.nguyen@lumen.io",
+    "to": "daniel.park@lumen.io",
+    "subject": "Re: Adventure Works discount",
+    "date": "2026-04-23T18:05:00",
+    "body": "Approved: 15% for Adventure Works, one-time, 12-month term only. — Sara"
+   },
+   "truth": {
+    "kind": "approval",
+    "checks": {
+     "company": "Adventure Works"
+    }
+   }
+  },
+  {
+   "id": "sa0155",
+   "ts": "2026-04-24T10:08:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Lumen demo for Southridge Video\nDTSTART:20260428T140000\nDTEND:20260428T150000\nATTENDEE;CN=Carlos Vega\nATTENDEE;CN=Omar Haddad\nORGANIZER;CN=Daniel Park\nEND:VEVENT",
+   "truth": {
+    "kind": "demo",
+    "checks": {
+     "company": "Southridge Video",
+     "date": "2026-04-28"
+    }
+   }
+  },
+  {
+   "id": "sa0156",
+   "ts": "2026-04-25T11:50:00",
+   "kind": "store",
+   "text": "Adventure Works close date slipped to May 18, 2026 (legal review)",
+   "truth": {
+    "kind": "deal_slip",
+    "checks": {
+     "company": "Adventure Works",
+     "date": "2026-05-18"
+    }
+   }
+  },
+  {
+   "id": "sa0157",
+   "ts": "2026-04-27T10:18:00",
+   "kind": "store",
+   "text": "pipeline review with Sara done, 15 open deals"
+  },
+  {
+   "id": "sa0158",
+   "ts": "2026-04-27T10:28:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Lumen demo for VanArsdel\nDTSTART:20260430T140000\nDTEND:20260430T150000\nATTENDEE;CN=Tom Hale\nATTENDEE;CN=Omar Haddad\nORGANIZER;CN=Daniel Park\nEND:VEVENT",
+   "truth": {
+    "kind": "demo",
+    "checks": {
+     "company": "VanArsdel",
+     "date": "2026-04-30"
+    }
+   }
+  },
+  {
+   "id": "sa0159",
+   "ts": "2026-04-27T11:15:00",
+   "kind": "store",
+   "text": "discovery call with Aiko at Datum Corp: need Salesforce integration; next step a demo",
+   "truth": {
+    "kind": "deal_note",
+    "checks": {
+     "company": "Datum Corp"
+    }
+   }
+  },
+  {
+   "id": "sa0160",
+   "ts": "2026-04-27T14:02:00",
+   "kind": "store",
+   "text": "sent Northwind Traders a proposal: 60 seats, $90,000 ARR, target close May 24, 2026",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Northwind Traders",
+     "stage": "proposal",
+     "amount": 90000.0
+    }
+   }
+  },
+  {
+   "id": "sa0161",
+   "ts": "2026-04-27T14:43:00",
+   "kind": "store",
+   "text": "sent Tailspin Toys a proposal: 40 seats, $60,000 ARR, target close May 28, 2026",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Tailspin Toys",
+     "stage": "proposal",
+     "amount": 60000.0
+    }
+   }
+  },
+  {
+   "id": "sa0162",
+   "ts": "2026-04-27T17:15:00",
+   "kind": "store",
+   "text": "negotiating with Munson's Pickles: no discount, $120,000 ARR",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Munson's Pickles",
+     "stage": [
+      "negotiat"
+     ],
+     "amount": 120000.0
+    }
+   }
+  },
+  {
+   "id": "sa0163",
+   "ts": "2026-04-28T15:22:00",
+   "kind": "store",
+   "text": "demo with Blue Yonder Airlines went well, Omar showed the dashboards; moved to demo stage",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Blue Yonder Airlines",
+     "stage": "demo"
+    }
+   }
+  },
+  {
+   "id": "sa0164",
+   "ts": "2026-04-28T15:34:00",
+   "kind": "store",
+   "text": "negotiating with Coho Winery: 15% discount, now $51,000 ARR",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Coho Winery",
+     "stage": [
+      "negotiat"
+     ],
+     "amount": 51000.0
+    }
+   }
+  },
+  {
+   "id": "sa0165",
+   "ts": "2026-04-28T15:36:00",
+   "kind": "store",
+   "text": "Southridge Video demo with Omar: lots of questions on need Salesforce integration, overall positive",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Southridge Video",
+     "stage": "demo"
+    }
+   }
+  },
+  {
+   "id": "sa0166",
+   "ts": "2026-04-28T18:19:00",
+   "kind": "store",
+   "text": {
+    "type": "email",
+    "from": "sara.nguyen@lumen.io",
+    "to": "daniel.park@lumen.io",
+    "subject": "Re: Coho Winery discount",
+    "date": "2026-04-28T18:05:00",
+    "body": "Approved: 15% for Coho Winery, one-time, 12-month term only. — Sara"
+   },
+   "truth": {
+    "kind": "approval",
+    "checks": {
+     "company": "Coho Winery"
+    }
+   }
+  },
+  {
+   "id": "sa0167",
+   "ts": "2026-04-29T11:07:00",
+   "kind": "store",
+   "text": "Munson's Pickles close date slipped to Jun 19, 2026 (legal review)",
+   "truth": {
+    "kind": "deal_slip",
+    "checks": {
+     "company": "Munson's Pickles",
+     "date": "2026-06-19"
+    }
+   }
+  },
+  {
+   "id": "sa0168",
+   "ts": "2026-04-29T15:31:00",
+   "kind": "store",
+   "text": "sent Relecloud a proposal: 40 seats, $60,000 ARR, target close May 31, 2026",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Relecloud",
+     "stage": "proposal",
+     "amount": 60000.0
+    }
+   }
+  },
+  {
+   "id": "sa0169",
+   "ts": "2026-04-29T16:50:00",
+   "kind": "store",
+   "text": "lost Wingtip to Quantix at the last step",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Wingtip",
+     "stage": [
+      "lost",
+      "closed_lost",
+      "closed lost"
+     ]
+    }
+   }
+  },
+  {
+   "id": "sa0170",
+   "ts": "2026-04-30T14:47:00",
+   "kind": "chitchat",
+   "text": "nice"
+  },
+  {
+   "id": "sa0171",
+   "ts": "2026-04-30T15:18:00",
+   "kind": "store",
+   "text": "demo with VanArsdel went well, Omar showed the dashboards; moved to demo stage",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "VanArsdel",
+     "stage": "demo"
+    }
+   }
+  },
+  {
+   "id": "sa0172",
+   "ts": "2026-05-01T14:26:00",
+   "kind": "chitchat",
+   "text": "lol"
+  },
+  {
+   "id": "sa0173",
+   "ts": "2026-05-02T10:11:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Lumen demo for Datum Corp\nDTSTART:20260505T140000\nDTEND:20260505T150000\nATTENDEE;CN=Aiko Sato\nATTENDEE;CN=Omar Haddad\nORGANIZER;CN=Daniel Park\nEND:VEVENT",
+   "truth": {
+    "kind": "demo",
+    "checks": {
+     "company": "Datum Corp",
+     "date": "2026-05-05"
+    }
+   }
+  },
+  {
+   "id": "sa0174",
+   "ts": "2026-05-04T10:10:00",
+   "kind": "store",
+   "text": "pipeline review with Sara done, 14 open deals"
+  },
+  {
+   "id": "sa0175",
+   "ts": "2026-05-04T12:18:00",
+   "kind": "store",
+   "text": "sent Blue Yonder Airlines a proposal: 40 seats, $60,000 ARR, target close Jun 9, 2026",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Blue Yonder Airlines",
+     "stage": "proposal",
+     "amount": 60000.0
+    }
+   }
+  },
+  {
+   "id": "sa0176",
+   "ts": "2026-05-04T12:34:00",
+   "kind": "chitchat",
+   "text": "hmm"
+  },
+  {
+   "id": "sa0177",
+   "ts": "2026-05-04T14:29:00",
+   "kind": "store",
+   "text": "negotiating with Tailspin Toys: 5% discount, now $57,000 ARR",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Tailspin Toys",
+     "stage": [
+      "negotiat"
+     ],
+     "amount": 57000.0
+    }
+   }
+  },
+  {
+   "id": "sa0178",
+   "ts": "2026-05-04T17:38:00",
+   "kind": "store",
+   "text": "sent Consolidated Messenger a proposal: 120 seats, $180,000 ARR, target close Jun 10, 2026",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Consolidated Messenger",
+     "stage": "proposal",
+     "amount": 180000.0
+    }
+   }
+  },
+  {
+   "id": "sa0179",
+   "ts": "2026-05-05T15:07:00",
+   "kind": "store",
+   "text": "negotiating with Northwind Traders: no discount, $90,000 ARR",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Northwind Traders",
+     "stage": [
+      "negotiat"
+     ],
+     "amount": 90000.0
+    }
+   }
+  },
+  {
+   "id": "sa0180",
+   "ts": "2026-05-05T15:26:00",
+   "kind": "store",
+   "text": "Datum Corp demo with Omar: lots of questions on need Salesforce integration, overall positive",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Datum Corp",
+     "stage": "demo"
+    }
+   }
+  },
+  {
+   "id": "sa0181",
+   "ts": "2026-05-05T16:44:00",
+   "kind": "store",
+   "text": "closed won: Woodgrove Bank, $90,000 ARR",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Woodgrove Bank",
+     "stage": [
+      "won",
+      "signed",
+      "closed"
+     ],
+     "amount": 90000.0
+    }
+   }
+  },
+  {
+   "id": "sa0182",
+   "ts": "2026-05-06T15:13:00",
+   "kind": "question",
+   "text": "can you summarize this week?"
+  },
+  {
+   "id": "sa0183",
+   "ts": "2026-05-08T12:49:00",
+   "kind": "store",
+   "text": "sent VanArsdel a proposal: 20 seats, $30,000 ARR, target close Jun 9, 2026",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "VanArsdel",
+     "stage": "proposal",
+     "amount": 30000.0
+    }
+   }
+  },
+  {
+   "id": "sa0184",
+   "ts": "2026-05-08T13:06:00",
+   "kind": "store",
+   "text": "sent Southridge Video a proposal: 40 seats, $60,000 ARR, target close Jun 3, 2026",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Southridge Video",
+     "stage": "proposal",
+     "amount": 60000.0
+    }
+   }
+  },
+  {
+   "id": "sa0185",
+   "ts": "2026-05-08T13:18:00",
+   "kind": "chitchat",
+   "text": "hmm"
+  },
+  {
+   "id": "sa0186",
+   "ts": "2026-05-11T10:12:00",
+   "kind": "store",
+   "text": "pipeline review with Sara done, 11 open deals"
+  },
+  {
+   "id": "sa0187",
+   "ts": "2026-05-11T10:28:00",
+   "kind": "store",
+   "text": "negotiating with Consolidated Messenger: 15% discount, now $153,000 ARR",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Consolidated Messenger",
+     "stage": [
+      "negotiat"
+     ],
+     "amount": 153000.0
+    }
+   }
+  },
+  {
+   "id": "sa0188",
+   "ts": "2026-05-11T14:12:00",
+   "kind": "store",
+   "text": "sent Datum Corp a proposal: 60 seats, $90,000 ARR, target close Jun 15, 2026",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Datum Corp",
+     "stage": "proposal",
+     "amount": 90000.0
+    }
+   }
+  },
+  {
+   "id": "sa0189",
+   "ts": "2026-05-11T14:25:00",
+   "kind": "store",
+   "text": "remind me to send Tailspin the case study by May 15",
+   "truth": {
+    "kind": "todo",
+    "checks": {
+     "company": "Tailspin Toys"
+    }
+   }
+  },
+  {
+   "id": "sa0190",
+   "ts": "2026-05-11T16:31:00",
+   "kind": "store",
+   "text": "lost Humongous Insurance to DataForge at the last step",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Humongous Insurance",
+     "stage": [
+      "lost",
+      "closed_lost",
+      "closed lost"
+     ]
+    }
+   }
+  },
+  {
+   "id": "sa0191",
+   "ts": "2026-05-11T16:40:00",
+   "kind": "store",
+   "text": "closed won: Coho Winery, $51,000 ARR",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Coho Winery",
+     "stage": [
+      "won",
+      "signed",
+      "closed"
+     ],
+     "amount": 51000.0
+    }
+   }
+  },
+  {
+   "id": "sa0192",
+   "ts": "2026-05-11T18:03:00",
+   "kind": "store",
+   "text": {
+    "type": "email",
+    "from": "sara.nguyen@lumen.io",
+    "to": "daniel.park@lumen.io",
+    "subject": "Re: Consolidated Messenger discount",
+    "date": "2026-05-11T18:05:00",
+    "body": "Approved: 15% for Consolidated Messenger, one-time, 12-month term only. — Sara"
+   },
+   "truth": {
+    "kind": "approval",
+    "checks": {
+     "company": "Consolidated Messenger"
+    }
+   }
+  },
+  {
+   "id": "sa0193",
+   "ts": "2026-05-12T10:42:00",
+   "kind": "store",
+   "text": "new inbound lead: Trey Research, Yuki Tanaka (Research Lead), about 60 users",
+   "truth": {
+    "kind": "deal_new",
+    "checks": {
+     "company": "Trey Research",
+     "contact": [
+      "Yuki Tanaka",
+      "Yuki"
+     ],
+     "date": "2026-05-12"
+    }
+   }
+  },
+  {
+   "id": "sa0194",
+   "ts": "2026-05-13T17:31:00",
+   "kind": "store",
+   "text": "negotiating with VanArsdel: 15% discount, now $25,500 ARR",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "VanArsdel",
+     "stage": [
+      "negotiat"
+     ],
+     "amount": 25500.0
+    }
+   }
+  },
+  {
+   "id": "sa0195",
+   "ts": "2026-05-13T18:10:00",
+   "kind": "store",
+   "text": {
+    "type": "email",
+    "from": "sara.nguyen@lumen.io",
+    "to": "daniel.park@lumen.io",
+    "subject": "Re: VanArsdel discount",
+    "date": "2026-05-13T18:05:00",
+    "body": "Approved: 15% for VanArsdel, one-time, 12-month term only. — Sara"
+   },
+   "truth": {
+    "kind": "approval",
+    "checks": {
+     "company": "VanArsdel"
+    }
+   }
+  },
+  {
+   "id": "sa0196",
+   "ts": "2026-05-14T10:30:00",
+   "kind": "store",
+   "text": "negotiating with Relecloud: 10% discount, now $54,000 ARR",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Relecloud",
+     "stage": [
+      "negotiat"
+     ],
+     "amount": 54000.0
+    }
+   }
+  },
+  {
+   "id": "sa0197",
+   "ts": "2026-05-14T16:03:00",
+   "kind": "store",
+   "text": "Adventure Works signed! $25,500 ARR 🎉",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Adventure Works",
+     "stage": [
+      "won",
+      "signed",
+      "closed"
+     ],
+     "amount": 25500.0
+    }
+   }
+  },
+  {
+   "id": "sa0198",
+   "ts": "2026-05-14T17:35:00",
+   "kind": "store",
+   "text": "sent Tailspin the case study",
+   "truth": {
+    "kind": "todo_done",
+    "checks": {}
+   }
+  },
+  {
+   "id": "sa0199",
+   "ts": "2026-05-14T18:23:00",
+   "kind": "store",
+   "text": {
+    "type": "email",
+    "from": "sara.nguyen@lumen.io",
+    "to": "daniel.park@lumen.io",
+    "subject": "Re: Relecloud discount",
+    "date": "2026-05-14T18:05:00",
+    "body": "Approved: 10% for Relecloud, one-time, 12-month term only. — Sara"
+   },
+   "truth": {
+    "kind": "approval",
+    "checks": {
+     "company": "Relecloud"
+    }
+   }
+  },
+  {
+   "id": "sa0200",
+   "ts": "2026-05-15T13:12:00",
+   "kind": "store",
+   "text": "negotiating with Blue Yonder Airlines: no discount, $60,000 ARR",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Blue Yonder Airlines",
+     "stage": [
+      "negotiat"
+     ],
+     "amount": 60000.0
+    }
+   }
+  },
+  {
+   "id": "sa0201",
+   "ts": "2026-05-15T14:22:00",
+   "kind": "question",
+   "text": "can you summarize this week?"
+  },
+  {
+   "id": "sa0202",
+   "ts": "2026-05-17T11:36:00",
+   "kind": "store",
+   "text": "Blue Yonder Airlines close date slipped to Jun 30, 2026 (legal review)",
+   "truth": {
+    "kind": "deal_slip",
+    "checks": {
+     "company": "Blue Yonder Airlines",
+     "date": "2026-06-30"
+    }
+   }
+  },
+  {
+   "id": "sa0203",
+   "ts": "2026-05-18T10:17:00",
+   "kind": "store",
+   "text": "pipeline review with Sara done, 10 open deals"
+  },
+  {
+   "id": "sa0204",
+   "ts": "2026-05-18T16:12:00",
+   "kind": "store",
+   "text": "lost Bellows College to Quantix at the last step",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Bellows College",
+     "stage": [
+      "lost",
+      "closed_lost",
+      "closed lost"
+     ]
+    }
+   }
+  },
+  {
+   "id": "sa0205",
+   "ts": "2026-05-18T16:31:00",
+   "kind": "chitchat",
+   "text": "brb, lunch"
+  },
+  {
+   "id": "sa0206",
+   "ts": "2026-05-19T10:23:00",
+   "kind": "chitchat",
+   "text": "lol"
+  },
+  {
+   "id": "sa0207",
+   "ts": "2026-05-19T11:12:00",
+   "kind": "store",
+   "text": "negotiating with Southridge Video: 15% discount, now $51,000 ARR",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Southridge Video",
+     "stage": [
+      "negotiat"
+     ],
+     "amount": 51000.0
+    }
+   }
+  },
+  {
+   "id": "sa0208",
+   "ts": "2026-05-19T16:41:00",
+   "kind": "store",
+   "text": "discovery call with Yuki at Trey Research: price is above their budget; next step a demo",
+   "truth": {
+    "kind": "deal_note",
+    "checks": {
+     "company": "Trey Research"
+    }
+   }
+  },
+  {
+   "id": "sa0209",
+   "ts": "2026-05-19T18:11:00",
+   "kind": "store",
+   "text": {
+    "type": "email",
+    "from": "sara.nguyen@lumen.io",
+    "to": "daniel.park@lumen.io",
+    "subject": "Re: Southridge Video discount",
+    "date": "2026-05-19T18:05:00",
+    "body": "Approved: 15% for Southridge Video, one-time, 12-month term only. — Sara"
+   },
+   "truth": {
+    "kind": "approval",
+    "checks": {
+     "company": "Southridge Video"
+    }
+   }
+  },
+  {
+   "id": "sa0210",
+   "ts": "2026-05-20T09:28:00",
+   "kind": "question",
+   "text": "what's on my plate today?"
+  },
+  {
+   "id": "sa0211",
+   "ts": "2026-05-21T11:48:00",
+   "kind": "store",
+   "text": "Southridge Video close date slipped to Jun 25, 2026 (legal review)",
+   "truth": {
+    "kind": "deal_slip",
+    "checks": {
+     "company": "Southridge Video",
+     "date": "2026-06-25"
+    }
+   }
+  },
+  {
+   "id": "sa0212",
+   "ts": "2026-05-22T10:44:00",
+   "kind": "store",
+   "text": "negotiating with Datum Corp: 10% discount, now $81,000 ARR",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Datum Corp",
+     "stage": [
+      "negotiat"
+     ],
+     "amount": 81000.0
+    }
+   }
+  },
+  {
+   "id": "sa0213",
+   "ts": "2026-05-22T18:42:00",
+   "kind": "store",
+   "text": {
+    "type": "email",
+    "from": "sara.nguyen@lumen.io",
+    "to": "daniel.park@lumen.io",
+    "subject": "Re: Datum Corp discount",
+    "date": "2026-05-22T18:05:00",
+    "body": "Approved: 10% for Datum Corp, one-time, 12-month term only. — Sara"
+   },
+   "truth": {
+    "kind": "approval",
+    "checks": {
+     "company": "Datum Corp"
+    }
+   }
+  },
+  {
+   "id": "sa0214",
+   "ts": "2026-05-25T10:15:00",
+   "kind": "store",
+   "text": "pipeline review with Sara done, 8 open deals"
+  },
+  {
+   "id": "sa0215",
+   "ts": "2026-05-25T16:09:00",
+   "kind": "store",
+   "text": "Tailspin Toys signed! $57,000 ARR 🎉",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Tailspin Toys",
+     "stage": [
+      "won",
+      "signed",
+      "closed"
+     ],
+     "amount": 57000.0
+    }
+   }
+  },
+  {
+   "id": "sa0216",
+   "ts": "2026-05-25T16:42:00",
+   "kind": "store",
+   "text": "closed won: Northwind Traders, $90,000 ARR",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Northwind Traders",
+     "stage": [
+      "won",
+      "signed",
+      "closed"
+     ],
+     "amount": 90000.0
+    }
+   }
+  },
+  {
+   "id": "sa0217",
+   "ts": "2026-05-27T10:19:00",
+   "kind": "chitchat",
+   "text": "ok"
+  },
+  {
+   "id": "sa0218",
+   "ts": "2026-05-29T09:13:00",
+   "kind": "store",
+   "text": "inbound lead from Fourth Coffee — Nate Cole, VP Ops; ~80 seats",
+   "truth": {
+    "kind": "deal_new",
+    "checks": {
+     "company": "Fourth Coffee",
+     "contact": [
+      "Nate Cole",
+      "Nate"
+     ],
+     "date": "2026-05-29"
+    }
+   }
+  },
+  {
+   "id": "sa0219",
+   "ts": "2026-05-29T11:41:00",
+   "kind": "store",
+   "text": "inbound lead from Wide World Importers — Sofia Rossi, Supply Chain Lead; ~120 seats",
+   "truth": {
+    "kind": "deal_new",
+    "checks": {
+     "company": "Wide World Importers",
+     "contact": [
+      "Sofia Rossi",
+      "Sofia"
+     ],
+     "date": "2026-05-29"
+    }
+   }
+  },
+  {
+   "id": "sa0220",
+   "ts": "2026-05-31T10:42:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Lumen demo for Trey Research\nDTSTART:20260602T140000\nDTEND:20260602T150000\nATTENDEE;CN=Yuki Tanaka\nATTENDEE;CN=Omar Haddad\nORGANIZER;CN=Daniel Park\nEND:VEVENT",
+   "truth": {
+    "kind": "demo",
+    "checks": {
+     "company": "Trey Research",
+     "date": "2026-06-02"
+    }
+   }
+  },
+  {
+   "id": "sa0221",
+   "ts": "2026-06-01T10:16:00",
+   "kind": "store",
+   "text": "pipeline review with Sara done, 9 open deals"
+  },
+  {
+   "id": "sa0222",
+   "ts": "2026-06-01T14:41:00",
+   "kind": "store",
+   "text": "discovery call with Nate at Fourth Coffee: worried about SSO; next step a demo",
+   "truth": {
+    "kind": "deal_note",
+    "checks": {
+     "company": "Fourth Coffee"
+    }
+   }
+  },
+  {
+   "id": "sa0223",
+   "ts": "2026-06-01T15:28:00",
+   "kind": "store",
+   "text": "discovery call with Sofia at Wide World Importers: need Salesforce integration; next step a demo",
+   "truth": {
+    "kind": "deal_note",
+    "checks": {
+     "company": "Wide World Importers"
+    }
+   }
+  },
+  {
+   "id": "sa0224",
+   "ts": "2026-06-01T16:30:00",
+   "kind": "store",
+   "text": "lost Relecloud to Quantix at the last step",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Relecloud",
+     "stage": [
+      "lost",
+      "closed_lost",
+      "closed lost"
+     ]
+    }
+   }
+  },
+  {
+   "id": "sa0225",
+   "ts": "2026-06-02T15:18:00",
+   "kind": "store",
+   "text": "Trey Research demo done (with Omar). they liked the alerts",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Trey Research",
+     "stage": "demo"
+    }
+   }
+  },
+  {
+   "id": "sa0226",
+   "ts": "2026-06-02T15:45:00",
+   "kind": "chitchat",
+   "text": "nice"
+  },
+  {
+   "id": "sa0227",
+   "ts": "2026-06-04T16:15:00",
+   "kind": "chitchat",
+   "text": "ok cool"
+  },
+  {
+   "id": "sa0228",
+   "ts": "2026-06-04T16:23:00",
+   "kind": "store",
+   "text": "VanArsdel signed! $25,500 ARR 🎉",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "VanArsdel",
+     "stage": [
+      "won",
+      "signed",
+      "closed"
+     ],
+     "amount": 25500.0
+    }
+   }
+  },
+  {
+   "id": "sa0229",
+   "ts": "2026-06-05T16:10:00",
+   "kind": "store",
+   "text": "lost Consolidated Messenger to Quantix at the last step",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Consolidated Messenger",
+     "stage": [
+      "lost",
+      "closed_lost",
+      "closed lost"
+     ]
+    }
+   }
+  },
+  {
+   "id": "sa0230",
+   "ts": "2026-06-08T10:17:00",
+   "kind": "store",
+   "text": "pipeline review with Sara done, 7 open deals"
+  },
+  {
+   "id": "sa0231",
+   "ts": "2026-06-08T10:47:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Lumen demo for Fourth Coffee\nDTSTART:20260611T140000\nDTEND:20260611T150000\nATTENDEE;CN=Nate Cole\nATTENDEE;CN=Omar Haddad\nORGANIZER;CN=Daniel Park\nEND:VEVENT",
+   "truth": {
+    "kind": "demo",
+    "checks": {
+     "company": "Fourth Coffee",
+     "date": "2026-06-11"
+    }
+   }
+  },
+  {
+   "id": "sa0232",
+   "ts": "2026-06-08T16:34:00",
+   "kind": "store",
+   "text": "sent Trey Research a proposal: 60 seats, $108,000 ARR, target close Jul 13, 2026",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Trey Research",
+     "stage": "proposal",
+     "amount": 108000.0
+    }
+   }
+  },
+  {
+   "id": "sa0233",
+   "ts": "2026-06-11T10:50:00",
+   "kind": "chitchat",
+   "text": "remind me what we said about this later"
+  },
+  {
+   "id": "sa0234",
+   "ts": "2026-06-11T15:39:00",
+   "kind": "store",
+   "text": "Fourth Coffee demo with Omar: lots of questions on SSO, overall positive",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Fourth Coffee",
+     "stage": "demo"
+    }
+   }
+  },
+  {
+   "id": "sa0235",
+   "ts": "2026-06-12T10:30:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Lumen demo for Wide World Importers\nDTSTART:20260616T140000\nDTEND:20260616T150000\nATTENDEE;CN=Sofia Rossi\nATTENDEE;CN=Omar Haddad\nORGANIZER;CN=Daniel Park\nEND:VEVENT",
+   "truth": {
+    "kind": "demo",
+    "checks": {
+     "company": "Wide World Importers",
+     "date": "2026-06-16"
+    }
+   }
+  },
+  {
+   "id": "sa0236",
+   "ts": "2026-06-12T16:41:00",
+   "kind": "store",
+   "text": "Datum Corp signed! $81,000 ARR 🎉",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Datum Corp",
+     "stage": [
+      "won",
+      "signed",
+      "closed"
+     ],
+     "amount": 81000.0
+    }
+   }
+  },
+  {
+   "id": "sa0237",
+   "ts": "2026-06-15T10:06:00",
+   "kind": "store",
+   "text": "pipeline review with Sara done, 6 open deals"
+  },
+  {
+   "id": "sa0238",
+   "ts": "2026-06-16T11:14:00",
+   "kind": "store",
+   "text": "sent Fourth Coffee a proposal: 80 seats, $144,000 ARR, target close Jul 24, 2026",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Fourth Coffee",
+     "stage": "proposal",
+     "amount": 144000.0
+    }
+   }
+  },
+  {
+   "id": "sa0239",
+   "ts": "2026-06-16T15:10:00",
+   "kind": "store",
+   "text": "Wide World Importers demo done (with Omar). they liked the alerts",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Wide World Importers",
+     "stage": "demo"
+    }
+   }
+  },
+  {
+   "id": "sa0240",
+   "ts": "2026-06-17T13:47:00",
+   "kind": "store",
+   "text": "negotiating with Trey Research: 5% discount, now $102,600 ARR",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Trey Research",
+     "stage": [
+      "negotiat"
+     ],
+     "amount": 102600.0
+    }
+   }
+  },
+  {
+   "id": "sa0241",
+   "ts": "2026-06-18T16:19:00",
+   "kind": "store",
+   "text": "Munson's Pickles signed! $120,000 ARR 🎉",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Munson's Pickles",
+     "stage": [
+      "won",
+      "signed",
+      "closed"
+     ],
+     "amount": 120000.0
+    }
+   }
+  },
+  {
+   "id": "sa0242",
+   "ts": "2026-06-22T10:20:00",
+   "kind": "store",
+   "text": "pipeline review with Sara done, 4 open deals"
+  },
+  {
+   "id": "sa0243",
+   "ts": "2026-06-22T11:00:00",
+   "kind": "store",
+   "text": "negotiating with Fourth Coffee: no discount, $144,000 ARR",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Fourth Coffee",
+     "stage": [
+      "negotiat"
+     ],
+     "amount": 144000.0
+    }
+   }
+  },
+  {
+   "id": "sa0244",
+   "ts": "2026-06-22T11:42:00",
+   "kind": "store",
+   "text": "owe Woodgrove Bank the security questionnaire by Jul 2",
+   "truth": {
+    "kind": "todo",
+    "checks": {
+     "company": "Woodgrove Bank"
+    }
+   }
+  },
+  {
+   "id": "sa0245",
+   "ts": "2026-06-22T16:37:00",
+   "kind": "store",
+   "text": "Southridge Video signed! $51,000 ARR 🎉",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Southridge Video",
+     "stage": [
+      "won",
+      "signed",
+      "closed"
+     ],
+     "amount": 51000.0
+    }
+   }
+  },
+  {
+   "id": "sa0246",
+   "ts": "2026-06-23T11:04:00",
+   "kind": "chitchat",
+   "text": "ok"
+  },
+  {
+   "id": "sa0247",
+   "ts": "2026-06-24T16:38:00",
+   "kind": "store",
+   "text": "sent Wide World Importers a proposal: 120 seats, $216,000 ARR, target close Jul 24, 2026",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Wide World Importers",
+     "stage": "proposal",
+     "amount": 216000.0
+    }
+   }
+  },
+  {
+   "id": "sa0248",
+   "ts": "2026-06-25T10:38:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Fabrikam onboarding check-in with Hannah Weiss\nDTSTART:20260706T110000\nDTEND:20260706T113000\nORGANIZER;CN=Daniel Park\nEND:VEVENT",
+   "truth": {
+    "kind": "meeting",
+    "checks": {
+     "date": "2026-07-06"
+    }
+   }
+  },
+  {
+   "id": "sa0249",
+   "ts": "2026-06-25T16:10:00",
+   "kind": "store",
+   "text": "Blue Yonder Airlines signed! $60,000 ARR 🎉",
+   "truth": {
+    "kind": "deal_stage",
+    "checks": {
+     "company": "Blue Yonder Airlines",
+     "stage": [
+      "won",
+      "signed",
+      "closed"
+     ],
+     "amount": 60000.0
+    }
+   }
+  },
+  {
+   "id": "sa0250",
+   "ts": "2026-06-25T17:47:00",
+   "kind": "chitchat",
+   "text": "morning"
+  },
+  {
+   "id": "sa0251",
+   "ts": "2026-06-26T10:36:00",
+   "kind": "chitchat",
+   "text": "lol"
+  },
+  {
+   "id": "sa0252",
+   "ts": "2026-06-29T10:23:00",
+   "kind": "store",
+   "text": "pipeline review with Sara done, 3 open deals"
+  },
+  {
+   "id": "sa0253",
+   "ts": "2026-06-30T10:36:00",
+   "kind": "chitchat",
+   "text": "lol"
+  }
+ ],
+ "qa": [
+  {
+   "id": "sa01",
+   "type": "semantic_current",
+   "question": "What stage is the Contoso deal in?",
+   "answer": "Lost to Quantix"
+  },
+  {
+   "id": "sa02",
+   "type": "semantic_current",
+   "question": "Who is my contact at Tailspin Toys?",
+   "answer": "Owen Brooks (CTO)"
+  },
+  {
+   "id": "sa03",
+   "type": "semantic_current",
+   "question": "Which deals are open in proposal or negotiation right now?",
+   "answer": "Fourth Coffee (negotiation), Trey Research (negotiation), Wide World Importers (proposal)"
+  },
+  {
+   "id": "sa04",
+   "type": "semantic_history",
+   "question": "What was the Fabrikam deal worth before the discount?",
+   "answer": "$90,000 ARR (then $76,500 after 15% off)"
+  },
+  {
+   "id": "sa05",
+   "type": "semantic_history",
+   "question": "What was the original target close date for Adventure Works?",
+   "answer": "May 1, 2026 (it slipped to May 18, 2026)"
+  },
+  {
+   "id": "sa06",
+   "type": "semantic_history",
+   "question": "What was the list price per seat before May?",
+   "answer": "$1,500 per seat per year (then $1,800 from May 1)"
+  },
+  {
+   "id": "sa07",
+   "type": "aggregate",
+   "question": "How much new ARR did I win in Q2?",
+   "answer": "$736,500 (11 deals)"
+  },
+  {
+   "id": "sa08",
+   "type": "aggregate",
+   "question": "How many deals did I lose to Quantix?",
+   "answer": "7"
+  },
+  {
+   "id": "sa09",
+   "type": "aggregate",
+   "question": "How many demos did I run in March?",
+   "answer": "3"
+  },
+  {
+   "id": "sa10",
+   "type": "episodic_event",
+   "question": "How did the Contoso demo go?",
+   "answer": "On Feb 24, 2026, with Omar: \"Contoso demo with Omar: lots of questions on data residency in the EU, overall positive\""
+  },
+  {
+   "id": "sa11",
+   "type": "episodic_event",
+   "question": "How did the Northwind Traders deal go, start to finish?",
+   "answer": "outbound lead on Apr 6, 2026; demo Apr 23, 2026; proposal $90,000 on Apr 27, 2026; negotiation; signed on May 25, 2026 for $90,000"
+  },
+  {
+   "id": "sa12",
+   "type": "episodic_event",
+   "question": "What did Wingtip's CFO tell me?",
+   "answer": "Their analytics budget is frozen until the Q3 planning cycle; revisit in September"
+  },
+  {
+   "id": "sa13",
+   "type": "episodic_time",
+   "question": "When did Northwind Traders sign?",
+   "answer": "May 25, 2026"
+  },
+  {
+   "id": "sa14",
+   "type": "episodic_time",
+   "question": "When did I lose Contoso, and to whom?",
+   "answer": "Apr 6, 2026, to Quantix"
+  },
+  {
+   "id": "sa15",
+   "type": "episodic_time",
+   "question": "When did I start covering EMEA?",
+   "answer": "April 1, 2026"
+  },
+  {
+   "id": "sa16",
+   "type": "routine",
+   "question": "Which days of the week do I usually run demos?",
+   "answer": "Tuesdays and Thursdays"
+  },
+  {
+   "id": "sa17",
+   "type": "routine",
+   "question": "Who usually joins my demos?",
+   "answer": "Omar Haddad (sales engineer)"
+  },
+  {
+   "id": "sa18",
+   "type": "routine",
+   "question": "When is the pipeline review with Sara?",
+   "answer": "Mondays, in the morning (around 10)"
+  },
+  {
+   "id": "sa19",
+   "type": "prospective",
+   "question": "What do I owe Woodgrove Bank?",
+   "answer": "The security questionnaire, by Jul 2"
+  },
+  {
+   "id": "sa20",
+   "type": "prospective",
+   "question": "When is my next meeting with Fabrikam?",
+   "answer": "Fabrikam onboarding check-in with Hannah Weiss, Mon Jul 6, 2026 at 11:00"
+  },
+  {
+   "id": "sa21",
+   "type": "prospective",
+   "question": "Did I send Tailspin the case study?",
+   "answer": "Yes, on May 14 (it was due May 15)"
+  },
+  {
+   "id": "sa22",
+   "type": "preference",
+   "question": "How does Contoso's CFO want to work with us?",
+   "answer": "Everything in writing, no verbal commitments (Mark Liu)"
+  },
+  {
+   "id": "sa23",
+   "type": "preference",
+   "question": "How does Priya Raman prefer to be contacted?",
+   "answer": "Slack over email"
+  },
+  {
+   "id": "sa24",
+   "type": "preference",
+   "question": "What does Woodgrove Bank require?",
+   "answer": "On-prem deployment, no cloud at all"
+  },
+  {
+   "id": "sa25",
+   "type": "source",
+   "question": "What exactly did Sara write when she approved a discount?",
+   "answer": "\"Approved: 15% for Fabrikam, one-time, 12-month term only.\""
+  },
+  {
+   "id": "sa26",
+   "type": "source",
+   "question": "What did the pricing email say about proposals sent before May?",
+   "answer": "They keep the old price for 60 days"
+  },
+  {
+   "id": "sa27",
+   "type": "source",
+   "question": "What was the commission rate in the Q1 statement?",
+   "answer": "10%, paid with the April payroll"
+  },
+  {
+   "id": "sa28",
+   "type": "period",
+   "question": "How many new deals came in after I started covering EMEA?",
+   "answer": "11"
+  },
+  {
+   "id": "sa29",
+   "type": "period",
+   "question": "How many deals did I win before the price increase?",
+   "answer": "2"
+  },
+  {
+   "id": "sa30",
+   "type": "period",
+   "question": "What was the list price when I sent Contoso its proposal?",
+   "answer": "$1,500 per seat per year"
+  },
+  {
+   "id": "sa31",
+   "type": "metamemory",
+   "question": "What is Northwind's budget?",
+   "answer": "UNKNOWN: never mentioned"
+  },
+  {
+   "id": "sa32",
+   "type": "metamemory",
+   "question": "What is Omar's phone number?",
+   "answer": "UNKNOWN: never mentioned"
+  },
+  {
+   "id": "sa33",
+   "type": "metamemory",
+   "question": "How much revenue does Contoso make?",
+   "answer": "UNKNOWN: never mentioned"
+  },
+  {
+   "id": "sa34",
+   "type": "forgotten",
+   "question": "What did Hannah at Fabrikam tell me in confidence?",
+   "answer": "UNKNOWN: the user asked to forget it"
+  },
+  {
+   "id": "sa35",
+   "type": "forgotten",
+   "question": "Is Fabrikam planning layoffs?",
+   "answer": "UNKNOWN: the user asked to forget it"
+  },
+  {
+   "id": "sa36",
+   "type": "forgotten",
+   "question": "Why is Fabrikam stalling?",
+   "answer": "UNKNOWN: the user asked to forget it"
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "questions": [
+  "What is my phone number?",
+  "What is Tom's phone number?",
+  "Where do I live?",
+  "Where does Eva (my partner) work?",
+  "Where does my sister Kl\u00e1ra live?",
+  "Which climbing gym am I a member of, and what does it cost?",
+  "What book am I reading right now?",
+  "What is David's US phone number?",
+  "What is my relationship with Eva now?",
+  "What was my phone number before my current one?",
+  "How much did I spend on coffee in November 2025?",
+  "When did I last have dinner with Ondra?"
+ ],
+ "openai:gpt-6-sol": {
+  "p50_s": 4.5,
+  "p90_s": 9.8,
+  "mean_calls": 2.8,
+  "cost_per_q": 0.0217
+ },
+ "openai:gpt-6-luna": {
+  "p50_s": 3.2,
+  "p90_s": 5.3,
+  "mean_calls": 2.6,
+  "cost_per_q": 0.001
+ }
+}

@@ -1,0 +1,4785 @@
+{
+ "templates": [
+  {
+   "id": "person_profile",
+   "description": "What do I know about a person, including their birthday, residence, job, contacts, allergies, interests, organizations, and memberships?",
+   "sql": "SELECT p.id, p.name, p.relationship, p.birthday, p.residence, p.job_details, (SELECT json_group_array(json_object('type',c.type,'value',c.value,'is_primary',c.is_primary)) FROM contact_methods c WHERE c.person_id=p.id) AS contacts, (SELECT json_group_array(a.allergen) FROM allergies a WHERE a.person_id=p.id) AS allergies, (SELECT json_group_array(i.interest) FROM interests i WHERE i.person_id=p.id) AS interests, (SELECT json_group_array(json_object('organization',o.name,'role',om.role,'start_date',om.start_date)) FROM organization_memberships om JOIN organizations o ON o.id=om.organization_id WHERE om.person_id=p.id) AS organization_roles, (SELECT json_group_array(json_object('place',pl.name,'category',m.category,'amount',m.amount,'currency',m.currency,'billing_period',m.billing_period,'status',m.status,'end_date',m.end_date)) FROM memberships m JOIN places pl ON pl.id=m.place_id WHERE m.person_id=p.id) AS place_memberships FROM people p WHERE (:person IS NULL OR p.id=:person) ORDER BY p.name",
+   "params": [
+    {
+     "name": "person",
+     "kind": "entity:people"
+    }
+   ]
+  },
+  {
+   "id": "contacts",
+   "description": "What are people's phone numbers or email addresses, and whose is a particular contact detail?",
+   "sql": "SELECT p.id AS person_id, p.name, p.relationship, c.id AS contact_id, c.type, c.value, c.is_primary FROM contact_methods c JOIN people p ON p.id=c.person_id WHERE (:person IS NULL OR p.id=:person) AND (:type IS NULL OR c.type=:type) AND (:value IS NULL OR c.value=:value) ORDER BY p.name,c.type,c.is_primary DESC",
+   "params": [
+    {
+     "name": "person",
+     "kind": "entity:people"
+    },
+    {
+     "name": "type",
+     "kind": "enum:contact_methods.type"
+    },
+    {
+     "name": "value",
+     "kind": "enum:contact_methods.value"
+    }
+   ]
+  },
+  {
+   "id": "birthdays",
+   "description": "When are people's birthdays, including a particular person's birthday?",
+   "sql": "SELECT id AS person_id,name,relationship,birthday,residence FROM people WHERE birthday IS NOT NULL AND (:person IS NULL OR id=:person) ORDER BY birthday,name",
+   "params": [
+    {
+     "name": "person",
+     "kind": "entity:people"
+    }
+   ]
+  },
+  {
+   "id": "interactions",
+   "description": "When and how did I interact with a person during a period?",
+   "sql": "SELECT i.id,p.name AS person,i.category,i.date,o.name AS organization FROM interactions i JOIN people p ON p.id=i.person_id LEFT JOIN organizations o ON CAST(i.organization_id AS INTEGER)=o.id WHERE (:person IS NULL OR i.person_id=:person) AND (:start IS NULL OR i.date>=:start) AND (:end IS NULL OR i.date<=:end) ORDER BY i.date DESC,i.id DESC",
+   "params": [
+    {
+     "name": "person",
+     "kind": "entity:people"
+    },
+    {
+     "name": "period",
+     "kind": "period"
+    }
+   ]
+  },
+  {
+   "id": "leases",
+   "description": "What lease terms and addresses are recorded, and who is associated with each lease?",
+   "sql": "SELECT l.id,l.address,l.start_date,l.rent_amount,l.currency,l.billing_period,l.rent_due_day,l.security_deposit,p.name AS associated_person FROM leases l LEFT JOIN people p ON p.id=l.person_id WHERE (:person IS NULL OR l.person_id=:person) ORDER BY l.start_date DESC",
+   "params": [
+    {
+     "name": "person",
+     "kind": "entity:people"
+    }
+   ]
+  },
+  {
+   "id": "place_memberships",
+   "description": "Which places does a person have or previously had a membership at, and what does each membership cost?",
+   "sql": "SELECT m.id,p.name AS person,pl.name AS place,m.category,m.amount,m.currency,m.billing_period,m.status,m.end_date FROM memberships m JOIN people p ON p.id=m.person_id JOIN places pl ON pl.id=m.place_id WHERE (:person IS NULL OR m.person_id=:person) AND (:place IS NULL OR m.place_id=:place) ORDER BY p.name,CASE WHEN m.status='active' THEN 0 ELSE 1 END,pl.name",
+   "params": [
+    {
+     "name": "person",
+     "kind": "entity:people"
+    },
+    {
+     "name": "place",
+     "kind": "entity:places"
+    }
+   ]
+  },
+  {
+   "id": "events",
+   "description": "What meetings, appointments, calls, and travel were scheduled in a period, including their status and booking details?",
+   "sql": "SELECT e.id,e.category,e.title,e.start_datetime,e.end_datetime,e.location,o.name AS organization,p.name AS organizer,e.status,e.return_date,e.travel_mode,e.participants,e.check_in_date,e.check_out_date,e.guests,e.total_amount,e.currency,e.departure_date,e.origin,e.destination FROM events e LEFT JOIN organizations o ON o.id=e.organization_id LEFT JOIN people p ON p.id=e.organizer_person_id WHERE (:category IS NULL OR e.category=:category) AND (:organization IS NULL OR e.organization_id=:organization) AND (:person IS NULL OR e.organizer_person_id=:person) AND (:start IS NULL OR date(COALESCE(e.end_datetime,e.return_date,e.check_out_date,e.start_datetime))>=:start) AND (:end IS NULL OR date(e.start_datetime)<=:end) ORDER BY e.start_datetime,e.id",
+   "params": [
+    {
+     "name": "category",
+     "kind": "enum:events.category"
+    },
+    {
+     "name": "organization",
+     "kind": "entity:organizations"
+    },
+    {
+     "name": "person",
+     "kind": "entity:people"
+    },
+    {
+     "name": "period",
+     "kind": "period"
+    }
+   ]
+  },
+  {
+   "id": "active_plans",
+   "description": "What non-cancelled plans, meetings, or trips fall in a period?",
+   "sql": "SELECT e.id,e.category,e.title,e.start_datetime,e.end_datetime,e.location,o.name AS organization,p.name AS organizer,e.status,e.return_date,e.travel_mode,e.participants,e.check_in_date,e.check_out_date,e.guests,e.total_amount,e.currency,e.departure_date,e.origin,e.destination FROM events e LEFT JOIN organizations o ON o.id=e.organization_id LEFT JOIN people p ON p.id=e.organizer_person_id WHERE (e.status IS NULL OR e.status NOT IN ('cancelled','deleted')) AND (:start IS NULL OR date(COALESCE(e.end_datetime,e.return_date,e.check_out_date,e.start_datetime))>=:start) AND (:end IS NULL OR date(e.start_datetime)<=:end) ORDER BY e.start_datetime,e.id",
+   "params": [
+    {
+     "name": "period",
+     "kind": "period"
+    }
+   ]
+  },
+  {
+   "id": "event_counts",
+   "description": "How many events of each type and status were scheduled in a period?",
+   "sql": "SELECT e.category,COALESCE(e.status,'unspecified') AS status,COUNT(*) AS event_count,MIN(e.start_datetime) AS first_start,MAX(e.start_datetime) AS last_start FROM events e WHERE (:start IS NULL OR date(e.start_datetime)>=:start) AND (:end IS NULL OR date(e.start_datetime)<=:end) GROUP BY e.category,e.status ORDER BY event_count DESC,e.category,e.status",
+   "params": [
+    {
+     "name": "period",
+     "kind": "period"
+    }
+   ]
+  },
+  {
+   "id": "expenses",
+   "description": "What purchases or payments were made in a period, optionally at a merchant, of a kind, or with a companion?",
+   "sql": "SELECT id,date,transaction_datetime,category,merchant,item,amount,currency,companion,location,card_last_four FROM expenses WHERE (:start IS NULL OR date>=:start) AND (:end IS NULL OR date<=:end) AND (:category IS NULL OR category=:category) AND (:merchant IS NULL OR merchant=:merchant) AND (:companion IS NULL OR companion=:companion) ORDER BY date DESC,transaction_datetime DESC,id DESC",
+   "params": [
+    {
+     "name": "period",
+     "kind": "period"
+    },
+    {
+     "name": "category",
+     "kind": "enum:expenses.category"
+    },
+    {
+     "name": "merchant",
+     "kind": "enum:expenses.merchant"
+    },
+    {
+     "name": "companion",
+     "kind": "enum:expenses.companion"
+    }
+   ]
+  },
+  {
+   "id": "spending_total",
+   "description": "How much did I spend in a period, optionally for one kind of expense or merchant?",
+   "sql": "SELECT currency,COUNT(*) AS expense_count,SUM(amount) AS total_amount,MIN(date) AS first_date,MAX(date) AS last_date FROM expenses WHERE (:start IS NULL OR date>=:start) AND (:end IS NULL OR date<=:end) AND (:category IS NULL OR category=:category) AND (:merchant IS NULL OR merchant=:merchant) GROUP BY currency ORDER BY currency",
+   "params": [
+    {
+     "name": "period",
+     "kind": "period"
+    },
+    {
+     "name": "category",
+     "kind": "enum:expenses.category"
+    },
+    {
+     "name": "merchant",
+     "kind": "enum:expenses.merchant"
+    }
+   ]
+  },
+  {
+   "id": "spending_by_category",
+   "description": "How much did I spend on each kind of expense in a period?",
+   "sql": "SELECT category,currency,COUNT(*) AS expense_count,SUM(amount) AS total_amount,MIN(date) AS first_date,MAX(date) AS last_date FROM expenses WHERE (:start IS NULL OR date>=:start) AND (:end IS NULL OR date<=:end) GROUP BY category,currency ORDER BY currency,total_amount DESC,category",
+   "params": [
+    {
+     "name": "period",
+     "kind": "period"
+    }
+   ]
+  },
+  {
+   "id": "spending_by_merchant",
+   "description": "How much did I spend at each merchant in a period, optionally for one expense category?",
+   "sql": "SELECT merchant,currency,COUNT(*) AS expense_count,SUM(amount) AS total_amount,MIN(date) AS first_date,MAX(date) AS last_date FROM expenses WHERE (:start IS NULL OR date>=:start) AND (:end IS NULL OR date<=:end) AND (:category IS NULL OR category=:category) GROUP BY merchant,currency ORDER BY currency,total_amount DESC,merchant",
+   "params": [
+    {
+     "name": "period",
+     "kind": "period"
+    },
+    {
+     "name": "category",
+     "kind": "enum:expenses.category"
+    }
+   ]
+  },
+  {
+   "id": "spending_by_companion",
+   "description": "How much spending was associated with each companion in a period?",
+   "sql": "SELECT companion,currency,COUNT(*) AS expense_count,SUM(amount) AS total_amount,MIN(date) AS first_date,MAX(date) AS last_date FROM expenses WHERE companion IS NOT NULL AND (:start IS NULL OR date>=:start) AND (:end IS NULL OR date<=:end) GROUP BY companion,currency ORDER BY currency,total_amount DESC,companion",
+   "params": [
+    {
+     "name": "period",
+     "kind": "period"
+    }
+   ]
+  },
+  {
+   "id": "largest_expenses",
+   "description": "What were my largest individual expenses in a period, separately ranked within each currency?",
+   "sql": "WITH ranked AS (SELECT e.*,ROW_NUMBER() OVER (PARTITION BY currency ORDER BY amount DESC,date DESC,id DESC) AS rank_in_currency FROM expenses e WHERE (:start IS NULL OR date>=:start) AND (:end IS NULL OR date<=:end) AND (:category IS NULL OR category=:category)) SELECT rank_in_currency,id,date,transaction_datetime,category,merchant,item,amount,currency,companion,location,card_last_four FROM ranked WHERE rank_in_currency<=10 ORDER BY currency,rank_in_currency",
+   "params": [
+    {
+     "name": "period",
+     "kind": "period"
+    },
+    {
+     "name": "category",
+     "kind": "enum:expenses.category"
+    }
+   ]
+  },
+  {
+   "id": "workouts",
+   "description": "What physical activities did I do in a period, and where and with whom?",
+   "sql": "SELECT w.id,w.date,w.category,w.activity,pl.name AS place,w.companion FROM workouts w LEFT JOIN places pl ON pl.id=w.place_id WHERE (:start IS NULL OR w.date>=:start) AND (:end IS NULL OR w.date<=:end) AND (:category IS NULL OR w.category=:category) AND (:place IS NULL OR w.place_id=:place) ORDER BY w.date DESC,w.id DESC",
+   "params": [
+    {
+     "name": "period",
+     "kind": "period"
+    },
+    {
+     "name": "category",
+     "kind": "enum:workouts.category"
+    },
+    {
+     "name": "place",
+     "kind": "entity:places"
+    }
+   ]
+  },
+  {
+   "id": "workout_counts",
+   "description": "How often did I do each kind of physical activity in a period, and when was the latest one?",
+   "sql": "SELECT w.category,COUNT(*) AS workout_count,COUNT(DISTINCT w.date) AS active_days,MIN(w.date) AS first_date,MAX(w.date) AS latest_date FROM workouts w WHERE (:start IS NULL OR w.date>=:start) AND (:end IS NULL OR w.date<=:end) GROUP BY w.category ORDER BY workout_count DESC,w.category",
+   "params": [
+    {
+     "name": "period",
+     "kind": "period"
+    }
+   ]
+  },
+  {
+   "id": "fastest_runs",
+   "description": "What were my fastest recorded 5 km and 10 km runs in a period?",
+   "sql": "WITH parsed AS (SELECT w.id,w.date,w.activity,CAST(substr(w.activity,1,instr(w.activity,' km in ')-1) AS INTEGER) AS distance_km,substr(w.activity,instr(w.activity,' km in ')+7) AS time_text FROM workouts w WHERE w.category='running' AND w.activity GLOB '[0-9]* km in [0-9]*:[0-9]*' AND (:start IS NULL OR w.date>=:start) AND (:end IS NULL OR w.date<=:end)), timed AS (SELECT *,60*CAST(substr(time_text,1,instr(time_text,':')-1) AS INTEGER)+CAST(substr(time_text,instr(time_text,':')+1,2) AS INTEGER) AS seconds FROM parsed), ranked AS (SELECT *,ROW_NUMBER() OVER (PARTITION BY distance_km ORDER BY seconds,date,id) AS run_rank FROM timed) SELECT distance_km,date,activity,seconds,id AS workout_id FROM ranked WHERE run_rank=1 ORDER BY distance_km",
+   "params": [
+    {
+     "name": "period",
+     "kind": "period"
+    }
+   ]
+  },
+  {
+   "id": "books",
+   "description": "Which books have I tracked or read, when did I start them, and how did I rate them?",
+   "sql": "SELECT id,title,author,status,started_date,rating FROM books WHERE (:book IS NULL OR id=:book) AND (:author IS NULL OR author=:author) AND (:status IS NULL OR status=:status) AND (:start IS NULL OR started_date>=:start) AND (:end IS NULL OR started_date<=:end) ORDER BY started_date DESC,title,id",
+   "params": [
+    {
+     "name": "book",
+     "kind": "entity:books"
+    },
+    {
+     "name": "author",
+     "kind": "enum:books.author"
+    },
+    {
+     "name": "status",
+     "kind": "enum:books.status"
+    },
+    {
+     "name": "period",
+     "kind": "period"
+    }
+   ]
+  },
+  {
+   "id": "book_summary",
+   "description": "How many books did I start in a period, and which received my highest ratings?",
+   "sql": "SELECT status,COUNT(*) AS book_count,COUNT(rating) AS rated_count,ROUND(AVG(rating),2) AS average_rating,MAX(rating) AS highest_rating,MIN(started_date) AS earliest_start,MAX(started_date) AS latest_start FROM books WHERE (:start IS NULL OR started_date>=:start) AND (:end IS NULL OR started_date<=:end) GROUP BY status ORDER BY status",
+   "params": [
+    {
+     "name": "period",
+     "kind": "period"
+    }
+   ]
+  },
+  {
+   "id": "tasks",
+   "description": "What tasks or reminders are due in a period, who are they about, and are they done or pending?",
+   "sql": "SELECT t.id,t.title,t.due_date,t.status,p.name AS person,o.name AS organization FROM tasks t LEFT JOIN people p ON p.id=CAST(t.person_id AS INTEGER) LEFT JOIN organizations o ON o.id=CAST(t.organization_id AS INTEGER) WHERE (:task IS NULL OR t.id=:task) AND (:status IS NULL OR t.status=:status) AND (:person IS NULL OR CAST(t.person_id AS INTEGER)=:person) AND (:organization IS NULL OR CAST(t.organization_id AS INTEGER)=:organization) AND (:start IS NULL OR t.due_date>=:start) AND (:end IS NULL OR t.due_date<=:end) ORDER BY t.due_date,t.id",
+   "params": [
+    {
+     "name": "task",
+     "kind": "entity:tasks"
+    },
+    {
+     "name": "status",
+     "kind": "enum:tasks.status"
+    },
+    {
+     "name": "person",
+     "kind": "entity:people"
+    },
+    {
+     "name": "organization",
+     "kind": "entity:organizations"
+    },
+    {
+     "name": "period",
+     "kind": "period"
+    }
+   ]
+  },
+  {
+   "id": "task_counts",
+   "description": "How many tasks of each status are due in a period?",
+   "sql": "SELECT status,COUNT(*) AS task_count,MIN(due_date) AS earliest_due,MAX(due_date) AS latest_due FROM tasks WHERE (:start IS NULL OR due_date>=:start) AND (:end IS NULL OR due_date<=:end) GROUP BY status ORDER BY status",
+   "params": [
+    {
+     "name": "period",
+     "kind": "period"
+    }
+   ]
+  },
+  {
+   "id": "organization_profile",
+   "description": "What is an organization, who works there, and what funding, events, and emails are associated with it?",
+   "sql": "SELECT o.id,o.name,o.category,(SELECT json_group_array(json_object('person',p.name,'role',om.role,'start_date',om.start_date)) FROM organization_memberships om JOIN people p ON p.id=om.person_id WHERE om.organization_id=o.id) AS people_and_roles,(SELECT json_group_array(json_object('category',f.category,'amount',f.amount,'currency',f.currency,'status',f.status,'announced_date',f.announced_date,'lead_person',p.name)) FROM funding_rounds f LEFT JOIN people p ON p.id=f.lead_person_id WHERE f.organization_id=o.id) AS associated_funding,(SELECT json_group_array(json_object('title',e.title,'start_datetime',e.start_datetime,'status',e.status)) FROM events e WHERE e.organization_id=o.id) AS events,(SELECT json_group_array(json_object('subject',em.subject,'datetime',em.datetime,'body_details',em.body_details)) FROM emails em WHERE em.organization_id=o.id) AS emails FROM organizations o WHERE (:organization IS NULL OR o.id=:organization) AND (:category IS NULL OR o.category=:category) ORDER BY o.name",
+   "params": [
+    {
+     "name": "organization",
+     "kind": "entity:organizations"
+    },
+    {
+     "name": "category",
+     "kind": "enum:organizations.category"
+    }
+   ]
+  },
+  {
+   "id": "organization_members",
+   "description": "Who belongs to an organization, and what are their roles and contact details?",
+   "sql": "SELECT o.name AS organization,o.category AS organization_category,p.name AS person,p.relationship,p.job_details,om.role,om.start_date,(SELECT json_group_array(json_object('type',c.type,'value',c.value,'is_primary',c.is_primary)) FROM contact_methods c WHERE c.person_id=p.id) AS contacts FROM organization_memberships om JOIN organizations o ON o.id=om.organization_id JOIN people p ON p.id=om.person_id WHERE (:organization IS NULL OR om.organization_id=:organization) AND (:person IS NULL OR om.person_id=:person) ORDER BY o.name,p.name",
+   "params": [
+    {
+     "name": "organization",
+     "kind": "entity:organizations"
+    },
+    {
+     "name": "person",
+     "kind": "entity:people"
+    }
+   ]
+  },
+  {
+   "id": "funding_rounds",
+   "description": "What fundraising rounds are recorded, for how much, and who led them?",
+   "sql": "SELECT f.id,f.category,f.amount,f.currency,f.status,f.announced_date,o.name AS associated_organization,p.name AS lead_person FROM funding_rounds f LEFT JOIN organizations o ON o.id=f.organization_id LEFT JOIN people p ON p.id=f.lead_person_id WHERE (:organization IS NULL OR f.organization_id=:organization) AND (:start IS NULL OR f.announced_date>=:start) AND (:end IS NULL OR f.announced_date<=:end) ORDER BY f.announced_date DESC,f.id DESC",
+   "params": [
+    {
+     "name": "organization",
+     "kind": "entity:organizations"
+    },
+    {
+     "name": "period",
+     "kind": "period"
+    }
+   ]
+  },
+  {
+   "id": "emails",
+   "description": "What does a received or sent email say, and what emails came from a person or concern an organization in a period?",
+   "sql": "SELECT e.id,e.datetime,e.from_email,e.to_email,e.subject,e.body_details,p.name AS sender_person,o.name AS organization FROM emails e LEFT JOIN people p ON p.id=e.sender_person_id LEFT JOIN organizations o ON o.id=e.organization_id WHERE (:email IS NULL OR e.id=:email) AND (:person IS NULL OR e.sender_person_id=:person) AND (:organization IS NULL OR e.organization_id=:organization) AND (:start IS NULL OR date(e.datetime)>=:start) AND (:end IS NULL OR date(e.datetime)<=:end) ORDER BY e.datetime DESC,e.id DESC",
+   "params": [
+    {
+     "name": "email",
+     "kind": "entity:emails"
+    },
+    {
+     "name": "person",
+     "kind": "entity:people"
+    },
+    {
+     "name": "organization",
+     "kind": "entity:organizations"
+    },
+    {
+     "name": "period",
+     "kind": "period"
+    }
+   ]
+  },
+  {
+   "id": "places",
+   "description": "What places are recorded, who has a membership there, and what workouts happened there?",
+   "sql": "SELECT pl.id,pl.name,(SELECT json_group_array(json_object('person',p.name,'category',m.category,'amount',m.amount,'currency',m.currency,'billing_period',m.billing_period,'status',m.status,'end_date',m.end_date)) FROM memberships m JOIN people p ON p.id=m.person_id WHERE m.place_id=pl.id) AS memberships,(SELECT COUNT(*) FROM workouts w WHERE w.place_id=pl.id) AS workout_count,(SELECT MAX(w.date) FROM workouts w WHERE w.place_id=pl.id) AS latest_workout_date FROM places pl WHERE (:place IS NULL OR pl.id=:place) ORDER BY pl.name",
+   "params": [
+    {
+     "name": "place",
+     "kind": "entity:places"
+    }
+   ]
+  }
+ ],
+ "compile_s": 74.3,
+ "compile_cost": 0.0676,
+ "coverage": 0.933,
+ "covered_score": 0.473,
+ "answered_directly": "30/60",
+ "direct_correct": 0.717,
+ "p50_s": 0.314,
+ "p90_s": 0.36,
+ "cost_per_question": 0.000295,
+ "jev_input_tokens": 7034,
+ "items": [
+  {
+   "qid": "m12-q01",
+   "question": "What is my phone number?",
+   "gold": "+1 415 555 0199",
+   "template": "contacts",
+   "confidence": 0.8,
+   "runs": [
+    {
+     "template": "contacts",
+     "args": {
+      "person": 1,
+      "type": "phone",
+      "value": null
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "contacts",
+     "person_id": 1,
+     "name": "Adam Zvada",
+     "relationship": null,
+     "contact_id": 14,
+     "type": "phone",
+     "value": "+1 415 555 0199",
+     "is_primary": 1
+    },
+    {
+     "_query": "contacts",
+     "person_id": 1,
+     "name": "Adam Zvada",
+     "relationship": null,
+     "contact_id": 1,
+     "type": "phone",
+     "value": "+420 722 238 738",
+     "is_primary": null
+    }
+   ],
+   "args": {
+    "person": 1,
+    "type": "phone",
+    "value": null
+   },
+   "wall": 0.4667468330007978,
+   "verdict": "correct",
+   "why": "The rows include the primary phone +1 415 555 0199 for the user, which matches the gold answer. The other number is not marked primary.",
+   "verify": 0.67
+  },
+  {
+   "qid": "m12-q02",
+   "question": "What is Tom's phone number?",
+   "gold": "+420 777 999 000",
+   "template": "contacts",
+   "confidence": 0.99,
+   "runs": [
+    {
+     "template": "contacts",
+     "args": {
+      "person": 5,
+      "type": "phone",
+      "value": null
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "contacts",
+     "person_id": 5,
+     "name": "Tom Novak",
+     "relationship": "climbing buddy",
+     "contact_id": 4,
+     "type": "phone",
+     "value": "+420 777 999 000",
+     "is_primary": null
+    }
+   ],
+   "args": {
+    "person": 5,
+    "type": "phone",
+    "value": null
+   },
+   "wall": 0.3502344169974094,
+   "verdict": "correct",
+   "why": "The row lists Tom Novak's phone as +420 777 999 000, which matches the gold answer.",
+   "verify": 0.97
+  },
+  {
+   "qid": "m12-q03",
+   "question": "Where do I live?",
+   "gold": "1450 Valencia St, San Francisco",
+   "template": "person_profile",
+   "confidence": 0.71,
+   "runs": [
+    {
+     "template": "person_profile",
+     "args": {
+      "person": 1
+     }
+    },
+    {
+     "template": "leases",
+     "args": {
+      "person": 1
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "person_profile",
+     "id": 1,
+     "name": "Adam Zvada",
+     "relationship": null,
+     "birthday": null,
+     "residence": null,
+     "job_details": null,
+     "contacts": "[{\"type\":\"phone\",\"value\":\"+420 722 238 738\",\"is_primary\":null},{\"type\":\"phone\",\"value\":\"+1 415 555 0199\",\"is_primary\":1}]",
+     "allergies": "[]",
+     "interests": "[]",
+     "organization_roles": "[{\"organization\":\"Nebula\",\"role\":\"cofounder\",\"start_date\":null}]",
+     "place_memberships": "[{\"place\":\"Smíchoff\",\"category\":\"climbing gym\",\"amount\":1190.0,\"currency\":\"CZK\",\"billing_period\":\"monthly\",\"status\":\"ended\",\"end_date\":\"2026-03-31\"},{\"place\":\"Mission Cliffs\",\"category\":\"climbing gym\",\"amount\":110.0,\"currency\":\"USD\",\"billing_period\":\"monthly\",\"status\":\"active\",\"end_date\":null}]"
+    }
+   ],
+   "args": {
+    "person": 1
+   },
+   "wall": 0.28386816701095086,
+   "verdict": "incorrect",
+   "why": "The residence field is null, and no address (1450 Valencia St) appears anywhere in the rows.",
+   "verify": 0.13
+  },
+  {
+   "qid": "m12-q04",
+   "question": "Where does Eva (my partner) work?",
+   "gold": "Gensler",
+   "template": "person_profile",
+   "confidence": 1,
+   "runs": [
+    {
+     "template": "person_profile",
+     "args": {
+      "person": 4
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "person_profile",
+     "id": 4,
+     "name": "Eva",
+     "relationship": "fiancée",
+     "birthday": "09-28",
+     "residence": null,
+     "job_details": null,
+     "contacts": "[]",
+     "allergies": "[\"peanuts\"]",
+     "interests": "[]",
+     "organization_roles": "[{\"organization\":\"Studio Kvadrat\",\"role\":\"architect\",\"start_date\":null},{\"organization\":\"Gensler\",\"role\":\"employee\",\"start_date\":null}]",
+     "place_memberships": "[]"
+    }
+   ],
+   "args": {
+    "person": 4
+   },
+   "wall": 0.29553558299085125,
+   "verdict": "partial",
+   "why": "The rows list two organizations for Eva, Studio Kvadrat (architect) and Gensler (employee), with no start dates. Gensler appears, but nothing shows which employer is current, so the answer cannot be determined unambiguously.",
+   "verify": 0.92
+  },
+  {
+   "qid": "m12-q05",
+   "question": "Where does my sister Klára live?",
+   "gold": "London",
+   "template": "person_profile",
+   "confidence": 1,
+   "runs": [
+    {
+     "template": "person_profile",
+     "args": {
+      "person": 9
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "person_profile",
+     "id": 9,
+     "name": "Klára",
+     "relationship": "sister",
+     "birthday": "12-02",
+     "residence": "London",
+     "job_details": "new job",
+     "contacts": "[]",
+     "allergies": "[]",
+     "interests": "[]",
+     "organization_roles": "[]",
+     "place_memberships": "[]"
+    }
+   ],
+   "args": {
+    "person": 9
+   },
+   "wall": 0.6414214169926709,
+   "verdict": "correct",
+   "why": "The row for Klára, listed as sister, gives her residence as London, which matches the gold answer.",
+   "verify": 0.98
+  },
+  {
+   "qid": "m12-q06",
+   "question": "Which climbing gym am I a member of, and what does it cost?",
+   "gold": "Mission Cliffs ($110/month)",
+   "template": "place_memberships",
+   "confidence": 0.99,
+   "runs": [
+    {
+     "template": "place_memberships",
+     "args": {
+      "person": 1,
+      "place": null
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "place_memberships",
+     "id": 2,
+     "person": "Adam Zvada",
+     "place": "Mission Cliffs",
+     "category": "climbing gym",
+     "amount": 110.0,
+     "currency": "USD",
+     "billing_period": "monthly",
+     "status": "active",
+     "end_date": null
+    },
+    {
+     "_query": "place_memberships",
+     "id": 1,
+     "person": "Adam Zvada",
+     "place": "Smíchoff",
+     "category": "climbing gym",
+     "amount": 1190.0,
+     "currency": "CZK",
+     "billing_period": "monthly",
+     "status": "ended",
+     "end_date": "2026-03-31"
+    }
+   ],
+   "args": {
+    "person": 1,
+    "place": null
+   },
+   "wall": 0.2955627080082195,
+   "verdict": "correct",
+   "why": "The rows show an active Mission Cliffs membership at 110 USD per month, which matches the gold answer. The Smíchoff membership is marked as ended, so it is outdated and does not affect the answer.",
+   "verify": 0.75
+  },
+  {
+   "qid": "m12-q07",
+   "question": "What book am I reading right now?",
+   "gold": "The Three-Body Problem",
+   "template": "books",
+   "confidence": 0.9,
+   "runs": [
+    {
+     "template": "books",
+     "args": {
+      "book": null,
+      "author": null,
+      "status": null,
+      "start": "2026-09-30",
+      "end": "2026-09-30"
+     }
+    }
+   ],
+   "rows": [],
+   "args": {
+    "book": null,
+    "author": null,
+    "status": null,
+    "start": "2026-09-30",
+    "end": "2026-09-30"
+   },
+   "wall": 0.36439095900277607,
+   "verdict": "incorrect",
+   "why": "Rows are empty, so they do not contain the book title.",
+   "verify": 0.01
+  },
+  {
+   "qid": "m12-q08",
+   "question": "What is David's US phone number?",
+   "gold": "+1 628 688 4995 (corrected from +1 628 688 4994)",
+   "template": "contacts",
+   "confidence": 0.97,
+   "runs": [
+    {
+     "template": "contacts",
+     "args": {
+      "person": 2,
+      "type": "phone",
+      "value": null
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "contacts",
+     "person_id": 2,
+     "name": "David Mokos",
+     "relationship": null,
+     "contact_id": 2,
+     "type": "phone",
+     "value": "733 544 390",
+     "is_primary": null
+    },
+    {
+     "_query": "contacts",
+     "person_id": 2,
+     "name": "David Mokos",
+     "relationship": null,
+     "contact_id": 15,
+     "type": "phone",
+     "value": "+1 628 688 4995",
+     "is_primary": null
+    }
+   ],
+   "args": {
+    "person": 2,
+    "type": "phone",
+    "value": null
+   },
+   "wall": 0.32411254099861253,
+   "verdict": "correct",
+   "why": "The rows include David's current US phone number, +1 628 688 4995. They do not show the outdated +1 628 688 4994.",
+   "verify": 0.86
+  },
+  {
+   "qid": "m12-q09",
+   "question": "What is my relationship with Eva now?",
+   "gold": "Engaged: she is my fiancée (since Jul 12, 2026)",
+   "template": "person_profile",
+   "confidence": 0.5,
+   "runs": [
+    {
+     "template": "person_profile",
+     "args": {
+      "person": 4
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "person_profile",
+     "id": 4,
+     "name": "Eva",
+     "relationship": "fiancée",
+     "birthday": "09-28",
+     "residence": null,
+     "job_details": null,
+     "contacts": "[]",
+     "allergies": "[\"peanuts\"]",
+     "interests": "[]",
+     "organization_roles": "[{\"organization\":\"Studio Kvadrat\",\"role\":\"architect\",\"start_date\":null},{\"organization\":\"Gensler\",\"role\":\"employee\",\"start_date\":null}]",
+     "place_memberships": "[]"
+    }
+   ],
+   "args": {
+    "person": 4
+   },
+   "wall": 0.3493352090008557,
+   "verdict": "partial",
+   "why": "The rows show the relationship is 'fiancée', which covers the main fact. They do not give the engagement date, Jul 12, 2026.",
+   "verify": 0.94
+  },
+  {
+   "qid": "m12-q10",
+   "question": "Is Oscar Lind still at Nebula?",
+   "gold": "No, he left on Aug 15, 2026 to join Stripe as a PM",
+   "template": "organization_members",
+   "confidence": 0.41,
+   "runs": [
+    {
+     "template": "organization_members",
+     "args": {
+      "organization": 1,
+      "person": 10
+     }
+    },
+    {
+     "template": "person_profile",
+     "args": {
+      "person": 10
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "organization_members",
+     "organization": "Nebula",
+     "organization_category": "startup",
+     "person": "Oscar Lind",
+     "relationship": null,
+     "job_details": "Joining Stripe as a PM; left Nebula on 2026-08-15",
+     "role": "product manager",
+     "start_date": null,
+     "contacts": "[{\"type\":\"email\",\"value\":\"oscar@nebula.ai\",\"is_primary\":null}]"
+    },
+    {
+     "_query": "person_profile",
+     "id": 10,
+     "name": "Oscar Lind",
+     "relationship": null,
+     "birthday": null,
+     "residence": null,
+     "job_details": "Joining Stripe as a PM; left Nebula on 2026-08-15",
+     "contacts": "[{\"type\":\"email\",\"value\":\"oscar@nebula.ai\",\"is_primary\":null}]",
+     "allergies": "[]",
+     "interests": "[]",
+     "organization_roles": "[{\"organization\":\"Nebula\",\"role\":\"product manager\",\"start_date\":null},{\"organization\":\"Stripe\",\"role\":\"PM\",\"start_date\":\"2026-08-15\"}]",
+     "place_memberships": "[]"
+    }
+   ],
+   "args": {
+    "organization": 1,
+    "person": 10
+   },
+   "wall": 0.3419694579934003,
+   "verdict": "correct",
+   "why": "The rows' job_details say Oscar Lind left Nebula on 2026-08-15 and is joining Stripe as a PM. That covers every key fact in the gold answer.",
+   "verify": 0.97
+  },
+  {
+   "qid": "m12-q11",
+   "question": "How much is my rent and who is my landlord?",
+   "gold": "$3,200/month; landlord Raj Gupta (+1 415 555 0187)",
+   "template": "leases",
+   "confidence": 0.99,
+   "runs": [
+    {
+     "template": "leases",
+     "args": {
+      "person": 1
+     }
+    }
+   ],
+   "rows": [],
+   "args": {
+    "person": 1
+   },
+   "wall": 0.31780620900099166,
+   "verdict": "incorrect",
+   "why": "The query returned no rows, so neither the rent amount nor the landlord's identity can be found in the results.",
+   "verify": 0.01
+  },
+  {
+   "qid": "m12-q12",
+   "question": "What was my phone number before my current one?",
+   "gold": "+420 722 238 738",
+   "template": null,
+   "confidence": 0.49,
+   "rows": null,
+   "wall": 0.27968066700850613
+  },
+  {
+   "qid": "m12-q13",
+   "question": "What was Tom's previous phone number?",
+   "gold": "+420 777 123 456",
+   "template": "contacts",
+   "confidence": 0.84,
+   "runs": [
+    {
+     "template": "contacts",
+     "args": {
+      "person": 5,
+      "type": "phone",
+      "value": null
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "contacts",
+     "person_id": 5,
+     "name": "Tom Novak",
+     "relationship": "climbing buddy",
+     "contact_id": 4,
+     "type": "phone",
+     "value": "+420 777 999 000",
+     "is_primary": null
+    }
+   ],
+   "args": {
+    "person": 5,
+    "type": "phone",
+    "value": null
+   },
+   "wall": 0.2886168330005603,
+   "verdict": "incorrect",
+   "why": "The rows show only Tom's current number, +420 777 999 000. The previous number, +420 777 123 456, does not appear anywhere in the results.",
+   "verify": 0.12
+  },
+  {
+   "qid": "m12-q14",
+   "question": "Where did I live before San Francisco?",
+   "gold": "Prague",
+   "template": "leases",
+   "confidence": 0.59,
+   "runs": [
+    {
+     "template": "leases",
+     "args": {
+      "person": 1
+     }
+    },
+    {
+     "template": "person_profile",
+     "args": {
+      "person": 1
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "person_profile",
+     "id": 1,
+     "name": "Adam Zvada",
+     "relationship": null,
+     "birthday": null,
+     "residence": null,
+     "job_details": null,
+     "contacts": "[{\"type\":\"phone\",\"value\":\"+420 722 238 738\",\"is_primary\":null},{\"type\":\"phone\",\"value\":\"+1 415 555 0199\",\"is_primary\":1}]",
+     "allergies": "[]",
+     "interests": "[]",
+     "organization_roles": "[{\"organization\":\"Nebula\",\"role\":\"cofounder\",\"start_date\":null}]",
+     "place_memberships": "[{\"place\":\"Smíchoff\",\"category\":\"climbing gym\",\"amount\":1190.0,\"currency\":\"CZK\",\"billing_period\":\"monthly\",\"status\":\"ended\",\"end_date\":\"2026-03-31\"},{\"place\":\"Mission Cliffs\",\"category\":\"climbing gym\",\"amount\":110.0,\"currency\":\"USD\",\"billing_period\":\"monthly\",\"status\":\"active\",\"end_date\":null}]"
+    }
+   ],
+   "args": {
+    "person": 1
+   },
+   "wall": 0.3192398749961285,
+   "verdict": "incorrect",
+   "why": "The rows never name Prague. Residence is null. A Czech phone number and a Smíchoff gym membership in CZK only hint at Czechia; they do not state the city.",
+   "verify": 0.12
+  },
+  {
+   "qid": "m12-q15",
+   "question": "Where did Eva work before her current job?",
+   "gold": "Studio Kvadrat",
+   "template": "person_profile",
+   "confidence": 0.99,
+   "runs": [
+    {
+     "template": "person_profile",
+     "args": {
+      "person": 4
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "person_profile",
+     "id": 4,
+     "name": "Eva",
+     "relationship": "fiancée",
+     "birthday": "09-28",
+     "residence": null,
+     "job_details": null,
+     "contacts": "[]",
+     "allergies": "[\"peanuts\"]",
+     "interests": "[]",
+     "organization_roles": "[{\"organization\":\"Studio Kvadrat\",\"role\":\"architect\",\"start_date\":null},{\"organization\":\"Gensler\",\"role\":\"employee\",\"start_date\":null}]",
+     "place_memberships": "[]"
+    }
+   ],
+   "args": {
+    "person": 4
+   },
+   "wall": 0.32364366701222025,
+   "verdict": "partial",
+   "why": "The rows list two organizations for Eva, Studio Kvadrat and Gensler, but neither has a start date and there is no flag marking which role is current. So the rows can't show which one was the previous job. The gold answer appears in the rows, but it can't be identified as the prior employer.",
+   "verify": 0.57
+  },
+  {
+   "qid": "m12-q16",
+   "question": "Where did Klára live before?",
+   "gold": "Berlin",
+   "template": "person_profile",
+   "confidence": 0.84,
+   "runs": [
+    {
+     "template": "person_profile",
+     "args": {
+      "person": 9
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "person_profile",
+     "id": 9,
+     "name": "Klára",
+     "relationship": "sister",
+     "birthday": "12-02",
+     "residence": "London",
+     "job_details": "new job",
+     "contacts": "[]",
+     "allergies": "[]",
+     "interests": "[]",
+     "organization_roles": "[]",
+     "place_memberships": "[]"
+    }
+   ],
+   "args": {
+    "person": 9
+   },
+   "wall": 0.28285970800789073,
+   "verdict": "incorrect",
+   "why": "The rows show only Klára's current residence, London. There is nothing about a previous residence, so Berlin cannot be found in them.",
+   "verify": 0.09
+  },
+  {
+   "qid": "m12-q17",
+   "question": "When did I move to San Francisco?",
+   "gold": "April 1, 2026 (flew UA 8843 on Mar 31)",
+   "template": "leases",
+   "confidence": 0.47,
+   "runs": [
+    {
+     "template": "leases",
+     "args": {
+      "person": 1
+     }
+    },
+    {
+     "template": "person_profile",
+     "args": {
+      "person": 1
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "person_profile",
+     "id": 1,
+     "name": "Adam Zvada",
+     "relationship": null,
+     "birthday": null,
+     "residence": null,
+     "job_details": null,
+     "contacts": "[{\"type\":\"phone\",\"value\":\"+420 722 238 738\",\"is_primary\":null},{\"type\":\"phone\",\"value\":\"+1 415 555 0199\",\"is_primary\":1}]",
+     "allergies": "[]",
+     "interests": "[]",
+     "organization_roles": "[{\"organization\":\"Nebula\",\"role\":\"cofounder\",\"start_date\":null}]",
+     "place_memberships": "[{\"place\":\"Smíchoff\",\"category\":\"climbing gym\",\"amount\":1190.0,\"currency\":\"CZK\",\"billing_period\":\"monthly\",\"status\":\"ended\",\"end_date\":\"2026-03-31\"},{\"place\":\"Mission Cliffs\",\"category\":\"climbing gym\",\"amount\":110.0,\"currency\":\"USD\",\"billing_period\":\"monthly\",\"status\":\"active\",\"end_date\":null}]"
+    }
+   ],
+   "args": {
+    "person": 1
+   },
+   "wall": 0.32330566699965857,
+   "verdict": "incorrect",
+   "why": "The rows suggest a move to San Francisco: a US phone number, a Prague gym membership that ended 2026-03-31, and an active Mission Cliffs membership. However, they state neither the move date of April 1, 2026 nor the UA 8843 flight on March 31.",
+   "verify": 0.11
+  },
+  {
+   "qid": "m12-q18",
+   "question": "Which gym was I a member of in Prague?",
+   "gold": "Smíchoff (1190 CZK/month, ended March 2026)",
+   "template": "place_memberships",
+   "confidence": 0.91,
+   "runs": [
+    {
+     "template": "place_memberships",
+     "args": {
+      "person": 1,
+      "place": 1
+     }
+    }
+   ],
+   "rows": [],
+   "args": {
+    "person": 1,
+    "place": 1
+   },
+   "wall": 0.4006198329880135,
+   "verdict": "incorrect",
+   "why": "The query returned no rows, so there is nothing to show the gym name or any of the details in the gold answer.",
+   "verify": 0.01
+  },
+  {
+   "qid": "m12-q19",
+   "question": "What was my time on the first 10k run I ever logged?",
+   "gold": "54:48 (Oct 27, 2025)",
+   "template": null,
+   "confidence": 0.43,
+   "rows": null,
+   "wall": 0.3142410839936929
+  },
+  {
+   "qid": "m12-q20",
+   "question": "How much did I spend on coffee in November 2025?",
+   "gold": "1,025 CZK (10 purchases)",
+   "template": "spending_total",
+   "confidence": 0.83,
+   "runs": [
+    {
+     "template": "spending_total",
+     "args": {
+      "start": "1900-01-01",
+      "end": "2026-09-30",
+      "category": "coffee",
+      "merchant": null
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "spending_total",
+     "currency": "CZK",
+     "expense_count": 65,
+     "total_amount": 6320.0,
+     "first_date": "2025-10-01",
+     "last_date": "2026-03-30"
+    },
+    {
+     "_query": "spending_total",
+     "currency": "USD",
+     "expense_count": 79,
+     "total_amount": 446.5,
+     "first_date": "2026-04-01",
+     "last_date": "2026-09-28"
+    }
+   ],
+   "args": {
+    "start": "1900-01-01",
+    "end": "2026-09-30",
+    "category": "coffee",
+    "merchant": null
+   },
+   "wall": 0.3086622920091031,
+   "verdict": "incorrect",
+   "why": "The rows give only aggregate totals over multi-month ranges. They have no November 2025 filter, so neither 1,025 CZK nor the 10-purchase count can be derived from them.",
+   "verify": 0.14
+  },
+  {
+   "qid": "m12-q21",
+   "question": "How much did I spend on groceries in May 2026?",
+   "gold": "$317.76 (4 purchases)",
+   "template": "spending_total",
+   "confidence": 0.82,
+   "runs": [
+    {
+     "template": "spending_total",
+     "args": {
+      "start": "2026-05-01",
+      "end": "2026-05-31",
+      "category": "groceries",
+      "merchant": null
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "spending_total",
+     "currency": "USD",
+     "expense_count": 4,
+     "total_amount": 317.76,
+     "first_date": "2026-05-02",
+     "last_date": "2026-05-30"
+    }
+   ],
+   "args": {
+    "start": "2026-05-01",
+    "end": "2026-05-31",
+    "category": "groceries",
+    "merchant": null
+   },
+   "wall": 0.3164497090037912,
+   "verdict": "correct",
+   "why": "The rows show a total of 317.76 USD across 4 expenses in May 2026, which matches the gold answer.",
+   "verify": 0.97
+  },
+  {
+   "qid": "m12-q22",
+   "question": "How much did I spend on rides (Uber/Bolt) in June 2026?",
+   "gold": "$155.98 (7 purchases)",
+   "template": "spending_total",
+   "confidence": 0.84,
+   "runs": [
+    {
+     "template": "spending_total",
+     "args": {
+      "start": "2026-06-01",
+      "end": "2026-06-30",
+      "category": "transportation",
+      "merchant": "Uber"
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "spending_total",
+     "currency": "USD",
+     "expense_count": 7,
+     "total_amount": 155.98000000000002,
+     "first_date": "2026-06-08",
+     "last_date": "2026-06-28"
+    }
+   ],
+   "args": {
+    "start": "2026-06-01",
+    "end": "2026-06-30",
+    "category": "transportation",
+    "merchant": "Uber"
+   },
+   "wall": 0.29235583399713505,
+   "verdict": "correct",
+   "why": "The rows give a USD total of 155.98 across 7 expenses, dated June 8–28, 2026. That matches both the gold amount and the gold purchase count.",
+   "verify": 0.96
+  },
+  {
+   "qid": "m12-q23",
+   "question": "How much did I spend on lunch in August 2026?",
+   "gold": "$162.25 (8 purchases)",
+   "template": "spending_total",
+   "confidence": 0.82,
+   "runs": [
+    {
+     "template": "spending_total",
+     "args": {
+      "start": "2026-08-01",
+      "end": "2026-08-31",
+      "category": "dining",
+      "merchant": null
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "spending_total",
+     "currency": "USD",
+     "expense_count": 13,
+     "total_amount": 547.55,
+     "first_date": "2026-08-04",
+     "last_date": "2026-08-29"
+    }
+   ],
+   "args": {
+    "start": "2026-08-01",
+    "end": "2026-08-31",
+    "category": "dining",
+    "merchant": null
+   },
+   "wall": 0.3601900000066962,
+   "verdict": "incorrect",
+   "why": "The rows show a total of $547.55 across 13 expenses, which looks like a broader category or all spending, not lunch specifically. The gold answer of $162.25 over 8 purchases cannot be derived from them.",
+   "verify": 0.96
+  },
+  {
+   "qid": "m12-q24",
+   "question": "How many times did I go climbing in January 2026?",
+   "gold": "5",
+   "template": "workout_counts",
+   "confidence": 0.97,
+   "runs": [
+    {
+     "template": "workout_counts",
+     "args": {
+      "start": "2026-01-01",
+      "end": "2026-01-31"
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "workout_counts",
+     "category": "running",
+     "workout_count": 8,
+     "active_days": 8,
+     "first_date": "2026-01-05",
+     "latest_date": "2026-01-29"
+    },
+    {
+     "_query": "workout_counts",
+     "category": "climbing",
+     "workout_count": 4,
+     "active_days": 4,
+     "first_date": "2026-01-06",
+     "latest_date": "2026-01-16"
+    }
+   ],
+   "args": {
+    "start": "2026-01-01",
+    "end": "2026-01-31"
+   },
+   "wall": 0.3105127500020899,
+   "verdict": "incorrect",
+   "why": "The rows give a climbing count of 4 for January 2026, but the gold answer is 5. The latest climbing date is Jan 16, so a later session appears to be missing.",
+   "verify": 0.98
+  },
+  {
+   "qid": "m12-q25",
+   "question": "How many times did I go climbing in July 2026?",
+   "gold": "7",
+   "template": "workout_counts",
+   "confidence": 0.97,
+   "runs": [
+    {
+     "template": "workout_counts",
+     "args": {
+      "start": "2026-07-01",
+      "end": "2026-07-31"
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "workout_counts",
+     "category": "climbing",
+     "workout_count": 7,
+     "active_days": 7,
+     "first_date": "2026-07-03",
+     "latest_date": "2026-07-28"
+    },
+    {
+     "_query": "workout_counts",
+     "category": "running",
+     "workout_count": 3,
+     "active_days": 3,
+     "first_date": "2026-07-06",
+     "latest_date": "2026-07-16"
+    }
+   ],
+   "args": {
+    "start": "2026-07-01",
+    "end": "2026-07-31"
+   },
+   "wall": 0.29439716700289864,
+   "verdict": "correct",
+   "why": "The climbing row shows workout_count 7, with dates falling within July 2026. This matches the gold answer.",
+   "verify": 0.98
+  },
+  {
+   "qid": "m12-q26",
+   "question": "What's my best 10k time?",
+   "gold": "52:06 (Jun 25, 2026)",
+   "template": "fastest_runs",
+   "confidence": 1,
+   "runs": [
+    {
+     "template": "fastest_runs",
+     "args": {
+      "start": null,
+      "end": null
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "fastest_runs",
+     "distance_km": 5,
+     "date": "2026-08-17",
+     "activity": "5 km in 24:56 (new PB)",
+     "seconds": 1496,
+     "workout_id": 111
+    },
+    {
+     "_query": "fastest_runs",
+     "distance_km": 10,
+     "date": "2026-06-25",
+     "activity": "10 km in 52:06 (new PB)",
+     "seconds": 3126,
+     "workout_id": 93
+    }
+   ],
+   "args": {
+    "start": null,
+    "end": null
+   },
+   "wall": 0.3119964999932563,
+   "verdict": "correct",
+   "why": "The rows include a 10 km run of 52:06 on 2026-06-25, marked as a PB. That matches the gold answer's time and date.",
+   "verify": 0.97
+  },
+  {
+   "qid": "m12-q27",
+   "question": "What's the hardest climbing grade I've sent?",
+   "gold": "7a (Jul 03, 2026)",
+   "template": null,
+   "confidence": 0.69,
+   "rows": null,
+   "wall": 0.3102806670067366
+  },
+  {
+   "qid": "m12-q28",
+   "question": "How many books have I finished, and which did I rate 5/5?",
+   "gold": "10 finished; 5/5: Thinking, Fast and Slow, Project Hail Mary, Shoe Dog, Dune",
+   "template": "books",
+   "confidence": 0.82,
+   "runs": [
+    {
+     "template": "books",
+     "args": {
+      "book": null,
+      "author": null,
+      "status": "finished",
+      "start": null,
+      "end": null
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "books",
+     "id": 11,
+     "title": "Atomic Habits",
+     "author": "James Clear",
+     "status": "finished",
+     "started_date": "2026-06-05",
+     "rating": 3
+    },
+    {
+     "_query": "books",
+     "id": 4,
+     "title": "The Mom Test",
+     "author": "Rob Fitzpatrick",
+     "status": "finished",
+     "started_date": "2025-12-26",
+     "rating": 4
+    },
+    {
+     "_query": "books",
+     "id": 3,
+     "title": "Project Hail Mary",
+     "author": "Andy Weir",
+     "status": "finished",
+     "started_date": "2025-11-28",
+     "rating": 5
+    },
+    {
+     "_query": "books",
+     "id": 1,
+     "title": "Thinking, Fast and Slow",
+     "author": "Daniel Kahneman",
+     "status": "finished",
+     "started_date": "2025-10-04",
+     "rating": 5
+    },
+    {
+     "_query": "books",
+     "id": 8,
+     "title": "Deep Work",
+     "author": "Cal Newport",
+     "status": "finished",
+     "started_date": null,
+     "rating": 4
+    },
+    {
+     "_query": "books",
+     "id": 10,
+     "title": "Dune",
+     "author": null,
+     "status": "finished",
+     "started_date": null,
+     "rating": 5
+    },
+    {
+     "_query": "books",
+     "id": 6,
+     "title": "Sapiens",
+     "author": null,
+     "status": "finished",
+     "started_date": null,
+     "rating": 3
+    },
+    {
+     "_query": "books",
+     "id": 7,
+     "title": "Shoe Dog",
+     "author": "Phil Knight",
+     "status": "finished",
+     "started_date": null,
+     "rating": 5
+    },
+    {
+     "_query": "books",
+     "id": 2,
+     "title": "The Pragmatic Programmer",
+     "author": "Andrew Hunt",
+     "status": "finished",
+     "started_date": null,
+     "rating": 4
+    },
+    {
+     "_query": "books",
+     "id": 12,
+     "title": "Zero to One",
+     "author": "Peter Thiel",
+     "status": "finished",
+     "started_date": null,
+     "rating": 4
+    }
+   ],
+   "args": {
+    "book": null,
+    "author": null,
+    "status": "finished",
+    "start": null,
+    "end": null
+   },
+   "wall": 0.2883953749987995,
+   "verdict": "correct",
+   "why": "The rows list 10 finished books. The four rated 5 are Project Hail Mary, Thinking Fast and Slow, Dune and Shoe Dog, which matches the gold answer.",
+   "verify": 0.98
+  },
+  {
+   "qid": "m12-q29",
+   "question": "How many dinners out did I have with Eva in 2026?",
+   "gold": "8",
+   "template": "interactions",
+   "confidence": 0.41,
+   "runs": [
+    {
+     "template": "interactions",
+     "args": {
+      "person": 4,
+      "start": "1900-01-01",
+      "end": "2026-09-30"
+     }
+    },
+    {
+     "template": "expenses",
+     "args": {
+      "start": "1900-01-01",
+      "end": "2026-09-30",
+      "category": "dining",
+      "merchant": null,
+      "companion": "Eva"
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "interactions",
+     "id": 6,
+     "person": "Eva",
+     "category": "engagement",
+     "date": "2026-07-12",
+     "organization": null
+    },
+    {
+     "_query": "expenses",
+     "id": 396,
+     "date": "2026-09-09",
+     "transaction_datetime": null,
+     "category": "dining",
+     "merchant": "State Bird Provisions",
+     "item": "dinner",
+     "amount": 84.5,
+     "currency": "USD",
+     "companion": "Eva",
+     "location": null,
+     "card_last_four": null
+    },
+    {
+     "_query": "expenses",
+     "id": 379,
+     "date": "2026-08-26",
+     "transaction_datetime": null,
+     "category": "dining",
+     "merchant": "Zuni Café",
+     "item": "dinner",
+     "amount": 68.0,
+     "currency": "USD",
+     "companion": "Eva",
+     "location": null,
+     "card_last_four": null
+    },
+    {
+     "_query": "expenses",
+     "id": 374,
+     "date": "2026-08-22",
+     "transaction_datetime": null,
+     "category": "dining",
+     "merchant": "State Bird Provisions",
+     "item": "dinner",
+     "amount": 84.5,
+     "currency": "USD",
+     "companion": "Eva",
+     "location": null,
+     "card_last_four": null
+    },
+    {
+     "_query": "expenses",
+     "id": 363,
+     "date": "2026-08-15",
+     "transaction_datetime": null,
+     "category": "dining",
+     "merchant": "Zuni Café",
+     "item": "dinner",
+     "amount": 68.0,
+     "currency": "USD",
+     "companion": "Eva",
+     "location": null,
+     "card_last_four": null
+    },
+    {
+     "_query": "expenses",
+     "id": 293,
+     "date": "2026-06-17",
+     "transaction_datetime": null,
+     "category": "dining",
+     "merchant": "Zuni Café",
+     "item": "dinner",
+     "amount": 96.8,
+     "currency": "USD",
+     "companion": "Eva",
+     "location": null,
+     "card_last_four": null
+    },
+    {
+     "_query": "expenses",
+     "id": 270,
+     "date": "2026-05-30",
+     "transaction_datetime": null,
+     "category": "dining",
+     "merchant": "Zuni Café",
+     "item": null,
+     "amount": 96.8,
+     "currency": "USD",
+     "companion": "Eva",
+     "location": null,
+     "card_last_four": null
+    },
+    {
+     "_query": "expenses",
+     "id": 175,
+     "date": "2026-03-07",
+     "transaction_datetime": null,
+     "category": "dining",
+     "merchant": "SaSaZu",
+     "item": "dinner",
+     "amount": 1560.0,
+     "currency": "CZK",
+     "companion": "Eva",
+     "location": null,
+     "card_last_four": null
+    },
+    {
+     "_query": "expenses",
+     "id": 115,
+     "date": "2026-01-17",
+     "transaction_datetime": null,
+     "category": "dining",
+     "merchant": "La Degustation",
+     "item": "dinner",
+     "amount": 2140.0,
+     "currency": "CZK",
+     "companion": "Eva",
+     "location": null,
+     "card_last_four": null
+    },
+    {
+     "_query": "expenses",
+     "id": 83,
+     "date": "2025-12-06",
+     "transaction_datetime": null,
+     "category": "dining",
+     "merchant": "La Degustation",
+     "item": "dinner",
+     "amount": 1560.0,
+     "currency": "CZK",
+     "companion": "Eva",
+     "location": null,
+     "card_last_four": null
+    },
+    {
+     "_query": "expenses",
+     "id": 57,
+     "date": "2025-11-19",
+     "transaction_datetime": null,
+     "category": "dining",
+     "merchant": "SaSaZu",
+     "item": "dinner",
+     "amount": 890.0,
+     "currency": "CZK",
+     "companion": "Eva",
+     "location": null,
+     "card_last_four": null
+    },
+    {
+     "_query": "expenses",
+     "id": 46,
+     "date": "2025-11-08",
+     "transaction_datetime": null,
+     "category": "dining",
+     "merchant": "SaSaZu",
+     "item": "dinner",
+     "amount": 890.0,
+     "currency": "CZK",
+     "companion": "Eva",
+     "location": null,
+     "card_last_four": null
+    }
+   ],
+   "args": {
+    "person": 4,
+    "start": "1900-01-01",
+    "end": "2026-09-30"
+   },
+   "wall": 0.29784454200125765,
+   "verdict": "correct",
+   "why": "The rows include eight 2026 dining expenses with Eva as companion (ids 396, 379, 374, 363, 293, 270, 175 and 115). One of them (270) has a null item but is still a dining entry, so the count of 8 can be read directly and matches the gold answer.",
+   "verify": 0.89
+  },
+  {
+   "qid": "m12-q30",
+   "question": "How much rent have I paid in total?",
+   "gold": "$19,200 (6 months × $3,200)",
+   "template": "spending_total",
+   "confidence": 0.56,
+   "runs": [
+    {
+     "template": "spending_total",
+     "args": {
+      "start": null,
+      "end": null,
+      "category": "rent",
+      "merchant": null
+     }
+    },
+    {
+     "template": "expenses",
+     "args": {
+      "start": null,
+      "end": null,
+      "category": "rent",
+      "merchant": null,
+      "companion": null
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "spending_total",
+     "currency": "USD",
+     "expense_count": 6,
+     "total_amount": 19200.0,
+     "first_date": "2026-04-01",
+     "last_date": "2026-09-01"
+    },
+    {
+     "_query": "expenses",
+     "id": 386,
+     "date": "2026-09-01",
+     "transaction_datetime": null,
+     "category": "rent",
+     "merchant": null,
+     "item": "September rent",
+     "amount": 3200.0,
+     "currency": "USD",
+     "companion": null,
+     "location": null,
+     "card_last_four": null
+    },
+    {
+     "_query": "expenses",
+     "id": 346,
+     "date": "2026-08-01",
+     "transaction_datetime": null,
+     "category": "rent",
+     "merchant": null,
+     "item": "August rent",
+     "amount": 3200.0,
+     "currency": "USD",
+     "companion": null,
+     "location": null,
+     "card_last_four": null
+    },
+    {
+     "_query": "expenses",
+     "id": 310,
+     "date": "2026-07-01",
+     "transaction_datetime": null,
+     "category": "rent",
+     "merchant": null,
+     "item": "July rent",
+     "amount": 3200.0,
+     "currency": "USD",
+     "companion": null,
+     "location": null,
+     "card_last_four": null
+    },
+    {
+     "_query": "expenses",
+     "id": 271,
+     "date": "2026-06-01",
+     "transaction_datetime": null,
+     "category": "rent",
+     "merchant": null,
+     "item": "June rent",
+     "amount": 3200.0,
+     "currency": "USD",
+     "companion": null,
+     "location": null,
+     "card_last_four": null
+    },
+    {
+     "_query": "expenses",
+     "id": 240,
+     "date": "2026-05-01",
+     "transaction_datetime": null,
+     "category": "rent",
+     "merchant": null,
+     "item": "May rent",
+     "amount": 3200.0,
+     "currency": "USD",
+     "companion": null,
+     "location": null,
+     "card_last_four": null
+    },
+    {
+     "_query": "expenses",
+     "id": 200,
+     "date": "2026-04-01",
+     "transaction_datetime": null,
+     "category": "rent",
+     "merchant": null,
+     "item": "April rent",
+     "amount": 3200.0,
+     "currency": "USD",
+     "companion": null,
+     "location": null,
+     "card_last_four": null
+    }
+   ],
+   "args": {
+    "start": null,
+    "end": null,
+    "category": "rent",
+    "merchant": null
+   },
+   "wall": 0.33345304199610837,
+   "verdict": "correct",
+   "why": "The rows give a total of 19,200 across 6 rent expenses, each $3,200, which matches the gold answer.",
+   "verify": 0.94
+  },
+  {
+   "qid": "m12-q31",
+   "question": "How much did the Lisbon trip cost for flights plus hotel?",
+   "gold": "$2,320 ($1,340 flights + $980 hotel)",
+   "template": "expenses",
+   "confidence": 0.62,
+   "runs": [
+    {
+     "template": "expenses",
+     "args": {
+      "start": null,
+      "end": null,
+      "category": "travel",
+      "merchant": null,
+      "companion": null
+     }
+    },
+    {
+     "template": "spending_total",
+     "args": {
+      "start": null,
+      "end": null,
+      "category": "travel",
+      "merchant": null
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "expenses",
+     "id": 177,
+     "date": "2026-03-10",
+     "transaction_datetime": null,
+     "category": "travel",
+     "merchant": "United",
+     "item": "UA 8843 flight (confirmation K7QX2P)",
+     "amount": 18450.0,
+     "currency": "CZK",
+     "companion": null,
+     "location": null,
+     "card_last_four": null
+    },
+    {
+     "_query": "spending_total",
+     "currency": "CZK",
+     "expense_count": 1,
+     "total_amount": 18450.0,
+     "first_date": "2026-03-10",
+     "last_date": "2026-03-10"
+    }
+   ],
+   "args": {
+    "start": null,
+    "end": null,
+    "category": "travel",
+    "merchant": null,
+    "companion": null
+   },
+   "wall": 0.287846332998015,
+   "verdict": "incorrect",
+   "why": "The rows show a single United flight expense of 18,450 CZK with no Lisbon location. They contain no hotel cost and do not match the $1,340 flights or $980 hotel amounts.",
+   "verify": 0.1
+  },
+  {
+   "qid": "m12-q32",
+   "question": "How much have I spent at Blue Bottle in total?",
+   "gold": "$148.75 (27 visits)",
+   "template": "spending_total",
+   "confidence": 0.68,
+   "runs": [
+    {
+     "template": "spending_total",
+     "args": {
+      "start": null,
+      "end": null,
+      "category": "coffee",
+      "merchant": "Blue Bottle"
+     }
+    },
+    {
+     "template": "spending_by_merchant",
+     "args": {
+      "start": null,
+      "end": null,
+      "category": "coffee"
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "spending_total",
+     "currency": "USD",
+     "expense_count": 26,
+     "total_amount": 143.5,
+     "first_date": "2026-04-03",
+     "last_date": "2026-09-19"
+    },
+    {
+     "_query": "spending_by_merchant",
+     "merchant": "EMA Espresso Bar",
+     "currency": "CZK",
+     "expense_count": 35,
+     "total_amount": 3410.0,
+     "first_date": "2025-10-06",
+     "last_date": "2026-03-25"
+    },
+    {
+     "_query": "spending_by_merchant",
+     "merchant": "Café Savoy",
+     "currency": "CZK",
+     "expense_count": 19,
+     "total_amount": 1790.0,
+     "first_date": "2025-10-15",
+     "last_date": "2026-03-30"
+    },
+    {
+     "_query": "spending_by_merchant",
+     "merchant": "Kavárna Místo",
+     "currency": "CZK",
+     "expense_count": 12,
+     "total_amount": 1185.0,
+     "first_date": "2025-10-01",
+     "last_date": "2026-03-27"
+    },
+    {
+     "_query": "spending_by_merchant",
+     "merchant": "Philz Coffee",
+     "currency": "USD",
+     "expense_count": 31,
+     "total_amount": 173.75,
+     "first_date": "2026-04-01",
+     "last_date": "2026-09-25"
+    },
+    {
+     "_query": "spending_by_merchant",
+     "merchant": "Blue Bottle",
+     "currency": "USD",
+     "expense_count": 26,
+     "total_amount": 143.5,
+     "first_date": "2026-04-03",
+     "last_date": "2026-09-19"
+    },
+    {
+     "_query": "spending_by_merchant",
+     "merchant": "Sightglass",
+     "currency": "USD",
+     "expense_count": 22,
+     "total_amount": 129.25,
+     "first_date": "2026-04-08",
+     "last_date": "2026-09-28"
+    }
+   ],
+   "args": {
+    "start": null,
+    "end": null,
+    "category": "coffee",
+    "merchant": "Blue Bottle"
+   },
+   "wall": 0.34174937500210945,
+   "verdict": "incorrect",
+   "why": "The rows show $143.50 over 26 visits for Blue Bottle, but the gold answer is $148.75 over 27 visits. It looks like one visit is missing, so the rows give an outdated or incomplete total rather than the correct one.",
+   "verify": 0.99
+  },
+  {
+   "qid": "m12-q33",
+   "question": "How many times have I gone climbing since moving to SF?",
+   "gold": "39",
+   "template": "workout_counts",
+   "confidence": 0.94,
+   "runs": [
+    {
+     "template": "workout_counts",
+     "args": {
+      "start": "1900-01-01",
+      "end": "2026-09-30"
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "workout_counts",
+     "category": "climbing",
+     "workout_count": 71,
+     "active_days": 71,
+     "first_date": "2025-10-03",
+     "latest_date": "2026-09-25"
+    },
+    {
+     "_query": "workout_counts",
+     "category": "running",
+     "workout_count": 53,
+     "active_days": 53,
+     "first_date": "2025-10-09",
+     "latest_date": "2026-09-24"
+    }
+   ],
+   "args": {
+    "start": "1900-01-01",
+    "end": "2026-09-30"
+   },
+   "wall": 0.33176395800546743,
+   "verdict": "incorrect",
+   "why": "The rows report 71 climbing workouts in total, with no filter for the date of the move to SF. The gold answer of 39 cannot be computed from these aggregate counts.",
+   "verify": 0.92
+  },
+  {
+   "qid": "m12-q34",
+   "question": "When did I last have dinner with Ondra?",
+   "gold": "Mar 28, 2026 at Eska",
+   "template": "interactions",
+   "confidence": 0.8,
+   "runs": [
+    {
+     "template": "interactions",
+     "args": {
+      "person": 7,
+      "start": "1900-01-01",
+      "end": "2026-09-30"
+     }
+    }
+   ],
+   "rows": [],
+   "args": {
+    "person": 7,
+    "start": "1900-01-01",
+    "end": "2026-09-30"
+   },
+   "wall": 0.38821787500637583,
+   "verdict": "incorrect",
+   "why": "The query returned no rows, so neither the date (Mar 28, 2026) nor the location (Eska) of the last dinner with Ondra can be found.",
+   "verify": 0.01
+  },
+  {
+   "qid": "m12-q35",
+   "question": "When and where is the next Nebula board meeting?",
+   "gold": "Thu Oct 01, 2026 at 16:00, 1 Mission St, San Francisco",
+   "template": "events",
+   "confidence": 0.87,
+   "runs": [
+    {
+     "template": "events",
+     "args": {
+      "category": "meeting",
+      "organization": 1,
+      "person": null,
+      "start": "2026-09-30",
+      "end": "2100-01-01"
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "events",
+     "id": 22,
+     "category": "meeting",
+     "title": "Nebula board meeting",
+     "start_datetime": "2026-10-01T16:00",
+     "end_datetime": "2026-10-01T17:30",
+     "location": "1 Mission St, San Francisco",
+     "organization": "Nebula",
+     "organizer": "David Mokos",
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    }
+   ],
+   "args": {
+    "category": "meeting",
+    "organization": 1,
+    "person": null,
+    "start": "2026-09-30",
+    "end": "2100-01-01"
+   },
+   "wall": 0.29696333399624564,
+   "verdict": "correct",
+   "why": "The row gives the Nebula board meeting on 2026-10-01 at 16:00 at 1 Mission St, San Francisco. Oct 1, 2026 is a Thursday, so this matches every part of the gold answer.",
+   "verify": 0.94
+  },
+  {
+   "qid": "m12-q36",
+   "question": "When was my last dentist appointment, and with whom?",
+   "gold": "Jun 03, 2026 with Dr. Lee",
+   "template": "events",
+   "confidence": 0.99,
+   "runs": [
+    {
+     "template": "events",
+     "args": {
+      "category": "appointment",
+      "organization": null,
+      "person": 1,
+      "start": "1900-01-01",
+      "end": "2026-09-30"
+     }
+    }
+   ],
+   "rows": [],
+   "args": {
+    "category": "appointment",
+    "organization": null,
+    "person": 1,
+    "start": "1900-01-01",
+    "end": "2026-09-30"
+   },
+   "wall": 0.33751666599710006,
+   "verdict": "incorrect",
+   "why": "Rows are empty; no information about the appointment date or dentist.",
+   "verify": 0.01
+  },
+  {
+   "qid": "m12-q37",
+   "question": "When did I first meet Lucas Meyer, and where?",
+   "gold": "Nov 5, 2025 at Web Summit",
+   "template": "interactions",
+   "confidence": 0.8,
+   "runs": [
+    {
+     "template": "interactions",
+     "args": {
+      "person": 8,
+      "start": "1900-01-01",
+      "end": "2026-09-30"
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "interactions",
+     "id": 3,
+     "person": "Lucas Meyer",
+     "category": "met at Web Summit",
+     "date": "2025-11-05",
+     "organization": "Sequoia"
+    }
+   ],
+   "args": {
+    "person": 8,
+    "start": "1900-01-01",
+    "end": "2026-09-30"
+   },
+   "wall": 0.3327018340060022,
+   "verdict": "correct",
+   "why": "The row gives the date, 2025-11-05, and the place, 'met at Web Summit', for Lucas Meyer. Both match the gold answer.",
+   "verify": 0.93
+  },
+  {
+   "qid": "m12-q38",
+   "question": "When did I get engaged?",
+   "gold": "July 12, 2026",
+   "template": "events",
+   "confidence": 0.51,
+   "runs": [
+    {
+     "template": "events",
+     "args": {
+      "category": null,
+      "organization": null,
+      "person": 1,
+      "start": "1900-01-01",
+      "end": "2026-09-30"
+     }
+    }
+   ],
+   "rows": [],
+   "args": {
+    "category": null,
+    "organization": null,
+    "person": 1,
+    "start": "1900-01-01",
+    "end": "2026-09-30"
+   },
+   "wall": 0.3048627079988364,
+   "verdict": "incorrect",
+   "why": "The query returned no rows, so the engagement date of July 12, 2026 cannot be found in the result.",
+   "verify": 0.01
+  },
+  {
+   "qid": "m12-q39",
+   "question": "What's on my calendar for October 2026?",
+   "gold": "Nebula board meeting Thu Oct 1 at 16:00 (1 Mission St) and the Series A kickoff with Sarah Kim Fri Oct 9 at 10:00",
+   "template": "events",
+   "confidence": 0.93,
+   "runs": [
+    {
+     "template": "events",
+     "args": {
+      "category": null,
+      "organization": null,
+      "person": 1,
+      "start": "2026-10-01",
+      "end": "2026-10-31"
+     }
+    }
+   ],
+   "rows": [],
+   "args": {
+    "category": null,
+    "organization": null,
+    "person": 1,
+    "start": "2026-10-01",
+    "end": "2026-10-31"
+   },
+   "wall": 0.31810070799838286,
+   "verdict": "incorrect",
+   "why": "The query returned no rows, so none of the October 2026 calendar events in the gold answer can be found.",
+   "verify": 0.06
+  },
+  {
+   "qid": "m12-q40",
+   "question": "When was the call with Lucas Meyer?",
+   "gold": "Wed Jan 21, 2026 at 14:00 (moved from Jan 14 at 10:00)",
+   "template": "events",
+   "confidence": 0.48,
+   "runs": [
+    {
+     "template": "events",
+     "args": {
+      "category": "call",
+      "organization": null,
+      "person": 8,
+      "start": null,
+      "end": null
+     }
+    },
+    {
+     "template": "interactions",
+     "args": {
+      "person": 8,
+      "start": null,
+      "end": null
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "interactions",
+     "id": 3,
+     "person": "Lucas Meyer",
+     "category": "met at Web Summit",
+     "date": "2025-11-05",
+     "organization": "Sequoia"
+    }
+   ],
+   "args": {
+    "category": "call",
+    "organization": null,
+    "person": 8,
+    "start": null,
+    "end": null
+   },
+   "wall": 0.32558687499840744,
+   "verdict": "incorrect",
+   "why": "The rows only show a Web Summit meeting on 2025-11-05. They contain nothing about a call on Jan 21, 2026 at 14:00 or the move from Jan 14.",
+   "verify": 0.54
+  },
+  {
+   "qid": "m12-q41",
+   "question": "Who led Nebula's seed round, and how much did we raise?",
+   "gold": "Northwind Ventures (Sarah Kim), $3M",
+   "template": "funding_rounds",
+   "confidence": 1,
+   "runs": [
+    {
+     "template": "funding_rounds",
+     "args": {
+      "organization": 1,
+      "start": "1900-01-01",
+      "end": "2026-09-30"
+     }
+    }
+   ],
+   "rows": [],
+   "args": {
+    "organization": 1,
+    "start": "1900-01-01",
+    "end": "2026-09-30"
+   },
+   "wall": 0.3235622079955647,
+   "verdict": "incorrect",
+   "why": "The query returned no rows, so neither the lead investor nor the raise amount can be determined.",
+   "verify": 0.01
+  },
+  {
+   "qid": "m12-q42",
+   "question": "What's Lucas Meyer's email?",
+   "gold": "lucas@sequoia.com",
+   "template": "contacts",
+   "confidence": 0.98,
+   "runs": [
+    {
+     "template": "contacts",
+     "args": {
+      "person": 8,
+      "type": "email",
+      "value": "lucas@sequoia.com"
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "contacts",
+     "person_id": 8,
+     "name": "Lucas Meyer",
+     "relationship": null,
+     "contact_id": 7,
+     "type": "email",
+     "value": "lucas@sequoia.com",
+     "is_primary": null
+    }
+   ],
+   "args": {
+    "person": 8,
+    "type": "email",
+    "value": "lucas@sequoia.com"
+   },
+   "wall": 0.36419716700038407,
+   "verdict": "correct",
+   "why": "The rows list Lucas Meyer's email as lucas@sequoia.com, which matches the gold answer.",
+   "verify": 0.98
+  },
+  {
+   "qid": "m12-q43",
+   "question": "What were the terms in Sarah's term sheet draft?",
+   "gold": "$3M at a $15M post-money valuation, 1x non-participating preference",
+   "template": "emails",
+   "confidence": 0.42,
+   "runs": [
+    {
+     "template": "emails",
+     "args": {
+      "email": 1,
+      "person": 12,
+      "organization": null,
+      "start": null,
+      "end": null
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "emails",
+     "id": 1,
+     "datetime": "2026-02-01T08:41",
+     "from_email": "sarah@northwind.vc",
+     "to_email": "adam@nebula.ai",
+     "subject": "Term sheet draft",
+     "body_details": "Draft term sheet for Nebula seed: $3M at a $15M post-money valuation; 1x non-participating preference. Sarah Kim is a Partner at Northwind Ventures.",
+     "sender_person": "Sarah Kim",
+     "organization": "Northwind Ventures"
+    }
+   ],
+   "args": {
+    "email": 1,
+    "person": 12,
+    "organization": null,
+    "start": null,
+    "end": null
+   },
+   "wall": 0.29814858399913646,
+   "verdict": "correct",
+   "why": "The row states all three terms from the gold answer: $3M, a $15M post-money valuation, and a 1x non-participating preference.",
+   "verify": 0.97
+  },
+  {
+   "qid": "m12-q44",
+   "question": "Who is Eva Green?",
+   "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+   "template": "person_profile",
+   "confidence": 0.94,
+   "runs": [
+    {
+     "template": "person_profile",
+     "args": {
+      "person": 14
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "person_profile",
+     "id": 14,
+     "name": "Eva Green",
+     "relationship": null,
+     "birthday": null,
+     "residence": null,
+     "job_details": null,
+     "contacts": "[{\"type\":\"email\",\"value\":\"eva.green@nebula.ai\",\"is_primary\":null}]",
+     "allergies": "[]",
+     "interests": "[]",
+     "organization_roles": "[{\"organization\":\"Nebula\",\"role\":\"designer\",\"start_date\":null}]",
+     "place_memberships": "[]"
+    }
+   ],
+   "args": {
+    "person": 14
+   },
+   "wall": 0.3097461659926921,
+   "verdict": "partial",
+   "why": "The rows confirm that Eva Green is a designer at Nebula with the email eva.green@nebula.ai. They do not include the Mar 15, 2026 join date (start_date is null), and nothing in them distinguishes her from the partner Eva.",
+   "verify": 0.41
+  },
+  {
+   "qid": "m12-q45",
+   "question": "Who introduced me to Mark Chen?",
+   "gold": "Priya Patel (Stripe)",
+   "template": "person_profile",
+   "confidence": 0.34,
+   "runs": [
+    {
+     "template": "person_profile",
+     "args": {
+      "person": 17
+     }
+    },
+    {
+     "template": "interactions",
+     "args": {
+      "person": 17,
+      "start": "1900-01-01",
+      "end": "2026-09-30"
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "person_profile",
+     "id": 17,
+     "name": "Mark Chen",
+     "relationship": null,
+     "birthday": null,
+     "residence": null,
+     "job_details": null,
+     "contacts": "[]",
+     "allergies": "[]",
+     "interests": "[]",
+     "organization_roles": "[{\"organization\":\"Stripe\",\"role\":\"Partnerships\",\"start_date\":null}]",
+     "place_memberships": "[]"
+    },
+    {
+     "_query": "interactions",
+     "id": 5,
+     "person": "Mark Chen",
+     "category": "introduced by Priya Patel",
+     "date": "2026-05-12",
+     "organization": "Stripe"
+    }
+   ],
+   "args": {
+    "person": 17
+   },
+   "wall": 0.33332158300618175,
+   "verdict": "correct",
+   "why": "The rows include an interaction record for Mark Chen labeled 'introduced by Priya Patel' with organization Stripe, which matches the gold answer.",
+   "verify": 0.96
+  },
+  {
+   "qid": "m12-q46",
+   "question": "Who are my climbing partners?",
+   "gold": "Tom Novak (Prague) and Nina Rossi (SF)",
+   "template": "workouts",
+   "confidence": 0.95,
+   "runs": [
+    {
+     "template": "workouts",
+     "args": {
+      "start": null,
+      "end": null,
+      "category": "climbing",
+      "place": null
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "workouts",
+     "id": 124,
+     "date": "2026-09-25",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": "Nina"
+    },
+    {
+     "_query": "workouts",
+     "id": 122,
+     "date": "2026-09-22",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": "Nina"
+    },
+    {
+     "_query": "workouts",
+     "id": 120,
+     "date": "2026-09-15",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": "Nina"
+    },
+    {
+     "_query": "workouts",
+     "id": 119,
+     "date": "2026-09-11",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": null
+    },
+    {
+     "_query": "workouts",
+     "id": 117,
+     "date": "2026-09-04",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": null
+    },
+    {
+     "_query": "workouts",
+     "id": 114,
+     "date": "2026-08-25",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": "Nina"
+    },
+    {
+     "_query": "workouts",
+     "id": 112,
+     "date": "2026-08-18",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": "Nina"
+    },
+    {
+     "_query": "workouts",
+     "id": 110,
+     "date": "2026-08-11",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": null
+    },
+    {
+     "_query": "workouts",
+     "id": 108,
+     "date": "2026-08-04",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": "Nina"
+    },
+    {
+     "_query": "workouts",
+     "id": 106,
+     "date": "2026-07-28",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": null
+    },
+    {
+     "_query": "workouts",
+     "id": 105,
+     "date": "2026-07-24",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": null
+    },
+    {
+     "_query": "workouts",
+     "id": 104,
+     "date": "2026-07-21",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": "Nina"
+    },
+    {
+     "_query": "workouts",
+     "id": 103,
+     "date": "2026-07-17",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": "Nina"
+    },
+    {
+     "_query": "workouts",
+     "id": 101,
+     "date": "2026-07-14",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": "Nina"
+    },
+    {
+     "_query": "workouts",
+     "id": 99,
+     "date": "2026-07-07",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": "Nina"
+    },
+    {
+     "_query": "workouts",
+     "id": 97,
+     "date": "2026-07-03",
+     "category": "climbing",
+     "activity": "sent a 7a route",
+     "place": "Mission Cliffs",
+     "companion": "Nina"
+    },
+    {
+     "_query": "workouts",
+     "id": 96,
+     "date": "2026-06-30",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": "Nina"
+    },
+    {
+     "_query": "workouts",
+     "id": 94,
+     "date": "2026-06-26",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": "Nina"
+    },
+    {
+     "_query": "workouts",
+     "id": 92,
+     "date": "2026-06-23",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": "Nina"
+    },
+    {
+     "_query": "workouts",
+     "id": 89,
+     "date": "2026-06-14",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": null
+    },
+    {
+     "_query": "workouts",
+     "id": 88,
+     "date": "2026-06-12",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": "Nina"
+    },
+    {
+     "_query": "workouts",
+     "id": 87,
+     "date": "2026-06-09",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": "Nina"
+    },
+    {
+     "_query": "workouts",
+     "id": 86,
+     "date": "2026-06-02",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": null
+    },
+    {
+     "_query": "workouts",
+     "id": 84,
+     "date": "2026-05-31",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": "Nina"
+    },
+    {
+     "_query": "workouts",
+     "id": 83,
+     "date": "2026-05-29",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": "Nina"
+    },
+    {
+     "_query": "workouts",
+     "id": 82,
+     "date": "2026-05-19",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": "Nina"
+    },
+    {
+     "_query": "workouts",
+     "id": 81,
+     "date": "2026-05-15",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": "Nina"
+    },
+    {
+     "_query": "workouts",
+     "id": 79,
+     "date": "2026-05-12",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": "Nina"
+    },
+    {
+     "_query": "workouts",
+     "id": 77,
+     "date": "2026-05-08",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": "Nina"
+    },
+    {
+     "_query": "workouts",
+     "id": 76,
+     "date": "2026-05-05",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": "Nina"
+    },
+    {
+     "_query": "workouts",
+     "id": 75,
+     "date": "2026-05-01",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": null
+    },
+    {
+     "_query": "workouts",
+     "id": 74,
+     "date": "2026-04-28",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": "Nina"
+    },
+    {
+     "_query": "workouts",
+     "id": 72,
+     "date": "2026-04-24",
+     "category": "climbing",
+     "activity": "sent a 6c+ route",
+     "place": "Mission Cliffs",
+     "companion": "Nina"
+    },
+    {
+     "_query": "workouts",
+     "id": 70,
+     "date": "2026-04-17",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": "Nina"
+    },
+    {
+     "_query": "workouts",
+     "id": 69,
+     "date": "2026-04-14",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": "Nina"
+    },
+    {
+     "_query": "workouts",
+     "id": 67,
+     "date": "2026-04-10",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": "Nina"
+    },
+    {
+     "_query": "workouts",
+     "id": 65,
+     "date": "2026-04-07",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": "Nina"
+    },
+    {
+     "_query": "workouts",
+     "id": 63,
+     "date": "2026-04-03",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Mission Cliffs",
+     "companion": "Nina"
+    },
+    {
+     "_query": "workouts",
+     "id": 61,
+     "date": "2026-03-27",
+     "category": "climbing",
+     "activity": "sent a 6c route",
+     "place": "Smíchoff",
+     "companion": "Tom"
+    },
+    {
+     "_query": "workouts",
+     "id": 59,
+     "date": "2026-03-20",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Smíchoff",
+     "companion": "Tom"
+    },
+    {
+     "_query": "workouts",
+     "id": 58,
+     "date": "2026-03-17",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Smíchoff",
+     "companion": "Tom"
+    },
+    {
+     "_query": "workouts",
+     "id": 57,
+     "date": "2026-03-10",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Smíchoff",
+     "companion": "Tom"
+    },
+    {
+     "_query": "workouts",
+     "id": 54,
+     "date": "2026-03-03",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Smíchoff",
+     "companion": "Tom"
+    },
+    {
+     "_query": "workouts",
+     "id": 53,
+     "date": "2026-03-01",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Smíchoff",
+     "companion": "Tom"
+    },
+    {
+     "_query": "workouts",
+     "id": 51,
+     "date": "2026-02-27",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Smíchoff",
+     "companion": "Tom"
+    },
+    {
+     "_query": "workouts",
+     "id": 50,
+     "date": "2026-02-20",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Smíchoff",
+     "companion": "Tom"
+    },
+    {
+     "_query": "workouts",
+     "id": 48,
+     "date": "2026-02-13",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Smíchoff",
+     "companion": "Tom"
+    },
+    {
+     "_query": "workouts",
+     "id": 47,
+     "date": "2026-02-10",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Smíchoff",
+     "companion": "Tom"
+    },
+    {
+     "_query": "workouts",
+     "id": 46,
+     "date": "2026-02-06",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Smíchoff",
+     "companion": "Tom"
+    },
+    {
+     "_query": "workouts",
+     "id": 45,
+     "date": "2026-02-03",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Smíchoff",
+     "companion": "Tom"
+    },
+    {
+     "_query": "workouts",
+     "id": 39,
+     "date": "2026-01-16",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Smíchoff",
+     "companion": "Tom"
+    },
+    {
+     "_query": "workouts",
+     "id": 37,
+     "date": "2026-01-13",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Smíchoff",
+     "companion": "Tom"
+    },
+    {
+     "_query": "workouts",
+     "id": 35,
+     "date": "2026-01-09",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Smíchoff",
+     "companion": "Tom"
+    },
+    {
+     "_query": "workouts",
+     "id": 33,
+     "date": "2026-01-06",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Smíchoff",
+     "companion": "Tom"
+    },
+    {
+     "_query": "workouts",
+     "id": 30,
+     "date": "2025-12-16",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Smíchoff",
+     "companion": "Tom"
+    },
+    {
+     "_query": "workouts",
+     "id": 29,
+     "date": "2025-12-14",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Smíchoff",
+     "companion": "Tom"
+    },
+    {
+     "_query": "workouts",
+     "id": 27,
+     "date": "2025-12-05",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Smíchoff",
+     "companion": "Tom"
+    },
+    {
+     "_query": "workouts",
+     "id": 24,
+     "date": "2025-11-28",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Smíchoff",
+     "companion": null
+    },
+    {
+     "_query": "workouts",
+     "id": 22,
+     "date": "2025-11-21",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Smíchoff",
+     "companion": "Tom"
+    },
+    {
+     "_query": "workouts",
+     "id": 19,
+     "date": "2025-11-16",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Smíchoff",
+     "companion": "Tom"
+    },
+    {
+     "_query": "workouts",
+     "id": 18,
+     "date": "2025-11-14",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Smíchoff",
+     "companion": "Tom"
+    },
+    {
+     "_query": "workouts",
+     "id": 16,
+     "date": "2025-11-07",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Smíchoff",
+     "companion": "Tom"
+    },
+    {
+     "_query": "workouts",
+     "id": 14,
+     "date": "2025-11-04",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Smíchoff",
+     "companion": "Tom"
+    },
+    {
+     "_query": "workouts",
+     "id": 12,
+     "date": "2025-10-31",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Smíchoff",
+     "companion": "Tom"
+    },
+    {
+     "_query": "workouts",
+     "id": 10,
+     "date": "2025-10-28",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Smíchoff",
+     "companion": "Tom"
+    },
+    {
+     "_query": "workouts",
+     "id": 8,
+     "date": "2025-10-24",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Smíchoff",
+     "companion": null
+    },
+    {
+     "_query": "workouts",
+     "id": 7,
+     "date": "2025-10-21",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Smíchoff",
+     "companion": "Tom"
+    },
+    {
+     "_query": "workouts",
+     "id": 6,
+     "date": "2025-10-17",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Smíchoff",
+     "companion": "Tom"
+    },
+    {
+     "_query": "workouts",
+     "id": 4,
+     "date": "2025-10-14",
+     "category": "climbing",
+     "activity": "sent a 6b+ route",
+     "place": "Smíchoff",
+     "companion": "Tom"
+    },
+    {
+     "_query": "workouts",
+     "id": 3,
+     "date": "2025-10-10",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Smíchoff",
+     "companion": "Tom"
+    },
+    {
+     "_query": "workouts",
+     "id": 1,
+     "date": "2025-10-03",
+     "category": "climbing",
+     "activity": "climbing",
+     "place": "Smíchoff",
+     "companion": "Tom"
+    }
+   ],
+   "args": {
+    "start": null,
+    "end": null,
+    "category": "climbing",
+    "place": null
+   },
+   "wall": 0.3330322500114562,
+   "verdict": "partial",
+   "why": "The rows give the first names Tom and Nina as climbing companions, and the gyms imply Prague and SF. They do not include the surnames Novak and Rossi, and the cities are not stated directly.",
+   "verify": 0.97
+  },
+  {
+   "qid": "m12-q47",
+   "question": "What's the confirmation code for my flight to San Francisco?",
+   "gold": "K7QX2P (United UA 8843)",
+   "template": "events",
+   "confidence": 0.94,
+   "runs": [
+    {
+     "template": "events",
+     "args": {
+      "category": "travel",
+      "organization": null,
+      "person": 1,
+      "start": null,
+      "end": null
+     }
+    }
+   ],
+   "rows": [],
+   "args": {
+    "category": "travel",
+    "organization": null,
+    "person": 1,
+    "start": null,
+    "end": null
+   },
+   "wall": 0.28059024999674875,
+   "verdict": "incorrect",
+   "why": "The query returned no rows, so the confirmation code K7QX2P and the flight number United UA 8843 cannot be found in the results.",
+   "verify": 0.01
+  },
+  {
+   "qid": "m12-q48",
+   "question": "How big was the security deposit for my apartment?",
+   "gold": "$4,800",
+   "template": "leases",
+   "confidence": 0.93,
+   "runs": [
+    {
+     "template": "leases",
+     "args": {
+      "person": 1
+     }
+    }
+   ],
+   "rows": [],
+   "args": {
+    "person": 1
+   },
+   "wall": 0.30284083299920894,
+   "verdict": "incorrect",
+   "why": "The query returned no rows, so the $4,800 security deposit amount cannot be read or computed from the result.",
+   "verify": 0.01
+  },
+  {
+   "qid": "m12-q49",
+   "question": "Which hotel did we stay at in Lisbon?",
+   "gold": "Memmo Alfama (May 22-26, 2026)",
+   "template": "events",
+   "confidence": 0.55,
+   "runs": [
+    {
+     "template": "events",
+     "args": {
+      "category": "travel",
+      "organization": null,
+      "person": 1,
+      "start": "1900-01-01",
+      "end": "2026-09-30"
+     }
+    },
+    {
+     "template": "active_plans",
+     "args": {
+      "start": "1900-01-01",
+      "end": "2026-09-30"
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "active_plans",
+     "id": 1,
+     "category": "meeting",
+     "title": "Nebula board meeting",
+     "start_datetime": "2025-11-06T16:00",
+     "end_datetime": "2025-11-06T17:30",
+     "location": "Nebula office, Karlín, Prague",
+     "organization": "Nebula",
+     "organizer": "David Mokos",
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "active_plans",
+     "id": 2,
+     "category": "appointment",
+     "title": "Dentist appointment with Dr. Horák",
+     "start_datetime": "2025-11-12T09:00",
+     "end_datetime": null,
+     "location": null,
+     "organization": null,
+     "organizer": null,
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "active_plans",
+     "id": 3,
+     "category": "medical",
+     "title": "Flu shot",
+     "start_datetime": "2025-11-25T18:24",
+     "end_datetime": null,
+     "location": null,
+     "organization": null,
+     "organizer": null,
+     "status": "done",
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "active_plans",
+     "id": 5,
+     "category": "meeting",
+     "title": "Nebula board meeting",
+     "start_datetime": "2026-01-01T16:00",
+     "end_datetime": "2026-01-01T17:30",
+     "location": "Nebula office, Karlín, Prague",
+     "organization": "Nebula",
+     "organizer": "David Mokos",
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "active_plans",
+     "id": 6,
+     "category": "call",
+     "title": "Call with Lucas Meyer",
+     "start_datetime": "2026-01-21T14:00",
+     "end_datetime": null,
+     "location": null,
+     "organization": "Sequoia",
+     "organizer": null,
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "active_plans",
+     "id": 7,
+     "category": "meeting",
+     "title": "Nebula board meeting",
+     "start_datetime": "2026-02-05T16:00",
+     "end_datetime": "2026-02-05T17:30",
+     "location": "Nebula office, Karlín, Prague",
+     "organization": "Nebula",
+     "organizer": "David Mokos",
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "active_plans",
+     "id": 10,
+     "category": "meeting",
+     "title": "Nebula board meeting",
+     "start_datetime": "2026-03-05T16:00",
+     "end_datetime": "2026-03-05T17:30",
+     "location": "Nebula office, Karlín, Prague",
+     "organization": "Nebula",
+     "organizer": "David Mokos",
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "active_plans",
+     "id": 11,
+     "category": "travel",
+     "title": "United flight UA 8843 (confirmation K7QX2P)",
+     "start_datetime": "2026-03-31T10:05",
+     "end_datetime": null,
+     "location": "Prague (PRG) to San Francisco (SFO)",
+     "organization": null,
+     "organizer": null,
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "active_plans",
+     "id": 12,
+     "category": "meeting",
+     "title": "Nebula board meeting",
+     "start_datetime": "2026-04-02T16:00",
+     "end_datetime": "2026-04-02T17:30",
+     "location": "1 Mission St, San Francisco",
+     "organization": "Nebula",
+     "organizer": "David Mokos",
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "active_plans",
+     "id": 13,
+     "category": "meeting",
+     "title": "Nebula board meeting",
+     "start_datetime": "2026-05-07T16:00",
+     "end_datetime": "2026-05-07T17:30",
+     "location": "1 Mission St, San Francisco",
+     "organization": "Nebula",
+     "organizer": "David Mokos",
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "active_plans",
+     "id": 16,
+     "category": "travel",
+     "title": "Eva moving to SF",
+     "start_datetime": "2026-05-20T00:00",
+     "end_datetime": null,
+     "location": "SF",
+     "organization": null,
+     "organizer": "Eva",
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "active_plans",
+     "id": 18,
+     "category": "appointment",
+     "title": "Dentist appointment with Dr. Lee at Castro Dental",
+     "start_datetime": "2026-06-03T09:30",
+     "end_datetime": null,
+     "location": "SF",
+     "organization": "Castro Dental",
+     "organizer": "Dr. Lee",
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "active_plans",
+     "id": 17,
+     "category": "meeting",
+     "title": "Nebula board meeting",
+     "start_datetime": "2026-06-04T16:00",
+     "end_datetime": "2026-06-04T17:30",
+     "location": "1 Mission St, San Francisco",
+     "organization": "Nebula",
+     "organizer": "David Mokos",
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "active_plans",
+     "id": 19,
+     "category": "meeting",
+     "title": "Nebula board meeting",
+     "start_datetime": "2026-07-02T16:00",
+     "end_datetime": "2026-07-02T17:30",
+     "location": "1 Mission St, San Francisco",
+     "organization": "Nebula",
+     "organizer": "David Mokos",
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "active_plans",
+     "id": 20,
+     "category": "meeting",
+     "title": "Nebula board meeting",
+     "start_datetime": "2026-08-06T16:00",
+     "end_datetime": "2026-08-06T17:30",
+     "location": "1 Mission St, San Francisco",
+     "organization": "Nebula",
+     "organizer": "David Mokos",
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "active_plans",
+     "id": 21,
+     "category": "meeting",
+     "title": "Nebula board meeting",
+     "start_datetime": "2026-09-03T16:00",
+     "end_datetime": "2026-09-03T17:30",
+     "location": "1 Mission St, San Francisco",
+     "organization": "Nebula",
+     "organizer": "David Mokos",
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    }
+   ],
+   "args": {
+    "category": "travel",
+    "organization": null,
+    "person": 1,
+    "start": "1900-01-01",
+    "end": "2026-09-30"
+   },
+   "wall": 0.3352349999913713,
+   "verdict": "incorrect",
+   "why": "The rows contain no Lisbon hotel stay and do not mention Memmo Alfama or the May 22-26, 2026 dates.",
+   "verify": 0.02
+  },
+  {
+   "qid": "m12-q50",
+   "question": "Did I renew my passport?",
+   "gold": "Yes, done on Dec 3, 2025",
+   "template": "tasks",
+   "confidence": 0.3,
+   "runs": [
+    {
+     "template": "tasks",
+     "args": {
+      "task": 1,
+      "status": null,
+      "person": 1,
+      "organization": null,
+      "start": "1900-01-01",
+      "end": "2026-09-30"
+     }
+    }
+   ],
+   "rows": [],
+   "args": {
+    "task": 1,
+    "status": null,
+    "person": 1,
+    "organization": null,
+    "start": "1900-01-01",
+    "end": "2026-09-30"
+   },
+   "wall": 0.2976505419937894,
+   "verdict": "incorrect",
+   "why": "The query returned no rows, so nothing confirms the passport renewal or its Dec 3, 2025 date.",
+   "verify": 0.02
+  },
+  {
+   "qid": "m12-q51",
+   "question": "What happened to the February dentist appointment?",
+   "gold": "Cancelled (it was Feb 18 with Dr. Horák)",
+   "template": "events",
+   "confidence": 1,
+   "runs": [
+    {
+     "template": "events",
+     "args": {
+      "category": "appointment",
+      "organization": null,
+      "person": null,
+      "start": "2026-02-01",
+      "end": "2026-02-28"
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "events",
+     "id": 8,
+     "category": "appointment",
+     "title": "Dentist appointment with Dr. Horák",
+     "start_datetime": "2026-02-18T08:30",
+     "end_datetime": null,
+     "location": null,
+     "organization": null,
+     "organizer": null,
+     "status": "cancelled",
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    }
+   ],
+   "args": {
+    "category": "appointment",
+    "organization": null,
+    "person": null,
+    "start": "2026-02-01",
+    "end": "2026-02-28"
+   },
+   "wall": 0.3023049580078805,
+   "verdict": "correct",
+   "why": "The rows show a dentist appointment with Dr. Horák on 2026-02-18 whose status is cancelled. That matches every key fact in the gold answer.",
+   "verify": 0.98
+  },
+  {
+   "qid": "m12-q52",
+   "question": "Do I still have to get my SF driver's license?",
+   "gold": "Yes, still open (was due Jun 30)",
+   "template": null,
+   "confidence": 0.51,
+   "rows": null,
+   "wall": 0.29888370900880545
+  },
+  {
+   "qid": "m12-q53",
+   "question": "Is the wedding venue booked?",
+   "gold": "No, still open (due Oct 31)",
+   "template": "events",
+   "confidence": 0.87,
+   "runs": [
+    {
+     "template": "events",
+     "args": {
+      "category": null,
+      "organization": null,
+      "person": null,
+      "start": null,
+      "end": null
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "events",
+     "id": 4,
+     "category": "travel",
+     "title": "Christmas trip with parents",
+     "start_datetime": null,
+     "end_datetime": null,
+     "location": "Brno",
+     "organization": null,
+     "organizer": null,
+     "status": null,
+     "return_date": "2026-01-02",
+     "travel_mode": "train",
+     "participants": "parents",
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "events",
+     "id": 9,
+     "category": "appointment",
+     "title": "Dentist appointment with Dr. Horák",
+     "start_datetime": null,
+     "end_datetime": null,
+     "location": "SF",
+     "organization": null,
+     "organizer": null,
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "events",
+     "id": 14,
+     "category": "travel",
+     "title": "Memmo Alfama Hotel booking",
+     "start_datetime": null,
+     "end_datetime": null,
+     "location": "Memmo Alfama Hotel, Lisbon",
+     "organization": null,
+     "organizer": null,
+     "status": null,
+     "return_date": "2026-05-26",
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": "2026-05-22",
+     "check_out_date": "2026-05-26",
+     "guests": 2,
+     "total_amount": 980.0,
+     "currency": "USD",
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "events",
+     "id": 15,
+     "category": "travel",
+     "title": "Flights SFO to LIS",
+     "start_datetime": null,
+     "end_datetime": null,
+     "location": null,
+     "organization": null,
+     "organizer": null,
+     "status": null,
+     "return_date": "2026-05-26",
+     "travel_mode": null,
+     "participants": "Eva",
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": 1340.0,
+     "currency": "USD",
+     "departure_date": "2026-05-22",
+     "origin": "SFO",
+     "destination": "LIS"
+    },
+    {
+     "_query": "events",
+     "id": 1,
+     "category": "meeting",
+     "title": "Nebula board meeting",
+     "start_datetime": "2025-11-06T16:00",
+     "end_datetime": "2025-11-06T17:30",
+     "location": "Nebula office, Karlín, Prague",
+     "organization": "Nebula",
+     "organizer": "David Mokos",
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "events",
+     "id": 2,
+     "category": "appointment",
+     "title": "Dentist appointment with Dr. Horák",
+     "start_datetime": "2025-11-12T09:00",
+     "end_datetime": null,
+     "location": null,
+     "organization": null,
+     "organizer": null,
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "events",
+     "id": 3,
+     "category": "medical",
+     "title": "Flu shot",
+     "start_datetime": "2025-11-25T18:24",
+     "end_datetime": null,
+     "location": null,
+     "organization": null,
+     "organizer": null,
+     "status": "done",
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "events",
+     "id": 5,
+     "category": "meeting",
+     "title": "Nebula board meeting",
+     "start_datetime": "2026-01-01T16:00",
+     "end_datetime": "2026-01-01T17:30",
+     "location": "Nebula office, Karlín, Prague",
+     "organization": "Nebula",
+     "organizer": "David Mokos",
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "events",
+     "id": 6,
+     "category": "call",
+     "title": "Call with Lucas Meyer",
+     "start_datetime": "2026-01-21T14:00",
+     "end_datetime": null,
+     "location": null,
+     "organization": "Sequoia",
+     "organizer": null,
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "events",
+     "id": 7,
+     "category": "meeting",
+     "title": "Nebula board meeting",
+     "start_datetime": "2026-02-05T16:00",
+     "end_datetime": "2026-02-05T17:30",
+     "location": "Nebula office, Karlín, Prague",
+     "organization": "Nebula",
+     "organizer": "David Mokos",
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "events",
+     "id": 8,
+     "category": "appointment",
+     "title": "Dentist appointment with Dr. Horák",
+     "start_datetime": "2026-02-18T08:30",
+     "end_datetime": null,
+     "location": null,
+     "organization": null,
+     "organizer": null,
+     "status": "cancelled",
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "events",
+     "id": 10,
+     "category": "meeting",
+     "title": "Nebula board meeting",
+     "start_datetime": "2026-03-05T16:00",
+     "end_datetime": "2026-03-05T17:30",
+     "location": "Nebula office, Karlín, Prague",
+     "organization": "Nebula",
+     "organizer": "David Mokos",
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "events",
+     "id": 11,
+     "category": "travel",
+     "title": "United flight UA 8843 (confirmation K7QX2P)",
+     "start_datetime": "2026-03-31T10:05",
+     "end_datetime": null,
+     "location": "Prague (PRG) to San Francisco (SFO)",
+     "organization": null,
+     "organizer": null,
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "events",
+     "id": 12,
+     "category": "meeting",
+     "title": "Nebula board meeting",
+     "start_datetime": "2026-04-02T16:00",
+     "end_datetime": "2026-04-02T17:30",
+     "location": "1 Mission St, San Francisco",
+     "organization": "Nebula",
+     "organizer": "David Mokos",
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "events",
+     "id": 13,
+     "category": "meeting",
+     "title": "Nebula board meeting",
+     "start_datetime": "2026-05-07T16:00",
+     "end_datetime": "2026-05-07T17:30",
+     "location": "1 Mission St, San Francisco",
+     "organization": "Nebula",
+     "organizer": "David Mokos",
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "events",
+     "id": 16,
+     "category": "travel",
+     "title": "Eva moving to SF",
+     "start_datetime": "2026-05-20T00:00",
+     "end_datetime": null,
+     "location": "SF",
+     "organization": null,
+     "organizer": "Eva",
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "events",
+     "id": 18,
+     "category": "appointment",
+     "title": "Dentist appointment with Dr. Lee at Castro Dental",
+     "start_datetime": "2026-06-03T09:30",
+     "end_datetime": null,
+     "location": "SF",
+     "organization": "Castro Dental",
+     "organizer": "Dr. Lee",
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "events",
+     "id": 17,
+     "category": "meeting",
+     "title": "Nebula board meeting",
+     "start_datetime": "2026-06-04T16:00",
+     "end_datetime": "2026-06-04T17:30",
+     "location": "1 Mission St, San Francisco",
+     "organization": "Nebula",
+     "organizer": "David Mokos",
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "events",
+     "id": 19,
+     "category": "meeting",
+     "title": "Nebula board meeting",
+     "start_datetime": "2026-07-02T16:00",
+     "end_datetime": "2026-07-02T17:30",
+     "location": "1 Mission St, San Francisco",
+     "organization": "Nebula",
+     "organizer": "David Mokos",
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "events",
+     "id": 20,
+     "category": "meeting",
+     "title": "Nebula board meeting",
+     "start_datetime": "2026-08-06T16:00",
+     "end_datetime": "2026-08-06T17:30",
+     "location": "1 Mission St, San Francisco",
+     "organization": "Nebula",
+     "organizer": "David Mokos",
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "events",
+     "id": 21,
+     "category": "meeting",
+     "title": "Nebula board meeting",
+     "start_datetime": "2026-09-03T16:00",
+     "end_datetime": "2026-09-03T17:30",
+     "location": "1 Mission St, San Francisco",
+     "organization": "Nebula",
+     "organizer": "David Mokos",
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "events",
+     "id": 22,
+     "category": "meeting",
+     "title": "Nebula board meeting",
+     "start_datetime": "2026-10-01T16:00",
+     "end_datetime": "2026-10-01T17:30",
+     "location": "1 Mission St, San Francisco",
+     "organization": "Nebula",
+     "organizer": "David Mokos",
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    },
+    {
+     "_query": "events",
+     "id": 23,
+     "category": "meeting",
+     "title": "Series A kickoff",
+     "start_datetime": "2026-10-09T10:00",
+     "end_datetime": null,
+     "location": "Northwind office, 2 Embarcadero Center",
+     "organization": "Northwind Ventures",
+     "organizer": "Sarah Kim",
+     "status": null,
+     "return_date": null,
+     "travel_mode": null,
+     "participants": null,
+     "check_in_date": null,
+     "check_out_date": null,
+     "guests": null,
+     "total_amount": null,
+     "currency": null,
+     "departure_date": null,
+     "origin": null,
+     "destination": null
+    }
+   ],
+   "args": {
+    "category": null,
+    "organization": null,
+    "person": null,
+    "start": null,
+    "end": null
+   },
+   "wall": 0.3102568339963909,
+   "verdict": "incorrect",
+   "why": "The rows are all events, and none mentions a wedding venue or a task due Oct 31. The rows cannot support the gold answer that the venue is still unbooked.",
+   "verify": 0.03
+  },
+  {
+   "qid": "m12-q54",
+   "question": "Did I finish The Three-Body Problem?",
+   "gold": "No, still reading it",
+   "template": "books",
+   "confidence": 0.99,
+   "runs": [
+    {
+     "template": "books",
+     "args": {
+      "book": 13,
+      "author": "Liu Cixin",
+      "status": null,
+      "start": "1900-01-01",
+      "end": "2026-09-30"
+     }
+    }
+   ],
+   "rows": [],
+   "args": {
+    "book": 13,
+    "author": "Liu Cixin",
+    "status": null,
+    "start": "1900-01-01",
+    "end": "2026-09-30"
+   },
+   "wall": 0.31440541699703317,
+   "verdict": "incorrect",
+   "why": "The query returned no rows, so nothing shows the reading status of The Three-Body Problem.",
+   "verify": 0.03
+  },
+  {
+   "qid": "m12-q55",
+   "question": "Who is Jan Dvořák?",
+   "gold": "UNKNOWN: the user asked to forget him",
+   "template": "person_profile",
+   "confidence": 0.98,
+   "runs": [
+    {
+     "template": "person_profile",
+     "args": {
+      "person": null
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "person_profile",
+     "id": 1,
+     "name": "Adam Zvada",
+     "relationship": null,
+     "birthday": null,
+     "residence": null,
+     "job_details": null,
+     "contacts": "[{\"type\":\"phone\",\"value\":\"+420 722 238 738\",\"is_primary\":null},{\"type\":\"phone\",\"value\":\"+1 415 555 0199\",\"is_primary\":1}]",
+     "allergies": "[]",
+     "interests": "[]",
+     "organization_roles": "[{\"organization\":\"Nebula\",\"role\":\"cofounder\",\"start_date\":null}]",
+     "place_memberships": "[{\"place\":\"Smíchoff\",\"category\":\"climbing gym\",\"amount\":1190.0,\"currency\":\"CZK\",\"billing_period\":\"monthly\",\"status\":\"ended\",\"end_date\":\"2026-03-31\"},{\"place\":\"Mission Cliffs\",\"category\":\"climbing gym\",\"amount\":110.0,\"currency\":\"USD\",\"billing_period\":\"monthly\",\"status\":\"active\",\"end_date\":null}]"
+    },
+    {
+     "_query": "person_profile",
+     "id": 2,
+     "name": "David Mokos",
+     "relationship": null,
+     "birthday": "09-02",
+     "residence": null,
+     "job_details": null,
+     "contacts": "[{\"type\":\"phone\",\"value\":\"733 544 390\",\"is_primary\":null},{\"type\":\"email\",\"value\":\"david@nebula.ai\",\"is_primary\":null},{\"type\":\"phone\",\"value\":\"+1 628 688 4995\",\"is_primary\":null}]",
+     "allergies": "[]",
+     "interests": "[]",
+     "organization_roles": "[{\"organization\":\"Nebula\",\"role\":\"cofounder\",\"start_date\":null}]",
+     "place_memberships": "[]"
+    },
+    {
+     "_query": "person_profile",
+     "id": 18,
+     "name": "Dr. Lee",
+     "relationship": null,
+     "birthday": null,
+     "residence": null,
+     "job_details": null,
+     "contacts": "[]",
+     "allergies": "[]",
+     "interests": "[]",
+     "organization_roles": "[]",
+     "place_memberships": "[]"
+    },
+    {
+     "_query": "person_profile",
+     "id": 4,
+     "name": "Eva",
+     "relationship": "fiancée",
+     "birthday": "09-28",
+     "residence": null,
+     "job_details": null,
+     "contacts": "[]",
+     "allergies": "[\"peanuts\"]",
+     "interests": "[]",
+     "organization_roles": "[{\"organization\":\"Studio Kvadrat\",\"role\":\"architect\",\"start_date\":null},{\"organization\":\"Gensler\",\"role\":\"employee\",\"start_date\":null}]",
+     "place_memberships": "[]"
+    },
+    {
+     "_query": "person_profile",
+     "id": 14,
+     "name": "Eva Green",
+     "relationship": null,
+     "birthday": null,
+     "residence": null,
+     "job_details": null,
+     "contacts": "[{\"type\":\"email\",\"value\":\"eva.green@nebula.ai\",\"is_primary\":null}]",
+     "allergies": "[]",
+     "interests": "[]",
+     "organization_roles": "[{\"organization\":\"Nebula\",\"role\":\"designer\",\"start_date\":null}]",
+     "place_memberships": "[]"
+    },
+    {
+     "_query": "person_profile",
+     "id": 9,
+     "name": "Klára",
+     "relationship": "sister",
+     "birthday": "12-02",
+     "residence": "London",
+     "job_details": "new job",
+     "contacts": "[]",
+     "allergies": "[]",
+     "interests": "[]",
+     "organization_roles": "[]",
+     "place_memberships": "[]"
+    },
+    {
+     "_query": "person_profile",
+     "id": 8,
+     "name": "Lucas Meyer",
+     "relationship": null,
+     "birthday": null,
+     "residence": null,
+     "job_details": null,
+     "contacts": "[{\"type\":\"email\",\"value\":\"lucas@sequoia.com\",\"is_primary\":null}]",
+     "allergies": "[]",
+     "interests": "[]",
+     "organization_roles": "[]",
+     "place_memberships": "[]"
+    },
+    {
+     "_query": "person_profile",
+     "id": 11,
+     "name": "Marco",
+     "relationship": null,
+     "birthday": null,
+     "residence": null,
+     "job_details": null,
+     "contacts": "[{\"type\":\"phone\",\"value\":\"+420 731 000 444\",\"is_primary\":null}]",
+     "allergies": "[]",
+     "interests": "[]",
+     "organization_roles": "[]",
+     "place_memberships": "[]"
+    },
+    {
+     "_query": "person_profile",
+     "id": 17,
+     "name": "Mark Chen",
+     "relationship": null,
+     "birthday": null,
+     "residence": null,
+     "job_details": null,
+     "contacts": "[]",
+     "allergies": "[]",
+     "interests": "[]",
+     "organization_roles": "[{\"organization\":\"Stripe\",\"role\":\"Partnerships\",\"start_date\":null}]",
+     "place_memberships": "[]"
+    },
+    {
+     "_query": "person_profile",
+     "id": 3,
+     "name": "Mom",
+     "relationship": "mother",
+     "birthday": "10-03",
+     "residence": null,
+     "job_details": null,
+     "contacts": "[]",
+     "allergies": "[]",
+     "interests": "[\"orchids\"]",
+     "organization_roles": "[]",
+     "place_memberships": "[]"
+    },
+    {
+     "_query": "person_profile",
+     "id": 13,
+     "name": "Nina Rossi",
+     "relationship": null,
+     "birthday": null,
+     "residence": null,
+     "job_details": null,
+     "contacts": "[{\"type\":\"email\",\"value\":\"nina@nebula.ai\",\"is_primary\":null}]",
+     "allergies": "[]",
+     "interests": "[\"climbing\"]",
+     "organization_roles": "[{\"organization\":\"Nebula\",\"role\":\"first engineer\",\"start_date\":\"2026-03-01\"}]",
+     "place_memberships": "[]"
+    },
+    {
+     "_query": "person_profile",
+     "id": 7,
+     "name": "Ondřej Král",
+     "relationship": "college friend",
+     "birthday": null,
+     "residence": null,
+     "job_details": null,
+     "contacts": "[{\"type\":\"phone\",\"value\":\"+420 606 111 222\",\"is_primary\":null}]",
+     "allergies": "[]",
+     "interests": "[]",
+     "organization_roles": "[{\"organization\":\"Productboard\",\"role\":\"employee\",\"start_date\":null}]",
+     "place_memberships": "[]"
+    },
+    {
+     "_query": "person_profile",
+     "id": 10,
+     "name": "Oscar Lind",
+     "relationship": null,
+     "birthday": null,
+     "residence": null,
+     "job_details": "Joining Stripe as a PM; left Nebula on 2026-08-15",
+     "contacts": "[{\"type\":\"email\",\"value\":\"oscar@nebula.ai\",\"is_primary\":null}]",
+     "allergies": "[]",
+     "interests": "[]",
+     "organization_roles": "[{\"organization\":\"Nebula\",\"role\":\"product manager\",\"start_date\":null},{\"organization\":\"Stripe\",\"role\":\"PM\",\"start_date\":\"2026-08-15\"}]",
+     "place_memberships": "[]"
+    },
+    {
+     "_query": "person_profile",
+     "id": 16,
+     "name": "Priya Patel",
+     "relationship": null,
+     "birthday": null,
+     "residence": null,
+     "job_details": null,
+     "contacts": "[{\"type\":\"email\",\"value\":\"priya@stripe.com\",\"is_primary\":null}]",
+     "allergies": "[]",
+     "interests": "[]",
+     "organization_roles": "[{\"organization\":\"Stripe\",\"role\":\"engineering manager\",\"start_date\":null}]",
+     "place_memberships": "[]"
+    },
+    {
+     "_query": "person_profile",
+     "id": 15,
+     "name": "Raj Gupta",
+     "relationship": null,
+     "birthday": null,
+     "residence": null,
+     "job_details": null,
+     "contacts": "[{\"type\":\"email\",\"value\":\"raj.gupta@gmail.com\",\"is_primary\":null},{\"type\":\"phone\",\"value\":\"+1 415 555 0187\",\"is_primary\":null}]",
+     "allergies": "[]",
+     "interests": "[]",
+     "organization_roles": "[]",
+     "place_memberships": "[]"
+    },
+    {
+     "_query": "person_profile",
+     "id": 12,
+     "name": "Sarah Kim",
+     "relationship": null,
+     "birthday": null,
+     "residence": null,
+     "job_details": null,
+     "contacts": "[]",
+     "allergies": "[]",
+     "interests": "[]",
+     "organization_roles": "[{\"organization\":\"Northwind Ventures\",\"role\":\"Partner\",\"start_date\":null}]",
+     "place_memberships": "[]"
+    },
+    {
+     "_query": "person_profile",
+     "id": 5,
+     "name": "Tom Novak",
+     "relationship": "climbing buddy",
+     "birthday": null,
+     "residence": null,
+     "job_details": null,
+     "contacts": "[{\"type\":\"phone\",\"value\":\"+420 777 999 000\",\"is_primary\":null}]",
+     "allergies": "[]",
+     "interests": "[]",
+     "organization_roles": "[]",
+     "place_memberships": "[]"
+    }
+   ],
+   "args": {
+    "person": null
+   },
+   "wall": 0.3265370839944808,
+   "verdict": "correct",
+   "why": "The rows contain no entry for Jan Dvořák (id 6 is missing), so nothing in them answers the question. That matches the gold answer: UNKNOWN, because the user asked to forget him.",
+   "verify": 0.04
+  },
+  {
+   "qid": "m12-q56",
+   "question": "What's Marco's phone number?",
+   "gold": "UNKNOWN: the user asked to forget it",
+   "template": "contacts",
+   "confidence": 0.99,
+   "runs": [
+    {
+     "template": "contacts",
+     "args": {
+      "person": 11,
+      "type": "phone",
+      "value": null
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "contacts",
+     "person_id": 11,
+     "name": "Marco",
+     "relationship": null,
+     "contact_id": 9,
+     "type": "phone",
+     "value": "+420 731 000 444",
+     "is_primary": null
+    }
+   ],
+   "args": {
+    "person": 11,
+    "type": "phone",
+    "value": null
+   },
+   "wall": 0.3057559579901863,
+   "verdict": "incorrect",
+   "why": "The gold answer is UNKNOWN because the user asked for the number to be forgotten. The rows still state a phone number for Marco (+420 731 000 444), so they give an answer when none should exist.",
+   "verify": 0.98
+  },
+  {
+   "qid": "m12-q57",
+   "question": "What's my blood type?",
+   "gold": "UNKNOWN: never mentioned",
+   "template": "person_profile",
+   "confidence": 0.65,
+   "runs": [
+    {
+     "template": "person_profile",
+     "args": {
+      "person": 1
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "person_profile",
+     "id": 1,
+     "name": "Adam Zvada",
+     "relationship": null,
+     "birthday": null,
+     "residence": null,
+     "job_details": null,
+     "contacts": "[{\"type\":\"phone\",\"value\":\"+420 722 238 738\",\"is_primary\":null},{\"type\":\"phone\",\"value\":\"+1 415 555 0199\",\"is_primary\":1}]",
+     "allergies": "[]",
+     "interests": "[]",
+     "organization_roles": "[{\"organization\":\"Nebula\",\"role\":\"cofounder\",\"start_date\":null}]",
+     "place_memberships": "[{\"place\":\"Smíchoff\",\"category\":\"climbing gym\",\"amount\":1190.0,\"currency\":\"CZK\",\"billing_period\":\"monthly\",\"status\":\"ended\",\"end_date\":\"2026-03-31\"},{\"place\":\"Mission Cliffs\",\"category\":\"climbing gym\",\"amount\":110.0,\"currency\":\"USD\",\"billing_period\":\"monthly\",\"status\":\"active\",\"end_date\":null}]"
+    }
+   ],
+   "args": {
+    "person": 1
+   },
+   "wall": 0.2714869999908842,
+   "verdict": "correct",
+   "why": "The rows contain no blood type information, which is consistent with the gold answer that it was never mentioned.",
+   "verify": 0.02
+  },
+  {
+   "qid": "m12-q58",
+   "question": "What's Ondra's email address?",
+   "gold": "UNKNOWN: never mentioned",
+   "template": "contacts",
+   "confidence": 0.97,
+   "runs": [
+    {
+     "template": "contacts",
+     "args": {
+      "person": 7,
+      "type": "email",
+      "value": null
+     }
+    }
+   ],
+   "rows": [],
+   "args": {
+    "person": 7,
+    "type": "email",
+    "value": null
+   },
+   "wall": 0.2925733330048388,
+   "verdict": "correct",
+   "why": "The rows are empty, so they give no email address for Ondra. That matches the UNKNOWN gold answer.",
+   "verify": 0.01
+  },
+  {
+   "qid": "m12-q59",
+   "question": "How much does Eva earn?",
+   "gold": "UNKNOWN: never mentioned",
+   "template": "person_profile",
+   "confidence": 0.55,
+   "runs": [
+    {
+     "template": "person_profile",
+     "args": {
+      "person": 4
+     }
+    }
+   ],
+   "rows": [
+    {
+     "_query": "person_profile",
+     "id": 4,
+     "name": "Eva",
+     "relationship": "fiancée",
+     "birthday": "09-28",
+     "residence": null,
+     "job_details": null,
+     "contacts": "[]",
+     "allergies": "[\"peanuts\"]",
+     "interests": "[]",
+     "organization_roles": "[{\"organization\":\"Studio Kvadrat\",\"role\":\"architect\",\"start_date\":null},{\"organization\":\"Gensler\",\"role\":\"employee\",\"start_date\":null}]",
+     "place_memberships": "[]"
+    }
+   ],
+   "args": {
+    "person": 4
+   },
+   "wall": 0.33322850000695325,
+   "verdict": "correct",
+   "why": "The rows contain no salary or earnings information for Eva, which matches the gold answer that her pay is unknown.",
+   "verify": 0.03
+  },
+  {
+   "qid": "m12-q60",
+   "question": "What's Nina's birthday?",
+   "gold": "UNKNOWN: never mentioned",
+   "template": "birthdays",
+   "confidence": 0.96,
+   "runs": [
+    {
+     "template": "birthdays",
+     "args": {
+      "person": 13
+     }
+    }
+   ],
+   "rows": [],
+   "args": {
+    "person": 13
+   },
+   "wall": 0.297034708011779,
+   "verdict": "correct",
+   "why": "The rows are empty, so no birthday is given, which matches the UNKNOWN gold answer.",
+   "verify": 0.01
+  }
+ ]
+}

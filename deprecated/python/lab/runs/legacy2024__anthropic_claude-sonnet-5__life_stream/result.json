@@ -1,0 +1,3539 @@
+{
+ "run": "legacy2024__anthropic_claude-sonnet-5__life_stream",
+ "system": "legacy2024",
+ "model": "anthropic:claude-sonnet-5",
+ "dataset": "life_stream",
+ "opts": {},
+ "accuracy": 0.7875,
+ "by_category": {
+  "aggregation": 1.0,
+  "delete": 1.0,
+  "deleted": 1.0,
+  "multi_hop": 0.0,
+  "semi_structured": 0.5,
+  "single": 0.818,
+  "temporal": 1.0,
+  "unanswerable": 1.0,
+  "update": 0.8
+ },
+ "ingest": {
+  "messages": 63,
+  "crashes": 0,
+  "sql_errors": 0,
+  "cost": 0.5589,
+  "llm_latency_mean": 4.986,
+  "wall_mean": 0.003,
+  "llm_calls": 125,
+  "jev_calls": 0
+ },
+ "qa_cost": 0.2339,
+ "qa_wall_mean": 0.389,
+ "ledger": {
+  "calls": 245,
+  "input_tokens": 312636,
+  "output_tokens": 24182,
+  "cost": 0.941394,
+  "latency": 542.913
+ },
+ "ingest_trace": [
+  {
+   "id": "m01",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 1,
+    "sql": [
+     "CREATE TABLE users (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, city TEXT)",
+     "INSERT INTO users (name, city) VALUES ('Adam Zvada', 'Prague')",
+     "CREATE TABLE startups (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, cofounder_name TEXT, founder_user_id INTEGER, FOREIGN KEY(founder_user_id) REFERENCES users(id))",
+     "INSERT INTO startups (name, cofounder_name, founder_user_id) VALUES ('Nebula', 'David Mokos', 1)"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.003,
+   "llm_latency": 4.463,
+   "cost": 0.004724,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m02",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "ALTER TABLE users ADD COLUMN phone TEXT",
+     "INSERT INTO users (phone) VALUES ('+420 722 238 738')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.009,
+   "llm_latency": 6.224,
+   "cost": 0.006192,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m03",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO users (name, phone) VALUES ('David Mokos', '733544390')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.008,
+   "llm_latency": 5.281,
+   "cost": 0.005972,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m04",
+   "kind": "chitchat",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": []
+   },
+   "crashed": null,
+   "wall": 0.009,
+   "llm_latency": 3.862,
+   "cost": 0.004786,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m05",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": []
+   },
+   "crashed": null,
+   "wall": 0.012,
+   "llm_latency": 4.806,
+   "cost": 0.004938,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m06",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "ALTER TABLE users ADD COLUMN birthday TEXT",
+     "UPDATE users SET birthday = '09-02' WHERE id = 3"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.007,
+   "llm_latency": 4.054,
+   "cost": 0.005806,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m07",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE IF NOT EXISTS favorite_restaurants (id INTEGER PRIMARY KEY, user_id INTEGER, city TEXT, restaurant_name TEXT, FOREIGN KEY(user_id) REFERENCES users(id))",
+     "INSERT INTO favorite_restaurants (user_id, city, restaurant_name) VALUES (NULL, 'Prague', 'Sasazu')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.006,
+   "llm_latency": 4.93,
+   "cost": 0.007012,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m08",
+   "kind": "question",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": []
+   },
+   "crashed": null,
+   "wall": 0.003,
+   "llm_latency": 4.74,
+   "cost": 0.005344,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m09",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE IF NOT EXISTS climbing_sessions (id INTEGER PRIMARY KEY, location TEXT, companion TEXT, achievement TEXT, session_date TEXT)",
+     "INSERT INTO climbing_sessions (location, companion, achievement, session_date) VALUES ('Smíchoff', 'Tom', 'Sent first 6c', '2026-08-03')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.004,
+   "llm_latency": 4.828,
+   "cost": 0.007112,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m10",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO users (name, phone) VALUES ('Tom Novak', '+420 777 123 456')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.001,
+   "llm_latency": 4.412,
+   "cost": 0.006786,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m11",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": []
+   },
+   "crashed": null,
+   "wall": 0.001,
+   "llm_latency": 4.831,
+   "cost": 0.00641,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m12",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE IF NOT EXISTS expenses (id INTEGER PRIMARY KEY, description TEXT, restaurant_name TEXT, amount REAL, currency TEXT, expense_date TEXT)",
+     "INSERT INTO expenses (description, restaurant_name, amount, currency, expense_date) VALUES ('Breakfast', 'Café Savoy', 385, 'CZK', '2026-08-05')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.004,
+   "llm_latency": 5.016,
+   "cost": 0.008036,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m13",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE IF NOT EXISTS contacts (id INTEGER PRIMARY KEY, name TEXT, relationship TEXT, allergy TEXT)",
+     "INSERT INTO contacts (name, relationship, allergy) VALUES ('Eva', 'girlfriend', 'peanuts')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.002,
+   "llm_latency": 4.839,
+   "cost": 0.007304,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m14",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "ALTER TABLE contacts ADD COLUMN birthday TEXT",
+     "ALTER TABLE contacts ADD COLUMN favorite_food TEXT",
+     "UPDATE contacts SET birthday='September 28', favorite_food='sushi' WHERE id=1"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.002,
+   "llm_latency": 5.63,
+   "cost": 0.008444,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m15",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE running_sessions (id INTEGER PRIMARY KEY, distance_km REAL, duration TEXT, session_date TEXT)",
+     "INSERT INTO running_sessions (distance_km, duration, session_date) VALUES (10, '52:30', '2026-08-07')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.002,
+   "llm_latency": 4.985,
+   "cost": 0.007426,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m16",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE IF NOT EXISTS events (id INTEGER PRIMARY KEY, name TEXT, location TEXT, event_date TEXT, organizer TEXT, organizer_email TEXT)",
+     "INSERT INTO events (name, location, event_date, organizer, organizer_email) VALUES ('Founders Dinner', 'Hotel Josef rooftop', '2026-08-14 19:00', 'Sarah Kim, Partner @ Northwind Ventures', 'sarah@northwind.vc')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.004,
+   "llm_latency": 6.63,
+   "cost": 0.011144,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m17",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE cars (id INTEGER PRIMARY KEY, make TEXT, model TEXT, year INTEGER, plate TEXT)",
+     "INSERT INTO cars (make, model, year, plate) VALUES ('Skoda', 'Octavia', 2019, '5A1 2345')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.005,
+   "llm_latency": 4.516,
+   "cost": 0.007722,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m18",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO climbing_sessions (location, companion, achievement, session_date) VALUES ('Smíchoff', NULL, 'Chill session', '2026-08-10')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.003,
+   "llm_latency": 5.045,
+   "cost": 0.008714,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m19",
+   "kind": "question",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": []
+   },
+   "crashed": null,
+   "wall": 0.001,
+   "llm_latency": 4.249,
+   "cost": 0.00692,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m20",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO expenses (description, restaurant_name, amount, currency, expense_date) VALUES ('Sushi dinner with Eva - so good', 'Sasazu', 2140, 'CZK', '2026-08-12')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.001,
+   "llm_latency": 4.681,
+   "cost": 0.008936,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m21",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE appointments (id INTEGER PRIMARY KEY, title TEXT, doctor TEXT, appointment_date TEXT, appointment_time TEXT)",
+     "INSERT INTO appointments (title, doctor, appointment_date, appointment_time) VALUES ('Dentist appointment', 'Dr. Horák', '2026-08-20', '09:00')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.003,
+   "llm_latency": 5.05,
+   "cost": 0.00836,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m22",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO contacts (name, relationship, allergy, birthday, favorite_food) VALUES ('Sarah Kim', 'Investor at Northwind Ventures - wants to see deck', NULL, NULL, NULL)",
+     "INSERT INTO contacts (name, relationship, allergy, birthday, favorite_food) VALUES ('Jan Dvořák', 'CTO at Rohlik', NULL, NULL, NULL)"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.002,
+   "llm_latency": 5.482,
+   "cost": 0.010112,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m23",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE IF NOT EXISTS books (id INTEGER PRIMARY KEY, title TEXT, author TEXT, source TEXT, date_added TEXT)",
+     "INSERT INTO books (title, author, source, date_added) VALUES ('Thinking, Fast and Slow', 'Daniel Kahneman', 'Book club pick', '2026-08-15')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.004,
+   "llm_latency": 4.838,
+   "cost": 0.008376,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m24",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO books (title, author, source, date_added) VALUES ('The Pragmatic Programmer', NULL, NULL, '2026-08-15')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.002,
+   "llm_latency": 4.381,
+   "cost": 0.008118,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m25",
+   "kind": "update",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "ALTER TABLE users ADD COLUMN us_phone TEXT",
+     "UPDATE users SET us_phone = '6286884994' WHERE id = 3"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.004,
+   "llm_latency": 5.359,
+   "cost": 0.009264,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m26",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO climbing_sessions (location, companion, achievement, session_date) VALUES ('Smíchoff', 'Tom', 'Tried 6c+ project, no send yet', '2026-08-17')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.001,
+   "llm_latency": 4.823,
+   "cost": 0.008662,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m27",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO expenses (description, restaurant_name, amount, currency, expense_date) VALUES ('Groceries', 'Albert', 1262, 'CZK', '2026-08-18')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.003,
+   "llm_latency": 4.545,
+   "cost": 0.00873,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m28",
+   "kind": "delete",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "DELETE FROM appointments WHERE id = 1"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.002,
+   "llm_latency": 4.071,
+   "cost": 0.007998,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m29",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO events (name, location, event_date, organizer, organizer_email) VALUES ('Pitch Meeting with Sarah Kim', 'Northwind Office, 2 Embarcadero Center, SF', '2026-09-23 10:00', 'Sarah Kim, Partner @ Northwind Ventures', 'sarah@northwind.vc')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.001,
+   "llm_latency": 5.914,
+   "cost": 0.011196,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m30",
+   "kind": "chitchat",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": []
+   },
+   "crashed": null,
+   "wall": 0.004,
+   "llm_latency": 3.55,
+   "cost": 0.00692,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m31",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO expenses (description, restaurant_name, amount, currency, expense_date) VALUES ('Lunch', 'Lokál', 329, 'CZK', '2026-08-22')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.002,
+   "llm_latency": 4.558,
+   "cost": 0.009058,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m32",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE IF NOT EXISTS moves (id INTEGER PRIMARY KEY, city TEXT, address TEXT, move_date TEXT)",
+     "INSERT INTO moves (city, address, move_date) VALUES ('San Francisco', '1450 Valencia St.', '2026-09-01')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.002,
+   "llm_latency": 5.418,
+   "cost": 0.008754,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m33",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "ALTER TABLE contacts ADD COLUMN favorite_flower TEXT",
+     "INSERT INTO contacts (name, relationship, birthday, favorite_flower) VALUES ('Mom', 'Mother', '10-03', 'Orchids')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.004,
+   "llm_latency": 5.484,
+   "cost": 0.009554,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m34",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE IF NOT EXISTS interests (id INTEGER PRIMARY KEY, user_name TEXT, interest TEXT)",
+     "INSERT INTO interests (user_name, interest) VALUES ('Adam', 'Riding big black horses')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.004,
+   "llm_latency": 5.241,
+   "cost": 0.00912,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m35",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO expenses (description, restaurant_name, amount, currency, expense_date) VALUES ('Flight Prague to San Francisco, United UA 8843, departure Sep 1', NULL, 18450.0, 'CZK', '2026-08-26')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.001,
+   "llm_latency": 5.573,
+   "cost": 0.010606,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m36",
+   "kind": "update",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": []
+   },
+   "crashed": null,
+   "wall": 0.002,
+   "llm_latency": 4.116,
+   "cost": 0.007684,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m37",
+   "kind": "update",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "ALTER TABLE cars ADD COLUMN sold_price REAL",
+     "ALTER TABLE cars ADD COLUMN sold_currency TEXT",
+     "ALTER TABLE cars ADD COLUMN sold_date TEXT",
+     "UPDATE cars SET sold_price = 310000, sold_currency = 'CZK', sold_date = '2026-08-28' WHERE id = 1"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.003,
+   "llm_latency": 5.413,
+   "cost": 0.010186,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m38",
+   "kind": "update",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "UPDATE users SET phone = '+420 777 999 000' WHERE id = 4;"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.001,
+   "llm_latency": 4.536,
+   "cost": 0.00837,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m39",
+   "kind": "update",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "ALTER TABLE books ADD COLUMN rating INTEGER",
+     "ALTER TABLE books ADD COLUMN review TEXT",
+     "UPDATE books SET rating = 5, review = 'The System 1 vs System 2 stuff is gold' WHERE id = 1"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.004,
+   "llm_latency": 4.848,
+   "cost": 0.009768,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m40",
+   "kind": "question",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": []
+   },
+   "crashed": null,
+   "wall": 0.003,
+   "llm_latency": 3.93,
+   "cost": 0.008754,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m41",
+   "kind": "update",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": []
+   },
+   "crashed": null,
+   "wall": 0.001,
+   "llm_latency": 4.834,
+   "cost": 0.009138,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m42",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE funding_rounds (id INTEGER PRIMARY KEY, startup_id INTEGER, round_type TEXT, amount REAL, currency TEXT, valuation REAL, valuation_type TEXT, investor TEXT, status TEXT, document_date TEXT)",
+     "INSERT INTO funding_rounds (startup_id, round_type, amount, currency, valuation, valuation_type, investor, status, document_date) VALUES (1, 'Seed', 3000000, 'USD', 15000000, 'post-money', 'Sarah Kim, Northwind Ventures', 'draft term sheet received', '2026-09-02')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.003,
+   "llm_latency": 6.595,
+   "cost": 0.01342,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m43",
+   "kind": "chitchat",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": []
+   },
+   "crashed": null,
+   "wall": 0.002,
+   "llm_latency": 6.065,
+   "cost": 0.008826,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m44",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO expenses (description, restaurant_name, amount, currency, expense_date) VALUES ('1x Oat Latte, 1x Almond Croissant - VISA ****4421', 'Blue Bottle Coffee - Mint Plaza, San Francisco', 10.25, 'USD', '2026-09-03 08:37')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.002,
+   "llm_latency": 5.31,
+   "cost": 0.01105,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m45",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO events (name, location, event_date, organizer, organizer_email) VALUES ('Nebula board meeting', '1 Mission St, San Francisco', '2026-09-25 16:00', 'David Mokos', 'david@nebula.ai')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.002,
+   "llm_latency": 5.276,
+   "cost": 0.01107,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m46",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO expenses (description, restaurant_name, amount, currency, expense_date) VALUES ('Uber home from the Mission', NULL, 23.40, 'USD', '2026-09-05')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.001,
+   "llm_latency": 4.839,
+   "cost": 0.009606,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m47",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO running_sessions (distance_km, duration, session_date) VALUES (10.0, '49:58', '2026-09-06')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.002,
+   "llm_latency": 4.43,
+   "cost": 0.009206,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m48",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": []
+   },
+   "crashed": null,
+   "wall": 0.003,
+   "llm_latency": 4.561,
+   "cost": 0.00976,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m49",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "ALTER TABLE expenses ADD COLUMN frequency TEXT",
+     "INSERT INTO expenses (description, restaurant_name, amount, currency, expense_date, frequency) VALUES ('Mission Cliffs climbing gym membership', NULL, 110.0, 'USD', '2026-09-07', 'monthly')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.002,
+   "llm_latency": 5.224,
+   "cost": 0.011162,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m50",
+   "kind": "update",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "UPDATE users SET us_phone = '+16286884995' WHERE id = 3;"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.003,
+   "llm_latency": 4.516,
+   "cost": 0.009132,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m51",
+   "kind": "update",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "UPDATE events SET event_date = '2026-09-24 14:00' WHERE id = 2"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.001,
+   "llm_latency": 4.79,
+   "cost": 0.01014,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m52",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO expenses (description, restaurant_name, amount, currency, expense_date, frequency) VALUES ('Dinner with David celebrating term sheet', 'Tartine', 96.80, 'USD', '2026-09-10', NULL)"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.003,
+   "llm_latency": 6.391,
+   "cost": 0.012164,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m53",
+   "kind": "chitchat",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": []
+   },
+   "crashed": null,
+   "wall": 0.001,
+   "llm_latency": 3.528,
+   "cost": 0.008072,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m54",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "ALTER TABLE contacts ADD COLUMN company TEXT",
+     "ALTER TABLE contacts ADD COLUMN role TEXT",
+     "ALTER TABLE contacts ADD COLUMN email TEXT",
+     "ALTER TABLE contacts ADD COLUMN met_at TEXT",
+     "INSERT INTO contacts (name, company, role, email, met_at) VALUES ('Priya Patel', 'Stripe', 'Engineering Manager', 'priya@stripe.com', 'YC founder mixer')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.005,
+   "llm_latency": 5.381,
+   "cost": 0.011656,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m55",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "ALTER TABLE startups ADD COLUMN office_address TEXT",
+     "UPDATE startups SET office_address = '1 Mission St, San Francisco' WHERE id = 1"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.002,
+   "llm_latency": 4.591,
+   "cost": 0.010218,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m56",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO contacts (name, company, role, met_at) VALUES ('Mark Chen', 'Stripe', 'Partnerships Lead', 'Introduced by Priya Patel')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.002,
+   "llm_latency": 4.678,
+   "cost": 0.011054,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m57",
+   "kind": "update",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "UPDATE books SET date_added = '2026-09-14' WHERE id = 2"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.002,
+   "llm_latency": 4.445,
+   "cost": 0.009676,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m58",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE IF NOT EXISTS visits (id INTEGER PRIMARY KEY, visitor_name TEXT, city TEXT, start_date TEXT, end_date TEXT)",
+     "INSERT INTO visits (visitor_name, city, start_date, end_date) VALUES ('Eva', 'San Francisco', '2026-10-10', '2026-10-20')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.002,
+   "llm_latency": 7.002,
+   "cost": 0.012266,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m59",
+   "kind": "delete",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "DELETE FROM contacts WHERE id = 3"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.002,
+   "llm_latency": 7.597,
+   "cost": 0.011486,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m60",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "UPDATE funding_rounds SET status='closed', document_date='2026-09-17' WHERE id=1"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.002,
+   "llm_latency": 5.581,
+   "cost": 0.01014,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m61",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO climbing_sessions (location, achievement, session_date) VALUES ('Mission Cliffs', 'Sent a 6c+', '2026-09-18')"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.002,
+   "llm_latency": 4.904,
+   "cost": 0.009968,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m62",
+   "kind": "question",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": []
+   },
+   "crashed": null,
+   "wall": 0.002,
+   "llm_latency": 4.491,
+   "cost": 0.010664,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m63",
+   "kind": "update",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "UPDATE users SET us_phone = '+1 415 555 0199' WHERE id = 1;"
+    ]
+   },
+   "crashed": null,
+   "wall": 0.002,
+   "llm_latency": 3.933,
+   "cost": 0.009662,
+   "calls": [
+    "claude-sonnet-5",
+    "claude-sonnet-5"
+   ]
+  }
+ ],
+ "qa": [
+  {
+   "id": "q01",
+   "category": "update",
+   "question": "What is my phone number?",
+   "answer": "+1 415 555 0199 (switched from the Czech +420 722 238 738 on Sep 20)",
+   "evidence": [
+    "m02",
+    "m63"
+   ],
+   "system_answer": "Your US phone number is +1 415 555 0199 (no other phone listed for Adam Zvada).",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer gives the current number, +1 415 555 0199, which matches the gold. Not mentioning the old Czech number does not contradict the gold.",
+   "wall": 5.975,
+   "context": [
+    {
+     "sql": "SELECT * FROM users;",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Adam Zvada",
+       "city": "Prague",
+       "phone": null,
+       "birthday": null,
+       "us_phone": "+1 415 555 0199"
+      },
+      {
+       "id": 2,
+       "name": null,
+       "city": null,
+       "phone": "+420 722 238 738",
+       "birthday": null,
+       "us_phone": null
+      },
+      {
+       "id": 3,
+       "name": "David Mokos",
+       "city": null,
+       "phone": "733544390",
+       "birthday": "09-02",
+       "us_phone": "+16286884995"
+      },
+      {
+       "id": 4,
+       "name": "Tom Novak",
+       "city": null,
+       "phone": "+420 777 999 000",
+       "birthday": null,
+       "us_phone": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q02",
+   "category": "update",
+   "question": "What is David's phone number?",
+   "answer": "Czech: +420 733 544 390; US: +1 628 688 4995 (corrected from ...4994)",
+   "evidence": [
+    "m03",
+    "m25",
+    "m50"
+   ],
+   "system_answer": "David Mokos's phone number is 733544390 (US number: +16286884995).",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer gives both numbers, and they match the gold. Czech 733544390 is +420 733 544 390 without the country code. The US number is the corrected 4995.",
+   "wall": 4.897,
+   "context": [
+    {
+     "sql": "SELECT * FROM users WHERE name LIKE '%David%'",
+     "rows": [
+      {
+       "id": 3,
+       "name": "David Mokos",
+       "city": null,
+       "phone": "733544390",
+       "birthday": "09-02",
+       "us_phone": "+16286884995"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM contacts WHERE name LIKE '%David%'",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q03",
+   "category": "update",
+   "question": "What is Tom's phone number?",
+   "answer": "+420 777 999 000 (his new number; the old one was +420 777 123 456)",
+   "evidence": [
+    "m10",
+    "m38"
+   ],
+   "system_answer": "Tom Novak's phone number is +420 777 999 000.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer gives Tom's current number, +420 777 999 000, which matches the gold answer. It does not present the outdated number as current.",
+   "wall": 4.346,
+   "context": [
+    {
+     "sql": "SELECT * FROM users WHERE name LIKE '%Tom%'",
+     "rows": [
+      {
+       "id": 4,
+       "name": "Tom Novak",
+       "city": null,
+       "phone": "+420 777 999 000",
+       "birthday": null,
+       "us_phone": null
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM contacts WHERE name LIKE '%Tom%'",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q04",
+   "category": "update",
+   "question": "Where do I live now?",
+   "answer": "San Francisco, at 1450 Valencia St.",
+   "evidence": [
+    "m32",
+    "m41"
+   ],
+   "system_answer": "You live at 1450 Valencia St., San Francisco (moved 2026-09-01).",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer matches the gold address, 1450 Valencia St, San Francisco. The added move date is extra detail and does not contradict the gold answer.",
+   "wall": 0.014,
+   "context": [
+    {
+     "sql": "SELECT * FROM moves ORDER BY move_date DESC",
+     "rows": [
+      {
+       "id": 1,
+       "city": "San Francisco",
+       "address": "1450 Valencia St.",
+       "move_date": "2026-09-01"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM users",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Adam Zvada",
+       "city": "Prague",
+       "phone": null,
+       "birthday": null,
+       "us_phone": "+1 415 555 0199"
+      },
+      {
+       "id": 2,
+       "name": null,
+       "city": null,
+       "phone": "+420 722 238 738",
+       "birthday": null,
+       "us_phone": null
+      },
+      {
+       "id": 3,
+       "name": "David Mokos",
+       "city": null,
+       "phone": "733544390",
+       "birthday": "09-02",
+       "us_phone": "+16286884995"
+      },
+      {
+       "id": 4,
+       "name": "Tom Novak",
+       "city": null,
+       "phone": "+420 777 999 000",
+       "birthday": null,
+       "us_phone": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q05",
+   "category": "single",
+   "question": "When is David's birthday?",
+   "answer": "September 2",
+   "evidence": [
+    "m06"
+   ],
+   "system_answer": "David Mokos's birthday is September 2 (09-02).",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer gives September 2, which matches the gold answer.",
+   "wall": 0.01,
+   "context": [
+    {
+     "sql": "SELECT * FROM users WHERE name LIKE '%David%'",
+     "rows": [
+      {
+       "id": 3,
+       "name": "David Mokos",
+       "city": null,
+       "phone": "733544390",
+       "birthday": "09-02",
+       "us_phone": "+16286884995"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM contacts WHERE name LIKE '%David%'",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q06",
+   "category": "aggregation",
+   "question": "Whose birthdays do I know about, and when are they?",
+   "answer": "David: Sep 2; Eva: Sep 28; Mom: Oct 3",
+   "evidence": [
+    "m06",
+    "m14",
+    "m33"
+   ],
+   "system_answer": "You know about:\n- David Mokos: September 2\n- Eva (girlfriend): September 28\n- Mom: October 3",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "All three birthdays match the gold answer: David on Sep 2, Eva on Sep 28, and Mom on Oct 3. The extra detail (surname, relationship) doesn't contradict anything.",
+   "wall": 0.013,
+   "context": [
+    {
+     "sql": "SELECT * FROM users WHERE birthday IS NOT NULL AND birthday != ''",
+     "rows": [
+      {
+       "id": 3,
+       "name": "David Mokos",
+       "city": null,
+       "phone": "733544390",
+       "birthday": "09-02",
+       "us_phone": "+16286884995"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM contacts WHERE birthday IS NOT NULL AND birthday != ''",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Eva",
+       "relationship": "girlfriend",
+       "allergy": "peanuts",
+       "birthday": "September 28",
+       "favorite_food": "sushi",
+       "favorite_flower": null,
+       "company": null,
+       "role": null,
+       "email": null,
+       "met_at": null
+      },
+      {
+       "id": 4,
+       "name": "Mom",
+       "relationship": "Mother",
+       "allergy": null,
+       "birthday": "10-03",
+       "favorite_food": null,
+       "favorite_flower": "Orchids",
+       "company": null,
+       "role": null,
+       "email": null,
+       "met_at": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q07",
+   "category": "multi_hop",
+   "question": "What's the email of the investor I met at the Founders Dinner?",
+   "answer": "sarah@northwind.vc (Sarah Kim, Northwind Ventures)",
+   "evidence": [
+    "m16",
+    "m22"
+   ],
+   "system_answer": "The Founders Dinner data only lists the organizer, Sarah Kim (sarah@northwind.vc) — no investor contact from that event is recorded. I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The answer mentions sarah@northwind.vc but labels her as the organizer rather than the investor, and explicitly concludes 'I don't know', declining to name her as the answer. The key fact is not affirmatively given.",
+   "wall": 0.006,
+   "context": [
+    {
+     "sql": "SELECT * FROM contacts WHERE met_at LIKE '%Founders Dinner%'",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM events WHERE name LIKE '%Founders Dinner%'",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Founders Dinner",
+       "location": "Hotel Josef rooftop",
+       "event_date": "2026-08-14 19:00",
+       "organizer": "Sarah Kim, Partner @ Northwind Ventures",
+       "organizer_email": "sarah@northwind.vc"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM contacts WHERE role LIKE '%investor%' OR company LIKE '%investor%'",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM funding_rounds WHERE investor LIKE '%Founders Dinner%'",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q08",
+   "category": "update",
+   "question": "When and where is my meeting with Sarah Kim?",
+   "answer": "Sep 24, 2026 at 14:00 at the Northwind office, 2 Embarcadero Center, SF (moved from Sep 23 10:00)",
+   "evidence": [
+    "m29",
+    "m51"
+   ],
+   "system_answer": "Pitch Meeting with Sarah Kim: 2026-09-24 14:00 at Northwind Office, 2 Embarcadero Center, SF.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The date, time, and location all match the gold answer. The answer gives the current (rescheduled) value, not the outdated one.",
+   "wall": 0.011,
+   "context": [
+    {
+     "sql": "SELECT * FROM events WHERE name LIKE '%Sarah Kim%' OR organizer LIKE '%Sarah Kim%'",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Founders Dinner",
+       "location": "Hotel Josef rooftop",
+       "event_date": "2026-08-14 19:00",
+       "organizer": "Sarah Kim, Partner @ Northwind Ventures",
+       "organizer_email": "sarah@northwind.vc"
+      },
+      {
+       "id": 2,
+       "name": "Pitch Meeting with Sarah Kim",
+       "location": "Northwind Office, 2 Embarcadero Center, SF",
+       "event_date": "2026-09-24 14:00",
+       "organizer": "Sarah Kim, Partner @ Northwind Ventures",
+       "organizer_email": "sarah@northwind.vc"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM appointments WHERE title LIKE '%Sarah Kim%' OR doctor LIKE '%Sarah Kim%'",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM contacts WHERE name LIKE '%Sarah Kim%'",
+     "rows": [
+      {
+       "id": 2,
+       "name": "Sarah Kim",
+       "relationship": "Investor at Northwind Ventures - wants to see deck",
+       "allergy": null,
+       "birthday": null,
+       "favorite_food": null,
+       "favorite_flower": null,
+       "company": null,
+       "role": null,
+       "email": null,
+       "met_at": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q09",
+   "category": "delete",
+   "question": "Do I have a dentist appointment coming up?",
+   "answer": "No. The Aug 20 appointment with Dr. Horák was cancelled.",
+   "evidence": [
+    "m21",
+    "m28"
+   ],
+   "system_answer": "You have no dentist appointment coming up.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer's key fact is that there is no upcoming dentist appointment, which matches the gold answer. It leaves out the detail about the cancelled Aug 20 appointment with Dr. Horák, but says nothing that contradicts it.",
+   "wall": 0.012,
+   "context": [
+    {
+     "sql": "SELECT * FROM appointments WHERE title LIKE '%dentist%' OR doctor LIKE '%dentist%'",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM appointments WHERE appointment_date >= '2026-09-21'",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q10",
+   "category": "aggregation",
+   "question": "How much did I spend eating out (restaurants and cafés) in August?",
+   "answer": "2,854 CZK (Café Savoy 385 + Sasazu 2,140 + Lokál 329)",
+   "evidence": [
+    "m12",
+    "m20",
+    "m31"
+   ],
+   "system_answer": "You spent 2,854 CZK eating out in August (Café Savoy 385, Sasazu 2,140, Lokál 329) — Albert (groceries) excluded.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer gives the same total of 2,854 CZK and the same three items as the gold answer. Excluding the groceries is consistent with the question.",
+   "wall": 0.01,
+   "context": [
+    {
+     "sql": "SELECT * FROM expenses WHERE expense_date LIKE '2026-08%' AND restaurant_name IS NOT NULL",
+     "rows": [
+      {
+       "id": 1,
+       "description": "Breakfast",
+       "restaurant_name": "Café Savoy",
+       "amount": 385.0,
+       "currency": "CZK",
+       "expense_date": "2026-08-05",
+       "frequency": null
+      },
+      {
+       "id": 2,
+       "description": "Sushi dinner with Eva - so good",
+       "restaurant_name": "Sasazu",
+       "amount": 2140.0,
+       "currency": "CZK",
+       "expense_date": "2026-08-12",
+       "frequency": null
+      },
+      {
+       "id": 3,
+       "description": "Groceries",
+       "restaurant_name": "Albert",
+       "amount": 1262.0,
+       "currency": "CZK",
+       "expense_date": "2026-08-18",
+       "frequency": null
+      },
+      {
+       "id": 4,
+       "description": "Lunch",
+       "restaurant_name": "Lokál",
+       "amount": 329.0,
+       "currency": "CZK",
+       "expense_date": "2026-08-22",
+       "frequency": null
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM expenses WHERE expense_date LIKE '%-08-%' AND restaurant_name IS NOT NULL",
+     "rows": [
+      {
+       "id": 1,
+       "description": "Breakfast",
+       "restaurant_name": "Café Savoy",
+       "amount": 385.0,
+       "currency": "CZK",
+       "expense_date": "2026-08-05",
+       "frequency": null
+      },
+      {
+       "id": 2,
+       "description": "Sushi dinner with Eva - so good",
+       "restaurant_name": "Sasazu",
+       "amount": 2140.0,
+       "currency": "CZK",
+       "expense_date": "2026-08-12",
+       "frequency": null
+      },
+      {
+       "id": 3,
+       "description": "Groceries",
+       "restaurant_name": "Albert",
+       "amount": 1262.0,
+       "currency": "CZK",
+       "expense_date": "2026-08-18",
+       "frequency": null
+      },
+      {
+       "id": 4,
+       "description": "Lunch",
+       "restaurant_name": "Lokál",
+       "amount": 329.0,
+       "currency": "CZK",
+       "expense_date": "2026-08-22",
+       "frequency": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q11",
+   "category": "aggregation",
+   "question": "What's my best 10k running time?",
+   "answer": "49:58 (Sep 6, 2026)",
+   "evidence": [
+    "m15",
+    "m47"
+   ],
+   "system_answer": "Your best 10k time is 49:58, set on 2026-09-06.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The time 49:58 and the date Sep 6, 2026 both match the gold answer; only the date format differs.",
+   "wall": 0.011,
+   "context": [
+    {
+     "sql": "SELECT * FROM running_sessions WHERE distance_km >= 9.5 AND distance_km <= 10.5 ORDER BY duration ASC",
+     "rows": [
+      {
+       "id": 2,
+       "distance_km": 10.0,
+       "duration": "49:58",
+       "session_date": "2026-09-06"
+      },
+      {
+       "id": 1,
+       "distance_km": 10.0,
+       "duration": "52:30",
+       "session_date": "2026-08-07"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM running_sessions",
+     "rows": [
+      {
+       "id": 1,
+       "distance_km": 10.0,
+       "duration": "52:30",
+       "session_date": "2026-08-07"
+      },
+      {
+       "id": 2,
+       "distance_km": 10.0,
+       "duration": "49:58",
+       "session_date": "2026-09-06"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q12",
+   "category": "update",
+   "question": "Which books have I finished, and how did I rate them?",
+   "answer": "Thinking, Fast and Slow, rated 5/5",
+   "evidence": [
+    "m23",
+    "m39"
+   ],
+   "system_answer": "Only \"Thinking, Fast and Slow\" by Daniel Kahneman has a rating: 5/5. \"The Pragmatic Programmer\" has no rating recorded (likely not finished).",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer identifies Thinking, Fast and Slow with a 5/5 rating, matching the gold answer. It also mentions The Pragmatic Programmer, but only as unrated and probably unfinished, so it does not claim that book was finished and does not contradict the gold.",
+   "wall": 0.011,
+   "context": [
+    {
+     "sql": "SELECT * FROM books",
+     "rows": [
+      {
+       "id": 1,
+       "title": "Thinking, Fast and Slow",
+       "author": "Daniel Kahneman",
+       "source": "Book club pick",
+       "date_added": "2026-08-15",
+       "rating": 5,
+       "review": "The System 1 vs System 2 stuff is gold"
+      },
+      {
+       "id": 2,
+       "title": "The Pragmatic Programmer",
+       "author": null,
+       "source": null,
+       "date_added": "2026-09-14",
+       "rating": null,
+       "review": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q13",
+   "category": "update",
+   "question": "What book am I reading right now?",
+   "answer": "The Pragmatic Programmer",
+   "evidence": [
+    "m24",
+    "m57"
+   ],
+   "system_answer": "The Pragmatic Programmer (added 2026-09-14).",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer names The Pragmatic Programmer, which matches the gold answer. The added date is extra detail and does not contradict it.",
+   "wall": 0.011,
+   "context": [
+    {
+     "sql": "SELECT * FROM books ORDER BY date_added DESC;",
+     "rows": [
+      {
+       "id": 2,
+       "title": "The Pragmatic Programmer",
+       "author": null,
+       "source": null,
+       "date_added": "2026-09-14",
+       "rating": null,
+       "review": null
+      },
+      {
+       "id": 1,
+       "title": "Thinking, Fast and Slow",
+       "author": "Daniel Kahneman",
+       "source": "Book club pick",
+       "date_added": "2026-08-15",
+       "rating": 5,
+       "review": "The System 1 vs System 2 stuff is gold"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q14",
+   "category": "single",
+   "question": "What is Eva allergic to?",
+   "answer": "Peanuts",
+   "evidence": [
+    "m13"
+   ],
+   "system_answer": "Eva is allergic to peanuts.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer states Eva is allergic to peanuts, which matches the gold answer.",
+   "wall": 0.006,
+   "context": [
+    {
+     "sql": "SELECT * FROM contacts WHERE name LIKE '%Eva%'",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Eva",
+       "relationship": "girlfriend",
+       "allergy": "peanuts",
+       "birthday": "September 28",
+       "favorite_food": "sushi",
+       "favorite_flower": null,
+       "company": null,
+       "role": null,
+       "email": null,
+       "met_at": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q15",
+   "category": "update",
+   "question": "Do I own a car?",
+   "answer": "No, the 2019 Skoda Octavia was sold on Aug 28",
+   "evidence": [
+    "m17",
+    "m37"
+   ],
+   "system_answer": "No — the Skoda Octavia (2019) was sold on 2026-08-28 for 310,000 CZK.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer says no and gives the same car (2019 Skoda Octavia) and the same sale date (Aug 28), matching the gold answer. The added sale price is extra detail and contradicts nothing.",
+   "wall": 0.012,
+   "context": [
+    {
+     "sql": "SELECT * FROM cars",
+     "rows": [
+      {
+       "id": 1,
+       "make": "Skoda",
+       "model": "Octavia",
+       "year": 2019,
+       "plate": "5A1 2345",
+       "sold_price": 310000.0,
+       "sold_currency": "CZK",
+       "sold_date": "2026-08-28"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q16",
+   "category": "update",
+   "question": "Have I renewed my passport yet?",
+   "answer": "Yes, it was renewed (Aug 27)",
+   "evidence": [
+    "m11",
+    "m36"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer states a real fact: the passport was renewed on Aug 27. The answer says 'I don't know', which by the rules is incorrect.",
+   "wall": 0.009,
+   "context": [],
+   "extra": {}
+  },
+  {
+   "id": "q17",
+   "category": "semi_structured",
+   "question": "When and where is the Nebula board meeting?",
+   "answer": "Sep 25, 2026, 16:00-17:30, at 1 Mission St, San Francisco",
+   "evidence": [
+    "m45"
+   ],
+   "system_answer": "The Nebula board meeting is on 2026-09-25 at 16:00, at 1 Mission St, San Francisco.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The date, start time and location all match the gold answer. The end time is omitted, but the start time and venue carry the key facts and nothing contradicts the gold.",
+   "wall": 0.011,
+   "context": [
+    {
+     "sql": "SELECT * FROM events WHERE name LIKE '%Nebula%' OR location LIKE '%Nebula%' OR organizer LIKE '%Nebula%'",
+     "rows": [
+      {
+       "id": 3,
+       "name": "Nebula board meeting",
+       "location": "1 Mission St, San Francisco",
+       "event_date": "2026-09-25 16:00",
+       "organizer": "David Mokos",
+       "organizer_email": "david@nebula.ai"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q18",
+   "category": "semi_structured",
+   "question": "What were the terms in the term sheet draft?",
+   "answer": "$3M seed round at a $15M post-money valuation",
+   "evidence": [
+    "m42"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "Gold is a real fact ($3M seed at $15M post-money); answer says I don't know.",
+   "wall": 0.015,
+   "context": [
+    {
+     "sql": "SELECT * FROM funding_rounds WHERE status LIKE '%draft%' OR round_type LIKE '%term%'",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM funding_rounds",
+     "rows": [
+      {
+       "id": 1,
+       "startup_id": 1,
+       "round_type": "Seed",
+       "amount": 3000000.0,
+       "currency": "USD",
+       "valuation": 15000000.0,
+       "valuation_type": "post-money",
+       "investor": "Sarah Kim, Northwind Ventures",
+       "status": "closed",
+       "document_date": "2026-09-17"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q19",
+   "category": "multi_hop",
+   "question": "What is my cofounder's email address?",
+   "answer": "david@nebula.ai",
+   "evidence": [
+    "m01",
+    "m45"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer gives a real fact (david@nebula.ai), but the response says it doesn't know, which the rules count as incorrect.",
+   "wall": 0.011,
+   "context": [
+    {
+     "sql": "SELECT * FROM startups",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Nebula",
+       "cofounder_name": "David Mokos",
+       "founder_user_id": 1,
+       "office_address": "1 Mission St, San Francisco"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM contacts WHERE name LIKE '%' OR role LIKE '%cofounder%'",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Eva",
+       "relationship": "girlfriend",
+       "allergy": "peanuts",
+       "birthday": "September 28",
+       "favorite_food": "sushi",
+       "favorite_flower": null,
+       "company": null,
+       "role": null,
+       "email": null,
+       "met_at": null
+      },
+      {
+       "id": 2,
+       "name": "Sarah Kim",
+       "relationship": "Investor at Northwind Ventures - wants to see deck",
+       "allergy": null,
+       "birthday": null,
+       "favorite_food": null,
+       "favorite_flower": null,
+       "company": null,
+       "role": null,
+       "email": null,
+       "met_at": null
+      },
+      {
+       "id": 4,
+       "name": "Mom",
+       "relationship": "Mother",
+       "allergy": null,
+       "birthday": "10-03",
+       "favorite_food": null,
+       "favorite_flower": "Orchids",
+       "company": null,
+       "role": null,
+       "email": null,
+       "met_at": null
+      },
+      {
+       "id": 5,
+       "name": "Priya Patel",
+       "relationship": null,
+       "allergy": null,
+       "birthday": null,
+       "favorite_food": null,
+       "favorite_flower": null,
+       "company": "Stripe",
+       "role": "Engineering Manager",
+       "email": "priya@stripe.com",
+       "met_at": "YC founder mixer"
+      },
+      {
+       "id": 6,
+       "name": "Mark Chen",
+       "relationship": null,
+       "allergy": null,
+       "birthday": null,
+       "favorite_food": null,
+       "favorite_flower": null,
+       "company": "Stripe",
+       "role": "Partnerships Lead",
+       "email": null,
+       "met_at": "Introduced by Priya Patel"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q20",
+   "category": "aggregation",
+   "question": "How many times did I go climbing in August?",
+   "answer": "3 times (Aug 3, Aug 10, Aug 17)",
+   "evidence": [
+    "m09",
+    "m18",
+    "m26"
+   ],
+   "system_answer": "You went climbing 3 times in August 2026 (Aug 3, Aug 10, Aug 17), all at Smíchoff.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer matches the gold on the count (3) and on all three dates. The added location, Smíchoff, is extra detail and does not contradict the gold answer.",
+   "wall": 0.008,
+   "context": [
+    {
+     "sql": "SELECT * FROM climbing_sessions WHERE session_date LIKE '2026-08%' OR session_date LIKE '%August%2026%'",
+     "rows": [
+      {
+       "id": 1,
+       "location": "Smíchoff",
+       "companion": "Tom",
+       "achievement": "Sent first 6c",
+       "session_date": "2026-08-03"
+      },
+      {
+       "id": 2,
+       "location": "Smíchoff",
+       "companion": null,
+       "achievement": "Chill session",
+       "session_date": "2026-08-10"
+      },
+      {
+       "id": 3,
+       "location": "Smíchoff",
+       "companion": "Tom",
+       "achievement": "Tried 6c+ project, no send yet",
+       "session_date": "2026-08-17"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q21",
+   "category": "aggregation",
+   "question": "What's the hardest climbing grade I've sent?",
+   "answer": "6c+ (sent on Sep 18 at Mission Cliffs)",
+   "evidence": [
+    "m09",
+    "m26",
+    "m61"
+   ],
+   "system_answer": "6c+ — sent on 2026-09-18 at Mission Cliffs.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer gives the same grade (6c+), the same date (Sep 18) and the same location (Mission Cliffs) as the gold answer. The date format differs, but that is acceptable.",
+   "wall": 0.006,
+   "context": [
+    {
+     "sql": "SELECT * FROM climbing_sessions",
+     "rows": [
+      {
+       "id": 1,
+       "location": "Smíchoff",
+       "companion": "Tom",
+       "achievement": "Sent first 6c",
+       "session_date": "2026-08-03"
+      },
+      {
+       "id": 2,
+       "location": "Smíchoff",
+       "companion": null,
+       "achievement": "Chill session",
+       "session_date": "2026-08-10"
+      },
+      {
+       "id": 3,
+       "location": "Smíchoff",
+       "companion": "Tom",
+       "achievement": "Tried 6c+ project, no send yet",
+       "session_date": "2026-08-17"
+      },
+      {
+       "id": 4,
+       "location": "Mission Cliffs",
+       "companion": null,
+       "achievement": "Sent a 6c+",
+       "session_date": "2026-09-18"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q22",
+   "category": "multi_hop",
+   "question": "What gift ideas do I have for Mom and for Eva?",
+   "answer": "Mom: orchids; Eva: a sushi-making class",
+   "evidence": [
+    "m33",
+    "m48"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer gives concrete gift ideas (orchids for Mom, a sushi-making class for Eva), but the answer only says 'I don't know' and provides neither.",
+   "wall": 0.007,
+   "context": [
+    {
+     "sql": "SELECT * FROM contacts WHERE name LIKE '%Mom%' OR relationship LIKE '%Mom%' OR relationship LIKE '%Mother%'",
+     "rows": [
+      {
+       "id": 4,
+       "name": "Mom",
+       "relationship": "Mother",
+       "allergy": null,
+       "birthday": "10-03",
+       "favorite_food": null,
+       "favorite_flower": "Orchids",
+       "company": null,
+       "role": null,
+       "email": null,
+       "met_at": null
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM contacts WHERE name LIKE '%Eva%'",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Eva",
+       "relationship": "girlfriend",
+       "allergy": "peanuts",
+       "birthday": "September 28",
+       "favorite_food": "sushi",
+       "favorite_flower": null,
+       "company": null,
+       "role": null,
+       "email": null,
+       "met_at": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q23",
+   "category": "single",
+   "question": "How much did the flight to San Francisco cost?",
+   "answer": "18,450 CZK (United UA 8843)",
+   "evidence": [
+    "m35"
+   ],
+   "system_answer": "The flight from Prague to San Francisco (United UA 8843, departing Sep 1) cost 18,450 CZK, paid on 2026-08-26.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer gives the same price, 18,450 CZK, and the same flight, United UA 8843. The extra details (departure date, payment date) do not contradict the gold answer.",
+   "wall": 0.006,
+   "context": [
+    {
+     "sql": "SELECT * FROM expenses WHERE description LIKE '%flight%' OR description LIKE '%San Francisco%'",
+     "rows": [
+      {
+       "id": 5,
+       "description": "Flight Prague to San Francisco, United UA 8843, departure Sep 1",
+       "restaurant_name": null,
+       "amount": 18450.0,
+       "currency": "CZK",
+       "expense_date": "2026-08-26",
+       "frequency": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q24",
+   "category": "semi_structured",
+   "question": "Who is Priya Patel?",
+   "answer": "Engineering Manager at Stripe, met at a YC founder mixer (priya@stripe.com, +1 415 555 0142)",
+   "evidence": [
+    "m54"
+   ],
+   "system_answer": "Priya Patel is an Engineering Manager at Stripe (email: priya@stripe.com), met at the YC founder mixer.",
+   "verdict": "partial",
+   "score": 0.5,
+   "judge_reason": "The answer correctly gives the role, company, email, and where they met. It omits the phone number, which is part of the gold answer.",
+   "wall": 0.009,
+   "context": [
+    {
+     "sql": "SELECT * FROM users WHERE name LIKE '%Priya Patel%'",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM contacts WHERE name LIKE '%Priya Patel%'",
+     "rows": [
+      {
+       "id": 5,
+       "name": "Priya Patel",
+       "relationship": null,
+       "allergy": null,
+       "birthday": null,
+       "favorite_food": null,
+       "favorite_flower": null,
+       "company": "Stripe",
+       "role": "Engineering Manager",
+       "email": "priya@stripe.com",
+       "met_at": "YC founder mixer"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q25",
+   "category": "single",
+   "question": "Who runs partnerships at Stripe?",
+   "answer": "Mark Chen, Priya's colleague",
+   "evidence": [
+    "m56"
+   ],
+   "system_answer": "Mark Chen — Partnerships Lead at Stripe (introduced by Priya Patel).",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer names Mark Chen, which is the key fact. The connection to Priya is consistent with the gold: 'introduced by Priya Patel' does not contradict her being his colleague.",
+   "wall": 0.009,
+   "context": [
+    {
+     "sql": "SELECT * FROM contacts WHERE company LIKE '%Stripe%'",
+     "rows": [
+      {
+       "id": 5,
+       "name": "Priya Patel",
+       "relationship": null,
+       "allergy": null,
+       "birthday": null,
+       "favorite_food": null,
+       "favorite_flower": null,
+       "company": "Stripe",
+       "role": "Engineering Manager",
+       "email": "priya@stripe.com",
+       "met_at": "YC founder mixer"
+      },
+      {
+       "id": 6,
+       "name": "Mark Chen",
+       "relationship": null,
+       "allergy": null,
+       "birthday": null,
+       "favorite_food": null,
+       "favorite_flower": null,
+       "company": "Stripe",
+       "role": "Partnerships Lead",
+       "email": null,
+       "met_at": "Introduced by Priya Patel"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM contacts WHERE role LIKE '%partnership%'",
+     "rows": [
+      {
+       "id": 6,
+       "name": "Mark Chen",
+       "relationship": null,
+       "allergy": null,
+       "birthday": null,
+       "favorite_food": null,
+       "favorite_flower": null,
+       "company": "Stripe",
+       "role": "Partnerships Lead",
+       "email": null,
+       "met_at": "Introduced by Priya Patel"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q26",
+   "category": "single",
+   "question": "How much did Nebula raise, and who led the round?",
+   "answer": "$3M seed, led by Northwind Ventures",
+   "evidence": [
+    "m60"
+   ],
+   "system_answer": "Nebula raised $3,000,000 (Seed round), led by Sarah Kim of Northwind Ventures.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer matches the gold on both key facts: a $3M seed round led by Northwind Ventures. Naming Sarah Kim is extra detail that does not contradict the gold.",
+   "wall": 0.007,
+   "context": [
+    {
+     "sql": "SELECT * FROM startups WHERE name LIKE '%Nebula%'",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Nebula",
+       "cofounder_name": "David Mokos",
+       "founder_user_id": 1,
+       "office_address": "1 Mission St, San Francisco"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT fr.* FROM funding_rounds fr JOIN startups s ON fr.startup_id = s.id WHERE s.name LIKE '%Nebula%'",
+     "rows": [
+      {
+       "id": 1,
+       "startup_id": 1,
+       "round_type": "Seed",
+       "amount": 3000000.0,
+       "currency": "USD",
+       "valuation": 15000000.0,
+       "valuation_type": "post-money",
+       "investor": "Sarah Kim, Northwind Ventures",
+       "status": "closed",
+       "document_date": "2026-09-17"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q27",
+   "category": "single",
+   "question": "When is Eva visiting SF?",
+   "answer": "Oct 10 to Oct 20",
+   "evidence": [
+    "m58"
+   ],
+   "system_answer": "Eva is visiting San Francisco from 2026-10-10 to 2026-10-20.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer gives Oct 10 to Oct 20, which matches the gold answer. The added year and the date format are acceptable differences.",
+   "wall": 0.013,
+   "context": [
+    {
+     "sql": "SELECT * FROM visits WHERE visitor_name LIKE '%Eva%' AND city LIKE '%SF%'",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM visits WHERE visitor_name LIKE '%Eva%' AND city LIKE '%San Francisco%'",
+     "rows": [
+      {
+       "id": 1,
+       "visitor_name": "Eva",
+       "city": "San Francisco",
+       "start_date": "2026-10-10",
+       "end_date": "2026-10-20"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM visits WHERE visitor_name LIKE '%Eva%'",
+     "rows": [
+      {
+       "id": 1,
+       "visitor_name": "Eva",
+       "city": "San Francisco",
+       "start_date": "2026-10-10",
+       "end_date": "2026-10-20"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q28",
+   "category": "single",
+   "question": "Which climbing gym did I join, and what does it cost?",
+   "answer": "Mission Cliffs, $110/month",
+   "evidence": [
+    "m49"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer is a real fact (Mission Cliffs, $110/month), but the answer says 'I don't know' and gives neither the gym nor the cost.",
+   "wall": 0.013,
+   "context": [
+    {
+     "sql": "SELECT * FROM climbing_sessions",
+     "rows": [
+      {
+       "id": 1,
+       "location": "Smíchoff",
+       "companion": "Tom",
+       "achievement": "Sent first 6c",
+       "session_date": "2026-08-03"
+      },
+      {
+       "id": 2,
+       "location": "Smíchoff",
+       "companion": null,
+       "achievement": "Chill session",
+       "session_date": "2026-08-10"
+      },
+      {
+       "id": 3,
+       "location": "Smíchoff",
+       "companion": "Tom",
+       "achievement": "Tried 6c+ project, no send yet",
+       "session_date": "2026-08-17"
+      },
+      {
+       "id": 4,
+       "location": "Mission Cliffs",
+       "companion": null,
+       "achievement": "Sent a 6c+",
+       "session_date": "2026-09-18"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q29",
+   "category": "aggregation",
+   "question": "How much did I spend on food and coffee in September?",
+   "answer": "$107.05 (Blue Bottle $10.25 + Tartine $96.80)",
+   "evidence": [
+    "m44",
+    "m52"
+   ],
+   "system_answer": "Total: $107.05 in September — Blue Bottle Coffee ($10.25, Sep 3) and Tartine dinner ($96.80, Sep 10).",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "Matches total $107.05 and both components.",
+   "wall": 0.022,
+   "context": [
+    {
+     "sql": "SELECT * FROM expenses WHERE expense_date LIKE '2026-09%'",
+     "rows": [
+      {
+       "id": 6,
+       "description": "1x Oat Latte, 1x Almond Croissant - VISA ****4421",
+       "restaurant_name": "Blue Bottle Coffee - Mint Plaza, San Francisco",
+       "amount": 10.25,
+       "currency": "USD",
+       "expense_date": "2026-09-03 08:37",
+       "frequency": null
+      },
+      {
+       "id": 7,
+       "description": "Uber home from the Mission",
+       "restaurant_name": null,
+       "amount": 23.4,
+       "currency": "USD",
+       "expense_date": "2026-09-05",
+       "frequency": null
+      },
+      {
+       "id": 8,
+       "description": "Mission Cliffs climbing gym membership",
+       "restaurant_name": null,
+       "amount": 110.0,
+       "currency": "USD",
+       "expense_date": "2026-09-07",
+       "frequency": "monthly"
+      },
+      {
+       "id": 9,
+       "description": "Dinner with David celebrating term sheet",
+       "restaurant_name": "Tartine",
+       "amount": 96.8,
+       "currency": "USD",
+       "expense_date": "2026-09-10",
+       "frequency": null
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM expenses WHERE (description LIKE '%food%' OR description LIKE '%coffee%' OR restaurant_name IS NOT NULL) AND expense_date LIKE '2026-09%'",
+     "rows": [
+      {
+       "id": 6,
+       "description": "1x Oat Latte, 1x Almond Croissant - VISA ****4421",
+       "restaurant_name": "Blue Bottle Coffee - Mint Plaza, San Francisco",
+       "amount": 10.25,
+       "currency": "USD",
+       "expense_date": "2026-09-03 08:37",
+       "frequency": null
+      },
+      {
+       "id": 9,
+       "description": "Dinner with David celebrating term sheet",
+       "restaurant_name": "Tartine",
+       "amount": 96.8,
+       "currency": "USD",
+       "expense_date": "2026-09-10",
+       "frequency": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q30",
+   "category": "single",
+   "question": "What's my favorite restaurant in Prague?",
+   "answer": "Sasazu",
+   "evidence": [
+    "m07"
+   ],
+   "system_answer": "Your favorite restaurant in Prague is Sasazu.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer names Sasazu, which matches the gold answer.",
+   "wall": 0.009,
+   "context": [
+    {
+     "sql": "SELECT * FROM favorite_restaurants WHERE city LIKE '%Prague%'",
+     "rows": [
+      {
+       "id": 1,
+       "user_id": null,
+       "city": "Prague",
+       "restaurant_name": "Sasazu"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q31",
+   "category": "single",
+   "question": "What do I like to think about?",
+   "answer": "The Roman Empire",
+   "evidence": [
+    "m05"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer is a real fact (the Roman Empire), but the response says it doesn't know.",
+   "wall": 0.009,
+   "context": [
+    {
+     "sql": "SELECT * FROM interests",
+     "rows": [
+      {
+       "id": 1,
+       "user_name": "Adam",
+       "interest": "Riding big black horses"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q32",
+   "category": "single",
+   "question": "What do I like riding?",
+   "answer": "Big black horses",
+   "evidence": [
+    "m34"
+   ],
+   "system_answer": "You like riding big black horses.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer matches the gold answer exactly: big black horses.",
+   "wall": 0.005,
+   "context": [
+    {
+     "sql": "SELECT * FROM interests WHERE interest LIKE '%rid%' OR interest LIKE '%bike%' OR interest LIKE '%motorcycle%' OR interest LIKE '%car%'",
+     "rows": [
+      {
+       "id": 1,
+       "user_name": "Adam",
+       "interest": "Riding big black horses"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM interests",
+     "rows": [
+      {
+       "id": 1,
+       "user_name": "Adam",
+       "interest": "Riding big black horses"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q33",
+   "category": "temporal",
+   "question": "What meetings do I have this coming week?",
+   "answer": "Thu Sep 24 14:00: pitch meeting with Sarah Kim at the Northwind office (2 Embarcadero Center); Fri Sep 25 16:00: Nebula board meeting at 1 Mission St",
+   "evidence": [
+    "m29",
+    "m51",
+    "m45"
+   ],
+   "system_answer": "You have 2 meetings this week:\n\n1. **Pitch Meeting with Sarah Kim** – Sep 24, 2026, 2:00 PM, at Northwind Office, 2 Embarcadero Center, SF (organizer: Sarah Kim, Partner @ Northwind Ventures)\n2. **Nebula board meeting** – Sep 25, 2026, 4:00 PM, at 1 Mission St, San Francisco (organizer: David Mokos)",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "Both meetings match the gold answer on date, time, and location. The extra organizer details do not contradict it.",
+   "wall": 0.008,
+   "context": [
+    {
+     "sql": "SELECT * FROM appointments WHERE appointment_date BETWEEN '2026-09-21' AND '2026-09-28'",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM events WHERE event_date BETWEEN '2026-09-21' AND '2026-09-28'",
+     "rows": [
+      {
+       "id": 2,
+       "name": "Pitch Meeting with Sarah Kim",
+       "location": "Northwind Office, 2 Embarcadero Center, SF",
+       "event_date": "2026-09-24 14:00",
+       "organizer": "Sarah Kim, Partner @ Northwind Ventures",
+       "organizer_email": "sarah@northwind.vc"
+      },
+      {
+       "id": 3,
+       "name": "Nebula board meeting",
+       "location": "1 Mission St, San Francisco",
+       "event_date": "2026-09-25 16:00",
+       "organizer": "David Mokos",
+       "organizer_email": "david@nebula.ai"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q34",
+   "category": "single",
+   "question": "How much did I sell my car for?",
+   "answer": "310,000 CZK",
+   "evidence": [
+    "m37"
+   ],
+   "system_answer": "You sold your Skoda Octavia (2019) for 310,000 CZK on 2026-08-28.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer states 310,000 CZK, which matches the gold answer. The extra details about the car and the date don't contradict it.",
+   "wall": 0.009,
+   "context": [
+    {
+     "sql": "SELECT * FROM cars WHERE sold_price IS NOT NULL",
+     "rows": [
+      {
+       "id": 1,
+       "make": "Skoda",
+       "model": "Octavia",
+       "year": 2019,
+       "plate": "5A1 2345",
+       "sold_price": 310000.0,
+       "sold_currency": "CZK",
+       "sold_date": "2026-08-28"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q35",
+   "category": "update",
+   "question": "Where did I live before San Francisco?",
+   "answer": "Prague",
+   "evidence": [
+    "m01",
+    "m32"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer is a real fact (Prague), but the answer says it doesn't know, which the rules count as incorrect.",
+   "wall": 0.003,
+   "context": [
+    {
+     "sql": "SELECT * FROM moves ORDER BY move_date ASC;",
+     "rows": [
+      {
+       "id": 1,
+       "city": "San Francisco",
+       "address": "1450 Valencia St.",
+       "move_date": "2026-09-01"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM moves WHERE city LIKE '%San Francisco%';",
+     "rows": [
+      {
+       "id": 1,
+       "city": "San Francisco",
+       "address": "1450 Valencia St.",
+       "move_date": "2026-09-01"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q36",
+   "category": "deleted",
+   "question": "Who is Jan Dvořák?",
+   "answer": "UNKNOWN: the user asked to forget Jan Dvořák's info, so nothing should be returned",
+   "evidence": [
+    "m59"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The gold answer is UNKNOWN, meaning the information should not be returned. The answer says it doesn't know and gives no concrete value, so it complies.",
+   "wall": 0.002,
+   "context": [
+    {
+     "sql": "SELECT * FROM users WHERE name LIKE '%Jan Dvořák%'",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM contacts WHERE name LIKE '%Jan Dvořák%'",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q37",
+   "category": "unanswerable",
+   "question": "When is Tom's birthday?",
+   "answer": "UNKNOWN: never mentioned",
+   "evidence": [],
+   "system_answer": "I don't know.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "Gold is UNKNOWN and the answer says it doesn't know.",
+   "wall": 0.006,
+   "context": [
+    {
+     "sql": "SELECT * FROM users WHERE name LIKE '%Tom%'",
+     "rows": [
+      {
+       "id": 4,
+       "name": "Tom Novak",
+       "city": null,
+       "phone": "+420 777 999 000",
+       "birthday": null,
+       "us_phone": null
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM contacts WHERE name LIKE '%Tom%'",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q38",
+   "category": "unanswerable",
+   "question": "What's Sarah Kim's phone number?",
+   "answer": "UNKNOWN: never mentioned",
+   "evidence": [],
+   "system_answer": "I don't know.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "Gold is UNKNOWN and the answer correctly states it doesn't know.",
+   "wall": 0.006,
+   "context": [
+    {
+     "sql": "SELECT * FROM users WHERE name LIKE '%Sarah Kim%'",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM contacts WHERE name LIKE '%Sarah Kim%'",
+     "rows": [
+      {
+       "id": 2,
+       "name": "Sarah Kim",
+       "relationship": "Investor at Northwind Ventures - wants to see deck",
+       "allergy": null,
+       "birthday": null,
+       "favorite_food": null,
+       "favorite_flower": null,
+       "company": null,
+       "role": null,
+       "email": null,
+       "met_at": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q39",
+   "category": "unanswerable",
+   "question": "What's Eva's last name?",
+   "answer": "UNKNOWN: never mentioned",
+   "evidence": [],
+   "system_answer": "I don't know.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The gold answer is UNKNOWN, and the answer correctly says it doesn't know.",
+   "wall": 0.006,
+   "context": [
+    {
+     "sql": "SELECT * FROM users WHERE name LIKE '%Eva%'",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM contacts WHERE name LIKE '%Eva%'",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Eva",
+       "relationship": "girlfriend",
+       "allergy": "peanuts",
+       "birthday": "September 28",
+       "favorite_food": "sushi",
+       "favorite_flower": null,
+       "company": null,
+       "role": null,
+       "email": null,
+       "met_at": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q40",
+   "category": "unanswerable",
+   "question": "How much is my rent in San Francisco?",
+   "answer": "UNKNOWN: never mentioned",
+   "evidence": [],
+   "system_answer": "I don't know.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "Gold is UNKNOWN and the answer says it doesn't know.",
+   "wall": 0.001,
+   "context": [
+    {
+     "sql": "SELECT * FROM expenses WHERE description LIKE '%rent%' OR description LIKE '%San Francisco%'",
+     "rows": [
+      {
+       "id": 5,
+       "description": "Flight Prague to San Francisco, United UA 8843, departure Sep 1",
+       "restaurant_name": null,
+       "amount": 18450.0,
+       "currency": "CZK",
+       "expense_date": "2026-08-26",
+       "frequency": null
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM expenses WHERE restaurant_name LIKE '%San Francisco%'",
+     "rows": [
+      {
+       "id": 6,
+       "description": "1x Oat Latte, 1x Almond Croissant - VISA ****4421",
+       "restaurant_name": "Blue Bottle Coffee - Mint Plaza, San Francisco",
+       "amount": 10.25,
+       "currency": "USD",
+       "expense_date": "2026-09-03 08:37",
+       "frequency": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  }
+ ],
+ "db": {
+  "users": {
+   "columns": [
+    "id",
+    "name",
+    "city",
+    "phone",
+    "birthday",
+    "us_phone"
+   ],
+   "rows": [
+    [
+     1,
+     "Adam Zvada",
+     "Prague",
+     null,
+     null,
+     "+1 415 555 0199"
+    ],
+    [
+     2,
+     null,
+     null,
+     "+420 722 238 738",
+     null,
+     null
+    ],
+    [
+     3,
+     "David Mokos",
+     null,
+     "733544390",
+     "09-02",
+     "+16286884995"
+    ],
+    [
+     4,
+     "Tom Novak",
+     null,
+     "+420 777 999 000",
+     null,
+     null
+    ]
+   ]
+  },
+  "startups": {
+   "columns": [
+    "id",
+    "name",
+    "cofounder_name",
+    "founder_user_id",
+    "office_address"
+   ],
+   "rows": [
+    [
+     1,
+     "Nebula",
+     "David Mokos",
+     1,
+     "1 Mission St, San Francisco"
+    ]
+   ]
+  },
+  "favorite_restaurants": {
+   "columns": [
+    "id",
+    "user_id",
+    "city",
+    "restaurant_name"
+   ],
+   "rows": [
+    [
+     1,
+     null,
+     "Prague",
+     "Sasazu"
+    ]
+   ]
+  },
+  "climbing_sessions": {
+   "columns": [
+    "id",
+    "location",
+    "companion",
+    "achievement",
+    "session_date"
+   ],
+   "rows": [
+    [
+     1,
+     "Smíchoff",
+     "Tom",
+     "Sent first 6c",
+     "2026-08-03"
+    ],
+    [
+     2,
+     "Smíchoff",
+     null,
+     "Chill session",
+     "2026-08-10"
+    ],
+    [
+     3,
+     "Smíchoff",
+     "Tom",
+     "Tried 6c+ project, no send yet",
+     "2026-08-17"
+    ],
+    [
+     4,
+     "Mission Cliffs",
+     null,
+     "Sent a 6c+",
+     "2026-09-18"
+    ]
+   ]
+  },
+  "expenses": {
+   "columns": [
+    "id",
+    "description",
+    "restaurant_name",
+    "amount",
+    "currency",
+    "expense_date",
+    "frequency"
+   ],
+   "rows": [
+    [
+     1,
+     "Breakfast",
+     "Café Savoy",
+     385.0,
+     "CZK",
+     "2026-08-05",
+     null
+    ],
+    [
+     2,
+     "Sushi dinner with Eva - so good",
+     "Sasazu",
+     2140.0,
+     "CZK",
+     "2026-08-12",
+     null
+    ],
+    [
+     3,
+     "Groceries",
+     "Albert",
+     1262.0,
+     "CZK",
+     "2026-08-18",
+     null
+    ],
+    [
+     4,
+     "Lunch",
+     "Lokál",
+     329.0,
+     "CZK",
+     "2026-08-22",
+     null
+    ],
+    [
+     5,
+     "Flight Prague to San Francisco, United UA 8843, departure Sep 1",
+     null,
+     18450.0,
+     "CZK",
+     "2026-08-26",
+     null
+    ],
+    [
+     6,
+     "1x Oat Latte, 1x Almond Croissant - VISA ****4421",
+     "Blue Bottle Coffee - Mint Plaza, San Francisco",
+     10.25,
+     "USD",
+     "2026-09-03 08:37",
+     null
+    ],
+    [
+     7,
+     "Uber home from the Mission",
+     null,
+     23.4,
+     "USD",
+     "2026-09-05",
+     null
+    ],
+    [
+     8,
+     "Mission Cliffs climbing gym membership",
+     null,
+     110.0,
+     "USD",
+     "2026-09-07",
+     "monthly"
+    ],
+    [
+     9,
+     "Dinner with David celebrating term sheet",
+     "Tartine",
+     96.8,
+     "USD",
+     "2026-09-10",
+     null
+    ]
+   ]
+  },
+  "contacts": {
+   "columns": [
+    "id",
+    "name",
+    "relationship",
+    "allergy",
+    "birthday",
+    "favorite_food",
+    "favorite_flower",
+    "company",
+    "role",
+    "email",
+    "met_at"
+   ],
+   "rows": [
+    [
+     1,
+     "Eva",
+     "girlfriend",
+     "peanuts",
+     "September 28",
+     "sushi",
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     2,
+     "Sarah Kim",
+     "Investor at Northwind Ventures - wants to see deck",
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     4,
+     "Mom",
+     "Mother",
+     null,
+     "10-03",
+     null,
+     "Orchids",
+     null,
+     null,
+     null,
+     null
+    ],
+    [
+     5,
+     "Priya Patel",
+     null,
+     null,
+     null,
+     null,
+     null,
+     "Stripe",
+     "Engineering Manager",
+     "priya@stripe.com",
+     "YC founder mixer"
+    ],
+    [
+     6,
+     "Mark Chen",
+     null,
+     null,
+     null,
+     null,
+     null,
+     "Stripe",
+     "Partnerships Lead",
+     null,
+     "Introduced by Priya Patel"
+    ]
+   ]
+  },
+  "running_sessions": {
+   "columns": [
+    "id",
+    "distance_km",
+    "duration",
+    "session_date"
+   ],
+   "rows": [
+    [
+     1,
+     10.0,
+     "52:30",
+     "2026-08-07"
+    ],
+    [
+     2,
+     10.0,
+     "49:58",
+     "2026-09-06"
+    ]
+   ]
+  },
+  "events": {
+   "columns": [
+    "id",
+    "name",
+    "location",
+    "event_date",
+    "organizer",
+    "organizer_email"
+   ],
+   "rows": [
+    [
+     1,
+     "Founders Dinner",
+     "Hotel Josef rooftop",
+     "2026-08-14 19:00",
+     "Sarah Kim, Partner @ Northwind Ventures",
+     "sarah@northwind.vc"
+    ],
+    [
+     2,
+     "Pitch Meeting with Sarah Kim",
+     "Northwind Office, 2 Embarcadero Center, SF",
+     "2026-09-24 14:00",
+     "Sarah Kim, Partner @ Northwind Ventures",
+     "sarah@northwind.vc"
+    ],
+    [
+     3,
+     "Nebula board meeting",
+     "1 Mission St, San Francisco",
+     "2026-09-25 16:00",
+     "David Mokos",
+     "david@nebula.ai"
+    ]
+   ]
+  },
+  "cars": {
+   "columns": [
+    "id",
+    "make",
+    "model",
+    "year",
+    "plate",
+    "sold_price",
+    "sold_currency",
+    "sold_date"
+   ],
+   "rows": [
+    [
+     1,
+     "Skoda",
+     "Octavia",
+     2019,
+     "5A1 2345",
+     310000.0,
+     "CZK",
+     "2026-08-28"
+    ]
+   ]
+  },
+  "appointments": {
+   "columns": [
+    "id",
+    "title",
+    "doctor",
+    "appointment_date",
+    "appointment_time"
+   ],
+   "rows": []
+  },
+  "books": {
+   "columns": [
+    "id",
+    "title",
+    "author",
+    "source",
+    "date_added",
+    "rating",
+    "review"
+   ],
+   "rows": [
+    [
+     1,
+     "Thinking, Fast and Slow",
+     "Daniel Kahneman",
+     "Book club pick",
+     "2026-08-15",
+     5,
+     "The System 1 vs System 2 stuff is gold"
+    ],
+    [
+     2,
+     "The Pragmatic Programmer",
+     null,
+     null,
+     "2026-09-14",
+     null,
+     null
+    ]
+   ]
+  },
+  "moves": {
+   "columns": [
+    "id",
+    "city",
+    "address",
+    "move_date"
+   ],
+   "rows": [
+    [
+     1,
+     "San Francisco",
+     "1450 Valencia St.",
+     "2026-09-01"
+    ]
+   ]
+  },
+  "interests": {
+   "columns": [
+    "id",
+    "user_name",
+    "interest"
+   ],
+   "rows": [
+    [
+     1,
+     "Adam",
+     "Riding big black horses"
+    ]
+   ]
+  },
+  "funding_rounds": {
+   "columns": [
+    "id",
+    "startup_id",
+    "round_type",
+    "amount",
+    "currency",
+    "valuation",
+    "valuation_type",
+    "investor",
+    "status",
+    "document_date"
+   ],
+   "rows": [
+    [
+     1,
+     1,
+     "Seed",
+     3000000.0,
+     "USD",
+     15000000.0,
+     "post-money",
+     "Sarah Kim, Northwind Ventures",
+     "closed",
+     "2026-09-17"
+    ]
+   ]
+  },
+  "visits": {
+   "columns": [
+    "id",
+    "visitor_name",
+    "city",
+    "start_date",
+    "end_date"
+   ],
+   "rows": [
+    [
+     1,
+     "Eva",
+     "San Francisco",
+     "2026-10-10",
+     "2026-10-20"
+    ]
+   ]
+  }
+ }
+}

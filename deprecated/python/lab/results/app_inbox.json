@@ -1,0 +1,348 @@
+{
+ "pairs": [
+  {
+   "kind": "pair",
+   "key": "people|3|6",
+   "a": "Dave",
+   "b": "David",
+   "a_id": 3,
+   "b_id": 6,
+   "p": 0.72,
+   "context": [
+    "Btw Maso a Kobliha with Dave, 1240 Kč today",
+    "btw dinner with Dave at Cafe Imperial, 2 140 CZK",
+    "Fyi drinks with Dave at Hemingway Bar, 340 CZK tonight lol"
+   ]
+  },
+  {
+   "kind": "pair",
+   "key": "people|6|9",
+   "a": "David",
+   "b": "David Mokos",
+   "a_id": 6,
+   "b_id": 9,
+   "p": 0.68,
+   "context": [
+    "Note: beers at Hemingway Bar with David 410 Kč today",
+    "happy birthday to David today! 🎂 (Sep 2)",
+    "David's US number is +1 628 688 4994"
+   ]
+  },
+  {
+   "kind": "pair",
+   "key": "people|3|9",
+   "a": "Dave",
+   "b": "David Mokos",
+   "a_id": 3,
+   "b_id": 9,
+   "p": 0.58,
+   "context": [
+    "Btw Maso a Kobliha with Dave, 1240 Kč today",
+    "btw dinner with Dave at Cafe Imperial, 2 140 CZK",
+    "Fyi drinks with Dave at Hemingway Bar, 340 CZK tonight lol"
+   ]
+  }
+ ],
+ "before": {
+  "wrong_rows": 163,
+  "app": {
+   "all": 0.6667,
+   "same": 0.775,
+   "reworded": 0.7,
+   "novel": 0.44,
+   "logged_shapes": 0.7375,
+   "no_view": 12,
+   "view_but_wrong": 23
+  }
+ },
+ "runs": [
+  {
+   "strategy": "random",
+   "n": 25,
+   "shown_wrong": 0,
+   "fixed_rows": 0,
+   "merged_people": 0,
+   "wrong_rows_after": 163,
+   "wrong_rate_after": 0.0361,
+   "app_after": {
+    "all": 0.6667,
+    "same": 0.775,
+    "reworded": 0.7,
+    "novel": 0.44,
+    "logged_shapes": 0.7375,
+    "no_view": 12,
+    "view_but_wrong": 23
+   }
+  },
+  {
+   "strategy": "random",
+   "n": 50,
+   "shown_wrong": 2,
+   "fixed_rows": 2,
+   "merged_people": 0,
+   "wrong_rows_after": 161,
+   "wrong_rate_after": 0.0357,
+   "app_after": {
+    "all": 0.6667,
+    "same": 0.775,
+    "reworded": 0.7,
+    "novel": 0.44,
+    "logged_shapes": 0.7375,
+    "no_view": 12,
+    "view_but_wrong": 23
+   }
+  },
+  {
+   "strategy": "random",
+   "n": 100,
+   "shown_wrong": 4,
+   "fixed_rows": 4,
+   "merged_people": 0,
+   "wrong_rows_after": 159,
+   "wrong_rate_after": 0.0352,
+   "app_after": {
+    "all": 0.6667,
+    "same": 0.775,
+    "reworded": 0.7,
+    "novel": 0.44,
+    "logged_shapes": 0.7375,
+    "no_view": 12,
+    "view_but_wrong": 23
+   }
+  },
+  {
+   "strategy": "random",
+   "n": 200,
+   "shown_wrong": 8,
+   "fixed_rows": 8,
+   "merged_people": 0,
+   "wrong_rows_after": 155,
+   "wrong_rate_after": 0.0343,
+   "app_after": {
+    "all": 0.6667,
+    "same": 0.775,
+    "reworded": 0.7,
+    "novel": 0.44,
+    "logged_shapes": 0.7375,
+    "no_view": 12,
+    "view_but_wrong": 23
+   }
+  },
+  {
+   "strategy": "code",
+   "n": 25,
+   "shown_wrong": 22,
+   "fixed_rows": 22,
+   "merged_people": 0,
+   "wrong_rows_after": 141,
+   "wrong_rate_after": 0.0312,
+   "app_after": {
+    "all": 0.6762,
+    "same": 0.775,
+    "reworded": 0.7,
+    "novel": 0.48,
+    "logged_shapes": 0.7375,
+    "no_view": 11,
+    "view_but_wrong": 23
+   }
+  },
+  {
+   "strategy": "code",
+   "n": 50,
+   "shown_wrong": 39,
+   "fixed_rows": 39,
+   "merged_people": 0,
+   "wrong_rows_after": 124,
+   "wrong_rate_after": 0.0275,
+   "app_after": {
+    "all": 0.6762,
+    "same": 0.775,
+    "reworded": 0.7,
+    "novel": 0.48,
+    "logged_shapes": 0.7375,
+    "no_view": 10,
+    "view_but_wrong": 24
+   }
+  },
+  {
+   "strategy": "code",
+   "n": 100,
+   "shown_wrong": 63,
+   "fixed_rows": 63,
+   "merged_people": 0,
+   "wrong_rows_after": 101,
+   "wrong_rate_after": 0.0224,
+   "app_after": {
+    "all": 0.6762,
+    "same": 0.775,
+    "reworded": 0.7,
+    "novel": 0.48,
+    "logged_shapes": 0.7375,
+    "no_view": 10,
+    "view_but_wrong": 24
+   }
+  },
+  {
+   "strategy": "code",
+   "n": 200,
+   "shown_wrong": 107,
+   "fixed_rows": 107,
+   "merged_people": 0,
+   "wrong_rows_after": 58,
+   "wrong_rate_after": 0.0128,
+   "app_after": {
+    "all": 0.6857,
+    "same": 0.8,
+    "reworded": 0.7,
+    "novel": 0.48,
+    "logged_shapes": 0.75,
+    "no_view": 10,
+    "view_but_wrong": 23
+   }
+  },
+  {
+   "strategy": "jev",
+   "n": 25,
+   "shown_wrong": 20,
+   "fixed_rows": 20,
+   "merged_people": 0,
+   "wrong_rows_after": 145,
+   "wrong_rate_after": 0.0321,
+   "app_after": {
+    "all": 0.6667,
+    "same": 0.775,
+    "reworded": 0.7,
+    "novel": 0.44,
+    "logged_shapes": 0.7375,
+    "no_view": 10,
+    "view_but_wrong": 25
+   }
+  },
+  {
+   "strategy": "jev",
+   "n": 50,
+   "shown_wrong": 30,
+   "fixed_rows": 30,
+   "merged_people": 0,
+   "wrong_rows_after": 136,
+   "wrong_rate_after": 0.0301,
+   "app_after": {
+    "all": 0.6667,
+    "same": 0.775,
+    "reworded": 0.7,
+    "novel": 0.44,
+    "logged_shapes": 0.7375,
+    "no_view": 10,
+    "view_but_wrong": 25
+   }
+  },
+  {
+   "strategy": "jev",
+   "n": 100,
+   "shown_wrong": 55,
+   "fixed_rows": 55,
+   "merged_people": 0,
+   "wrong_rows_after": 112,
+   "wrong_rate_after": 0.0248,
+   "app_after": {
+    "all": 0.6762,
+    "same": 0.8,
+    "reworded": 0.7,
+    "novel": 0.44,
+    "logged_shapes": 0.75,
+    "no_view": 10,
+    "view_but_wrong": 24
+   }
+  },
+  {
+   "strategy": "jev",
+   "n": 200,
+   "shown_wrong": 75,
+   "fixed_rows": 75,
+   "merged_people": 0,
+   "wrong_rows_after": 92,
+   "wrong_rate_after": 0.0204,
+   "app_after": {
+    "all": 0.7048,
+    "same": 0.825,
+    "reworded": 0.725,
+    "novel": 0.48,
+    "logged_shapes": 0.775,
+    "no_view": 10,
+    "view_but_wrong": 21
+   }
+  },
+  {
+   "strategy": "combined",
+   "n": 25,
+   "shown_wrong": 19,
+   "fixed_rows": 19,
+   "merged_people": 2,
+   "wrong_rows_after": 144,
+   "wrong_rate_after": 0.0319,
+   "app_after": {
+    "all": 0.6667,
+    "same": 0.775,
+    "reworded": 0.7,
+    "novel": 0.44,
+    "logged_shapes": 0.7375,
+    "no_view": 10,
+    "view_but_wrong": 25
+   }
+  },
+  {
+   "strategy": "combined",
+   "n": 50,
+   "shown_wrong": 31,
+   "fixed_rows": 31,
+   "merged_people": 2,
+   "wrong_rows_after": 134,
+   "wrong_rate_after": 0.0297,
+   "app_after": {
+    "all": 0.6667,
+    "same": 0.775,
+    "reworded": 0.7,
+    "novel": 0.44,
+    "logged_shapes": 0.7375,
+    "no_view": 10,
+    "view_but_wrong": 25
+   }
+  },
+  {
+   "strategy": "combined",
+   "n": 100,
+   "shown_wrong": 74,
+   "fixed_rows": 74,
+   "merged_people": 2,
+   "wrong_rows_after": 92,
+   "wrong_rate_after": 0.0204,
+   "app_after": {
+    "all": 0.6857,
+    "same": 0.8,
+    "reworded": 0.7,
+    "novel": 0.48,
+    "logged_shapes": 0.75,
+    "no_view": 10,
+    "view_but_wrong": 23
+   }
+  },
+  {
+   "strategy": "combined",
+   "n": 200,
+   "shown_wrong": 122,
+   "fixed_rows": 122,
+   "merged_people": 2,
+   "wrong_rows_after": 44,
+   "wrong_rate_after": 0.0097,
+   "app_after": {
+    "all": 0.7048,
+    "same": 0.825,
+    "reworded": 0.725,
+    "novel": 0.48,
+    "logged_shapes": 0.775,
+    "no_view": 10,
+    "view_but_wrong": 21
+   }
+  }
+ ]
+}

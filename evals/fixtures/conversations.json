@@ -1,0 +1,450 @@
+{
+  "id": "conversation-regressions-v1",
+  "description": "Entirely synthetic conversation replay: ten topics, repetition, isolation, forgetting and redelivery. Not a model-quality benchmark.",
+  "keep": {
+    "statements": 3,
+    "windows": 2
+  },
+  "steps": [
+    {
+      "type": "ingest",
+      "person": "sam",
+      "session": "sister",
+      "turns": [
+        {
+          "id": "sister",
+          "role": "person",
+          "text": "Marina is my sister. Marina lives in Valencia.",
+          "at": "2026-01-01T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "type": "ingest",
+      "person": "sam",
+      "session": "studio",
+      "turns": [
+        {
+          "id": "studio",
+          "role": "person",
+          "text": "My ceramic studio is named Copper Kiln.",
+          "at": "2026-01-02T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "type": "ingest",
+      "person": "sam",
+      "session": "dog",
+      "turns": [
+        {
+          "id": "dog",
+          "role": "person",
+          "text": "My dog Juniper takes insulin at seven each evening.",
+          "at": "2026-01-03T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "type": "ingest",
+      "person": "sam",
+      "session": "work",
+      "turns": [
+        {
+          "id": "work",
+          "role": "person",
+          "text": "Orion Robotics is my employer.",
+          "at": "2026-01-04T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "type": "ingest",
+      "person": "sam",
+      "session": "commute",
+      "turns": [
+        {
+          "id": "commute",
+          "role": "person",
+          "text": "I commute by bicycle along the river.",
+          "at": "2026-01-05T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "type": "ingest",
+      "person": "sam",
+      "session": "music",
+      "turns": [
+        {
+          "id": "music",
+          "role": "person",
+          "text": "I am learning the cello with teacher Petra.",
+          "at": "2026-01-06T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "type": "ingest",
+      "person": "sam",
+      "session": "dentist",
+      "turns": [
+        {
+          "id": "dentist",
+          "role": "person",
+          "text": "My dentist is Dr Solis at Cedar Dental.",
+          "at": "2026-01-07T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "type": "ingest",
+      "person": "sam",
+      "session": "tea",
+      "turns": [
+        {
+          "id": "tea",
+          "role": "person",
+          "text": "My favorite tea is toasted barley tea.",
+          "at": "2026-01-08T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "type": "ingest",
+      "person": "sam",
+      "session": "volunteer",
+      "turns": [
+        {
+          "id": "volunteer",
+          "role": "person",
+          "text": "On Sundays I volunteer at the owl rescue.",
+          "at": "2026-01-09T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "type": "ingest",
+      "person": "sam",
+      "session": "garden",
+      "turns": [
+        {
+          "id": "garden",
+          "role": "person",
+          "text": "My garden plot is number forty two.",
+          "at": "2026-01-10T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "type": "probe",
+      "id": "sister-recall",
+      "person": "sam",
+      "conversation": [
+        {
+          "id": "query-sister-recall",
+          "role": "person",
+          "text": "Where does my sister Marina live?",
+          "at": "2026-02-01T12:00:00Z"
+        }
+      ],
+      "expected": {
+        "sources": ["sister"],
+        "contains": ["Valencia"]
+      }
+    },
+    {
+      "type": "probe",
+      "id": "dog-recall",
+      "person": "sam",
+      "conversation": [
+        {
+          "id": "query-dog-recall",
+          "role": "person",
+          "text": "My dog Juniper takes insulin at seven each evening.",
+          "at": "2026-02-01T12:00:00Z"
+        }
+      ],
+      "expected": {
+        "sources": ["dog"],
+        "retold": true
+      }
+    },
+    {
+      "type": "probe",
+      "id": "work-recall",
+      "person": "sam",
+      "conversation": [
+        {
+          "id": "query-work-recall",
+          "role": "person",
+          "text": "Orion Robotics is my employer.",
+          "at": "2026-02-01T12:00:00Z"
+        }
+      ],
+      "expected": {
+        "sources": ["work"],
+        "retold": true
+      }
+    },
+    {
+      "type": "probe",
+      "id": "studio-recall",
+      "person": "sam",
+      "conversation": [
+        {
+          "id": "query-studio-recall",
+          "role": "person",
+          "text": "What is the name of my ceramic studio?",
+          "at": "2026-02-01T12:00:00Z"
+        }
+      ],
+      "expected": {
+        "sources": ["studio"],
+        "contains": ["Copper Kiln"]
+      }
+    },
+    {
+      "type": "probe",
+      "id": "music-recall",
+      "person": "sam",
+      "conversation": [
+        {
+          "id": "query-music-recall",
+          "role": "person",
+          "text": "Who teaches my cello lessons?",
+          "at": "2026-02-01T12:00:00Z"
+        }
+      ],
+      "expected": {
+        "sources": ["music"],
+        "contains": ["Petra"]
+      }
+    },
+    {
+      "type": "probe",
+      "id": "new-topic",
+      "person": "sam",
+      "conversation": [
+        {
+          "id": "query-new-topic",
+          "role": "person",
+          "text": "There is a lunar eclipse tonight.",
+          "at": "2026-02-01T12:00:00Z"
+        }
+      ],
+      "expected": {
+        "retold": false
+      }
+    },
+    {
+      "type": "probe",
+      "id": "before-future-ingest",
+      "person": "sam",
+      "conversation": [
+        {
+          "id": "query-before-future-ingest",
+          "role": "person",
+          "text": "I just bought a kayak called Seabird.",
+          "at": "2026-02-01T12:00:00Z"
+        }
+      ],
+      "expected": {
+        "absent": ["Seabird"],
+        "retold": false
+      }
+    },
+    {
+      "type": "probe",
+      "id": "empty-person",
+      "person": "stranger",
+      "conversation": [
+        {
+          "id": "query-empty-person",
+          "role": "person",
+          "text": "My dog Juniper takes insulin at seven each evening.",
+          "at": "2026-02-01T12:00:00Z"
+        }
+      ],
+      "expected": {
+        "empty": true,
+        "retold": false
+      }
+    },
+    {
+      "type": "ingest",
+      "person": "alex",
+      "session": "sister",
+      "turns": [
+        {
+          "id": "sister",
+          "role": "person",
+          "text": "Marina is my sister. Marina lives in Halifax.",
+          "at": "2026-01-12T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "type": "probe",
+      "id": "other-person",
+      "person": "alex",
+      "conversation": [
+        {
+          "id": "query-other-person",
+          "role": "person",
+          "text": "Where does my sister Marina live?",
+          "at": "2026-02-01T12:00:00Z"
+        }
+      ],
+      "expected": {
+        "sources": ["sister"],
+        "contains": ["Halifax"],
+        "absent": ["Valencia", "Juniper"]
+      }
+    },
+    {
+      "type": "probe",
+      "id": "original-person",
+      "person": "sam",
+      "conversation": [
+        {
+          "id": "query-original-person",
+          "role": "person",
+          "text": "Where does my sister Marina live?",
+          "at": "2026-02-01T12:00:00Z"
+        }
+      ],
+      "expected": {
+        "sources": ["sister"],
+        "contains": ["Valencia"],
+        "absent": ["Halifax"]
+      }
+    },
+    {
+      "type": "ingest",
+      "person": "sam",
+      "session": "dog-again",
+      "turns": [
+        {
+          "id": "dog-repeat",
+          "role": "person",
+          "text": "My dog Juniper takes insulin at seven every evening.",
+          "at": "2026-01-13T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "type": "probe",
+      "id": "repeated-wording",
+      "person": "sam",
+      "conversation": [
+        {
+          "id": "query-repeated-wording",
+          "role": "person",
+          "text": "My dog Juniper takes insulin at seven each evening.",
+          "at": "2026-02-01T12:00:00Z"
+        }
+      ],
+      "expected": {
+        "sources": ["dog", "dog-repeat"],
+        "retold": true
+      }
+    },
+    {
+      "type": "forget",
+      "person": "sam",
+      "session": "dog"
+    },
+    {
+      "type": "probe",
+      "id": "one-source-forgotten",
+      "person": "sam",
+      "conversation": [
+        {
+          "id": "query-one-source-forgotten",
+          "role": "person",
+          "text": "My dog Juniper takes insulin at seven each evening.",
+          "at": "2026-02-01T12:00:00Z"
+        }
+      ],
+      "expected": {
+        "sources": ["dog-repeat"],
+        "absentSources": ["dog"],
+        "retold": true
+      }
+    },
+    {
+      "type": "forget",
+      "person": "sam",
+      "session": "dog-again"
+    },
+    {
+      "type": "probe",
+      "id": "all-dog-sources-forgotten",
+      "person": "sam",
+      "conversation": [
+        {
+          "id": "query-all-dog-sources-forgotten",
+          "role": "person",
+          "text": "My dog Juniper takes insulin at seven each evening.",
+          "at": "2026-02-01T12:00:00Z"
+        }
+      ],
+      "expected": {
+        "absentSources": ["dog", "dog-repeat"],
+        "absent": ["Juniper", "insulin"],
+        "retold": false
+      }
+    },
+    {
+      "type": "ingest",
+      "person": "sam",
+      "session": "dog",
+      "turns": [
+        {
+          "id": "dog",
+          "role": "person",
+          "text": "My dog Juniper takes insulin at seven each evening.",
+          "at": "2026-01-03T12:00:00Z"
+        }
+      ]
+    },
+    {
+      "type": "probe",
+      "id": "forgotten-redelivery",
+      "person": "sam",
+      "conversation": [
+        {
+          "id": "query-forgotten-redelivery",
+          "role": "person",
+          "text": "My dog Juniper takes insulin at seven each evening.",
+          "at": "2026-02-01T12:00:00Z"
+        }
+      ],
+      "expected": {
+        "absentSources": ["dog", "dog-repeat"],
+        "absent": ["Juniper", "insulin"],
+        "retold": false
+      }
+    },
+    {
+      "type": "probe",
+      "id": "other-memory-survives",
+      "person": "sam",
+      "conversation": [
+        {
+          "id": "query-other-memory-survives",
+          "role": "person",
+          "text": "Orion Robotics is my employer.",
+          "at": "2026-02-01T12:00:00Z"
+        }
+      ],
+      "expected": {
+        "sources": ["work"],
+        "contains": ["Orion Robotics"],
+        "retold": true
+      }
+    }
+  ],
+  "synthetic": true
+}

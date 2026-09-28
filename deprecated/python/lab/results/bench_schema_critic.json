@@ -1,0 +1,38 @@
+{
+ "legacy2024__openai_gpt-4-turbo__alex_rivera": {
+  "tables": 15,
+  "pairs": 105,
+  "flagged": []
+ },
+ "legacy2024__openai_gpt-4-turbo__life_stream": {
+  "tables": 19,
+  "pairs": 171,
+  "flagged": [
+   [
+    "Activities",
+    "Events",
+    0.5
+   ]
+  ]
+ },
+ "legacy2024__openai_gpt-6-luna__life_stream": {
+  "tables": 17,
+  "pairs": 136,
+  "flagged": []
+ },
+ "v2__anthropic_claude-sonnet-5__life_stream": {
+  "tables": 13,
+  "pairs": 78,
+  "flagged": []
+ },
+ "v21jev__openai_gpt-6-luna__life_stream": {
+  "tables": 20,
+  "pairs": 190,
+  "flagged": []
+ },
+ "v21jev__openai_gpt-6-luna__alex_rivera": {
+  "tables": 15,
+  "pairs": 105,
+  "flagged": []
+ }
+}

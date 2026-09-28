@@ -1,0 +1,7199 @@
+{
+ "hybrid_r4": {
+  "rows": [
+   {
+    "id": "ho01",
+    "type": "semantic_current",
+    "question": "What is David Mokos's email?",
+    "gold": "david@nebula.ai",
+    "answer": "david@nebula.ai — 2025-10-02T11:48 {\"person\": \"David Mokos\", \"category\": \"email\", \"value\": \"david@nebula.ai\"}",
+    "score": 1.0,
+    "soft": 0.985,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 0.953,
+    "path": "deterministic"
+   },
+   {
+    "id": "ho02",
+    "type": "semantic_current",
+    "question": "Who is my landlord?",
+    "gold": "Raj Gupta (+1 415 555 0187)",
+    "answer": "Hi Adam, lease starts April 1, 2026. Rent $3,200/month due on the 1st, security deposit $4,800. Call me anytime: +1 415 555 0187. — Raj Gupta — 2026-03-20T16:12 {\"person\": \"Adam Zvada\", \"direction\": \"received\", \"sender_email\": \"raj.gupta@gmail.com\", \"recipient_email\": \"adam@nebula.ai\", \"subject\": \"Lease for 1450 Valencia St\", \"sent_at\": \"2026-03-20T16:12\", \"body\": \"Hi Adam, lease starts April 1, 2026. Rent $3,200/month due on the 1st, security deposit $4,80",
+    "score": 1.0,
+    "soft": 0.785,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 1.002,
+    "path": "deterministic"
+   },
+   {
+    "id": "ho03",
+    "type": "semantic_current",
+    "question": "Where does Ondra work?",
+    "gold": "Productboard",
+    "answer": "Productboard — 2025-11-02T17:16 {\"name\": \"Ondřej Král\", \"organization\": \"Productboard\"}",
+    "score": 1.0,
+    "soft": 0.955,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 0.999,
+    "path": "deterministic"
+   },
+   {
+    "id": "ho04",
+    "type": "semantic_history",
+    "question": "Where did Klára live in December 2025?",
+    "gold": "Berlin",
+    "answer": "Klára lived in Berlin in December 2025.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 9.532,
+    "path": "agent"
+   },
+   {
+    "id": "ho05",
+    "type": "semantic_history",
+    "question": "What was Eva to me before we got engaged?",
+    "gold": "My girlfriend",
+    "answer": "Eva was your girlfriend before you got engaged. She worked as an architect at Studio Kvadrat.",
+    "score": 1.0,
+    "soft": 0.79,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 14.358,
+    "path": "agent"
+   },
+   {
+    "id": "ho06",
+    "type": "semantic_history",
+    "question": "What was Tom's phone number in 2025?",
+    "gold": "+420 777 123 456 (he changed it on Feb 10, 2026)",
+    "answer": "+420 777 123 456",
+    "score": 1.0,
+    "soft": 0.95,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 8.113,
+    "path": "agent"
+   },
+   {
+    "id": "ho07",
+    "type": "aggregate",
+    "question": "How much did I spend on lunch in Prague in 2025?",
+    "gold": "64,729 CZK (227 lunches)",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "soft": 0.02,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 12.976,
+    "path": "agent"
+   },
+   {
+    "id": "ho08",
+    "type": "aggregate",
+    "question": "How many movies did I watch in 2025?",
+    "gold": "39",
+    "answer": "39",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 1.25,
+    "path": "deterministic"
+   },
+   {
+    "id": "ho09",
+    "type": "aggregate",
+    "question": "How many times did I go running in August 2026?",
+    "gold": "5",
+    "answer": "5",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 1.24,
+    "path": "deterministic"
+   },
+   {
+    "id": "ho10",
+    "type": "episodic_event",
+    "question": "What did I do on November 29, 2024?",
+    "gold": "Coffee at Doubleshot, lunch at Bistro Monk, climbing at Smíchoff with Tom, dinner at Maso a Kobliha with Tom (1,560 CZK), drinks with Tom at U Hrocha, ordered climbing shoes from Decathlon, Bolt home",
+    "answer": "You went climbing at Smíchoff on November 29, 2024.",
+    "score": 0.5,
+    "soft": 0.54,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 5.405,
+    "path": "agent"
+   },
+   {
+    "id": "ho11",
+    "type": "episodic_event",
+    "question": "Who did I have dinner with on August 5, 2026, and where?",
+    "gold": "David (David Mokos), at Zuni Café ($135.40)",
+    "answer": "You had dinner with Eva at Zuni Café.",
+    "score": 0.5,
+    "soft": 0.43,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 8.36,
+    "path": "agent"
+   },
+   {
+    "id": "ho12",
+    "type": "episodic_event",
+    "question": "What happened on February 20, 2026?",
+    "gold": "We closed the seed round: $3M led by Northwind Ventures (Sarah Kim); I also went climbing with Tom",
+    "answer": "On February 20, 2026, you went climbing, and Nebula’s seed round closed.",
+    "score": 0.5,
+    "soft": 0.58,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 9.639,
+    "path": "agent"
+   },
+   {
+    "id": "ho13",
+    "type": "episodic_time",
+    "question": "When did Nina Rossi start at Nebula?",
+    "gold": "March 1, 2026",
+    "answer": "2026-03-01 — 2026-03-01 {\"name\": \"Nina Rossi\", \"organization\": \"Nebula\", \"role\": \"engineer\", \"start_date\": \"2026-03-01\"}",
+    "score": 1.0,
+    "soft": 0.94,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 0.913,
+    "path": "deterministic"
+   },
+   {
+    "id": "ho14",
+    "type": "episodic_time",
+    "question": "When did I finish Project Hail Mary?",
+    "gold": "December 31, 2025",
+    "answer": "2025-12-31 — 2025-12-31T22:30 {\"person\": \"Adam Zvada\", \"title\": \"Project Hail Mary\", \"author\": \"Andy Weir\", \"status\": \"finished\", \"rating\": 5.0, \"date_finished\": \"2025-12-31\"}",
+    "score": 1.0,
+    "soft": 0.97,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 0.932,
+    "path": "deterministic"
+   },
+   {
+    "id": "ho15",
+    "type": "episodic_time",
+    "question": "When did Klára move to London?",
+    "gold": "June 2026 (I mentioned it on June 10, 2026)",
+    "answer": "2026-06-10 — 2026-06-10T20:01 {\"name\": \"Klára\", \"city\": \"London\", \"birthday\": \"12-02\", \"city_since\": \"2026-06-10\"}",
+    "score": 1.0,
+    "soft": 0.94,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 0.62,
+    "path": "deterministic"
+   },
+   {
+    "id": "ho16",
+    "type": "routine",
+    "question": "Which days do I usually buy groceries?",
+    "gold": "Wednesdays and Saturdays",
+    "answer": "You usually buy groceries on Wednesdays (128 purchases) and Saturdays (123).",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 5.633,
+    "path": "agent"
+   },
+   {
+    "id": "ho17",
+    "type": "routine",
+    "question": "Where did I usually get coffee in Prague?",
+    "gold": "A rotation of cafés, most often Café Savoy, EMA Espresso Bar and Kafe Francin (also Café Lounge, Doubleshot)",
+    "answer": "You most often got coffee at Café Savoy (107 visits), followed by Kafe Francin (101) and EMA Espresso Bar (100).",
+    "score": 0.5,
+    "soft": 0.71,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 5.08,
+    "path": "agent"
+   },
+   {
+    "id": "ho18",
+    "type": "routine",
+    "question": "How often do I go climbing?",
+    "gold": "About 1.6 times a week (Tuesdays and Fridays, sometimes Sundays)",
+    "answer": "You’ve gone climbing 194 times from April 9, 2024 through September 29, 2026—about 7 times a month, or 1.7 times a week.",
+    "score": 1.0,
+    "soft": 0.745,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 5.344,
+    "path": "agent"
+   },
+   {
+    "id": "ho19",
+    "type": "prospective",
+    "question": "Do I still need to cancel my Czech phone plan?",
+    "gold": "No: it was done on Apr 28, 2026",
+    "answer": "done — 2026-05-01 {\"person\": \"Adam Zvada\", \"category\": \"personal\", \"title\": \"Cancel Czech phone plan\", \"due_date\": \"2026-05-01\", \"status\": \"done\"}",
+    "score": 0.5,
+    "soft": 0.34,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 0.628,
+    "path": "deterministic"
+   },
+   {
+    "id": "ho20",
+    "type": "prospective",
+    "question": "When was my dentist appointment in San Francisco?",
+    "gold": "June 3, 2026 at 9:30, with Dr. Lee at Castro Dental",
+    "answer": "2026-06-03 — 2026-06-03 {\"person\": \"Adam Zvada\", \"category\": \"appointment\", \"date\": \"2026-06-03\", \"title\": \"Dentist appointment\", \"location\": \"Castro Dental, San Francisco\", \"status\": \"planned\", \"with_person_name\": \"Dr. Lee\", \"start_at\": \"2026-06-03T09:30\"}",
+    "score": 1.0,
+    "soft": 0.945,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 0.634,
+    "path": "deterministic"
+   },
+   {
+    "id": "ho21",
+    "type": "prospective",
+    "question": "Did I send the Q2 investor update?",
+    "gold": "Yes, on Jul 3, 2026",
+    "answer": "done — 2026-07-05 {\"person\": \"Adam Zvada\", \"category\": \"reminder\", \"title\": \"Send Q2 investor update\", \"due_date\": \"2026-07-05\", \"status\": \"done\"}",
+    "score": 0.5,
+    "soft": 0.385,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 0.605,
+    "path": "deterministic"
+   },
+   {
+    "id": "ho22",
+    "type": "preference",
+    "question": "Which movies did I rate 5/5?",
+    "gold": "Dune: Part Two, Flow, Hamnet, One Battle After Another, Past Lives, Perfect Days, Sentimental Value, The Wild Robot",
+    "answer": "You rated these movies 5/5: Sentimental Value, Past Lives, Flow, Dune: Part Two, The Wild Robot, Perfect Days, One Battle After Another, and Hamnet. (The database also has an entry titled “finished Shoe Dog.”)",
+    "score": 1.0,
+    "soft": 0.99,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 4.294,
+    "path": "agent"
+   },
+   {
+    "id": "ho23",
+    "type": "preference",
+    "question": "How did I like Sapiens?",
+    "gold": "3/5",
+    "answer": "You rated *Sapiens* 3/5.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 10.582,
+    "path": "agent"
+   },
+   {
+    "id": "ho24",
+    "type": "preference",
+    "question": "What did I think of Dune: Part Two?",
+    "gold": "Loved it: 5/5 (watched it three times)",
+    "answer": "You gave *Dune: Part Two* 5/5 on all three recorded viewings (August 24, 2024; August 26, 2024; and June 27, 2026).",
+    "score": 1.0,
+    "soft": 0.895,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 5.039,
+    "path": "agent"
+   },
+   {
+    "id": "ho25",
+    "type": "source",
+    "question": "What was the post-money valuation in the term sheet?",
+    "gold": "$15M",
+    "answer": "15000000.0 — 2026-02-20 {\"organization\": \"Nebula\", \"email\": \"Term sheet draft\", \"round_category\": \"seed\", \"investment_amount\": 3000000.0, \"currency\": \"USD\", \"post_money_valuation\": 15000000.0, \"valuation_currency\": \"USD\", \"liquidation_preference\": \"1x non-participating\", \"status\": \"closed\", \"closed_date\": \"2026-02-20\", \"le",
+    "score": 1.0,
+    "soft": 0.985,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 0.602,
+    "path": "deterministic"
+   },
+   {
+    "id": "ho26",
+    "type": "source",
+    "question": "What are the check-in and check-out dates of the Lisbon hotel?",
+    "gold": "Check-in May 22, check-out May 26, 2026 (Memmo Alfama)",
+    "answer": "Memmo Alfama Hotel, Lisbon. Check-in May 22, check-out May 26, 2026. 2 guests. Total $980.00.",
+    "score": 1.0,
+    "soft": 0.985,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 0.922,
+    "path": "deterministic"
+   },
+   {
+    "id": "ho27",
+    "type": "source",
+    "question": "What is my landlord's email address?",
+    "gold": "raj.gupta@gmail.com",
+    "answer": "raj.gupta@gmail.com — 2026-03-20T16:12 {\"person\": \"Adam Zvada\", \"direction\": \"received\", \"sender_email\": \"raj.gupta@gmail.com\", \"recipient_email\": \"adam@nebula.ai\", \"subject\": \"Lease for 1450 Valencia St\", \"sent_at\": \"2026-03-20T16:12\", \"body\": \"Hi Adam, lease starts April 1, 2026. Rent $3,200/month due on the 1st, security deposit $4,80",
+    "score": 1.0,
+    "soft": 0.97,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 0.623,
+    "path": "deterministic"
+   },
+   {
+    "id": "ho28",
+    "type": "period",
+    "question": "Which gym was I climbing at when Nina joined Nebula?",
+    "gold": "Smíchoff, in Prague",
+    "answer": "Mission Cliffs.",
+    "score": 0.0,
+    "soft": 0.0,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 11.073,
+    "path": "agent"
+   },
+   {
+    "id": "ho29",
+    "type": "period",
+    "question": "Where was I living when Oscar joined Nebula?",
+    "gold": "Prague (Jan 12, 2026)",
+    "answer": "You were living at 1450 Valencia St in San Francisco.",
+    "score": 0.0,
+    "soft": 0.025,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 9.558,
+    "path": "agent"
+   },
+   {
+    "id": "ho30",
+    "type": "period",
+    "question": "What was going on in my life in May 2026?",
+    "gold": "Any three of: Eva got the job at Gensler (May 4) and moved to SF (May 20); the Lisbon trip with Eva (May 22-26); booked the Lisbon flights and hotel (May 2-3); finished Dune (May 11); Priya introduced me to Mark Chen (May 12)",
+    "answer": "Cancel Czech phone plan; Plan Lisbon trip",
+    "score": 0.5,
+    "soft": 0.34,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 0.898,
+    "path": "deterministic"
+   },
+   {
+    "id": "ho31",
+    "type": "metamemory",
+    "question": "What's Klára's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 13.54,
+    "path": "agent"
+   },
+   {
+    "id": "ho32",
+    "type": "metamemory",
+    "question": "Where did Mark Chen work before Stripe?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 12.814,
+    "path": "agent"
+   },
+   {
+    "id": "ho33",
+    "type": "metamemory",
+    "question": "What is my passport number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 3.936,
+    "path": "agent"
+   },
+   {
+    "id": "ho34",
+    "type": "forgotten",
+    "question": "What's the number of the guy from Rohlik I met at a meetup?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 0.8,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 12.763,
+    "path": "agent"
+   },
+   {
+    "id": "ho35",
+    "type": "forgotten",
+    "question": "What is Marco's number again?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 0.86,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 11.817,
+    "path": "agent"
+   },
+   {
+    "id": "ho36",
+    "type": "forgotten",
+    "question": "Where does Jan Dvořák work?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 0.83,
+    "stores": [],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "wall_s": 12.549,
+    "path": "agent"
+   }
+  ],
+  "n": 36,
+  "accuracy": 81.9,
+  "nominal_cost": 0.04818,
+  "answer_cost": 0.0474,
+  "new_spend": 0.04814
+ },
+ "facts_only": {
+  "rows": [
+   {
+    "id": "ho01",
+    "type": "semantic_current",
+    "question": "What is David Mokos's email?",
+    "gold": "david@nebula.ai",
+    "answer": "David Mokos’s email is david@nebula.ai.",
+    "score": 1.0,
+    "soft": 0.99,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2868,
+    "answer_tokens_in": 1265,
+    "wall_s": 1.616,
+    "path": null
+   },
+   {
+    "id": "ho02",
+    "type": "semantic_current",
+    "question": "Who is my landlord?",
+    "gold": "Raj Gupta (+1 415 555 0187)",
+    "answer": "Your landlord is Raj Gupta.",
+    "score": 1.0,
+    "soft": 0.945,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1196,
+    "answer_tokens_in": 655,
+    "wall_s": 1.273,
+    "path": null
+   },
+   {
+    "id": "ho03",
+    "type": "semantic_current",
+    "question": "Where does Ondra work?",
+    "gold": "Productboard",
+    "answer": "Ondra works at Productboard.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2593,
+    "answer_tokens_in": 1154,
+    "wall_s": 1.12,
+    "path": null
+   },
+   {
+    "id": "ho04",
+    "type": "semantic_history",
+    "question": "Where did Klára live in December 2025?",
+    "gold": "Berlin",
+    "answer": "Klára lived in Berlin in December 2025; she moved to London on June 10, 2026.",
+    "score": 1.0,
+    "soft": 0.995,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1922,
+    "answer_tokens_in": 944,
+    "wall_s": 1.071,
+    "path": null
+   },
+   {
+    "id": "ho05",
+    "type": "semantic_history",
+    "question": "What was Eva to me before we got engaged?",
+    "gold": "My girlfriend",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "soft": 0.0,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2528,
+    "answer_tokens_in": 1109,
+    "wall_s": 1.482,
+    "path": null
+   },
+   {
+    "id": "ho06",
+    "type": "semantic_history",
+    "question": "What was Tom's phone number in 2025?",
+    "gold": "+420 777 123 456 (he changed it on Feb 10, 2026)",
+    "answer": "Tom’s phone number in 2025 was +420 777 123 456.",
+    "score": 1.0,
+    "soft": 0.975,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1996,
+    "answer_tokens_in": 944,
+    "wall_s": 1.075,
+    "path": null
+   },
+   {
+    "id": "ho07",
+    "type": "aggregate",
+    "question": "How much did I spend on lunch in Prague in 2025?",
+    "gold": "64,729 CZK (227 lunches)",
+    "answer": "You spent **1,225 CZK** on lunch in Prague in 2025 (310 + 265 + 265 + 385 CZK).",
+    "score": 0.0,
+    "soft": 0.02,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2736,
+    "answer_tokens_in": 1222,
+    "wall_s": 1.598,
+    "path": null
+   },
+   {
+    "id": "ho08",
+    "type": "aggregate",
+    "question": "How many movies did I watch in 2025?",
+    "gold": "39",
+    "answer": "You watched 39 movies in 2025.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1254,
+    "answer_tokens_in": 746,
+    "wall_s": 1.335,
+    "path": null
+   },
+   {
+    "id": "ho09",
+    "type": "aggregate",
+    "question": "How many times did I go running in August 2026?",
+    "gold": "5",
+    "answer": "You went running 5 times in August 2026.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2285,
+    "answer_tokens_in": 1029,
+    "wall_s": 1.17,
+    "path": null
+   },
+   {
+    "id": "ho10",
+    "type": "episodic_event",
+    "question": "What did I do on November 29, 2024?",
+    "gold": "Coffee at Doubleshot, lunch at Bistro Monk, climbing at Smíchoff with Tom, dinner at Maso a Kobliha with Tom (1,560 CZK), drinks with Tom at U Hrocha, ordered climbing shoes from Decathlon, Bolt home",
+    "answer": "You recorded 7 hours of sleep on November 29, 2024.",
+    "score": 0.0,
+    "soft": 0.005,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1415,
+    "answer_tokens_in": 799,
+    "wall_s": 1.048,
+    "path": null
+   },
+   {
+    "id": "ho11",
+    "type": "episodic_event",
+    "question": "Who did I have dinner with on August 5, 2026, and where?",
+    "gold": "David (David Mokos), at Zuni Café ($135.40)",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "soft": 0.0,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2455,
+    "answer_tokens_in": 1132,
+    "wall_s": 1.273,
+    "path": null
+   },
+   {
+    "id": "ho12",
+    "type": "episodic_event",
+    "question": "What happened on February 20, 2026?",
+    "gold": "We closed the seed round: $3M led by Northwind Ventures (Sarah Kim); I also went climbing with Tom",
+    "answer": "You recorded 7 hours of sleep on February 20, 2026.",
+    "score": 0.0,
+    "soft": 0.0,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1751,
+    "answer_tokens_in": 906,
+    "wall_s": 3.108,
+    "path": null
+   },
+   {
+    "id": "ho13",
+    "type": "episodic_time",
+    "question": "When did Nina Rossi start at Nebula?",
+    "gold": "March 1, 2026",
+    "answer": "Nina Rossi started at Nebula on March 1, 2026.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2846,
+    "answer_tokens_in": 1265,
+    "wall_s": 1.501,
+    "path": null
+   },
+   {
+    "id": "ho14",
+    "type": "episodic_time",
+    "question": "When did I finish Project Hail Mary?",
+    "gold": "December 31, 2025",
+    "answer": "You finished *Project Hail Mary* on December 31, 2025.",
+    "score": 1.0,
+    "soft": 0.94,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2083,
+    "answer_tokens_in": 998,
+    "wall_s": 1.191,
+    "path": null
+   },
+   {
+    "id": "ho15",
+    "type": "episodic_time",
+    "question": "When did Klára move to London?",
+    "gold": "June 2026 (I mentioned it on June 10, 2026)",
+    "answer": "Klára moved to London on June 10, 2026.",
+    "score": 1.0,
+    "soft": 0.99,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1919,
+    "answer_tokens_in": 937,
+    "wall_s": 0.81,
+    "path": null
+   },
+   {
+    "id": "ho16",
+    "type": "routine",
+    "question": "Which days do I usually buy groceries?",
+    "gold": "Wednesdays and Saturdays",
+    "answer": "You usually buy groceries on Wednesdays and Saturdays.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2068,
+    "answer_tokens_in": 1056,
+    "wall_s": 2.379,
+    "path": null
+   },
+   {
+    "id": "ho17",
+    "type": "routine",
+    "question": "Where did I usually get coffee in Prague?",
+    "gold": "A rotation of cafés, most often Café Savoy, EMA Espresso Bar and Kafe Francin (also Café Lounge, Doubleshot)",
+    "answer": "You usually got coffee at Onesip Coffee in Prague.",
+    "score": 0.0,
+    "soft": 0.005,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2982,
+    "answer_tokens_in": 1256,
+    "wall_s": 1.121,
+    "path": null
+   },
+   {
+    "id": "ho18",
+    "type": "routine",
+    "question": "How often do I go climbing?",
+    "gold": "About 1.6 times a week (Tuesdays and Fridays, sometimes Sundays)",
+    "answer": "I don’t know how often you go climbing.",
+    "score": 0.0,
+    "soft": 0.0,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1804,
+    "answer_tokens_in": 883,
+    "wall_s": 2.634,
+    "path": null
+   },
+   {
+    "id": "ho19",
+    "type": "prospective",
+    "question": "Do I still need to cancel my Czech phone plan?",
+    "gold": "No: it was done on Apr 28, 2026",
+    "answer": "No—you already canceled your Czech phone plan; the task was marked done on April 28, 2026.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1583,
+    "answer_tokens_in": 797,
+    "wall_s": 1.048,
+    "path": null
+   },
+   {
+    "id": "ho20",
+    "type": "prospective",
+    "question": "When was my dentist appointment in San Francisco?",
+    "gold": "June 3, 2026 at 9:30, with Dr. Lee at Castro Dental",
+    "answer": "Your dentist appointment in San Francisco was scheduled for June 3, 2026, at 9:30 a.m. with Dr. Lee at Castro Dental.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 3189,
+    "answer_tokens_in": 1326,
+    "wall_s": 1.049,
+    "path": null
+   },
+   {
+    "id": "ho21",
+    "type": "prospective",
+    "question": "Did I send the Q2 investor update?",
+    "gold": "Yes, on Jul 3, 2026",
+    "answer": "Yes—the Q2 investor update is marked done (due July 5, 2026).",
+    "score": 0.5,
+    "soft": 0.72,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1642,
+    "answer_tokens_in": 842,
+    "wall_s": 0.871,
+    "path": null
+   },
+   {
+    "id": "ho22",
+    "type": "preference",
+    "question": "Which movies did I rate 5/5?",
+    "gold": "Dune: Part Two, Flow, Hamnet, One Battle After Another, Past Lives, Perfect Days, Sentimental Value, The Wild Robot",
+    "answer": "The movies you rated 5/5 were *Sentimental Value*, *Past Lives*, *Flow*, *Dune: Part Two*, *The Wild Robot*, *Perfect Days*, *One Battle After Another*, and *Hamnet*.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1410,
+    "answer_tokens_in": 780,
+    "wall_s": 4.891,
+    "path": null
+   },
+   {
+    "id": "ho23",
+    "type": "preference",
+    "question": "How did I like Sapiens?",
+    "gold": "3/5",
+    "answer": "You gave Sapiens a rating of 3.0 after finishing it on February 18, 2026.",
+    "score": 1.0,
+    "soft": 0.91,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 469,
+    "answer_tokens_in": 426,
+    "wall_s": 1.163,
+    "path": null
+   },
+   {
+    "id": "ho24",
+    "type": "preference",
+    "question": "What did I think of Dune: Part Two?",
+    "gold": "Loved it: 5/5 (watched it three times)",
+    "answer": "You rated *Dune: Part Two* 5/5 on each recorded viewing: August 24 and 26, 2024, and June 27, 2026.",
+    "score": 1.0,
+    "soft": 0.75,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1600,
+    "answer_tokens_in": 864,
+    "wall_s": 1.178,
+    "path": null
+   },
+   {
+    "id": "ho25",
+    "type": "source",
+    "question": "What was the post-money valuation in the term sheet?",
+    "gold": "$15M",
+    "answer": "The term sheet’s post-money valuation was **$15 million USD**.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 3077,
+    "answer_tokens_in": 1285,
+    "wall_s": 1.172,
+    "path": null
+   },
+   {
+    "id": "ho26",
+    "type": "source",
+    "question": "What are the check-in and check-out dates of the Lisbon hotel?",
+    "gold": "Check-in May 22, check-out May 26, 2026 (Memmo Alfama)",
+    "answer": "Check in May 22, 2026, and check out May 26, 2026.",
+    "score": 1.0,
+    "soft": 0.935,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2723,
+    "answer_tokens_in": 1222,
+    "wall_s": 1.257,
+    "path": null
+   },
+   {
+    "id": "ho27",
+    "type": "source",
+    "question": "What is my landlord's email address?",
+    "gold": "raj.gupta@gmail.com",
+    "answer": "Your landlord Raj Gupta’s email address is raj.gupta@gmail.com.",
+    "score": 1.0,
+    "soft": 0.99,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2535,
+    "answer_tokens_in": 1099,
+    "wall_s": 1.178,
+    "path": null
+   },
+   {
+    "id": "ho28",
+    "type": "period",
+    "question": "Which gym was I climbing at when Nina joined Nebula?",
+    "gold": "Smíchoff, in Prague",
+    "answer": "I don’t know. The evidence shows you had a Smíchoff climbing membership through March 2026, but doesn’t say that was the gym you were climbing at when Nina joined Nebula.",
+    "score": 0.0,
+    "soft": 0.06,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2735,
+    "answer_tokens_in": 1221,
+    "wall_s": 1.155,
+    "path": null
+   },
+   {
+    "id": "ho29",
+    "type": "period",
+    "question": "Where was I living when Oscar joined Nebula?",
+    "gold": "Prague (Jan 12, 2026)",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "soft": 0.04,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1493,
+    "answer_tokens_in": 762,
+    "wall_s": 1.425,
+    "path": null
+   },
+   {
+    "id": "ho30",
+    "type": "period",
+    "question": "What was going on in my life in May 2026?",
+    "gold": "Any three of: Eva got the job at Gensler (May 4) and moved to SF (May 20); the Lisbon trip with Eva (May 22-26); booked the Lisbon flights and hotel (May 2-3); finished Dune (May 11); Priya introduced me to Mark Chen (May 12)",
+    "answer": "In May 2026, you were preparing for and then took a Lisbon trip with Lucie: you booked Memmo Alfama for May 22–26 ($980) and flights for two from SFO to Lisbon ($1,340); the trip was later described as amazing. You also had plans to cancel your Czech phone plan and plan the Lisbon trip.",
+    "score": 0.0,
+    "soft": 0.245,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 3192,
+    "answer_tokens_in": 1369,
+    "wall_s": 2.174,
+    "path": null
+   },
+   {
+    "id": "ho31",
+    "type": "metamemory",
+    "question": "What's Klára's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1127,
+    "answer_tokens_in": 655,
+    "wall_s": 0.609,
+    "path": null
+   },
+   {
+    "id": "ho32",
+    "type": "metamemory",
+    "question": "Where did Mark Chen work before Stripe?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1317,
+    "answer_tokens_in": 679,
+    "wall_s": 0.636,
+    "path": null
+   },
+   {
+    "id": "ho33",
+    "type": "metamemory",
+    "question": "What is my passport number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 716,
+    "answer_tokens_in": 500,
+    "wall_s": 0.97,
+    "path": null
+   },
+   {
+    "id": "ho34",
+    "type": "forgotten",
+    "question": "What's the number of the guy from Rohlik I met at a meetup?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 0.8,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1825,
+    "answer_tokens_in": 897,
+    "wall_s": 1.348,
+    "path": null
+   },
+   {
+    "id": "ho35",
+    "type": "forgotten",
+    "question": "What is Marco's number again?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 0.86,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 644,
+    "answer_tokens_in": 471,
+    "wall_s": 0.829,
+    "path": null
+   },
+   {
+    "id": "ho36",
+    "type": "forgotten",
+    "question": "Where does Jan Dvořák work?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 0.83,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1981,
+    "answer_tokens_in": 924,
+    "wall_s": 0.793,
+    "path": null
+   }
+  ],
+  "n": 36,
+  "accuracy": 70.8,
+  "nominal_cost": 0.02009,
+  "answer_cost": 0.01934,
+  "new_spend": 0.00486
+ },
+ "log_rag": {
+  "rows": [
+   {
+    "id": "ho01",
+    "type": "semantic_current",
+    "question": "What is David Mokos's email?",
+    "gold": "david@nebula.ai",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "soft": 0.01,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 611,
+    "answer_tokens_in": 519,
+    "wall_s": 0.968,
+    "path": null
+   },
+   {
+    "id": "ho02",
+    "type": "semantic_current",
+    "question": "Who is my landlord?",
+    "gold": "Raj Gupta (+1 415 555 0187)",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "soft": 0.0,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 725,
+    "answer_tokens_in": 533,
+    "wall_s": 1.07,
+    "path": null
+   },
+   {
+    "id": "ho03",
+    "type": "semantic_current",
+    "question": "Where does Ondra work?",
+    "gold": "Productboard",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "soft": 0.0,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 681,
+    "answer_tokens_in": 576,
+    "wall_s": 0.622,
+    "path": null
+   },
+   {
+    "id": "ho04",
+    "type": "semantic_history",
+    "question": "Where did Klára live in December 2025?",
+    "gold": "Berlin",
+    "answer": "Klára lived in Berlin in December 2025.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 674,
+    "answer_tokens_in": 549,
+    "wall_s": 1.262,
+    "path": null
+   },
+   {
+    "id": "ho05",
+    "type": "semantic_history",
+    "question": "What was Eva to me before we got engaged?",
+    "gold": "My girlfriend",
+    "answer": "I don’t know. The evidence says Eva moved to San Francisco for a job and that you later got engaged, but it doesn’t say what she was to you before then.",
+    "score": 0.0,
+    "soft": 0.08,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 649,
+    "answer_tokens_in": 533,
+    "wall_s": 1.567,
+    "path": null
+   },
+   {
+    "id": "ho06",
+    "type": "semantic_history",
+    "question": "What was Tom's phone number in 2025?",
+    "gold": "+420 777 123 456 (he changed it on Feb 10, 2026)",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "soft": 0.01,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 600,
+    "answer_tokens_in": 515,
+    "wall_s": 0.708,
+    "path": null
+   },
+   {
+    "id": "ho07",
+    "type": "aggregate",
+    "question": "How much did I spend on lunch in Prague in 2025?",
+    "gold": "64,729 CZK (227 lunches)",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "soft": 0.02,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 600,
+    "answer_tokens_in": 518,
+    "wall_s": 1.0,
+    "path": null
+   },
+   {
+    "id": "ho08",
+    "type": "aggregate",
+    "question": "How many movies did I watch in 2025?",
+    "gold": "39",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "soft": 0.0,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 600,
+    "answer_tokens_in": 515,
+    "wall_s": 1.064,
+    "path": null
+   },
+   {
+    "id": "ho09",
+    "type": "aggregate",
+    "question": "How many times did I go running in August 2026?",
+    "gold": "5",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "soft": 0.01,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 600,
+    "answer_tokens_in": 517,
+    "wall_s": 0.76,
+    "path": null
+   },
+   {
+    "id": "ho10",
+    "type": "episodic_event",
+    "question": "What did I do on November 29, 2024?",
+    "gold": "Coffee at Doubleshot, lunch at Bistro Monk, climbing at Smíchoff with Tom, dinner at Maso a Kobliha with Tom (1,560 CZK), drinks with Tom at U Hrocha, ordered climbing shoes from Decathlon, Bolt home",
+    "answer": "On November 29, 2024, you logged a weight of 74.1 kg and 7 hours of sleep. You also had coffee at Doubleshot (110 CZK) and dinner at Maso a Kobliha with Tom (1,560 Kč).",
+    "score": 0.5,
+    "soft": 0.49,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 959,
+    "answer_tokens_in": 666,
+    "wall_s": 1.355,
+    "path": null
+   },
+   {
+    "id": "ho11",
+    "type": "episodic_event",
+    "question": "Who did I have dinner with on August 5, 2026, and where?",
+    "gold": "David (David Mokos), at Zuni Café ($135.40)",
+    "answer": "You had dinner with David at Zuni Café on August 5, 2026.",
+    "score": 1.0,
+    "soft": 0.905,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1044,
+    "answer_tokens_in": 695,
+    "wall_s": 1.17,
+    "path": null
+   },
+   {
+    "id": "ho12",
+    "type": "episodic_event",
+    "question": "What happened on February 20, 2026?",
+    "gold": "We closed the seed round: $3M led by Northwind Ventures (Sarah Kim); I also went climbing with Tom",
+    "answer": "On February 20, 2026, you slept 7 hours, spent 95 CZK at Café Lounge and 189 CZK at Kantýna, closed a $3M seed round led by Northwind Ventures (Sarah Kim), and went climbing at Smíchoff with Tom. You also mentioned the previous day’s 229 CZK lunch at Lokál.",
+    "score": 1.0,
+    "soft": 0.735,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1013,
+    "answer_tokens_in": 677,
+    "wall_s": 1.761,
+    "path": null
+   },
+   {
+    "id": "ho13",
+    "type": "episodic_time",
+    "question": "When did Nina Rossi start at Nebula?",
+    "gold": "March 1, 2026",
+    "answer": "Nina Rossi started at Nebula on March 1, 2026.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 752,
+    "answer_tokens_in": 550,
+    "wall_s": 1.101,
+    "path": null
+   },
+   {
+    "id": "ho14",
+    "type": "episodic_time",
+    "question": "When did I finish Project Hail Mary?",
+    "gold": "December 31, 2025",
+    "answer": "You finished Project Hail Mary on December 31, 2025.",
+    "score": 1.0,
+    "soft": 0.95,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 610,
+    "answer_tokens_in": 540,
+    "wall_s": 0.855,
+    "path": null
+   },
+   {
+    "id": "ho15",
+    "type": "episodic_time",
+    "question": "When did Klára move to London?",
+    "gold": "June 2026 (I mentioned it on June 10, 2026)",
+    "answer": "Klára moved from Berlin to London on June 10, 2026, for a new job.",
+    "score": 1.0,
+    "soft": 0.94,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 652,
+    "answer_tokens_in": 527,
+    "wall_s": 0.972,
+    "path": null
+   },
+   {
+    "id": "ho16",
+    "type": "routine",
+    "question": "Which days do I usually buy groceries?",
+    "gold": "Wednesdays and Saturdays",
+    "answer": "I don’t know. The grocery entries are dated Saturday, Wednesday, Saturday, Wednesday, and Wednesday, which isn’t enough to establish a usual day.",
+    "score": 0.0,
+    "soft": 0.04,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 633,
+    "answer_tokens_in": 541,
+    "wall_s": 1.614,
+    "path": null
+   },
+   {
+    "id": "ho17",
+    "type": "routine",
+    "question": "Where did I usually get coffee in Prague?",
+    "gold": "A rotation of cafés, most often Café Savoy, EMA Espresso Bar and Kafe Francin (also Café Lounge, Doubleshot)",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "soft": 0.0,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 540,
+    "answer_tokens_in": 501,
+    "wall_s": 0.909,
+    "path": null
+   },
+   {
+    "id": "ho18",
+    "type": "routine",
+    "question": "How often do I go climbing?",
+    "gold": "About 1.6 times a week (Tuesdays and Fridays, sometimes Sundays)",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "soft": 0.0,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 652,
+    "answer_tokens_in": 521,
+    "wall_s": 1.174,
+    "path": null
+   },
+   {
+    "id": "ho19",
+    "type": "prospective",
+    "question": "Do I still need to cancel my Czech phone plan?",
+    "gold": "No: it was done on Apr 28, 2026",
+    "answer": "No—you canceled your Czech phone plan on April 28, 2026.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 653,
+    "answer_tokens_in": 528,
+    "wall_s": 1.15,
+    "path": null
+   },
+   {
+    "id": "ho20",
+    "type": "prospective",
+    "question": "When was my dentist appointment in San Francisco?",
+    "gold": "June 3, 2026 at 9:30, with Dr. Lee at Castro Dental",
+    "answer": "Your dentist appointment in San Francisco was June 3, 2026, at 9:30 with Dr. Lee at Castro Dental.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1339,
+    "answer_tokens_in": 811,
+    "wall_s": 1.157,
+    "path": null
+   },
+   {
+    "id": "ho21",
+    "type": "prospective",
+    "question": "Did I send the Q2 investor update?",
+    "gold": "Yes, on Jul 3, 2026",
+    "answer": "Yes—you marked the Q2 investor update as done on July 3, 2026.",
+    "score": 1.0,
+    "soft": 0.99,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 621,
+    "answer_tokens_in": 520,
+    "wall_s": 1.162,
+    "path": null
+   },
+   {
+    "id": "ho22",
+    "type": "preference",
+    "question": "Which movies did I rate 5/5?",
+    "gold": "Dune: Part Two, Flow, Hamnet, One Battle After Another, Past Lives, Perfect Days, Sentimental Value, The Wild Robot",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "soft": 0.0,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 600,
+    "answer_tokens_in": 514,
+    "wall_s": 0.752,
+    "path": null
+   },
+   {
+    "id": "ho23",
+    "type": "preference",
+    "question": "How did I like Sapiens?",
+    "gold": "3/5",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "soft": 0.02,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 600,
+    "answer_tokens_in": 512,
+    "wall_s": 1.536,
+    "path": null
+   },
+   {
+    "id": "ho24",
+    "type": "preference",
+    "question": "What did I think of Dune: Part Two?",
+    "gold": "Loved it: 5/5 (watched it three times)",
+    "answer": "You rated *Dune: Part Two* 5/5. You logged that rating in August 2024 and again in June 2026.",
+    "score": 0.5,
+    "soft": 0.56,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 649,
+    "answer_tokens_in": 543,
+    "wall_s": 1.086,
+    "path": null
+   },
+   {
+    "id": "ho25",
+    "type": "source",
+    "question": "What was the post-money valuation in the term sheet?",
+    "gold": "$15M",
+    "answer": "The post-money valuation was $15 million.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 870,
+    "answer_tokens_in": 587,
+    "wall_s": 0.988,
+    "path": null
+   },
+   {
+    "id": "ho26",
+    "type": "source",
+    "question": "What are the check-in and check-out dates of the Lisbon hotel?",
+    "gold": "Check-in May 22, check-out May 26, 2026 (Memmo Alfama)",
+    "answer": "Check-in: May 22, 2026. Check-out: May 26, 2026.",
+    "score": 1.0,
+    "soft": 0.965,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 923,
+    "answer_tokens_in": 627,
+    "wall_s": 1.62,
+    "path": null
+   },
+   {
+    "id": "ho27",
+    "type": "source",
+    "question": "What is my landlord's email address?",
+    "gold": "raj.gupta@gmail.com",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "soft": 0.01,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 631,
+    "answer_tokens_in": 502,
+    "wall_s": 0.615,
+    "path": null
+   },
+   {
+    "id": "ho28",
+    "type": "period",
+    "question": "Which gym was I climbing at when Nina joined Nebula?",
+    "gold": "Smíchoff, in Prague",
+    "answer": "Mission Cliffs.",
+    "score": 0.0,
+    "soft": 0.0,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 821,
+    "answer_tokens_in": 570,
+    "wall_s": 0.795,
+    "path": null
+   },
+   {
+    "id": "ho29",
+    "type": "period",
+    "question": "Where was I living when Oscar joined Nebula?",
+    "gold": "Prague (Jan 12, 2026)",
+    "answer": "You were living in Prague when Oscar joined Nebula on January 12, 2026.",
+    "score": 1.0,
+    "soft": 0.99,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1089,
+    "answer_tokens_in": 685,
+    "wall_s": 0.79,
+    "path": null
+   },
+   {
+    "id": "ho30",
+    "type": "period",
+    "question": "What was going on in my life in May 2026?",
+    "gold": "Any three of: Eva got the job at Gensler (May 4) and moved to SF (May 20); the Lisbon trip with Eva (May 22-26); booked the Lisbon flights and hotel (May 2-3); finished Dune (May 11); Priya introduced me to Mark Chen (May 12)",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "soft": 0.01,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 600,
+    "answer_tokens_in": 493,
+    "wall_s": 0.995,
+    "path": null
+   },
+   {
+    "id": "ho31",
+    "type": "metamemory",
+    "question": "What's Klára's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 600,
+    "answer_tokens_in": 511,
+    "wall_s": 1.231,
+    "path": null
+   },
+   {
+    "id": "ho32",
+    "type": "metamemory",
+    "question": "Where did Mark Chen work before Stripe?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 716,
+    "answer_tokens_in": 536,
+    "wall_s": 1.63,
+    "path": null
+   },
+   {
+    "id": "ho33",
+    "type": "metamemory",
+    "question": "What is my passport number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 598,
+    "answer_tokens_in": 513,
+    "wall_s": 0.858,
+    "path": null
+   },
+   {
+    "id": "ho34",
+    "type": "forgotten",
+    "question": "What's the number of the guy from Rohlik I met at a meetup?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 0.8,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 657,
+    "answer_tokens_in": 536,
+    "wall_s": 1.002,
+    "path": null
+   },
+   {
+    "id": "ho35",
+    "type": "forgotten",
+    "question": "What is Marco's number again?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 0.86,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 600,
+    "answer_tokens_in": 511,
+    "wall_s": 0.916,
+    "path": null
+   },
+   {
+    "id": "ho36",
+    "type": "forgotten",
+    "question": "Where does Jan Dvořák work?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 0.83,
+    "stores": [
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 652,
+    "answer_tokens_in": 562,
+    "wall_s": 0.878,
+    "path": null
+   }
+  ],
+  "n": 36,
+  "accuracy": 52.8,
+  "nominal_cost": 0.00309,
+  "answer_cost": 0.00234,
+  "new_spend": 0.00289
+ },
+ "facts_log": {
+  "rows": [
+   {
+    "id": "ho01",
+    "type": "semantic_current",
+    "question": "What is David Mokos's email?",
+    "gold": "david@nebula.ai",
+    "answer": "David Mokos's email is david@nebula.ai.",
+    "score": 1.0,
+    "soft": 0.99,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 3479,
+    "answer_tokens_in": 1515,
+    "wall_s": 1.502,
+    "path": null
+   },
+   {
+    "id": "ho02",
+    "type": "semantic_current",
+    "question": "Who is my landlord?",
+    "gold": "Raj Gupta (+1 415 555 0187)",
+    "answer": "Your landlord is Raj Gupta.",
+    "score": 1.0,
+    "soft": 0.945,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1921,
+    "answer_tokens_in": 923,
+    "wall_s": 0.798,
+    "path": null
+   },
+   {
+    "id": "ho03",
+    "type": "semantic_current",
+    "question": "Where does Ondra work?",
+    "gold": "Productboard",
+    "answer": "Ondra (Ondřej Král) works at Productboard.",
+    "score": 1.0,
+    "soft": 0.995,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 3274,
+    "answer_tokens_in": 1463,
+    "wall_s": 0.992,
+    "path": null
+   },
+   {
+    "id": "ho04",
+    "type": "semantic_history",
+    "question": "Where did Klára live in December 2025?",
+    "gold": "Berlin",
+    "answer": "Klára lived in Berlin in December 2025.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2596,
+    "answer_tokens_in": 1221,
+    "wall_s": 0.76,
+    "path": null
+   },
+   {
+    "id": "ho05",
+    "type": "semantic_history",
+    "question": "What was Eva to me before we got engaged?",
+    "gold": "My girlfriend",
+    "answer": "I don’t know. The evidence says you and Eva got engaged on July 12, 2026, but it doesn’t say what she was to you before then.",
+    "score": 0.0,
+    "soft": 0.04,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 3177,
+    "answer_tokens_in": 1371,
+    "wall_s": 1.248,
+    "path": null
+   },
+   {
+    "id": "ho06",
+    "type": "semantic_history",
+    "question": "What was Tom's phone number in 2025?",
+    "gold": "+420 777 123 456 (he changed it on Feb 10, 2026)",
+    "answer": "Tom’s phone number in 2025 was +420 777 123 456.",
+    "score": 1.0,
+    "soft": 0.975,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2596,
+    "answer_tokens_in": 1187,
+    "wall_s": 1.081,
+    "path": null
+   },
+   {
+    "id": "ho07",
+    "type": "aggregate",
+    "question": "How much did I spend on lunch in Prague in 2025?",
+    "gold": "64,729 CZK (227 lunches)",
+    "answer": "You spent **1,225 CZK** on four recorded lunches in January 2025.",
+    "score": 0.0,
+    "soft": 0.045,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 3336,
+    "answer_tokens_in": 1465,
+    "wall_s": 2.74,
+    "path": null
+   },
+   {
+    "id": "ho08",
+    "type": "aggregate",
+    "question": "How many movies did I watch in 2025?",
+    "gold": "39",
+    "answer": "You watched 39 movies in 2025.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1854,
+    "answer_tokens_in": 989,
+    "wall_s": 1.154,
+    "path": null
+   },
+   {
+    "id": "ho09",
+    "type": "aggregate",
+    "question": "How many times did I go running in August 2026?",
+    "gold": "5",
+    "answer": "You went running 5 times in August 2026.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2885,
+    "answer_tokens_in": 1272,
+    "wall_s": 1.049,
+    "path": null
+   },
+   {
+    "id": "ho10",
+    "type": "episodic_event",
+    "question": "What did I do on November 29, 2024?",
+    "gold": "Coffee at Doubleshot, lunch at Bistro Monk, climbing at Smíchoff with Tom, dinner at Maso a Kobliha with Tom (1,560 CZK), drinks with Tom at U Hrocha, ordered climbing shoes from Decathlon, Bolt home",
+    "answer": "On November 29, 2024, you recorded weighing 74.1 kg and sleeping 7 hours. You had coffee at Doubleshot for 110 CZK and dinner at Maso a Kobliha with Tom for 1,560 Kč; drinks with Tom at U Hrocha for 270 CZK were logged just after midnight.",
+    "score": 0.5,
+    "soft": 0.495,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2374,
+    "answer_tokens_in": 1191,
+    "wall_s": 1.308,
+    "path": null
+   },
+   {
+    "id": "ho11",
+    "type": "episodic_event",
+    "question": "Who did I have dinner with on August 5, 2026, and where?",
+    "gold": "David (David Mokos), at Zuni Café ($135.40)",
+    "answer": "You had dinner with David at Zuni Café on August 5, 2026.",
+    "score": 1.0,
+    "soft": 0.905,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 3499,
+    "answer_tokens_in": 1548,
+    "wall_s": 1.056,
+    "path": null
+   },
+   {
+    "id": "ho12",
+    "type": "episodic_event",
+    "question": "What happened on February 20, 2026?",
+    "gold": "We closed the seed round: $3M led by Northwind Ventures (Sarah Kim); I also went climbing with Tom",
+    "answer": "On February 20, 2026, Adam closed a $3 million seed round led by Northwind Ventures (Sarah Kim). He logged 7 hours of sleep, coffee at Café Lounge for 95 CZK, lunch at Kantýna for 189 CZK, and climbing at Smíchoff with Tom.",
+    "score": 1.0,
+    "soft": 0.775,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2764,
+    "answer_tokens_in": 1311,
+    "wall_s": 1.513,
+    "path": null
+   },
+   {
+    "id": "ho13",
+    "type": "episodic_time",
+    "question": "When did Nina Rossi start at Nebula?",
+    "gold": "March 1, 2026",
+    "answer": "Nina Rossi started at Nebula on March 1, 2026.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 3598,
+    "answer_tokens_in": 1545,
+    "wall_s": 0.947,
+    "path": null
+   },
+   {
+    "id": "ho14",
+    "type": "episodic_time",
+    "question": "When did I finish Project Hail Mary?",
+    "gold": "December 31, 2025",
+    "answer": "You finished *Project Hail Mary* on December 31, 2025.",
+    "score": 1.0,
+    "soft": 0.94,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2693,
+    "answer_tokens_in": 1268,
+    "wall_s": 0.92,
+    "path": null
+   },
+   {
+    "id": "ho15",
+    "type": "episodic_time",
+    "question": "When did Klára move to London?",
+    "gold": "June 2026 (I mentioned it on June 10, 2026)",
+    "answer": "Klára moved from Berlin to London on June 10, 2026.",
+    "score": 1.0,
+    "soft": 0.935,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2571,
+    "answer_tokens_in": 1195,
+    "wall_s": 1.102,
+    "path": null
+   },
+   {
+    "id": "ho16",
+    "type": "routine",
+    "question": "Which days do I usually buy groceries?",
+    "gold": "Wednesdays and Saturdays",
+    "answer": "You usually buy groceries on Wednesdays and Saturdays.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2701,
+    "answer_tokens_in": 1328,
+    "wall_s": 2.632,
+    "path": null
+   },
+   {
+    "id": "ho17",
+    "type": "routine",
+    "question": "Where did I usually get coffee in Prague?",
+    "gold": "A rotation of cafés, most often Café Savoy, EMA Espresso Bar and Kafe Francin (also Café Lounge, Doubleshot)",
+    "answer": "You usually got coffee at Onesip Coffee in Prague.",
+    "score": 0.0,
+    "soft": 0.005,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 3522,
+    "answer_tokens_in": 1487,
+    "wall_s": 1.119,
+    "path": null
+   },
+   {
+    "id": "ho18",
+    "type": "routine",
+    "question": "How often do I go climbing?",
+    "gold": "About 1.6 times a week (Tuesdays and Fridays, sometimes Sundays)",
+    "answer": "I don’t know how often you go climbing; the records show 205 climbing entries, but they don’t establish a regular frequency.",
+    "score": 0.0,
+    "soft": 0.015,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2456,
+    "answer_tokens_in": 1136,
+    "wall_s": 1.225,
+    "path": null
+   },
+   {
+    "id": "ho19",
+    "type": "prospective",
+    "question": "Do I still need to cancel my Czech phone plan?",
+    "gold": "No: it was done on Apr 28, 2026",
+    "answer": "No—you marked canceling your Czech phone plan as done on April 28, 2026.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2236,
+    "answer_tokens_in": 1053,
+    "wall_s": 1.204,
+    "path": null
+   },
+   {
+    "id": "ho20",
+    "type": "prospective",
+    "question": "When was my dentist appointment in San Francisco?",
+    "gold": "June 3, 2026 at 9:30, with Dr. Lee at Castro Dental",
+    "answer": "Your dentist appointment in San Francisco was scheduled for June 3, 2026, at 9:30 a.m. with Dr. Lee at Castro Dental.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 4528,
+    "answer_tokens_in": 1867,
+    "wall_s": 1.449,
+    "path": null
+   },
+   {
+    "id": "ho21",
+    "type": "prospective",
+    "question": "Did I send the Q2 investor update?",
+    "gold": "Yes, on Jul 3, 2026",
+    "answer": "Yes. You marked the Q2 investor update done on July 3, 2026.",
+    "score": 1.0,
+    "soft": 0.95,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2263,
+    "answer_tokens_in": 1092,
+    "wall_s": 1.098,
+    "path": null
+   },
+   {
+    "id": "ho22",
+    "type": "preference",
+    "question": "Which movies did I rate 5/5?",
+    "gold": "Dune: Part Two, Flow, Hamnet, One Battle After Another, Past Lives, Perfect Days, Sentimental Value, The Wild Robot",
+    "answer": "I don’t know the complete list: the database’s 5/5 results include **Sentimental Value, Past Lives, Flow, Dune: Part Two, The Wild Robot, Perfect Days, One Battle After Another,** and **Hamnet**, but its results are incomplete and also include *Shoe Dog*, which isn’t a movie.",
+    "score": 1.0,
+    "soft": 0.66,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2010,
+    "answer_tokens_in": 1023,
+    "wall_s": 1.435,
+    "path": null
+   },
+   {
+    "id": "ho23",
+    "type": "preference",
+    "question": "How did I like Sapiens?",
+    "gold": "3/5",
+    "answer": "You rated *Sapiens* 3 out of 5 after finishing it on February 18, 2026.",
+    "score": 1.0,
+    "soft": 0.92,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1069,
+    "answer_tokens_in": 669,
+    "wall_s": 1.416,
+    "path": null
+   },
+   {
+    "id": "ho24",
+    "type": "preference",
+    "question": "What did I think of Dune: Part Two?",
+    "gold": "Loved it: 5/5 (watched it three times)",
+    "answer": "You rated *Dune: Part Two* 5/5 each time you watched it—on August 24 and 26, 2024, and again on June 27, 2026.",
+    "score": 1.0,
+    "soft": 0.745,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2249,
+    "answer_tokens_in": 1135,
+    "wall_s": 1.097,
+    "path": null
+   },
+   {
+    "id": "ho25",
+    "type": "source",
+    "question": "What was the post-money valuation in the term sheet?",
+    "gold": "$15M",
+    "answer": "The term sheet listed a post-money valuation of **$15 million**.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 3947,
+    "answer_tokens_in": 1600,
+    "wall_s": 0.952,
+    "path": null
+   },
+   {
+    "id": "ho26",
+    "type": "source",
+    "question": "What are the check-in and check-out dates of the Lisbon hotel?",
+    "gold": "Check-in May 22, check-out May 26, 2026 (Memmo Alfama)",
+    "answer": "Check-in is May 22, 2026, and check-out is May 26, 2026.",
+    "score": 1.0,
+    "soft": 0.955,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 3646,
+    "answer_tokens_in": 1574,
+    "wall_s": 1.099,
+    "path": null
+   },
+   {
+    "id": "ho27",
+    "type": "source",
+    "question": "What is my landlord's email address?",
+    "gold": "raj.gupta@gmail.com",
+    "answer": "Your landlord’s email address is raj.gupta@gmail.com.",
+    "score": 1.0,
+    "soft": 0.98,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 3166,
+    "answer_tokens_in": 1332,
+    "wall_s": 1.469,
+    "path": null
+   },
+   {
+    "id": "ho28",
+    "type": "period",
+    "question": "Which gym was I climbing at when Nina joined Nebula?",
+    "gold": "Smíchoff, in Prague",
+    "answer": "Mission Cliffs.",
+    "score": 0.0,
+    "soft": 0.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 3556,
+    "answer_tokens_in": 1518,
+    "wall_s": 1.024,
+    "path": null
+   },
+   {
+    "id": "ho29",
+    "type": "period",
+    "question": "Where was I living when Oscar joined Nebula?",
+    "gold": "Prague (Jan 12, 2026)",
+    "answer": "You were living in Prague when Oscar joined Nebula on January 12, 2026.",
+    "score": 1.0,
+    "soft": 0.99,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2582,
+    "answer_tokens_in": 1176,
+    "wall_s": 0.968,
+    "path": null
+   },
+   {
+    "id": "ho30",
+    "type": "period",
+    "question": "What was going on in my life in May 2026?",
+    "gold": "Any three of: Eva got the job at Gensler (May 4) and moved to SF (May 20); the Lisbon trip with Eva (May 22-26); booked the Lisbon flights and hotel (May 2-3); finished Dune (May 11); Priya introduced me to Mark Chen (May 12)",
+    "answer": "In May 2026, you planned and took a Lisbon trip with Lucie: you flew from SFO and stayed at the Memmo Alfama Hotel May 22–26. You also had tasks to cancel your Czech phone plan and plan the Lisbon trip.",
+    "score": 0.5,
+    "soft": 0.26,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 3792,
+    "answer_tokens_in": 1588,
+    "wall_s": 1.574,
+    "path": null
+   },
+   {
+    "id": "ho31",
+    "type": "metamemory",
+    "question": "What's Klára's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1727,
+    "answer_tokens_in": 898,
+    "wall_s": 0.716,
+    "path": null
+   },
+   {
+    "id": "ho32",
+    "type": "metamemory",
+    "question": "Where did Mark Chen work before Stripe?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2033,
+    "answer_tokens_in": 946,
+    "wall_s": 0.837,
+    "path": null
+   },
+   {
+    "id": "ho33",
+    "type": "metamemory",
+    "question": "What is my passport number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1314,
+    "answer_tokens_in": 747,
+    "wall_s": 1.008,
+    "path": null
+   },
+   {
+    "id": "ho34",
+    "type": "forgotten",
+    "question": "What's the number of the guy from Rohlik I met at a meetup?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 0.8,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2482,
+    "answer_tokens_in": 1157,
+    "wall_s": 0.976,
+    "path": null
+   },
+   {
+    "id": "ho35",
+    "type": "forgotten",
+    "question": "What is Marco's number again?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 0.86,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1244,
+    "answer_tokens_in": 715,
+    "wall_s": 0.842,
+    "path": null
+   },
+   {
+    "id": "ho36",
+    "type": "forgotten",
+    "question": "Where does Jan Dvořák work?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 0.83,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2633,
+    "answer_tokens_in": 1216,
+    "wall_s": 0.667,
+    "path": null
+   }
+  ],
+  "n": 36,
+  "accuracy": 83.3,
+  "nominal_cost": 0.02092,
+  "answer_cost": 0.02016,
+  "new_spend": 0.00541
+ },
+ "brain_all": {
+  "rows": [
+   {
+    "id": "ho01",
+    "type": "semantic_current",
+    "question": "What is David Mokos's email?",
+    "gold": "david@nebula.ai",
+    "answer": "David Mokos’s email is david@nebula.ai.",
+    "score": 1.0,
+    "soft": 0.99,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 12678,
+    "answer_tokens_in": 4537,
+    "wall_s": 1.095,
+    "path": null
+   },
+   {
+    "id": "ho02",
+    "type": "semantic_current",
+    "question": "Who is my landlord?",
+    "gold": "Raj Gupta (+1 415 555 0187)",
+    "answer": "Your landlord is Raj Gupta.",
+    "score": 1.0,
+    "soft": 0.945,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 8748,
+    "answer_tokens_in": 3156,
+    "wall_s": 1.217,
+    "path": null
+   },
+   {
+    "id": "ho03",
+    "type": "semantic_current",
+    "question": "Where does Ondra work?",
+    "gold": "Productboard",
+    "answer": "Ondra (Ondřej Král) works at Productboard.",
+    "score": 1.0,
+    "soft": 0.995,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 11140,
+    "answer_tokens_in": 4073,
+    "wall_s": 1.333,
+    "path": null
+   },
+   {
+    "id": "ho04",
+    "type": "semantic_history",
+    "question": "Where did Klára live in December 2025?",
+    "gold": "Berlin",
+    "answer": "Klára lived in Berlin in December 2025.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 12648,
+    "answer_tokens_in": 4419,
+    "wall_s": 1.391,
+    "path": null
+   },
+   {
+    "id": "ho05",
+    "type": "semantic_history",
+    "question": "What was Eva to me before we got engaged?",
+    "gold": "My girlfriend",
+    "answer": "Eva was your girlfriend before you got engaged on July 12, 2026.",
+    "score": 1.0,
+    "soft": 0.775,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 11645,
+    "answer_tokens_in": 4138,
+    "wall_s": 1.721,
+    "path": null
+   },
+   {
+    "id": "ho06",
+    "type": "semantic_history",
+    "question": "What was Tom's phone number in 2025?",
+    "gold": "+420 777 123 456 (he changed it on Feb 10, 2026)",
+    "answer": "Tom’s phone number in 2025 was +420 777 123 456.",
+    "score": 1.0,
+    "soft": 0.975,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 12803,
+    "answer_tokens_in": 4332,
+    "wall_s": 0.886,
+    "path": null
+   },
+   {
+    "id": "ho07",
+    "type": "aggregate",
+    "question": "How much did I spend on lunch in Prague in 2025?",
+    "gold": "64,729 CZK (227 lunches)",
+    "answer": "You spent **1,225 CZK** on the recorded Prague lunches in 2025.",
+    "score": 0.0,
+    "soft": 0.01,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 12874,
+    "answer_tokens_in": 4498,
+    "wall_s": 2.299,
+    "path": null
+   },
+   {
+    "id": "ho08",
+    "type": "aggregate",
+    "question": "How many movies did I watch in 2025?",
+    "gold": "39",
+    "answer": "You watched 39 movies in 2025.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 10372,
+    "answer_tokens_in": 3986,
+    "wall_s": 1.286,
+    "path": null
+   },
+   {
+    "id": "ho09",
+    "type": "aggregate",
+    "question": "How many times did I go running in August 2026?",
+    "gold": "5",
+    "answer": "You went running 5 times in August 2026.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 12041,
+    "answer_tokens_in": 4403,
+    "wall_s": 0.859,
+    "path": null
+   },
+   {
+    "id": "ho10",
+    "type": "episodic_event",
+    "question": "What did I do on November 29, 2024?",
+    "gold": "Coffee at Doubleshot, lunch at Bistro Monk, climbing at Smíchoff with Tom, dinner at Maso a Kobliha with Tom (1,560 CZK), drinks with Tom at U Hrocha, ordered climbing shoes from Decathlon, Bolt home",
+    "answer": "On November 29, 2024, you slept 7 hours, weighed 74.1 kg, had coffee at Doubleshot for 110 CZK, and had dinner with Tom at Maso a Kobliha (1,560 Kč) followed by drinks at U Hrocha (270 CZK). You also logged the previous day’s lunch at Kantýna and flat white at Můj šálek kávy.",
+    "score": 0.5,
+    "soft": 0.465,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 12219,
+    "answer_tokens_in": 4595,
+    "wall_s": 1.94,
+    "path": null
+   },
+   {
+    "id": "ho11",
+    "type": "episodic_event",
+    "question": "Who did I have dinner with on August 5, 2026, and where?",
+    "gold": "David (David Mokos), at Zuni Café ($135.40)",
+    "answer": "You had dinner with David at Zuni Café on August 5, 2026.",
+    "score": 1.0,
+    "soft": 0.905,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 14085,
+    "answer_tokens_in": 4836,
+    "wall_s": 1.023,
+    "path": null
+   },
+   {
+    "id": "ho12",
+    "type": "episodic_event",
+    "question": "What happened on February 20, 2026?",
+    "gold": "We closed the seed round: $3M led by Northwind Ventures (Sarah Kim); I also went climbing with Tom",
+    "answer": "On February 20, you slept 7 hours, had coffee at Café Lounge (95 CZK) and lunch at Kantýna (189 CZK), and climbed at Smíchoff with Tom. You announced that Nebula’s $3 million seed round had closed, led by Northwind Ventures (Sarah Kim); you also had drinks with Dave at Vinograf for 390 Kč that night.",
+    "score": 1.0,
+    "soft": 0.87,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 13685,
+    "answer_tokens_in": 4752,
+    "wall_s": 1.925,
+    "path": null
+   },
+   {
+    "id": "ho13",
+    "type": "episodic_time",
+    "question": "When did Nina Rossi start at Nebula?",
+    "gold": "March 1, 2026",
+    "answer": "Nina Rossi started at Nebula on March 1, 2026.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 14385,
+    "answer_tokens_in": 4493,
+    "wall_s": 1.157,
+    "path": null
+   },
+   {
+    "id": "ho14",
+    "type": "episodic_time",
+    "question": "When did I finish Project Hail Mary?",
+    "gold": "December 31, 2025",
+    "answer": "You finished Project Hail Mary on December 31, 2025.",
+    "score": 1.0,
+    "soft": 0.95,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 8134,
+    "answer_tokens_in": 3088,
+    "wall_s": 0.985,
+    "path": null
+   },
+   {
+    "id": "ho15",
+    "type": "episodic_time",
+    "question": "When did Klára move to London?",
+    "gold": "June 2026 (I mentioned it on June 10, 2026)",
+    "answer": "Klára moved to London on June 10, 2026.",
+    "score": 1.0,
+    "soft": 0.99,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 11834,
+    "answer_tokens_in": 4047,
+    "wall_s": 0.768,
+    "path": null
+   },
+   {
+    "id": "ho16",
+    "type": "routine",
+    "question": "Which days do I usually buy groceries?",
+    "gold": "Wednesdays and Saturdays",
+    "answer": "You usually buy groceries on Wednesdays and Saturdays—about 48–49% of the time on Wednesdays and 45–46% on Saturdays.",
+    "score": 1.0,
+    "soft": 0.965,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 9416,
+    "answer_tokens_in": 3530,
+    "wall_s": 1.044,
+    "path": null
+   },
+   {
+    "id": "ho17",
+    "type": "routine",
+    "question": "Where did I usually get coffee in Prague?",
+    "gold": "A rotation of cafés, most often Café Savoy, EMA Espresso Bar and Kafe Francin (also Café Lounge, Doubleshot)",
+    "answer": "You usually got coffee at **Café Savoy, Kafe Francin, and EMA Espresso Bar** in Prague; each was among your most frequent coffee spots.",
+    "score": 0.5,
+    "soft": 0.67,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 11946,
+    "answer_tokens_in": 4272,
+    "wall_s": 1.225,
+    "path": null
+   },
+   {
+    "id": "ho18",
+    "type": "routine",
+    "question": "How often do I go climbing?",
+    "gold": "About 1.6 times a week (Tuesdays and Fridays, sometimes Sundays)",
+    "answer": "You go climbing about 1.6 times per week—roughly once or twice weekly. This has stayed consistent from Prague to San Francisco.",
+    "score": 0.5,
+    "soft": 0.68,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 9889,
+    "answer_tokens_in": 3579,
+    "wall_s": 1.4,
+    "path": null
+   },
+   {
+    "id": "ho19",
+    "type": "prospective",
+    "question": "Do I still need to cancel my Czech phone plan?",
+    "gold": "No: it was done on Apr 28, 2026",
+    "answer": "No—you canceled it on April 28, 2026, so the reminder is done.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 12081,
+    "answer_tokens_in": 4325,
+    "wall_s": 1.118,
+    "path": null
+   },
+   {
+    "id": "ho20",
+    "type": "prospective",
+    "question": "When was my dentist appointment in San Francisco?",
+    "gold": "June 3, 2026 at 9:30, with Dr. Lee at Castro Dental",
+    "answer": "Your dentist appointment at Castro Dental in San Francisco was June 3, 2026, at 9:30 a.m. with Dr. Lee.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 14496,
+    "answer_tokens_in": 5126,
+    "wall_s": 1.054,
+    "path": null
+   },
+   {
+    "id": "ho21",
+    "type": "prospective",
+    "question": "Did I send the Q2 investor update?",
+    "gold": "Yes, on Jul 3, 2026",
+    "answer": "Yes—you sent the Q2 investor update on July 3, 2026.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 9611,
+    "answer_tokens_in": 3623,
+    "wall_s": 1.269,
+    "path": null
+   },
+   {
+    "id": "ho22",
+    "type": "preference",
+    "question": "Which movies did I rate 5/5?",
+    "gold": "Dune: Part Two, Flow, Hamnet, One Battle After Another, Past Lives, Perfect Days, Sentimental Value, The Wild Robot",
+    "answer": "The 5/5 movies listed are **Sentimental Value, Past Lives, Flow, Dune: Part Two, The Wild Robot, Perfect Days, One Battle After Another, and Hamnet**.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 9049,
+    "answer_tokens_in": 3372,
+    "wall_s": 1.046,
+    "path": null
+   },
+   {
+    "id": "ho23",
+    "type": "preference",
+    "question": "How did I like Sapiens?",
+    "gold": "3/5",
+    "answer": "You rated *Sapiens* 3/5 after finishing it on February 18, 2026.",
+    "score": 1.0,
+    "soft": 0.9,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 5174,
+    "answer_tokens_in": 2033,
+    "wall_s": 1.87,
+    "path": null
+   },
+   {
+    "id": "ho24",
+    "type": "preference",
+    "question": "What did I think of Dune: Part Two?",
+    "gold": "Loved it: 5/5 (watched it three times)",
+    "answer": "You rated *Dune: Part Two* 5/5 on August 24 and 26, 2024, and again on June 27, 2026.",
+    "score": 1.0,
+    "soft": 0.79,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 8650,
+    "answer_tokens_in": 3281,
+    "wall_s": 1.101,
+    "path": null
+   },
+   {
+    "id": "ho25",
+    "type": "source",
+    "question": "What was the post-money valuation in the term sheet?",
+    "gold": "$15M",
+    "answer": "The term sheet set Nebula’s post-money valuation at **$15 million USD**.",
+    "score": 1.0,
+    "soft": 0.985,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 13019,
+    "answer_tokens_in": 4373,
+    "wall_s": 1.144,
+    "path": null
+   },
+   {
+    "id": "ho26",
+    "type": "source",
+    "question": "What are the check-in and check-out dates of the Lisbon hotel?",
+    "gold": "Check-in May 22, check-out May 26, 2026 (Memmo Alfama)",
+    "answer": "Check-in was May 22, 2026, and check-out was May 26, 2026.",
+    "score": 1.0,
+    "soft": 0.945,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 13258,
+    "answer_tokens_in": 4601,
+    "wall_s": 1.491,
+    "path": null
+   },
+   {
+    "id": "ho27",
+    "type": "source",
+    "question": "What is my landlord's email address?",
+    "gold": "raj.gupta@gmail.com",
+    "answer": "Your landlord’s email address is raj.gupta@gmail.com.",
+    "score": 1.0,
+    "soft": 0.98,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 9244,
+    "answer_tokens_in": 3327,
+    "wall_s": 1.266,
+    "path": null
+   },
+   {
+    "id": "ho28",
+    "type": "period",
+    "question": "Which gym was I climbing at when Nina joined Nebula?",
+    "gold": "Smíchoff, in Prague",
+    "answer": "You were climbing at Smíchoff when Nina joined Nebula on March 1, 2026.",
+    "score": 1.0,
+    "soft": 0.815,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 14227,
+    "answer_tokens_in": 4703,
+    "wall_s": 1.232,
+    "path": null
+   },
+   {
+    "id": "ho29",
+    "type": "period",
+    "question": "Where was I living when Oscar joined Nebula?",
+    "gold": "Prague (Jan 12, 2026)",
+    "answer": "You were living in Prague when Oscar joined Nebula on January 12, 2026.",
+    "score": 1.0,
+    "soft": 0.99,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 12866,
+    "answer_tokens_in": 4142,
+    "wall_s": 1.377,
+    "path": null
+   },
+   {
+    "id": "ho30",
+    "type": "period",
+    "question": "What was going on in my life in May 2026?",
+    "gold": "Any three of: Eva got the job at Gensler (May 4) and moved to SF (May 20); the Lisbon trip with Eva (May 22-26); booked the Lisbon flights and hotel (May 2-3); finished Dune (May 11); Priya introduced me to Mark Chen (May 12)",
+    "answer": "May 2026 was a big transition: you were settling into your new San Francisco home after moving there on April 1, and Eva got a job at Gensler and planned to move to SF on May 20. You planned and took a Lisbon trip with Lucie from May 22–26, staying at Memmo Alfama; you also finished canceling your Czech phone plan and rated *Dune* 5/5 and *Bugonia* 4/5.",
+    "score": 0.5,
+    "soft": 0.375,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 13380,
+    "answer_tokens_in": 4612,
+    "wall_s": 1.524,
+    "path": null
+   },
+   {
+    "id": "ho31",
+    "type": "metamemory",
+    "question": "What's Klára's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 7354,
+    "answer_tokens_in": 2756,
+    "wall_s": 0.962,
+    "path": null
+   },
+   {
+    "id": "ho32",
+    "type": "metamemory",
+    "question": "Where did Mark Chen work before Stripe?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 10073,
+    "answer_tokens_in": 3531,
+    "wall_s": 1.078,
+    "path": null
+   },
+   {
+    "id": "ho33",
+    "type": "metamemory",
+    "question": "What is my passport number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 7485,
+    "answer_tokens_in": 2842,
+    "wall_s": 1.059,
+    "path": null
+   },
+   {
+    "id": "ho34",
+    "type": "forgotten",
+    "question": "What's the number of the guy from Rohlik I met at a meetup?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 0.8,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 11566,
+    "answer_tokens_in": 4246,
+    "wall_s": 0.9,
+    "path": null
+   },
+   {
+    "id": "ho35",
+    "type": "forgotten",
+    "question": "What is Marco's number again?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 0.86,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 6490,
+    "answer_tokens_in": 2512,
+    "wall_s": 0.629,
+    "path": null
+   },
+   {
+    "id": "ho36",
+    "type": "forgotten",
+    "question": "Where does Jan Dvořák work?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 0.83,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 10547,
+    "answer_tokens_in": 3809,
+    "wall_s": 1.021,
+    "path": null
+   }
+  ],
+  "n": 36,
+  "accuracy": 91.7,
+  "nominal_cost": 0.03058,
+  "answer_cost": 0.02982,
+  "new_spend": 0.01507
+ },
+ "brain_jev": {
+  "rows": [
+   {
+    "id": "ho01",
+    "type": "semantic_current",
+    "question": "What is David Mokos's email?",
+    "gold": "david@nebula.ai",
+    "answer": "David Mokos’s email is david@nebula.ai.",
+    "score": 1.0,
+    "soft": 0.99,
+    "stores": [
+     "facts"
+    ],
+    "route_p": {
+     "facts": 0.76,
+     "log": 0.38,
+     "episodes": 0.17,
+     "routines": 0.05,
+     "intentions": 0.1,
+     "preferences": 0.05,
+     "periods": 0.13
+    },
+    "route_latency_s": 0.2940080165863037,
+    "evidence_chars": 2868,
+    "answer_tokens_in": 1265,
+    "wall_s": 0.315,
+    "path": null
+   },
+   {
+    "id": "ho02",
+    "type": "semantic_current",
+    "question": "Who is my landlord?",
+    "gold": "Raj Gupta (+1 415 555 0187)",
+    "answer": "Your landlord is Raj Gupta.",
+    "score": 1.0,
+    "soft": 0.945,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.67,
+     "log": 0.51,
+     "episodes": 0.38,
+     "routines": 0.15,
+     "intentions": 0.22,
+     "preferences": 0.07,
+     "periods": 0.46
+    },
+    "route_latency_s": 0.2548637390136719,
+    "evidence_chars": 1921,
+    "answer_tokens_in": 923,
+    "wall_s": 0.281,
+    "path": null
+   },
+   {
+    "id": "ho03",
+    "type": "semantic_current",
+    "question": "Where does Ondra work?",
+    "gold": "Productboard",
+    "answer": "Ondra (Ondřej Král) works at Productboard.",
+    "score": 1.0,
+    "soft": 0.995,
+    "stores": [
+     "facts",
+     "periods",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.84,
+     "log": 0.53,
+     "episodes": 0.42,
+     "routines": 0.2,
+     "intentions": 0.17,
+     "preferences": 0.07,
+     "periods": 0.57
+    },
+    "route_latency_s": 0.32535386085510254,
+    "evidence_chars": 5900,
+    "answer_tokens_in": 2229,
+    "wall_s": 1.211,
+    "path": null
+   },
+   {
+    "id": "ho04",
+    "type": "semantic_history",
+    "question": "Where did Klára live in December 2025?",
+    "gold": "Berlin",
+    "answer": "Klára lived in Berlin in December 2025. On December 2, Adam noted that she lived there; she moved to London in June 2026.",
+    "score": 1.0,
+    "soft": 0.995,
+    "stores": [
+     "periods",
+     "facts",
+     "episodes"
+    ],
+    "route_p": {
+     "facts": 0.53,
+     "log": 0.35,
+     "episodes": 0.51,
+     "routines": 0.17,
+     "intentions": 0.11,
+     "preferences": 0.05,
+     "periods": 0.86
+    },
+    "route_latency_s": 0.3328711986541748,
+    "evidence_chars": 8818,
+    "answer_tokens_in": 3235,
+    "wall_s": 1.534,
+    "path": null
+   },
+   {
+    "id": "ho05",
+    "type": "semantic_history",
+    "question": "What was Eva to me before we got engaged?",
+    "gold": "My girlfriend",
+    "answer": "I don’t know. The evidence shows you were engaged to Eva by July 12, 2026, but doesn’t say what she was to you before that.",
+    "score": 0.0,
+    "soft": 0.05,
+    "stores": [
+     "periods",
+     "log",
+     "episodes"
+    ],
+    "route_p": {
+     "facts": 0.26,
+     "log": 0.6,
+     "episodes": 0.56,
+     "routines": 0.19,
+     "intentions": 0.12,
+     "preferences": 0.11,
+     "periods": 0.63
+    },
+    "route_latency_s": 0.29810476303100586,
+    "evidence_chars": 7049,
+    "answer_tokens_in": 2603,
+    "wall_s": 1.377,
+    "path": null
+   },
+   {
+    "id": "ho06",
+    "type": "semantic_history",
+    "question": "What was Tom's phone number in 2025?",
+    "gold": "+420 777 123 456 (he changed it on Feb 10, 2026)",
+    "answer": "Tom’s phone number in 2025 was +420 777 123 456.",
+    "score": 1.0,
+    "soft": 0.975,
+    "stores": [
+     "facts"
+    ],
+    "route_p": {
+     "facts": 0.73,
+     "log": 0.42,
+     "episodes": 0.22,
+     "routines": 0.05,
+     "intentions": 0.11,
+     "preferences": 0.04,
+     "periods": 0.17
+    },
+    "route_latency_s": 0.25618791580200195,
+    "evidence_chars": 1996,
+    "answer_tokens_in": 944,
+    "wall_s": 0.292,
+    "path": null
+   },
+   {
+    "id": "ho07",
+    "type": "aggregate",
+    "question": "How much did I spend on lunch in Prague in 2025?",
+    "gold": "64,729 CZK (227 lunches)",
+    "answer": "You spent **2,254 CZK** on lunch in Prague in 2025, based on the recorded lunch expenses.",
+    "score": 0.0,
+    "soft": 0.01,
+    "stores": [
+     "facts",
+     "episodes"
+    ],
+    "route_p": {
+     "facts": 0.73,
+     "log": 0.49,
+     "episodes": 0.52,
+     "routines": 0.18,
+     "intentions": 0.08,
+     "preferences": 0.05,
+     "periods": 0.39
+    },
+    "route_latency_s": 0.34641504287719727,
+    "evidence_chars": 4931,
+    "answer_tokens_in": 2011,
+    "wall_s": 3.674,
+    "path": null
+   },
+   {
+    "id": "ho08",
+    "type": "aggregate",
+    "question": "How many movies did I watch in 2025?",
+    "gold": "39",
+    "answer": "You watched 39 movies in 2025.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "periods",
+     "episodes"
+    ],
+    "route_p": {
+     "facts": 0.82,
+     "log": 0.45,
+     "episodes": 0.58,
+     "routines": 0.13,
+     "intentions": 0.07,
+     "preferences": 0.06,
+     "periods": 0.6
+    },
+    "route_latency_s": 0.330413818359375,
+    "evidence_chars": 6635,
+    "answer_tokens_in": 2635,
+    "wall_s": 1.244,
+    "path": null
+   },
+   {
+    "id": "ho09",
+    "type": "aggregate",
+    "question": "How many times did I go running in August 2026?",
+    "gold": "5",
+    "answer": "You went running 5 times in August 2026.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "episodes",
+     "facts",
+     "periods"
+    ],
+    "route_p": {
+     "facts": 0.74,
+     "log": 0.42,
+     "episodes": 0.78,
+     "routines": 0.22,
+     "intentions": 0.13,
+     "preferences": 0.03,
+     "periods": 0.63
+    },
+    "route_latency_s": 0.2544822692871094,
+    "evidence_chars": 7925,
+    "answer_tokens_in": 2904,
+    "wall_s": 0.978,
+    "path": null
+   },
+   {
+    "id": "ho10",
+    "type": "episodic_event",
+    "question": "What did I do on November 29, 2024?",
+    "gold": "Coffee at Doubleshot, lunch at Bistro Monk, climbing at Smíchoff with Tom, dinner at Maso a Kobliha with Tom (1,560 CZK), drinks with Tom at U Hrocha, ordered climbing shoes from Decathlon, Bolt home",
+    "answer": "On November 29, 2024, you weighed 74.1 kg and slept 7 hours. You had coffee at Doubleshot for 110 CZK, then dinner with Tom at Maso a Kobliha for 1,560 Kč and drinks with him at U Hrocha for 270 CZK.",
+    "score": 0.5,
+    "soft": 0.49,
+    "stores": [
+     "episodes",
+     "log",
+     "periods",
+     "intentions"
+    ],
+    "route_p": {
+     "facts": 0.37,
+     "log": 0.59,
+     "episodes": 0.9,
+     "routines": 0.2,
+     "intentions": 0.55,
+     "preferences": 0.05,
+     "periods": 0.56
+    },
+    "route_latency_s": 0.3905658721923828,
+    "evidence_chars": 8234,
+    "answer_tokens_in": 3181,
+    "wall_s": 2.209,
+    "path": null
+   },
+   {
+    "id": "ho11",
+    "type": "episodic_event",
+    "question": "Who did I have dinner with on August 5, 2026, and where?",
+    "gold": "David (David Mokos), at Zuni Café ($135.40)",
+    "answer": "You had dinner with David at Zuni Café.",
+    "score": 1.0,
+    "soft": 0.895,
+    "stores": [
+     "episodes",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.27,
+     "log": 0.55,
+     "episodes": 0.83,
+     "routines": 0.13,
+     "intentions": 0.25,
+     "preferences": 0.05,
+     "periods": 0.38
+    },
+    "route_latency_s": 0.278275728225708,
+    "evidence_chars": 3756,
+    "answer_tokens_in": 1691,
+    "wall_s": 1.176,
+    "path": null
+   },
+   {
+    "id": "ho12",
+    "type": "episodic_event",
+    "question": "What happened on February 20, 2026?",
+    "gold": "We closed the seed round: $3M led by Northwind Ventures (Sarah Kim); I also went climbing with Tom",
+    "answer": "On February 20, 2026, Adam announced that Nebula closed its $3M seed round led by Northwind Ventures (Sarah Kim). He slept 7 hours, had coffee at Café Lounge and lunch at Kantýna, climbed at Smíchoff with Tom, and had drinks with Dave at Vinograf.",
+    "score": 1.0,
+    "soft": 0.82,
+    "stores": [
+     "episodes",
+     "periods"
+    ],
+    "route_p": {
+     "facts": 0.25,
+     "log": 0.49,
+     "episodes": 0.84,
+     "routines": 0.18,
+     "intentions": 0.49,
+     "preferences": 0.05,
+     "periods": 0.62
+    },
+    "route_latency_s": 0.2603490352630615,
+    "evidence_chars": 7026,
+    "answer_tokens_in": 2557,
+    "wall_s": 1.646,
+    "path": null
+   },
+   {
+    "id": "ho13",
+    "type": "episodic_time",
+    "question": "When did Nina Rossi start at Nebula?",
+    "gold": "March 1, 2026",
+    "answer": "Nina Rossi started at Nebula on March 1, 2026.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "periods"
+    ],
+    "route_p": {
+     "facts": 0.67,
+     "log": 0.37,
+     "episodes": 0.45,
+     "routines": 0.17,
+     "intentions": 0.19,
+     "preferences": 0.05,
+     "periods": 0.58
+    },
+    "route_latency_s": 0.2675302028656006,
+    "evidence_chars": 6702,
+    "answer_tokens_in": 2459,
+    "wall_s": 1.264,
+    "path": null
+   },
+   {
+    "id": "ho14",
+    "type": "episodic_time",
+    "question": "When did I finish Project Hail Mary?",
+    "gold": "December 31, 2025",
+    "answer": "You finished Project Hail Mary on December 31, 2025, and rated it 5/5.",
+    "score": 1.0,
+    "soft": 0.88,
+    "stores": [
+     "periods",
+     "episodes",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.46,
+     "log": 0.52,
+     "episodes": 0.63,
+     "routines": 0.12,
+     "intentions": 0.3,
+     "preferences": 0.12,
+     "periods": 0.64
+    },
+    "route_latency_s": 0.2883741855621338,
+    "evidence_chars": 5993,
+    "answer_tokens_in": 2334,
+    "wall_s": 1.304,
+    "path": null
+   },
+   {
+    "id": "ho15",
+    "type": "episodic_time",
+    "question": "When did Klára move to London?",
+    "gold": "June 2026 (I mentioned it on June 10, 2026)",
+    "answer": "Klára moved to London on June 10, 2026.",
+    "score": 1.0,
+    "soft": 0.99,
+    "stores": [
+     "periods",
+     "episodes",
+     "facts"
+    ],
+    "route_p": {
+     "facts": 0.55,
+     "log": 0.4,
+     "episodes": 0.56,
+     "routines": 0.25,
+     "intentions": 0.14,
+     "preferences": 0.06,
+     "periods": 0.83
+    },
+    "route_latency_s": 0.30075812339782715,
+    "evidence_chars": 9114,
+    "answer_tokens_in": 3327,
+    "wall_s": 1.425,
+    "path": null
+   },
+   {
+    "id": "ho16",
+    "type": "routine",
+    "question": "Which days do I usually buy groceries?",
+    "gold": "Wednesdays and Saturdays",
+    "answer": "You usually buy groceries on Wednesdays and Saturdays, almost equally often.",
+    "score": 1.0,
+    "soft": 0.98,
+    "stores": [
+     "routines",
+     "episodes"
+    ],
+    "route_p": {
+     "facts": 0.33,
+     "log": 0.49,
+     "episodes": 0.53,
+     "routines": 0.86,
+     "intentions": 0.2,
+     "preferences": 0.05,
+     "periods": 0.29
+    },
+    "route_latency_s": 0.271381139755249,
+    "evidence_chars": 3595,
+    "answer_tokens_in": 1528,
+    "wall_s": 1.218,
+    "path": null
+   },
+   {
+    "id": "ho17",
+    "type": "routine",
+    "question": "Where did I usually get coffee in Prague?",
+    "gold": "A rotation of cafés, most often Café Savoy, EMA Espresso Bar and Kafe Francin (also Café Lounge, Doubleshot)",
+    "answer": "You most often got coffee at Café Savoy, Kafe Francin, and EMA Espresso Bar—each accounted for about 13% of your Prague coffee purchases.",
+    "score": 0.5,
+    "soft": 0.59,
+    "stores": [
+     "routines",
+     "episodes",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.22,
+     "log": 0.55,
+     "episodes": 0.59,
+     "routines": 0.74,
+     "intentions": 0.12,
+     "preferences": 0.41,
+     "periods": 0.48
+    },
+    "route_latency_s": 0.27669787406921387,
+    "evidence_chars": 5157,
+    "answer_tokens_in": 2063,
+    "wall_s": 1.601,
+    "path": null
+   },
+   {
+    "id": "ho18",
+    "type": "routine",
+    "question": "How often do I go climbing?",
+    "gold": "About 1.6 times a week (Tuesdays and Fridays, sometimes Sundays)",
+    "answer": "You go climbing about 1.6 times per week—roughly once or twice a week, both in Prague and in San Francisco.",
+    "score": 0.5,
+    "soft": 0.61,
+    "stores": [
+     "routines",
+     "episodes",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.48,
+     "log": 0.52,
+     "episodes": 0.62,
+     "routines": 0.85,
+     "intentions": 0.15,
+     "preferences": 0.06,
+     "periods": 0.46
+    },
+    "route_latency_s": 0.3101329803466797,
+    "evidence_chars": 4925,
+    "answer_tokens_in": 1971,
+    "wall_s": 1.62,
+    "path": null
+   },
+   {
+    "id": "ho19",
+    "type": "prospective",
+    "question": "Do I still need to cancel my Czech phone plan?",
+    "gold": "No: it was done on Apr 28, 2026",
+    "answer": "No—you canceled your Czech phone plan on April 28, 2026.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "intentions",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.29,
+     "log": 0.61,
+     "episodes": 0.43,
+     "routines": 0.12,
+     "intentions": 0.74,
+     "preferences": 0.06,
+     "periods": 0.27
+    },
+    "route_latency_s": 0.3945481777191162,
+    "evidence_chars": 1906,
+    "answer_tokens_in": 993,
+    "wall_s": 1.11,
+    "path": null
+   },
+   {
+    "id": "ho20",
+    "type": "prospective",
+    "question": "When was my dentist appointment in San Francisco?",
+    "gold": "June 3, 2026 at 9:30, with Dr. Lee at Castro Dental",
+    "answer": "Your dentist appointment with Dr. Lee at Castro Dental in San Francisco was scheduled for June 3, 2026, at 9:30 a.m.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "intentions",
+     "episodes",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.3,
+     "log": 0.56,
+     "episodes": 0.57,
+     "routines": 0.14,
+     "intentions": 0.78,
+     "preferences": 0.04,
+     "periods": 0.32
+    },
+    "route_latency_s": 0.2892279624938965,
+    "evidence_chars": 5885,
+    "answer_tokens_in": 2394,
+    "wall_s": 1.594,
+    "path": null
+   },
+   {
+    "id": "ho21",
+    "type": "prospective",
+    "question": "Did I send the Q2 investor update?",
+    "gold": "Yes, on Jul 3, 2026",
+    "answer": "Yes. You marked the Q2 investor update done on July 3, 2026.",
+    "score": 1.0,
+    "soft": 0.95,
+    "stores": [
+     "intentions",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.17,
+     "log": 0.58,
+     "episodes": 0.4,
+     "routines": 0.1,
+     "intentions": 0.71,
+     "preferences": 0.04,
+     "periods": 0.2
+    },
+    "route_latency_s": 0.3467838764190674,
+    "evidence_chars": 804,
+    "answer_tokens_in": 592,
+    "wall_s": 1.831,
+    "path": null
+   },
+   {
+    "id": "ho22",
+    "type": "preference",
+    "question": "Which movies did I rate 5/5?",
+    "gold": "Dune: Part Two, Flow, Hamnet, One Battle After Another, Past Lives, Perfect Days, Sentimental Value, The Wild Robot",
+    "answer": "Sentimental Value, Past Lives, Flow, Dune: Part Two, The Wild Robot, Perfect Days, One Battle After Another, and Hamnet.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "preferences",
+     "facts"
+    ],
+    "route_p": {
+     "facts": 0.72,
+     "log": 0.43,
+     "episodes": 0.18,
+     "routines": 0.04,
+     "intentions": 0.04,
+     "preferences": 0.94,
+     "periods": 0.18
+    },
+    "route_latency_s": 0.26444005966186523,
+    "evidence_chars": 1990,
+    "answer_tokens_in": 1028,
+    "wall_s": 3.375,
+    "path": null
+   },
+   {
+    "id": "ho23",
+    "type": "preference",
+    "question": "How did I like Sapiens?",
+    "gold": "3/5",
+    "answer": "You rated *Sapiens* 3/5 after finishing it on February 18, 2026.",
+    "score": 1.0,
+    "soft": 0.9,
+    "stores": [
+     "preferences",
+     "log",
+     "periods",
+     "episodes"
+    ],
+    "route_p": {
+     "facts": 0.29,
+     "log": 0.56,
+     "episodes": 0.5,
+     "routines": 0.07,
+     "intentions": 0.09,
+     "preferences": 0.84,
+     "periods": 0.53
+    },
+    "route_latency_s": 0.26654839515686035,
+    "evidence_chars": 4705,
+    "answer_tokens_in": 1876,
+    "wall_s": 0.951,
+    "path": null
+   },
+   {
+    "id": "ho24",
+    "type": "preference",
+    "question": "What did I think of Dune: Part Two?",
+    "gold": "Loved it: 5/5 (watched it three times)",
+    "answer": "You rated *Dune: Part Two* 5/5—on August 24 and 26, 2024, and again on June 27, 2026.",
+    "score": 1.0,
+    "soft": 0.755,
+    "stores": [
+     "preferences",
+     "log",
+     "facts",
+     "episodes"
+    ],
+    "route_p": {
+     "facts": 0.57,
+     "log": 0.62,
+     "episodes": 0.51,
+     "routines": 0.06,
+     "intentions": 0.07,
+     "preferences": 0.8,
+     "periods": 0.35
+    },
+    "route_latency_s": 0.30228114128112793,
+    "evidence_chars": 6105,
+    "answer_tokens_in": 2527,
+    "wall_s": 1.547,
+    "path": null
+   },
+   {
+    "id": "ho25",
+    "type": "source",
+    "question": "What was the post-money valuation in the term sheet?",
+    "gold": "$15M",
+    "answer": "The post-money valuation was $15 million.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.23,
+     "log": 0.43,
+     "episodes": 0.18,
+     "routines": 0.03,
+     "intentions": 0.12,
+     "preferences": 0.04,
+     "periods": 0.13
+    },
+    "route_latency_s": 0.34378504753112793,
+    "evidence_chars": 870,
+    "answer_tokens_in": 587,
+    "wall_s": 0.352,
+    "path": null
+   },
+   {
+    "id": "ho26",
+    "type": "source",
+    "question": "What are the check-in and check-out dates of the Lisbon hotel?",
+    "gold": "Check-in May 22, check-out May 26, 2026 (Memmo Alfama)",
+    "answer": "Check-in is May 22, 2026, and check-out is May 26, 2026.",
+    "score": 1.0,
+    "soft": 0.955,
+    "stores": [
+     "intentions",
+     "log",
+     "episodes"
+    ],
+    "route_p": {
+     "facts": 0.27,
+     "log": 0.51,
+     "episodes": 0.5,
+     "routines": 0.08,
+     "intentions": 0.52,
+     "preferences": 0.09,
+     "periods": 0.32
+    },
+    "route_latency_s": 0.2504923343658447,
+    "evidence_chars": 4228,
+    "answer_tokens_in": 1821,
+    "wall_s": 1.042,
+    "path": null
+   },
+   {
+    "id": "ho27",
+    "type": "source",
+    "question": "What is my landlord's email address?",
+    "gold": "raj.gupta@gmail.com",
+    "answer": "Your landlord Raj Gupta’s email address is raj.gupta@gmail.com.",
+    "score": 1.0,
+    "soft": 0.99,
+    "stores": [
+     "facts"
+    ],
+    "route_p": {
+     "facts": 0.68,
+     "log": 0.44,
+     "episodes": 0.23,
+     "routines": 0.07,
+     "intentions": 0.13,
+     "preferences": 0.07,
+     "periods": 0.23
+    },
+    "route_latency_s": 0.335526704788208,
+    "evidence_chars": 2535,
+    "answer_tokens_in": 1099,
+    "wall_s": 0.345,
+    "path": null
+   },
+   {
+    "id": "ho28",
+    "type": "period",
+    "question": "Which gym was I climbing at when Nina joined Nebula?",
+    "gold": "Smíchoff, in Prague",
+    "answer": "You were climbing at Mission Cliffs when Nina joined you.",
+    "score": 0.0,
+    "soft": 0.0,
+    "stores": [
+     "episodes"
+    ],
+    "route_p": {
+     "facts": 0.32,
+     "log": 0.48,
+     "episodes": 0.71,
+     "routines": 0.3,
+     "intentions": 0.16,
+     "preferences": 0.1,
+     "periods": 0.46
+    },
+    "route_latency_s": 0.2884490489959717,
+    "evidence_chars": 2961,
+    "answer_tokens_in": 1344,
+    "wall_s": 1.442,
+    "path": null
+   },
+   {
+    "id": "ho29",
+    "type": "period",
+    "question": "Where was I living when Oscar joined Nebula?",
+    "gold": "Prague (Jan 12, 2026)",
+    "answer": "You were living in Prague when Oscar joined Nebula on January 12, 2026.",
+    "score": 1.0,
+    "soft": 0.99,
+    "stores": [
+     "periods",
+     "episodes"
+    ],
+    "route_p": {
+     "facts": 0.48,
+     "log": 0.37,
+     "episodes": 0.52,
+     "routines": 0.31,
+     "intentions": 0.09,
+     "preferences": 0.05,
+     "periods": 0.78
+    },
+    "route_latency_s": 0.3046391010284424,
+    "evidence_chars": 7142,
+    "answer_tokens_in": 2599,
+    "wall_s": 1.288,
+    "path": null
+   },
+   {
+    "id": "ho30",
+    "type": "period",
+    "question": "What was going on in my life in May 2026?",
+    "gold": "Any three of: Eva got the job at Gensler (May 4) and moved to SF (May 20); the Lisbon trip with Eva (May 22-26); booked the Lisbon flights and hotel (May 2-3); finished Dune (May 11); Priya introduced me to Mark Chen (May 12)",
+    "answer": "In May 2026, you were settling into your new San Francisco life, running and climbing regularly, and tracking sleep and weight. Eva got a job at Gensler and moved to SF on May 20; you took a Lisbon trip together May 22–26, finished *Dune* and started *Atomic Habits*, and scheduled a Nebula board meeting and a June dentist appointment. On May 30, you set a reminder to buy an engagement ring by July 10.",
+    "score": 0.5,
+    "soft": 0.57,
+    "stores": [
+     "periods",
+     "episodes",
+     "log",
+     "intentions"
+    ],
+    "route_p": {
+     "facts": 0.53,
+     "log": 0.68,
+     "episodes": 0.9,
+     "routines": 0.48,
+     "intentions": 0.67,
+     "preferences": 0.13,
+     "periods": 0.93
+    },
+    "route_latency_s": 0.2441086769104004,
+    "evidence_chars": 7664,
+    "answer_tokens_in": 2899,
+    "wall_s": 2.414,
+    "path": null
+   },
+   {
+    "id": "ho31",
+    "type": "metamemory",
+    "question": "What's Klára's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.84,
+     "log": 0.54,
+     "episodes": 0.18,
+     "routines": 0.05,
+     "intentions": 0.14,
+     "preferences": 0.04,
+     "periods": 0.12
+    },
+    "route_latency_s": 0.24814510345458984,
+    "evidence_chars": 1727,
+    "answer_tokens_in": 898,
+    "wall_s": 0.263,
+    "path": null
+   },
+   {
+    "id": "ho32",
+    "type": "metamemory",
+    "question": "Where did Mark Chen work before Stripe?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts"
+    ],
+    "route_p": {
+     "facts": 0.66,
+     "log": 0.27,
+     "episodes": 0.22,
+     "routines": 0.11,
+     "intentions": 0.08,
+     "preferences": 0.06,
+     "periods": 0.39
+    },
+    "route_latency_s": 0.2731759548187256,
+    "evidence_chars": 1317,
+    "answer_tokens_in": 679,
+    "wall_s": 0.28,
+    "path": null
+   },
+   {
+    "id": "ho33",
+    "type": "metamemory",
+    "question": "What is my passport number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.27,
+     "log": 0.33,
+     "episodes": 0.17,
+     "routines": 0.04,
+     "intentions": 0.06,
+     "preferences": 0.03,
+     "periods": 0.13
+    },
+    "route_latency_s": 0.25927305221557617,
+    "evidence_chars": 598,
+    "answer_tokens_in": 513,
+    "wall_s": 0.267,
+    "path": null
+   },
+   {
+    "id": "ho34",
+    "type": "forgotten",
+    "question": "What's the number of the guy from Rohlik I met at a meetup?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 0.8,
+    "stores": [
+     "facts",
+     "episodes",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.57,
+     "log": 0.54,
+     "episodes": 0.56,
+     "routines": 0.16,
+     "intentions": 0.22,
+     "preferences": 0.09,
+     "periods": 0.27
+    },
+    "route_latency_s": 0.36704301834106445,
+    "evidence_chars": 5971,
+    "answer_tokens_in": 2340,
+    "wall_s": 1.313,
+    "path": null
+   },
+   {
+    "id": "ho35",
+    "type": "forgotten",
+    "question": "What is Marco's number again?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 0.86,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.79,
+     "log": 0.58,
+     "episodes": 0.3,
+     "routines": 0.06,
+     "intentions": 0.16,
+     "preferences": 0.05,
+     "periods": 0.14
+    },
+    "route_latency_s": 0.260282039642334,
+    "evidence_chars": 1244,
+    "answer_tokens_in": 715,
+    "wall_s": 0.283,
+    "path": null
+   },
+   {
+    "id": "ho36",
+    "type": "forgotten",
+    "question": "Where does Jan Dvořák work?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 0.83,
+    "stores": [
+     "facts"
+    ],
+    "route_p": {
+     "facts": 0.81,
+     "log": 0.43,
+     "episodes": 0.34,
+     "routines": 0.14,
+     "intentions": 0.15,
+     "preferences": 0.06,
+     "periods": 0.44
+    },
+    "route_latency_s": 0.27452683448791504,
+    "evidence_chars": 1981,
+    "answer_tokens_in": 924,
+    "wall_s": 0.284,
+    "path": null
+   }
+  ],
+  "n": 36,
+  "accuracy": 86.1,
+  "nominal_cost": 0.01654,
+  "answer_cost": 0.01464,
+  "new_spend": 0.00773
+ },
+ "brain_jev_recall": {
+  "rows": [
+   {
+    "id": "ho01",
+    "type": "semantic_current",
+    "question": "What is David Mokos's email?",
+    "gold": "david@nebula.ai",
+    "answer": "David Mokos's email is david@nebula.ai.",
+    "score": 1.0,
+    "soft": 0.99,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.76,
+     "log": 0.38,
+     "episodes": 0.17,
+     "routines": 0.05,
+     "intentions": 0.1,
+     "preferences": 0.05,
+     "periods": 0.13
+    },
+    "route_latency_s": 0.5880160331726074,
+    "evidence_chars": 3479,
+    "answer_tokens_in": 1515,
+    "wall_s": 0.123,
+    "path": null
+   },
+   {
+    "id": "ho02",
+    "type": "semantic_current",
+    "question": "Who is my landlord?",
+    "gold": "Raj Gupta (+1 415 555 0187)",
+    "answer": "Your landlord is Raj Gupta.",
+    "score": 1.0,
+    "soft": 0.945,
+    "stores": [
+     "facts",
+     "log",
+     "periods",
+     "episodes"
+    ],
+    "route_p": {
+     "facts": 0.67,
+     "log": 0.51,
+     "episodes": 0.38,
+     "routines": 0.15,
+     "intentions": 0.22,
+     "preferences": 0.07,
+     "periods": 0.46
+    },
+    "route_latency_s": 0.5097274780273438,
+    "evidence_chars": 8748,
+    "answer_tokens_in": 3156,
+    "wall_s": 0.143,
+    "path": null
+   },
+   {
+    "id": "ho03",
+    "type": "semantic_current",
+    "question": "Where does Ondra work?",
+    "gold": "Productboard",
+    "answer": "Ondra (Ondřej Král) works at Productboard.",
+    "score": 1.0,
+    "soft": 0.995,
+    "stores": [
+     "facts",
+     "periods",
+     "log",
+     "episodes"
+    ],
+    "route_p": {
+     "facts": 0.84,
+     "log": 0.53,
+     "episodes": 0.42,
+     "routines": 0.2,
+     "intentions": 0.17,
+     "preferences": 0.07,
+     "periods": 0.57
+    },
+    "route_latency_s": 0.6507077217102051,
+    "evidence_chars": 9318,
+    "answer_tokens_in": 3473,
+    "wall_s": 1.325,
+    "path": null
+   },
+   {
+    "id": "ho04",
+    "type": "semantic_history",
+    "question": "Where did Klára live in December 2025?",
+    "gold": "Berlin",
+    "answer": "Klára lived in Berlin in December 2025.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "periods",
+     "facts",
+     "episodes",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.53,
+     "log": 0.35,
+     "episodes": 0.51,
+     "routines": 0.17,
+     "intentions": 0.11,
+     "preferences": 0.05,
+     "periods": 0.86
+    },
+    "route_latency_s": 0.6657423973083496,
+    "evidence_chars": 9492,
+    "answer_tokens_in": 3513,
+    "wall_s": 0.9,
+    "path": null
+   },
+   {
+    "id": "ho05",
+    "type": "semantic_history",
+    "question": "What was Eva to me before we got engaged?",
+    "gold": "My girlfriend",
+    "answer": "I don’t know. The evidence shows you were engaged to Eva by July 12, 2026, but doesn’t say what she was to you before that.",
+    "score": 0.0,
+    "soft": 0.05,
+    "stores": [
+     "periods",
+     "log",
+     "episodes"
+    ],
+    "route_p": {
+     "facts": 0.26,
+     "log": 0.6,
+     "episodes": 0.56,
+     "routines": 0.19,
+     "intentions": 0.12,
+     "preferences": 0.11,
+     "periods": 0.63
+    },
+    "route_latency_s": 0.5962095260620117,
+    "evidence_chars": 7049,
+    "answer_tokens_in": 2603,
+    "wall_s": 0.027,
+    "path": null
+   },
+   {
+    "id": "ho06",
+    "type": "semantic_history",
+    "question": "What was Tom's phone number in 2025?",
+    "gold": "+420 777 123 456 (he changed it on Feb 10, 2026)",
+    "answer": "Tom’s phone number in 2025 was +420 777 123 456.",
+    "score": 1.0,
+    "soft": 0.975,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.73,
+     "log": 0.42,
+     "episodes": 0.22,
+     "routines": 0.05,
+     "intentions": 0.11,
+     "preferences": 0.04,
+     "periods": 0.17
+    },
+    "route_latency_s": 0.5123758316040039,
+    "evidence_chars": 2596,
+    "answer_tokens_in": 1187,
+    "wall_s": 0.068,
+    "path": null
+   },
+   {
+    "id": "ho07",
+    "type": "aggregate",
+    "question": "How much did I spend on lunch in Prague in 2025?",
+    "gold": "64,729 CZK (227 lunches)",
+    "answer": "You spent **1,225 CZK** on the recorded Prague lunches in 2025.",
+    "score": 0.0,
+    "soft": 0.01,
+    "stores": [
+     "facts",
+     "episodes",
+     "log",
+     "periods"
+    ],
+    "route_p": {
+     "facts": 0.73,
+     "log": 0.49,
+     "episodes": 0.52,
+     "routines": 0.18,
+     "intentions": 0.08,
+     "preferences": 0.05,
+     "periods": 0.39
+    },
+    "route_latency_s": 0.6928300857543945,
+    "evidence_chars": 9190,
+    "answer_tokens_in": 3505,
+    "wall_s": 1.923,
+    "path": null
+   },
+   {
+    "id": "ho08",
+    "type": "aggregate",
+    "question": "How many movies did I watch in 2025?",
+    "gold": "39",
+    "answer": "You watched 39 movies in 2025.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "periods",
+     "episodes",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.82,
+     "log": 0.45,
+     "episodes": 0.58,
+     "routines": 0.13,
+     "intentions": 0.07,
+     "preferences": 0.06,
+     "periods": 0.6
+    },
+    "route_latency_s": 0.66082763671875,
+    "evidence_chars": 7235,
+    "answer_tokens_in": 2879,
+    "wall_s": 1.749,
+    "path": null
+   },
+   {
+    "id": "ho09",
+    "type": "aggregate",
+    "question": "How many times did I go running in August 2026?",
+    "gold": "5",
+    "answer": "You went running 5 times in August 2026.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "episodes",
+     "facts",
+     "periods",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.74,
+     "log": 0.42,
+     "episodes": 0.78,
+     "routines": 0.22,
+     "intentions": 0.13,
+     "preferences": 0.03,
+     "periods": 0.63
+    },
+    "route_latency_s": 0.5089645385742188,
+    "evidence_chars": 8525,
+    "answer_tokens_in": 3147,
+    "wall_s": 1.27,
+    "path": null
+   },
+   {
+    "id": "ho10",
+    "type": "episodic_event",
+    "question": "What did I do on November 29, 2024?",
+    "gold": "Coffee at Doubleshot, lunch at Bistro Monk, climbing at Smíchoff with Tom, dinner at Maso a Kobliha with Tom (1,560 CZK), drinks with Tom at U Hrocha, ordered climbing shoes from Decathlon, Bolt home",
+    "answer": "On November 29, 2024, you weighed 74.1 kg and slept 7 hours. You had coffee at Doubleshot for 110 CZK, then dinner with Tom at Maso a Kobliha for 1,560 Kč and drinks with him at U Hrocha for 270 CZK.",
+    "score": 0.5,
+    "soft": 0.49,
+    "stores": [
+     "episodes",
+     "log",
+     "periods",
+     "intentions"
+    ],
+    "route_p": {
+     "facts": 0.37,
+     "log": 0.59,
+     "episodes": 0.9,
+     "routines": 0.2,
+     "intentions": 0.55,
+     "preferences": 0.05,
+     "periods": 0.56
+    },
+    "route_latency_s": 0.7811317443847656,
+    "evidence_chars": 8234,
+    "answer_tokens_in": 3181,
+    "wall_s": 0.01,
+    "path": null
+   },
+   {
+    "id": "ho11",
+    "type": "episodic_event",
+    "question": "Who did I have dinner with on August 5, 2026, and where?",
+    "gold": "David (David Mokos), at Zuni Café ($135.40)",
+    "answer": "You had dinner with David at Zuni Café on August 5, 2026.",
+    "score": 1.0,
+    "soft": 0.905,
+    "stores": [
+     "episodes",
+     "log",
+     "periods"
+    ],
+    "route_p": {
+     "facts": 0.27,
+     "log": 0.55,
+     "episodes": 0.83,
+     "routines": 0.13,
+     "intentions": 0.25,
+     "preferences": 0.05,
+     "periods": 0.38
+    },
+    "route_latency_s": 0.556551456451416,
+    "evidence_chars": 7207,
+    "answer_tokens_in": 2782,
+    "wall_s": 1.334,
+    "path": null
+   },
+   {
+    "id": "ho12",
+    "type": "episodic_event",
+    "question": "What happened on February 20, 2026?",
+    "gold": "We closed the seed round: $3M led by Northwind Ventures (Sarah Kim); I also went climbing with Tom",
+    "answer": "On February 20, 2026, you announced Nebula closed its $3M seed round, led by Northwind Ventures (Sarah Kim). You slept 7 hours, had coffee at Café Lounge (95 CZK) and lunch at Kantýna (189 CZK), climbed at Smíchoff with Tom, and had drinks with Dave at Vinograf (390 Kč; reported just after midnight).",
+    "score": 1.0,
+    "soft": 0.865,
+    "stores": [
+     "episodes",
+     "periods",
+     "log",
+     "intentions"
+    ],
+    "route_p": {
+     "facts": 0.25,
+     "log": 0.49,
+     "episodes": 0.84,
+     "routines": 0.18,
+     "intentions": 0.49,
+     "preferences": 0.05,
+     "periods": 0.62
+    },
+    "route_latency_s": 0.520698070526123,
+    "evidence_chars": 9016,
+    "answer_tokens_in": 3347,
+    "wall_s": 2.036,
+    "path": null
+   },
+   {
+    "id": "ho13",
+    "type": "episodic_time",
+    "question": "When did Nina Rossi start at Nebula?",
+    "gold": "March 1, 2026",
+    "answer": "Nina Rossi started at Nebula on March 1, 2026.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "periods",
+     "episodes",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.67,
+     "log": 0.37,
+     "episodes": 0.45,
+     "routines": 0.17,
+     "intentions": 0.19,
+     "preferences": 0.05,
+     "periods": 0.58
+    },
+    "route_latency_s": 0.5350604057312012,
+    "evidence_chars": 11273,
+    "answer_tokens_in": 4083,
+    "wall_s": 1.392,
+    "path": null
+   },
+   {
+    "id": "ho14",
+    "type": "episodic_time",
+    "question": "When did I finish Project Hail Mary?",
+    "gold": "December 31, 2025",
+    "answer": "You finished *Project Hail Mary* on December 31, 2025.",
+    "score": 1.0,
+    "soft": 0.94,
+    "stores": [
+     "periods",
+     "episodes",
+     "log",
+     "facts"
+    ],
+    "route_p": {
+     "facts": 0.46,
+     "log": 0.52,
+     "episodes": 0.63,
+     "routines": 0.12,
+     "intentions": 0.3,
+     "preferences": 0.12,
+     "periods": 0.64
+    },
+    "route_latency_s": 0.5767483711242676,
+    "evidence_chars": 8076,
+    "answer_tokens_in": 3062,
+    "wall_s": 0.939,
+    "path": null
+   },
+   {
+    "id": "ho15",
+    "type": "episodic_time",
+    "question": "When did Klára move to London?",
+    "gold": "June 2026 (I mentioned it on June 10, 2026)",
+    "answer": "Klára moved to London on June 10, 2026.",
+    "score": 1.0,
+    "soft": 0.99,
+    "stores": [
+     "periods",
+     "episodes",
+     "facts",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.55,
+     "log": 0.4,
+     "episodes": 0.56,
+     "routines": 0.25,
+     "intentions": 0.14,
+     "preferences": 0.06,
+     "periods": 0.83
+    },
+    "route_latency_s": 0.6015162467956543,
+    "evidence_chars": 9766,
+    "answer_tokens_in": 3586,
+    "wall_s": 0.865,
+    "path": null
+   },
+   {
+    "id": "ho16",
+    "type": "routine",
+    "question": "Which days do I usually buy groceries?",
+    "gold": "Wednesdays and Saturdays",
+    "answer": "You usually buy groceries on Wednesdays and Saturdays.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "routines",
+     "episodes",
+     "log",
+     "facts"
+    ],
+    "route_p": {
+     "facts": 0.33,
+     "log": 0.49,
+     "episodes": 0.53,
+     "routines": 0.86,
+     "intentions": 0.2,
+     "preferences": 0.05,
+     "periods": 0.29
+    },
+    "route_latency_s": 0.542762279510498,
+    "evidence_chars": 6296,
+    "answer_tokens_in": 2587,
+    "wall_s": 1.229,
+    "path": null
+   },
+   {
+    "id": "ho17",
+    "type": "routine",
+    "question": "Where did I usually get coffee in Prague?",
+    "gold": "A rotation of cafés, most often Café Savoy, EMA Espresso Bar and Kafe Francin (also Café Lounge, Doubleshot)",
+    "answer": "You most often got coffee at Café Savoy, Kafe Francin, and EMA Espresso Bar—each accounted for about 13% of your coffee expenses in Prague.",
+    "score": 0.5,
+    "soft": 0.575,
+    "stores": [
+     "routines",
+     "episodes",
+     "log",
+     "periods"
+    ],
+    "route_p": {
+     "facts": 0.22,
+     "log": 0.55,
+     "episodes": 0.59,
+     "routines": 0.74,
+     "intentions": 0.12,
+     "preferences": 0.41,
+     "periods": 0.48
+    },
+    "route_latency_s": 0.5533957481384277,
+    "evidence_chars": 8160,
+    "answer_tokens_in": 3002,
+    "wall_s": 1.208,
+    "path": null
+   },
+   {
+    "id": "ho18",
+    "type": "routine",
+    "question": "How often do I go climbing?",
+    "gold": "About 1.6 times a week (Tuesdays and Fridays, sometimes Sundays)",
+    "answer": "You go climbing about 1.6 times per week—roughly once or twice a week.",
+    "score": 0.5,
+    "soft": 0.71,
+    "stores": [
+     "routines",
+     "episodes",
+     "log",
+     "facts"
+    ],
+    "route_p": {
+     "facts": 0.48,
+     "log": 0.52,
+     "episodes": 0.62,
+     "routines": 0.85,
+     "intentions": 0.15,
+     "preferences": 0.06,
+     "periods": 0.46
+    },
+    "route_latency_s": 0.6202659606933594,
+    "evidence_chars": 6729,
+    "answer_tokens_in": 2586,
+    "wall_s": 1.509,
+    "path": null
+   },
+   {
+    "id": "ho19",
+    "type": "prospective",
+    "question": "Do I still need to cancel my Czech phone plan?",
+    "gold": "No: it was done on Apr 28, 2026",
+    "answer": "No—you canceled your Czech phone plan on April 28, 2026.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "intentions",
+     "log",
+     "episodes"
+    ],
+    "route_p": {
+     "facts": 0.29,
+     "log": 0.61,
+     "episodes": 0.43,
+     "routines": 0.12,
+     "intentions": 0.74,
+     "preferences": 0.06,
+     "periods": 0.27
+    },
+    "route_latency_s": 0.7890963554382324,
+    "evidence_chars": 5225,
+    "answer_tokens_in": 2158,
+    "wall_s": 0.858,
+    "path": null
+   },
+   {
+    "id": "ho20",
+    "type": "prospective",
+    "question": "When was my dentist appointment in San Francisco?",
+    "gold": "June 3, 2026 at 9:30, with Dr. Lee at Castro Dental",
+    "answer": "Your dentist appointment with Dr. Lee at Castro Dental in San Francisco was scheduled for June 3, 2026, at 9:30 a.m.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "intentions",
+     "episodes",
+     "log",
+     "periods"
+    ],
+    "route_p": {
+     "facts": 0.3,
+     "log": 0.56,
+     "episodes": 0.57,
+     "routines": 0.14,
+     "intentions": 0.78,
+     "preferences": 0.04,
+     "periods": 0.32
+    },
+    "route_latency_s": 0.578455924987793,
+    "evidence_chars": 9129,
+    "answer_tokens_in": 3383,
+    "wall_s": 1.027,
+    "path": null
+   },
+   {
+    "id": "ho21",
+    "type": "prospective",
+    "question": "Did I send the Q2 investor update?",
+    "gold": "Yes, on Jul 3, 2026",
+    "answer": "Yes—you sent the Q2 investor update on July 3, 2026.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "intentions",
+     "log",
+     "episodes"
+    ],
+    "route_p": {
+     "facts": 0.17,
+     "log": 0.58,
+     "episodes": 0.4,
+     "routines": 0.1,
+     "intentions": 0.71,
+     "preferences": 0.04,
+     "periods": 0.2
+    },
+    "route_latency_s": 0.6935677528381348,
+    "evidence_chars": 4001,
+    "answer_tokens_in": 1727,
+    "wall_s": 1.404,
+    "path": null
+   },
+   {
+    "id": "ho22",
+    "type": "preference",
+    "question": "Which movies did I rate 5/5?",
+    "gold": "Dune: Part Two, Flow, Hamnet, One Battle After Another, Past Lives, Perfect Days, Sentimental Value, The Wild Robot",
+    "answer": "You rated these movies 5/5: Sentimental Value, Past Lives, Flow, Dune: Part Two, The Wild Robot, Perfect Days, One Battle After Another, and Hamnet.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "preferences",
+     "facts",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.72,
+     "log": 0.43,
+     "episodes": 0.18,
+     "routines": 0.04,
+     "intentions": 0.04,
+     "preferences": 0.94,
+     "periods": 0.18
+    },
+    "route_latency_s": 0.5288801193237305,
+    "evidence_chars": 2590,
+    "answer_tokens_in": 1272,
+    "wall_s": 2.174,
+    "path": null
+   },
+   {
+    "id": "ho23",
+    "type": "preference",
+    "question": "How did I like Sapiens?",
+    "gold": "3/5",
+    "answer": "You rated *Sapiens* 3/5 after finishing it on February 18, 2026.",
+    "score": 1.0,
+    "soft": 0.9,
+    "stores": [
+     "preferences",
+     "log",
+     "periods",
+     "episodes"
+    ],
+    "route_p": {
+     "facts": 0.29,
+     "log": 0.56,
+     "episodes": 0.5,
+     "routines": 0.07,
+     "intentions": 0.09,
+     "preferences": 0.84,
+     "periods": 0.53
+    },
+    "route_latency_s": 0.5330967903137207,
+    "evidence_chars": 4705,
+    "answer_tokens_in": 1876,
+    "wall_s": 0.006,
+    "path": null
+   },
+   {
+    "id": "ho24",
+    "type": "preference",
+    "question": "What did I think of Dune: Part Two?",
+    "gold": "Loved it: 5/5 (watched it three times)",
+    "answer": "You rated *Dune: Part Two* 5/5—on August 24 and 26, 2024, and again on June 27, 2026.",
+    "score": 1.0,
+    "soft": 0.755,
+    "stores": [
+     "preferences",
+     "log",
+     "facts",
+     "episodes"
+    ],
+    "route_p": {
+     "facts": 0.57,
+     "log": 0.62,
+     "episodes": 0.51,
+     "routines": 0.06,
+     "intentions": 0.07,
+     "preferences": 0.8,
+     "periods": 0.35
+    },
+    "route_latency_s": 0.6045622825622559,
+    "evidence_chars": 6105,
+    "answer_tokens_in": 2527,
+    "wall_s": 0.019,
+    "path": null
+   },
+   {
+    "id": "ho25",
+    "type": "source",
+    "question": "What was the post-money valuation in the term sheet?",
+    "gold": "$15M",
+    "answer": "The post-money valuation was $15 million.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.23,
+     "log": 0.43,
+     "episodes": 0.18,
+     "routines": 0.03,
+     "intentions": 0.12,
+     "preferences": 0.04,
+     "periods": 0.13
+    },
+    "route_latency_s": 0.6875700950622559,
+    "evidence_chars": 870,
+    "answer_tokens_in": 587,
+    "wall_s": 0.007,
+    "path": null
+   },
+   {
+    "id": "ho26",
+    "type": "source",
+    "question": "What are the check-in and check-out dates of the Lisbon hotel?",
+    "gold": "Check-in May 22, check-out May 26, 2026 (Memmo Alfama)",
+    "answer": "Check-in: May 22, 2026; check-out: May 26, 2026.",
+    "score": 1.0,
+    "soft": 0.94,
+    "stores": [
+     "intentions",
+     "log",
+     "episodes",
+     "periods"
+    ],
+    "route_p": {
+     "facts": 0.27,
+     "log": 0.51,
+     "episodes": 0.5,
+     "routines": 0.08,
+     "intentions": 0.52,
+     "preferences": 0.09,
+     "periods": 0.32
+    },
+    "route_latency_s": 0.5009846687316895,
+    "evidence_chars": 7917,
+    "answer_tokens_in": 2996,
+    "wall_s": 1.868,
+    "path": null
+   },
+   {
+    "id": "ho27",
+    "type": "source",
+    "question": "What is my landlord's email address?",
+    "gold": "raj.gupta@gmail.com",
+    "answer": "Your landlord’s email address is raj.gupta@gmail.com.",
+    "score": 1.0,
+    "soft": 0.98,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.68,
+     "log": 0.44,
+     "episodes": 0.23,
+     "routines": 0.07,
+     "intentions": 0.13,
+     "preferences": 0.07,
+     "periods": 0.23
+    },
+    "route_latency_s": 0.671053409576416,
+    "evidence_chars": 3166,
+    "answer_tokens_in": 1332,
+    "wall_s": 0.028,
+    "path": null
+   },
+   {
+    "id": "ho28",
+    "type": "period",
+    "question": "Which gym was I climbing at when Nina joined Nebula?",
+    "gold": "Smíchoff, in Prague",
+    "answer": "You were climbing at Smíchoff when Nina joined Nebula, starting March 1, 2026.",
+    "score": 1.0,
+    "soft": 0.815,
+    "stores": [
+     "episodes",
+     "log",
+     "periods",
+     "facts"
+    ],
+    "route_p": {
+     "facts": 0.32,
+     "log": 0.48,
+     "episodes": 0.71,
+     "routines": 0.3,
+     "intentions": 0.16,
+     "preferences": 0.1,
+     "periods": 0.46
+    },
+    "route_latency_s": 0.5768980979919434,
+    "evidence_chars": 10204,
+    "answer_tokens_in": 3723,
+    "wall_s": 1.493,
+    "path": null
+   },
+   {
+    "id": "ho29",
+    "type": "period",
+    "question": "Where was I living when Oscar joined Nebula?",
+    "gold": "Prague (Jan 12, 2026)",
+    "answer": "You were living in Prague when Oscar joined Nebula on January 12, 2026.",
+    "score": 1.0,
+    "soft": 0.99,
+    "stores": [
+     "periods",
+     "episodes",
+     "facts",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.48,
+     "log": 0.37,
+     "episodes": 0.52,
+     "routines": 0.31,
+     "intentions": 0.09,
+     "preferences": 0.05,
+     "periods": 0.78
+    },
+    "route_latency_s": 0.6092782020568848,
+    "evidence_chars": 9724,
+    "answer_tokens_in": 3505,
+    "wall_s": 0.746,
+    "path": null
+   },
+   {
+    "id": "ho30",
+    "type": "period",
+    "question": "What was going on in my life in May 2026?",
+    "gold": "Any three of: Eva got the job at Gensler (May 4) and moved to SF (May 20); the Lisbon trip with Eva (May 22-26); booked the Lisbon flights and hotel (May 2-3); finished Dune (May 11); Priya introduced me to Mark Chen (May 12)",
+    "answer": "In May 2026, you were settling into your new San Francisco life, running and climbing regularly, and tracking sleep and weight. Eva got a job at Gensler and moved to SF on May 20; you took a Lisbon trip together May 22–26, finished *Dune* and started *Atomic Habits*, and scheduled a Nebula board meeting and a June dentist appointment. On May 30, you set a reminder to buy an engagement ring by July 10.",
+    "score": 0.5,
+    "soft": 0.57,
+    "stores": [
+     "periods",
+     "episodes",
+     "log",
+     "intentions"
+    ],
+    "route_p": {
+     "facts": 0.53,
+     "log": 0.68,
+     "episodes": 0.9,
+     "routines": 0.48,
+     "intentions": 0.67,
+     "preferences": 0.13,
+     "periods": 0.93
+    },
+    "route_latency_s": 0.4882173538208008,
+    "evidence_chars": 7664,
+    "answer_tokens_in": 2899,
+    "wall_s": 0.008,
+    "path": null
+   },
+   {
+    "id": "ho31",
+    "type": "metamemory",
+    "question": "What's Klára's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.84,
+     "log": 0.54,
+     "episodes": 0.18,
+     "routines": 0.05,
+     "intentions": 0.14,
+     "preferences": 0.04,
+     "periods": 0.12
+    },
+    "route_latency_s": 0.4962902069091797,
+    "evidence_chars": 1727,
+    "answer_tokens_in": 898,
+    "wall_s": 0.015,
+    "path": null
+   },
+   {
+    "id": "ho32",
+    "type": "metamemory",
+    "question": "Where did Mark Chen work before Stripe?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "periods"
+    ],
+    "route_p": {
+     "facts": 0.66,
+     "log": 0.27,
+     "episodes": 0.22,
+     "routines": 0.11,
+     "intentions": 0.08,
+     "preferences": 0.06,
+     "periods": 0.39
+    },
+    "route_latency_s": 0.5463519096374512,
+    "evidence_chars": 4134,
+    "answer_tokens_in": 1498,
+    "wall_s": 0.816,
+    "path": null
+   },
+   {
+    "id": "ho33",
+    "type": "metamemory",
+    "question": "What is my passport number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.27,
+     "log": 0.33,
+     "episodes": 0.17,
+     "routines": 0.04,
+     "intentions": 0.06,
+     "preferences": 0.03,
+     "periods": 0.13
+    },
+    "route_latency_s": 0.5185461044311523,
+    "evidence_chars": 598,
+    "answer_tokens_in": 513,
+    "wall_s": 0.006,
+    "path": null
+   },
+   {
+    "id": "ho34",
+    "type": "forgotten",
+    "question": "What's the number of the guy from Rohlik I met at a meetup?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 0.8,
+    "stores": [
+     "facts",
+     "episodes",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.57,
+     "log": 0.54,
+     "episodes": 0.56,
+     "routines": 0.16,
+     "intentions": 0.22,
+     "preferences": 0.09,
+     "periods": 0.27
+    },
+    "route_latency_s": 0.7340860366821289,
+    "evidence_chars": 5971,
+    "answer_tokens_in": 2340,
+    "wall_s": 0.018,
+    "path": null
+   },
+   {
+    "id": "ho35",
+    "type": "forgotten",
+    "question": "What is Marco's number again?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 0.86,
+    "stores": [
+     "facts",
+     "log",
+     "episodes"
+    ],
+    "route_p": {
+     "facts": 0.79,
+     "log": 0.58,
+     "episodes": 0.3,
+     "routines": 0.06,
+     "intentions": 0.16,
+     "preferences": 0.05,
+     "periods": 0.14
+    },
+    "route_latency_s": 0.520564079284668,
+    "evidence_chars": 3595,
+    "answer_tokens_in": 1590,
+    "wall_s": 0.629,
+    "path": null
+   },
+   {
+    "id": "ho36",
+    "type": "forgotten",
+    "question": "Where does Jan Dvořák work?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 0.83,
+    "stores": [
+     "facts",
+     "periods",
+     "log",
+     "episodes"
+    ],
+    "route_p": {
+     "facts": 0.81,
+     "log": 0.43,
+     "episodes": 0.34,
+     "routines": 0.14,
+     "intentions": 0.15,
+     "preferences": 0.06,
+     "periods": 0.44
+    },
+    "route_latency_s": 0.5490536689758301,
+    "evidence_chars": 8725,
+    "answer_tokens_in": 3209,
+    "wall_s": 0.857,
+    "path": null
+   }
+  ],
+  "n": 36,
+  "accuracy": 88.9,
+  "nominal_cost": 0.02103,
+  "answer_cost": 0.01914,
+  "new_spend": 0.0071
+ },
+ "brain_llm_router": {
+  "rows": [
+   {
+    "id": "ho01",
+    "type": "semantic_current",
+    "question": "What is David Mokos's email?",
+    "gold": "david@nebula.ai",
+    "answer": "David Mokos's email is david@nebula.ai.",
+    "score": 1.0,
+    "soft": 0.99,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.99,
+     "log": 0.78,
+     "episodes": 0.12,
+     "routines": 0.01,
+     "intentions": 0.01,
+     "preferences": 0.01,
+     "periods": 0.01
+    },
+    "route_latency_s": 4.025360107421875,
+    "evidence_chars": 3479,
+    "answer_tokens_in": 1515,
+    "wall_s": 0.075,
+    "path": null
+   },
+   {
+    "id": "ho02",
+    "type": "semantic_current",
+    "question": "Who is my landlord?",
+    "gold": "Raj Gupta (+1 415 555 0187)",
+    "answer": "Your landlord is Raj Gupta.",
+    "score": 1.0,
+    "soft": 0.945,
+    "stores": [
+     "facts",
+     "log",
+     "periods",
+     "episodes"
+    ],
+    "route_p": {
+     "facts": 0.88,
+     "log": 0.82,
+     "episodes": 0.55,
+     "routines": 0.08,
+     "intentions": 0.18,
+     "preferences": 0.04,
+     "periods": 0.62
+    },
+    "route_latency_s": 2.414792060852051,
+    "evidence_chars": 8748,
+    "answer_tokens_in": 3156,
+    "wall_s": 0.137,
+    "path": null
+   },
+   {
+    "id": "ho03",
+    "type": "semantic_current",
+    "question": "Where does Ondra work?",
+    "gold": "Productboard",
+    "answer": "Ondra (Ondřej Král) works at Productboard.",
+    "score": 1.0,
+    "soft": 0.995,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.99,
+     "log": 0.88,
+     "episodes": 0.3,
+     "routines": 0.12,
+     "intentions": 0.02,
+     "preferences": 0.01,
+     "periods": 0.15
+    },
+    "route_latency_s": 5.4218151569366455,
+    "evidence_chars": 3274,
+    "answer_tokens_in": 1463,
+    "wall_s": 0.084,
+    "path": null
+   },
+   {
+    "id": "ho04",
+    "type": "semantic_history",
+    "question": "Where did Klára live in December 2025?",
+    "gold": "Berlin",
+    "answer": "Klára lived in Berlin in December 2025.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "periods",
+     "log",
+     "episodes"
+    ],
+    "route_p": {
+     "facts": 0.99,
+     "log": 0.95,
+     "episodes": 0.55,
+     "routines": 0.12,
+     "intentions": 0.08,
+     "preferences": 0.01,
+     "periods": 0.98
+    },
+    "route_latency_s": 3.5906260013580322,
+    "evidence_chars": 9492,
+    "answer_tokens_in": 3513,
+    "wall_s": 0.052,
+    "path": null
+   },
+   {
+    "id": "ho05",
+    "type": "semantic_history",
+    "question": "What was Eva to me before we got engaged?",
+    "gold": "My girlfriend",
+    "answer": "I don’t know. The evidence shows you were engaged to Eva by July 12, 2026, but doesn’t say what she was to you before that.",
+    "score": 0.0,
+    "soft": 0.05,
+    "stores": [
+     "log",
+     "episodes",
+     "periods"
+    ],
+    "route_p": {
+     "facts": 0.28,
+     "log": 0.84,
+     "episodes": 0.78,
+     "routines": 0.04,
+     "intentions": 0.06,
+     "preferences": 0.03,
+     "periods": 0.66
+    },
+    "route_latency_s": 3.3692989349365234,
+    "evidence_chars": 7049,
+    "answer_tokens_in": 2603,
+    "wall_s": 0.011,
+    "path": null
+   },
+   {
+    "id": "ho06",
+    "type": "semantic_history",
+    "question": "What was Tom's phone number in 2025?",
+    "gold": "+420 777 123 456 (he changed it on Feb 10, 2026)",
+    "answer": "Tom’s phone number in 2025 was +420 777 123 456.",
+    "score": 1.0,
+    "soft": 0.975,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.99,
+     "log": 0.85,
+     "episodes": 0.03,
+     "routines": 0.01,
+     "intentions": 0.01,
+     "preferences": 0.01,
+     "periods": 0.02
+    },
+    "route_latency_s": 2.817830801010132,
+    "evidence_chars": 2596,
+    "answer_tokens_in": 1187,
+    "wall_s": 0.076,
+    "path": null
+   },
+   {
+    "id": "ho07",
+    "type": "aggregate",
+    "question": "How much did I spend on lunch in Prague in 2025?",
+    "gold": "64,729 CZK (227 lunches)",
+    "answer": "You spent **2,254 CZK** on lunch in Prague in 2025, based on the lunch expenses recorded here.",
+    "score": 0.0,
+    "soft": 0.01,
+    "stores": [
+     "facts",
+     "log",
+     "episodes"
+    ],
+    "route_p": {
+     "facts": 0.99,
+     "log": 0.88,
+     "episodes": 0.82,
+     "routines": 0.02,
+     "intentions": 0.01,
+     "preferences": 0.01,
+     "periods": 0.08
+    },
+    "route_latency_s": 1.5785160064697266,
+    "evidence_chars": 5531,
+    "answer_tokens_in": 2255,
+    "wall_s": 0.123,
+    "path": null
+   },
+   {
+    "id": "ho08",
+    "type": "aggregate",
+    "question": "How many movies did I watch in 2025?",
+    "gold": "39",
+    "answer": "You watched 39 movies in 2025.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes"
+    ],
+    "route_p": {
+     "facts": 0.99,
+     "log": 0.87,
+     "episodes": 0.72,
+     "routines": 0.18,
+     "intentions": 0.03,
+     "preferences": 0.12,
+     "periods": 0.22
+    },
+    "route_latency_s": 3.092888116836548,
+    "evidence_chars": 3943,
+    "answer_tokens_in": 1740,
+    "wall_s": 0.033,
+    "path": null
+   },
+   {
+    "id": "ho09",
+    "type": "aggregate",
+    "question": "How many times did I go running in August 2026?",
+    "gold": "5",
+    "answer": "You went running 5 times in August 2026.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "episodes",
+     "log",
+     "periods"
+    ],
+    "route_p": {
+     "facts": 0.99,
+     "log": 0.88,
+     "episodes": 0.95,
+     "routines": 0.09999999999999998,
+     "intentions": 0.020000000000000018,
+     "preferences": 0.010000000000000009,
+     "periods": 0.62
+    },
+    "route_latency_s": 4.969134092330933,
+    "evidence_chars": 8525,
+    "answer_tokens_in": 3147,
+    "wall_s": 0.139,
+    "path": null
+   },
+   {
+    "id": "ho10",
+    "type": "episodic_event",
+    "question": "What did I do on November 29, 2024?",
+    "gold": "Coffee at Doubleshot, lunch at Bistro Monk, climbing at Smíchoff with Tom, dinner at Maso a Kobliha with Tom (1,560 CZK), drinks with Tom at U Hrocha, ordered climbing shoes from Decathlon, Bolt home",
+    "answer": "You weighed 74.1 kg and slept 7 hours. You had coffee at Doubleshot for 110 CZK, then dinner with Tom at Maso a Kobliha for 1,560 Kč and drinks with him at U Hrocha for 270 CZK.",
+    "score": 0.5,
+    "soft": 0.485,
+    "stores": [
+     "episodes",
+     "log",
+     "facts"
+    ],
+    "route_p": {
+     "facts": 0.62,
+     "log": 0.85,
+     "episodes": 0.98,
+     "routines": 0.08,
+     "intentions": 0.12,
+     "preferences": 0.01,
+     "periods": 0.18
+    },
+    "route_latency_s": 3.656329870223999,
+    "evidence_chars": 5618,
+    "answer_tokens_in": 2353,
+    "wall_s": 0.101,
+    "path": null
+   },
+   {
+    "id": "ho11",
+    "type": "episodic_event",
+    "question": "Who did I have dinner with on August 5, 2026, and where?",
+    "gold": "David (David Mokos), at Zuni Café ($135.40)",
+    "answer": "You had dinner with David at Zuni Café.",
+    "score": 1.0,
+    "soft": 0.895,
+    "stores": [
+     "episodes",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.25,
+     "log": 0.98,
+     "episodes": 0.99,
+     "routines": 0.02,
+     "intentions": 0.08,
+     "preferences": 0.01,
+     "periods": 0.1
+    },
+    "route_latency_s": 3.248872995376587,
+    "evidence_chars": 3756,
+    "answer_tokens_in": 1691,
+    "wall_s": 0.007,
+    "path": null
+   },
+   {
+    "id": "ho12",
+    "type": "episodic_event",
+    "question": "What happened on February 20, 2026?",
+    "gold": "We closed the seed round: $3M led by Northwind Ventures (Sarah Kim); I also went climbing with Tom",
+    "answer": "On February 20, you slept 7 hours, had coffee at Café Lounge (95 CZK) and lunch at Kantýna (189 CZK), and climbed at Smíchoff with Tom. You also announced that Nebula’s $3M seed round had closed, led by Northwind Ventures (Sarah Kim); later, you had drinks with Dave at Vinograf for 390 Kč.",
+    "score": 1.0,
+    "soft": 0.89,
+    "stores": [
+     "episodes",
+     "facts",
+     "log",
+     "periods"
+    ],
+    "route_p": {
+     "facts": 0.78,
+     "log": 0.72,
+     "episodes": 0.96,
+     "routines": 0.03,
+     "intentions": 0.08,
+     "preferences": 0.02,
+     "periods": 0.62
+    },
+    "route_latency_s": 4.123119115829468,
+    "evidence_chars": 9790,
+    "answer_tokens_in": 3596,
+    "wall_s": 2.047,
+    "path": null
+   },
+   {
+    "id": "ho13",
+    "type": "episodic_time",
+    "question": "When did Nina Rossi start at Nebula?",
+    "gold": "March 1, 2026",
+    "answer": "Nina Rossi started at Nebula on March 1, 2026.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "periods",
+     "episodes"
+    ],
+    "route_p": {
+     "facts": 0.99,
+     "log": 0.94,
+     "episodes": 0.76,
+     "routines": 0.03,
+     "intentions": 0.08,
+     "preferences": 0.01,
+     "periods": 0.83
+    },
+    "route_latency_s": 2.8914146423339844,
+    "evidence_chars": 11273,
+    "answer_tokens_in": 4083,
+    "wall_s": 0.116,
+    "path": null
+   },
+   {
+    "id": "ho14",
+    "type": "episodic_time",
+    "question": "When did I finish Project Hail Mary?",
+    "gold": "December 31, 2025",
+    "answer": "You finished *Project Hail Mary* on December 31, 2025.",
+    "score": 1.0,
+    "soft": 0.94,
+    "stores": [
+     "log",
+     "facts",
+     "episodes",
+     "periods"
+    ],
+    "route_p": {
+     "facts": 0.86,
+     "log": 0.95,
+     "episodes": 0.86,
+     "routines": 0.13,
+     "intentions": 0.08,
+     "preferences": 0.27,
+     "periods": 0.76
+    },
+    "route_latency_s": 2.391420841217041,
+    "evidence_chars": 8076,
+    "answer_tokens_in": 3062,
+    "wall_s": 0.123,
+    "path": null
+   },
+   {
+    "id": "ho15",
+    "type": "episodic_time",
+    "question": "When did Klára move to London?",
+    "gold": "June 2026 (I mentioned it on June 10, 2026)",
+    "answer": "Klára moved to London on June 10, 2026.",
+    "score": 1.0,
+    "soft": 0.99,
+    "stores": [
+     "periods",
+     "log",
+     "facts",
+     "episodes"
+    ],
+    "route_p": {
+     "facts": 0.88,
+     "log": 0.92,
+     "episodes": 0.76,
+     "routines": 0.04,
+     "intentions": 0.06,
+     "preferences": 0.02,
+     "periods": 0.96
+    },
+    "route_latency_s": 2.468461036682129,
+    "evidence_chars": 9766,
+    "answer_tokens_in": 3586,
+    "wall_s": 0.129,
+    "path": null
+   },
+   {
+    "id": "ho16",
+    "type": "routine",
+    "question": "Which days do I usually buy groceries?",
+    "gold": "Wednesdays and Saturdays",
+    "answer": "You usually buy groceries on Wednesdays and Saturdays, about twice a week.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "routines",
+     "log",
+     "episodes",
+     "periods"
+    ],
+    "route_p": {
+     "facts": 0.25,
+     "log": 0.65,
+     "episodes": 0.6,
+     "routines": 0.98,
+     "intentions": 0.08,
+     "preferences": 0.03,
+     "periods": 0.6
+    },
+    "route_latency_s": 4.48465371131897,
+    "evidence_chars": 7041,
+    "answer_tokens_in": 2617,
+    "wall_s": 2.087,
+    "path": null
+   },
+   {
+    "id": "ho17",
+    "type": "routine",
+    "question": "Where did I usually get coffee in Prague?",
+    "gold": "A rotation of cafés, most often Café Savoy, EMA Espresso Bar and Kafe Francin (also Café Lounge, Doubleshot)",
+    "answer": "You most often got coffee at Café Savoy, Kafe Francin, and EMA Espresso Bar—each accounted for about 13% of your coffee expenses in Prague.",
+    "score": 0.5,
+    "soft": 0.575,
+    "stores": [
+     "routines",
+     "log",
+     "episodes",
+     "periods"
+    ],
+    "route_p": {
+     "facts": 0.15,
+     "log": 0.75,
+     "episodes": 0.7,
+     "routines": 0.98,
+     "intentions": 0.05,
+     "preferences": 0.2,
+     "periods": 0.55
+    },
+    "route_latency_s": 3.1400821208953857,
+    "evidence_chars": 8160,
+    "answer_tokens_in": 3002,
+    "wall_s": 0.014,
+    "path": null
+   },
+   {
+    "id": "ho18",
+    "type": "routine",
+    "question": "How often do I go climbing?",
+    "gold": "About 1.6 times a week (Tuesdays and Fridays, sometimes Sundays)",
+    "answer": "You go climbing about 1.6 times per week—roughly once or twice a week.",
+    "score": 0.5,
+    "soft": 0.71,
+    "stores": [
+     "routines",
+     "facts",
+     "episodes",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.94,
+     "log": 0.87,
+     "episodes": 0.88,
+     "routines": 0.98,
+     "intentions": 0.12,
+     "preferences": 0.04,
+     "periods": 0.72
+    },
+    "route_latency_s": 2.5783920288085938,
+    "evidence_chars": 6729,
+    "answer_tokens_in": 2586,
+    "wall_s": 0.104,
+    "path": null
+   },
+   {
+    "id": "ho19",
+    "type": "prospective",
+    "question": "Do I still need to cancel my Czech phone plan?",
+    "gold": "No: it was done on Apr 28, 2026",
+    "answer": "No—you canceled your Czech phone plan on April 28, 2026.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "intentions",
+     "log",
+     "facts",
+     "periods"
+    ],
+    "route_p": {
+     "facts": 0.68,
+     "log": 0.9,
+     "episodes": 0.55,
+     "routines": 0.12,
+     "intentions": 0.97,
+     "preferences": 0.03,
+     "periods": 0.62
+    },
+    "route_latency_s": 2.7189409732818604,
+    "evidence_chars": 6888,
+    "answer_tokens_in": 2543,
+    "wall_s": 2.179,
+    "path": null
+   },
+   {
+    "id": "ho20",
+    "type": "prospective",
+    "question": "When was my dentist appointment in San Francisco?",
+    "gold": "June 3, 2026 at 9:30, with Dr. Lee at Castro Dental",
+    "answer": "Your dentist appointment in San Francisco was June 3, 2026, at 9:30 a.m. with Dr. Lee at Castro Dental.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "intentions",
+     "log",
+     "episodes",
+     "facts"
+    ],
+    "route_p": {
+     "facts": 0.55,
+     "log": 0.8,
+     "episodes": 0.7,
+     "routines": 0.03,
+     "intentions": 0.95,
+     "preferences": 0.01,
+     "periods": 0.08
+    },
+    "route_latency_s": 3.787993907928467,
+    "evidence_chars": 9074,
+    "answer_tokens_in": 3450,
+    "wall_s": 0.142,
+    "path": null
+   },
+   {
+    "id": "ho21",
+    "type": "prospective",
+    "question": "Did I send the Q2 investor update?",
+    "gold": "Yes, on Jul 3, 2026",
+    "answer": "Yes—you sent the Q2 investor update on July 3, 2026.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "episodes",
+     "log",
+     "intentions"
+    ],
+    "route_p": {
+     "facts": 0.18,
+     "log": 0.88,
+     "episodes": 0.93,
+     "routines": 0.05,
+     "intentions": 0.72,
+     "preferences": 0.02,
+     "periods": 0.12
+    },
+    "route_latency_s": 2.802618980407715,
+    "evidence_chars": 4001,
+    "answer_tokens_in": 1727,
+    "wall_s": 0.008,
+    "path": null
+   },
+   {
+    "id": "ho22",
+    "type": "preference",
+    "question": "Which movies did I rate 5/5?",
+    "gold": "Dune: Part Two, Flow, Hamnet, One Battle After Another, Past Lives, Perfect Days, Sentimental Value, The Wild Robot",
+    "answer": "You rated these movies 5/5: Sentimental Value, Past Lives, Flow, Dune: Part Two, The Wild Robot, Perfect Days, One Battle After Another, and Hamnet.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "preferences",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.99,
+     "log": 0.98,
+     "episodes": 0.35,
+     "routines": 0.02,
+     "intentions": 0.01,
+     "preferences": 0.99,
+     "periods": 0.08
+    },
+    "route_latency_s": 3.425689935684204,
+    "evidence_chars": 2590,
+    "answer_tokens_in": 1272,
+    "wall_s": 0.113,
+    "path": null
+   },
+   {
+    "id": "ho23",
+    "type": "preference",
+    "question": "How did I like Sapiens?",
+    "gold": "3/5",
+    "answer": "You rated *Sapiens* 3 out of 5.",
+    "score": 1.0,
+    "soft": 0.99,
+    "stores": [
+     "preferences",
+     "log",
+     "episodes"
+    ],
+    "route_p": {
+     "facts": 0.08,
+     "log": 0.95,
+     "episodes": 0.55,
+     "routines": 0.02,
+     "intentions": 0.01,
+     "preferences": 0.99,
+     "periods": 0.18
+    },
+    "route_latency_s": 4.473757982254028,
+    "evidence_chars": 2811,
+    "answer_tokens_in": 1315,
+    "wall_s": 0.006,
+    "path": null
+   },
+   {
+    "id": "ho24",
+    "type": "preference",
+    "question": "What did I think of Dune: Part Two?",
+    "gold": "Loved it: 5/5 (watched it three times)",
+    "answer": "You rated *Dune: Part Two* 5/5. You gave it that rating on August 24 and 26, 2024, and again on June 27, 2026.",
+    "score": 1.0,
+    "soft": 0.735,
+    "stores": [
+     "preferences",
+     "log",
+     "episodes"
+    ],
+    "route_p": {
+     "facts": 0.25,
+     "log": 0.95,
+     "episodes": 0.75,
+     "routines": 0.02,
+     "intentions": 0.02,
+     "preferences": 0.99,
+     "periods": 0.1
+    },
+    "route_latency_s": 3.782586097717285,
+    "evidence_chars": 4505,
+    "answer_tokens_in": 1935,
+    "wall_s": 0.006,
+    "path": null
+   },
+   {
+    "id": "ho25",
+    "type": "source",
+    "question": "What was the post-money valuation in the term sheet?",
+    "gold": "$15M",
+    "answer": "The term sheet listed a post-money valuation of **$15 million**.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "log",
+     "facts"
+    ],
+    "route_p": {
+     "facts": 0.78,
+     "log": 0.95,
+     "episodes": 0.28,
+     "routines": 0.01,
+     "intentions": 0.08,
+     "preferences": 0.01,
+     "periods": 0.12
+    },
+    "route_latency_s": 3.9722609519958496,
+    "evidence_chars": 3947,
+    "answer_tokens_in": 1600,
+    "wall_s": 0.097,
+    "path": null
+   },
+   {
+    "id": "ho26",
+    "type": "source",
+    "question": "What are the check-in and check-out dates of the Lisbon hotel?",
+    "gold": "Check-in May 22, check-out May 26, 2026 (Memmo Alfama)",
+    "answer": "Check-in is May 22, 2026, and check-out is May 26, 2026.",
+    "score": 1.0,
+    "soft": 0.955,
+    "stores": [
+     "log",
+     "intentions",
+     "episodes"
+    ],
+    "route_p": {
+     "facts": 0.24,
+     "log": 0.91,
+     "episodes": 0.68,
+     "routines": 0.03,
+     "intentions": 0.87,
+     "preferences": 0.02,
+     "periods": 0.08
+    },
+    "route_latency_s": 2.4531919956207275,
+    "evidence_chars": 4228,
+    "answer_tokens_in": 1821,
+    "wall_s": 0.012,
+    "path": null
+   },
+   {
+    "id": "ho27",
+    "type": "source",
+    "question": "What is my landlord's email address?",
+    "gold": "raj.gupta@gmail.com",
+    "answer": "Your landlord’s email address is raj.gupta@gmail.com.",
+    "score": 1.0,
+    "soft": 0.98,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.98,
+     "log": 0.92,
+     "episodes": 0.25,
+     "routines": 0.02,
+     "intentions": 0.08,
+     "preferences": 0.01,
+     "periods": 0.04
+    },
+    "route_latency_s": 4.383440017700195,
+    "evidence_chars": 3166,
+    "answer_tokens_in": 1332,
+    "wall_s": 0.083,
+    "path": null
+   },
+   {
+    "id": "ho28",
+    "type": "period",
+    "question": "Which gym was I climbing at when Nina joined Nebula?",
+    "gold": "Smíchoff, in Prague",
+    "answer": "Mission Cliffs. You joined in April 2026 and climbed there with Nina.",
+    "score": 0.0,
+    "soft": 0.0,
+    "stores": [
+     "episodes",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.25,
+     "log": 0.85,
+     "episodes": 0.9,
+     "routines": 0.08,
+     "intentions": 0.02,
+     "preferences": 0.02,
+     "periods": 0.15
+    },
+    "route_latency_s": 3.030066967010498,
+    "evidence_chars": 3782,
+    "answer_tokens_in": 1642,
+    "wall_s": 0.009,
+    "path": null
+   },
+   {
+    "id": "ho29",
+    "type": "period",
+    "question": "Where was I living when Oscar joined Nebula?",
+    "gold": "Prague (Jan 12, 2026)",
+    "answer": "You were living in Prague when Oscar joined Nebula on January 12, 2026.",
+    "score": 1.0,
+    "soft": 0.99,
+    "stores": [
+     "periods",
+     "episodes",
+     "facts",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.84,
+     "log": 0.82,
+     "episodes": 0.9,
+     "routines": 0.03,
+     "intentions": 0.02,
+     "preferences": 0.01,
+     "periods": 0.95
+    },
+    "route_latency_s": 3.865367889404297,
+    "evidence_chars": 9724,
+    "answer_tokens_in": 3505,
+    "wall_s": 0.069,
+    "path": null
+   },
+   {
+    "id": "ho30",
+    "type": "period",
+    "question": "What was going on in my life in May 2026?",
+    "gold": "Any three of: Eva got the job at Gensler (May 4) and moved to SF (May 20); the Lisbon trip with Eva (May 22-26); booked the Lisbon flights and hotel (May 2-3); finished Dune (May 11); Priya introduced me to Mark Chen (May 12)",
+    "answer": "In May 2026, you were settling into life in San Francisco after moving there in April, keeping up with running and climbing at Mission Cliffs, and tracking sleep and weight. Eva got a job at Gensler and moved to SF on May 20; you and Lucie took an amazing Lisbon trip May 22–26, and you finished *Dune*, started *Atomic Habits*, scheduled a June board meeting and dentist visit, and set a reminder to buy an engagement ring by July 10.",
+    "score": 0.5,
+    "soft": 0.465,
+    "stores": [
+     "periods",
+     "episodes",
+     "log",
+     "facts"
+    ],
+    "route_p": {
+     "facts": 0.78,
+     "log": 0.88,
+     "episodes": 0.92,
+     "routines": 0.35,
+     "intentions": 0.3,
+     "preferences": 0.2,
+     "periods": 0.98
+    },
+    "route_latency_s": 3.2296249866485596,
+    "evidence_chars": 9879,
+    "answer_tokens_in": 3609,
+    "wall_s": 0.038,
+    "path": null
+   },
+   {
+    "id": "ho31",
+    "type": "metamemory",
+    "question": "What's Klára's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.99,
+     "log": 0.98,
+     "episodes": 0.15,
+     "routines": 0.02,
+     "intentions": 0.08,
+     "preferences": 0.01,
+     "periods": 0.02
+    },
+    "route_latency_s": 2.9788918495178223,
+    "evidence_chars": 1727,
+    "answer_tokens_in": 898,
+    "wall_s": 0.034,
+    "path": null
+   },
+   {
+    "id": "ho32",
+    "type": "metamemory",
+    "question": "Where did Mark Chen work before Stripe?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "periods"
+    ],
+    "route_p": {
+     "facts": 0.98,
+     "log": 0.85,
+     "episodes": 0.3,
+     "routines": 0.05,
+     "intentions": 0.02,
+     "preferences": 0.01,
+     "periods": 0.55
+    },
+    "route_latency_s": 3.446787118911743,
+    "evidence_chars": 4850,
+    "answer_tokens_in": 1765,
+    "wall_s": 0.025,
+    "path": null
+   },
+   {
+    "id": "ho33",
+    "type": "metamemory",
+    "question": "What is my passport number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.01,
+     "log": 0.7,
+     "episodes": 0.08,
+     "routines": 0.0,
+     "intentions": 0.02,
+     "preferences": 0.0,
+     "periods": 0.01
+    },
+    "route_latency_s": 3.4555389881134033,
+    "evidence_chars": 598,
+    "answer_tokens_in": 513,
+    "wall_s": 0.007,
+    "path": null
+   },
+   {
+    "id": "ho34",
+    "type": "forgotten",
+    "question": "What's the number of the guy from Rohlik I met at a meetup?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 0.8,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.96,
+     "log": 0.83,
+     "episodes": 0.31,
+     "routines": 0.02,
+     "intentions": 0.04,
+     "preferences": 0.01,
+     "periods": 0.03
+    },
+    "route_latency_s": 3.077294111251831,
+    "evidence_chars": 2482,
+    "answer_tokens_in": 1157,
+    "wall_s": 0.038,
+    "path": null
+   },
+   {
+    "id": "ho35",
+    "type": "forgotten",
+    "question": "What is Marco's number again?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 0.86,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": {
+     "facts": 0.99,
+     "log": 0.96,
+     "episodes": 0.09999999999999998,
+     "routines": 0.010000000000000009,
+     "intentions": 0.010000000000000009,
+     "preferences": 0.010000000000000009,
+     "periods": 0.010000000000000009
+    },
+    "route_latency_s": 3.2575857639312744,
+    "evidence_chars": 1244,
+    "answer_tokens_in": 715,
+    "wall_s": 0.036,
+    "path": null
+   },
+   {
+    "id": "ho36",
+    "type": "forgotten",
+    "question": "Where does Jan Dvořák work?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 0.83,
+    "stores": [
+     "facts",
+     "log",
+     "periods"
+    ],
+    "route_p": {
+     "facts": 0.99,
+     "log": 0.85,
+     "episodes": 0.25,
+     "routines": 0.05,
+     "intentions": 0.03,
+     "preferences": 0.02,
+     "periods": 0.55
+    },
+    "route_latency_s": 3.4424569606781006,
+    "evidence_chars": 5380,
+    "answer_tokens_in": 2042,
+    "wall_s": 0.032,
+    "path": null
+   }
+  ],
+  "n": 36,
+  "accuracy": 86.1,
+  "nominal_cost": 0.02644,
+  "answer_cost": 0.01945,
+  "new_spend": 0.00098
+ },
+ "brain_oracle": {
+  "rows": [
+   {
+    "id": "ho01",
+    "type": "semantic_current",
+    "question": "What is David Mokos's email?",
+    "gold": "david@nebula.ai",
+    "answer": "David Mokos's email is david@nebula.ai.",
+    "score": 1.0,
+    "soft": 0.99,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 3479,
+    "answer_tokens_in": 1515,
+    "wall_s": 0.068,
+    "path": null
+   },
+   {
+    "id": "ho02",
+    "type": "semantic_current",
+    "question": "Who is my landlord?",
+    "gold": "Raj Gupta (+1 415 555 0187)",
+    "answer": "Your landlord is Raj Gupta.",
+    "score": 1.0,
+    "soft": 0.945,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1921,
+    "answer_tokens_in": 923,
+    "wall_s": 0.076,
+    "path": null
+   },
+   {
+    "id": "ho03",
+    "type": "semantic_current",
+    "question": "Where does Ondra work?",
+    "gold": "Productboard",
+    "answer": "Ondra (Ondřej Král) works at Productboard.",
+    "score": 1.0,
+    "soft": 0.995,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 3274,
+    "answer_tokens_in": 1463,
+    "wall_s": 0.209,
+    "path": null
+   },
+   {
+    "id": "ho04",
+    "type": "semantic_history",
+    "question": "Where did Klára live in December 2025?",
+    "gold": "Berlin",
+    "answer": "Klára lived in Berlin in December 2025.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2596,
+    "answer_tokens_in": 1221,
+    "wall_s": 0.061,
+    "path": null
+   },
+   {
+    "id": "ho05",
+    "type": "semantic_history",
+    "question": "What was Eva to me before we got engaged?",
+    "gold": "My girlfriend",
+    "answer": "I don’t know. The evidence says you and Eva got engaged on July 12, 2026, but it doesn’t say what she was to you before then.",
+    "score": 0.0,
+    "soft": 0.04,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 3177,
+    "answer_tokens_in": 1371,
+    "wall_s": 0.2,
+    "path": null
+   },
+   {
+    "id": "ho06",
+    "type": "semantic_history",
+    "question": "What was Tom's phone number in 2025?",
+    "gold": "+420 777 123 456 (he changed it on Feb 10, 2026)",
+    "answer": "Tom’s phone number in 2025 was +420 777 123 456.",
+    "score": 1.0,
+    "soft": 0.975,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2596,
+    "answer_tokens_in": 1187,
+    "wall_s": 0.094,
+    "path": null
+   },
+   {
+    "id": "ho07",
+    "type": "aggregate",
+    "question": "How much did I spend on lunch in Prague in 2025?",
+    "gold": "64,729 CZK (227 lunches)",
+    "answer": "You spent **1,225 CZK** on lunch in Prague in 2025 (310 + 265 + 265 + 385 CZK).",
+    "score": 0.0,
+    "soft": 0.02,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2736,
+    "answer_tokens_in": 1222,
+    "wall_s": 0.211,
+    "path": null
+   },
+   {
+    "id": "ho08",
+    "type": "aggregate",
+    "question": "How many movies did I watch in 2025?",
+    "gold": "39",
+    "answer": "You watched 39 movies in 2025.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1254,
+    "answer_tokens_in": 746,
+    "wall_s": 0.231,
+    "path": null
+   },
+   {
+    "id": "ho09",
+    "type": "aggregate",
+    "question": "How many times did I go running in August 2026?",
+    "gold": "5",
+    "answer": "You went running 5 times in August 2026.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2285,
+    "answer_tokens_in": 1029,
+    "wall_s": 0.19,
+    "path": null
+   },
+   {
+    "id": "ho10",
+    "type": "episodic_event",
+    "question": "What did I do on November 29, 2024?",
+    "gold": "Coffee at Doubleshot, lunch at Bistro Monk, climbing at Smíchoff with Tom, dinner at Maso a Kobliha with Tom (1,560 CZK), drinks with Tom at U Hrocha, ordered climbing shoes from Decathlon, Bolt home",
+    "answer": "On November 29, 2024, you weighed 74.1 kg and slept 7 hours. You had coffee at Doubleshot (110 CZK), then dinner with Tom at Maso a Kobliha (1,560 Kč) and drinks with him at U Hrocha (270 CZK); you also noted the previous day’s lunch and flat white.",
+    "score": 0.5,
+    "soft": 0.47,
+    "stores": [
+     "episodes",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 4203,
+    "answer_tokens_in": 1828,
+    "wall_s": 1.947,
+    "path": null
+   },
+   {
+    "id": "ho11",
+    "type": "episodic_event",
+    "question": "Who did I have dinner with on August 5, 2026, and where?",
+    "gold": "David (David Mokos), at Zuni Café ($135.40)",
+    "answer": "You had dinner with David at Zuni Café.",
+    "score": 1.0,
+    "soft": 0.895,
+    "stores": [
+     "episodes",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 3756,
+    "answer_tokens_in": 1691,
+    "wall_s": 0.022,
+    "path": null
+   },
+   {
+    "id": "ho12",
+    "type": "episodic_event",
+    "question": "What happened on February 20, 2026?",
+    "gold": "We closed the seed round: $3M led by Northwind Ventures (Sarah Kim); I also went climbing with Tom",
+    "answer": "On February 20, you slept 7 hours, had coffee at Café Lounge for 95 CZK and lunch at Kantýna for 189 CZK; you also noted lunch at Lokál for 229 CZK the day before. You announced the $3M seed round closed, led by Northwind Ventures (Sarah Kim), went climbing at Smíchoff with Tom, and had drinks with Dave at Vinograf for 390 Kč.",
+    "score": 1.0,
+    "soft": 0.85,
+    "stores": [
+     "episodes",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 4697,
+    "answer_tokens_in": 1931,
+    "wall_s": 1.776,
+    "path": null
+   },
+   {
+    "id": "ho13",
+    "type": "episodic_time",
+    "question": "When did Nina Rossi start at Nebula?",
+    "gold": "March 1, 2026",
+    "answer": "Nina Rossi started at Nebula on March 1, 2026.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "episodes",
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 7417,
+    "answer_tokens_in": 2889,
+    "wall_s": 1.234,
+    "path": null
+   },
+   {
+    "id": "ho14",
+    "type": "episodic_time",
+    "question": "When did I finish Project Hail Mary?",
+    "gold": "December 31, 2025",
+    "answer": "You finished Project Hail Mary on December 31, 2025.",
+    "score": 1.0,
+    "soft": 0.95,
+    "stores": [
+     "episodes",
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 5476,
+    "answer_tokens_in": 2259,
+    "wall_s": 1.214,
+    "path": null
+   },
+   {
+    "id": "ho15",
+    "type": "episodic_time",
+    "question": "When did Klára move to London?",
+    "gold": "June 2026 (I mentioned it on June 10, 2026)",
+    "answer": "Klára moved to London on June 10, 2026, for her new job.",
+    "score": 1.0,
+    "soft": 0.91,
+    "stores": [
+     "episodes",
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 6402,
+    "answer_tokens_in": 2528,
+    "wall_s": 1.246,
+    "path": null
+   },
+   {
+    "id": "ho16",
+    "type": "routine",
+    "question": "Which days do I usually buy groceries?",
+    "gold": "Wednesdays and Saturdays",
+    "answer": "You usually buy groceries on Wednesdays and Saturdays.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "routines"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 631,
+    "answer_tokens_in": 469,
+    "wall_s": 0.702,
+    "path": null
+   },
+   {
+    "id": "ho17",
+    "type": "routine",
+    "question": "Where did I usually get coffee in Prague?",
+    "gold": "A rotation of cafés, most often Café Savoy, EMA Espresso Bar and Kafe Francin (also Café Lounge, Doubleshot)",
+    "answer": "In Prague, you most often got coffee at Café Savoy, Kafe Francin, and EMA Espresso Bar—each accounted for about 13% of your coffee expenses.",
+    "score": 0.5,
+    "soft": 0.585,
+    "stores": [
+     "routines"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2162,
+    "answer_tokens_in": 965,
+    "wall_s": 1.123,
+    "path": null
+   },
+   {
+    "id": "ho18",
+    "type": "routine",
+    "question": "How often do I go climbing?",
+    "gold": "About 1.6 times a week (Tuesdays and Fridays, sometimes Sundays)",
+    "answer": "You go climbing about 1.6 times a week—roughly once or twice weekly. This has been consistent in both Prague and San Francisco.",
+    "score": 0.5,
+    "soft": 0.69,
+    "stores": [
+     "routines"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1565,
+    "answer_tokens_in": 759,
+    "wall_s": 1.136,
+    "path": null
+   },
+   {
+    "id": "ho19",
+    "type": "prospective",
+    "question": "Do I still need to cancel my Czech phone plan?",
+    "gold": "No: it was done on Apr 28, 2026",
+    "answer": "No—you canceled your Czech phone plan on April 28, 2026.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "intentions"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1253,
+    "answer_tokens_in": 737,
+    "wall_s": 0.839,
+    "path": null
+   },
+   {
+    "id": "ho20",
+    "type": "prospective",
+    "question": "When was my dentist appointment in San Francisco?",
+    "gold": "June 3, 2026 at 9:30, with Dr. Lee at Castro Dental",
+    "answer": "Your dentist appointment with Dr. Lee was June 3, 2026, at 9:30 a.m. at Castro Dental in San Francisco.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "intentions"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1172,
+    "answer_tokens_in": 677,
+    "wall_s": 0.88,
+    "path": null
+   },
+   {
+    "id": "ho21",
+    "type": "prospective",
+    "question": "Did I send the Q2 investor update?",
+    "gold": "Yes, on Jul 3, 2026",
+    "answer": "Yes. The Q2 investor update was marked done on July 3, 2026.",
+    "score": 1.0,
+    "soft": 0.985,
+    "stores": [
+     "intentions"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 183,
+    "answer_tokens_in": 341,
+    "wall_s": 0.851,
+    "path": null
+   },
+   {
+    "id": "ho22",
+    "type": "preference",
+    "question": "Which movies did I rate 5/5?",
+    "gold": "Dune: Part Two, Flow, Hamnet, One Battle After Another, Past Lives, Perfect Days, Sentimental Value, The Wild Robot",
+    "answer": "Sentimental Value, Past Lives, Flow, Dune: Part Two, The Wild Robot, Perfect Days, One Battle After Another, and Hamnet.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "preferences",
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1990,
+    "answer_tokens_in": 1028,
+    "wall_s": 0.007,
+    "path": null
+   },
+   {
+    "id": "ho23",
+    "type": "preference",
+    "question": "How did I like Sapiens?",
+    "gold": "3/5",
+    "answer": "You rated *Sapiens* 3/5.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "preferences",
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 591,
+    "answer_tokens_in": 477,
+    "wall_s": 1.766,
+    "path": null
+   },
+   {
+    "id": "ho24",
+    "type": "preference",
+    "question": "What did I think of Dune: Part Two?",
+    "gold": "Loved it: 5/5 (watched it three times)",
+    "answer": "You rated *Dune: Part Two* 5/5. You recorded that rating on August 24 and 26, 2024, and again on June 27, 2026.",
+    "score": 0.5,
+    "soft": 0.72,
+    "stores": [
+     "preferences",
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2123,
+    "answer_tokens_in": 1075,
+    "wall_s": 1.395,
+    "path": null
+   },
+   {
+    "id": "ho25",
+    "type": "source",
+    "question": "What was the post-money valuation in the term sheet?",
+    "gold": "$15M",
+    "answer": "The term sheet listed a post-money valuation of **$15 million**.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "log",
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 3947,
+    "answer_tokens_in": 1600,
+    "wall_s": 0.01,
+    "path": null
+   },
+   {
+    "id": "ho26",
+    "type": "source",
+    "question": "What are the check-in and check-out dates of the Lisbon hotel?",
+    "gold": "Check-in May 22, check-out May 26, 2026 (Memmo Alfama)",
+    "answer": "Check-in is May 22, 2026, and check-out is May 26, 2026.",
+    "score": 1.0,
+    "soft": 0.955,
+    "stores": [
+     "log",
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 3646,
+    "answer_tokens_in": 1574,
+    "wall_s": 0.02,
+    "path": null
+   },
+   {
+    "id": "ho27",
+    "type": "source",
+    "question": "What is my landlord's email address?",
+    "gold": "raj.gupta@gmail.com",
+    "answer": "Your landlord’s email address is raj.gupta@gmail.com.",
+    "score": 1.0,
+    "soft": 0.98,
+    "stores": [
+     "log",
+     "facts"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 3166,
+    "answer_tokens_in": 1332,
+    "wall_s": 0.027,
+    "path": null
+   },
+   {
+    "id": "ho28",
+    "type": "period",
+    "question": "Which gym was I climbing at when Nina joined Nebula?",
+    "gold": "Smíchoff, in Prague",
+    "answer": "You were climbing at Smíchoff when Nina joined Nebula.",
+    "score": 1.0,
+    "soft": 0.845,
+    "stores": [
+     "periods",
+     "facts",
+     "episodes"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 9383,
+    "answer_tokens_in": 3425,
+    "wall_s": 1.023,
+    "path": null
+   },
+   {
+    "id": "ho29",
+    "type": "period",
+    "question": "Where was I living when Oscar joined Nebula?",
+    "gold": "Prague (Jan 12, 2026)",
+    "answer": "You were living in Prague when Oscar joined Nebula on January 12, 2026.",
+    "score": 1.0,
+    "soft": 0.99,
+    "stores": [
+     "periods",
+     "facts",
+     "episodes"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 8635,
+    "answer_tokens_in": 3090,
+    "wall_s": 0.811,
+    "path": null
+   },
+   {
+    "id": "ho30",
+    "type": "period",
+    "question": "What was going on in my life in May 2026?",
+    "gold": "Any three of: Eva got the job at Gensler (May 4) and moved to SF (May 20); the Lisbon trip with Eva (May 22-26); booked the Lisbon flights and hotel (May 2-3); finished Dune (May 11); Priya introduced me to Mark Chen (May 12)",
+    "answer": "In May 2026, you were settling into your new life in San Francisco, running and climbing regularly, and tracking sleep and weight. Eva got a job at Gensler and planned to move to SF on May 20; you and Lucie took a Lisbon trip May 22–26, and you finished *Dune*, started *Atomic Habits*, scheduled a June board meeting and dentist appointment, and set a reminder to buy an engagement ring by July 10.",
+    "score": 0.5,
+    "soft": 0.49,
+    "stores": [
+     "periods",
+     "facts",
+     "episodes"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 9279,
+    "answer_tokens_in": 3390,
+    "wall_s": 1.775,
+    "path": null
+   },
+   {
+    "id": "ho31",
+    "type": "metamemory",
+    "question": "What's Klára's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1727,
+    "answer_tokens_in": 898,
+    "wall_s": 0.017,
+    "path": null
+   },
+   {
+    "id": "ho32",
+    "type": "metamemory",
+    "question": "Where did Mark Chen work before Stripe?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2033,
+    "answer_tokens_in": 946,
+    "wall_s": 0.012,
+    "path": null
+   },
+   {
+    "id": "ho33",
+    "type": "metamemory",
+    "question": "What is my passport number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1314,
+    "answer_tokens_in": 747,
+    "wall_s": 0.015,
+    "path": null
+   },
+   {
+    "id": "ho34",
+    "type": "forgotten",
+    "question": "What's the number of the guy from Rohlik I met at a meetup?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 0.8,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2482,
+    "answer_tokens_in": 1157,
+    "wall_s": 0.021,
+    "path": null
+   },
+   {
+    "id": "ho35",
+    "type": "forgotten",
+    "question": "What is Marco's number again?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 0.86,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 1244,
+    "answer_tokens_in": 715,
+    "wall_s": 0.123,
+    "path": null
+   },
+   {
+    "id": "ho36",
+    "type": "forgotten",
+    "question": "Where does Jan Dvořák work?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "soft": 0.83,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "route_p": null,
+    "route_latency_s": null,
+    "evidence_chars": 2633,
+    "answer_tokens_in": 1216,
+    "wall_s": 0.115,
+    "path": null
+   }
+  ],
+  "n": 36,
+  "accuracy": 87.5,
+  "nominal_cost": 0.0175,
+  "answer_cost": 0.01674,
+  "new_spend": 0.00321
+ }
+}

@@ -1,0 +1,9 @@
+{
+ "dropped_before": 26,
+ "replanned_with_ops": 11,
+ "dropped_after": 15,
+ "migrations": [],
+ "candidate_pairs": 1,
+ "merges": [],
+ "cost": 0.022
+}

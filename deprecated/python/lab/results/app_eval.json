@@ -1,0 +1,2256 @@
+{
+ "before": {
+  "summary": {
+   "all": 0.6667,
+   "same": 0.775,
+   "reworded": 0.7,
+   "novel": 0.44,
+   "logged_shapes": 0.7375,
+   "no_view": 12,
+   "view_but_wrong": 23
+  },
+  "rows": [
+   {
+    "id": "f001",
+    "group": "same",
+    "template": "spend_kind",
+    "question": "How much did I spend on rides in November 2024?",
+    "gold": "4,320 CZK (17 purchases)",
+    "app": "4320.00 CZK",
+    "how": "tile2",
+    "score": 1.0
+   },
+   {
+    "id": "f002",
+    "group": "same",
+    "template": "spend_kind",
+    "question": "What was my total drinks at bars spend in June 2025?",
+    "gold": "2,800 CZK (8 purchases)",
+    "app": "2800.00 CZK",
+    "how": "tile1",
+    "score": 1.0
+   },
+   {
+    "id": "f003",
+    "group": "same",
+    "template": "spend_kind",
+    "question": "How much did I spend on dinner in 2024?",
+    "gold": "133,150 CZK (77 purchases)",
+    "app": "126390.00 CZK",
+    "how": "tile1",
+    "score": 0.0
+   },
+   {
+    "id": "f004",
+    "group": "same",
+    "template": "spend_kind",
+    "question": "What was my total coffee spend in 2025?",
+    "gold": "34,875 CZK (380 purchases)",
+    "app": "34750.00 CZK",
+    "how": "tile2",
+    "score": 1.0
+   },
+   {
+    "id": "f005",
+    "group": "reworded",
+    "template": "spend_kind",
+    "question": "In 2024, how much money went on lunch?",
+    "gold": "48,451 CZK (174 purchases)",
+    "app": "47681.00 CZK",
+    "how": "tile1",
+    "score": 0.0
+   },
+   {
+    "id": "f006",
+    "group": "reworded",
+    "template": "spend_kind",
+    "question": "Total I paid for drinks at bars in May 2026?",
+    "gold": "110.66 USD (2 purchases)",
+    "app": "110.66 USD",
+    "how": "tile1",
+    "score": 1.0
+   },
+   {
+    "id": "f007",
+    "group": "reworded",
+    "template": "spend_kind",
+    "question": "In 2024, how much money went on lunches out?",
+    "gold": "48,451 CZK (174 purchases)",
+    "app": "47681.00 CZK",
+    "how": "tile1",
+    "score": 0.0
+   },
+   {
+    "id": "f008",
+    "group": "reworded",
+    "template": "spend_kind",
+    "question": "Total I paid for things I ordered or bought in shops last month?",
+    "gold": "365.04 USD (3 purchases)",
+    "app": "365.04 USD",
+    "how": "tile2",
+    "score": 1.0
+   },
+   {
+    "id": "f009",
+    "group": "same",
+    "template": "count_kind",
+    "question": "How many times did I eat lunch out in November 2024?",
+    "gold": "22",
+    "app": "22",
+    "how": "tile3",
+    "score": 1.0
+   },
+   {
+    "id": "f010",
+    "group": "same",
+    "template": "count_kind",
+    "question": "How often did I do a grocery run in April 2024?",
+    "gold": "8",
+    "app": "10",
+    "how": "tile4",
+    "score": 0.0
+   },
+   {
+    "id": "f011",
+    "group": "same",
+    "template": "count_kind",
+    "question": "How many times did I go out for drinks in 2024?",
+    "gold": "42",
+    "app": "41",
+    "how": "tile3",
+    "score": 0.0
+   },
+   {
+    "id": "f012",
+    "group": "same",
+    "template": "count_kind",
+    "question": "How often did I do a grocery run in August 2025?",
+    "gold": "9",
+    "app": "8",
+    "how": "tile4",
+    "score": 0.0
+   },
+   {
+    "id": "f013",
+    "group": "reworded",
+    "template": "count_kind",
+    "question": "In 2024, how many times did I grab a coffee?",
+    "gold": "289",
+    "app": "287",
+    "how": "tile4",
+    "score": 0.0
+   },
+   {
+    "id": "f014",
+    "group": "reworded",
+    "template": "count_kind",
+    "question": "Number of times I did go to a restaurant for dinner in May 2024?",
+    "gold": "10",
+    "app": "9",
+    "how": "tile3",
+    "score": 0.0
+   },
+   {
+    "id": "f015",
+    "group": "reworded",
+    "template": "count_kind",
+    "question": "In 2024, how many times did I use Uber or Bolt?",
+    "gold": "151",
+    "app": "151",
+    "how": "tile4",
+    "score": 1.0
+   },
+   {
+    "id": "f016",
+    "group": "reworded",
+    "template": "count_kind",
+    "question": "Number of times I did go to a bar last month?",
+    "gold": "4",
+    "app": "4",
+    "how": "tile3",
+    "score": 1.0
+   },
+   {
+    "id": "f017",
+    "group": "same",
+    "template": "count_merchant",
+    "question": "How many times did I go to Bistro Monk this year?",
+    "gold": "13",
+    "app": "13",
+    "how": "tile6",
+    "score": 1.0
+   },
+   {
+    "id": "f018",
+    "group": "same",
+    "template": "count_merchant",
+    "question": "How many visits to Kantýna in July 2024?",
+    "gold": "3",
+    "app": "3",
+    "how": "tile6",
+    "score": 1.0
+   },
+   {
+    "id": "f019",
+    "group": "same",
+    "template": "count_merchant",
+    "question": "How many times did I go to Kantýna in 2025?",
+    "gold": "41",
+    "app": "41",
+    "how": "tile6",
+    "score": 1.0
+   },
+   {
+    "id": "f020",
+    "group": "same",
+    "template": "count_merchant",
+    "question": "How many visits to Doubleshot in January 2026?",
+    "gold": "5",
+    "app": "5",
+    "how": "tile6",
+    "score": 1.0
+   },
+   {
+    "id": "f021",
+    "group": "reworded",
+    "template": "count_merchant",
+    "question": "How often was I at Ritual Coffee in July 2026?",
+    "gold": "9",
+    "app": "9",
+    "how": "tile6",
+    "score": 1.0
+   },
+   {
+    "id": "f022",
+    "group": "reworded",
+    "template": "count_merchant",
+    "question": "how many times was I at Philz Coffee?",
+    "gold": "34",
+    "app": "34",
+    "how": "tile6",
+    "score": 1.0
+   },
+   {
+    "id": "f023",
+    "group": "reworded",
+    "template": "count_merchant",
+    "question": "How often was I at Café Savoy in 2024?",
+    "gold": "55",
+    "app": "55",
+    "how": "tile6",
+    "score": 1.0
+   },
+   {
+    "id": "f024",
+    "group": "reworded",
+    "template": "count_merchant",
+    "question": "This year, how many times was I at Souvla?",
+    "gold": "26",
+    "app": "26",
+    "how": "tile6",
+    "score": 1.0
+   },
+   {
+    "id": "f025",
+    "group": "same",
+    "template": "spend_merchant",
+    "question": "How much did I spend at Můj šálek kávy this year?",
+    "gold": "1,155 CZK (12 purchases)",
+    "app": "1155.00 CZK",
+    "how": "tile7",
+    "score": 1.0
+   },
+   {
+    "id": "f026",
+    "group": "same",
+    "template": "spend_merchant",
+    "question": "What did I spend in total at Bolt?",
+    "gold": "93,390 CZK (402 purchases)",
+    "app": "93390.00 CZK",
+    "how": "tile7",
+    "score": 1.0
+   },
+   {
+    "id": "f027",
+    "group": "same",
+    "template": "spend_merchant",
+    "question": "How much did I spend at EMA Espresso Bar in September 2024?",
+    "gold": "285 CZK (3 purchases)",
+    "app": "285.00 CZK",
+    "how": "tile7",
+    "score": 1.0
+   },
+   {
+    "id": "f028",
+    "group": "same",
+    "template": "spend_merchant",
+    "question": "What did I spend in total at Doubleshot this year?",
+    "gold": "1,175 CZK (13 purchases)",
+    "app": "1175.00 CZK",
+    "how": "tile7",
+    "score": 1.0
+   },
+   {
+    "id": "f029",
+    "group": "reworded",
+    "template": "spend_merchant",
+    "question": "In 2025, how much did I pay at Albert?",
+    "gold": "55,690 CZK (50 purchases)",
+    "app": "55690.00 CZK",
+    "how": "tile7",
+    "score": 1.0
+   },
+   {
+    "id": "f030",
+    "group": "reworded",
+    "template": "spend_merchant",
+    "question": "How much money did I leave at Anonymous Bar in 2024?",
+    "gold": "2,830 CZK (10 purchases)",
+    "app": "2830.00 CZK",
+    "how": "tile7",
+    "score": 1.0
+   },
+   {
+    "id": "f031",
+    "group": "reworded",
+    "template": "spend_merchant",
+    "question": "In 2024, how much did I pay at Kavárna Místo?",
+    "gold": "1,860 CZK (23 purchases)",
+    "app": "1860.00 CZK",
+    "how": "tile7",
+    "score": 1.0
+   },
+   {
+    "id": "f032",
+    "group": "reworded",
+    "template": "spend_merchant",
+    "question": "How much money did I leave at Můj šálek kávy this year?",
+    "gold": "1,155 CZK (12 purchases)",
+    "app": "1155.00 CZK",
+    "how": "tile7",
+    "score": 1.0
+   },
+   {
+    "id": "f033",
+    "group": "same",
+    "template": "max_kind_city",
+    "question": "What's the most I've spent on a single coffee in San Francisco?",
+    "gold": "6.75 USD at Ritual Coffee on 2026-04-12",
+    "app": "6.75 USD",
+    "how": "tile9",
+    "score": 1.0
+   },
+   {
+    "id": "f034",
+    "group": "same",
+    "template": "max_kind_city",
+    "question": "What was my most expensive night of drinks in San Francisco?",
+    "gold": "59.45 USD at Trick Dog on 2026-06-03",
+    "app": null,
+    "how": "no tile",
+    "score": 0.0
+   },
+   {
+    "id": "f035",
+    "group": "same",
+    "template": "max_kind_city",
+    "question": "What's the most I've spent on a single lunch in San Francisco?",
+    "gold": "26.50 USD at The Grove on 2026-04-13",
+    "app": null,
+    "how": "no tile",
+    "score": 0.0
+   },
+   {
+    "id": "f036",
+    "group": "same",
+    "template": "max_kind_city",
+    "question": "What was my most expensive dinner in San Francisco?",
+    "gold": "135.40 USD at Foreign Cinema on 2026-05-10",
+    "app": null,
+    "how": "no tile",
+    "score": 0.0
+   },
+   {
+    "id": "f037",
+    "group": "reworded",
+    "template": "max_kind_city",
+    "question": "Priciest night of drinks I had in Prague?",
+    "gold": "450.00 CZK at Vinograf on 2024-06-09",
+    "app": null,
+    "how": "no tile",
+    "score": 0.0
+   },
+   {
+    "id": "f038",
+    "group": "reworded",
+    "template": "max_kind_city",
+    "question": "Biggest bill for a lunch in Prague?",
+    "gold": "385.00 CZK at Pho Vietnam on 2024-04-01",
+    "app": null,
+    "how": "no tile",
+    "score": 0.0
+   },
+   {
+    "id": "f039",
+    "group": "reworded",
+    "template": "max_kind_city",
+    "question": "Priciest ride I had in Prague?",
+    "gold": "380.00 CZK at Bolt on 2024-06-04",
+    "app": "380.0 CZK",
+    "how": "tile9",
+    "score": 1.0
+   },
+   {
+    "id": "f040",
+    "group": "reworded",
+    "template": "max_kind_city",
+    "question": "Biggest bill for a night of drinks in San Francisco?",
+    "gold": "59.45 USD at Trick Dog on 2026-06-03",
+    "app": null,
+    "how": "no tile",
+    "score": 0.0
+   },
+   {
+    "id": "f041",
+    "group": "same",
+    "template": "avg_kind",
+    "question": "What's my average night of drinks bill in February 2025?",
+    "gold": "153.33 CZK (average of 3)",
+    "app": "153.33 CZK",
+    "how": "tile10",
+    "score": 1.0
+   },
+   {
+    "id": "f042",
+    "group": "same",
+    "template": "avg_kind",
+    "question": "How much did a coffee cost me on average last month?",
+    "gold": "5.75 USD (average of 38)",
+    "app": "5.76 USD",
+    "how": "tile11",
+    "score": 1.0
+   },
+   {
+    "id": "f043",
+    "group": "same",
+    "template": "avg_kind",
+    "question": "What's my average ride bill in July 2026?",
+    "gold": "22.31 USD (average of 16)",
+    "app": "22.31 USD",
+    "how": "tile11",
+    "score": 1.0
+   },
+   {
+    "id": "f044",
+    "group": "same",
+    "template": "avg_kind",
+    "question": "How much did a ride cost me on average in 2024?",
+    "gold": "237.02 CZK (average of 151)",
+    "app": "237.02 CZK",
+    "how": "tile11",
+    "score": 1.0
+   },
+   {
+    "id": "f045",
+    "group": "reworded",
+    "template": "avg_kind",
+    "question": "Last month, what did I typically pay for a dinner?",
+    "gold": "102.19 USD (average of 7)",
+    "app": "102.19 USD",
+    "how": "tile10",
+    "score": 1.0
+   },
+   {
+    "id": "f046",
+    "group": "reworded",
+    "template": "avg_kind",
+    "question": "Average price of a coffee in September 2025?",
+    "gold": "91.89 CZK (average of 37)",
+    "app": "91.89 CZK",
+    "how": "tile11",
+    "score": 1.0
+   },
+   {
+    "id": "f047",
+    "group": "reworded",
+    "template": "avg_kind",
+    "question": "In March 2026, what did I typically pay for a grocery run?",
+    "gold": "1,311.25 CZK (average of 8)",
+    "app": "1387.67 CZK",
+    "how": "tile11",
+    "score": 0.0
+   },
+   {
+    "id": "f048",
+    "group": "reworded",
+    "template": "avg_kind",
+    "question": "Average price of a lunch in February 2025?",
+    "gold": "298.95 CZK (average of 19)",
+    "app": "298.95 CZK",
+    "how": "tile10",
+    "score": 1.0
+   },
+   {
+    "id": "f049",
+    "group": "same",
+    "template": "avg_sleep",
+    "question": "What was my average sleep in November 2024?",
+    "gold": "7.02 hours (30 nights)",
+    "app": "7.02",
+    "how": "tile12",
+    "score": 1.0
+   },
+   {
+    "id": "f050",
+    "group": "same",
+    "template": "avg_sleep",
+    "question": "How many hours did I sleep on average in February 2026?",
+    "gold": "6.98 hours (24 nights)",
+    "app": "6.98",
+    "how": "tile12",
+    "score": 1.0
+   },
+   {
+    "id": "f051",
+    "group": "same",
+    "template": "avg_sleep",
+    "question": "What was my average sleep in July 2025?",
+    "gold": "7.31 hours (25 nights)",
+    "app": "7.31",
+    "how": "tile12",
+    "score": 1.0
+   },
+   {
+    "id": "f052",
+    "group": "same",
+    "template": "avg_sleep",
+    "question": "How many hours did I sleep on average in July 2026?",
+    "gold": "6.99 hours (30 nights)",
+    "app": "6.99",
+    "how": "tile12",
+    "score": 1.0
+   },
+   {
+    "id": "f053",
+    "group": "reworded",
+    "template": "avg_sleep",
+    "question": "In February 2026, how long did I sleep per night?",
+    "gold": "6.98 hours (24 nights)",
+    "app": "6.98",
+    "how": "tile12",
+    "score": 1.0
+   },
+   {
+    "id": "f054",
+    "group": "reworded",
+    "template": "avg_sleep",
+    "question": "Average hours of sleep in June 2025?",
+    "gold": "6.92 hours (27 nights)",
+    "app": "6.92",
+    "how": "tile12",
+    "score": 1.0
+   },
+   {
+    "id": "f055",
+    "group": "reworded",
+    "template": "avg_sleep",
+    "question": "In December 2024, how long did I sleep per night?",
+    "gold": "7.02 hours (30 nights)",
+    "app": "7.02",
+    "how": "tile12",
+    "score": 1.0
+   },
+   {
+    "id": "f056",
+    "group": "reworded",
+    "template": "avg_sleep",
+    "question": "Average hours of sleep in February 2026?",
+    "gold": "6.98 hours (24 nights)",
+    "app": "6.98",
+    "how": "tile12",
+    "score": 1.0
+   },
+   {
+    "id": "f057",
+    "group": "same",
+    "template": "min_weight",
+    "question": "What was my lowest weight in December 2025?",
+    "gold": "74.8 kg (2025-12-27)",
+    "app": "74.8",
+    "how": "tile14",
+    "score": 1.0
+   },
+   {
+    "id": "f058",
+    "group": "same",
+    "template": "min_weight",
+    "question": "What's the least I weighed in June 2026?",
+    "gold": "74.5 kg (2026-06-10)",
+    "app": "74.5",
+    "how": "tile14",
+    "score": 1.0
+   },
+   {
+    "id": "f059",
+    "group": "same",
+    "template": "min_weight",
+    "question": "What was my lowest weight in July 2025?",
+    "gold": "74.6 kg (2025-07-10)",
+    "app": "74.6",
+    "how": "tile14",
+    "score": 1.0
+   },
+   {
+    "id": "f060",
+    "group": "same",
+    "template": "min_weight",
+    "question": "What's the least I weighed in January 2026?",
+    "gold": "74.5 kg (2026-01-27)",
+    "app": "74.5",
+    "how": "tile14",
+    "score": 1.0
+   },
+   {
+    "id": "f061",
+    "group": "reworded",
+    "template": "min_weight",
+    "question": "In April 2026, what was my minimum weight?",
+    "gold": "75.2 kg (2026-04-01)",
+    "app": "75.2",
+    "how": "tile14",
+    "score": 1.0
+   },
+   {
+    "id": "f062",
+    "group": "reworded",
+    "template": "min_weight",
+    "question": "Lightest I've been this year?",
+    "gold": "73.6 kg (2026-07-28)",
+    "app": "73.6",
+    "how": "tile14",
+    "score": 1.0
+   },
+   {
+    "id": "f063",
+    "group": "reworded",
+    "template": "min_weight",
+    "question": "In 2024, what was my minimum weight?",
+    "gold": "73.8 kg (2024-07-23)",
+    "app": "73.8",
+    "how": "tile14",
+    "score": 1.0
+   },
+   {
+    "id": "f064",
+    "group": "reworded",
+    "template": "min_weight",
+    "question": "Lightest I've been last month?",
+    "gold": "73.9 kg (2026-08-04)",
+    "app": "73.9",
+    "how": "tile14",
+    "score": 1.0
+   },
+   {
+    "id": "f065",
+    "group": "same",
+    "template": "count_runs",
+    "question": "How many runs did I do in November 2025?",
+    "gold": "5",
+    "app": "5",
+    "how": "tile15",
+    "score": 1.0
+   },
+   {
+    "id": "f066",
+    "group": "same",
+    "template": "count_runs",
+    "question": "How many times did I go running in 2025?",
+    "gold": "64",
+    "app": "64",
+    "how": "tile15",
+    "score": 1.0
+   },
+   {
+    "id": "f067",
+    "group": "same",
+    "template": "count_runs",
+    "question": "How many runs did I do in June 2026?",
+    "gold": "4",
+    "app": "4",
+    "how": "tile15",
+    "score": 1.0
+   },
+   {
+    "id": "f068",
+    "group": "same",
+    "template": "count_runs",
+    "question": "How many times did I go running in August 2024?",
+    "gold": "3",
+    "app": "3",
+    "how": "tile15",
+    "score": 1.0
+   },
+   {
+    "id": "f069",
+    "group": "reworded",
+    "template": "count_runs",
+    "question": "In January 2026, how many runs did I log?",
+    "gold": "4",
+    "app": "4",
+    "how": "tile15",
+    "score": 1.0
+   },
+   {
+    "id": "f070",
+    "group": "reworded",
+    "template": "count_runs",
+    "question": "Number of runs in January 2025?",
+    "gold": "7",
+    "app": "7",
+    "how": "tile15",
+    "score": 1.0
+   },
+   {
+    "id": "f071",
+    "group": "reworded",
+    "template": "count_runs",
+    "question": "In August 2026, how many runs did I log?",
+    "gold": "5",
+    "app": "5",
+    "how": "tile15",
+    "score": 1.0
+   },
+   {
+    "id": "f072",
+    "group": "reworded",
+    "template": "count_runs",
+    "question": "Number of runs this year?",
+    "gold": "43",
+    "app": "43",
+    "how": "tile15",
+    "score": 1.0
+   },
+   {
+    "id": "f073",
+    "group": "same",
+    "template": "count_climbs",
+    "question": "How many times did I go climbing?",
+    "gold": "214",
+    "app": "204",
+    "how": "tile17",
+    "score": 0.0
+   },
+   {
+    "id": "f074",
+    "group": "same",
+    "template": "count_climbs",
+    "question": "How many climbing sessions did I have in April 2026?",
+    "gold": "9",
+    "app": "9",
+    "how": "tile17",
+    "score": 1.0
+   },
+   {
+    "id": "f075",
+    "group": "same",
+    "template": "count_climbs",
+    "question": "How many times did I go climbing in April 2024?",
+    "gold": "8",
+    "app": "7",
+    "how": "tile17",
+    "score": 0.0
+   },
+   {
+    "id": "f076",
+    "group": "same",
+    "template": "count_climbs",
+    "question": "How many climbing sessions did I have in July 2024?",
+    "gold": "8",
+    "app": "8",
+    "how": "tile17",
+    "score": 1.0
+   },
+   {
+    "id": "f077",
+    "group": "reworded",
+    "template": "count_climbs",
+    "question": "In 2024, how often did I climb?",
+    "gold": "67",
+    "app": "64",
+    "how": "tile17",
+    "score": 0.0
+   },
+   {
+    "id": "f078",
+    "group": "reworded",
+    "template": "count_climbs",
+    "question": "Climbing sessions this year?",
+    "gold": "61",
+    "app": "58",
+    "how": "tile17",
+    "score": 0.0
+   },
+   {
+    "id": "f079",
+    "group": "reworded",
+    "template": "count_climbs",
+    "question": "This year, how often did I climb?",
+    "gold": "61",
+    "app": "58",
+    "how": "tile17",
+    "score": 0.0
+   },
+   {
+    "id": "f080",
+    "group": "reworded",
+    "template": "count_climbs",
+    "question": "Climbing sessions in 2025?",
+    "gold": "86",
+    "app": "82",
+    "how": "tile17",
+    "score": 0.0
+   },
+   {
+    "id": "f081",
+    "group": "novel",
+    "template": "spend_kind_person",
+    "question": "How much have I spent on dinners out with Tom?",
+    "gold": "73,180 CZK (42 purchases)",
+    "app": "73180.00 CZK",
+    "how": "people",
+    "score": 1.0
+   },
+   {
+    "id": "f082",
+    "group": "novel",
+    "template": "spend_kind_person",
+    "question": "How much have I spent on dinner with Kuba?",
+    "gold": "64,310 CZK (45 purchases)",
+    "app": "64310.00 CZK",
+    "how": "people",
+    "score": 1.0
+   },
+   {
+    "id": "f083",
+    "group": "novel",
+    "template": "spend_kind_person",
+    "question": "How much have I spent on dinners out with Kuba?",
+    "gold": "64,310 CZK (45 purchases)",
+    "app": "64310.00 CZK",
+    "how": "people",
+    "score": 1.0
+   },
+   {
+    "id": "f084",
+    "group": "novel",
+    "template": "spend_kind_person",
+    "question": "How much have I spent on drinks at bars with Ondra?",
+    "gold": "3,540 CZK (13 purchases)",
+    "app": "3540.00 CZK",
+    "how": "people",
+    "score": 1.0
+   },
+   {
+    "id": "f085",
+    "group": "novel",
+    "template": "spend_kind_person",
+    "question": "How much have I spent on dinner with Lucie?",
+    "gold": "33,830 CZK (21 purchases)",
+    "app": "62420.00 CZK + 232.20 USD",
+    "how": "people",
+    "score": 0.0
+   },
+   {
+    "id": "f086",
+    "group": "novel",
+    "template": "count_kind_person",
+    "question": "How many times did I go out for drinks with Lucie?",
+    "gold": "19",
+    "app": "38",
+    "how": "people",
+    "score": 0.0
+   },
+   {
+    "id": "f087",
+    "group": "novel",
+    "template": "count_kind_person",
+    "question": "How many times did I go out for dinner with Nina?",
+    "gold": "19",
+    "app": "10",
+    "how": "people",
+    "score": 0.0
+   },
+   {
+    "id": "f088",
+    "group": "novel",
+    "template": "count_kind_person",
+    "question": "How many times did I go out for dinner with David?",
+    "gold": "46",
+    "app": "16",
+    "how": "people",
+    "score": 0.0
+   },
+   {
+    "id": "f089",
+    "group": "novel",
+    "template": "count_kind_person",
+    "question": "How many times did I go out for dinner with Ondra?",
+    "gold": "28",
+    "app": "28",
+    "how": "people",
+    "score": 1.0
+   },
+   {
+    "id": "f090",
+    "group": "novel",
+    "template": "count_kind_person",
+    "question": "How many times did I go out for dinner with Lucie?",
+    "gold": "21",
+    "app": "40",
+    "how": "people",
+    "score": 0.0
+   },
+   {
+    "id": "f091",
+    "group": "novel",
+    "template": "last_kind_person",
+    "question": "When did I last go out for dinner with Kuba?",
+    "gold": "2026-02-19 at Maso a Kobliha",
+    "app": "2026-02-19",
+    "how": "people",
+    "score": 1.0
+   },
+   {
+    "id": "f092",
+    "group": "novel",
+    "template": "last_kind_person",
+    "question": "When did I last go out for dinner with Eva?",
+    "gold": "2026-09-25 at Nopa",
+    "app": null,
+    "how": "no person card",
+    "score": 0.0
+   },
+   {
+    "id": "f093",
+    "group": "novel",
+    "template": "last_kind_person",
+    "question": "When did I last go out for drinks with Eva?",
+    "gold": "2026-09-24 at Zeitgeist",
+    "app": null,
+    "how": "no person card",
+    "score": 0.0
+   },
+   {
+    "id": "f094",
+    "group": "novel",
+    "template": "last_kind_person",
+    "question": "When did I last go out for dinner with Priya?",
+    "gold": "2026-08-16 at Nopa",
+    "app": "2026-05-14",
+    "how": "people",
+    "score": 0.0
+   },
+   {
+    "id": "f095",
+    "group": "novel",
+    "template": "last_kind_person",
+    "question": "When did I last go out for drinks with Kuba?",
+    "gold": "2026-03-12 at Hemingway Bar",
+    "app": "2026-03-13",
+    "how": "people",
+    "score": 0.0
+   },
+   {
+    "id": "f096",
+    "group": "novel",
+    "template": "spend_kind_city",
+    "question": "How much have I spent on lunches out in Prague in total?",
+    "gold": "130,791 CZK (465 purchases)",
+    "app": null,
+    "how": "no cross-tab",
+    "score": 0.0
+   },
+   {
+    "id": "f097",
+    "group": "novel",
+    "template": "spend_kind_city",
+    "question": "How much have I spent on grocery shopping in Prague in total?",
+    "gold": "217,580 CZK (196 purchases)",
+    "app": "237015.00 CZK",
+    "how": "cross_expenses_category_expense_location",
+    "score": 0.0
+   },
+   {
+    "id": "f098",
+    "group": "novel",
+    "template": "spend_kind_city",
+    "question": "How much have I spent on lunch in Prague in total?",
+    "gold": "130,791 CZK (465 purchases)",
+    "app": null,
+    "how": "no cross-tab",
+    "score": 0.0
+   },
+   {
+    "id": "f099",
+    "group": "novel",
+    "template": "spend_kind_city",
+    "question": "How much have I spent on rides in San Francisco in total?",
+    "gold": "1,916.65 USD (88 purchases)",
+    "app": null,
+    "how": "no cross-tab",
+    "score": 0.0
+   },
+   {
+    "id": "f100",
+    "group": "novel",
+    "template": "spend_kind_city",
+    "question": "How much have I spent on Uber and Bolt rides in San Francisco in total?",
+    "gold": "1,916.65 USD (88 purchases)",
+    "app": null,
+    "how": "no cross-tab",
+    "score": 0.0
+   },
+   {
+    "id": "f101",
+    "group": "novel",
+    "template": "top_merchant",
+    "question": "Where did I eat lunch out most often in 2024?",
+    "gold": "Mr. Bao (37 times)",
+    "app": "Mr. Bao",
+    "how": "top_expenses_merchant",
+    "score": 1.0
+   },
+   {
+    "id": "f102",
+    "group": "novel",
+    "template": "top_merchant",
+    "question": "Where did I go out for drinks most often in 2024?",
+    "gold": "Vinograf (17 times)",
+    "app": "Vinograf",
+    "how": "top_expenses_merchant",
+    "score": 1.0
+   },
+   {
+    "id": "f103",
+    "group": "novel",
+    "template": "top_merchant",
+    "question": "Where did I buy groceries most often in 2025?",
+    "gold": "Albert (50 times)",
+    "app": "Albert",
+    "how": "top_expenses_merchant",
+    "score": 1.0
+   },
+   {
+    "id": "f104",
+    "group": "novel",
+    "template": "top_merchant",
+    "question": "Where did I go out for drinks most often in 2025?",
+    "gold": "Vinograf (14 times)",
+    "app": "Vinograf",
+    "how": "top_expenses_merchant",
+    "score": 1.0
+   },
+   {
+    "id": "f105",
+    "group": "novel",
+    "template": "top_merchant",
+    "question": "Where did I buy groceries most often this year?",
+    "gold": "Trader Joe's (28 times)",
+    "app": "Trader Joe's",
+    "how": "top_expenses_merchant",
+    "score": 1.0
+   }
+  ],
+  "by_template": {
+   "avg_kind": {
+    "score": 0.875,
+    "no_view": 0
+   },
+   "avg_sleep": {
+    "score": 1.0,
+    "no_view": 0
+   },
+   "count_climbs": {
+    "score": 0.25,
+    "no_view": 0
+   },
+   "count_kind": {
+    "score": 0.375,
+    "no_view": 0
+   },
+   "count_kind_person": {
+    "score": 0.2,
+    "no_view": 0
+   },
+   "count_merchant": {
+    "score": 1.0,
+    "no_view": 0
+   },
+   "count_runs": {
+    "score": 1.0,
+    "no_view": 0
+   },
+   "last_kind_person": {
+    "score": 0.2,
+    "no_view": 2
+   },
+   "max_kind_city": {
+    "score": 0.25,
+    "no_view": 6
+   },
+   "min_weight": {
+    "score": 1.0,
+    "no_view": 0
+   },
+   "spend_kind": {
+    "score": 0.625,
+    "no_view": 0
+   },
+   "spend_kind_city": {
+    "score": 0.0,
+    "no_view": 4
+   },
+   "spend_kind_person": {
+    "score": 0.8,
+    "no_view": 0
+   },
+   "spend_merchant": {
+    "score": 1.0,
+    "no_view": 0
+   },
+   "top_merchant": {
+    "score": 1.0,
+    "no_view": 0
+   }
+  }
+ },
+ "after_inbox_100": {
+  "summary": {
+   "all": 0.6857,
+   "same": 0.8,
+   "reworded": 0.7,
+   "novel": 0.48,
+   "logged_shapes": 0.75,
+   "no_view": 10,
+   "view_but_wrong": 23
+  },
+  "rows": [
+   {
+    "id": "f001",
+    "group": "same",
+    "template": "spend_kind",
+    "question": "How much did I spend on rides in November 2024?",
+    "gold": "4,320 CZK (17 purchases)",
+    "app": "4320.00 CZK",
+    "how": "tile2",
+    "score": 1.0
+   },
+   {
+    "id": "f002",
+    "group": "same",
+    "template": "spend_kind",
+    "question": "What was my total drinks at bars spend in June 2025?",
+    "gold": "2,800 CZK (8 purchases)",
+    "app": "2800.00 CZK",
+    "how": "tile1",
+    "score": 1.0
+   },
+   {
+    "id": "f003",
+    "group": "same",
+    "template": "spend_kind",
+    "question": "How much did I spend on dinner in 2024?",
+    "gold": "133,150 CZK (77 purchases)",
+    "app": "131010.00 CZK",
+    "how": "tile1",
+    "score": 0.0
+   },
+   {
+    "id": "f004",
+    "group": "same",
+    "template": "spend_kind",
+    "question": "What was my total coffee spend in 2025?",
+    "gold": "34,875 CZK (380 purchases)",
+    "app": "34875.00 CZK",
+    "how": "tile2",
+    "score": 1.0
+   },
+   {
+    "id": "f005",
+    "group": "reworded",
+    "template": "spend_kind",
+    "question": "In 2024, how much money went on lunch?",
+    "gold": "48,451 CZK (174 purchases)",
+    "app": "47681.00 CZK",
+    "how": "tile1",
+    "score": 0.0
+   },
+   {
+    "id": "f006",
+    "group": "reworded",
+    "template": "spend_kind",
+    "question": "Total I paid for drinks at bars in May 2026?",
+    "gold": "110.66 USD (2 purchases)",
+    "app": "110.66 USD",
+    "how": "tile1",
+    "score": 1.0
+   },
+   {
+    "id": "f007",
+    "group": "reworded",
+    "template": "spend_kind",
+    "question": "In 2024, how much money went on lunches out?",
+    "gold": "48,451 CZK (174 purchases)",
+    "app": "47681.00 CZK",
+    "how": "tile1",
+    "score": 0.0
+   },
+   {
+    "id": "f008",
+    "group": "reworded",
+    "template": "spend_kind",
+    "question": "Total I paid for things I ordered or bought in shops last month?",
+    "gold": "365.04 USD (3 purchases)",
+    "app": "365.04 USD",
+    "how": "tile2",
+    "score": 1.0
+   },
+   {
+    "id": "f009",
+    "group": "same",
+    "template": "count_kind",
+    "question": "How many times did I eat lunch out in November 2024?",
+    "gold": "22",
+    "app": "22",
+    "how": "tile3",
+    "score": 1.0
+   },
+   {
+    "id": "f010",
+    "group": "same",
+    "template": "count_kind",
+    "question": "How often did I do a grocery run in April 2024?",
+    "gold": "8",
+    "app": "10",
+    "how": "tile4",
+    "score": 0.0
+   },
+   {
+    "id": "f011",
+    "group": "same",
+    "template": "count_kind",
+    "question": "How many times did I go out for drinks in 2024?",
+    "gold": "42",
+    "app": "41",
+    "how": "tile3",
+    "score": 0.0
+   },
+   {
+    "id": "f012",
+    "group": "same",
+    "template": "count_kind",
+    "question": "How often did I do a grocery run in August 2025?",
+    "gold": "9",
+    "app": "9",
+    "how": "tile4",
+    "score": 1.0
+   },
+   {
+    "id": "f013",
+    "group": "reworded",
+    "template": "count_kind",
+    "question": "In 2024, how many times did I grab a coffee?",
+    "gold": "289",
+    "app": "288",
+    "how": "tile4",
+    "score": 0.0
+   },
+   {
+    "id": "f014",
+    "group": "reworded",
+    "template": "count_kind",
+    "question": "Number of times I did go to a restaurant for dinner in May 2024?",
+    "gold": "10",
+    "app": "9",
+    "how": "tile3",
+    "score": 0.0
+   },
+   {
+    "id": "f015",
+    "group": "reworded",
+    "template": "count_kind",
+    "question": "In 2024, how many times did I use Uber or Bolt?",
+    "gold": "151",
+    "app": "151",
+    "how": "tile4",
+    "score": 1.0
+   },
+   {
+    "id": "f016",
+    "group": "reworded",
+    "template": "count_kind",
+    "question": "Number of times I did go to a bar last month?",
+    "gold": "4",
+    "app": "4",
+    "how": "tile3",
+    "score": 1.0
+   },
+   {
+    "id": "f017",
+    "group": "same",
+    "template": "count_merchant",
+    "question": "How many times did I go to Bistro Monk this year?",
+    "gold": "13",
+    "app": "13",
+    "how": "tile6",
+    "score": 1.0
+   },
+   {
+    "id": "f018",
+    "group": "same",
+    "template": "count_merchant",
+    "question": "How many visits to Kantýna in July 2024?",
+    "gold": "3",
+    "app": "3",
+    "how": "tile6",
+    "score": 1.0
+   },
+   {
+    "id": "f019",
+    "group": "same",
+    "template": "count_merchant",
+    "question": "How many times did I go to Kantýna in 2025?",
+    "gold": "41",
+    "app": "41",
+    "how": "tile6",
+    "score": 1.0
+   },
+   {
+    "id": "f020",
+    "group": "same",
+    "template": "count_merchant",
+    "question": "How many visits to Doubleshot in January 2026?",
+    "gold": "5",
+    "app": "5",
+    "how": "tile6",
+    "score": 1.0
+   },
+   {
+    "id": "f021",
+    "group": "reworded",
+    "template": "count_merchant",
+    "question": "How often was I at Ritual Coffee in July 2026?",
+    "gold": "9",
+    "app": "9",
+    "how": "tile6",
+    "score": 1.0
+   },
+   {
+    "id": "f022",
+    "group": "reworded",
+    "template": "count_merchant",
+    "question": "how many times was I at Philz Coffee?",
+    "gold": "34",
+    "app": "34",
+    "how": "tile6",
+    "score": 1.0
+   },
+   {
+    "id": "f023",
+    "group": "reworded",
+    "template": "count_merchant",
+    "question": "How often was I at Café Savoy in 2024?",
+    "gold": "55",
+    "app": "55",
+    "how": "tile6",
+    "score": 1.0
+   },
+   {
+    "id": "f024",
+    "group": "reworded",
+    "template": "count_merchant",
+    "question": "This year, how many times was I at Souvla?",
+    "gold": "26",
+    "app": "26",
+    "how": "tile6",
+    "score": 1.0
+   },
+   {
+    "id": "f025",
+    "group": "same",
+    "template": "spend_merchant",
+    "question": "How much did I spend at Můj šálek kávy this year?",
+    "gold": "1,155 CZK (12 purchases)",
+    "app": "1155.00 CZK",
+    "how": "tile7",
+    "score": 1.0
+   },
+   {
+    "id": "f026",
+    "group": "same",
+    "template": "spend_merchant",
+    "question": "What did I spend in total at Bolt?",
+    "gold": "93,390 CZK (402 purchases)",
+    "app": "93390.00 CZK",
+    "how": "tile7",
+    "score": 1.0
+   },
+   {
+    "id": "f027",
+    "group": "same",
+    "template": "spend_merchant",
+    "question": "How much did I spend at EMA Espresso Bar in September 2024?",
+    "gold": "285 CZK (3 purchases)",
+    "app": "285.00 CZK",
+    "how": "tile7",
+    "score": 1.0
+   },
+   {
+    "id": "f028",
+    "group": "same",
+    "template": "spend_merchant",
+    "question": "What did I spend in total at Doubleshot this year?",
+    "gold": "1,175 CZK (13 purchases)",
+    "app": "1175.00 CZK",
+    "how": "tile7",
+    "score": 1.0
+   },
+   {
+    "id": "f029",
+    "group": "reworded",
+    "template": "spend_merchant",
+    "question": "In 2025, how much did I pay at Albert?",
+    "gold": "55,690 CZK (50 purchases)",
+    "app": "55690.00 CZK",
+    "how": "tile7",
+    "score": 1.0
+   },
+   {
+    "id": "f030",
+    "group": "reworded",
+    "template": "spend_merchant",
+    "question": "How much money did I leave at Anonymous Bar in 2024?",
+    "gold": "2,830 CZK (10 purchases)",
+    "app": "2830.00 CZK",
+    "how": "tile7",
+    "score": 1.0
+   },
+   {
+    "id": "f031",
+    "group": "reworded",
+    "template": "spend_merchant",
+    "question": "In 2024, how much did I pay at Kavárna Místo?",
+    "gold": "1,860 CZK (23 purchases)",
+    "app": "1860.00 CZK",
+    "how": "tile7",
+    "score": 1.0
+   },
+   {
+    "id": "f032",
+    "group": "reworded",
+    "template": "spend_merchant",
+    "question": "How much money did I leave at Můj šálek kávy this year?",
+    "gold": "1,155 CZK (12 purchases)",
+    "app": "1155.00 CZK",
+    "how": "tile7",
+    "score": 1.0
+   },
+   {
+    "id": "f033",
+    "group": "same",
+    "template": "max_kind_city",
+    "question": "What's the most I've spent on a single coffee in San Francisco?",
+    "gold": "6.75 USD at Ritual Coffee on 2026-04-12",
+    "app": "6.75 USD",
+    "how": "tile9",
+    "score": 1.0
+   },
+   {
+    "id": "f034",
+    "group": "same",
+    "template": "max_kind_city",
+    "question": "What was my most expensive night of drinks in San Francisco?",
+    "gold": "59.45 USD at Trick Dog on 2026-06-03",
+    "app": null,
+    "how": "no tile",
+    "score": 0.0
+   },
+   {
+    "id": "f035",
+    "group": "same",
+    "template": "max_kind_city",
+    "question": "What's the most I've spent on a single lunch in San Francisco?",
+    "gold": "26.50 USD at The Grove on 2026-04-13",
+    "app": null,
+    "how": "no tile",
+    "score": 0.0
+   },
+   {
+    "id": "f036",
+    "group": "same",
+    "template": "max_kind_city",
+    "question": "What was my most expensive dinner in San Francisco?",
+    "gold": "135.40 USD at Foreign Cinema on 2026-05-10",
+    "app": null,
+    "how": "no tile",
+    "score": 0.0
+   },
+   {
+    "id": "f037",
+    "group": "reworded",
+    "template": "max_kind_city",
+    "question": "Priciest night of drinks I had in Prague?",
+    "gold": "450.00 CZK at Vinograf on 2024-06-09",
+    "app": null,
+    "how": "no tile",
+    "score": 0.0
+   },
+   {
+    "id": "f038",
+    "group": "reworded",
+    "template": "max_kind_city",
+    "question": "Biggest bill for a lunch in Prague?",
+    "gold": "385.00 CZK at Pho Vietnam on 2024-04-01",
+    "app": null,
+    "how": "no tile",
+    "score": 0.0
+   },
+   {
+    "id": "f039",
+    "group": "reworded",
+    "template": "max_kind_city",
+    "question": "Priciest ride I had in Prague?",
+    "gold": "380.00 CZK at Bolt on 2024-06-04",
+    "app": "380.0 CZK",
+    "how": "tile9",
+    "score": 1.0
+   },
+   {
+    "id": "f040",
+    "group": "reworded",
+    "template": "max_kind_city",
+    "question": "Biggest bill for a night of drinks in San Francisco?",
+    "gold": "59.45 USD at Trick Dog on 2026-06-03",
+    "app": null,
+    "how": "no tile",
+    "score": 0.0
+   },
+   {
+    "id": "f041",
+    "group": "same",
+    "template": "avg_kind",
+    "question": "What's my average night of drinks bill in February 2025?",
+    "gold": "153.33 CZK (average of 3)",
+    "app": "153.33 CZK",
+    "how": "tile10",
+    "score": 1.0
+   },
+   {
+    "id": "f042",
+    "group": "same",
+    "template": "avg_kind",
+    "question": "How much did a coffee cost me on average last month?",
+    "gold": "5.75 USD (average of 38)",
+    "app": "5.76 USD",
+    "how": "tile11",
+    "score": 1.0
+   },
+   {
+    "id": "f043",
+    "group": "same",
+    "template": "avg_kind",
+    "question": "What's my average ride bill in July 2026?",
+    "gold": "22.31 USD (average of 16)",
+    "app": "22.31 USD",
+    "how": "tile11",
+    "score": 1.0
+   },
+   {
+    "id": "f044",
+    "group": "same",
+    "template": "avg_kind",
+    "question": "How much did a ride cost me on average in 2024?",
+    "gold": "237.02 CZK (average of 151)",
+    "app": "237.02 CZK",
+    "how": "tile11",
+    "score": 1.0
+   },
+   {
+    "id": "f045",
+    "group": "reworded",
+    "template": "avg_kind",
+    "question": "Last month, what did I typically pay for a dinner?",
+    "gold": "102.19 USD (average of 7)",
+    "app": "102.19 USD",
+    "how": "tile10",
+    "score": 1.0
+   },
+   {
+    "id": "f046",
+    "group": "reworded",
+    "template": "avg_kind",
+    "question": "Average price of a coffee in September 2025?",
+    "gold": "91.89 CZK (average of 37)",
+    "app": "91.89 CZK",
+    "how": "tile11",
+    "score": 1.0
+   },
+   {
+    "id": "f047",
+    "group": "reworded",
+    "template": "avg_kind",
+    "question": "In March 2026, what did I typically pay for a grocery run?",
+    "gold": "1,311.25 CZK (average of 8)",
+    "app": "1387.67 CZK",
+    "how": "tile11",
+    "score": 0.0
+   },
+   {
+    "id": "f048",
+    "group": "reworded",
+    "template": "avg_kind",
+    "question": "Average price of a lunch in February 2025?",
+    "gold": "298.95 CZK (average of 19)",
+    "app": "298.95 CZK",
+    "how": "tile10",
+    "score": 1.0
+   },
+   {
+    "id": "f049",
+    "group": "same",
+    "template": "avg_sleep",
+    "question": "What was my average sleep in November 2024?",
+    "gold": "7.02 hours (30 nights)",
+    "app": "7.02",
+    "how": "tile12",
+    "score": 1.0
+   },
+   {
+    "id": "f050",
+    "group": "same",
+    "template": "avg_sleep",
+    "question": "How many hours did I sleep on average in February 2026?",
+    "gold": "6.98 hours (24 nights)",
+    "app": "6.98",
+    "how": "tile12",
+    "score": 1.0
+   },
+   {
+    "id": "f051",
+    "group": "same",
+    "template": "avg_sleep",
+    "question": "What was my average sleep in July 2025?",
+    "gold": "7.31 hours (25 nights)",
+    "app": "7.31",
+    "how": "tile12",
+    "score": 1.0
+   },
+   {
+    "id": "f052",
+    "group": "same",
+    "template": "avg_sleep",
+    "question": "How many hours did I sleep on average in July 2026?",
+    "gold": "6.99 hours (30 nights)",
+    "app": "6.99",
+    "how": "tile12",
+    "score": 1.0
+   },
+   {
+    "id": "f053",
+    "group": "reworded",
+    "template": "avg_sleep",
+    "question": "In February 2026, how long did I sleep per night?",
+    "gold": "6.98 hours (24 nights)",
+    "app": "6.98",
+    "how": "tile12",
+    "score": 1.0
+   },
+   {
+    "id": "f054",
+    "group": "reworded",
+    "template": "avg_sleep",
+    "question": "Average hours of sleep in June 2025?",
+    "gold": "6.92 hours (27 nights)",
+    "app": "6.92",
+    "how": "tile12",
+    "score": 1.0
+   },
+   {
+    "id": "f055",
+    "group": "reworded",
+    "template": "avg_sleep",
+    "question": "In December 2024, how long did I sleep per night?",
+    "gold": "7.02 hours (30 nights)",
+    "app": "7.02",
+    "how": "tile12",
+    "score": 1.0
+   },
+   {
+    "id": "f056",
+    "group": "reworded",
+    "template": "avg_sleep",
+    "question": "Average hours of sleep in February 2026?",
+    "gold": "6.98 hours (24 nights)",
+    "app": "6.98",
+    "how": "tile12",
+    "score": 1.0
+   },
+   {
+    "id": "f057",
+    "group": "same",
+    "template": "min_weight",
+    "question": "What was my lowest weight in December 2025?",
+    "gold": "74.8 kg (2025-12-27)",
+    "app": "74.8",
+    "how": "tile14",
+    "score": 1.0
+   },
+   {
+    "id": "f058",
+    "group": "same",
+    "template": "min_weight",
+    "question": "What's the least I weighed in June 2026?",
+    "gold": "74.5 kg (2026-06-10)",
+    "app": "74.5",
+    "how": "tile14",
+    "score": 1.0
+   },
+   {
+    "id": "f059",
+    "group": "same",
+    "template": "min_weight",
+    "question": "What was my lowest weight in July 2025?",
+    "gold": "74.6 kg (2025-07-10)",
+    "app": "74.6",
+    "how": "tile14",
+    "score": 1.0
+   },
+   {
+    "id": "f060",
+    "group": "same",
+    "template": "min_weight",
+    "question": "What's the least I weighed in January 2026?",
+    "gold": "74.5 kg (2026-01-27)",
+    "app": "74.5",
+    "how": "tile14",
+    "score": 1.0
+   },
+   {
+    "id": "f061",
+    "group": "reworded",
+    "template": "min_weight",
+    "question": "In April 2026, what was my minimum weight?",
+    "gold": "75.2 kg (2026-04-01)",
+    "app": "75.2",
+    "how": "tile14",
+    "score": 1.0
+   },
+   {
+    "id": "f062",
+    "group": "reworded",
+    "template": "min_weight",
+    "question": "Lightest I've been this year?",
+    "gold": "73.6 kg (2026-07-28)",
+    "app": "73.6",
+    "how": "tile14",
+    "score": 1.0
+   },
+   {
+    "id": "f063",
+    "group": "reworded",
+    "template": "min_weight",
+    "question": "In 2024, what was my minimum weight?",
+    "gold": "73.8 kg (2024-07-23)",
+    "app": "73.8",
+    "how": "tile14",
+    "score": 1.0
+   },
+   {
+    "id": "f064",
+    "group": "reworded",
+    "template": "min_weight",
+    "question": "Lightest I've been last month?",
+    "gold": "73.9 kg (2026-08-04)",
+    "app": "73.9",
+    "how": "tile14",
+    "score": 1.0
+   },
+   {
+    "id": "f065",
+    "group": "same",
+    "template": "count_runs",
+    "question": "How many runs did I do in November 2025?",
+    "gold": "5",
+    "app": "5",
+    "how": "tile15",
+    "score": 1.0
+   },
+   {
+    "id": "f066",
+    "group": "same",
+    "template": "count_runs",
+    "question": "How many times did I go running in 2025?",
+    "gold": "64",
+    "app": "64",
+    "how": "tile15",
+    "score": 1.0
+   },
+   {
+    "id": "f067",
+    "group": "same",
+    "template": "count_runs",
+    "question": "How many runs did I do in June 2026?",
+    "gold": "4",
+    "app": "4",
+    "how": "tile15",
+    "score": 1.0
+   },
+   {
+    "id": "f068",
+    "group": "same",
+    "template": "count_runs",
+    "question": "How many times did I go running in August 2024?",
+    "gold": "3",
+    "app": "3",
+    "how": "tile15",
+    "score": 1.0
+   },
+   {
+    "id": "f069",
+    "group": "reworded",
+    "template": "count_runs",
+    "question": "In January 2026, how many runs did I log?",
+    "gold": "4",
+    "app": "4",
+    "how": "tile15",
+    "score": 1.0
+   },
+   {
+    "id": "f070",
+    "group": "reworded",
+    "template": "count_runs",
+    "question": "Number of runs in January 2025?",
+    "gold": "7",
+    "app": "7",
+    "how": "tile15",
+    "score": 1.0
+   },
+   {
+    "id": "f071",
+    "group": "reworded",
+    "template": "count_runs",
+    "question": "In August 2026, how many runs did I log?",
+    "gold": "5",
+    "app": "5",
+    "how": "tile15",
+    "score": 1.0
+   },
+   {
+    "id": "f072",
+    "group": "reworded",
+    "template": "count_runs",
+    "question": "Number of runs this year?",
+    "gold": "43",
+    "app": "43",
+    "how": "tile15",
+    "score": 1.0
+   },
+   {
+    "id": "f073",
+    "group": "same",
+    "template": "count_climbs",
+    "question": "How many times did I go climbing?",
+    "gold": "214",
+    "app": "204",
+    "how": "tile17",
+    "score": 0.0
+   },
+   {
+    "id": "f074",
+    "group": "same",
+    "template": "count_climbs",
+    "question": "How many climbing sessions did I have in April 2026?",
+    "gold": "9",
+    "app": "9",
+    "how": "tile17",
+    "score": 1.0
+   },
+   {
+    "id": "f075",
+    "group": "same",
+    "template": "count_climbs",
+    "question": "How many times did I go climbing in April 2024?",
+    "gold": "8",
+    "app": "7",
+    "how": "tile17",
+    "score": 0.0
+   },
+   {
+    "id": "f076",
+    "group": "same",
+    "template": "count_climbs",
+    "question": "How many climbing sessions did I have in July 2024?",
+    "gold": "8",
+    "app": "8",
+    "how": "tile17",
+    "score": 1.0
+   },
+   {
+    "id": "f077",
+    "group": "reworded",
+    "template": "count_climbs",
+    "question": "In 2024, how often did I climb?",
+    "gold": "67",
+    "app": "64",
+    "how": "tile17",
+    "score": 0.0
+   },
+   {
+    "id": "f078",
+    "group": "reworded",
+    "template": "count_climbs",
+    "question": "Climbing sessions this year?",
+    "gold": "61",
+    "app": "58",
+    "how": "tile17",
+    "score": 0.0
+   },
+   {
+    "id": "f079",
+    "group": "reworded",
+    "template": "count_climbs",
+    "question": "This year, how often did I climb?",
+    "gold": "61",
+    "app": "58",
+    "how": "tile17",
+    "score": 0.0
+   },
+   {
+    "id": "f080",
+    "group": "reworded",
+    "template": "count_climbs",
+    "question": "Climbing sessions in 2025?",
+    "gold": "86",
+    "app": "82",
+    "how": "tile17",
+    "score": 0.0
+   },
+   {
+    "id": "f081",
+    "group": "novel",
+    "template": "spend_kind_person",
+    "question": "How much have I spent on dinners out with Tom?",
+    "gold": "73,180 CZK (42 purchases)",
+    "app": "73180.00 CZK",
+    "how": "people",
+    "score": 1.0
+   },
+   {
+    "id": "f082",
+    "group": "novel",
+    "template": "spend_kind_person",
+    "question": "How much have I spent on dinner with Kuba?",
+    "gold": "64,310 CZK (45 purchases)",
+    "app": "64310.00 CZK",
+    "how": "people",
+    "score": 1.0
+   },
+   {
+    "id": "f083",
+    "group": "novel",
+    "template": "spend_kind_person",
+    "question": "How much have I spent on dinners out with Kuba?",
+    "gold": "64,310 CZK (45 purchases)",
+    "app": "64310.00 CZK",
+    "how": "people",
+    "score": 1.0
+   },
+   {
+    "id": "f084",
+    "group": "novel",
+    "template": "spend_kind_person",
+    "question": "How much have I spent on drinks at bars with Ondra?",
+    "gold": "3,540 CZK (13 purchases)",
+    "app": "3540.00 CZK",
+    "how": "people",
+    "score": 1.0
+   },
+   {
+    "id": "f085",
+    "group": "novel",
+    "template": "spend_kind_person",
+    "question": "How much have I spent on dinner with Lucie?",
+    "gold": "33,830 CZK (21 purchases)",
+    "app": "53480.00 CZK + 232.20 USD",
+    "how": "people",
+    "score": 0.0
+   },
+   {
+    "id": "f086",
+    "group": "novel",
+    "template": "count_kind_person",
+    "question": "How many times did I go out for drinks with Lucie?",
+    "gold": "19",
+    "app": "27",
+    "how": "people",
+    "score": 0.0
+   },
+   {
+    "id": "f087",
+    "group": "novel",
+    "template": "count_kind_person",
+    "question": "How many times did I go out for dinner with Nina?",
+    "gold": "19",
+    "app": "15",
+    "how": "people",
+    "score": 0.0
+   },
+   {
+    "id": "f088",
+    "group": "novel",
+    "template": "count_kind_person",
+    "question": "How many times did I go out for dinner with David?",
+    "gold": "46",
+    "app": "39",
+    "how": "people",
+    "score": 0.0
+   },
+   {
+    "id": "f089",
+    "group": "novel",
+    "template": "count_kind_person",
+    "question": "How many times did I go out for dinner with Ondra?",
+    "gold": "28",
+    "app": "28",
+    "how": "people",
+    "score": 1.0
+   },
+   {
+    "id": "f090",
+    "group": "novel",
+    "template": "count_kind_person",
+    "question": "How many times did I go out for dinner with Lucie?",
+    "gold": "21",
+    "app": "34",
+    "how": "people",
+    "score": 0.0
+   },
+   {
+    "id": "f091",
+    "group": "novel",
+    "template": "last_kind_person",
+    "question": "When did I last go out for dinner with Kuba?",
+    "gold": "2026-02-19 at Maso a Kobliha",
+    "app": "2026-02-19",
+    "how": "people",
+    "score": 1.0
+   },
+   {
+    "id": "f092",
+    "group": "novel",
+    "template": "last_kind_person",
+    "question": "When did I last go out for dinner with Eva?",
+    "gold": "2026-09-25 at Nopa",
+    "app": "2026-09-23",
+    "how": "people",
+    "score": 0.0
+   },
+   {
+    "id": "f093",
+    "group": "novel",
+    "template": "last_kind_person",
+    "question": "When did I last go out for drinks with Eva?",
+    "gold": "2026-09-24 at Zeitgeist",
+    "app": "2026-09-24",
+    "how": "people",
+    "score": 1.0
+   },
+   {
+    "id": "f094",
+    "group": "novel",
+    "template": "last_kind_person",
+    "question": "When did I last go out for dinner with Priya?",
+    "gold": "2026-08-16 at Nopa",
+    "app": "2026-08-03",
+    "how": "people",
+    "score": 0.0
+   },
+   {
+    "id": "f095",
+    "group": "novel",
+    "template": "last_kind_person",
+    "question": "When did I last go out for drinks with Kuba?",
+    "gold": "2026-03-12 at Hemingway Bar",
+    "app": "2026-03-13",
+    "how": "people",
+    "score": 0.0
+   },
+   {
+    "id": "f096",
+    "group": "novel",
+    "template": "spend_kind_city",
+    "question": "How much have I spent on lunches out in Prague in total?",
+    "gold": "130,791 CZK (465 purchases)",
+    "app": null,
+    "how": "no cross-tab",
+    "score": 0.0
+   },
+   {
+    "id": "f097",
+    "group": "novel",
+    "template": "spend_kind_city",
+    "question": "How much have I spent on grocery shopping in Prague in total?",
+    "gold": "217,580 CZK (196 purchases)",
+    "app": "237015.00 CZK",
+    "how": "cross_expenses_category_expense_location",
+    "score": 0.0
+   },
+   {
+    "id": "f098",
+    "group": "novel",
+    "template": "spend_kind_city",
+    "question": "How much have I spent on lunch in Prague in total?",
+    "gold": "130,791 CZK (465 purchases)",
+    "app": null,
+    "how": "no cross-tab",
+    "score": 0.0
+   },
+   {
+    "id": "f099",
+    "group": "novel",
+    "template": "spend_kind_city",
+    "question": "How much have I spent on rides in San Francisco in total?",
+    "gold": "1,916.65 USD (88 purchases)",
+    "app": null,
+    "how": "no cross-tab",
+    "score": 0.0
+   },
+   {
+    "id": "f100",
+    "group": "novel",
+    "template": "spend_kind_city",
+    "question": "How much have I spent on Uber and Bolt rides in San Francisco in total?",
+    "gold": "1,916.65 USD (88 purchases)",
+    "app": null,
+    "how": "no cross-tab",
+    "score": 0.0
+   },
+   {
+    "id": "f101",
+    "group": "novel",
+    "template": "top_merchant",
+    "question": "Where did I eat lunch out most often in 2024?",
+    "gold": "Mr. Bao (37 times)",
+    "app": "Mr. Bao",
+    "how": "top_expenses_merchant",
+    "score": 1.0
+   },
+   {
+    "id": "f102",
+    "group": "novel",
+    "template": "top_merchant",
+    "question": "Where did I go out for drinks most often in 2024?",
+    "gold": "Vinograf (17 times)",
+    "app": "Vinograf",
+    "how": "top_expenses_merchant",
+    "score": 1.0
+   },
+   {
+    "id": "f103",
+    "group": "novel",
+    "template": "top_merchant",
+    "question": "Where did I buy groceries most often in 2025?",
+    "gold": "Albert (50 times)",
+    "app": "Albert",
+    "how": "top_expenses_merchant",
+    "score": 1.0
+   },
+   {
+    "id": "f104",
+    "group": "novel",
+    "template": "top_merchant",
+    "question": "Where did I go out for drinks most often in 2025?",
+    "gold": "Vinograf (14 times)",
+    "app": "Vinograf",
+    "how": "top_expenses_merchant",
+    "score": 1.0
+   },
+   {
+    "id": "f105",
+    "group": "novel",
+    "template": "top_merchant",
+    "question": "Where did I buy groceries most often this year?",
+    "gold": "Trader Joe's (28 times)",
+    "app": "Trader Joe's",
+    "how": "top_expenses_merchant",
+    "score": 1.0
+   }
+  ],
+  "by_template": {
+   "avg_kind": {
+    "score": 0.875,
+    "no_view": 0
+   },
+   "avg_sleep": {
+    "score": 1.0,
+    "no_view": 0
+   },
+   "count_climbs": {
+    "score": 0.25,
+    "no_view": 0
+   },
+   "count_kind": {
+    "score": 0.5,
+    "no_view": 0
+   },
+   "count_kind_person": {
+    "score": 0.2,
+    "no_view": 0
+   },
+   "count_merchant": {
+    "score": 1.0,
+    "no_view": 0
+   },
+   "count_runs": {
+    "score": 1.0,
+    "no_view": 0
+   },
+   "last_kind_person": {
+    "score": 0.4,
+    "no_view": 0
+   },
+   "max_kind_city": {
+    "score": 0.25,
+    "no_view": 6
+   },
+   "min_weight": {
+    "score": 1.0,
+    "no_view": 0
+   },
+   "spend_kind": {
+    "score": 0.625,
+    "no_view": 0
+   },
+   "spend_kind_city": {
+    "score": 0.0,
+    "no_view": 4
+   },
+   "spend_kind_person": {
+    "score": 0.8,
+    "no_view": 0
+   },
+   "spend_merchant": {
+    "score": 1.0,
+    "no_view": 0
+   },
+   "top_merchant": {
+    "score": 1.0,
+    "no_view": 0
+   }
+  }
+ },
+ "det_reader_after_inbox_100": {
+  "accuracy": 0.619,
+  "cost_per_q": 0.000468
+ }
+}

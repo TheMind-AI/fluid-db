@@ -1,0 +1,34 @@
+{
+  "name": "@fluiddb/mcp",
+  "version": "1.0.0-next.4",
+  "description": "Person-scoped FluidDB memory tools over MCP stdio and Streamable HTTP",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./http": "./src/http.ts",
+    "./cli": "./src/cli.ts"
+  },
+  "bin": {
+    "fluiddb-mcp": "./src/cli.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p .",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@fluiddb/core": "workspace:*",
+    "@fluiddb/schema": "workspace:*",
+    "@fluiddb/client": "workspace:*",
+    "@modelcontextprotocol/server": "2.1.0",
+    "zod": "catalog:",
+    "@fluiddb/feedback": "workspace:*",
+    "@fluiddb/skills": "workspace:*"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "2.1.0",
+    "@types/bun": "catalog:",
+    "typescript": "catalog:"
+  },
+  "private": true,
+  "license": "Apache-2.0"
+}

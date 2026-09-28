@@ -1,0 +1,7 @@
+{
+ "questions": 20,
+ "route_only_p50_s": 0.57,
+ "ask_with_verify_p50_s": 0.819,
+ "ask_with_verify_p90_s": 0.934,
+ "jev_cost_per_question": 0.000394
+}

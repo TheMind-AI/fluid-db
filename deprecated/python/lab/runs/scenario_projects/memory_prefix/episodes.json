@@ -1,0 +1,744 @@
+{
+ "2026-01-05": {
+  "gist": "The team included Raj Patel (backend), Mei Lin (mobile), Tom Becker (billing), and Aisha Khan (infra). Projects were Atlas (Postgres migration, owner Raj), Beacon (mobile app, owner Mei), and Comet (billing revamp, owner Tom); sprint planning committed 19 points.",
+  "ids": [
+   1,
+   2
+  ]
+ },
+ "2026-01-06": {
+  "gist": "At standup, Mei was pairing with Raj, and Tom was on call that week.",
+  "ids": [
+   3
+  ]
+ },
+ "2026-01-07": {
+  "gist": "At standup, Tom was blocked on code review and Mei was fixing flaky tests; the messages also included “hmm.”",
+  "ids": [
+   4,
+   5
+  ]
+ },
+ "2026-01-08": {
+  "gist": "At standup, Aisha was pairing with Raj, who was fixing flaky tests; the messages later included “hmm.”",
+  "ids": [
+   6,
+   7
+  ]
+ },
+ "2026-01-09": {
+  "gist": "At standup, Raj was on call that week, and Mei was waiting on design.",
+  "ids": [
+   8
+  ]
+ },
+ "2026-01-12": {
+  "gist": "There was a 1:1 with Tom about the Comet invoice model.",
+  "ids": [
+   9
+  ]
+ },
+ "2026-01-13": {
+  "gist": "In a 1:1, Raj said he wants to grow toward backend architecture.",
+  "ids": [
+   10
+  ]
+ },
+ "2026-01-14": {
+  "gist": "In a 1:1, Aisha said she is interested in the SRE track.",
+  "ids": [
+   11
+  ]
+ },
+ "2026-01-15": {
+  "gist": "In a 1:1, Mei said she prefers async updates in Slack over status meetings.",
+  "ids": [
+   12
+  ]
+ },
+ "2026-01-16": {
+  "gist": "The retro noted that on-call had been quiet.",
+  "ids": [
+   13
+  ]
+ },
+ "2026-01-19": {
+  "gist": "At standup, Aisha was pairing with Raj, who had finished the spike; sprint planning committed 34 points. The user also asked what was on their plate that day.",
+  "ids": [
+   14,
+   15,
+   16
+  ]
+ },
+ "2026-01-21": {
+  "gist": "At standup, Mei was on track and Raj was out sick.",
+  "ids": [
+   17
+  ]
+ },
+ "2026-01-22": {
+  "gist": "At standup, Tom was waiting on design, and Mei was pairing with Raj.",
+  "ids": [
+   18
+  ]
+ },
+ "2026-01-23": {
+  "gist": "At standup, Tom and Mei were both on call this week.",
+  "ids": [
+   19
+  ]
+ },
+ "2026-01-26": {
+  "gist": "At standup, Aisha had finished the spike and Mei was on track. In a 1:1 with Tom, they discussed the Stripe Billing migration plan.",
+  "ids": [
+   20,
+   21
+  ]
+ },
+ "2026-01-27": {
+  "gist": "In a 1:1 with Raj, they discussed his worries about the Atlas cutover.",
+  "ids": [
+   22
+  ]
+ },
+ "2026-01-28": {
+  "gist": "At standup, Mei was waiting on design and Aisha had finished the spike. In a 1:1 with Aisha, they discussed alerting gaps after the outage.",
+  "ids": [
+   23,
+   24
+  ]
+ },
+ "2026-01-29": {
+  "gist": "In a 1:1 with Mei, they discussed the Beacon beta scope.",
+  "ids": [
+   25
+  ]
+ },
+ "2026-01-30": {
+  "gist": "At standup, Tom was on call this week and Raj was blocked on code review.",
+  "ids": [
+   26
+  ]
+ },
+ "2026-02-02": {
+  "gist": "Sprint planning was done, with 26 points committed.",
+  "ids": [
+   27
+  ]
+ },
+ "2026-02-03": {
+  "gist": "The message was marked forgotten.",
+  "ids": [
+   28
+  ]
+ },
+ "2026-02-04": {
+  "gist": "The person said they would be right back and were going to lunch.",
+  "ids": [
+   29
+  ]
+ },
+ "2026-02-05": {
+  "gist": "At standup, Tom was blocked on code review and Aisha was fixing flaky tests. Another message was marked forgotten.",
+  "ids": [
+   30,
+   31
+  ]
+ },
+ "2026-02-09": {
+  "gist": "In a 1:1 with Tom, they discussed the Comet invoice model.",
+  "ids": [
+   32
+  ]
+ },
+ "2026-02-10": {
+  "gist": "In a 1:1, Raj said the on-call load is high. The decision was for Atlas to migrate with Postgres logical replication, not dual writes.",
+  "ids": [
+   33,
+   34
+  ]
+ },
+ "2026-02-11": {
+  "gist": "Had a 1:1 with Aisha about DB failover drills; later wrote “lol.”",
+  "ids": [
+   35,
+   36
+  ]
+ },
+ "2026-02-12": {
+  "gist": "Wrote “hmm.” In a 1:1, Mei said she wants a mobile hire.",
+  "ids": [
+   37,
+   38
+  ]
+ },
+ "2026-02-13": {
+  "gist": "The retro noted there are too many interrupts.",
+  "ids": [
+   39
+  ]
+ },
+ "2026-02-16": {
+  "gist": "Sprint planning was completed, with 25 points committed.",
+  "ids": [
+   40
+  ]
+ },
+ "2026-02-17": {
+  "gist": "At standup, Raj was waiting on design, and Aisha was on call that week.",
+  "ids": [
+   41
+  ]
+ },
+ "2026-02-18": {
+  "gist": "An API outage caused 42 minutes of downtime.",
+  "ids": [
+   42
+  ]
+ },
+ "2026-02-20": {
+  "gist": "The postmortem for the 2026-02-18 API outage identified an expired TLS certificate on the load balancer as the root cause. Follow-ups were to add alerting and a runbook.",
+  "ids": [
+   43
+  ]
+ },
+ "2026-02-23": {
+  "gist": "Aisha was assigned to document the incident process by Mar 6, 2026, and Raj to draft the Atlas cutover plan by Mar 13, 2026. In a 1:1, Tom discussed the Stripe Billing migration plan.",
+  "ids": [
+   44,
+   45,
+   46,
+   47
+  ]
+ },
+ "2026-02-24": {
+  "gist": "In a 1:1, Raj said he wants to grow toward backend architecture.",
+  "ids": [
+   48
+  ]
+ },
+ "2026-02-25": {
+  "gist": "At standup, Aisha was out sick and Tom was blocked on code review. In a 1:1, Aisha said she is interested in the SRE track.",
+  "ids": [
+   49,
+   50
+  ]
+ },
+ "2026-02-26": {
+  "gist": "In a 1:1, Mei said she prefers async updates in Slack over status meetings.",
+  "ids": [
+   51
+  ]
+ },
+ "2026-02-27": {
+  "gist": "At standup, Aisha was on call this week, and Tom was pairing with Raj. Later, they asked the assistant to summarize the week.",
+  "ids": [
+   52,
+   53
+  ]
+ },
+ "2026-03-02": {
+  "gist": "At standup, Tom and Raj were fixing flaky tests. Sprint planning was done, with 31 points committed.",
+  "ids": [
+   54,
+   55
+  ]
+ },
+ "2026-03-03": {
+  "gist": "At standup, Raj was blocked on code review and Aisha was fixing flaky tests. The decision was made to build Beacon in React Native.",
+  "ids": [
+   56,
+   57
+  ]
+ },
+ "2026-03-04": {
+  "gist": "At standup, Raj was on track and Tom was waiting on design.",
+  "ids": [
+   58
+  ]
+ },
+ "2026-03-05": {
+  "gist": "Aisha finished “document the incident process.”",
+  "ids": [
+   59
+  ]
+ },
+ "2026-03-09": {
+  "gist": "At standup, Raj was fixing flaky tests and Tom was on track; in a 1:1 with Tom, they discussed the Comet invoice model. Tom was to write the Comet invoice spec by Mar 27, 2026.",
+  "ids": [
+   60,
+   61,
+   62
+  ]
+ },
+ "2026-03-10": {
+  "gist": "At standup, Tom was waiting on design and Raj was blocked on code review. In a 1:1 with Raj, they discussed worries about the Atlas cutover.",
+  "ids": [
+   63,
+   64,
+   65
+  ]
+ },
+ "2026-03-11": {
+  "gist": "In a 1:1 with Aisha, they discussed alerting gaps after the outage.",
+  "ids": [
+   66
+  ]
+ },
+ "2026-03-12": {
+  "gist": "At standup, Tom was blocked on code review and Aisha was out sick; in a 1:1 with Mei, they discussed Beacon beta scope. Raj finished “draft the Atlas cutover plan.”",
+  "ids": [
+   67,
+   68,
+   69
+  ]
+ },
+ "2026-03-13": {
+  "gist": "At the retro, they noted there were too many interrupts.",
+  "ids": [
+   70
+  ]
+ },
+ "2026-03-16": {
+  "gist": "Sprint planning was done, with 27 points committed. Jonas Weber accepted the offer for a senior backend role and starts Apr 6.",
+  "ids": [
+   71,
+   72,
+   73
+  ]
+ },
+ "2026-03-17": {
+  "gist": "At standup, Raj was blocked on code review and Aisha was out sick.",
+  "ids": [
+   74
+  ]
+ },
+ "2026-03-20": {
+  "gist": "At standup, Aisha was on track and Mei was waiting on design; later, the user said “nice.”",
+  "ids": [
+   75,
+   76
+  ]
+ },
+ "2026-03-23": {
+  "gist": "The user thanked the assistant and had a 1:1 with Tom about the Stripe Billing migration plan.",
+  "ids": [
+   77,
+   78
+  ]
+ },
+ "2026-03-24": {
+  "gist": "In a 1:1, Raj said the on-call load was high. After the load test, the team reversed the Atlas decision and switched to dual writes because replication lag was too high.",
+  "ids": [
+   79,
+   80
+  ]
+ },
+ "2026-03-25": {
+  "gist": "At standup, Aisha was out sick and Raj was on call this week; the user also had a 1:1 with Aisha about DB failover drills. Raj was assigned to load-test the dual-write path by Apr 10, 2026.",
+  "ids": [
+   81,
+   82,
+   83
+  ]
+ },
+ "2026-03-26": {
+  "gist": "At standup, Mei was blocked on code review and Tom was on call this week; Mei said in a 1:1 that she wants a mobile hire. Tom finished “write the Comet invoice spec.”",
+  "ids": [
+   84,
+   85,
+   86,
+   87
+  ]
+ },
+ "2026-03-27": {
+  "gist": "At standup, Tom was waiting on design and Aisha was fixing flaky tests.",
+  "ids": [
+   88
+  ]
+ },
+ "2026-03-30": {
+  "gist": "Sprint planning finished with 33 points committed. Mei was assigned to fix push notifications before the beta by Apr 17, 2026.",
+  "ids": [
+   89,
+   90
+  ]
+ },
+ "2026-03-31": {
+  "gist": "At standup, Mei was on call this week and Aisha was on track; the user later said “lol.”",
+  "ids": [
+   91,
+   92
+  ]
+ },
+ "2026-04-06": {
+  "gist": "At standup, Raj was on call this week and Aisha was out sick; Jonas Weber started today. Mei was assigned to write the Beacon beta release notes by Apr 18, 2026, and the user had a 1:1 with Tom about the Comet invoice model.",
+  "ids": [
+   93,
+   94,
+   95,
+   96
+  ]
+ },
+ "2026-04-07": {
+  "gist": "At standup, Raj was pairing with Raj and Tom was out sick. In a 1:1, Raj said he wants to grow toward backend architecture; the user also said they were stepping away for lunch.",
+  "ids": [
+   97,
+   98,
+   99
+  ]
+ },
+ "2026-04-08": {
+  "gist": "In a 1:1, Aisha said she was interested in the SRE track.",
+  "ids": [
+   100
+  ]
+ },
+ "2026-04-09": {
+  "gist": "In a 1:1, Mei said she prefers async updates in Slack over status meetings. Raj finished “load-test the dual-write path.”",
+  "ids": [
+   101,
+   102
+  ]
+ },
+ "2026-04-10": {
+  "gist": "At standup, Mei paired with Raj and Aisha was blocked on code review; in a 1:1, Jonas said onboarding was going well. The retro noted good pairing.",
+  "ids": [
+   103,
+   104,
+   105,
+   106
+  ]
+ },
+ "2026-04-13": {
+  "gist": "At standup, Jonas and Raj were fixing flaky tests. Sprint planning finished with 31 points committed.",
+  "ids": [
+   107,
+   108
+  ]
+ },
+ "2026-04-14": {
+  "gist": "A decision was made for Comet to move invoicing to Stripe Billing.",
+  "ids": [
+   109
+  ]
+ },
+ "2026-04-16": {
+  "gist": "Mei finished “fix push notifications before the beta.” You also asked for a summary of the week.",
+  "ids": [
+   110,
+   111
+  ]
+ },
+ "2026-04-17": {
+  "gist": "Jonas and Aisha were out sick, according to standup. Mei finished “write the Beacon beta release notes.”",
+  "ids": [
+   112,
+   113
+  ]
+ },
+ "2026-04-20": {
+  "gist": "Aisha was assigned to add database alerts by May 8, 2026, and a 1:1 with Tom covered the Stripe Billing migration plan. The Beacon beta went live with 500 testers invited.",
+  "ids": [
+   114,
+   115,
+   116
+  ]
+ },
+ "2026-04-21": {
+  "gist": "In a 1:1, Raj shared worries about the Atlas cutover.",
+  "ids": [
+   117
+  ]
+ },
+ "2026-04-22": {
+  "gist": "At standup, Tom was done with the spike and Mei was on track; a 1:1 with Aisha covered alerting gaps after the outage.",
+  "ids": [
+   118,
+   119,
+   120
+  ]
+ },
+ "2026-04-23": {
+  "gist": "At standup, Tom was fixing flaky tests and Aisha was pairing with Raj. A 1:1 with Mei covered Beacon beta scope.",
+  "ids": [
+   121,
+   122
+  ]
+ },
+ "2026-04-24": {
+  "gist": "In a 1:1, Jonas discussed taking over Comet. The retro focused on flaky CI.",
+  "ids": [
+   123,
+   124
+  ]
+ },
+ "2026-04-27": {
+  "gist": "Sprint planning finished with 29 points committed.",
+  "ids": [
+   125
+  ]
+ },
+ "2026-04-30": {
+  "gist": "At standup, Jonas was fixing flaky tests and Raj was on call this week.",
+  "ids": [
+   126
+  ]
+ },
+ "2026-05-04": {
+  "gist": "At standup, Jonas was on call that week and Tom was waiting on design. In a 1:1, Tom discussed the Comet invoice model.",
+  "ids": [
+   127,
+   128
+  ]
+ },
+ "2026-05-05": {
+  "gist": "The day included a 👍 and a 1:1 with Raj, who said the on-call load was high.",
+  "ids": [
+   129,
+   130
+  ]
+ },
+ "2026-05-06": {
+  "gist": "A database failover caused 18 minutes of downtime. In a 1:1, Aisha discussed database failover drills.",
+  "ids": [
+   131,
+   132
+  ]
+ },
+ "2026-05-07": {
+  "gist": "Aisha’s “add database alerts” task slipped to May 15, 2026. In a 1:1, Mei said she wanted a mobile hire.",
+  "ids": [
+   133,
+   134
+  ]
+ },
+ "2026-05-08": {
+  "gist": "Jonas said onboarding was going well in a 1:1. A postmortem for the May 6 database failover recorded 18 minutes of downtime, replica lag during the Atlas dual writes as the root cause, and alerting and a runbook as follow-ups; the day ended with “hmm.”",
+  "ids": [
+   135,
+   136,
+   137
+  ]
+ },
+ "2026-05-11": {
+  "gist": "Sprint planning finished with 32 points committed. Jonas was set to take over Comet while Tom was out; a note about Tom’s plans was incomplete.",
+  "ids": [
+   138,
+   139,
+   140
+  ]
+ },
+ "2026-05-12": {
+  "gist": "At standup, Aisha and Mei were both fixing flaky tests.",
+  "ids": [
+   141
+  ]
+ },
+ "2026-05-13": {
+  "gist": "The person asked the assistant to forget private information they had written about Tom.",
+  "ids": [
+   142
+  ]
+ },
+ "2026-05-14": {
+  "gist": "At standup, Raj and Mei were waiting on design. Aisha finished “add database alerts.”",
+  "ids": [
+   143,
+   144
+  ]
+ },
+ "2026-05-15": {
+  "gist": "The day’s note was “lol.”",
+  "ids": [
+   145
+  ]
+ },
+ "2026-05-18": {
+  "gist": "Two action items were recorded: Aisha to run a DB failover drill by Jun 5, 2026, and Jonas to migrate test invoices to Stripe by Jun 19, 2026.",
+  "ids": [
+   146,
+   147
+  ]
+ },
+ "2026-05-19": {
+  "gist": "In a 1:1, Raj said he wanted to grow toward backend architecture. The day also included “lol.”",
+  "ids": [
+   148,
+   149
+  ]
+ },
+ "2026-05-20": {
+  "gist": "Grace Hopkins emailed Elena Rossi about a reorganization effective June 1; the message is truncated. At standup, Mei was on track and Aisha had finished the spike; in a 1:1, Aisha said she was interested in the SRE track.",
+  "ids": [
+   150,
+   151,
+   152
+  ]
+ },
+ "2026-05-21": {
+  "gist": "In a 1:1, Mei said she prefers async updates in Slack over status meetings.",
+  "ids": [
+   153
+  ]
+ },
+ "2026-05-22": {
+  "gist": "Jonas said in a 1:1 that he was taking over Comet. The retro discussed flaky CI.",
+  "ids": [
+   154,
+   155
+  ]
+ },
+ "2026-05-25": {
+  "gist": "Sprint planning finished with 23 points committed. Mei was assigned to ship the Beacon GA checklist by Jun 12, 2026.",
+  "ids": [
+   156,
+   157
+  ]
+ },
+ "2026-05-26": {
+  "gist": "At standup, Raj was on track and Mei was on call that week.",
+  "ids": [
+   158
+  ]
+ },
+ "2026-05-27": {
+  "gist": "At standup, Jonas was blocked on code review and Aisha was waiting on design.",
+  "ids": [
+   159
+  ]
+ },
+ "2026-06-01": {
+  "gist": "The reorganization was completed: Platform is led by Aisha with Raj and Jonas, and Apps is led by Mei with Tom; Aisha now owns Atlas.",
+  "ids": [
+   160,
+   161
+  ]
+ },
+ "2026-06-02": {
+  "gist": "Raj and Jonas were both on call that week. In a 1:1, Raj shared worries about the Atlas cutover.",
+  "ids": [
+   162,
+   163
+  ]
+ },
+ "2026-06-03": {
+  "gist": "At standup, Aisha was fixing flaky tests and Jonas was pairing with Raj. A billing incident caused double charges for customers but no downtime; afterward, Aisha raised alerting gaps.",
+  "ids": [
+   164,
+   165,
+   166
+  ]
+ },
+ "2026-06-04": {
+  "gist": "Mei discussed the Beacon beta scope in a 1:1, and Aisha finished a DB failover drill.",
+  "ids": [
+   167,
+   168
+  ]
+ },
+ "2026-06-05": {
+  "gist": "Jonas said onboarding was going well. The postmortem for the June 3 billing incident said 37 customers were double-charged and refunded due to a retry bug in the Comet invoicing job, with alerting and a runbook as follow-ups; the retro again discussed flaky CI.",
+  "ids": [
+   169,
+   170,
+   171
+  ]
+ },
+ "2026-06-08": {
+  "gist": "Sprint planning finished with 33 points committed. Raj was assigned to review the on-call rotation by Jun 26, 2026.",
+  "ids": [
+   172,
+   173,
+   174
+  ]
+ },
+ "2026-06-10": {
+  "gist": "Asked for a summary of the week; no further details were included.",
+  "ids": [
+   175
+  ]
+ },
+ "2026-06-11": {
+  "gist": "Mei finished “ship the Beacon GA checklist.”",
+  "ids": [
+   176
+  ]
+ },
+ "2026-06-15": {
+  "gist": "At standup, Raj was out sick and Aisha was on call this week; Beacon GA shipped. Jonas was assigned to write the Comet runbook by Jul 10, 2026.",
+  "ids": [
+   177,
+   178,
+   179
+  ]
+ },
+ "2026-06-16": {
+  "gist": "At standup, Jonas was fixing flaky tests and Raj was out sick. In a 1:1, Raj said the on-call load was high.",
+  "ids": [
+   180,
+   181
+  ]
+ },
+ "2026-06-17": {
+  "gist": "Had a 1:1 with Aisha about DB failover drills.",
+  "ids": [
+   182
+  ]
+ },
+ "2026-06-18": {
+  "gist": "Jonas’s “migrate test invoices to Stripe” task slipped to Jul 3, 2026. In a 1:1, Mei said she wants a mobile hire.",
+  "ids": [
+   183,
+   184
+  ]
+ },
+ "2026-06-19": {
+  "gist": "At standup, Aisha was done with the spike and Jonas was blocked on code review; in a 1:1, Jonas said he was taking over Comet. The retro noted unclear specs.",
+  "ids": [
+   185,
+   186,
+   187
+  ]
+ },
+ "2026-06-22": {
+  "gist": "At standup, Mei was blocked on code review and Aisha was on track. Sprint planning was done, with 29 points committed.",
+  "ids": [
+   188,
+   189
+  ]
+ },
+ "2026-06-24": {
+  "gist": "At standup, Mei was blocked on code review and Raj was done with the spike; later, you said “thanks!”",
+  "ids": [
+   190,
+   191
+  ]
+ },
+ "2026-06-25": {
+  "gist": "At standup, Aisha was pairing with Raj, who was out sick.",
+  "ids": [
+   192
+  ]
+ },
+ "2026-06-26": {
+  "gist": "At standup, Jonas was done with the spike and Aisha was blocked on code review.",
+  "ids": [
+   193
+  ]
+ },
+ "2026-06-29": {
+  "gist": "At standup, Jonas was blocked on code review and Raj was out sick. Later, you asked for a reminder of what was said “about this later,” without specifying what “this” referred to.",
+  "ids": [
+   194,
+   195
+  ]
+ },
+ "2026-06-30": {
+  "gist": "At standup, Mei was waiting on design and Raj was pairing with Raj. In a 1:1, Raj said he wants to grow toward backend architecture.",
+  "ids": [
+   196,
+   197
+  ]
+ }
+}

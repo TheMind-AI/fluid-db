@@ -1,0 +1,6 @@
+[install]
+exact = true
+
+# `bun test` at the root runs the repository's own checks; each package runs its tests with `bun run test`.
+[test]
+root = "./test"

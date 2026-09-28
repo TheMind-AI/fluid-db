@@ -1,0 +1,40 @@
+{
+ "periods": [
+  {
+   "start": "2026-01-05",
+   "end": "2026-03-31",
+   "label": "Daniel covered North America accounts"
+  },
+  {
+   "start": "2026-04-01",
+   "end": "2026-06-30",
+   "label": "Daniel covered North America and EMEA accounts"
+  },
+  {
+   "start": "2026-01-05",
+   "end": "2026-04-30",
+   "label": "List price was $1,500 per seat per year"
+  },
+  {
+   "start": "2026-05-01",
+   "end": "2026-06-30",
+   "label": "List price was $1,800 per seat per year"
+  },
+  {
+   "start": "2026-03-03",
+   "end": "2026-04-12",
+   "label": "Alpine Ski House progressed from demo through proposal and negotiation"
+  },
+  {
+   "start": "2026-04-28",
+   "end": "2026-06-24",
+   "label": "Blue Yonder Airlines progressed from demo through proposal and negotiation"
+  }
+ ],
+ "breaks": [
+  {
+   "date": "2026-04-01",
+   "why": "Daniel began covering EMEA accounts in addition to North America."
+  }
+ ]
+}
