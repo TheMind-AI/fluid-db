@@ -219,6 +219,11 @@ across CLI, MCP and public Worker routes (LLP 0023.002).
   MCP and the absence of dependencies/imports on private FluidDB workspaces.
 - **Live tests against real providers** require `FLUID_LIVE=1` and keys. Ordinary tests force them off.
 
+The Firestore-emulator workerd test bridges outbound requests through Node fetch. It omits the incoming
+`Content-Length` so fetch computes it from the buffered body. Forwarding that header failed with
+`UND_ERR_INVALID_ARG` under Node 22.23.2 and Miniflare's Undici dispatcher, although Node 26 passed. The corrected
+test passes save/evidence/isolation/recall/forget/erase under both Node versions; the SDK adapter is unchanged.
+
 ## Release boundary
 
 [inferred] This is ready for integration and staging evaluation once the repository checks pass. It still needs

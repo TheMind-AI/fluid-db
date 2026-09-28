@@ -12,9 +12,12 @@ const runtime = new Miniflare(
     bindings: { FIRESTORE_ORIGIN: origin, COLLECTION: `runtime_${crypto.randomUUID().replaceAll("-", "")}` },
     outboundService: async (request) => {
       assert.equal(new URL(request.url).origin, origin)
+      // @ref LLP 0023#tests — let the host fetch calculate the buffered body's Content-Length
+      const headers = Object.fromEntries(request.headers)
+      delete headers["content-length"]
       return fetch(request.url, {
         method: request.method,
-        headers: Object.fromEntries(request.headers),
+        headers,
         redirect: "manual",
         ...(["GET", "HEAD"].includes(request.method) ? {} : { body: await request.arrayBuffer() }),
       })
