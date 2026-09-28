@@ -1,0 +1,63 @@
+name: Verify
+on:
+  pull_request:
+  push:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.3.14
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: bun install --frozen-lockfile
+      - run: bun run check
+      - run: bun run test:runtime
+      - run: bun run verify:packages
+      - run: ./ref-check
+        working-directory: .
+
+  adapters:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_PASSWORD: fluiddb-test
+        ports:
+          - 5432:5432
+        options: --health-cmd="pg_isready -U postgres" --health-interval=5s --health-timeout=5s --health-retries=10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.3.14
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: bun install --frozen-lockfile
+      - name: Start Firestore emulator
+        run: |
+          docker run -d --name fluiddb-firestore -p 127.0.0.1:8080:8080 gcr.io/google.com/cloudsdktool/google-cloud-cli:emulators gcloud emulators firestore start --host-port=0.0.0.0:8080 --project=fluiddb-test
+          for attempt in $(seq 1 30); do
+            if curl -s http://127.0.0.1:8080/ >/dev/null; then exit 0; fi
+            sleep 2
+          done
+          docker logs fluiddb-firestore
+          exit 1
+      - run: bun run test:adapters
+        env:
+          FLUID_TEST_POSTGRES_URL: postgres://postgres:fluiddb-test@127.0.0.1:5432/postgres
+          FIRESTORE_EMULATOR_HOST: 127.0.0.1:8080
+      - run: bun run test:firestore:runtime
+        env:
+          FIRESTORE_EMULATOR_HOST: 127.0.0.1:8080
+      - if: always()
+        run: docker rm -f fluiddb-firestore

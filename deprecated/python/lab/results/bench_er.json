@@ -1,0 +1,157 @@
+{
+ "n": 33,
+ "methods": {
+  "jev-choice": {
+   "accuracy": 0.9394,
+   "accuracy_new_person": 1.0,
+   "accuracy_ambiguous": 0.6667,
+   "cost_per_1k": 0.0343,
+   "latency_p50": 0.444,
+   "latency_mean": 0.478,
+   "calls": 33,
+   "errors": [
+    {
+     "text": "Honza Dvořák says the Rohlik meetup moved to Thursday",
+     "gold": 14,
+     "pred": 15,
+     "conf": 0.95
+    },
+    {
+     "text": "David's birthday is September 2",
+     "gold": 1,
+     "pred": null,
+     "conf": 0.48
+    }
+   ],
+   "calibration": [
+    {
+     "confidence": "0.0-0.5",
+     "n": 1,
+     "accuracy": 0.0
+    },
+    {
+     "confidence": "0.5-0.7",
+     "n": 1,
+     "accuracy": 1.0
+    },
+    {
+     "confidence": "0.7-0.9",
+     "n": 4,
+     "accuracy": 1.0
+    },
+    {
+     "confidence": "0.9-1.0",
+     "n": 27,
+     "accuracy": 0.963
+    }
+   ],
+   "mean_conf_clear": 0.949,
+   "mean_conf_ambiguous": 0.74
+  },
+  "jev-pairs": {
+   "accuracy": 0.9394,
+   "accuracy_new_person": 1.0,
+   "accuracy_ambiguous": 1.0,
+   "cost_per_1k": 0.214,
+   "latency_p50": 0.277,
+   "latency_mean": 0.295,
+   "calls": 495,
+   "errors": [
+    {
+     "text": "Tomas Novak from the climbing gym says hi",
+     "gold": 4,
+     "pred": 5,
+     "conf": 0.91
+    },
+    {
+     "text": "Honza Dvořák says the Rohlik meetup moved to Thursday",
+     "gold": 14,
+     "pred": 15,
+     "conf": 0.83
+    }
+   ],
+   "calibration": [
+    {
+     "confidence": "0.0-0.5",
+     "n": 3,
+     "accuracy": 1.0
+    },
+    {
+     "confidence": "0.5-0.7",
+     "n": 1,
+     "accuracy": 1.0
+    },
+    {
+     "confidence": "0.7-0.9",
+     "n": 4,
+     "accuracy": 0.75
+    },
+    {
+     "confidence": "0.9-1.0",
+     "n": 25,
+     "accuracy": 0.96
+    }
+   ],
+   "mean_conf_clear": 0.837,
+   "mean_conf_ambiguous": 0.947
+  },
+  "openai:gpt-6-luna": {
+   "accuracy": 0.9394,
+   "accuracy_new_person": 1.0,
+   "accuracy_ambiguous": 0.6667,
+   "cost_per_1k": 0.0532,
+   "latency_p50": 1.349,
+   "latency_mean": 1.379,
+   "calls": 33,
+   "errors": [
+    {
+     "text": "Honza Dvořák says the Rohlik meetup moved to Thursday",
+     "gold": 14,
+     "pred": 15
+    },
+    {
+     "text": "David's birthday is September 2",
+     "gold": 1,
+     "pred": null
+    }
+   ]
+  },
+  "anthropic:claude-haiku-4-5": {
+   "accuracy": 0.9394,
+   "accuracy_new_person": 1.0,
+   "accuracy_ambiguous": 0.6667,
+   "cost_per_1k": 0.6409,
+   "latency_p50": 1.142,
+   "latency_mean": 1.295,
+   "calls": 33,
+   "errors": [
+    {
+     "text": "Honza Dvořák says the Rohlik meetup moved to Thursday",
+     "gold": 14,
+     "pred": 15
+    },
+    {
+     "text": "David's birthday is September 2",
+     "gold": 1,
+     "pred": null
+    }
+   ]
+  },
+  "anthropic:claude-sonnet-5": {
+   "accuracy": 0.9697,
+   "accuracy_new_person": 1.0,
+   "accuracy_ambiguous": 1.0,
+   "cost_per_1k": 1.785,
+   "latency_p50": 1.697,
+   "latency_mean": 1.782,
+   "calls": 33,
+   "errors": [
+    {
+     "text": "Honza Dvořák says the Rohlik meetup moved to Thursday",
+     "gold": 14,
+     "pred": 15
+    }
+   ]
+  }
+ }
+}

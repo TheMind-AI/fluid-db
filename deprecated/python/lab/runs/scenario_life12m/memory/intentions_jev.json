@@ -1,0 +1,1170 @@
+[
+ {
+  "id": 18,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 25,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 50,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 85,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 95,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 96,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 110,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 149,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 154,
+  "kind": "appointment",
+  "title": "Nebula board meeting",
+  "owner": "",
+  "when": "2025-11-06T16:00",
+  "where": "Nebula office, Karlín, Prague"
+ },
+ {
+  "id": 161,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 167,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 173,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 182,
+  "kind": "reminder",
+  "title": "Renew passport",
+  "owner": "",
+  "when": "2025-12-15",
+  "where": ""
+ },
+ {
+  "id": 184,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 196,
+  "kind": "appointment",
+  "title": "Dentist appointment with Dr. Horák",
+  "owner": "",
+  "when": "2025-11-12T09:00",
+  "where": ""
+ },
+ {
+  "id": 199,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 201,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 210,
+  "kind": "plan",
+  "title": "Follow up with Lucas Meyer",
+  "owner": "",
+  "when": "2026-01",
+  "where": ""
+ },
+ {
+  "id": 215,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 222,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 309,
+  "kind": "appointment",
+  "title": "Nebula board meeting",
+  "owner": "",
+  "when": "2025-12-04T16:00",
+  "where": "Nebula office, Karlín, Prague"
+ },
+ {
+  "id": 313,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 317,
+  "kind": "done",
+  "title": "Flu shot",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 323,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 353,
+  "kind": "none",
+  "title": "Spotify renewed for 169 Kč",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 366,
+  "kind": "done",
+  "title": "Renew passport",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 367,
+  "kind": "none",
+  "title": "👍",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 375,
+  "kind": "none",
+  "title": "Ask for Tom’s number",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 379,
+  "kind": "none",
+  "title": "Ask for Tom’s number",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 392,
+  "kind": "none",
+  "title": "Finished reading The Pragmatic Programmer",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 458,
+  "kind": "plan",
+  "title": "Take the train to Brno for Christmas with parents; return",
+  "owner": "",
+  "when": "2025-12-20",
+  "where": "Brno"
+ },
+ {
+  "id": 463,
+  "kind": "appointment",
+  "title": "Nebula board meeting",
+  "owner": "",
+  "when": "2026-01-01T16:00",
+  "where": "Nebula office, Karlín, Prague"
+ },
+ {
+  "id": 479,
+  "kind": "none",
+  "title": "Request to summarize an article",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 482,
+  "kind": "none",
+  "title": "Request to summarize an article",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 484,
+  "kind": "none",
+  "title": "Finished reading Project Hail Mary",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 505,
+  "kind": "appointment",
+  "title": "Call with Lucas Meyer from Sequoia",
+  "owner": "",
+  "when": "2026-01-14T10:00",
+  "where": ""
+ },
+ {
+  "id": 520,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 539,
+  "kind": "appointment",
+  "title": "Call with Lucas",
+  "owner": "",
+  "when": "2026-01-21T14:00",
+  "where": ""
+ },
+ {
+  "id": 559,
+  "kind": "reminder",
+  "title": "Renew Czech ID card",
+  "owner": "",
+  "when": "2026-03-01",
+  "where": ""
+ },
+ {
+  "id": 577,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 585,
+  "kind": "appointment",
+  "title": "Dinner with Tom",
+  "owner": "",
+  "when": "2026-01-18",
+  "where": "Sasazu"
+ },
+ {
+  "id": 594,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 607,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 629,
+  "kind": "appointment",
+  "title": "Nebula board meeting",
+  "owner": "",
+  "when": "2026-02-05T16:00",
+  "where": "Nebula office, Karlín, Prague"
+ },
+ {
+  "id": 633,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 639,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 650,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 663,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 668,
+  "kind": "reminder",
+  "title": "File Czech tax return",
+  "owner": "",
+  "when": "2026-03-31",
+  "where": ""
+ },
+ {
+  "id": 670,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 699,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 713,
+  "kind": "appointment",
+  "title": "Dentist appointment with Dr. Horák",
+  "owner": "",
+  "when": "2026-02-18T08:30",
+  "where": ""
+ },
+ {
+  "id": 743,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 750,
+  "kind": "cancel",
+  "title": "Dentist appointment",
+  "owner": "",
+  "when": "2026-02-18",
+  "where": ""
+ },
+ {
+  "id": 751,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 757,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 764,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 775,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 790,
+  "kind": "appointment",
+  "title": "Nebula board meeting",
+  "owner": "",
+  "when": "2026-03-05T16:00",
+  "where": "Nebula office, Karlín, Prague"
+ },
+ {
+  "id": 802,
+  "kind": "cancel",
+  "title": "Renew Czech ID card reminder",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 819,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 821,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 831,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 832,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 865,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 871,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 872,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 886,
+  "kind": "appointment",
+  "title": "Flight UA 8843 from Prague to San Francisco",
+  "owner": "",
+  "when": "2026-03-31T10:05",
+  "where": "Prague (PRG) to San Francisco (SFO)"
+ },
+ {
+  "id": 894,
+  "kind": "done",
+  "title": "Finish reading Shoe Dog",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 901,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 934,
+  "kind": "done",
+  "title": "File Czech tax return",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 946,
+  "kind": "commitment",
+  "title": "Pay monthly rent",
+  "owner": "",
+  "when": "2026-04-01",
+  "where": "1450 Valencia St"
+ },
+ {
+  "id": 961,
+  "kind": "appointment",
+  "title": "Nebula board meeting",
+  "owner": "",
+  "when": "2026-04-02T16:00",
+  "where": "1 Mission St, San Francisco"
+ },
+ {
+  "id": 976,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 998,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 999,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1010,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1011,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1016,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1023,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1029,
+  "kind": "reminder",
+  "title": "Get SF driver's license",
+  "owner": "",
+  "when": "2026-06-30",
+  "where": ""
+ },
+ {
+  "id": 1049,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1056,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1062,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1066,
+  "kind": "reminder",
+  "title": "Cancel Czech phone plan",
+  "owner": "",
+  "when": "2026-05-01",
+  "where": ""
+ },
+ {
+  "id": 1083,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1089,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1106,
+  "kind": "reminder",
+  "title": "Plan Lisbon trip",
+  "owner": "",
+  "when": "2026-05-10",
+  "where": ""
+ },
+ {
+  "id": 1123,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1124,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1148,
+  "kind": "appointment",
+  "title": "Nebula board meeting",
+  "owner": "",
+  "when": "2026-05-07T16:00",
+  "where": "1 Mission St, San Francisco"
+ },
+ {
+  "id": 1157,
+  "kind": "done",
+  "title": "Cancel Czech phone plan",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1170,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1173,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1174,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1175,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1181,
+  "kind": "plan",
+  "title": "Stay at Memmo Alfama Hotel in Lisbon",
+  "owner": "",
+  "when": "2026-05-22",
+  "where": "Memmo Alfama Hotel, Lisbon"
+ },
+ {
+  "id": 1183,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1187,
+  "kind": "plan",
+  "title": "Fly to Lisbon with Eva",
+  "owner": "",
+  "when": "2026-05-22",
+  "where": "SFO to LIS"
+ },
+ {
+  "id": 1189,
+  "kind": "done",
+  "title": "Plan Lisbon trip",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1195,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1231,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1245,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1271,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1303,
+  "kind": "appointment",
+  "title": "Nebula board meeting",
+  "owner": "",
+  "when": "2026-06-04T16:00",
+  "where": "1 Mission St, San Francisco"
+ },
+ {
+  "id": 1304,
+  "kind": "appointment",
+  "title": "Dentist appointment with Dr. Lee",
+  "owner": "",
+  "when": "2026-06-03T09:30",
+  "where": "Castro Dental, San Francisco"
+ },
+ {
+  "id": 1326,
+  "kind": "reminder",
+  "title": "Buy an engagement ring",
+  "owner": "",
+  "when": "2026-07-10",
+  "where": ""
+ },
+ {
+  "id": 1332,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1337,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1354,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1360,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1409,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1413,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1454,
+  "kind": "appointment",
+  "title": "Nebula board meeting",
+  "owner": "",
+  "when": "2026-07-02T16:00",
+  "where": "1 Mission St, San Francisco"
+ },
+ {
+  "id": 1477,
+  "kind": "reminder",
+  "title": "Send Q2 investor update",
+  "owner": "",
+  "when": "2026-07-05",
+  "where": ""
+ },
+ {
+  "id": 1513,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1514,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1518,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1524,
+  "kind": "done",
+  "title": "Buy an engagement ring",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1531,
+  "kind": "done",
+  "title": "Send Q2 investor update",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1533,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1553,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1564,
+  "kind": "done",
+  "title": "Read Zero to One",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1577,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1591,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1592,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1620,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1627,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1656,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1662,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1668,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1675,
+  "kind": "appointment",
+  "title": "Nebula board meeting",
+  "owner": "",
+  "when": "2026-08-06T16:00",
+  "where": "1 Mission St, San Francisco"
+ },
+ {
+  "id": 1699,
+  "kind": "done",
+  "title": "Pay August rent ($3,200)",
+  "owner": "",
+  "when": "2026-08-01",
+  "where": ""
+ },
+ {
+  "id": 1700,
+  "kind": "reminder",
+  "title": "Book the wedding venue",
+  "owner": "",
+  "when": "2026-10-31",
+  "where": ""
+ },
+ {
+  "id": 1702,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1754,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1803,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1821,
+  "kind": "appointment",
+  "title": "Nebula board meeting",
+  "owner": "",
+  "when": "2026-09-03T16:00",
+  "where": "1 Mission St, San Francisco"
+ },
+ {
+  "id": 1857,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1872,
+  "kind": "done",
+  "title": "Pay rent ($3,200)",
+  "owner": "",
+  "when": "2026-09-01",
+  "where": ""
+ },
+ {
+  "id": 1873,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1874,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1920,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1976,
+  "kind": "appointment",
+  "title": "Nebula board meeting",
+  "owner": "",
+  "when": "2026-10-01T16:00",
+  "where": "1 Mission St, San Francisco"
+ },
+ {
+  "id": 2016,
+  "kind": "appointment",
+  "title": "Series A kickoff with Sarah Kim",
+  "owner": "",
+  "when": "2026-10-09T10:00",
+  "where": "Northwind office, 2 Embarcadero Center"
+ },
+ {
+  "id": 2030,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ }
+]

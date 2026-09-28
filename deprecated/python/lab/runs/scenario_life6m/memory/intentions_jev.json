@@ -1,0 +1,554 @@
+[
+ {
+  "id": 3,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 4,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 9,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 22,
+  "kind": "reminder",
+  "title": "Get SF driver's license",
+  "owner": "",
+  "when": "2026-06-30",
+  "where": ""
+ },
+ {
+  "id": 49,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 55,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 59,
+  "kind": "reminder",
+  "title": "Cancel Czech phone plan",
+  "owner": "",
+  "when": "2026-05-01",
+  "where": ""
+ },
+ {
+  "id": 76,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 99,
+  "kind": "reminder",
+  "title": "Plan Lisbon trip",
+  "owner": "",
+  "when": "2026-05-10",
+  "where": ""
+ },
+ {
+  "id": 116,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 141,
+  "kind": "appointment",
+  "title": "Nebula board meeting",
+  "owner": "",
+  "when": "2026-05-07T16:00",
+  "where": "1 Mission St, San Francisco"
+ },
+ {
+  "id": 150,
+  "kind": "done",
+  "title": "Cancel Czech phone plan",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 163,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 166,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 167,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 168,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 174,
+  "kind": "appointment",
+  "title": "Stay at Memmo Alfama Hotel",
+  "owner": "",
+  "when": "2026-05-22",
+  "where": "Lisbon"
+ },
+ {
+  "id": 176,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 180,
+  "kind": "appointment",
+  "title": "Flight to Lisbon",
+  "owner": "",
+  "when": "2026-05-22",
+  "where": "SFO → LIS"
+ },
+ {
+  "id": 182,
+  "kind": "done",
+  "title": "Plan Lisbon trip",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 188,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 224,
+  "kind": "done",
+  "title": "Read Dune",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 238,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 264,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 296,
+  "kind": "appointment",
+  "title": "Nebula board meeting",
+  "owner": "",
+  "when": "2026-06-04T16:00",
+  "where": "1 Mission St, San Francisco"
+ },
+ {
+  "id": 297,
+  "kind": "appointment",
+  "title": "Dentist appointment with Dr. Lee",
+  "owner": "",
+  "when": "2026-06-03T09:30",
+  "where": "Castro Dental, San Francisco"
+ },
+ {
+  "id": 301,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 319,
+  "kind": "reminder",
+  "title": "Buy an engagement ring",
+  "owner": "",
+  "when": "2026-07-10",
+  "where": ""
+ },
+ {
+  "id": 330,
+  "kind": "done",
+  "title": "Pay rent",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 331,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 347,
+  "kind": "cancel",
+  "title": "Dentist appointment with Dr. Lee",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 353,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 402,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 406,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 447,
+  "kind": "appointment",
+  "title": "Nebula board meeting",
+  "owner": "",
+  "when": "2026-07-02T16:00",
+  "where": "1 Mission St, San Francisco"
+ },
+ {
+  "id": 465,
+  "kind": "cancel",
+  "title": "Nebula board meeting",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 470,
+  "kind": "reminder",
+  "title": "Send Q2 investor update",
+  "owner": "",
+  "when": "2026-07-05",
+  "where": ""
+ },
+ {
+  "id": 506,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 507,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 511,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 517,
+  "kind": "done",
+  "title": "Buy an engagement ring",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 524,
+  "kind": "done",
+  "title": "Send Q2 investor update",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 526,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 546,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 557,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 570,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 584,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 585,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 613,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 620,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 649,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 655,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 661,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 668,
+  "kind": "appointment",
+  "title": "Nebula board meeting",
+  "owner": "",
+  "when": "2026-08-06T16:00",
+  "where": "1 Mission St, San Francisco"
+ },
+ {
+  "id": 692,
+  "kind": "done",
+  "title": "Pay August rent",
+  "owner": "",
+  "when": "2026-08-01",
+  "where": ""
+ },
+ {
+  "id": 693,
+  "kind": "reminder",
+  "title": "Book the wedding venue",
+  "owner": "",
+  "when": "2026-10-31",
+  "where": ""
+ },
+ {
+  "id": 695,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 747,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 796,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 814,
+  "kind": "appointment",
+  "title": "Nebula board meeting",
+  "owner": "",
+  "when": "2026-09-03T16:00",
+  "where": "1 Mission St, San Francisco"
+ },
+ {
+  "id": 850,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 865,
+  "kind": "done",
+  "title": "Pay rent",
+  "owner": "",
+  "when": "2026-09-01",
+  "where": ""
+ },
+ {
+  "id": 866,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 867,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 913,
+  "kind": "cancel",
+  "title": "Remember Marco's number",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 969,
+  "kind": "appointment",
+  "title": "Nebula board meeting",
+  "owner": "",
+  "when": "2026-10-01T16:00",
+  "where": "1 Mission St, San Francisco"
+ },
+ {
+  "id": 972,
+  "kind": "reminder",
+  "title": "Order kitchen stuff from Target",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 1009,
+  "kind": "appointment",
+  "title": "Series A kickoff with Sarah Kim",
+  "owner": "",
+  "when": "2026-10-09T10:00",
+  "where": "Northwind office, 2 Embarcadero Center"
+ },
+ {
+  "id": 1023,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ }
+]

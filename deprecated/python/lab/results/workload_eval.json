@@ -1,0 +1,4143 @@
+{
+ "summary": {
+  "all": {
+   "n": 105,
+   "base": {
+    "det": 0.4952,
+    "agent": 0.6,
+    "hybrid": 0.6095,
+    "answered_without_llm": 75
+   },
+   "opt": {
+    "det": 0.619,
+    "agent": 0.6476,
+    "hybrid": 0.7048,
+    "answered_without_llm": 77
+   },
+   "opt+compiled": {
+    "hybrid": 0.7048,
+    "compiled_hits": 14,
+    "compiled_accuracy": 1.0,
+    "det_accuracy_on_hits": 1.0,
+    "answered_without_llm": 77,
+    "compiled_ms_p50": 3.495
+   }
+  },
+  "same": {
+   "n": 40,
+   "base": {
+    "det": 0.675,
+    "agent": 0.775,
+    "hybrid": 0.75,
+    "answered_without_llm": 34
+   },
+   "opt": {
+    "det": 0.85,
+    "agent": 0.8,
+    "hybrid": 0.875,
+    "answered_without_llm": 36
+   },
+   "opt+compiled": {
+    "hybrid": 0.875,
+    "compiled_hits": 14,
+    "compiled_accuracy": 1.0,
+    "det_accuracy_on_hits": 1.0,
+    "answered_without_llm": 36,
+    "compiled_ms_p50": 3.495
+   }
+  },
+  "reworded": {
+   "n": 40,
+   "base": {
+    "det": 0.625,
+    "agent": 0.65,
+    "hybrid": 0.7,
+    "answered_without_llm": 30
+   },
+   "opt": {
+    "det": 0.625,
+    "agent": 0.65,
+    "hybrid": 0.7,
+    "answered_without_llm": 31
+   },
+   "opt+compiled": {
+    "hybrid": 0.7,
+    "compiled_hits": 0,
+    "compiled_accuracy": null,
+    "det_accuracy_on_hits": null,
+    "answered_without_llm": 31,
+    "compiled_ms_p50": null
+   }
+  },
+  "novel": {
+   "n": 25,
+   "base": {
+    "det": 0.0,
+    "agent": 0.24,
+    "hybrid": 0.24,
+    "answered_without_llm": 11
+   },
+   "opt": {
+    "det": 0.24,
+    "agent": 0.4,
+    "hybrid": 0.44,
+    "answered_without_llm": 10
+   },
+   "opt+compiled": {
+    "hybrid": 0.44,
+    "compiled_hits": 0,
+    "compiled_accuracy": null,
+    "det_accuracy_on_hits": null,
+    "answered_without_llm": 10,
+    "compiled_ms_p50": null
+   }
+  },
+  "by_template": {
+   "avg_kind": {
+    "n": 8,
+    "base": {
+     "det": 0.375,
+     "agent": 0.75,
+     "hybrid": 0.5,
+     "answered_without_llm": 7
+    },
+    "opt": {
+     "det": 0.875,
+     "agent": 0.75,
+     "hybrid": 0.875,
+     "answered_without_llm": 8
+    },
+    "opt+compiled": {
+     "hybrid": 0.875,
+     "compiled_hits": 0,
+     "compiled_accuracy": null,
+     "det_accuracy_on_hits": null,
+     "answered_without_llm": 8,
+     "compiled_ms_p50": null
+    }
+   },
+   "avg_sleep": {
+    "n": 8,
+    "base": {
+     "det": 1.0,
+     "agent": 1.0,
+     "hybrid": 1.0,
+     "answered_without_llm": 8
+    },
+    "opt": {
+     "det": 1.0,
+     "agent": 1.0,
+     "hybrid": 1.0,
+     "answered_without_llm": 8
+    },
+    "opt+compiled": {
+     "hybrid": 1.0,
+     "compiled_hits": 4,
+     "compiled_accuracy": 1.0,
+     "det_accuracy_on_hits": 1.0,
+     "answered_without_llm": 8,
+     "compiled_ms_p50": 3.5
+    }
+   },
+   "count_climbs": {
+    "n": 8,
+    "base": {
+     "det": 0.25,
+     "agent": 0.25,
+     "hybrid": 0.25,
+     "answered_without_llm": 8
+    },
+    "opt": {
+     "det": 0.25,
+     "agent": 0.25,
+     "hybrid": 0.25,
+     "answered_without_llm": 8
+    },
+    "opt+compiled": {
+     "hybrid": 0.25,
+     "compiled_hits": 0,
+     "compiled_accuracy": null,
+     "det_accuracy_on_hits": null,
+     "answered_without_llm": 8,
+     "compiled_ms_p50": null
+    }
+   },
+   "count_kind": {
+    "n": 8,
+    "base": {
+     "det": 0.375,
+     "agent": 0.375,
+     "hybrid": 0.625,
+     "answered_without_llm": 5
+    },
+    "opt": {
+     "det": 0.5,
+     "agent": 0.25,
+     "hybrid": 0.625,
+     "answered_without_llm": 6
+    },
+    "opt+compiled": {
+     "hybrid": 0.625,
+     "compiled_hits": 1,
+     "compiled_accuracy": 1.0,
+     "det_accuracy_on_hits": 1.0,
+     "answered_without_llm": 6,
+     "compiled_ms_p50": 12.57
+    }
+   },
+   "count_kind_person": {
+    "n": 5,
+    "base": {
+     "det": 0.0,
+     "agent": 0.0,
+     "hybrid": 0.0,
+     "answered_without_llm": 5
+    },
+    "opt": {
+     "det": 0.2,
+     "agent": 0.2,
+     "hybrid": 0.2,
+     "answered_without_llm": 5
+    },
+    "opt+compiled": {
+     "hybrid": 0.2,
+     "compiled_hits": 0,
+     "compiled_accuracy": null,
+     "det_accuracy_on_hits": null,
+     "answered_without_llm": 5,
+     "compiled_ms_p50": null
+    }
+   },
+   "count_merchant": {
+    "n": 8,
+    "base": {
+     "det": 1.0,
+     "agent": 1.0,
+     "hybrid": 1.0,
+     "answered_without_llm": 8
+    },
+    "opt": {
+     "det": 1.0,
+     "agent": 1.0,
+     "hybrid": 1.0,
+     "answered_without_llm": 8
+    },
+    "opt+compiled": {
+     "hybrid": 1.0,
+     "compiled_hits": 1,
+     "compiled_accuracy": 1.0,
+     "det_accuracy_on_hits": 1.0,
+     "answered_without_llm": 8,
+     "compiled_ms_p50": 12.25
+    }
+   },
+   "count_runs": {
+    "n": 8,
+    "base": {
+     "det": 1.0,
+     "agent": 1.0,
+     "hybrid": 1.0,
+     "answered_without_llm": 6
+    },
+    "opt": {
+     "det": 1.0,
+     "agent": 1.0,
+     "hybrid": 1.0,
+     "answered_without_llm": 6
+    },
+    "opt+compiled": {
+     "hybrid": 1.0,
+     "compiled_hits": 2,
+     "compiled_accuracy": 1.0,
+     "det_accuracy_on_hits": 1.0,
+     "answered_without_llm": 6,
+     "compiled_ms_p50": 0.475
+    }
+   },
+   "last_kind_person": {
+    "n": 5,
+    "base": {
+     "det": 0.0,
+     "agent": 0.4,
+     "hybrid": 0.4,
+     "answered_without_llm": 0
+    },
+    "opt": {
+     "det": 0.0,
+     "agent": 0.4,
+     "hybrid": 0.4,
+     "answered_without_llm": 0
+    },
+    "opt+compiled": {
+     "hybrid": 0.4,
+     "compiled_hits": 0,
+     "compiled_accuracy": null,
+     "det_accuracy_on_hits": null,
+     "answered_without_llm": 0,
+     "compiled_ms_p50": null
+    }
+   },
+   "max_kind_city": {
+    "n": 8,
+    "base": {
+     "det": 0.25,
+     "agent": 0.625,
+     "hybrid": 0.625,
+     "answered_without_llm": 1
+    },
+    "opt": {
+     "det": 0.25,
+     "agent": 0.5,
+     "hybrid": 0.5,
+     "answered_without_llm": 2
+    },
+    "opt+compiled": {
+     "hybrid": 0.5,
+     "compiled_hits": 0,
+     "compiled_accuracy": null,
+     "det_accuracy_on_hits": null,
+     "answered_without_llm": 2,
+     "compiled_ms_p50": null
+    }
+   },
+   "min_weight": {
+    "n": 8,
+    "base": {
+     "det": 1.0,
+     "agent": 1.0,
+     "hybrid": 1.0,
+     "answered_without_llm": 8
+    },
+    "opt": {
+     "det": 1.0,
+     "agent": 1.0,
+     "hybrid": 1.0,
+     "answered_without_llm": 8
+    },
+    "opt+compiled": {
+     "hybrid": 1.0,
+     "compiled_hits": 4,
+     "compiled_accuracy": 1.0,
+     "det_accuracy_on_hits": 1.0,
+     "answered_without_llm": 8,
+     "compiled_ms_p50": 3.31
+    }
+   },
+   "spend_kind": {
+    "n": 8,
+    "base": {
+     "det": 0.25,
+     "agent": 0.25,
+     "hybrid": 0.25,
+     "answered_without_llm": 5
+    },
+    "opt": {
+     "det": 0.5,
+     "agent": 0.5,
+     "hybrid": 0.625,
+     "answered_without_llm": 5
+    },
+    "opt+compiled": {
+     "hybrid": 0.625,
+     "compiled_hits": 0,
+     "compiled_accuracy": null,
+     "det_accuracy_on_hits": null,
+     "answered_without_llm": 5,
+     "compiled_ms_p50": null
+    }
+   },
+   "spend_kind_city": {
+    "n": 5,
+    "base": {
+     "det": 0.0,
+     "agent": 0.0,
+     "hybrid": 0.0,
+     "answered_without_llm": 2
+    },
+    "opt": {
+     "det": 0.0,
+     "agent": 0.2,
+     "hybrid": 0.2,
+     "answered_without_llm": 1
+    },
+    "opt+compiled": {
+     "hybrid": 0.2,
+     "compiled_hits": 0,
+     "compiled_accuracy": null,
+     "det_accuracy_on_hits": null,
+     "answered_without_llm": 1,
+     "compiled_ms_p50": null
+    }
+   },
+   "spend_kind_person": {
+    "n": 5,
+    "base": {
+     "det": 0.0,
+     "agent": 0.0,
+     "hybrid": 0.0,
+     "answered_without_llm": 4
+    },
+    "opt": {
+     "det": 0.8,
+     "agent": 0.4,
+     "hybrid": 0.6,
+     "answered_without_llm": 4
+    },
+    "opt+compiled": {
+     "hybrid": 0.6,
+     "compiled_hits": 0,
+     "compiled_accuracy": null,
+     "det_accuracy_on_hits": null,
+     "answered_without_llm": 4,
+     "compiled_ms_p50": null
+    }
+   },
+   "spend_merchant": {
+    "n": 8,
+    "base": {
+     "det": 1.0,
+     "agent": 0.875,
+     "hybrid": 1.0,
+     "answered_without_llm": 8
+    },
+    "opt": {
+     "det": 1.0,
+     "agent": 1.0,
+     "hybrid": 1.0,
+     "answered_without_llm": 8
+    },
+    "opt+compiled": {
+     "hybrid": 1.0,
+     "compiled_hits": 2,
+     "compiled_accuracy": 1.0,
+     "det_accuracy_on_hits": 1.0,
+     "answered_without_llm": 8,
+     "compiled_ms_p50": 12.375
+    }
+   },
+   "top_merchant": {
+    "n": 5,
+    "base": {
+     "det": 0.0,
+     "agent": 0.8,
+     "hybrid": 0.8,
+     "answered_without_llm": 0
+    },
+    "opt": {
+     "det": 0.2,
+     "agent": 0.8,
+     "hybrid": 0.8,
+     "answered_without_llm": 0
+    },
+    "opt+compiled": {
+     "hybrid": 0.8,
+     "compiled_hits": 0,
+     "compiled_accuracy": null,
+     "det_accuracy_on_hits": null,
+     "answered_without_llm": 0,
+     "compiled_ms_p50": null
+    }
+   }
+  },
+  "cost_per_q": {
+   "base": {
+    "det": 0.000485,
+    "agent": 0.00131
+   },
+   "opt": {
+    "det": 0.000476,
+    "agent": 0.001208
+   }
+  },
+  "regression_scale72": {
+   "base": {
+    "det": 0.6806,
+    "hybrid": 0.8125,
+    "answered_without_llm": 47
+   },
+   "opt": {
+    "det": 0.7222,
+    "hybrid": 0.8333,
+    "answered_without_llm": 45
+   }
+  },
+  "spent": 0.2116
+ },
+ "rows": [
+  {
+   "id": "f001",
+   "group": "same",
+   "template": "spend_kind",
+   "question": "How much did I spend on rides in November 2024?",
+   "gold": "4,320 CZK (17 purchases)",
+   "base": {
+    "det": "4,320.00 CZK (17 rows)",
+    "verified": 0.9,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'transport' and description = 'Ride', in 2024-11 (17 matching rows)",
+    "agent": "You spent 4,320 CZK on rides in November 2024.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "4,320.00 CZK (17 rows)",
+    "verified": 0.6,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'transport', in 2024-11 (17 matching rows)",
+    "agent": "You spent 4,320 CZK on rides in November 2024 (17 transactions).",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "agent",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f002",
+   "group": "same",
+   "template": "spend_kind",
+   "question": "What was my total drinks at bars spend in June 2025?",
+   "gold": "2,800 CZK (8 purchases)",
+   "base": {
+    "det": "43,321.00 CZK (96 rows)",
+    "verified": 0.59,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada', in 2025-06 (96 matching rows)",
+    "agent": "You spent 3,300 CZK on drinks at bars in June 2025.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "agent",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "2,800.00 CZK (8 rows)",
+    "verified": 0.83,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and dining_occasion = 'drinks', in 2025-06 (8 matching rows)",
+    "agent": "Your total drinks spend at bars in June 2025 was 2,800 CZK.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f003",
+   "group": "same",
+   "template": "spend_kind",
+   "question": "How much did I spend on dinner in 2024?",
+   "gold": "133,150 CZK (77 purchases)",
+   "base": {
+    "det": "110,590.00 CZK (63 rows)",
+    "verified": 0.84,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and description = 'dinner', in 2024 (63 matching rows)",
+    "agent": "You spent **186,151 CZK** on dining in 2024.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "133,150.00 CZK (77 rows)",
+    "verified": 0.87,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and dining_occasion = 'dinner', in 2024 (77 matching rows)",
+    "agent": "You spent 126,390 CZK on dinner in 2024.",
+    "score_det": 1.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f004",
+   "group": "same",
+   "template": "spend_kind",
+   "question": "What was my total coffee spend in 2025?",
+   "gold": "34,875 CZK (380 purchases)",
+   "base": {
+    "det": "34,875.00 CZK (380 rows)",
+    "verified": 0.83,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'coffee' and description = 'Coffee', in 2025 (380 matching rows)",
+    "agent": "Your total coffee spend in 2025 was 34,750 CZK.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "34,875.00 CZK (380 rows)",
+    "verified": 0.9,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'coffee', in 2025 (380 matching rows)",
+    "agent": "Your total coffee spend in 2025 was 34,750 CZK.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f005",
+   "group": "reworded",
+   "template": "spend_kind",
+   "question": "In 2024, how much money went on lunch?",
+   "gold": "48,451 CZK (174 purchases)",
+   "base": {
+    "det": "47,681.00 CZK (172 rows)",
+    "verified": 0.85,
+    "plan": "total of amount from expenses where category = 'dining' and description = 'Lunch', in 2024 (172 matching rows)",
+    "agent": "47,681 CZK.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "47,681.00 CZK (172 rows)",
+    "verified": 0.86,
+    "plan": "total of amount from expenses where category = 'dining' and dining_occasion = 'lunch', in 2024 (172 matching rows)",
+    "agent": "In 2024, you spent 47,681 CZK on lunch.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 0.0
+   }
+  },
+  {
+   "id": "f006",
+   "group": "reworded",
+   "template": "spend_kind",
+   "question": "Total I paid for drinks at bars in May 2026?",
+   "gold": "110.66 USD (2 purchases)",
+   "base": {
+    "det": "7,118.08 USD (77 rows)",
+    "verified": 0.5,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and status = 'paid', in 2026-05 (77 matching rows)",
+    "agent": "I don't know.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "agent",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "7,118.08 USD (77 rows)",
+    "verified": 0.5,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and status = 'paid', in 2026-05 (77 matching rows)",
+    "agent": "You paid **$110.66** for drinks at bars in May 2026 ($53.11 at Zeitgeist and $57.55 at Trick Dog).",
+    "score_det": 0.0,
+    "score_agent": 1.0,
+    "path": "agent",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f007",
+   "group": "reworded",
+   "template": "spend_kind",
+   "question": "In 2024, how much money went on lunches out?",
+   "gold": "48,451 CZK (174 purchases)",
+   "base": {
+    "det": "47,681.00 CZK (172 rows)",
+    "verified": 0.86,
+    "plan": "total of amount from expenses where category = 'dining' and description = 'Lunch', in 2024 (172 matching rows)",
+    "agent": "I don't know.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "47,681.00 CZK (172 rows)",
+    "verified": 0.87,
+    "plan": "total of amount from expenses where category = 'dining' and dining_occasion = 'lunch', in 2024 (172 matching rows)",
+    "agent": "Adam spent 47,681 CZK on lunches out in 2024.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 0.0
+   }
+  },
+  {
+   "id": "f008",
+   "group": "reworded",
+   "template": "spend_kind",
+   "question": "Total I paid for things I ordered or bought in shops last month?",
+   "gold": "365.04 USD (3 purchases)",
+   "base": {
+    "det": "6,151.08 USD (96 rows)",
+    "verified": 0.62,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and status = 'paid', in 2026-08 (96 matching rows)",
+    "agent": "You spent $235.93 on shop purchases last month: $103.06 and $132.87 at IKEA.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "agent",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "6,151.08 USD (96 rows)",
+    "verified": 0.62,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and status = 'paid', in 2026-08 (96 matching rows)",
+    "agent": "You paid **$132.87** for a bookshelf from IKEA on August 23, 2026.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "agent",
+    "score_hybrid": 0.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 0.0
+   }
+  },
+  {
+   "id": "f009",
+   "group": "same",
+   "template": "count_kind",
+   "question": "How many times did I eat lunch out in November 2024?",
+   "gold": "22",
+   "base": {
+    "det": "22",
+    "verified": 0.82,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'dining' and description = 'Lunch', in 2024-11 (22 matching rows)",
+    "agent": "You ate lunch out 22 times in November 2024.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "22",
+    "verified": 0.87,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'dining' and dining_occasion = 'lunch', in 2024-11 (22 matching rows)",
+    "agent": "You ate lunch out 22 times in November 2024.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f010",
+   "group": "same",
+   "template": "count_kind",
+   "question": "How often did I do a grocery run in April 2024?",
+   "gold": "8",
+   "base": {
+    "det": "10",
+    "verified": 0.86,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'groceries', in 2024-04 (10 matching rows)",
+    "agent": "You did 10 grocery runs in April 2024.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "10",
+    "verified": 0.86,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'groceries', in 2024-04 (10 matching rows)",
+    "agent": "You did a grocery run 10 times in April 2024.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 0.0
+   }
+  },
+  {
+   "id": "f011",
+   "group": "same",
+   "template": "count_kind",
+   "question": "How many times did I go out for drinks in 2024?",
+   "gold": "42",
+   "base": {
+    "det": "I don't know.",
+    "verified": null,
+    "plan": null,
+    "agent": "You went out for drinks 12 times in 2024.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "agent",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "42",
+    "verified": 0.85,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'dining' and dining_occasion = 'drinks', in 2024 (42 matching rows)",
+    "agent": "You went out for drinks 41 times in 2024.",
+    "score_det": 1.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": true,
+    "answer": "42",
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'dining' and dining_occasion = 'drinks', in 2024 (42 matching rows)",
+    "wall_ms": 12.57,
+    "score": 1.0,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f012",
+   "group": "same",
+   "template": "count_kind",
+   "question": "How often did I do a grocery run in August 2025?",
+   "gold": "9",
+   "base": {
+    "det": "9",
+    "verified": 0.9,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'groceries', in 2025-08 (9 matching rows)",
+    "agent": "You did 8 grocery runs in August 2025.",
+    "score_det": 1.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "9",
+    "verified": 0.9,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'groceries', in 2025-08 (9 matching rows)",
+    "agent": "You did 8 grocery runs in August 2025.",
+    "score_det": 1.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f013",
+   "group": "reworded",
+   "template": "count_kind",
+   "question": "In 2024, how many times did I grab a coffee?",
+   "gold": "289",
+   "base": {
+    "det": "288",
+    "verified": 0.78,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'coffee' and description = 'Coffee', in 2024 (288 matching rows)",
+    "agent": "You grabbed a coffee 287 times in 2024.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "288",
+    "verified": 0.83,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'coffee', in 2024 (288 matching rows)",
+    "agent": "You grabbed a coffee 287 times in 2024.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 0.0
+   }
+  },
+  {
+   "id": "f014",
+   "group": "reworded",
+   "template": "count_kind",
+   "question": "Number of times I did go to a restaurant for dinner in May 2024?",
+   "gold": "10",
+   "base": {
+    "det": "10",
+    "verified": 0.83,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'dining' and description = 'Dinner', in 2024-05 (10 matching rows)",
+    "agent": "You went out for dinner 9 times in May 2024.",
+    "score_det": 1.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "10",
+    "verified": 0.88,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'dining' and dining_occasion = 'dinner', in 2024-05 (10 matching rows)",
+    "agent": "You went out for dinner 9 times in May 2024.",
+    "score_det": 1.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f015",
+   "group": "reworded",
+   "template": "count_kind",
+   "question": "In 2024, how many times did I use Uber or Bolt?",
+   "gold": "151",
+   "base": {
+    "det": "24",
+    "verified": 0.03,
+    "plan": "count of rows from movies where person_id = 'Adam Zvada', in 2024 (24 matching rows)",
+    "agent": "You used Uber or Bolt 151 times in 2024.",
+    "score_det": 0.0,
+    "score_agent": 1.0,
+    "path": "agent",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "400",
+    "verified": 0.01,
+    "plan": "count of rows from body_measurements where person_id = 'Adam Zvada', in 2024 (400 matching rows)",
+    "agent": "You used Uber or Bolt 151 times in 2024.",
+    "score_det": 0.0,
+    "score_agent": 1.0,
+    "path": "agent",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f016",
+   "group": "reworded",
+   "template": "count_kind",
+   "question": "Number of times I did go to a bar last month?",
+   "gold": "4",
+   "base": {
+    "det": "I don't know.",
+    "verified": null,
+    "plan": null,
+    "agent": "You went to a bar 4 times last month: Trick Dog twice, Zeitgeist once, and Bar Agricole once.",
+    "score_det": 0.0,
+    "score_agent": 1.0,
+    "path": "agent",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "I don't know.",
+    "verified": null,
+    "plan": null,
+    "agent": "You went to a bar 11 times last month (August 2026), based on expenses matching bar-related details or the “drinks” occasion.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "agent",
+    "score_hybrid": 0.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 0.0
+   }
+  },
+  {
+   "id": "f017",
+   "group": "same",
+   "template": "count_merchant",
+   "question": "How many times did I go to Bistro Monk this year?",
+   "gold": "13",
+   "base": {
+    "det": "13",
+    "verified": 0.82,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'dining' and merchant = 'Bistro Monk', in 2026 (13 matching rows)",
+    "agent": "You went to Bistro Monk 13 times this year.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "13",
+    "verified": 0.82,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'dining' and merchant = 'Bistro Monk', in 2026 (13 matching rows)",
+    "agent": "You went to Bistro Monk 13 times this year.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f018",
+   "group": "same",
+   "template": "count_merchant",
+   "question": "How many visits to Kantýna in July 2024?",
+   "gold": "3",
+   "base": {
+    "det": "3",
+    "verified": 0.91,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'dining' and merchant = 'Kantýna', in 2024-07 (3 matching rows)",
+    "agent": "3 visits.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "3",
+    "verified": 0.91,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'dining' and merchant = 'Kantýna', in 2024-07 (3 matching rows)",
+    "agent": "You visited Kantýna 3 times in July 2024.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f019",
+   "group": "same",
+   "template": "count_merchant",
+   "question": "How many times did I go to Kantýna in 2025?",
+   "gold": "41",
+   "base": {
+    "det": "41",
+    "verified": 0.86,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'dining' and merchant = 'Kantýna', in 2025 (41 matching rows)",
+    "agent": "You went to Kantýna 41 times in 2025.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "41",
+    "verified": 0.86,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'dining' and merchant = 'Kantýna', in 2025 (41 matching rows)",
+    "agent": "You went to Kantýna 41 times in 2025.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": true,
+    "answer": "41",
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and merchant = 'Kantýna', in 2025 (41 matching rows)",
+    "wall_ms": 12.25,
+    "score": 1.0,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f020",
+   "group": "same",
+   "template": "count_merchant",
+   "question": "How many visits to Doubleshot in January 2026?",
+   "gold": "5",
+   "base": {
+    "det": "5",
+    "verified": 0.89,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and merchant = 'Doubleshot', in 2026-01 (5 matching rows)",
+    "agent": "5 visits.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "5",
+    "verified": 0.78,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and merchant = 'Doubleshot' and expense_location = 'prague', in 2026-01 (5 matching rows)",
+    "agent": "5 visits.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f021",
+   "group": "reworded",
+   "template": "count_merchant",
+   "question": "How often was I at Ritual Coffee in July 2026?",
+   "gold": "9",
+   "base": {
+    "det": "9",
+    "verified": 0.84,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'coffee' and merchant = 'RITUAL COFFEE' and description = 'Coffee', in 2026-07 (9 matching rows)",
+    "agent": "You were at Ritual Coffee 9 times in July 2026.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "9",
+    "verified": 0.9,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'coffee' and merchant = 'RITUAL COFFEE', in 2026-07 (9 matching rows)",
+    "agent": "You were at Ritual Coffee 9 times in July 2026.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f022",
+   "group": "reworded",
+   "template": "count_merchant",
+   "question": "how many times was I at Philz Coffee?",
+   "gold": "34",
+   "base": {
+    "det": "34",
+    "verified": 0.75,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'coffee' and merchant = 'Philz Coffee' and description = 'Coffee', any time (34 matching rows)",
+    "agent": "You were at Philz Coffee 34 times.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "34",
+    "verified": 0.83,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'coffee' and merchant = 'Philz Coffee', any time (34 matching rows)",
+    "agent": "You were at Philz Coffee 34 times.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f023",
+   "group": "reworded",
+   "template": "count_merchant",
+   "question": "How often was I at Café Savoy in 2024?",
+   "gold": "55",
+   "base": {
+    "det": "55",
+    "verified": 0.87,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and merchant = 'Café Savoy', in 2024 (55 matching rows)",
+    "agent": "You were at Café Savoy 55 times in 2024.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "55",
+    "verified": 0.87,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and merchant = 'Café Savoy', in 2024 (55 matching rows)",
+    "agent": "You were at Café Savoy 55 times in 2024.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f024",
+   "group": "reworded",
+   "template": "count_merchant",
+   "question": "This year, how many times was I at Souvla?",
+   "gold": "26",
+   "base": {
+    "det": "26",
+    "verified": 0.84,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'dining' and merchant = 'Souvla', in 2026 (26 matching rows)",
+    "agent": "You were at Souvla 26 times this year.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "26",
+    "verified": 0.84,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'dining' and merchant = 'Souvla', in 2026 (26 matching rows)",
+    "agent": "You were at Souvla 26 times this year.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f025",
+   "group": "same",
+   "template": "spend_merchant",
+   "question": "How much did I spend at Můj šálek kávy this year?",
+   "gold": "1,155 CZK (12 purchases)",
+   "base": {
+    "det": "1,155.00 CZK (12 rows)",
+    "verified": 0.75,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'coffee' and merchant = 'Můj šálek kávy' and description = 'Coffee', in 2026 (12 matching rows)",
+    "agent": "You spent 1,155 CZK at Můj šálek kávy this year (12 transactions).",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "1,155.00 CZK (12 rows)",
+    "verified": 0.82,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and merchant = 'Můj šálek kávy', in 2026 (12 matching rows)",
+    "agent": "You spent 1,155 CZK at Můj šálek kávy this year (12 transactions).",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f026",
+   "group": "same",
+   "template": "spend_merchant",
+   "question": "What did I spend in total at Bolt?",
+   "gold": "93,390 CZK (402 purchases)",
+   "base": {
+    "det": "93,390.00 CZK (402 rows)",
+    "verified": 0.86,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and merchant = 'Bolt', any time (402 matching rows)",
+    "agent": "You spent 93,390 CZK at Bolt across 402 transactions.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "93,390.00 CZK (402 rows)",
+    "verified": 0.86,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and merchant = 'Bolt', any time (402 matching rows)",
+    "agent": "You spent 93,390 CZK at Bolt across 402 transactions.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": true,
+    "answer": "93,390.00 CZK (402 rows)",
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and merchant = 'Bolt', any time (402 matching rows)",
+    "wall_ms": 12.5,
+    "score": 1.0,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f027",
+   "group": "same",
+   "template": "spend_merchant",
+   "question": "How much did I spend at EMA Espresso Bar in September 2024?",
+   "gold": "285 CZK (3 purchases)",
+   "base": {
+    "det": "285.00 CZK (3 rows)",
+    "verified": 0.9,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and merchant = 'EMA Espresso Bar', in 2024-09 (3 matching rows)",
+    "agent": "You spent 285 CZK at EMA Espresso Bar in September 2024.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "285.00 CZK (3 rows)",
+    "verified": 0.9,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and merchant = 'EMA Espresso Bar', in 2024-09 (3 matching rows)",
+    "agent": "You spent 285 CZK at EMA Espresso Bar in September 2024 (3 transactions).",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": true,
+    "answer": "285.00 CZK (3 rows)",
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and merchant = 'EMA Espresso Bar', in 2024-09 (3 matching rows)",
+    "wall_ms": 12.25,
+    "score": 1.0,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f028",
+   "group": "same",
+   "template": "spend_merchant",
+   "question": "What did I spend in total at Doubleshot this year?",
+   "gold": "1,175 CZK (13 purchases)",
+   "base": {
+    "det": "1,175.00 CZK (13 rows)",
+    "verified": 0.79,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and merchant = 'Doubleshot', in 2026 (13 matching rows)",
+    "agent": "You spent 1,175 CZK at Doubleshot this year.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "1,175.00 CZK (13 rows)",
+    "verified": 0.79,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and merchant = 'Doubleshot', in 2026 (13 matching rows)",
+    "agent": "You spent 1,175 CZK at Doubleshot this year.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f029",
+   "group": "reworded",
+   "template": "spend_merchant",
+   "question": "In 2025, how much did I pay at Albert?",
+   "gold": "55,690 CZK (50 purchases)",
+   "base": {
+    "det": "55,690.00 CZK (50 rows)",
+    "verified": 0.88,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and merchant = 'Albert', in 2025 (50 matching rows)",
+    "agent": "You paid 4,600 CZK at Albert in 2025.",
+    "score_det": 1.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "55,690.00 CZK (50 rows)",
+    "verified": 0.87,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and merchant = 'Albert' and status = 'paid', in 2025 (50 matching rows)",
+    "agent": "You paid **55,690 CZK** at Albert in 2025.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f030",
+   "group": "reworded",
+   "template": "spend_merchant",
+   "question": "How much money did I leave at Anonymous Bar in 2024?",
+   "gold": "2,830 CZK (10 purchases)",
+   "base": {
+    "det": "2,830.00 CZK (10 rows)",
+    "verified": 0.87,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and merchant = 'Anonymous Bar', in 2024 (10 matching rows)",
+    "agent": "You spent **2,830 CZK** at Anonymous Bar in 2024 across 10 visits.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "2,830.00 CZK (10 rows)",
+    "verified": 0.85,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and merchant = 'Anonymous Bar', in 2024 (10 matching rows)",
+    "agent": "You spent 2,830 CZK at Anonymous Bar in 2024, across 10 visits.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f031",
+   "group": "reworded",
+   "template": "spend_merchant",
+   "question": "In 2024, how much did I pay at Kavárna Místo?",
+   "gold": "1,860 CZK (23 purchases)",
+   "base": {
+    "det": "1,860.00 CZK (23 rows)",
+    "verified": 0.92,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and merchant = 'Kavárna Místo' and status = 'paid', in 2024 (23 matching rows)",
+    "agent": "You paid 1,860 CZK at Kavárna Místo in 2024, across 23 purchases.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "1,860.00 CZK (23 rows)",
+    "verified": 0.92,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and merchant = 'Kavárna Místo' and status = 'paid', in 2024 (23 matching rows)",
+    "agent": "You paid 1,860 CZK at Kavárna Místo in 2024 (23 transactions).",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f032",
+   "group": "reworded",
+   "template": "spend_merchant",
+   "question": "How much money did I leave at Můj šálek kávy this year?",
+   "gold": "1,155 CZK (12 purchases)",
+   "base": {
+    "det": "1,155.00 CZK (12 rows)",
+    "verified": 0.78,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'coffee' and merchant = 'Můj šálek kávy' and description = 'Coffee', in 2026 (12 matching rows)",
+    "agent": "You spent 1,155 CZK at Můj šálek kávy this year.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "1,155.00 CZK (12 rows)",
+    "verified": 0.81,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'coffee' and merchant = 'Můj šálek kávy', in 2026 (12 matching rows)",
+    "agent": "You spent **1,155 CZK** at Můj šálek kávy this year (12 visits).",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f033",
+   "group": "same",
+   "template": "max_kind_city",
+   "question": "What's the most I've spent on a single coffee in San Francisco?",
+   "gold": "6.75 USD at Ritual Coffee on 2026-04-12",
+   "base": {
+    "det": "150.59 — 2026-04-22 {\"person\": \"Adam Zvada\", \"category\": \"shopping\", \"date\": \"2026-04-22\", \"amount\": 150.59, \"currency\": \"USD\", \"merchant\": \"Amazon\", \"description\": \"Coffee beans\"}",
+    "verified": 0.36,
+    "plan": "row with the largest amount from expenses where person_id = 'Adam Zvada' and description = 'Coffee', any time (520 matching rows)",
+    "agent": "The most you spent on a single coffee in San Francisco was **$6.75 USD** at **Blue Bottle** on **April 24, 2026**.",
+    "score_det": 0.0,
+    "score_agent": 1.0,
+    "path": "agent",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "6.75 — 2026-04-12 {\"person\": \"Adam Zvada\", \"category\": \"coffee\", \"date\": \"2026-04-12\", \"amount\": 6.75, \"currency\": \"USD\", \"merchant\": \"RITUAL COFFEE\", \"description\": \"Coffee\", \"expense_location\": \"san",
+    "verified": 0.91,
+    "plan": "row with the largest amount from expenses where person_id = 'Adam Zvada' and category = 'coffee' and expense_location = 'san francisco', any time (188 matching rows)",
+    "agent": "Your most expensive single coffee in San Francisco was **$6.75** at **Ritual Coffee**, on **April 12, 2026**.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f034",
+   "group": "same",
+   "template": "max_kind_city",
+   "question": "What was my most expensive night of drinks in San Francisco?",
+   "gold": "59.45 USD at Trick Dog on 2026-06-03",
+   "base": {
+    "det": "2480.0 — 2024-04-01 {\"person\": \"Adam Zvada\", \"category\": \"dining\", \"date\": \"2024-04-01\", \"amount\": 2480.0, \"currency\": \"CZK\", \"merchant\": \"Café Imperial\", \"description\": \"With Eva\"}",
+    "verified": 0.08,
+    "plan": "row with the largest amount from expenses where person_id = 'Adam Zvada' and category = 'dining', any time (959 matching rows)",
+    "agent": "Your most expensive recorded night of drinks in San Francisco was June 4, 2026, at Trick Dog: $59.45 (drinks with Priya).",
+    "score_det": 0.0,
+    "score_agent": 1.0,
+    "path": "agent",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "I don't know.",
+    "verified": null,
+    "plan": null,
+    "agent": "I don't know.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "agent",
+    "score_hybrid": 0.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 0.0
+   }
+  },
+  {
+   "id": "f035",
+   "group": "same",
+   "template": "max_kind_city",
+   "question": "What's the most I've spent on a single lunch in San Francisco?",
+   "gold": "26.50 USD at The Grove on 2026-04-13",
+   "base": {
+    "det": "385.0 — 2024-04-01 {\"person\": \"Adam Zvada\", \"category\": \"dining\", \"date\": \"2024-04-01\", \"amount\": 385.0, \"currency\": \"CZK\", \"merchant\": \"Pho Vietnam\", \"description\": \"Lunch\"}",
+    "verified": 0.78,
+    "plan": "row with the largest amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and description = 'Lunch', any time (571 matching rows)",
+    "agent": "I don't know.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "2025-10-04 {\"person\": \"Adam Zvada\", \"title\": \"Thinking, Fast and Slow\", \"author\": \"Daniel Kahneman\", \"status\": \"finished\", \"date_started\": \"2025-10-04\", \"rating\": 5.0, \"date_finished\": \"2025-11-06\"}",
+    "verified": 0.01,
+    "plan": "row with the largest __row__ from books where person_id = 'Adam Zvada', any time (12 matching rows)",
+    "agent": "I don't know.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "agent",
+    "score_hybrid": 0.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 0.0
+   }
+  },
+  {
+   "id": "f036",
+   "group": "same",
+   "template": "max_kind_city",
+   "question": "What was my most expensive dinner in San Francisco?",
+   "gold": "135.40 USD at Foreign Cinema on 2026-05-10",
+   "base": {
+    "det": "2480.0 — 2024-04-08 {\"person\": \"Adam Zvada\", \"category\": \"dining\", \"date\": \"2024-04-08\", \"amount\": 2480.0, \"currency\": \"CZK\", \"merchant\": \"La Degustation\", \"description\": \"Dinner with Tom\", \"with_pers",
+    "verified": 0.58,
+    "plan": "row with the largest amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and description = 'Dinner', any time (170 matching rows)",
+    "agent": "I don't know.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "agent",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "I don't know.",
+    "verified": null,
+    "plan": null,
+    "agent": "Your most expensive San Francisco dinner was $135.40 USD, tied across several dinners. One example was at Foreign Cinema on May 10, 2026, with Priya.",
+    "score_det": 0.0,
+    "score_agent": 1.0,
+    "path": "agent",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f037",
+   "group": "reworded",
+   "template": "max_kind_city",
+   "question": "Priciest night of drinks I had in Prague?",
+   "gold": "450.00 CZK at Vinograf on 2024-06-09",
+   "base": {
+    "det": "2480.0 — 2024-04-01 {\"person\": \"Adam Zvada\", \"category\": \"dining\", \"date\": \"2024-04-01\", \"amount\": 2480.0, \"currency\": \"CZK\", \"merchant\": \"Café Imperial\", \"description\": \"With Eva\"}",
+    "verified": 0.29,
+    "plan": "row with the largest amount from expenses where person_id = 'Adam Zvada' and category = 'dining', any time (959 matching rows)",
+    "agent": "Your priciest drinks nights in Prague were tied at 450 CZK: Vinograf on June 9, 2024 (with David) and Anonymous Bar on January 16, 2026 (with Tom).",
+    "score_det": 0.0,
+    "score_agent": 1.0,
+    "path": "agent",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "I don't know.",
+    "verified": null,
+    "plan": null,
+    "agent": "Your priciest night of drinks in Prague was at Vinograf on June 9, 2024: 450 CZK, for drinks with David.",
+    "score_det": 0.0,
+    "score_agent": 1.0,
+    "path": "agent",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f038",
+   "group": "reworded",
+   "template": "max_kind_city",
+   "question": "Biggest bill for a lunch in Prague?",
+   "gold": "385.00 CZK at Pho Vietnam on 2024-04-01",
+   "base": {
+    "det": "385.0 — 2024-04-01 {\"person\": \"Adam Zvada\", \"category\": \"dining\", \"date\": \"2024-04-01\", \"amount\": 385.0, \"currency\": \"CZK\", \"merchant\": \"Pho Vietnam\", \"description\": \"Lunch\"}",
+    "verified": 0.45,
+    "plan": "row with the largest amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and description = 'Lunch', any time (571 matching rows)",
+    "agent": "The biggest lunch bill recorded was **385 CZK** at **Pho Vietnam** on **April 1, 2024**.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "agent",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "2025-10-04 {\"person\": \"Adam Zvada\", \"title\": \"Thinking, Fast and Slow\", \"author\": \"Daniel Kahneman\", \"status\": \"finished\", \"date_started\": \"2025-10-04\", \"rating\": 5.0, \"date_finished\": \"2025-11-06\"}",
+    "verified": 0.01,
+    "plan": "row with the largest __row__ from books where no filter, any time (12 matching rows)",
+    "agent": "I don't know.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "agent",
+    "score_hybrid": 0.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 0.0
+   }
+  },
+  {
+   "id": "f039",
+   "group": "reworded",
+   "template": "max_kind_city",
+   "question": "Priciest ride I had in Prague?",
+   "gold": "380.00 CZK at Bolt on 2024-06-04",
+   "base": {
+    "det": "Ride home — 2024-06-04 {\"person\": \"Adam Zvada\", \"category\": \"transport\", \"date\": \"2024-06-04\", \"amount\": 380.0, \"currency\": \"CZK\", \"merchant\": \"Bolt\", \"description\": \"Ride home\"}",
+    "verified": 0.34,
+    "plan": "row with the largest description from expenses where person_id = 'Adam Zvada' and category = 'transport' and description = 'Ride', any time (481 matching rows)",
+    "agent": "Your priciest recorded ride was 380 CZK with Bolt. That fare appears on several dates, including June 4, 2024 and March 27, 2026.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "agent",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "380.0 — 2024-06-04 {\"person\": \"Adam Zvada\", \"category\": \"transport\", \"date\": \"2024-06-04\", \"amount\": 380.0, \"currency\": \"CZK\", \"merchant\": \"Bolt\", \"description\": \"Ride home\", \"expense_location\": \"prag",
+    "verified": 0.87,
+    "plan": "row with the largest amount from expenses where person_id = 'Adam Zvada' and category = 'transport' and expense_location = 'prague', any time (402 matching rows)",
+    "agent": "Your priciest ride in Prague was a Bolt ride home on June 4, 2024, for 380 CZK.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f040",
+   "group": "reworded",
+   "template": "max_kind_city",
+   "question": "Biggest bill for a night of drinks in San Francisco?",
+   "gold": "59.45 USD at Trick Dog on 2026-06-03",
+   "base": {
+    "det": "2480.0 — 2024-04-01 {\"person\": \"Adam Zvada\", \"category\": \"dining\", \"date\": \"2024-04-01\", \"amount\": 2480.0, \"currency\": \"CZK\", \"merchant\": \"Café Imperial\", \"description\": \"With Eva\"}",
+    "verified": 0.14,
+    "plan": "row with the largest amount from expenses where person_id = 'Adam Zvada' and category = 'dining', any time (959 matching rows)",
+    "agent": "The biggest bill was **$56.74 at Bar Agricole** on **August 31, 2026** (beers).",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "agent",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "5.0 — 2024-05-01 {\"person\": \"Adam Zvada\", \"title\": \"Sentimental Value\", \"rating\": 5.0, \"date_watched\": \"2024-05-01\"}",
+    "verified": 0.01,
+    "plan": "row with the largest rating from movies where no filter, any time (100 matching rows)",
+    "agent": "I don't know.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "agent",
+    "score_hybrid": 0.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 0.0
+   }
+  },
+  {
+   "id": "f041",
+   "group": "same",
+   "template": "avg_kind",
+   "question": "What's my average night of drinks bill in February 2025?",
+   "gold": "153.33 CZK (average of 3)",
+   "base": {
+    "det": "396.13 (average of 86 rows)",
+    "verified": 0.58,
+    "plan": "average of amount from expenses where person_id = 'Adam Zvada', in 2025-02 (86 matching rows)",
+    "agent": "Your average night-of-drinks bill in February 2025 was 153.33 CZK, based on 3 nights.",
+    "score_det": 0.0,
+    "score_agent": 1.0,
+    "path": "agent",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "153.33 (average of 3 rows)",
+    "verified": 0.87,
+    "plan": "average of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and dining_occasion = 'drinks', in 2025-02 (3 matching rows)",
+    "agent": "Your average night-of-drinks bill in February 2025 was **153.33 CZK** (3 bills).",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f042",
+   "group": "same",
+   "template": "avg_kind",
+   "question": "How much did a coffee cost me on average last month?",
+   "gold": "5.75 USD (average of 38)",
+   "base": {
+    "det": "9.00 (average of 38 rows)",
+    "verified": 0.83,
+    "plan": "average of amount from expenses where person_id = 'Adam Zvada' and category = 'coffee' and description = 'Coffee', in 2026-08 (38 matching rows)",
+    "agent": "Your coffee cost an average of $5.76 each in August 2026, across 37 purchases.",
+    "score_det": 0.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "5.76 (average of 37 rows)",
+    "verified": 0.82,
+    "plan": "average of amount from expenses where person_id = 'Adam Zvada' and category = 'coffee', in 2026-08 (37 matching rows)",
+    "agent": "You spent an average of **$5.76 per coffee** last month (August 2026), across 37 purchases.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f043",
+   "group": "same",
+   "template": "avg_kind",
+   "question": "What's my average ride bill in July 2026?",
+   "gold": "22.31 USD (average of 16)",
+   "base": {
+    "det": "21.37 (average of 14 rows)",
+    "verified": 0.9,
+    "plan": "average of amount from expenses where person_id = 'Adam Zvada' and category = 'transport' and description = 'Ride', in 2026-07 (14 matching rows)",
+    "agent": "Your average ride bill in July 2026 was **$22.31** (16 rides).",
+    "score_det": 0.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "22.31 (average of 16 rows)",
+    "verified": 0.71,
+    "plan": "average of amount from expenses where person_id = 'Adam Zvada' and category = 'transport', in 2026-07 (16 matching rows)",
+    "agent": "Your average ride bill in July 2026 was **$22.31 USD** (16 rides).",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f044",
+   "group": "same",
+   "template": "avg_kind",
+   "question": "How much did a ride cost me on average in 2024?",
+   "gold": "237.02 CZK (average of 151)",
+   "base": {
+    "det": "237.02 (average of 151 rows)",
+    "verified": 0.86,
+    "plan": "average of amount from expenses where person_id = 'Adam Zvada' and category = 'transport' and description = 'Ride', in 2024 (151 matching rows)",
+    "agent": "A ride cost you an average of **237.02 CZK** in 2024, based on 151 rides.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "237.02 (average of 151 rows)",
+    "verified": 0.7,
+    "plan": "average of amount from expenses where person_id = 'Adam Zvada' and category = 'transport', in 2024 (151 matching rows)",
+    "agent": "Your rides cost an average of **237.02 CZK** each in 2024 (151 rides).",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f045",
+   "group": "reworded",
+   "template": "avg_kind",
+   "question": "Last month, what did I typically pay for a dinner?",
+   "gold": "102.19 USD (average of 7)",
+   "base": {
+    "det": "105.13 (average of 3 rows)",
+    "verified": 0.83,
+    "plan": "average of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and description = 'dinner', in 2026-08 (3 matching rows)",
+    "agent": "Last month, a typical dinner cost about **$112** (median of the three dinner expenses; they ranged from $68 to $135.40).",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "102.19 (average of 7 rows)",
+    "verified": 0.85,
+    "plan": "average of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and dining_occasion = 'dinner', in 2026-08 (7 matching rows)",
+    "agent": "Last month (August 2026), you typically paid about $102 per dinner on average (7 dinners, all in USD).",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f046",
+   "group": "reworded",
+   "template": "avg_kind",
+   "question": "Average price of a coffee in September 2025?",
+   "gold": "91.89 CZK (average of 37)",
+   "base": {
+    "det": "91.89 (average of 37 rows)",
+    "verified": 0.71,
+    "plan": "average of amount from expenses where category = 'coffee' and description = 'Coffee', in 2025-09 (37 matching rows)",
+    "agent": "The average coffee price in September 2025 was **91.89 CZK** (37 purchases).",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "91.89 (average of 37 rows)",
+    "verified": 0.73,
+    "plan": "average of amount from expenses where category = 'coffee', in 2025-09 (37 matching rows)",
+    "agent": "I don't know.",
+    "score_det": 1.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f047",
+   "group": "reworded",
+   "template": "avg_kind",
+   "question": "In March 2026, what did I typically pay for a grocery run?",
+   "gold": "1,311.25 CZK (average of 8)",
+   "base": {
+    "det": "1,387.67 (average of 9 rows)",
+    "verified": 0.85,
+    "plan": "average of amount from expenses where person_id = 'Adam Zvada' and category = 'groceries', in 2026-03 (9 matching rows)",
+    "agent": "In March 2026, you typically paid about 1,388 CZK per grocery run (9 runs; average 1,387.67 CZK).",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "1,387.67 (average of 9 rows)",
+    "verified": 0.85,
+    "plan": "average of amount from expenses where person_id = 'Adam Zvada' and category = 'groceries', in 2026-03 (9 matching rows)",
+    "agent": "In March 2026, you typically paid about 1,388 CZK per grocery run (9 runs; average 1,387.67 CZK).",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 0.0
+   }
+  },
+  {
+   "id": "f048",
+   "group": "reworded",
+   "template": "avg_kind",
+   "question": "Average price of a lunch in February 2025?",
+   "gold": "298.95 CZK (average of 19)",
+   "base": {
+    "det": "298.95 (average of 19 rows)",
+    "verified": 0.8,
+    "plan": "average of amount from expenses where category = 'dining' and description = 'Lunch', in 2025-02 (19 matching rows)",
+    "agent": "The average lunch price in February 2025 was **298.95 CZK** (19 lunches).",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "298.95 (average of 19 rows)",
+    "verified": 0.79,
+    "plan": "average of amount from expenses where category = 'dining' and dining_occasion = 'lunch', in 2025-02 (19 matching rows)",
+    "agent": "The average lunch price in February 2025 was about 299 CZK (19 lunches).",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f049",
+   "group": "same",
+   "template": "avg_sleep",
+   "question": "What was my average sleep in November 2024?",
+   "gold": "7.02 hours (30 nights)",
+   "base": {
+    "det": "7.02 (average of 30 rows)",
+    "verified": 0.9,
+    "plan": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2024-11 (30 matching rows)",
+    "agent": "Your average sleep in November 2024 was about 7.02 hours per night.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "7.02 (average of 30 rows)",
+    "verified": 0.9,
+    "plan": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2024-11 (30 matching rows)",
+    "agent": "Your average sleep in November 2024 was about **7.02 hours per day**.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": true,
+    "answer": "7.02 (average of 30 rows)",
+    "plan": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2024-11 (30 matching rows)",
+    "wall_ms": 3.49,
+    "score": 1.0,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f050",
+   "group": "same",
+   "template": "avg_sleep",
+   "question": "How many hours did I sleep on average in February 2026?",
+   "gold": "6.98 hours (24 nights)",
+   "base": {
+    "det": "6.98 (average of 24 rows)",
+    "verified": 0.88,
+    "plan": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2026-02 (24 matching rows)",
+    "agent": "You averaged about 6.98 hours of sleep per day in February 2026.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "6.98 (average of 24 rows)",
+    "verified": 0.88,
+    "plan": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2026-02 (24 matching rows)",
+    "agent": "You slept an average of about 6.98 hours per night in February 2026.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": true,
+    "answer": "6.98 (average of 24 rows)",
+    "plan": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2026-02 (24 matching rows)",
+    "wall_ms": 3.5,
+    "score": 1.0,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f051",
+   "group": "same",
+   "template": "avg_sleep",
+   "question": "What was my average sleep in July 2025?",
+   "gold": "7.31 hours (25 nights)",
+   "base": {
+    "det": "7.31 (average of 25 rows)",
+    "verified": 0.9,
+    "plan": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2025-07 (25 matching rows)",
+    "agent": "Your average sleep in July 2025 was 7.31 hours, based on 25 measurements.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "7.31 (average of 25 rows)",
+    "verified": 0.9,
+    "plan": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2025-07 (25 matching rows)",
+    "agent": "Your average sleep in July 2025 was 7.31 hours per night.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": true,
+    "answer": "7.31 (average of 25 rows)",
+    "plan": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2025-07 (25 matching rows)",
+    "wall_ms": 3.5,
+    "score": 1.0,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f052",
+   "group": "same",
+   "template": "avg_sleep",
+   "question": "How many hours did I sleep on average in July 2026?",
+   "gold": "6.99 hours (30 nights)",
+   "base": {
+    "det": "6.99 (average of 30 rows)",
+    "verified": 0.88,
+    "plan": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2026-07 (30 matching rows)",
+    "agent": "You slept an average of **6.99 hours per day** in July 2026.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "6.99 (average of 30 rows)",
+    "verified": 0.88,
+    "plan": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2026-07 (30 matching rows)",
+    "agent": "You averaged about 6.99 hours of sleep per night in July 2026.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": true,
+    "answer": "6.99 (average of 30 rows)",
+    "plan": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2026-07 (30 matching rows)",
+    "wall_ms": 3.57,
+    "score": 1.0,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f053",
+   "group": "reworded",
+   "template": "avg_sleep",
+   "question": "In February 2026, how long did I sleep per night?",
+   "gold": "6.98 hours (24 nights)",
+   "base": {
+    "det": "6.98 (average of 24 rows)",
+    "verified": 0.86,
+    "plan": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2026-02 (24 matching rows)",
+    "agent": "You slept an average of about **6.98 hours per night** in February 2026 (24 recorded nights).",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "6.98 (average of 24 rows)",
+    "verified": 0.86,
+    "plan": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2026-02 (24 matching rows)",
+    "agent": "In February 2026, you slept an average of about 6.98 hours per night across 24 recorded nights.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f054",
+   "group": "reworded",
+   "template": "avg_sleep",
+   "question": "Average hours of sleep in June 2025?",
+   "gold": "6.92 hours (27 nights)",
+   "base": {
+    "det": "6.92 (average of 27 rows)",
+    "verified": 0.87,
+    "plan": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2025-06 (27 matching rows)",
+    "agent": "Average sleep in June 2025 was 6.92 hours per night.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "6.92 (average of 27 rows)",
+    "verified": 0.87,
+    "plan": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2025-06 (27 matching rows)",
+    "agent": "Your average sleep in June 2025 was **6.92 hours per night**.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f055",
+   "group": "reworded",
+   "template": "avg_sleep",
+   "question": "In December 2024, how long did I sleep per night?",
+   "gold": "7.02 hours (30 nights)",
+   "base": {
+    "det": "7.02 (average of 30 rows)",
+    "verified": 0.87,
+    "plan": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2024-12 (30 matching rows)",
+    "agent": "In December 2024, you averaged about **7.02 hours of sleep per night** across 30 recorded nights.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "7.02 (average of 30 rows)",
+    "verified": 0.87,
+    "plan": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2024-12 (30 matching rows)",
+    "agent": "In December 2024, you slept an average of **7.02 hours per night** across 30 recorded nights.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f056",
+   "group": "reworded",
+   "template": "avg_sleep",
+   "question": "Average hours of sleep in February 2026?",
+   "gold": "6.98 hours (24 nights)",
+   "base": {
+    "det": "6.98 (average of 24 rows)",
+    "verified": 0.88,
+    "plan": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2026-02 (24 matching rows)",
+    "agent": "Your average sleep in February 2026 was about 6.98 hours per night.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "6.98 (average of 24 rows)",
+    "verified": 0.88,
+    "plan": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2026-02 (24 matching rows)",
+    "agent": "Average sleep in February 2026 was about 6.98 hours per day.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f057",
+   "group": "same",
+   "template": "min_weight",
+   "question": "What was my lowest weight in December 2025?",
+   "gold": "74.8 kg (2025-12-27)",
+   "base": {
+    "det": "74.8 — 2025-12-27 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 74.8, \"unit\": \"kg\", \"date\": \"2025-12-27\"}",
+    "verified": 0.94,
+    "plan": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight' and unit = 'kg', in 2025-12 (17 matching rows)",
+    "agent": "Your lowest weight in December 2025 was 74.8 kg.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "74.8 — 2025-12-27 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 74.8, \"unit\": \"kg\", \"date\": \"2025-12-27\"}",
+    "verified": 0.94,
+    "plan": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight' and unit = 'kg', in 2025-12 (17 matching rows)",
+    "agent": "Your lowest weight in December 2025 was 74.8 kg.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": true,
+    "answer": "74.8 — 2025-12-27 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 74.8, \"unit\": \"kg\", \"date\": \"2025-12-27\"}",
+    "plan": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight' and unit = 'kg', in 2025-12 (17 matching rows)",
+    "wall_ms": 3.37,
+    "score": 1.0,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f058",
+   "group": "same",
+   "template": "min_weight",
+   "question": "What's the least I weighed in June 2026?",
+   "gold": "74.5 kg (2026-06-10)",
+   "base": {
+    "det": "74.5 — 2026-06-10 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 74.5, \"unit\": \"kg\", \"date\": \"2026-06-10\"}",
+    "verified": 0.93,
+    "plan": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight' and unit = 'kg', in 2026-06 (15 matching rows)",
+    "agent": "Your lowest recorded weight in June 2026 was 74.5 kg.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "74.5 — 2026-06-10 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 74.5, \"unit\": \"kg\", \"date\": \"2026-06-10\"}",
+    "verified": 0.93,
+    "plan": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight' and unit = 'kg', in 2026-06 (15 matching rows)",
+    "agent": "Your lowest recorded weight in June 2026 was 74.5 kg.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": true,
+    "answer": "74.5 — 2026-06-10 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 74.5, \"unit\": \"kg\", \"date\": \"2026-06-10\"}",
+    "plan": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight', in 2026-06 (15 matching rows)",
+    "wall_ms": 3.25,
+    "score": 1.0,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f059",
+   "group": "same",
+   "template": "min_weight",
+   "question": "What was my lowest weight in July 2025?",
+   "gold": "74.6 kg (2025-07-10)",
+   "base": {
+    "det": "74.6 — 2025-07-10 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 74.6, \"unit\": \"kg\", \"date\": \"2025-07-10\"}",
+    "verified": 0.94,
+    "plan": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight' and unit = 'kg', in 2025-07 (16 matching rows)",
+    "agent": "Your lowest weight in July 2025 was 74.6 kg.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "74.6 — 2025-07-10 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 74.6, \"unit\": \"kg\", \"date\": \"2025-07-10\"}",
+    "verified": 0.94,
+    "plan": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight' and unit = 'kg', in 2025-07 (16 matching rows)",
+    "agent": "Your lowest weight in July 2025 was 74.6 kg.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": true,
+    "answer": "74.6 — 2025-07-10 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 74.6, \"unit\": \"kg\", \"date\": \"2025-07-10\"}",
+    "plan": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight' and unit = 'kg', in 2025-07 (16 matching rows)",
+    "wall_ms": 3.38,
+    "score": 1.0,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f060",
+   "group": "same",
+   "template": "min_weight",
+   "question": "What's the least I weighed in January 2026?",
+   "gold": "74.5 kg (2026-01-27)",
+   "base": {
+    "det": "74.5 — 2026-01-27 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 74.5, \"unit\": \"kg\", \"date\": \"2026-01-27\"}",
+    "verified": 0.93,
+    "plan": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight' and unit = 'kg', in 2026-01 (15 matching rows)",
+    "agent": "Your least weight in January 2026 was 74.5 kg.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "74.5 — 2026-01-27 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 74.5, \"unit\": \"kg\", \"date\": \"2026-01-27\"}",
+    "verified": 0.93,
+    "plan": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight' and unit = 'kg', in 2026-01 (15 matching rows)",
+    "agent": "Your lowest recorded weight in January 2026 was 74.5 kg.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": true,
+    "answer": "74.5 — 2026-01-27 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 74.5, \"unit\": \"kg\", \"date\": \"2026-01-27\"}",
+    "plan": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight', in 2026-01 (15 matching rows)",
+    "wall_ms": 3.17,
+    "score": 1.0,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f061",
+   "group": "reworded",
+   "template": "min_weight",
+   "question": "In April 2026, what was my minimum weight?",
+   "gold": "75.2 kg (2026-04-01)",
+   "base": {
+    "det": "75.2 — 2026-04-01 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 75.2, \"unit\": \"kg\", \"date\": \"2026-04-01\"}",
+    "verified": 0.92,
+    "plan": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight' and unit = 'kg', in 2026-04 (9 matching rows)",
+    "agent": "Your minimum weight in April 2026 was 75.2 kg.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "75.2 — 2026-04-01 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 75.2, \"unit\": \"kg\", \"date\": \"2026-04-01\"}",
+    "verified": 0.92,
+    "plan": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight' and unit = 'kg', in 2026-04 (9 matching rows)",
+    "agent": "Your minimum weight in April 2026 was 75.2 kg.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f062",
+   "group": "reworded",
+   "template": "min_weight",
+   "question": "Lightest I've been this year?",
+   "gold": "73.6 kg (2026-07-28)",
+   "base": {
+    "det": "73.6 — 2026-07-28 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 73.6, \"unit\": \"kg\", \"date\": \"2026-07-28\"}",
+    "verified": 0.9,
+    "plan": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight' and unit = 'kg', in 2026 (129 matching rows)",
+    "agent": "Your lightest this year was **73.6 kg**, on **July 28, 2026**.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "73.6 — 2026-07-28 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 73.6, \"unit\": \"kg\", \"date\": \"2026-07-28\"}",
+    "verified": 0.9,
+    "plan": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight' and unit = 'kg', in 2026 (129 matching rows)",
+    "agent": "Your lightest this year was 73.6 kg on July 28, 2026.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f063",
+   "group": "reworded",
+   "template": "min_weight",
+   "question": "In 2024, what was my minimum weight?",
+   "gold": "73.8 kg (2024-07-23)",
+   "base": {
+    "det": "73.8 — 2024-07-23 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 73.8, \"unit\": \"kg\", \"date\": \"2024-07-23\"}",
+    "verified": 0.91,
+    "plan": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight' and unit = 'kg', in 2024 (148 matching rows)",
+    "agent": "Your minimum weight in 2024 was **73.8 kg**.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "73.8 — 2024-07-23 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 73.8, \"unit\": \"kg\", \"date\": \"2024-07-23\"}",
+    "verified": 0.91,
+    "plan": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight' and unit = 'kg', in 2024 (148 matching rows)",
+    "agent": "Your minimum weight in 2024 was 73.8 kg.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f064",
+   "group": "reworded",
+   "template": "min_weight",
+   "question": "Lightest I've been last month?",
+   "gold": "73.9 kg (2026-08-04)",
+   "base": {
+    "det": "73.9 — 2026-08-04 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 73.9, \"unit\": \"kg\", \"date\": \"2026-08-04\"}",
+    "verified": 0.81,
+    "plan": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight' and unit = 'kg', in 2026-08 (16 matching rows)",
+    "agent": "Your lightest weight last month (August 2026) was **73.9 kg**.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "73.9 — 2026-08-04 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 73.9, \"unit\": \"kg\", \"date\": \"2026-08-04\"}",
+    "verified": 0.81,
+    "plan": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight' and unit = 'kg', in 2026-08 (16 matching rows)",
+    "agent": "Your lightest recorded weight last month was 73.9 kg, on August 4, 2026.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f065",
+   "group": "same",
+   "template": "count_runs",
+   "question": "How many runs did I do in November 2025?",
+   "gold": "5",
+   "base": {
+    "det": "5",
+    "verified": 0.89,
+    "plan": "count of rows from workouts where person_id = 'Adam Zvada' and category = 'run', in 2025-11 (5 matching rows)",
+    "agent": "You did 5 runs in November 2025.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "5",
+    "verified": 0.89,
+    "plan": "count of rows from workouts where person_id = 'Adam Zvada' and category = 'run', in 2025-11 (5 matching rows)",
+    "agent": "You did 5 runs in November 2025.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": true,
+    "answer": "5",
+    "plan": "count of rows from workouts where person_id = 'Adam Zvada' and category = 'run', in 2025-11 (5 matching rows)",
+    "wall_ms": 0.48,
+    "score": 1.0,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f066",
+   "group": "same",
+   "template": "count_runs",
+   "question": "How many times did I go running in 2025?",
+   "gold": "64",
+   "base": {
+    "det": "64",
+    "verified": 0.89,
+    "plan": "count of rows from workouts where person_id = 'Adam Zvada' and category = 'run', in 2025 (64 matching rows)",
+    "agent": "You went running 64 times in 2025.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "64",
+    "verified": 0.89,
+    "plan": "count of rows from workouts where person_id = 'Adam Zvada' and category = 'run', in 2025 (64 matching rows)",
+    "agent": "You went running 64 times in 2025.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f067",
+   "group": "same",
+   "template": "count_runs",
+   "question": "How many runs did I do in June 2026?",
+   "gold": "4",
+   "base": {
+    "det": "4",
+    "verified": 0.89,
+    "plan": "count of rows from workouts where person_id = 'Adam Zvada' and category = 'run', in 2026-06 (4 matching rows)",
+    "agent": "You did 4 runs in June 2026.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "4",
+    "verified": 0.89,
+    "plan": "count of rows from workouts where person_id = 'Adam Zvada' and category = 'run', in 2026-06 (4 matching rows)",
+    "agent": "You did 4 runs in June 2026.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": true,
+    "answer": "4",
+    "plan": "count of rows from workouts where person_id = 'Adam Zvada' and category = 'run', in 2026-06 (4 matching rows)",
+    "wall_ms": 0.47,
+    "score": 1.0,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f068",
+   "group": "same",
+   "template": "count_runs",
+   "question": "How many times did I go running in August 2024?",
+   "gold": "3",
+   "base": {
+    "det": "3",
+    "verified": 0.89,
+    "plan": "count of rows from workouts where person_id = 'Adam Zvada' and category = 'run', in 2024-08 (3 matching rows)",
+    "agent": "You went running 3 times in August 2024.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "3",
+    "verified": 0.89,
+    "plan": "count of rows from workouts where person_id = 'Adam Zvada' and category = 'run', in 2024-08 (3 matching rows)",
+    "agent": "You went running 3 times in August 2024.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f069",
+   "group": "reworded",
+   "template": "count_runs",
+   "question": "In January 2026, how many runs did I log?",
+   "gold": "4",
+   "base": {
+    "det": "35.00 (4 rows)",
+    "verified": 0.31,
+    "plan": "total of distance from workouts where person_id = 'Adam Zvada' and category = 'run', in 2026-01 (4 matching rows)",
+    "agent": "You logged 4 runs in January 2026.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "agent",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "35.00 (4 rows)",
+    "verified": 0.31,
+    "plan": "total of distance from workouts where person_id = 'Adam Zvada' and category = 'run', in 2026-01 (4 matching rows)",
+    "agent": "You logged 4 runs in January 2026.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "agent",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f070",
+   "group": "reworded",
+   "template": "count_runs",
+   "question": "Number of runs in January 2025?",
+   "gold": "7",
+   "base": {
+    "det": "7",
+    "verified": 0.86,
+    "plan": "count of rows from workouts where person_id = 'Adam Zvada' and category = 'run', in 2025-01 (7 matching rows)",
+    "agent": "7 runs.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "7",
+    "verified": 0.86,
+    "plan": "count of rows from workouts where person_id = 'Adam Zvada' and category = 'run', in 2025-01 (7 matching rows)",
+    "agent": "You completed 7 runs in January 2025.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f071",
+   "group": "reworded",
+   "template": "count_runs",
+   "question": "In August 2026, how many runs did I log?",
+   "gold": "5",
+   "base": {
+    "det": "40.00 (5 rows)",
+    "verified": 0.28,
+    "plan": "total of distance from workouts where person_id = 'Adam Zvada' and category = 'run', in 2026-08 (5 matching rows)",
+    "agent": "You logged 5 runs in August 2026.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "agent",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "40.00 (5 rows)",
+    "verified": 0.28,
+    "plan": "total of distance from workouts where person_id = 'Adam Zvada' and category = 'run', in 2026-08 (5 matching rows)",
+    "agent": "You logged 5 runs in August 2026.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "agent",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f072",
+   "group": "reworded",
+   "template": "count_runs",
+   "question": "Number of runs this year?",
+   "gold": "43",
+   "base": {
+    "det": "43",
+    "verified": 0.87,
+    "plan": "count of rows from workouts where person_id = 'Adam Zvada' and category = 'run', in 2026 (43 matching rows)",
+    "agent": "You’ve logged 43 runs this year.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "43",
+    "verified": 0.87,
+    "plan": "count of rows from workouts where person_id = 'Adam Zvada' and category = 'run', in 2026 (43 matching rows)",
+    "agent": "43 runs.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f073",
+   "group": "same",
+   "template": "count_climbs",
+   "question": "How many times did I go climbing?",
+   "gold": "214",
+   "base": {
+    "det": "205",
+    "verified": 0.8,
+    "plan": "count of rows from events where person_id = 'Adam Zvada' and category = 'climbing' and title = 'Climbing', any time (205 matching rows)",
+    "agent": "You went climbing 205 times.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "205",
+    "verified": 0.8,
+    "plan": "count of rows from events where person_id = 'Adam Zvada' and category = 'climbing' and title = 'Climbing', any time (205 matching rows)",
+    "agent": "You went climbing 149 times.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 0.0
+   }
+  },
+  {
+   "id": "f074",
+   "group": "same",
+   "template": "count_climbs",
+   "question": "How many climbing sessions did I have in April 2026?",
+   "gold": "9",
+   "base": {
+    "det": "9",
+    "verified": 0.86,
+    "plan": "count of rows from events where person_id = 'Adam Zvada' and category = 'climbing' and title = 'Climbing', in 2026-04 (9 matching rows)",
+    "agent": "You had 9 climbing sessions in April 2026.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "9",
+    "verified": 0.86,
+    "plan": "count of rows from events where person_id = 'Adam Zvada' and category = 'climbing' and title = 'Climbing', in 2026-04 (9 matching rows)",
+    "agent": "You had 9 climbing sessions in April 2026.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f075",
+   "group": "same",
+   "template": "count_climbs",
+   "question": "How many times did I go climbing in April 2024?",
+   "gold": "8",
+   "base": {
+    "det": "7",
+    "verified": 0.85,
+    "plan": "count of rows from events where person_id = 'Adam Zvada' and category = 'climbing' and title = 'Climbing', in 2024-04 (7 matching rows)",
+    "agent": "You went climbing 7 times in April 2024.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "7",
+    "verified": 0.85,
+    "plan": "count of rows from events where person_id = 'Adam Zvada' and category = 'climbing' and title = 'Climbing', in 2024-04 (7 matching rows)",
+    "agent": "You went climbing 7 times in April 2024.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 0.0
+   }
+  },
+  {
+   "id": "f076",
+   "group": "same",
+   "template": "count_climbs",
+   "question": "How many climbing sessions did I have in July 2024?",
+   "gold": "8",
+   "base": {
+    "det": "8",
+    "verified": 0.88,
+    "plan": "count of rows from events where person_id = 'Adam Zvada' and category = 'climbing' and title = 'Climbing', in 2024-07 (8 matching rows)",
+    "agent": "You had 8 climbing sessions in July 2024.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "8",
+    "verified": 0.88,
+    "plan": "count of rows from events where person_id = 'Adam Zvada' and category = 'climbing' and title = 'Climbing', in 2024-07 (8 matching rows)",
+    "agent": "You had 8 climbing sessions in July 2024.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f077",
+   "group": "reworded",
+   "template": "count_climbs",
+   "question": "In 2024, how often did I climb?",
+   "gold": "67",
+   "base": {
+    "det": "65",
+    "verified": 0.87,
+    "plan": "count of rows from events where person_id = 'Adam Zvada' and category = 'climbing' and title = 'Climbing', in 2024 (65 matching rows)",
+    "agent": "You climbed 64 times in 2024.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "65",
+    "verified": 0.87,
+    "plan": "count of rows from events where person_id = 'Adam Zvada' and category = 'climbing' and title = 'Climbing', in 2024 (65 matching rows)",
+    "agent": "You climbed 64 times in 2024.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 0.0
+   }
+  },
+  {
+   "id": "f078",
+   "group": "reworded",
+   "template": "count_climbs",
+   "question": "Climbing sessions this year?",
+   "gold": "61",
+   "base": {
+    "det": "58",
+    "verified": 0.73,
+    "plan": "count of rows from events where person_id = 'Adam Zvada' and category = 'climbing' and title = 'Climbing', in 2026 (58 matching rows)",
+    "agent": "You’ve logged 44 climbing sessions as attended this year. There are also 9 planned and 5 with no status recorded.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "58",
+    "verified": 0.73,
+    "plan": "count of rows from events where person_id = 'Adam Zvada' and category = 'climbing' and title = 'Climbing', in 2026 (58 matching rows)",
+    "agent": "You have 58 climbing sessions listed this year, from January 4 to September 29, 2026: 44 attended, 9 planned, and 5 with no status recorded.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 0.0
+   }
+  },
+  {
+   "id": "f079",
+   "group": "reworded",
+   "template": "count_climbs",
+   "question": "This year, how often did I climb?",
+   "gold": "61",
+   "base": {
+    "det": "58",
+    "verified": 0.82,
+    "plan": "count of rows from events where person_id = 'Adam Zvada' and category = 'climbing' and title = 'Climbing', in 2026 (58 matching rows)",
+    "agent": "You climbed 58 times this year (2026).",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "58",
+    "verified": 0.82,
+    "plan": "count of rows from events where person_id = 'Adam Zvada' and category = 'climbing' and title = 'Climbing', in 2026 (58 matching rows)",
+    "agent": "You’ve climbed 44 times this year according to events marked attended. There are also 5 climbing events with no status recorded and 9 planned.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 0.0
+   }
+  },
+  {
+   "id": "f080",
+   "group": "reworded",
+   "template": "count_climbs",
+   "question": "Climbing sessions in 2025?",
+   "gold": "86",
+   "base": {
+    "det": "2025-10-02T16:00; 2025-11-06T16:00; 2025-11-12T09:00; 2025-12-04T16:00",
+    "verified": 0.82,
+    "plan": "list of start_at from events where no filter, in 2025 (4 matching rows)",
+    "agent": "There are 82 climbing sessions recorded for 2025: 53 attended, 23 planned, and 6 with no status recorded.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "2025-10-02T16:00; 2025-11-06T16:00; 2025-11-12T09:00; 2025-12-04T16:00",
+    "verified": 0.82,
+    "plan": "list of start_at from events where no filter, in 2025 (4 matching rows)",
+    "agent": "There are 82 climbing sessions recorded in 2025: 53 attended, 23 planned, and 6 with no status listed. The dates range from January 3 to December 19.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 0.0
+   }
+  },
+  {
+   "id": "f081",
+   "group": "novel",
+   "template": "spend_kind_person",
+   "question": "How much have I spent on dinners out with Tom?",
+   "gold": "73,180 CZK (42 purchases)",
+   "base": {
+    "det": "32,730.00 CZK (18 rows)",
+    "verified": 0.84,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and description = 'Dinner with Tom' and with_person_id = 'Tom Novak', any time (18 matching rows)",
+    "agent": "You’ve spent 78,860 CZK on dinners out with Tom (61 expenses).",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "73,180.00 CZK (42 rows)",
+    "verified": 0.87,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and with_person_id = 'Tom Novak' and dining_occasion = 'dinner', any time (42 matching rows)",
+    "agent": "You’ve spent **15,490 CZK** on dinners out with Tom, across 9 dinners.",
+    "score_det": 1.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f082",
+   "group": "novel",
+   "template": "spend_kind_person",
+   "question": "How much have I spent on dinner with Kuba?",
+   "gold": "64,310 CZK (45 purchases)",
+   "base": {
+    "det": "36,520.00 CZK (25 rows)",
+    "verified": 0.82,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and description = 'Dinner with Kuba' and with_person_id = 'Kuba', any time (25 matching rows)",
+    "agent": "You’ve spent 68,830 CZK on dinner with Kuba across 60 expenses.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "64,310.00 CZK (45 rows)",
+    "verified": 0.84,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and with_person_id = 'Kuba' and dining_occasion = 'dinner', any time (45 matching rows)",
+    "agent": "You’ve spent 64,310 CZK on dinner with Kuba (45 dinners).",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f083",
+   "group": "novel",
+   "template": "spend_kind_person",
+   "question": "How much have I spent on dinners out with Kuba?",
+   "gold": "64,310 CZK (45 purchases)",
+   "base": {
+    "det": "36,520.00 CZK (25 rows)",
+    "verified": 0.82,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and description = 'Dinner with Kuba' and with_person_id = 'Kuba', any time (25 matching rows)",
+    "agent": "You’ve spent 68,830 CZK on dining out with Kuba across 60 expenses.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "64,310.00 CZK (45 rows)",
+    "verified": 0.83,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and with_person_id = 'Kuba' and dining_occasion = 'dinner', any time (45 matching rows)",
+    "agent": "You’ve spent 64,310 CZK on 45 dinners out with Kuba.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f084",
+   "group": "novel",
+   "template": "spend_kind_person",
+   "question": "How much have I spent on drinks at bars with Ondra?",
+   "gold": "3,540 CZK (13 purchases)",
+   "base": {
+    "det": "1,990.00 CZK (8 rows)",
+    "verified": 0.56,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and description = 'Drinks with Ondra' and with_person_id = 'Ondřej Král', any time (8 matching rows)",
+    "agent": "You’ve spent **1,990 CZK** on drinks at bars with Ondra.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "agent",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "3,540.00 CZK (13 rows)",
+    "verified": 0.66,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and with_person_id = 'Ondřej Král' and dining_occasion = 'drinks', any time (13 matching rows)",
+    "agent": "You’ve spent 480 CZK on drinks at bars with Ondřej Král (3 visits).",
+    "score_det": 1.0,
+    "score_agent": 0.0,
+    "path": "agent",
+    "score_hybrid": 0.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 0.0
+   }
+  },
+  {
+   "id": "f085",
+   "group": "novel",
+   "template": "spend_kind_person",
+   "question": "How much have I spent on dinner with Lucie?",
+   "gold": "33,830 CZK (21 purchases)",
+   "base": {
+    "det": "15,250.00 CZK (11 rows)",
+    "verified": 0.86,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and description = 'Dinner with Lucie' and with_person_id = 'Lucie', any time (11 matching rows)",
+    "agent": "You’ve spent 73,420 CZK and $262.11 USD on dining with Lucie (78 expenses total).",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "62,420.00 CZK + 232.20 USD (40 rows)",
+    "verified": 0.85,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and with_person_id = 'Lucie' and dining_occasion = 'dinner', any time (40 matching rows)",
+    "agent": "You’ve spent 62,420 CZK and $232.20 on dinners with Lucie (40 dinners total).",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 0.0
+   }
+  },
+  {
+   "id": "f086",
+   "group": "novel",
+   "template": "count_kind_person",
+   "question": "How many times did I go out for drinks with Lucie?",
+   "gold": "19",
+   "base": {
+    "det": "12",
+    "verified": 0.79,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'dining' and description = 'Drinks with Lucie' and with_person_id = 'Lucie', any time (12 matching rows)",
+    "agent": "You went out for drinks with Lucie 12 times.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "38",
+    "verified": 0.8,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'dining' and with_person_id = 'Lucie' and dining_occasion = 'drinks', any time (38 matching rows)",
+    "agent": "You went out for drinks with Lucie 38 times.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 0.0
+   }
+  },
+  {
+   "id": "f087",
+   "group": "novel",
+   "template": "count_kind_person",
+   "question": "How many times did I go out for dinner with Nina?",
+   "gold": "19",
+   "base": {
+    "det": "5",
+    "verified": 0.86,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'dining' and description = 'Dinner with Nina' and with_person_id = 'Nina Rossi', any time (5 matching rows)",
+    "agent": "You went out for dinner with Nina 16 times.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "10",
+    "verified": 0.87,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'dining' and with_person_id = 'Nina Rossi' and dining_occasion = 'dinner', any time (10 matching rows)",
+    "agent": "You went out for dinner with Nina 12 times.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 0.0
+   }
+  },
+  {
+   "id": "f088",
+   "group": "novel",
+   "template": "count_kind_person",
+   "question": "How many times did I go out for dinner with David?",
+   "gold": "46",
+   "base": {
+    "det": "11",
+    "verified": 0.82,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'dining' and description = 'Dinner with David' and with_person_id = 'David', any time (11 matching rows)",
+    "agent": "You went out for dinner with David 26 times.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "16",
+    "verified": 0.83,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'dining' and with_person_id = 'David' and dining_occasion = 'dinner', any time (16 matching rows)",
+    "agent": "You went out for dinner with David 16 times.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 0.0
+   }
+  },
+  {
+   "id": "f089",
+   "group": "novel",
+   "template": "count_kind_person",
+   "question": "How many times did I go out for dinner with Ondra?",
+   "gold": "28",
+   "base": {
+    "det": "13",
+    "verified": 0.84,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'dining' and description = 'Dinner with Ondra' and with_person_id = 'Ondřej Král', any time (13 matching rows)",
+    "agent": "You went out for dinner with Ondra 41 times.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "28",
+    "verified": 0.81,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'dining' and with_person_id = 'Ondřej Král' and dining_occasion = 'dinner', any time (28 matching rows)",
+    "agent": "You went out for dinner with Ondra 28 times.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "deterministic",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f090",
+   "group": "novel",
+   "template": "count_kind_person",
+   "question": "How many times did I go out for dinner with Lucie?",
+   "gold": "21",
+   "base": {
+    "det": "11",
+    "verified": 0.85,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'dining' and description = 'Dinner with Lucie' and with_person_id = 'Lucie', any time (11 matching rows)",
+    "agent": "You went out for dinner with Lucie 12 times.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "40",
+    "verified": 0.82,
+    "plan": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'dining' and with_person_id = 'Lucie' and dining_occasion = 'dinner', any time (40 matching rows)",
+    "agent": "You went out for dinner with Lucie 40 times.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 0.0
+   }
+  },
+  {
+   "id": "f091",
+   "group": "novel",
+   "template": "last_kind_person",
+   "question": "When did I last go out for dinner with Kuba?",
+   "gold": "2026-02-19 at Maso a Kobliha",
+   "base": {
+    "det": "I don't know.",
+    "verified": null,
+    "plan": null,
+    "agent": "Your last clearly recorded dinner with Kuba was February 16, 2026, at Eska.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "agent",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "I don't know.",
+    "verified": null,
+    "plan": null,
+    "agent": "June 19, 2025 — at Field.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "agent",
+    "score_hybrid": 0.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 0.0
+   }
+  },
+  {
+   "id": "f092",
+   "group": "novel",
+   "template": "last_kind_person",
+   "question": "When did I last go out for dinner with Eva?",
+   "gold": "2026-09-25 at Nopa",
+   "base": {
+    "det": "I don't know.",
+    "verified": null,
+    "plan": null,
+    "agent": "You last went out for dinner with Eva Green on September 25, 2026, at Nopa.",
+    "score_det": 0.0,
+    "score_agent": 1.0,
+    "path": "agent",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "I don't know.",
+    "verified": null,
+    "plan": null,
+    "agent": "You last went out for dinner with Eva Green on September 25, 2026, at Nopa.",
+    "score_det": 0.0,
+    "score_agent": 1.0,
+    "path": "agent",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f093",
+   "group": "novel",
+   "template": "last_kind_person",
+   "question": "When did I last go out for drinks with Eva?",
+   "gold": "2026-09-24 at Zeitgeist",
+   "base": {
+    "det": "Adam proposed and Eva said yes; engaged 2026-07-12 — 2026-07-12T22:42 {\"person\": \"Adam Zvada\", \"related_person\": \"Eva\", \"category\": \"engaged\", \"details\": \"Adam proposed and Eva said yes; engaged 2026-",
+    "verified": 0.03,
+    "plan": "latest details from relationships where person_id = 'Adam Zvada' and related_person_id = 'Eva', any time (1 matching rows)",
+    "agent": "The last outing logged as drinks with Eva was at Trick Dog on June 7, 2026.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "agent",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "I don't know.",
+    "verified": null,
+    "plan": null,
+    "agent": "July 14, 2026, at Zeitgeist.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "agent",
+    "score_hybrid": 0.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 0.0
+   }
+  },
+  {
+   "id": "f094",
+   "group": "novel",
+   "template": "last_kind_person",
+   "question": "When did I last go out for dinner with Priya?",
+   "gold": "2026-08-16 at Nopa",
+   "base": {
+    "det": "I don't know.",
+    "verified": null,
+    "plan": null,
+    "agent": "You last went out for dinner with Priya on August 16, 2026, at Nopa.",
+    "score_det": 0.0,
+    "score_agent": 1.0,
+    "path": "agent",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "I don't know.",
+    "verified": null,
+    "plan": null,
+    "agent": "You last went out for dinner with Priya on August 16, 2026, at Nopa.",
+    "score_det": 0.0,
+    "score_agent": 1.0,
+    "path": "agent",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f095",
+   "group": "novel",
+   "template": "last_kind_person",
+   "question": "When did I last go out for drinks with Kuba?",
+   "gold": "2026-03-12 at Hemingway Bar",
+   "base": {
+    "det": "I don't know.",
+    "verified": null,
+    "plan": null,
+    "agent": "You last went out for drinks with Kuba on March 13, 2026, at Hemingway Bar.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "agent",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "I don't know.",
+    "verified": null,
+    "plan": null,
+    "agent": "You last went out for drinks with Kuba on March 13, 2026, at Hemingway Bar.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "agent",
+    "score_hybrid": 0.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 0.0
+   }
+  },
+  {
+   "id": "f096",
+   "group": "novel",
+   "template": "spend_kind_city",
+   "question": "How much have I spent on lunches out in Prague in total?",
+   "gold": "130,791 CZK (465 purchases)",
+   "base": {
+    "det": "130,021.00 CZK + 1,970.00 USD (571 rows)",
+    "verified": 0.41,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and description = 'Lunch', any time (571 matching rows)",
+    "agent": "I don't know.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "agent",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "I don't know.",
+    "verified": null,
+    "plan": null,
+    "agent": "I don't know.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "agent",
+    "score_hybrid": 0.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 0.0
+   }
+  },
+  {
+   "id": "f097",
+   "group": "novel",
+   "template": "spend_kind_city",
+   "question": "How much have I spent on grocery shopping in Prague in total?",
+   "gold": "217,580 CZK (196 purchases)",
+   "base": {
+    "det": "69,950.00 CZK + 1,170.73 USD (75 rows)",
+    "verified": 0.83,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'groceries' and description = 'Shopping', any time (75 matching rows)",
+    "agent": "I don't know.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "237,015.00 CZK (211 rows)",
+    "verified": 0.91,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'groceries' and expense_location = 'prague', any time (211 matching rows)",
+    "agent": "You’ve spent 237,015 CZK on grocery shopping in Prague across 211 purchases.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 0.0
+   }
+  },
+  {
+   "id": "f098",
+   "group": "novel",
+   "template": "spend_kind_city",
+   "question": "How much have I spent on lunch in Prague in total?",
+   "gold": "130,791 CZK (465 purchases)",
+   "base": {
+    "det": "130,021.00 CZK + 1,970.00 USD (571 rows)",
+    "verified": 0.5,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and description = 'Lunch', any time (571 matching rows)",
+    "agent": "I don't know.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "agent",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "I don't know.",
+    "verified": null,
+    "plan": null,
+    "agent": "I don't know.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "agent",
+    "score_hybrid": 0.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 0.0
+   }
+  },
+  {
+   "id": "f099",
+   "group": "novel",
+   "template": "spend_kind_city",
+   "question": "How much have I spent on rides in San Francisco in total?",
+   "gold": "1,916.65 USD (88 purchases)",
+   "base": {
+    "det": "93,390.00 CZK + 1,685.58 USD (481 rows)",
+    "verified": 0.77,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'transport' and description = 'Ride', any time (481 matching rows)",
+    "agent": "I don't know.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "deterministic",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "I don't know.",
+    "verified": null,
+    "plan": null,
+    "agent": "I don't know.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "agent",
+    "score_hybrid": 0.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 0.0
+   }
+  },
+  {
+   "id": "f100",
+   "group": "novel",
+   "template": "spend_kind_city",
+   "question": "How much have I spent on Uber and Bolt rides in San Francisco in total?",
+   "gold": "1,916.65 USD (88 purchases)",
+   "base": {
+    "det": "1,685.58 USD (79 rows)",
+    "verified": 0.08,
+    "plan": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'transport' and merchant = 'Uber' and description = 'Ride', any time (79 matching rows)",
+    "agent": "I don't know.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "agent",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "I don't know.",
+    "verified": null,
+    "plan": null,
+    "agent": "The database doesn’t explicitly tag these rides by city, but the Uber and Bolt rides recorded in USD total **$1,916.65**.",
+    "score_det": 0.0,
+    "score_agent": 1.0,
+    "path": "agent",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f101",
+   "group": "novel",
+   "template": "top_merchant",
+   "question": "Where did I eat lunch out most often in 2024?",
+   "gold": "Mr. Bao (37 times)",
+   "base": {
+    "det": "Pho Vietnam — 2024-04-01 {\"person\": \"Adam Zvada\", \"category\": \"dining\", \"date\": \"2024-04-01\", \"amount\": 385.0, \"currency\": \"CZK\", \"merchant\": \"Pho Vietnam\", \"description\": \"Lunch\"}",
+    "verified": 0.2,
+    "plan": "row with the largest merchant from expenses where person_id = 'Adam Zvada' and category = 'dining' and description = 'Lunch', in 2024 (172 matching rows)",
+    "agent": "Mr. Bao—you ate lunch there most often in 2024, with 37 visits.",
+    "score_det": 0.0,
+    "score_agent": 1.0,
+    "path": "agent",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "Pho Vietnam — 2024-04-01 {\"person\": \"Adam Zvada\", \"category\": \"dining\", \"date\": \"2024-04-01\", \"amount\": 385.0, \"currency\": \"CZK\", \"merchant\": \"Pho Vietnam\", \"description\": \"Lunch\", \"dining_occasion\": ",
+    "verified": 0.25,
+    "plan": "row with the largest merchant from expenses where person_id = 'Adam Zvada' and category = 'dining' and dining_occasion = 'lunch', in 2024 (172 matching rows)",
+    "agent": "Mr. Bao, with 37 lunch visits in 2024.",
+    "score_det": 0.0,
+    "score_agent": 1.0,
+    "path": "agent",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f102",
+   "group": "novel",
+   "template": "top_merchant",
+   "question": "Where did I go out for drinks most often in 2024?",
+   "gold": "Vinograf (17 times)",
+   "base": {
+    "det": "Café Imperial — 2024-04-01 {\"person\": \"Adam Zvada\", \"category\": \"dining\", \"date\": \"2024-04-01\", \"amount\": 2480.0, \"currency\": \"CZK\", \"merchant\": \"Café Imperial\", \"description\": \"With Eva\"}",
+    "verified": 0.15,
+    "plan": "row with the largest merchant from expenses where person_id = 'Adam Zvada' and category = 'dining', in 2024 (291 matching rows)",
+    "agent": "Vinograf — you mentioned going there for drinks 5 times in 2024.",
+    "score_det": 0.0,
+    "score_agent": 1.0,
+    "path": "agent",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "Vinograf — 2024-06-09 {\"person\": \"Adam Zvada\", \"category\": \"dining\", \"date\": \"2024-06-09\", \"amount\": 450.0, \"currency\": \"CZK\", \"merchant\": \"Vinograf\", \"description\": \"Drinks with David\", \"with_person\"",
+    "verified": 0.27,
+    "plan": "row with the largest merchant from expenses where person_id = 'Adam Zvada' and category = 'dining' and dining_occasion = 'drinks', in 2024 (42 matching rows)",
+    "agent": "Vinograf — 16 times in 2024.",
+    "score_det": 1.0,
+    "score_agent": 1.0,
+    "path": "agent",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f103",
+   "group": "novel",
+   "template": "top_merchant",
+   "question": "Where did I buy groceries most often in 2025?",
+   "gold": "Albert (50 times)",
+   "base": {
+    "det": "Rohlik.cz — 2025-04-27 {\"person\": \"Adam Zvada\", \"category\": \"groceries\", \"date\": \"2025-04-27\", \"amount\": 2549.0, \"currency\": \"CZK\", \"merchant\": \"Rohlik.cz\", \"description\": \"Groceries delivery\"}",
+    "verified": 0.34,
+    "plan": "row with the largest merchant from expenses where person_id = 'Adam Zvada' and category = 'groceries' and description = 'Groceries', in 2025 (105 matching rows)",
+    "agent": "You bought groceries most often at Albert—50 purchases in 2025.",
+    "score_det": 0.0,
+    "score_agent": 1.0,
+    "path": "agent",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "Rohlik.cz — 2025-04-27 {\"person\": \"Adam Zvada\", \"category\": \"groceries\", \"date\": \"2025-04-27\", \"amount\": 2549.0, \"currency\": \"CZK\", \"merchant\": \"Rohlik.cz\", \"description\": \"Groceries delivery\", \"expen",
+    "verified": 0.47,
+    "plan": "row with the largest merchant from expenses where person_id = 'Adam Zvada' and category = 'groceries', in 2025 (103 matching rows)",
+    "agent": "You bought groceries most often at Albert, with 50 purchases in 2025.",
+    "score_det": 0.0,
+    "score_agent": 1.0,
+    "path": "agent",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f104",
+   "group": "novel",
+   "template": "top_merchant",
+   "question": "Where did I go out for drinks most often in 2025?",
+   "gold": "Vinograf (14 times)",
+   "base": {
+    "det": "Field — 2025-01-09 {\"person\": \"Adam Zvada\", \"category\": \"dining\", \"date\": \"2025-01-09\", \"amount\": 2480.0, \"currency\": \"CZK\", \"merchant\": \"Field\", \"description\": \"dinner\", \"with_person\": \"Lucie\"}",
+    "verified": 0.13,
+    "plan": "row with the largest merchant from expenses where person_id = 'Adam Zvada' and category = 'dining', in 2025 (371 matching rows)",
+    "agent": "Vinograf — 9 times in 2025.",
+    "score_det": 0.0,
+    "score_agent": 1.0,
+    "path": "agent",
+    "score_hybrid": 1.0
+   },
+   "opt": {
+    "det": "U Hrocha — 2025-05-06 {\"person\": \"Adam Zvada\", \"category\": \"dining\", \"date\": \"2025-05-06\", \"amount\": 450.0, \"currency\": \"CZK\", \"merchant\": \"U Hrocha\", \"description\": \"Beers\", \"with_person\": \"Lucie\", \"",
+    "verified": 0.3,
+    "plan": "row with the largest merchant from expenses where person_id = 'Adam Zvada' and category = 'dining' and dining_occasion = 'drinks', in 2025 (52 matching rows)",
+    "agent": "Vinograf, where you went for drinks 14 times in 2025.",
+    "score_det": 0.0,
+    "score_agent": 1.0,
+    "path": "agent",
+    "score_hybrid": 1.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 1.0
+   }
+  },
+  {
+   "id": "f105",
+   "group": "novel",
+   "template": "top_merchant",
+   "question": "Where did I buy groceries most often this year?",
+   "gold": "Trader Joe's (28 times)",
+   "base": {
+    "det": "Rohlik.cz — 2026-03-07 {\"person\": \"Adam Zvada\", \"category\": \"groceries\", \"date\": \"2026-03-07\", \"amount\": 1999.0, \"currency\": \"CZK\", \"merchant\": \"Rohlik.cz\", \"description\": \"Groceries delivery\"}",
+    "verified": 0.49,
+    "plan": "row with the largest merchant from expenses where person_id = 'Adam Zvada' and category = 'groceries', in 2026 (81 matching rows)",
+    "agent": "Trader Joe’s, with 28 grocery purchases this year.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "agent",
+    "score_hybrid": 0.0
+   },
+   "opt": {
+    "det": "Rohlik.cz — 2026-03-07 {\"person\": \"Adam Zvada\", \"category\": \"groceries\", \"date\": \"2026-03-07\", \"amount\": 1999.0, \"currency\": \"CZK\", \"merchant\": \"Rohlik.cz\", \"description\": \"Groceries delivery\", \"expen",
+    "verified": 0.36,
+    "plan": "row with the largest merchant from expenses where person_id = 'Adam Zvada' and category = 'groceries', in 2026 (81 matching rows)",
+    "agent": "Trader Joe’s — 28 grocery purchases this year.",
+    "score_det": 0.0,
+    "score_agent": 0.0,
+    "path": "agent",
+    "score_hybrid": 0.0
+   },
+   "compiled": {
+    "hit": false,
+    "answer": null,
+    "plan": null,
+    "wall_ms": null,
+    "score": null,
+    "score_path": 0.0
+   }
+  }
+ ]
+}

@@ -1,0 +1,202 @@
+[
+ {
+  "id": 10,
+  "holder": "Raj",
+  "stance": "likes",
+  "target": "growing toward backend architecture",
+  "target_kind": "activity",
+  "detail": "wants to grow toward this"
+ },
+ {
+  "id": 11,
+  "holder": "Aisha",
+  "stance": "likes",
+  "target": "the SRE track",
+  "target_kind": "other",
+  "detail": "interested in this career track"
+ },
+ {
+  "id": 12,
+  "holder": "Mei",
+  "stance": "likes",
+  "target": "async updates in Slack over status meetings",
+  "target_kind": "other",
+  "detail": "prefers async Slack updates"
+ },
+ {
+  "id": 38,
+  "holder": "Mei",
+  "stance": "likes",
+  "target": "hiring a mobile engineer",
+  "target_kind": "other",
+  "detail": "wants a mobile hire"
+ },
+ {
+  "id": 39,
+  "holder": "I",
+  "stance": "dislikes",
+  "target": "interruptions",
+  "target_kind": "other",
+  "detail": "there are too many"
+ },
+ {
+  "id": 48,
+  "holder": "Raj",
+  "stance": "likes",
+  "target": "growing toward backend architecture",
+  "target_kind": "activity",
+  "detail": "wants to grow toward this"
+ },
+ {
+  "id": 50,
+  "holder": "Aisha",
+  "stance": "likes",
+  "target": "the SRE track",
+  "target_kind": "other",
+  "detail": "interested in this career track"
+ },
+ {
+  "id": 51,
+  "holder": "Mei",
+  "stance": "likes",
+  "target": "async updates in Slack over status meetings",
+  "target_kind": "other",
+  "detail": "prefers async Slack updates"
+ },
+ {
+  "id": 70,
+  "holder": "I",
+  "stance": "dislikes",
+  "target": "interruptions",
+  "target_kind": "other",
+  "detail": "there are too many"
+ },
+ {
+  "id": 76,
+  "holder": "I",
+  "stance": "none",
+  "target": "nice",
+  "target_kind": "other",
+  "detail": ""
+ },
+ {
+  "id": 86,
+  "holder": "Mei",
+  "stance": "likes",
+  "target": "hiring a mobile engineer",
+  "target_kind": "other",
+  "detail": "wants a mobile hire"
+ },
+ {
+  "id": 98,
+  "holder": "Raj",
+  "stance": "likes",
+  "target": "growing toward backend architecture",
+  "target_kind": "activity",
+  "detail": "wants to grow toward this"
+ },
+ {
+  "id": 100,
+  "holder": "Aisha",
+  "stance": "likes",
+  "target": "the SRE track",
+  "target_kind": "other",
+  "detail": "interested in this career track"
+ },
+ {
+  "id": 101,
+  "holder": "Mei",
+  "stance": "likes",
+  "target": "async updates in Slack over status meetings",
+  "target_kind": "other",
+  "detail": "prefers async Slack updates"
+ },
+ {
+  "id": 105,
+  "holder": "Jonas",
+  "stance": "felt",
+  "target": "onboarding",
+  "target_kind": "other",
+  "detail": "going well"
+ },
+ {
+  "id": 106,
+  "holder": "I",
+  "stance": "rated",
+  "target": "pairing",
+  "target_kind": "activity",
+  "detail": "good"
+ },
+ {
+  "id": 134,
+  "holder": "Mei",
+  "stance": "likes",
+  "target": "mobile hire",
+  "target_kind": "other",
+  "detail": "wants a mobile hire"
+ },
+ {
+  "id": 135,
+  "holder": "Jonas",
+  "stance": "rated",
+  "target": "onboarding",
+  "target_kind": "activity",
+  "detail": "going well"
+ },
+ {
+  "id": 148,
+  "holder": "Raj",
+  "stance": "likes",
+  "target": "growing toward backend architecture",
+  "target_kind": "activity",
+  "detail": "wants to grow toward backend architecture"
+ },
+ {
+  "id": 152,
+  "holder": "Aisha",
+  "stance": "likes",
+  "target": "SRE track",
+  "target_kind": "other",
+  "detail": "interested in the SRE track"
+ },
+ {
+  "id": 153,
+  "holder": "Mei",
+  "stance": "likes",
+  "target": "async updates in Slack",
+  "target_kind": "other",
+  "detail": "prefers these over status meetings"
+ },
+ {
+  "id": 169,
+  "holder": "Jonas",
+  "stance": "rated",
+  "target": "onboarding",
+  "target_kind": "activity",
+  "detail": "going well"
+ },
+ {
+  "id": 184,
+  "holder": "Mei",
+  "stance": "likes",
+  "target": "mobile hire",
+  "target_kind": "other",
+  "detail": "wants a mobile hire"
+ },
+ {
+  "id": 187,
+  "holder": "I",
+  "stance": "rated",
+  "target": "specs",
+  "target_kind": "other",
+  "detail": "unclear"
+ },
+ {
+  "id": 197,
+  "holder": "Raj",
+  "stance": "likes",
+  "target": "growing toward backend architecture",
+  "target_kind": "activity",
+  "detail": "wants to grow toward backend architecture"
+ }
+]

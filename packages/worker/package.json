@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@fluiddb/worker",
+  "version": "1.0.0-next.4",
+  "private": true,
+  "description": "FluidDB on Cloudflare: the HTTP API, and a Durable Object per person holding their memory",
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc -p . && tsc -p tsconfig.cloudflare.json",
+    "test": "bun test",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "test:runtime": "wrangler deploy --dry-run --outdir .wrangler/build && bun build test/feedback-runtime.worker.ts --target=browser --outfile=.wrangler/feedback-test.js && node scripts/runtime.mjs",
+    "test:firestore-runtime": "bun build test/firestore-runtime.worker.ts --target=browser --outfile=.wrangler/firestore-test.js && node scripts/firestore-runtime.mjs"
+  },
+  "dependencies": {
+    "@fluiddb/core": "workspace:*",
+    "@fluiddb/providers": "workspace:*",
+    "@fluiddb/schema": "workspace:*",
+    "@fluiddb/sql": "workspace:*",
+    "hono": "catalog:",
+    "zod": "catalog:",
+    "@fluiddb/feedback": "workspace:*",
+    "@fluiddb/skills": "workspace:*"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "catalog:",
+    "@fluiddb/client": "workspace:*",
+    "@types/bun": "catalog:",
+    "typescript": "catalog:",
+    "wrangler": "4.142.0",
+    "miniflare": "5.20260926.0-alpha",
+    "@fluiddb/firestore": "workspace:*"
+  },
+  "license": "Apache-2.0"
+}

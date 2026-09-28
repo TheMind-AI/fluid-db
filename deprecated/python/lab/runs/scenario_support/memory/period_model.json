@@ -1,0 +1,44 @@
+{
+ "periods": [
+  {
+   "start": "2026-01-08",
+   "end": "2026-06-30",
+   "label": "Acme updates are sent by email, not phone"
+  },
+  {
+   "start": "2026-02-10",
+   "end": "2026-06-30",
+   "label": "Never paste patient data into tickets (HIPAA)"
+  },
+  {
+   "start": "2026-01-05",
+   "end": "2026-04-30",
+   "label": "Leo is on the team until his last day"
+  },
+  {
+   "start": "2026-05-01",
+   "end": "2026-06-30",
+   "label": "24/7 coverage; Sam works the 22:00–06:00 night shift"
+  },
+  {
+   "start": "2026-05-04",
+   "end": "2026-06-30",
+   "label": "Ana Silva owns the billing queue"
+  },
+  {
+   "start": "2026-06-01",
+   "end": "2026-06-30",
+   "label": "Enterprise customers get a first response within 4 hours"
+  }
+ ],
+ "breaks": [
+  {
+   "date": "2026-05-01",
+   "why": "24/7 coverage begins and Sam moves to the night shift."
+  },
+  {
+   "date": "2026-05-04",
+   "why": "Ana Silva starts and takes over the billing queue."
+  }
+ ]
+}

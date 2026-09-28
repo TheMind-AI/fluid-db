@@ -1,0 +1,3435 @@
+{
+ "user": "Adam Zvada",
+ "now": "2026-09-30T21:00:00",
+ "past": [
+  {
+   "id": "p001",
+   "group": "log",
+   "template": "spend_kind",
+   "phrasing": 0,
+   "params": {
+    "kind": "lunch",
+    "period": "this_year"
+   },
+   "question": "How much did I spend on lunches out this year?",
+   "answer": "17,611 CZK + 2,166 USD (183 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      17611.0,
+      "CZK"
+     ],
+     [
+      2166.0,
+      "USD"
+     ]
+    ]
+   },
+   "n_rows": 183
+  },
+  {
+   "id": "p002",
+   "group": "log",
+   "template": "spend_kind",
+   "phrasing": 1,
+   "params": {
+    "kind": "transport",
+    "period": "month:2025-09"
+   },
+   "question": "What was my total Uber and Bolt rides spend in September 2025?",
+   "answer": "3,560 CZK (16 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      3560.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 16
+  },
+  {
+   "id": "p003",
+   "group": "log",
+   "template": "spend_kind",
+   "phrasing": 0,
+   "params": {
+    "kind": "coffee",
+    "period": "last_month"
+   },
+   "question": "How much did I spend on coffee last month?",
+   "answer": "218.50 USD (38 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      218.5,
+      "USD"
+     ]
+    ]
+   },
+   "n_rows": 38
+  },
+  {
+   "id": "p004",
+   "group": "log",
+   "template": "spend_kind",
+   "phrasing": 1,
+   "params": {
+    "kind": "transport",
+    "period": "month:2026-08"
+   },
+   "question": "What was my total Uber and Bolt rides spend in August 2026?",
+   "answer": "300.69 USD (14 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      300.69,
+      "USD"
+     ]
+    ]
+   },
+   "n_rows": 14
+  },
+  {
+   "id": "p005",
+   "group": "log",
+   "template": "spend_kind",
+   "phrasing": 0,
+   "params": {
+    "kind": "lunch",
+    "period": "last_month"
+   },
+   "question": "How much did I spend on lunches out last month?",
+   "answer": "375.50 USD (20 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      375.5,
+      "USD"
+     ]
+    ]
+   },
+   "n_rows": 20
+  },
+  {
+   "id": "p006",
+   "group": "log",
+   "template": "spend_kind",
+   "phrasing": 1,
+   "params": {
+    "kind": "transport",
+    "period": "this_year"
+   },
+   "question": "What was my total Uber and Bolt rides spend this year?",
+   "answer": "12,110 CZK + 1,916.65 USD (138 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      12110.0,
+      "CZK"
+     ],
+     [
+      1916.65,
+      "USD"
+     ]
+    ]
+   },
+   "n_rows": 138
+  },
+  {
+   "id": "p007",
+   "group": "log",
+   "template": "spend_kind",
+   "phrasing": 0,
+   "params": {
+    "kind": "shopping",
+    "period": "year:2025"
+   },
+   "question": "How much did I spend on things I ordered or bought in shops in 2025?",
+   "answer": "42,222 CZK (28 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      42222.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 28
+  },
+  {
+   "id": "p008",
+   "group": "log",
+   "template": "spend_kind",
+   "phrasing": 1,
+   "params": {
+    "kind": "lunch",
+    "period": "month:2024-06"
+   },
+   "question": "What was my total lunches out spend in June 2024?",
+   "answer": "5,569 CZK (22 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      5569.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 22
+  },
+  {
+   "id": "p009",
+   "group": "log",
+   "template": "count_kind",
+   "phrasing": 0,
+   "params": {
+    "kind": "drinks",
+    "period": "year:2025"
+   },
+   "question": "How many times did I go out for drinks in 2025?",
+   "answer": "52",
+   "grade": {
+    "type": "count",
+    "value": 52
+   },
+   "n_rows": 52
+  },
+  {
+   "id": "p010",
+   "group": "log",
+   "template": "count_kind",
+   "phrasing": 1,
+   "params": {
+    "kind": "groceries",
+    "period": "month:2025-02"
+   },
+   "question": "How often did I do a grocery run in February 2025?",
+   "answer": "8",
+   "grade": {
+    "type": "count",
+    "value": 8
+   },
+   "n_rows": 8
+  },
+  {
+   "id": "p011",
+   "group": "log",
+   "template": "count_kind",
+   "phrasing": 0,
+   "params": {
+    "kind": "groceries",
+    "period": "month:2026-07"
+   },
+   "question": "How many times did I buy groceries in July 2026?",
+   "answer": "9",
+   "grade": {
+    "type": "count",
+    "value": 9
+   },
+   "n_rows": 9
+  },
+  {
+   "id": "p012",
+   "group": "log",
+   "template": "count_kind",
+   "phrasing": 1,
+   "params": {
+    "kind": "groceries",
+    "period": "this_year"
+   },
+   "question": "How often did I do a grocery run this year?",
+   "answer": "77",
+   "grade": {
+    "type": "count",
+    "value": 77
+   },
+   "n_rows": 77
+  },
+  {
+   "id": "p013",
+   "group": "log",
+   "template": "count_kind",
+   "phrasing": 0,
+   "params": {
+    "kind": "shopping",
+    "period": "year:2024"
+   },
+   "question": "How many times did I buy something in a shop or online in 2024?",
+   "answer": "41",
+   "grade": {
+    "type": "count",
+    "value": 41
+   },
+   "n_rows": 41
+  },
+  {
+   "id": "p014",
+   "group": "log",
+   "template": "count_kind",
+   "phrasing": 1,
+   "params": {
+    "kind": "coffee",
+    "period": "this_year"
+   },
+   "question": "How often did I buy a coffee this year?",
+   "answer": "284",
+   "grade": {
+    "type": "count",
+    "value": 284
+   },
+   "n_rows": 284
+  },
+  {
+   "id": "p015",
+   "group": "log",
+   "template": "count_kind",
+   "phrasing": 0,
+   "params": {
+    "kind": "drinks",
+    "period": "month:2026-09"
+   },
+   "question": "How many times did I go out for drinks in September 2026?",
+   "answer": "3",
+   "grade": {
+    "type": "count",
+    "value": 3
+   },
+   "n_rows": 3
+  },
+  {
+   "id": "p016",
+   "group": "log",
+   "template": "count_kind",
+   "phrasing": 1,
+   "params": {
+    "kind": "transport",
+    "period": "month:2025-08"
+   },
+   "question": "How often did I take an Uber or a Bolt in August 2025?",
+   "answer": "19",
+   "grade": {
+    "type": "count",
+    "value": 19
+   },
+   "n_rows": 19
+  },
+  {
+   "id": "p017",
+   "group": "log",
+   "template": "count_merchant",
+   "phrasing": 0,
+   "params": {
+    "merchant": "Bistro Monk",
+    "period": "year:2024"
+   },
+   "question": "How many times did I go to Bistro Monk in 2024?",
+   "answer": "25",
+   "grade": {
+    "type": "count",
+    "value": 25
+   },
+   "n_rows": 25
+  },
+  {
+   "id": "p018",
+   "group": "log",
+   "template": "count_merchant",
+   "phrasing": 1,
+   "params": {
+    "merchant": "Field",
+    "period": "year:2024"
+   },
+   "question": "How many visits to Field in 2024?",
+   "answer": "17",
+   "grade": {
+    "type": "count",
+    "value": 17
+   },
+   "n_rows": 17
+  },
+  {
+   "id": "p019",
+   "group": "log",
+   "template": "count_merchant",
+   "phrasing": 0,
+   "params": {
+    "merchant": "Doubleshot",
+    "period": "year:2024"
+   },
+   "question": "How many times did I go to Doubleshot in 2024?",
+   "answer": "38",
+   "grade": {
+    "type": "count",
+    "value": 38
+   },
+   "n_rows": 38
+  },
+  {
+   "id": "p020",
+   "group": "log",
+   "template": "count_merchant",
+   "phrasing": 1,
+   "params": {
+    "merchant": "Cafe Imperial",
+    "period": "year:2024"
+   },
+   "question": "How many visits to Cafe Imperial in 2024?",
+   "answer": "15",
+   "grade": {
+    "type": "count",
+    "value": 15
+   },
+   "n_rows": 15
+  },
+  {
+   "id": "p021",
+   "group": "log",
+   "template": "count_merchant",
+   "phrasing": 0,
+   "params": {
+    "merchant": "Sightglass",
+    "period": "all"
+   },
+   "question": "How many times did I go to Sightglass?",
+   "answer": "26",
+   "grade": {
+    "type": "count",
+    "value": 26
+   },
+   "n_rows": 26
+  },
+  {
+   "id": "p022",
+   "group": "log",
+   "template": "count_merchant",
+   "phrasing": 1,
+   "params": {
+    "merchant": "Bolt",
+    "period": "all"
+   },
+   "question": "How many visits to Bolt?",
+   "answer": "402",
+   "grade": {
+    "type": "count",
+    "value": 402
+   },
+   "n_rows": 402
+  },
+  {
+   "id": "p023",
+   "group": "log",
+   "template": "count_merchant",
+   "phrasing": 0,
+   "params": {
+    "merchant": "Café Lounge",
+    "period": "year:2024"
+   },
+   "question": "How many times did I go to Café Lounge in 2024?",
+   "answer": "36",
+   "grade": {
+    "type": "count",
+    "value": 36
+   },
+   "n_rows": 36
+  },
+  {
+   "id": "p024",
+   "group": "log",
+   "template": "count_merchant",
+   "phrasing": 1,
+   "params": {
+    "merchant": "Eska",
+    "period": "year:2024"
+   },
+   "question": "How many visits to Eska in 2024?",
+   "answer": "12",
+   "grade": {
+    "type": "count",
+    "value": 12
+   },
+   "n_rows": 12
+  },
+  {
+   "id": "p025",
+   "group": "log",
+   "template": "spend_merchant",
+   "phrasing": 0,
+   "params": {
+    "merchant": "Field",
+    "period": "month:2024-08"
+   },
+   "question": "How much did I spend at Field in August 2024?",
+   "answer": "6,760 CZK (3 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      6760.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 3
+  },
+  {
+   "id": "p026",
+   "group": "log",
+   "template": "spend_merchant",
+   "phrasing": 1,
+   "params": {
+    "merchant": "EMA Espresso Bar",
+    "period": "all"
+   },
+   "question": "What did I spend in total at EMA Espresso Bar?",
+   "answer": "8,970 CZK (101 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      8970.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 101
+  },
+  {
+   "id": "p027",
+   "group": "log",
+   "template": "spend_merchant",
+   "phrasing": 0,
+   "params": {
+    "merchant": "Onesip Coffee",
+    "period": "all"
+   },
+   "question": "How much did I spend at Onesip Coffee?",
+   "answer": "8,195 CZK (91 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      8195.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 91
+  },
+  {
+   "id": "p028",
+   "group": "log",
+   "template": "spend_merchant",
+   "phrasing": 1,
+   "params": {
+    "merchant": "Vinograf",
+    "period": "year:2024"
+   },
+   "question": "What did I spend in total at Vinograf in 2024?",
+   "answer": "5,580 CZK (17 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      5580.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 17
+  },
+  {
+   "id": "p029",
+   "group": "log",
+   "template": "spend_merchant",
+   "phrasing": 0,
+   "params": {
+    "merchant": "Můj šálek kávy",
+    "period": "year:2025"
+   },
+   "question": "How much did I spend at Můj šálek kávy in 2025?",
+   "answer": "3,785 CZK (42 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      3785.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 42
+  },
+  {
+   "id": "p030",
+   "group": "log",
+   "template": "spend_merchant",
+   "phrasing": 1,
+   "params": {
+    "merchant": "Field",
+    "period": "all"
+   },
+   "question": "What did I spend in total at Field?",
+   "answer": "61,980 CZK (36 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      61980.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 36
+  },
+  {
+   "id": "p031",
+   "group": "log",
+   "template": "spend_merchant",
+   "phrasing": 0,
+   "params": {
+    "merchant": "Pho Vietnam",
+    "period": "year:2025"
+   },
+   "question": "How much did I spend at Pho Vietnam in 2025?",
+   "answer": "11,942 CZK (43 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      11942.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 43
+  },
+  {
+   "id": "p032",
+   "group": "log",
+   "template": "spend_merchant",
+   "phrasing": 1,
+   "params": {
+    "merchant": "Uber",
+    "period": "all"
+   },
+   "question": "What did I spend in total at Uber?",
+   "answer": "1,916.65 USD (88 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      1916.65,
+      "USD"
+     ]
+    ]
+   },
+   "n_rows": 88
+  },
+  {
+   "id": "p033",
+   "group": "log",
+   "template": "max_kind_city",
+   "phrasing": 0,
+   "params": {
+    "kind": "lunch",
+    "city": "Prague"
+   },
+   "question": "What's the most I've spent on a single lunch in Prague?",
+   "answer": "385.00 CZK at Pho Vietnam on 2024-04-01",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      385.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 465
+  },
+  {
+   "id": "p034",
+   "group": "log",
+   "template": "max_kind_city",
+   "phrasing": 1,
+   "params": {
+    "kind": "groceries",
+    "city": "San Francisco"
+   },
+   "question": "What was my most expensive grocery run in San Francisco?",
+   "answer": "138.74 USD at Whole Foods on 2026-04-11",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      138.74,
+      "USD"
+     ]
+    ]
+   },
+   "n_rows": 52
+  },
+  {
+   "id": "p035",
+   "group": "log",
+   "template": "max_kind_city",
+   "phrasing": 0,
+   "params": {
+    "kind": "groceries",
+    "city": "Prague"
+   },
+   "question": "What's the most I've spent on a single grocery run in Prague?",
+   "answer": "1,890.00 CZK at Albert on 2024-04-27",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      1890.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 196
+  },
+  {
+   "id": "p036",
+   "group": "log",
+   "template": "max_kind_city",
+   "phrasing": 1,
+   "params": {
+    "kind": "dinner",
+    "city": "Prague"
+   },
+   "question": "What was my most expensive dinner in Prague?",
+   "answer": "2,480.00 CZK at Cafe Imperial on 2024-04-01",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      2480.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 190
+  },
+  {
+   "id": "p037",
+   "group": "log",
+   "template": "max_kind_city",
+   "phrasing": 0,
+   "params": {
+    "kind": "coffee",
+    "city": "Prague"
+   },
+   "question": "What's the most I've spent on a single coffee in Prague?",
+   "answer": "125.00 CZK at Café Savoy on 2024-04-01",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      125.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 762
+  },
+  {
+   "id": "p038",
+   "group": "log",
+   "template": "max_kind_city",
+   "phrasing": 1,
+   "params": {
+    "kind": "drinks",
+    "city": "Prague"
+   },
+   "question": "What was my most expensive night of drinks in Prague?",
+   "answer": "450.00 CZK at Vinograf on 2024-06-09",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      450.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 110
+  },
+  {
+   "id": "p039",
+   "group": "log",
+   "template": "max_kind_city",
+   "phrasing": 0,
+   "params": {
+    "kind": "transport",
+    "city": "San Francisco"
+   },
+   "question": "What's the most I've spent on a single ride in San Francisco?",
+   "answer": "34.76 USD at Uber on 2026-09-28",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      34.76,
+      "USD"
+     ]
+    ]
+   },
+   "n_rows": 88
+  },
+  {
+   "id": "p040",
+   "group": "log",
+   "template": "max_kind_city",
+   "phrasing": 1,
+   "params": {
+    "kind": "transport",
+    "city": "Prague"
+   },
+   "question": "What was my most expensive ride in Prague?",
+   "answer": "380.00 CZK at Bolt on 2024-06-04",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      380.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 402
+  },
+  {
+   "id": "p041",
+   "group": "log",
+   "template": "avg_kind",
+   "phrasing": 0,
+   "params": {
+    "kind": "dinner",
+    "period": "month:2024-11"
+   },
+   "question": "What's my average dinner bill in November 2024?",
+   "answer": "1,457.50 CZK (average of 8)",
+   "grade": {
+    "type": "number",
+    "value": 1457.5,
+    "tol": 0.01
+   },
+   "n_rows": 8
+  },
+  {
+   "id": "p042",
+   "group": "log",
+   "template": "avg_kind",
+   "phrasing": 1,
+   "params": {
+    "kind": "drinks",
+    "period": "month:2024-11"
+   },
+   "question": "How much did a night of drinks cost me on average in November 2024?",
+   "answer": "307.50 CZK (average of 4)",
+   "grade": {
+    "type": "number",
+    "value": 307.5,
+    "tol": 0.01
+   },
+   "n_rows": 4
+  },
+  {
+   "id": "p043",
+   "group": "log",
+   "template": "avg_kind",
+   "phrasing": 0,
+   "params": {
+    "kind": "dinner",
+    "period": "month:2024-06"
+   },
+   "question": "What's my average dinner bill in June 2024?",
+   "answer": "1,591.82 CZK (average of 11)",
+   "grade": {
+    "type": "number",
+    "value": 1591.82,
+    "tol": 0.01
+   },
+   "n_rows": 11
+  },
+  {
+   "id": "p044",
+   "group": "log",
+   "template": "avg_kind",
+   "phrasing": 1,
+   "params": {
+    "kind": "transport",
+    "period": "month:2024-10"
+   },
+   "question": "How much did a ride cost me on average in October 2024?",
+   "answer": "258.75 CZK (average of 16)",
+   "grade": {
+    "type": "number",
+    "value": 258.75,
+    "tol": 0.01
+   },
+   "n_rows": 16
+  },
+  {
+   "id": "p045",
+   "group": "log",
+   "template": "avg_kind",
+   "phrasing": 0,
+   "params": {
+    "kind": "groceries",
+    "period": "month:2025-10"
+   },
+   "question": "What's my average grocery run bill in October 2025?",
+   "answer": "1,182.22 CZK (average of 9)",
+   "grade": {
+    "type": "number",
+    "value": 1182.22,
+    "tol": 0.01
+   },
+   "n_rows": 9
+  },
+  {
+   "id": "p046",
+   "group": "log",
+   "template": "avg_kind",
+   "phrasing": 1,
+   "params": {
+    "kind": "lunch",
+    "period": "last_month"
+   },
+   "question": "How much did a lunch cost me on average last month?",
+   "answer": "18.77 USD (average of 20)",
+   "grade": {
+    "type": "number",
+    "value": 18.77,
+    "tol": 0.01
+   },
+   "n_rows": 20
+  },
+  {
+   "id": "p047",
+   "group": "log",
+   "template": "avg_kind",
+   "phrasing": 0,
+   "params": {
+    "kind": "transport",
+    "period": "year:2025"
+   },
+   "question": "What's my average ride bill in 2025?",
+   "answer": "226.32 CZK (average of 201)",
+   "grade": {
+    "type": "number",
+    "value": 226.32,
+    "tol": 0.01
+   },
+   "n_rows": 201
+  },
+  {
+   "id": "p048",
+   "group": "log",
+   "template": "avg_kind",
+   "phrasing": 1,
+   "params": {
+    "kind": "drinks",
+    "period": "last_month"
+   },
+   "question": "How much did a night of drinks cost me on average last month?",
+   "answer": "48.30 USD (average of 4)",
+   "grade": {
+    "type": "number",
+    "value": 48.3,
+    "tol": 0.01
+   },
+   "n_rows": 4
+  },
+  {
+   "id": "p049",
+   "group": "log",
+   "template": "avg_sleep",
+   "phrasing": 0,
+   "params": {
+    "period": "month:2024-07"
+   },
+   "question": "What was my average sleep in July 2024?",
+   "answer": "7.12 hours (28 nights)",
+   "grade": {
+    "type": "number",
+    "value": 7.12,
+    "tol": 0.01
+   },
+   "n_rows": 28
+  },
+  {
+   "id": "p050",
+   "group": "log",
+   "template": "avg_sleep",
+   "phrasing": 1,
+   "params": {
+    "period": "month:2024-12"
+   },
+   "question": "How many hours did I sleep on average in December 2024?",
+   "answer": "7.02 hours (30 nights)",
+   "grade": {
+    "type": "number",
+    "value": 7.02,
+    "tol": 0.01
+   },
+   "n_rows": 30
+  },
+  {
+   "id": "p051",
+   "group": "log",
+   "template": "avg_sleep",
+   "phrasing": 0,
+   "params": {
+    "period": "month:2025-09"
+   },
+   "question": "What was my average sleep in September 2025?",
+   "answer": "6.91 hours (28 nights)",
+   "grade": {
+    "type": "number",
+    "value": 6.91,
+    "tol": 0.01
+   },
+   "n_rows": 28
+  },
+  {
+   "id": "p052",
+   "group": "log",
+   "template": "avg_sleep",
+   "phrasing": 1,
+   "params": {
+    "period": "month:2024-09"
+   },
+   "question": "How many hours did I sleep on average in September 2024?",
+   "answer": "7.03 hours (28 nights)",
+   "grade": {
+    "type": "number",
+    "value": 7.03,
+    "tol": 0.01
+   },
+   "n_rows": 28
+  },
+  {
+   "id": "p053",
+   "group": "log",
+   "template": "avg_sleep",
+   "phrasing": 0,
+   "params": {
+    "period": "month:2025-03"
+   },
+   "question": "What was my average sleep in March 2025?",
+   "answer": "7.63 hours (29 nights)",
+   "grade": {
+    "type": "number",
+    "value": 7.63,
+    "tol": 0.01
+   },
+   "n_rows": 29
+  },
+  {
+   "id": "p054",
+   "group": "log",
+   "template": "avg_sleep",
+   "phrasing": 1,
+   "params": {
+    "period": "month:2026-01"
+   },
+   "question": "How many hours did I sleep on average in January 2026?",
+   "answer": "6.88 hours (28 nights)",
+   "grade": {
+    "type": "number",
+    "value": 6.88,
+    "tol": 0.01
+   },
+   "n_rows": 28
+  },
+  {
+   "id": "p055",
+   "group": "log",
+   "template": "avg_sleep",
+   "phrasing": 0,
+   "params": {
+    "period": "month:2025-04"
+   },
+   "question": "What was my average sleep in April 2025?",
+   "answer": "7.10 hours (28 nights)",
+   "grade": {
+    "type": "number",
+    "value": 7.1,
+    "tol": 0.01
+   },
+   "n_rows": 28
+  },
+  {
+   "id": "p056",
+   "group": "log",
+   "template": "avg_sleep",
+   "phrasing": 1,
+   "params": {
+    "period": "month:2026-04"
+   },
+   "question": "How many hours did I sleep on average in April 2026?",
+   "answer": "6.60 hours (26 nights)",
+   "grade": {
+    "type": "number",
+    "value": 6.6,
+    "tol": 0.01
+   },
+   "n_rows": 26
+  },
+  {
+   "id": "p057",
+   "group": "log",
+   "template": "min_weight",
+   "phrasing": 0,
+   "params": {
+    "period": "year:2024"
+   },
+   "question": "What was my lowest weight in 2024?",
+   "answer": "73.8 kg (2024-07-23)",
+   "grade": {
+    "type": "number",
+    "value": 73.8,
+    "tol": 0.001
+   },
+   "n_rows": 148
+  },
+  {
+   "id": "p058",
+   "group": "log",
+   "template": "min_weight",
+   "phrasing": 1,
+   "params": {
+    "period": "year:2025"
+   },
+   "question": "What's the least I weighed in 2025?",
+   "answer": "74.1 kg (2025-02-04)",
+   "grade": {
+    "type": "number",
+    "value": 74.1,
+    "tol": 0.001
+   },
+   "n_rows": 172
+  },
+  {
+   "id": "p059",
+   "group": "log",
+   "template": "min_weight",
+   "phrasing": 0,
+   "params": {
+    "period": "month:2024-12"
+   },
+   "question": "What was my lowest weight in December 2024?",
+   "answer": "74.3 kg (2024-12-03)",
+   "grade": {
+    "type": "number",
+    "value": 74.3,
+    "tol": 0.001
+   },
+   "n_rows": 16
+  },
+  {
+   "id": "p060",
+   "group": "log",
+   "template": "min_weight",
+   "phrasing": 1,
+   "params": {
+    "period": "this_year"
+   },
+   "question": "What's the least I weighed this year?",
+   "answer": "73.6 kg (2026-07-28)",
+   "grade": {
+    "type": "number",
+    "value": 73.6,
+    "tol": 0.001
+   },
+   "n_rows": 129
+  },
+  {
+   "id": "p061",
+   "group": "log",
+   "template": "min_weight",
+   "phrasing": 0,
+   "params": {
+    "period": "month:2026-03"
+   },
+   "question": "What was my lowest weight in March 2026?",
+   "answer": "74.6 kg (2026-03-30)",
+   "grade": {
+    "type": "number",
+    "value": 74.6,
+    "tol": 0.001
+   },
+   "n_rows": 16
+  },
+  {
+   "id": "p062",
+   "group": "log",
+   "template": "min_weight",
+   "phrasing": 1,
+   "params": {
+    "period": "month:2025-09"
+   },
+   "question": "What's the least I weighed in September 2025?",
+   "answer": "75.0 kg (2025-09-28)",
+   "grade": {
+    "type": "number",
+    "value": 75.0,
+    "tol": 0.001
+   },
+   "n_rows": 14
+  },
+  {
+   "id": "p063",
+   "group": "log",
+   "template": "min_weight",
+   "phrasing": 0,
+   "params": {
+    "period": "month:2025-06"
+   },
+   "question": "What was my lowest weight in June 2025?",
+   "answer": "74.5 kg (2025-06-30)",
+   "grade": {
+    "type": "number",
+    "value": 74.5,
+    "tol": 0.001
+   },
+   "n_rows": 14
+  },
+  {
+   "id": "p064",
+   "group": "log",
+   "template": "min_weight",
+   "phrasing": 1,
+   "params": {
+    "period": "last_month"
+   },
+   "question": "What's the least I weighed last month?",
+   "answer": "73.9 kg (2026-08-04)",
+   "grade": {
+    "type": "number",
+    "value": 73.9,
+    "tol": 0.001
+   },
+   "n_rows": 16
+  },
+  {
+   "id": "p065",
+   "group": "log",
+   "template": "count_runs",
+   "phrasing": 0,
+   "params": {
+    "period": "month:2025-07"
+   },
+   "question": "How many runs did I do in July 2025?",
+   "answer": "4",
+   "grade": {
+    "type": "count",
+    "value": 4
+   },
+   "n_rows": 4
+  },
+  {
+   "id": "p066",
+   "group": "log",
+   "template": "count_runs",
+   "phrasing": 1,
+   "params": {
+    "period": "this_year"
+   },
+   "question": "How many times did I go running this year?",
+   "answer": "43",
+   "grade": {
+    "type": "count",
+    "value": 43
+   },
+   "n_rows": 43
+  },
+  {
+   "id": "p067",
+   "group": "log",
+   "template": "count_runs",
+   "phrasing": 0,
+   "params": {
+    "period": "all"
+   },
+   "question": "How many runs did I do?",
+   "answer": "157",
+   "grade": {
+    "type": "count",
+    "value": 157
+   },
+   "n_rows": 157
+  },
+  {
+   "id": "p068",
+   "group": "log",
+   "template": "count_runs",
+   "phrasing": 1,
+   "params": {
+    "period": "year:2024"
+   },
+   "question": "How many times did I go running in 2024?",
+   "answer": "50",
+   "grade": {
+    "type": "count",
+    "value": 50
+   },
+   "n_rows": 50
+  },
+  {
+   "id": "p069",
+   "group": "log",
+   "template": "count_runs",
+   "phrasing": 0,
+   "params": {
+    "period": "month:2024-11"
+   },
+   "question": "How many runs did I do in November 2024?",
+   "answer": "6",
+   "grade": {
+    "type": "count",
+    "value": 6
+   },
+   "n_rows": 6
+  },
+  {
+   "id": "p070",
+   "group": "log",
+   "template": "count_runs",
+   "phrasing": 1,
+   "params": {
+    "period": "month:2024-04"
+   },
+   "question": "How many times did I go running in April 2024?",
+   "answer": "8",
+   "grade": {
+    "type": "count",
+    "value": 8
+   },
+   "n_rows": 8
+  },
+  {
+   "id": "p071",
+   "group": "log",
+   "template": "count_runs",
+   "phrasing": 0,
+   "params": {
+    "period": "month:2026-05"
+   },
+   "question": "How many runs did I do in May 2026?",
+   "answer": "7",
+   "grade": {
+    "type": "count",
+    "value": 7
+   },
+   "n_rows": 7
+  },
+  {
+   "id": "p072",
+   "group": "log",
+   "template": "count_runs",
+   "phrasing": 1,
+   "params": {
+    "period": "month:2024-06"
+   },
+   "question": "How many times did I go running in June 2024?",
+   "answer": "5",
+   "grade": {
+    "type": "count",
+    "value": 5
+   },
+   "n_rows": 5
+  },
+  {
+   "id": "p073",
+   "group": "log",
+   "template": "count_climbs",
+   "phrasing": 0,
+   "params": {
+    "period": "year:2024"
+   },
+   "question": "How many times did I go climbing in 2024?",
+   "answer": "67",
+   "grade": {
+    "type": "count",
+    "value": 67
+   },
+   "n_rows": 67
+  },
+  {
+   "id": "p074",
+   "group": "log",
+   "template": "count_climbs",
+   "phrasing": 1,
+   "params": {
+    "period": "year:2025"
+   },
+   "question": "How many climbing sessions did I have in 2025?",
+   "answer": "86",
+   "grade": {
+    "type": "count",
+    "value": 86
+   },
+   "n_rows": 86
+  },
+  {
+   "id": "p075",
+   "group": "log",
+   "template": "count_climbs",
+   "phrasing": 0,
+   "params": {
+    "period": "month:2026-01"
+   },
+   "question": "How many times did I go climbing in January 2026?",
+   "answer": "7",
+   "grade": {
+    "type": "count",
+    "value": 7
+   },
+   "n_rows": 7
+  },
+  {
+   "id": "p076",
+   "group": "log",
+   "template": "count_climbs",
+   "phrasing": 1,
+   "params": {
+    "period": "month:2025-01"
+   },
+   "question": "How many climbing sessions did I have in January 2025?",
+   "answer": "8",
+   "grade": {
+    "type": "count",
+    "value": 8
+   },
+   "n_rows": 8
+  },
+  {
+   "id": "p077",
+   "group": "log",
+   "template": "count_climbs",
+   "phrasing": 0,
+   "params": {
+    "period": "this_year"
+   },
+   "question": "How many times did I go climbing this year?",
+   "answer": "61",
+   "grade": {
+    "type": "count",
+    "value": 61
+   },
+   "n_rows": 61
+  },
+  {
+   "id": "p078",
+   "group": "log",
+   "template": "count_climbs",
+   "phrasing": 1,
+   "params": {
+    "period": "month:2025-06"
+   },
+   "question": "How many climbing sessions did I have in June 2025?",
+   "answer": "6",
+   "grade": {
+    "type": "count",
+    "value": 6
+   },
+   "n_rows": 6
+  },
+  {
+   "id": "p079",
+   "group": "log",
+   "template": "count_climbs",
+   "phrasing": 0,
+   "params": {
+    "period": "month:2025-05"
+   },
+   "question": "How many times did I go climbing in May 2025?",
+   "answer": "7",
+   "grade": {
+    "type": "count",
+    "value": 7
+   },
+   "n_rows": 7
+  },
+  {
+   "id": "p080",
+   "group": "log",
+   "template": "count_climbs",
+   "phrasing": 1,
+   "params": {
+    "period": "month:2025-07"
+   },
+   "question": "How many climbing sessions did I have in July 2025?",
+   "answer": "5",
+   "grade": {
+    "type": "count",
+    "value": 5
+   },
+   "n_rows": 5
+  }
+ ],
+ "future": [
+  {
+   "id": "f001",
+   "group": "same",
+   "template": "spend_kind",
+   "phrasing": 0,
+   "params": {
+    "kind": "transport",
+    "period": "month:2024-11"
+   },
+   "question": "How much did I spend on rides in November 2024?",
+   "answer": "4,320 CZK (17 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      4320.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 17
+  },
+  {
+   "id": "f002",
+   "group": "same",
+   "template": "spend_kind",
+   "phrasing": 1,
+   "params": {
+    "kind": "drinks",
+    "period": "month:2025-06"
+   },
+   "question": "What was my total drinks at bars spend in June 2025?",
+   "answer": "2,800 CZK (8 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      2800.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 8
+  },
+  {
+   "id": "f003",
+   "group": "same",
+   "template": "spend_kind",
+   "phrasing": 0,
+   "params": {
+    "kind": "dinner",
+    "period": "year:2024"
+   },
+   "question": "How much did I spend on dinner in 2024?",
+   "answer": "133,150 CZK (77 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      133150.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 77
+  },
+  {
+   "id": "f004",
+   "group": "same",
+   "template": "spend_kind",
+   "phrasing": 1,
+   "params": {
+    "kind": "coffee",
+    "period": "year:2025"
+   },
+   "question": "What was my total coffee spend in 2025?",
+   "answer": "34,875 CZK (380 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      34875.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 380
+  },
+  {
+   "id": "f005",
+   "group": "reworded",
+   "template": "spend_kind",
+   "phrasing": 2,
+   "params": {
+    "kind": "lunch",
+    "period": "year:2024"
+   },
+   "question": "In 2024, how much money went on lunch?",
+   "answer": "48,451 CZK (174 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      48451.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 174
+  },
+  {
+   "id": "f006",
+   "group": "reworded",
+   "template": "spend_kind",
+   "phrasing": 3,
+   "params": {
+    "kind": "drinks",
+    "period": "month:2026-05"
+   },
+   "question": "Total I paid for drinks at bars in May 2026?",
+   "answer": "110.66 USD (2 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      110.66,
+      "USD"
+     ]
+    ]
+   },
+   "n_rows": 2
+  },
+  {
+   "id": "f007",
+   "group": "reworded",
+   "template": "spend_kind",
+   "phrasing": 2,
+   "params": {
+    "kind": "lunch",
+    "period": "year:2024"
+   },
+   "question": "In 2024, how much money went on lunches out?",
+   "answer": "48,451 CZK (174 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      48451.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 174
+  },
+  {
+   "id": "f008",
+   "group": "reworded",
+   "template": "spend_kind",
+   "phrasing": 3,
+   "params": {
+    "kind": "shopping",
+    "period": "last_month"
+   },
+   "question": "Total I paid for things I ordered or bought in shops last month?",
+   "answer": "365.04 USD (3 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      365.04,
+      "USD"
+     ]
+    ]
+   },
+   "n_rows": 3
+  },
+  {
+   "id": "f009",
+   "group": "same",
+   "template": "count_kind",
+   "phrasing": 0,
+   "params": {
+    "kind": "lunch",
+    "period": "month:2024-11"
+   },
+   "question": "How many times did I eat lunch out in November 2024?",
+   "answer": "22",
+   "grade": {
+    "type": "count",
+    "value": 22
+   },
+   "n_rows": 22
+  },
+  {
+   "id": "f010",
+   "group": "same",
+   "template": "count_kind",
+   "phrasing": 1,
+   "params": {
+    "kind": "groceries",
+    "period": "month:2024-04"
+   },
+   "question": "How often did I do a grocery run in April 2024?",
+   "answer": "8",
+   "grade": {
+    "type": "count",
+    "value": 8
+   },
+   "n_rows": 8
+  },
+  {
+   "id": "f011",
+   "group": "same",
+   "template": "count_kind",
+   "phrasing": 0,
+   "params": {
+    "kind": "drinks",
+    "period": "year:2024"
+   },
+   "question": "How many times did I go out for drinks in 2024?",
+   "answer": "42",
+   "grade": {
+    "type": "count",
+    "value": 42
+   },
+   "n_rows": 42
+  },
+  {
+   "id": "f012",
+   "group": "same",
+   "template": "count_kind",
+   "phrasing": 1,
+   "params": {
+    "kind": "groceries",
+    "period": "month:2025-08"
+   },
+   "question": "How often did I do a grocery run in August 2025?",
+   "answer": "9",
+   "grade": {
+    "type": "count",
+    "value": 9
+   },
+   "n_rows": 9
+  },
+  {
+   "id": "f013",
+   "group": "reworded",
+   "template": "count_kind",
+   "phrasing": 2,
+   "params": {
+    "kind": "coffee",
+    "period": "year:2024"
+   },
+   "question": "In 2024, how many times did I grab a coffee?",
+   "answer": "289",
+   "grade": {
+    "type": "count",
+    "value": 289
+   },
+   "n_rows": 289
+  },
+  {
+   "id": "f014",
+   "group": "reworded",
+   "template": "count_kind",
+   "phrasing": 3,
+   "params": {
+    "kind": "dinner",
+    "period": "month:2024-05"
+   },
+   "question": "Number of times I did go to a restaurant for dinner in May 2024?",
+   "answer": "10",
+   "grade": {
+    "type": "count",
+    "value": 10
+   },
+   "n_rows": 10
+  },
+  {
+   "id": "f015",
+   "group": "reworded",
+   "template": "count_kind",
+   "phrasing": 2,
+   "params": {
+    "kind": "transport",
+    "period": "year:2024"
+   },
+   "question": "In 2024, how many times did I use Uber or Bolt?",
+   "answer": "151",
+   "grade": {
+    "type": "count",
+    "value": 151
+   },
+   "n_rows": 151
+  },
+  {
+   "id": "f016",
+   "group": "reworded",
+   "template": "count_kind",
+   "phrasing": 3,
+   "params": {
+    "kind": "drinks",
+    "period": "last_month"
+   },
+   "question": "Number of times I did go to a bar last month?",
+   "answer": "4",
+   "grade": {
+    "type": "count",
+    "value": 4
+   },
+   "n_rows": 4
+  },
+  {
+   "id": "f017",
+   "group": "same",
+   "template": "count_merchant",
+   "phrasing": 0,
+   "params": {
+    "merchant": "Bistro Monk",
+    "period": "this_year"
+   },
+   "question": "How many times did I go to Bistro Monk this year?",
+   "answer": "13",
+   "grade": {
+    "type": "count",
+    "value": 13
+   },
+   "n_rows": 13
+  },
+  {
+   "id": "f018",
+   "group": "same",
+   "template": "count_merchant",
+   "phrasing": 1,
+   "params": {
+    "merchant": "Kantýna",
+    "period": "month:2024-07"
+   },
+   "question": "How many visits to Kantýna in July 2024?",
+   "answer": "3",
+   "grade": {
+    "type": "count",
+    "value": 3
+   },
+   "n_rows": 3
+  },
+  {
+   "id": "f019",
+   "group": "same",
+   "template": "count_merchant",
+   "phrasing": 0,
+   "params": {
+    "merchant": "Kantýna",
+    "period": "year:2025"
+   },
+   "question": "How many times did I go to Kantýna in 2025?",
+   "answer": "41",
+   "grade": {
+    "type": "count",
+    "value": 41
+   },
+   "n_rows": 41
+  },
+  {
+   "id": "f020",
+   "group": "same",
+   "template": "count_merchant",
+   "phrasing": 1,
+   "params": {
+    "merchant": "Doubleshot",
+    "period": "month:2026-01"
+   },
+   "question": "How many visits to Doubleshot in January 2026?",
+   "answer": "5",
+   "grade": {
+    "type": "count",
+    "value": 5
+   },
+   "n_rows": 5
+  },
+  {
+   "id": "f021",
+   "group": "reworded",
+   "template": "count_merchant",
+   "phrasing": 2,
+   "params": {
+    "merchant": "Ritual Coffee",
+    "period": "month:2026-07"
+   },
+   "question": "How often was I at Ritual Coffee in July 2026?",
+   "answer": "9",
+   "grade": {
+    "type": "count",
+    "value": 9
+   },
+   "n_rows": 9
+  },
+  {
+   "id": "f022",
+   "group": "reworded",
+   "template": "count_merchant",
+   "phrasing": 3,
+   "params": {
+    "merchant": "Philz Coffee",
+    "period": "all"
+   },
+   "question": "how many times was I at Philz Coffee?",
+   "answer": "34",
+   "grade": {
+    "type": "count",
+    "value": 34
+   },
+   "n_rows": 34
+  },
+  {
+   "id": "f023",
+   "group": "reworded",
+   "template": "count_merchant",
+   "phrasing": 2,
+   "params": {
+    "merchant": "Café Savoy",
+    "period": "year:2024"
+   },
+   "question": "How often was I at Café Savoy in 2024?",
+   "answer": "55",
+   "grade": {
+    "type": "count",
+    "value": 55
+   },
+   "n_rows": 55
+  },
+  {
+   "id": "f024",
+   "group": "reworded",
+   "template": "count_merchant",
+   "phrasing": 3,
+   "params": {
+    "merchant": "Souvla",
+    "period": "this_year"
+   },
+   "question": "This year, how many times was I at Souvla?",
+   "answer": "26",
+   "grade": {
+    "type": "count",
+    "value": 26
+   },
+   "n_rows": 26
+  },
+  {
+   "id": "f025",
+   "group": "same",
+   "template": "spend_merchant",
+   "phrasing": 0,
+   "params": {
+    "merchant": "Můj šálek kávy",
+    "period": "this_year"
+   },
+   "question": "How much did I spend at Můj šálek kávy this year?",
+   "answer": "1,155 CZK (12 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      1155.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 12
+  },
+  {
+   "id": "f026",
+   "group": "same",
+   "template": "spend_merchant",
+   "phrasing": 1,
+   "params": {
+    "merchant": "Bolt",
+    "period": "all"
+   },
+   "question": "What did I spend in total at Bolt?",
+   "answer": "93,390 CZK (402 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      93390.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 402
+  },
+  {
+   "id": "f027",
+   "group": "same",
+   "template": "spend_merchant",
+   "phrasing": 0,
+   "params": {
+    "merchant": "EMA Espresso Bar",
+    "period": "month:2024-09"
+   },
+   "question": "How much did I spend at EMA Espresso Bar in September 2024?",
+   "answer": "285 CZK (3 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      285.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 3
+  },
+  {
+   "id": "f028",
+   "group": "same",
+   "template": "spend_merchant",
+   "phrasing": 1,
+   "params": {
+    "merchant": "Doubleshot",
+    "period": "this_year"
+   },
+   "question": "What did I spend in total at Doubleshot this year?",
+   "answer": "1,175 CZK (13 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      1175.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 13
+  },
+  {
+   "id": "f029",
+   "group": "reworded",
+   "template": "spend_merchant",
+   "phrasing": 2,
+   "params": {
+    "merchant": "Albert",
+    "period": "year:2025"
+   },
+   "question": "In 2025, how much did I pay at Albert?",
+   "answer": "55,690 CZK (50 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      55690.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 50
+  },
+  {
+   "id": "f030",
+   "group": "reworded",
+   "template": "spend_merchant",
+   "phrasing": 3,
+   "params": {
+    "merchant": "Anonymous Bar",
+    "period": "year:2024"
+   },
+   "question": "How much money did I leave at Anonymous Bar in 2024?",
+   "answer": "2,830 CZK (10 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      2830.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 10
+  },
+  {
+   "id": "f031",
+   "group": "reworded",
+   "template": "spend_merchant",
+   "phrasing": 2,
+   "params": {
+    "merchant": "Kavárna Místo",
+    "period": "year:2024"
+   },
+   "question": "In 2024, how much did I pay at Kavárna Místo?",
+   "answer": "1,860 CZK (23 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      1860.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 23
+  },
+  {
+   "id": "f032",
+   "group": "reworded",
+   "template": "spend_merchant",
+   "phrasing": 3,
+   "params": {
+    "merchant": "Můj šálek kávy",
+    "period": "this_year"
+   },
+   "question": "How much money did I leave at Můj šálek kávy this year?",
+   "answer": "1,155 CZK (12 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      1155.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 12
+  },
+  {
+   "id": "f033",
+   "group": "same",
+   "template": "max_kind_city",
+   "phrasing": 0,
+   "params": {
+    "kind": "coffee",
+    "city": "San Francisco"
+   },
+   "question": "What's the most I've spent on a single coffee in San Francisco?",
+   "answer": "6.75 USD at Ritual Coffee on 2026-04-12",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      6.75,
+      "USD"
+     ]
+    ]
+   },
+   "n_rows": 191
+  },
+  {
+   "id": "f034",
+   "group": "same",
+   "template": "max_kind_city",
+   "phrasing": 1,
+   "params": {
+    "kind": "drinks",
+    "city": "San Francisco"
+   },
+   "question": "What was my most expensive night of drinks in San Francisco?",
+   "answer": "59.45 USD at Trick Dog on 2026-06-03",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      59.45,
+      "USD"
+     ]
+    ]
+   },
+   "n_rows": 25
+  },
+  {
+   "id": "f035",
+   "group": "same",
+   "template": "max_kind_city",
+   "phrasing": 0,
+   "params": {
+    "kind": "lunch",
+    "city": "San Francisco"
+   },
+   "question": "What's the most I've spent on a single lunch in San Francisco?",
+   "answer": "26.50 USD at The Grove on 2026-04-13",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      26.5,
+      "USD"
+     ]
+    ]
+   },
+   "n_rows": 119
+  },
+  {
+   "id": "f036",
+   "group": "same",
+   "template": "max_kind_city",
+   "phrasing": 1,
+   "params": {
+    "kind": "dinner",
+    "city": "San Francisco"
+   },
+   "question": "What was my most expensive dinner in San Francisco?",
+   "answer": "135.40 USD at Foreign Cinema on 2026-05-10",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      135.4,
+      "USD"
+     ]
+    ]
+   },
+   "n_rows": 55
+  },
+  {
+   "id": "f037",
+   "group": "reworded",
+   "template": "max_kind_city",
+   "phrasing": 2,
+   "params": {
+    "kind": "drinks",
+    "city": "Prague"
+   },
+   "question": "Priciest night of drinks I had in Prague?",
+   "answer": "450.00 CZK at Vinograf on 2024-06-09",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      450.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 110
+  },
+  {
+   "id": "f038",
+   "group": "reworded",
+   "template": "max_kind_city",
+   "phrasing": 3,
+   "params": {
+    "kind": "lunch",
+    "city": "Prague"
+   },
+   "question": "Biggest bill for a lunch in Prague?",
+   "answer": "385.00 CZK at Pho Vietnam on 2024-04-01",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      385.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 465
+  },
+  {
+   "id": "f039",
+   "group": "reworded",
+   "template": "max_kind_city",
+   "phrasing": 2,
+   "params": {
+    "kind": "transport",
+    "city": "Prague"
+   },
+   "question": "Priciest ride I had in Prague?",
+   "answer": "380.00 CZK at Bolt on 2024-06-04",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      380.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 402
+  },
+  {
+   "id": "f040",
+   "group": "reworded",
+   "template": "max_kind_city",
+   "phrasing": 3,
+   "params": {
+    "kind": "drinks",
+    "city": "San Francisco"
+   },
+   "question": "Biggest bill for a night of drinks in San Francisco?",
+   "answer": "59.45 USD at Trick Dog on 2026-06-03",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      59.45,
+      "USD"
+     ]
+    ]
+   },
+   "n_rows": 25
+  },
+  {
+   "id": "f041",
+   "group": "same",
+   "template": "avg_kind",
+   "phrasing": 0,
+   "params": {
+    "kind": "drinks",
+    "period": "month:2025-02"
+   },
+   "question": "What's my average night of drinks bill in February 2025?",
+   "answer": "153.33 CZK (average of 3)",
+   "grade": {
+    "type": "number",
+    "value": 153.33,
+    "tol": 0.01
+   },
+   "n_rows": 3
+  },
+  {
+   "id": "f042",
+   "group": "same",
+   "template": "avg_kind",
+   "phrasing": 1,
+   "params": {
+    "kind": "coffee",
+    "period": "last_month"
+   },
+   "question": "How much did a coffee cost me on average last month?",
+   "answer": "5.75 USD (average of 38)",
+   "grade": {
+    "type": "number",
+    "value": 5.75,
+    "tol": 0.01
+   },
+   "n_rows": 38
+  },
+  {
+   "id": "f043",
+   "group": "same",
+   "template": "avg_kind",
+   "phrasing": 0,
+   "params": {
+    "kind": "transport",
+    "period": "month:2026-07"
+   },
+   "question": "What's my average ride bill in July 2026?",
+   "answer": "22.31 USD (average of 16)",
+   "grade": {
+    "type": "number",
+    "value": 22.31,
+    "tol": 0.01
+   },
+   "n_rows": 16
+  },
+  {
+   "id": "f044",
+   "group": "same",
+   "template": "avg_kind",
+   "phrasing": 1,
+   "params": {
+    "kind": "transport",
+    "period": "year:2024"
+   },
+   "question": "How much did a ride cost me on average in 2024?",
+   "answer": "237.02 CZK (average of 151)",
+   "grade": {
+    "type": "number",
+    "value": 237.02,
+    "tol": 0.01
+   },
+   "n_rows": 151
+  },
+  {
+   "id": "f045",
+   "group": "reworded",
+   "template": "avg_kind",
+   "phrasing": 2,
+   "params": {
+    "kind": "dinner",
+    "period": "last_month"
+   },
+   "question": "Last month, what did I typically pay for a dinner?",
+   "answer": "102.19 USD (average of 7)",
+   "grade": {
+    "type": "number",
+    "value": 102.19,
+    "tol": 0.01
+   },
+   "n_rows": 7
+  },
+  {
+   "id": "f046",
+   "group": "reworded",
+   "template": "avg_kind",
+   "phrasing": 3,
+   "params": {
+    "kind": "coffee",
+    "period": "month:2025-09"
+   },
+   "question": "Average price of a coffee in September 2025?",
+   "answer": "91.89 CZK (average of 37)",
+   "grade": {
+    "type": "number",
+    "value": 91.89,
+    "tol": 0.01
+   },
+   "n_rows": 37
+  },
+  {
+   "id": "f047",
+   "group": "reworded",
+   "template": "avg_kind",
+   "phrasing": 2,
+   "params": {
+    "kind": "groceries",
+    "period": "month:2026-03"
+   },
+   "question": "In March 2026, what did I typically pay for a grocery run?",
+   "answer": "1,311.25 CZK (average of 8)",
+   "grade": {
+    "type": "number",
+    "value": 1311.25,
+    "tol": 0.01
+   },
+   "n_rows": 8
+  },
+  {
+   "id": "f048",
+   "group": "reworded",
+   "template": "avg_kind",
+   "phrasing": 3,
+   "params": {
+    "kind": "lunch",
+    "period": "month:2025-02"
+   },
+   "question": "Average price of a lunch in February 2025?",
+   "answer": "298.95 CZK (average of 19)",
+   "grade": {
+    "type": "number",
+    "value": 298.95,
+    "tol": 0.01
+   },
+   "n_rows": 19
+  },
+  {
+   "id": "f049",
+   "group": "same",
+   "template": "avg_sleep",
+   "phrasing": 0,
+   "params": {
+    "period": "month:2024-11"
+   },
+   "question": "What was my average sleep in November 2024?",
+   "answer": "7.02 hours (30 nights)",
+   "grade": {
+    "type": "number",
+    "value": 7.02,
+    "tol": 0.01
+   },
+   "n_rows": 30
+  },
+  {
+   "id": "f050",
+   "group": "same",
+   "template": "avg_sleep",
+   "phrasing": 1,
+   "params": {
+    "period": "month:2026-02"
+   },
+   "question": "How many hours did I sleep on average in February 2026?",
+   "answer": "6.98 hours (24 nights)",
+   "grade": {
+    "type": "number",
+    "value": 6.98,
+    "tol": 0.01
+   },
+   "n_rows": 24
+  },
+  {
+   "id": "f051",
+   "group": "same",
+   "template": "avg_sleep",
+   "phrasing": 0,
+   "params": {
+    "period": "month:2025-07"
+   },
+   "question": "What was my average sleep in July 2025?",
+   "answer": "7.31 hours (25 nights)",
+   "grade": {
+    "type": "number",
+    "value": 7.31,
+    "tol": 0.01
+   },
+   "n_rows": 25
+  },
+  {
+   "id": "f052",
+   "group": "same",
+   "template": "avg_sleep",
+   "phrasing": 1,
+   "params": {
+    "period": "month:2026-07"
+   },
+   "question": "How many hours did I sleep on average in July 2026?",
+   "answer": "6.99 hours (30 nights)",
+   "grade": {
+    "type": "number",
+    "value": 6.99,
+    "tol": 0.01
+   },
+   "n_rows": 30
+  },
+  {
+   "id": "f053",
+   "group": "reworded",
+   "template": "avg_sleep",
+   "phrasing": 2,
+   "params": {
+    "period": "month:2026-02"
+   },
+   "question": "In February 2026, how long did I sleep per night?",
+   "answer": "6.98 hours (24 nights)",
+   "grade": {
+    "type": "number",
+    "value": 6.98,
+    "tol": 0.01
+   },
+   "n_rows": 24
+  },
+  {
+   "id": "f054",
+   "group": "reworded",
+   "template": "avg_sleep",
+   "phrasing": 3,
+   "params": {
+    "period": "month:2025-06"
+   },
+   "question": "Average hours of sleep in June 2025?",
+   "answer": "6.92 hours (27 nights)",
+   "grade": {
+    "type": "number",
+    "value": 6.92,
+    "tol": 0.01
+   },
+   "n_rows": 27
+  },
+  {
+   "id": "f055",
+   "group": "reworded",
+   "template": "avg_sleep",
+   "phrasing": 2,
+   "params": {
+    "period": "month:2024-12"
+   },
+   "question": "In December 2024, how long did I sleep per night?",
+   "answer": "7.02 hours (30 nights)",
+   "grade": {
+    "type": "number",
+    "value": 7.02,
+    "tol": 0.01
+   },
+   "n_rows": 30
+  },
+  {
+   "id": "f056",
+   "group": "reworded",
+   "template": "avg_sleep",
+   "phrasing": 3,
+   "params": {
+    "period": "month:2026-02"
+   },
+   "question": "Average hours of sleep in February 2026?",
+   "answer": "6.98 hours (24 nights)",
+   "grade": {
+    "type": "number",
+    "value": 6.98,
+    "tol": 0.01
+   },
+   "n_rows": 24
+  },
+  {
+   "id": "f057",
+   "group": "same",
+   "template": "min_weight",
+   "phrasing": 0,
+   "params": {
+    "period": "month:2025-12"
+   },
+   "question": "What was my lowest weight in December 2025?",
+   "answer": "74.8 kg (2025-12-27)",
+   "grade": {
+    "type": "number",
+    "value": 74.8,
+    "tol": 0.001
+   },
+   "n_rows": 17
+  },
+  {
+   "id": "f058",
+   "group": "same",
+   "template": "min_weight",
+   "phrasing": 1,
+   "params": {
+    "period": "month:2026-06"
+   },
+   "question": "What's the least I weighed in June 2026?",
+   "answer": "74.5 kg (2026-06-10)",
+   "grade": {
+    "type": "number",
+    "value": 74.5,
+    "tol": 0.001
+   },
+   "n_rows": 15
+  },
+  {
+   "id": "f059",
+   "group": "same",
+   "template": "min_weight",
+   "phrasing": 0,
+   "params": {
+    "period": "month:2025-07"
+   },
+   "question": "What was my lowest weight in July 2025?",
+   "answer": "74.6 kg (2025-07-10)",
+   "grade": {
+    "type": "number",
+    "value": 74.6,
+    "tol": 0.001
+   },
+   "n_rows": 16
+  },
+  {
+   "id": "f060",
+   "group": "same",
+   "template": "min_weight",
+   "phrasing": 1,
+   "params": {
+    "period": "month:2026-01"
+   },
+   "question": "What's the least I weighed in January 2026?",
+   "answer": "74.5 kg (2026-01-27)",
+   "grade": {
+    "type": "number",
+    "value": 74.5,
+    "tol": 0.001
+   },
+   "n_rows": 15
+  },
+  {
+   "id": "f061",
+   "group": "reworded",
+   "template": "min_weight",
+   "phrasing": 2,
+   "params": {
+    "period": "month:2026-04"
+   },
+   "question": "In April 2026, what was my minimum weight?",
+   "answer": "75.2 kg (2026-04-01)",
+   "grade": {
+    "type": "number",
+    "value": 75.2,
+    "tol": 0.001
+   },
+   "n_rows": 9
+  },
+  {
+   "id": "f062",
+   "group": "reworded",
+   "template": "min_weight",
+   "phrasing": 3,
+   "params": {
+    "period": "this_year"
+   },
+   "question": "Lightest I've been this year?",
+   "answer": "73.6 kg (2026-07-28)",
+   "grade": {
+    "type": "number",
+    "value": 73.6,
+    "tol": 0.001
+   },
+   "n_rows": 129
+  },
+  {
+   "id": "f063",
+   "group": "reworded",
+   "template": "min_weight",
+   "phrasing": 2,
+   "params": {
+    "period": "year:2024"
+   },
+   "question": "In 2024, what was my minimum weight?",
+   "answer": "73.8 kg (2024-07-23)",
+   "grade": {
+    "type": "number",
+    "value": 73.8,
+    "tol": 0.001
+   },
+   "n_rows": 148
+  },
+  {
+   "id": "f064",
+   "group": "reworded",
+   "template": "min_weight",
+   "phrasing": 3,
+   "params": {
+    "period": "last_month"
+   },
+   "question": "Lightest I've been last month?",
+   "answer": "73.9 kg (2026-08-04)",
+   "grade": {
+    "type": "number",
+    "value": 73.9,
+    "tol": 0.001
+   },
+   "n_rows": 16
+  },
+  {
+   "id": "f065",
+   "group": "same",
+   "template": "count_runs",
+   "phrasing": 0,
+   "params": {
+    "period": "month:2025-11"
+   },
+   "question": "How many runs did I do in November 2025?",
+   "answer": "5",
+   "grade": {
+    "type": "count",
+    "value": 5
+   },
+   "n_rows": 5
+  },
+  {
+   "id": "f066",
+   "group": "same",
+   "template": "count_runs",
+   "phrasing": 1,
+   "params": {
+    "period": "year:2025"
+   },
+   "question": "How many times did I go running in 2025?",
+   "answer": "64",
+   "grade": {
+    "type": "count",
+    "value": 64
+   },
+   "n_rows": 64
+  },
+  {
+   "id": "f067",
+   "group": "same",
+   "template": "count_runs",
+   "phrasing": 0,
+   "params": {
+    "period": "month:2026-06"
+   },
+   "question": "How many runs did I do in June 2026?",
+   "answer": "4",
+   "grade": {
+    "type": "count",
+    "value": 4
+   },
+   "n_rows": 4
+  },
+  {
+   "id": "f068",
+   "group": "same",
+   "template": "count_runs",
+   "phrasing": 1,
+   "params": {
+    "period": "month:2024-08"
+   },
+   "question": "How many times did I go running in August 2024?",
+   "answer": "3",
+   "grade": {
+    "type": "count",
+    "value": 3
+   },
+   "n_rows": 3
+  },
+  {
+   "id": "f069",
+   "group": "reworded",
+   "template": "count_runs",
+   "phrasing": 2,
+   "params": {
+    "period": "month:2026-01"
+   },
+   "question": "In January 2026, how many runs did I log?",
+   "answer": "4",
+   "grade": {
+    "type": "count",
+    "value": 4
+   },
+   "n_rows": 4
+  },
+  {
+   "id": "f070",
+   "group": "reworded",
+   "template": "count_runs",
+   "phrasing": 3,
+   "params": {
+    "period": "month:2025-01"
+   },
+   "question": "Number of runs in January 2025?",
+   "answer": "7",
+   "grade": {
+    "type": "count",
+    "value": 7
+   },
+   "n_rows": 7
+  },
+  {
+   "id": "f071",
+   "group": "reworded",
+   "template": "count_runs",
+   "phrasing": 2,
+   "params": {
+    "period": "month:2026-08"
+   },
+   "question": "In August 2026, how many runs did I log?",
+   "answer": "5",
+   "grade": {
+    "type": "count",
+    "value": 5
+   },
+   "n_rows": 5
+  },
+  {
+   "id": "f072",
+   "group": "reworded",
+   "template": "count_runs",
+   "phrasing": 3,
+   "params": {
+    "period": "this_year"
+   },
+   "question": "Number of runs this year?",
+   "answer": "43",
+   "grade": {
+    "type": "count",
+    "value": 43
+   },
+   "n_rows": 43
+  },
+  {
+   "id": "f073",
+   "group": "same",
+   "template": "count_climbs",
+   "phrasing": 0,
+   "params": {
+    "period": "all"
+   },
+   "question": "How many times did I go climbing?",
+   "answer": "214",
+   "grade": {
+    "type": "count",
+    "value": 214
+   },
+   "n_rows": 214
+  },
+  {
+   "id": "f074",
+   "group": "same",
+   "template": "count_climbs",
+   "phrasing": 1,
+   "params": {
+    "period": "month:2026-04"
+   },
+   "question": "How many climbing sessions did I have in April 2026?",
+   "answer": "9",
+   "grade": {
+    "type": "count",
+    "value": 9
+   },
+   "n_rows": 9
+  },
+  {
+   "id": "f075",
+   "group": "same",
+   "template": "count_climbs",
+   "phrasing": 0,
+   "params": {
+    "period": "month:2024-04"
+   },
+   "question": "How many times did I go climbing in April 2024?",
+   "answer": "8",
+   "grade": {
+    "type": "count",
+    "value": 8
+   },
+   "n_rows": 8
+  },
+  {
+   "id": "f076",
+   "group": "same",
+   "template": "count_climbs",
+   "phrasing": 1,
+   "params": {
+    "period": "month:2024-07"
+   },
+   "question": "How many climbing sessions did I have in July 2024?",
+   "answer": "8",
+   "grade": {
+    "type": "count",
+    "value": 8
+   },
+   "n_rows": 8
+  },
+  {
+   "id": "f077",
+   "group": "reworded",
+   "template": "count_climbs",
+   "phrasing": 2,
+   "params": {
+    "period": "year:2024"
+   },
+   "question": "In 2024, how often did I climb?",
+   "answer": "67",
+   "grade": {
+    "type": "count",
+    "value": 67
+   },
+   "n_rows": 67
+  },
+  {
+   "id": "f078",
+   "group": "reworded",
+   "template": "count_climbs",
+   "phrasing": 3,
+   "params": {
+    "period": "this_year"
+   },
+   "question": "Climbing sessions this year?",
+   "answer": "61",
+   "grade": {
+    "type": "count",
+    "value": 61
+   },
+   "n_rows": 61
+  },
+  {
+   "id": "f079",
+   "group": "reworded",
+   "template": "count_climbs",
+   "phrasing": 2,
+   "params": {
+    "period": "this_year"
+   },
+   "question": "This year, how often did I climb?",
+   "answer": "61",
+   "grade": {
+    "type": "count",
+    "value": 61
+   },
+   "n_rows": 61
+  },
+  {
+   "id": "f080",
+   "group": "reworded",
+   "template": "count_climbs",
+   "phrasing": 3,
+   "params": {
+    "period": "year:2025"
+   },
+   "question": "Climbing sessions in 2025?",
+   "answer": "86",
+   "grade": {
+    "type": "count",
+    "value": 86
+   },
+   "n_rows": 86
+  },
+  {
+   "id": "f081",
+   "group": "novel",
+   "template": "spend_kind_person",
+   "phrasing": 0,
+   "params": {
+    "kind": "dinner",
+    "first": "Tom"
+   },
+   "question": "How much have I spent on dinners out with Tom?",
+   "answer": "73,180 CZK (42 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      73180.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 42
+  },
+  {
+   "id": "f082",
+   "group": "novel",
+   "template": "spend_kind_person",
+   "phrasing": 0,
+   "params": {
+    "kind": "dinner",
+    "first": "Kuba"
+   },
+   "question": "How much have I spent on dinner with Kuba?",
+   "answer": "64,310 CZK (45 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      64310.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 45
+  },
+  {
+   "id": "f083",
+   "group": "novel",
+   "template": "spend_kind_person",
+   "phrasing": 0,
+   "params": {
+    "kind": "dinner",
+    "first": "Kuba"
+   },
+   "question": "How much have I spent on dinners out with Kuba?",
+   "answer": "64,310 CZK (45 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      64310.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 45
+  },
+  {
+   "id": "f084",
+   "group": "novel",
+   "template": "spend_kind_person",
+   "phrasing": 0,
+   "params": {
+    "kind": "drinks",
+    "first": "Ondra"
+   },
+   "question": "How much have I spent on drinks at bars with Ondra?",
+   "answer": "3,540 CZK (13 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      3540.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 13
+  },
+  {
+   "id": "f085",
+   "group": "novel",
+   "template": "spend_kind_person",
+   "phrasing": 0,
+   "params": {
+    "kind": "dinner",
+    "first": "Lucie"
+   },
+   "question": "How much have I spent on dinner with Lucie?",
+   "answer": "33,830 CZK (21 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      33830.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 21
+  },
+  {
+   "id": "f086",
+   "group": "novel",
+   "template": "count_kind_person",
+   "phrasing": 0,
+   "params": {
+    "kind": "drinks",
+    "first": "Lucie"
+   },
+   "question": "How many times did I go out for drinks with Lucie?",
+   "answer": "19",
+   "grade": {
+    "type": "count",
+    "value": 19
+   },
+   "n_rows": 19
+  },
+  {
+   "id": "f087",
+   "group": "novel",
+   "template": "count_kind_person",
+   "phrasing": 0,
+   "params": {
+    "kind": "dinner",
+    "first": "Nina"
+   },
+   "question": "How many times did I go out for dinner with Nina?",
+   "answer": "19",
+   "grade": {
+    "type": "count",
+    "value": 19
+   },
+   "n_rows": 19
+  },
+  {
+   "id": "f088",
+   "group": "novel",
+   "template": "count_kind_person",
+   "phrasing": 0,
+   "params": {
+    "kind": "dinner",
+    "first": "David"
+   },
+   "question": "How many times did I go out for dinner with David?",
+   "answer": "46",
+   "grade": {
+    "type": "count",
+    "value": 46
+   },
+   "n_rows": 46
+  },
+  {
+   "id": "f089",
+   "group": "novel",
+   "template": "count_kind_person",
+   "phrasing": 0,
+   "params": {
+    "kind": "dinner",
+    "first": "Ondra"
+   },
+   "question": "How many times did I go out for dinner with Ondra?",
+   "answer": "28",
+   "grade": {
+    "type": "count",
+    "value": 28
+   },
+   "n_rows": 28
+  },
+  {
+   "id": "f090",
+   "group": "novel",
+   "template": "count_kind_person",
+   "phrasing": 0,
+   "params": {
+    "kind": "dinner",
+    "first": "Lucie"
+   },
+   "question": "How many times did I go out for dinner with Lucie?",
+   "answer": "21",
+   "grade": {
+    "type": "count",
+    "value": 21
+   },
+   "n_rows": 21
+  },
+  {
+   "id": "f091",
+   "group": "novel",
+   "template": "last_kind_person",
+   "phrasing": 0,
+   "params": {
+    "kind": "dinner",
+    "first": "Kuba"
+   },
+   "question": "When did I last go out for dinner with Kuba?",
+   "answer": "2026-02-19 at Maso a Kobliha",
+   "grade": {
+    "type": "date",
+    "value": "2026-02-19"
+   },
+   "n_rows": 45
+  },
+  {
+   "id": "f092",
+   "group": "novel",
+   "template": "last_kind_person",
+   "phrasing": 0,
+   "params": {
+    "kind": "dinner",
+    "first": "Eva"
+   },
+   "question": "When did I last go out for dinner with Eva?",
+   "answer": "2026-09-25 at Nopa",
+   "grade": {
+    "type": "date",
+    "value": "2026-09-25"
+   },
+   "n_rows": 32
+  },
+  {
+   "id": "f093",
+   "group": "novel",
+   "template": "last_kind_person",
+   "phrasing": 0,
+   "params": {
+    "kind": "drinks",
+    "first": "Eva"
+   },
+   "question": "When did I last go out for drinks with Eva?",
+   "answer": "2026-09-24 at Zeitgeist",
+   "grade": {
+    "type": "date",
+    "value": "2026-09-24"
+   },
+   "n_rows": 26
+  },
+  {
+   "id": "f094",
+   "group": "novel",
+   "template": "last_kind_person",
+   "phrasing": 0,
+   "params": {
+    "kind": "dinner",
+    "first": "Priya"
+   },
+   "question": "When did I last go out for dinner with Priya?",
+   "answer": "2026-08-16 at Nopa",
+   "grade": {
+    "type": "date",
+    "value": "2026-08-16"
+   },
+   "n_rows": 12
+  },
+  {
+   "id": "f095",
+   "group": "novel",
+   "template": "last_kind_person",
+   "phrasing": 0,
+   "params": {
+    "kind": "drinks",
+    "first": "Kuba"
+   },
+   "question": "When did I last go out for drinks with Kuba?",
+   "answer": "2026-03-12 at Hemingway Bar",
+   "grade": {
+    "type": "date",
+    "value": "2026-03-12"
+   },
+   "n_rows": 15
+  },
+  {
+   "id": "f096",
+   "group": "novel",
+   "template": "spend_kind_city",
+   "phrasing": 0,
+   "params": {
+    "kind": "lunch",
+    "city": "Prague"
+   },
+   "question": "How much have I spent on lunches out in Prague in total?",
+   "answer": "130,791 CZK (465 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      130791.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 465
+  },
+  {
+   "id": "f097",
+   "group": "novel",
+   "template": "spend_kind_city",
+   "phrasing": 0,
+   "params": {
+    "kind": "groceries",
+    "city": "Prague"
+   },
+   "question": "How much have I spent on grocery shopping in Prague in total?",
+   "answer": "217,580 CZK (196 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      217580.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 196
+  },
+  {
+   "id": "f098",
+   "group": "novel",
+   "template": "spend_kind_city",
+   "phrasing": 0,
+   "params": {
+    "kind": "lunch",
+    "city": "Prague"
+   },
+   "question": "How much have I spent on lunch in Prague in total?",
+   "answer": "130,791 CZK (465 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      130791.0,
+      "CZK"
+     ]
+    ]
+   },
+   "n_rows": 465
+  },
+  {
+   "id": "f099",
+   "group": "novel",
+   "template": "spend_kind_city",
+   "phrasing": 0,
+   "params": {
+    "kind": "transport",
+    "city": "San Francisco"
+   },
+   "question": "How much have I spent on rides in San Francisco in total?",
+   "answer": "1,916.65 USD (88 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      1916.65,
+      "USD"
+     ]
+    ]
+   },
+   "n_rows": 88
+  },
+  {
+   "id": "f100",
+   "group": "novel",
+   "template": "spend_kind_city",
+   "phrasing": 0,
+   "params": {
+    "kind": "transport",
+    "city": "San Francisco"
+   },
+   "question": "How much have I spent on Uber and Bolt rides in San Francisco in total?",
+   "answer": "1,916.65 USD (88 purchases)",
+   "grade": {
+    "type": "amounts",
+    "values": [
+     [
+      1916.65,
+      "USD"
+     ]
+    ]
+   },
+   "n_rows": 88
+  },
+  {
+   "id": "f101",
+   "group": "novel",
+   "template": "top_merchant",
+   "phrasing": 0,
+   "params": {
+    "kind": "lunch",
+    "period": "year:2024"
+   },
+   "question": "Where did I eat lunch out most often in 2024?",
+   "answer": "Mr. Bao (37 times)",
+   "grade": {
+    "type": "name",
+    "value": "Mr. Bao"
+   },
+   "n_rows": 174
+  },
+  {
+   "id": "f102",
+   "group": "novel",
+   "template": "top_merchant",
+   "phrasing": 0,
+   "params": {
+    "kind": "drinks",
+    "period": "year:2024"
+   },
+   "question": "Where did I go out for drinks most often in 2024?",
+   "answer": "Vinograf (17 times)",
+   "grade": {
+    "type": "name",
+    "value": "Vinograf"
+   },
+   "n_rows": 42
+  },
+  {
+   "id": "f103",
+   "group": "novel",
+   "template": "top_merchant",
+   "phrasing": 0,
+   "params": {
+    "kind": "groceries",
+    "period": "year:2025"
+   },
+   "question": "Where did I buy groceries most often in 2025?",
+   "answer": "Albert (50 times)",
+   "grade": {
+    "type": "name",
+    "value": "Albert"
+   },
+   "n_rows": 98
+  },
+  {
+   "id": "f104",
+   "group": "novel",
+   "template": "top_merchant",
+   "phrasing": 0,
+   "params": {
+    "kind": "drinks",
+    "period": "year:2025"
+   },
+   "question": "Where did I go out for drinks most often in 2025?",
+   "answer": "Vinograf (14 times)",
+   "grade": {
+    "type": "name",
+    "value": "Vinograf"
+   },
+   "n_rows": 52
+  },
+  {
+   "id": "f105",
+   "group": "novel",
+   "template": "top_merchant",
+   "phrasing": 0,
+   "params": {
+    "kind": "groceries",
+    "period": "this_year"
+   },
+   "question": "Where did I buy groceries most often this year?",
+   "answer": "Trader Joe's (28 times)",
+   "grade": {
+    "type": "name",
+    "value": "Trader Joe's"
+   },
+   "n_rows": 77
+  }
+ ]
+}

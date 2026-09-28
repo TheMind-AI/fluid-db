@@ -1,0 +1,1218 @@
+[
+ {
+  "id": 20,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": ""
+ },
+ {
+  "id": 110,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Frankenstein",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 114,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": ""
+ },
+ {
+  "id": 131,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Heretic",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 140,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Civil War",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 154,
+  "holder": "I",
+  "stance": "rated",
+  "target": "The Holdovers",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 193,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Sentimental Value",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 260,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Sinners",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 320,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Past Lives",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 321,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": ""
+ },
+ {
+  "id": 374,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": ""
+ },
+ {
+  "id": 399,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": ""
+ },
+ {
+  "id": 453,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Flow",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 458,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": ""
+ },
+ {
+  "id": 499,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Flow",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 559,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": ""
+ },
+ {
+  "id": 565,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Weapons",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 697,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Sentimental Value",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 705,
+  "holder": "I",
+  "stance": "rated",
+  "target": "F1",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 737,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": ""
+ },
+ {
+  "id": 761,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": ""
+ },
+ {
+  "id": 770,
+  "holder": "I",
+  "stance": "rated",
+  "target": "The Substance",
+  "target_kind": "movie",
+  "detail": "2/5"
+ },
+ {
+  "id": 794,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Dune: Part Two",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 810,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Dune: Part Two",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 831,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": ""
+ },
+ {
+  "id": 856,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Weapons",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 864,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Past Lives",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 875,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Challengers",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 883,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Marty Supreme",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 935,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": ""
+ },
+ {
+  "id": 1109,
+  "holder": "I",
+  "stance": "rated",
+  "target": "The Wild Robot",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 1124,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Wicked",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 1150,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Sentimental Value",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 1159,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Bugonia",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 1179,
+  "holder": "I",
+  "stance": "rated",
+  "target": "F1",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 1245,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Flow",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 1331,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Emilia Pérez",
+  "target_kind": "movie",
+  "detail": "2/5"
+ },
+ {
+  "id": 1389,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Past Lives",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 1407,
+  "holder": "I",
+  "stance": "rated",
+  "target": "The Phoenician Scheme",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 1462,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": ""
+ },
+ {
+  "id": 1494,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Perfect Days",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 1503,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Perfect Days",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 1562,
+  "holder": "I",
+  "stance": "rated",
+  "target": "The Brutalist",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 1578,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Civil War",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 1624,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": ""
+ },
+ {
+  "id": 1640,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Weapons",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 1712,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": "Said “haha nice.”"
+ },
+ {
+  "id": 1747,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": "Praised the assistant: “you're the best.”"
+ },
+ {
+  "id": 1750,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Conclave",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 1823,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Nosferatu",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 1856,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": "Praised the assistant: “you're the best.”"
+ },
+ {
+  "id": 1858,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Frankenstein",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 1868,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Poor Things",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 1875,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Poor Things",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 1999,
+  "holder": "I",
+  "stance": "rated",
+  "target": "The Zone of Interest",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 2007,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": "Said “haha nice.”"
+ },
+ {
+  "id": 2022,
+  "holder": "I",
+  "stance": "rated",
+  "target": "The Phoenician Scheme",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 2098,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": "Said “haha nice.”"
+ },
+ {
+  "id": 2122,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Flow",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 2133,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": "Praised the assistant: “you're the best.”"
+ },
+ {
+  "id": 2144,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": ""
+ },
+ {
+  "id": 2158,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": ""
+ },
+ {
+  "id": 2201,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Inside Out 2",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 2234,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Heretic",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 2306,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Materialists",
+  "target_kind": "movie",
+  "detail": "2/5"
+ },
+ {
+  "id": 2356,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Anatomy of a Fall",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 2381,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Marty Supreme",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 2400,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Wicked",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 2469,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Civil War",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 2495,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Emilia Pérez",
+  "target_kind": "movie",
+  "detail": "2/5"
+ },
+ {
+  "id": 2505,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": ""
+ },
+ {
+  "id": 2544,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Marty Supreme",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 2565,
+  "holder": "I",
+  "stance": "rated",
+  "target": "One Battle After Another",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 2584,
+  "holder": "I",
+  "stance": "rated",
+  "target": "The Brutalist",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 2634,
+  "holder": "I",
+  "stance": "rated",
+  "target": "The Holdovers",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 2668,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Wicked",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 2685,
+  "holder": "I",
+  "stance": "rated",
+  "target": "The Zone of Interest",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 2722,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Perfect Days",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 2778,
+  "holder": "I",
+  "stance": "rated",
+  "target": "The Substance",
+  "target_kind": "movie",
+  "detail": "2/5"
+ },
+ {
+  "id": 2789,
+  "holder": "I",
+  "stance": "rated",
+  "target": "A Real Pain",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 2878,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Poor Things",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 2902,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": ""
+ },
+ {
+  "id": 2989,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": ""
+ },
+ {
+  "id": 3020,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Frankenstein",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 3045,
+  "holder": "Mom",
+  "stance": "loves",
+  "target": "orchids",
+  "target_kind": "other",
+  "detail": ""
+ },
+ {
+  "id": 3059,
+  "holder": "Eva",
+  "stance": "allergic to",
+  "target": "peanuts",
+  "target_kind": "food",
+  "detail": ""
+ },
+ {
+  "id": 3163,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Flow",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 3230,
+  "holder": "Lucas Meyer",
+  "stance": "likes",
+  "target": "following up",
+  "target_kind": "activity",
+  "detail": "Wants to follow up in January"
+ },
+ {
+  "id": 3235,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Thinking, Fast and Slow",
+  "target_kind": "book",
+  "detail": "5/5"
+ },
+ {
+  "id": 3310,
+  "holder": "I",
+  "stance": "rated",
+  "target": "F1",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 3347,
+  "holder": "I",
+  "stance": "rated",
+  "target": "The Brutalist",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 3358,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Past Lives",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 3363,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Frankenstein",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 3370,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Challengers",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 3412,
+  "holder": "I",
+  "stance": "rated",
+  "target": "The Pragmatic Programmer",
+  "target_kind": "book",
+  "detail": "4/5"
+ },
+ {
+  "id": 3419,
+  "holder": "I",
+  "stance": "rated",
+  "target": "The Zone of Interest",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 3426,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Nosferatu",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 3449,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Bugonia",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 3496,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": "Praising the assistant; no preference stated"
+ },
+ {
+  "id": 3504,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Project Hail Mary",
+  "target_kind": "book",
+  "detail": "5/5"
+ },
+ {
+  "id": 3511,
+  "holder": "I",
+  "stance": "rated",
+  "target": "F1",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 3529,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": "No preference or evaluation stated"
+ },
+ {
+  "id": 3583,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Inside Out 2",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 3640,
+  "holder": "I",
+  "stance": "rated",
+  "target": "A Real Pain",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 3653,
+  "holder": "I",
+  "stance": "rated",
+  "target": "The Mom Test",
+  "target_kind": "book",
+  "detail": "4/5"
+ },
+ {
+  "id": 3660,
+  "holder": "I",
+  "stance": "rated",
+  "target": "F1",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 3677,
+  "holder": "I",
+  "stance": "rated",
+  "target": "The Substance",
+  "target_kind": "movie",
+  "detail": "2/5"
+ },
+ {
+  "id": 3784,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Sapiens",
+  "target_kind": "book",
+  "detail": "3/5"
+ },
+ {
+  "id": 3788,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Emilia Pérez",
+  "target_kind": "movie",
+  "detail": "2/5"
+ },
+ {
+  "id": 3900,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": ""
+ },
+ {
+  "id": 3914,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Shoe Dog",
+  "target_kind": "book",
+  "detail": "5/5"
+ },
+ {
+  "id": 3931,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": ""
+ },
+ {
+  "id": 3976,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Civil War",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 4007,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Hamnet",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 4073,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Flow",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 4103,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Deep Work",
+  "target_kind": "book",
+  "detail": "4/5"
+ },
+ {
+  "id": 4173,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Oppenheimer",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 4226,
+  "holder": "I",
+  "stance": "rated",
+  "target": "The Wild Robot",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 4251,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Dune",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 4258,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Bugonia",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 4295,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Perfect Days",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 4321,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": "Praising the assistant"
+ },
+ {
+  "id": 4328,
+  "holder": "I",
+  "stance": "likes",
+  "target": "trip to Lisbon",
+  "target_kind": "trip",
+  "detail": "Amazing trip"
+ },
+ {
+  "id": 4328,
+  "holder": "I",
+  "stance": "likes",
+  "target": "pastéis de nata at Manteigaria",
+  "target_kind": "food",
+  "detail": "Said they were unreal"
+ },
+ {
+  "id": 4368,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Nosferatu",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 4380,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Atomic Habits",
+  "target_kind": "book",
+  "detail": "3/5"
+ },
+ {
+  "id": 4395,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": "No preference or evaluation stated"
+ },
+ {
+  "id": 4478,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Challengers",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 4487,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Sinners",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 4493,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Frankenstein",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 4502,
+  "holder": "I",
+  "stance": "rated",
+  "target": "The Brutalist",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 4513,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Dune: Part Two",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 4554,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Inside Out 2",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 4562,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": "Praising the assistant"
+ },
+ {
+  "id": 4571,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Anora",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 4575,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Superman",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 4584,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Zero to One",
+  "target_kind": "book",
+  "detail": "4/5"
+ },
+ {
+  "id": 4613,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Marty Supreme",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 4629,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Oppenheimer",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 4670,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Heretic",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 4701,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Superman",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 4732,
+  "holder": "I",
+  "stance": "none",
+  "target": "assistant",
+  "target_kind": "person",
+  "detail": ""
+ },
+ {
+  "id": 4761,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Weapons",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 4785,
+  "holder": "I",
+  "stance": "none",
+  "target": "assistant",
+  "target_kind": "person",
+  "detail": ""
+ },
+ {
+  "id": 4801,
+  "holder": "I",
+  "stance": "none",
+  "target": "assistant",
+  "target_kind": "person",
+  "detail": ""
+ },
+ {
+  "id": 4805,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Frankenstein",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 4863,
+  "holder": "I",
+  "stance": "rated",
+  "target": "The Brutalist",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 4871,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Sinners",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 4955,
+  "holder": "I",
+  "stance": "none",
+  "target": "assistant",
+  "target_kind": "person",
+  "detail": ""
+ },
+ {
+  "id": 4977,
+  "holder": "I",
+  "stance": "none",
+  "target": "assistant",
+  "target_kind": "person",
+  "detail": ""
+ },
+ {
+  "id": 5013,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Mickey 17",
+  "target_kind": "movie",
+  "detail": "2/5"
+ },
+ {
+  "id": 5039,
+  "holder": "I",
+  "stance": "rated",
+  "target": "the Brutalist",
+  "target_kind": "movie",
+  "detail": "3/5"
+ }
+]

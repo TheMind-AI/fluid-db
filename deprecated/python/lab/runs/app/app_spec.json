@@ -1,0 +1,139 @@
+{
+ "title": "Adam’s dashboard",
+ "pages": [
+  {
+   "title": "Spending",
+   "intro": "Start with the money questions you ask most often: totals, merchant spending, and everyday habits.",
+   "sections": [
+    {
+     "view": "tile7",
+     "title": "Spending by merchant",
+     "note": "See how much you spent at each merchant over time."
+    },
+    {
+     "view": "tile1",
+     "title": "Dining spend",
+     "note": "Compare spending on dinners and lunches by month and year."
+    },
+    {
+     "view": "tile4",
+     "title": "Everyday purchases",
+     "note": "See how often you spent in each category over time."
+    },
+    {
+     "view": "tile6",
+     "title": "Merchant visits",
+     "note": "Track how often you visited each merchant by year."
+    },
+    {
+     "view": "tile10",
+     "title": "Average dinner bill",
+     "note": "Compare your typical dinner bill across months and years."
+    },
+    {
+     "view": "tile2",
+     "title": "Spending by category",
+     "note": "Review total spend across categories over time."
+    },
+    {
+     "view": "tile5",
+     "title": "Visits by merchant and category",
+     "note": "See merchant visit counts broken down by category."
+    },
+    {
+     "view": "tile8",
+     "title": "Category spending by merchant",
+     "note": "Compare merchant totals within each spending category."
+    },
+    {
+     "view": "tile3",
+     "title": "Dining occasions",
+     "note": "Count lunches and other dining occasions over time."
+    },
+    {
+     "view": "tile9",
+     "title": "Largest grocery runs",
+     "note": "Check the highest recorded grocery expense by location."
+    },
+    {
+     "view": "tile11",
+     "title": "Average spend",
+     "note": "Review average expense amounts across categories."
+    },
+    {
+     "view": "cross_expenses_category_dining_occasion",
+     "title": "Dining breakdown",
+     "note": "Explore total expenses by category and dining occasion."
+    },
+    {
+     "view": "cross_expenses_category_expense_location",
+     "title": "Spending by place",
+     "note": "Explore total expenses by category and location."
+    },
+    {
+     "view": "top_expenses_merchant",
+     "title": "Top merchants",
+     "note": "Find your most frequent merchants by year and category."
+    }
+   ]
+  },
+  {
+   "title": "People",
+   "intro": "See the people connected to your records and what is linked to each of them.",
+   "sections": [
+    {
+     "view": "people",
+     "title": "People overview",
+     "note": "Review nine people with totals of the records linked to them."
+    }
+   ]
+  },
+  {
+   "title": "Health & activity",
+   "intro": "Track the health and exercise questions you return to most often.",
+   "sections": [
+    {
+     "view": "tile12",
+     "title": "Average measurements",
+     "note": "See average body measurements by category and unit over time."
+    },
+    {
+     "view": "tile14",
+     "title": "Lowest measurements",
+     "note": "Check the lowest recorded measurement by category and year."
+    },
+    {
+     "view": "tile17",
+     "title": "Climbing sessions",
+     "note": "Track climbing session counts over time."
+    },
+    {
+     "view": "tile15",
+     "title": "Runs",
+     "note": "See how many runs you completed by month and year."
+    },
+    {
+     "view": "tile16",
+     "title": "Attended climbing",
+     "note": "Review climbing events marked as attended."
+    }
+   ]
+  },
+  {
+   "title": "Timeline & checks",
+   "intro": "Browse dated records or resolve uncertain matches in your database.",
+   "sections": [
+    {
+     "view": "timeline",
+     "title": "Timeline",
+     "note": "Browse every dated record month by month."
+    },
+    {
+     "view": "inbox",
+     "title": "Needs your input",
+     "note": "Resolve 33 uncertain records and person matches."
+    }
+   ]
+  }
+ ]
+}

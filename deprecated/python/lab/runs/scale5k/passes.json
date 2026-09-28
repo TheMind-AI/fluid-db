@@ -1,0 +1,25 @@
+{
+ "dedupe": {
+  "merges": [
+   {
+    "table": "people",
+    "keep": "Tom Novak",
+    "dup": "Tom",
+    "p": 0.91,
+    "links_moved": 1
+   }
+  ],
+  "s": 5.1
+ },
+ "supersession": {
+  "pairs": 24,
+  "marked_replaced": 2,
+  "s": 0.5
+ },
+ "typed_columns": {
+  "extractors": [],
+  "filled": {},
+  "s": 1.8
+ },
+ "cost": 0.00658
+}

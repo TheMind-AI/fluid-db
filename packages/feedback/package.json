@@ -1,0 +1,23 @@
+{
+  "name": "@fluiddb/feedback",
+  "version": "1.0.0-next.4",
+  "description": "Explicit FluidDB feedback and failed-task reports through HiveNet",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p .",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@types/bun": "catalog:",
+    "typescript": "catalog:",
+    "hivenet": "0.6.0"
+  },
+  "private": true,
+  "license": "Apache-2.0"
+}

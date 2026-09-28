@@ -1,0 +1,691 @@
+{
+ "name": "alex_rivera",
+ "description": "The 2024 FluidDB eval: 45 biography sentences about Alex Rivera, ingested one by one. QA written from the sentences (not the richer JSON) so every answer is derivable from what was ingested.",
+ "user": "Alex Rivera (third person)",
+ "now": "2024-01-20T10:00:00",
+ "messages": [
+  {
+   "id": "a01",
+   "ts": "2024-01-15T10:01:00",
+   "kind": "store",
+   "text": "Alex Rivera, a 35-year-old Canadian, began his impressive journey in the field of computer science by earning a B.Sc. from the prestigious University of Toronto in 2010."
+  },
+  {
+   "id": "a02",
+   "ts": "2024-01-15T10:02:00",
+   "kind": "store",
+   "text": "During his time at the university, Alex excelled in courses like 'Advanced Algorithms', which he completed in May 2009."
+  },
+  {
+   "id": "a03",
+   "ts": "2024-01-15T10:03:00",
+   "kind": "store",
+   "text": "He also completed the 'System Design' course in December 2009."
+  },
+  {
+   "id": "a04",
+   "ts": "2024-01-15T10:04:00",
+   "kind": "store",
+   "text": "These courses laid the foundation for his diverse set of skills, which includes problem solving, team leadership, project management, and agile methodologies."
+  },
+  {
+   "id": "a05",
+   "ts": "2024-01-15T10:05:00",
+   "kind": "store",
+   "text": "After graduation, Alex embarked on his professional journey at Innovatech as a Software Engineer."
+  },
+  {
+   "id": "a06",
+   "ts": "2024-01-15T10:06:00",
+   "kind": "store",
+   "text": "He worked at Innovatech from August 2010 to July 2013."
+  },
+  {
+   "id": "a07",
+   "ts": "2024-01-15T10:07:00",
+   "kind": "store",
+   "text": "While there, he was deeply involved in developing and maintaining web applications."
+  },
+  {
+   "id": "a08",
+   "ts": "2024-01-15T10:08:00",
+   "kind": "store",
+   "text": "He also worked collaboratively with cross-functional teams."
+  },
+  {
+   "id": "a09",
+   "ts": "2024-01-15T10:09:00",
+   "kind": "store",
+   "text": "Alex's dedication and skill earned him the 'Employee of the Year' award in December 2012."
+  },
+  {
+   "id": "a10",
+   "ts": "2024-01-15T10:10:00",
+   "kind": "store",
+   "text": "He led the development of a key internal tool, marking a significant achievement in November 2012."
+  },
+  {
+   "id": "a11",
+   "ts": "2024-01-15T10:11:00",
+   "kind": "store",
+   "text": "Seeking further growth, Alex joined TechPioneers as a Senior Software Engineer in September 2013."
+  },
+  {
+   "id": "a12",
+   "ts": "2024-01-15T10:12:00",
+   "kind": "store",
+   "text": "He worked at TechPioneers until June 2016."
+  },
+  {
+   "id": "a13",
+   "ts": "2024-01-15T10:13:00",
+   "kind": "store",
+   "text": "During his tenure, he designed scalable microservices architecture."
+  },
+  {
+   "id": "a14",
+   "ts": "2024-01-15T10:14:00",
+   "kind": "store",
+   "text": "He also mentored junior engineers and conducted code reviews."
+  },
+  {
+   "id": "a15",
+   "ts": "2024-01-15T10:15:00",
+   "kind": "store",
+   "text": "Notably, he spearheaded a major performance optimization project in April 2015."
+  },
+  {
+   "id": "a16",
+   "ts": "2024-01-15T10:16:00",
+   "kind": "store",
+   "text": "He also published research on cloud computing efficiency in February 2016."
+  },
+  {
+   "id": "a17",
+   "ts": "2024-01-15T10:17:00",
+   "kind": "store",
+   "text": "Alex's entrepreneurial spirit led him to co-found EcoSolutions, where he served as the CTO."
+  },
+  {
+   "id": "a18",
+   "ts": "2024-01-15T10:18:00",
+   "kind": "store",
+   "text": "The startup focused on developing eco-friendly tech solutions."
+  },
+  {
+   "id": "a19",
+   "ts": "2024-01-15T10:19:00",
+   "kind": "store",
+   "text": "EcoSolutions saw a 200% revenue growth in its first year."
+  },
+  {
+   "id": "a20",
+   "ts": "2024-01-15T10:20:00",
+   "kind": "store",
+   "text": "The company's user base grew to 10,000 in just six months."
+  },
+  {
+   "id": "a21",
+   "ts": "2024-01-15T10:21:00",
+   "kind": "store",
+   "text": "Alex is proficient in several programming languages, including Python, Java, JavaScript, and C#."
+  },
+  {
+   "id": "a22",
+   "ts": "2024-01-15T10:22:00",
+   "kind": "store",
+   "text": "He is skilled in using frameworks and tools like React, Node.js, .NET, and Django."
+  },
+  {
+   "id": "a23",
+   "ts": "2024-01-15T10:23:00",
+   "kind": "store",
+   "text": "He has extensive knowledge in databases like MySQL, MongoDB, and PostgreSQL."
+  },
+  {
+   "id": "a24",
+   "ts": "2024-01-15T10:24:00",
+   "kind": "store",
+   "text": "His proficiency extends to cloud platforms like AWS and Azure."
+  },
+  {
+   "id": "a25",
+   "ts": "2024-01-15T10:25:00",
+   "kind": "store",
+   "text": "Alex is also skilled in DevOps, involving Docker, Kubernetes, and CI/CD pipelines."
+  },
+  {
+   "id": "a26",
+   "ts": "2024-01-15T10:26:00",
+   "kind": "store",
+   "text": "He developed a SmartHome System, an IoT project for automating home environments."
+  },
+  {
+   "id": "a27",
+   "ts": "2024-01-15T10:27:00",
+   "kind": "store",
+   "text": "The SmartHome System was successfully deployed in over 100 homes by June 2018."
+  },
+  {
+   "id": "a28",
+   "ts": "2024-01-15T10:28:00",
+   "kind": "store",
+   "text": "He also managed the development of a Health Tracker App."
+  },
+  {
+   "id": "a29",
+   "ts": "2024-01-15T10:29:00",
+   "kind": "store",
+   "text": "The Health Tracker App is a mobile application for tracking health metrics."
+  },
+  {
+   "id": "a30",
+   "ts": "2024-01-15T10:30:00",
+   "kind": "store",
+   "text": "The app reached 50,000 downloads within its first year of launch in January 2019."
+  },
+  {
+   "id": "a31",
+   "ts": "2024-01-15T10:31:00",
+   "kind": "store",
+   "text": "Alex completed a course in Advanced Machine Learning in March 2020."
+  },
+  {
+   "id": "a32",
+   "ts": "2024-01-15T10:32:00",
+   "kind": "store",
+   "text": "He also completed a Cloud Computing Specialization in November 2020."
+  },
+  {
+   "id": "a33",
+   "ts": "2024-01-15T10:33:00",
+   "kind": "store",
+   "text": "He is an AWS Certified Solutions Architect and a Certified Scrum Master."
+  },
+  {
+   "id": "a34",
+   "ts": "2024-01-15T10:34:00",
+   "kind": "store",
+   "text": "Alex attended the TechCrunch Disrupt conference in September 2019."
+  },
+  {
+   "id": "a35",
+   "ts": "2024-01-15T10:35:00",
+   "kind": "store",
+   "text": "He also attended Google I/O in May 2020."
+  },
+  {
+   "id": "a36",
+   "ts": "2024-01-15T10:36:00",
+   "kind": "store",
+   "text": "He was a keynote speaker on Cloud Innovation at CloudExpo in October 2018."
+  },
+  {
+   "id": "a37",
+   "ts": "2024-01-15T10:37:00",
+   "kind": "store",
+   "text": "He was a panelist at DevOps Days in April 2019."
+  },
+  {
+   "id": "a38",
+   "ts": "2024-01-15T10:38:00",
+   "kind": "store",
+   "text": "Alex has a wide network of friends, including Sarah Chen, a Data Scientist he met in college."
+  },
+  {
+   "id": "a39",
+   "ts": "2024-01-15T10:39:00",
+   "kind": "store",
+   "text": "He also knows Michael Johnson, a Product Manager and former co-worker."
+  },
+  {
+   "id": "a40",
+   "ts": "2024-01-15T10:40:00",
+   "kind": "store",
+   "text": "He collaborates with Emily Davis, a Marketing Specialist at his startup."
+  },
+  {
+   "id": "a41",
+   "ts": "2024-01-15T10:41:00",
+   "kind": "store",
+   "text": "He is active with friends like Laura Smith, a Fitness Trainer, and Daniel Martinez, a Graphic Designer and neighbor."
+  },
+  {
+   "id": "a42",
+   "ts": "2024-01-15T10:42:00",
+   "kind": "store",
+   "text": "Alex Rivera's journey is a testament to his dedication, skill, and passion for technology and innovation."
+  },
+  {
+   "id": "a43",
+   "ts": "2024-01-15T10:43:00",
+   "kind": "store",
+   "text": "He aspires to grow EcoSolutions to a global scale."
+  },
+  {
+   "id": "a44",
+   "ts": "2024-01-15T10:44:00",
+   "kind": "store",
+   "text": "He aims to become a thought leader in sustainable technology."
+  },
+  {
+   "id": "a45",
+   "ts": "2024-01-15T10:45:00",
+   "kind": "store",
+   "text": "His ultimate goal is to establish a tech incubator for emerging technologies."
+  }
+ ],
+ "qa": [
+  {
+   "id": "q01",
+   "category": "single",
+   "question": "How old is Alex Rivera?",
+   "answer": "35",
+   "evidence": [
+    "a01"
+   ]
+  },
+  {
+   "id": "q02",
+   "category": "single",
+   "question": "What is Alex's nationality?",
+   "answer": "Canadian",
+   "evidence": [
+    "a01"
+   ]
+  },
+  {
+   "id": "q03",
+   "category": "single",
+   "question": "Which university did Alex graduate from, with what degree, and when?",
+   "answer": "University of Toronto, B.Sc. in computer science, 2010",
+   "evidence": [
+    "a01"
+   ]
+  },
+  {
+   "id": "q04",
+   "category": "single",
+   "question": "When did Alex complete the Advanced Algorithms course?",
+   "answer": "May 2009",
+   "evidence": [
+    "a02"
+   ]
+  },
+  {
+   "id": "q05",
+   "category": "single",
+   "question": "When did Alex complete the System Design course?",
+   "answer": "December 2009",
+   "evidence": [
+    "a03"
+   ]
+  },
+  {
+   "id": "q06",
+   "category": "single",
+   "question": "What skills did Alex's university courses lay the foundation for?",
+   "answer": "Problem solving, team leadership, project management, and agile methodologies",
+   "evidence": [
+    "a04"
+   ]
+  },
+  {
+   "id": "q07",
+   "category": "single",
+   "question": "What was Alex's role at Innovatech?",
+   "answer": "Software Engineer",
+   "evidence": [
+    "a05"
+   ]
+  },
+  {
+   "id": "q08",
+   "category": "single",
+   "question": "When did Alex work at Innovatech?",
+   "answer": "August 2010 to July 2013",
+   "evidence": [
+    "a06"
+   ]
+  },
+  {
+   "id": "q09",
+   "category": "single",
+   "question": "What award did Alex receive, and when?",
+   "answer": "Employee of the Year, December 2012",
+   "evidence": [
+    "a09"
+   ]
+  },
+  {
+   "id": "q10",
+   "category": "single",
+   "question": "When did Alex join TechPioneers, and in what role?",
+   "answer": "September 2013, as a Senior Software Engineer",
+   "evidence": [
+    "a11"
+   ]
+  },
+  {
+   "id": "q11",
+   "category": "single",
+   "question": "Until when did Alex work at TechPioneers?",
+   "answer": "June 2016",
+   "evidence": [
+    "a12"
+   ]
+  },
+  {
+   "id": "q12",
+   "category": "single",
+   "question": "What did Alex spearhead in April 2015?",
+   "answer": "A major performance optimization project",
+   "evidence": [
+    "a15"
+   ]
+  },
+  {
+   "id": "q13",
+   "category": "single",
+   "question": "What topic did Alex publish research on, and when?",
+   "answer": "Cloud computing efficiency, February 2016",
+   "evidence": [
+    "a16"
+   ]
+  },
+  {
+   "id": "q14",
+   "category": "single",
+   "question": "What is Alex's role at EcoSolutions?",
+   "answer": "Co-founder and CTO",
+   "evidence": [
+    "a17"
+   ]
+  },
+  {
+   "id": "q15",
+   "category": "single",
+   "question": "What does EcoSolutions focus on?",
+   "answer": "Developing eco-friendly tech solutions",
+   "evidence": [
+    "a18"
+   ]
+  },
+  {
+   "id": "q16",
+   "category": "single",
+   "question": "How much did EcoSolutions' revenue grow in its first year?",
+   "answer": "200%",
+   "evidence": [
+    "a19"
+   ]
+  },
+  {
+   "id": "q17",
+   "category": "single",
+   "question": "How fast did EcoSolutions' user base grow?",
+   "answer": "To 10,000 users in six months",
+   "evidence": [
+    "a20"
+   ]
+  },
+  {
+   "id": "q18",
+   "category": "list",
+   "question": "Which programming languages is Alex proficient in?",
+   "answer": "Python, Java, JavaScript, and C#",
+   "evidence": [
+    "a21"
+   ]
+  },
+  {
+   "id": "q19",
+   "category": "list",
+   "question": "Which frameworks and tools is Alex skilled in?",
+   "answer": "React, Node.js, .NET, and Django",
+   "evidence": [
+    "a22"
+   ]
+  },
+  {
+   "id": "q20",
+   "category": "list",
+   "question": "Which databases does Alex know?",
+   "answer": "MySQL, MongoDB, and PostgreSQL",
+   "evidence": [
+    "a23"
+   ]
+  },
+  {
+   "id": "q21",
+   "category": "list",
+   "question": "Which cloud platforms is Alex proficient in?",
+   "answer": "AWS and Azure",
+   "evidence": [
+    "a24"
+   ]
+  },
+  {
+   "id": "q22",
+   "category": "list",
+   "question": "Which DevOps technologies is Alex skilled in?",
+   "answer": "Docker, Kubernetes, and CI/CD pipelines",
+   "evidence": [
+    "a25"
+   ]
+  },
+  {
+   "id": "q23",
+   "category": "single",
+   "question": "What is the SmartHome System and how widely was it deployed?",
+   "answer": "An IoT project for automating home environments, deployed in over 100 homes by June 2018",
+   "evidence": [
+    "a26",
+    "a27"
+   ]
+  },
+  {
+   "id": "q24",
+   "category": "single",
+   "question": "What was Alex's role in the Health Tracker App?",
+   "answer": "He managed its development (project manager)",
+   "evidence": [
+    "a28"
+   ]
+  },
+  {
+   "id": "q25",
+   "category": "single",
+   "question": "When did the Health Tracker App launch, and how many downloads did it reach?",
+   "answer": "Launched January 2019, reached 50,000 downloads within its first year",
+   "evidence": [
+    "a30"
+   ]
+  },
+  {
+   "id": "q26",
+   "category": "single",
+   "question": "When did Alex complete the Cloud Computing Specialization?",
+   "answer": "November 2020",
+   "evidence": [
+    "a32"
+   ]
+  },
+  {
+   "id": "q27",
+   "category": "single",
+   "question": "When did Alex complete the Advanced Machine Learning course?",
+   "answer": "March 2020",
+   "evidence": [
+    "a31"
+   ]
+  },
+  {
+   "id": "q28",
+   "category": "list",
+   "question": "Which certifications does Alex hold?",
+   "answer": "AWS Certified Solutions Architect and Certified Scrum Master",
+   "evidence": [
+    "a33"
+   ]
+  },
+  {
+   "id": "q29",
+   "category": "list",
+   "question": "Which conferences did Alex attend, and when?",
+   "answer": "TechCrunch Disrupt (September 2019) and Google I/O (May 2020)",
+   "evidence": [
+    "a34",
+    "a35"
+   ]
+  },
+  {
+   "id": "q30",
+   "category": "single",
+   "question": "Where did Alex give a keynote, on what topic, and when?",
+   "answer": "CloudExpo, on Cloud Innovation, October 2018",
+   "evidence": [
+    "a36"
+   ]
+  },
+  {
+   "id": "q31",
+   "category": "single",
+   "question": "What was Alex's role at DevOps Days?",
+   "answer": "Panelist (April 2019)",
+   "evidence": [
+    "a37"
+   ]
+  },
+  {
+   "id": "q32",
+   "category": "single",
+   "question": "Who is Sarah Chen?",
+   "answer": "A Data Scientist Alex met in college",
+   "evidence": [
+    "a38"
+   ]
+  },
+  {
+   "id": "q33",
+   "category": "single",
+   "question": "What does Michael Johnson do, and how does Alex know him?",
+   "answer": "Product Manager, a former co-worker",
+   "evidence": [
+    "a39"
+   ]
+  },
+  {
+   "id": "q34",
+   "category": "single",
+   "question": "Who is Emily Davis?",
+   "answer": "A Marketing Specialist Alex collaborates with at his startup",
+   "evidence": [
+    "a40"
+   ]
+  },
+  {
+   "id": "q35",
+   "category": "single",
+   "question": "Which of Alex's friends is a graphic designer?",
+   "answer": "Daniel Martinez, his neighbor",
+   "evidence": [
+    "a41"
+   ]
+  },
+  {
+   "id": "q36",
+   "category": "single",
+   "question": "What does Laura Smith do?",
+   "answer": "She is a Fitness Trainer",
+   "evidence": [
+    "a41"
+   ]
+  },
+  {
+   "id": "q37",
+   "category": "list",
+   "question": "What are Alex's goals and aspirations?",
+   "answer": "Grow EcoSolutions to a global scale, become a thought leader in sustainable technology, and establish a tech incubator for emerging technologies",
+   "evidence": [
+    "a43",
+    "a44",
+    "a45"
+   ]
+  },
+  {
+   "id": "q38",
+   "category": "aggregation",
+   "question": "How many companies did Alex work at as an employee before co-founding EcoSolutions?",
+   "answer": "Two: Innovatech and TechPioneers",
+   "evidence": [
+    "a05",
+    "a11",
+    "a17"
+   ]
+  },
+  {
+   "id": "q39",
+   "category": "multi_hop",
+   "question": "What was Alex's job title at the company where he won Employee of the Year?",
+   "answer": "Software Engineer (at Innovatech)",
+   "evidence": [
+    "a05",
+    "a09"
+   ]
+  },
+  {
+   "id": "q40",
+   "category": "temporal",
+   "question": "Where was Alex working in 2014, and in what role?",
+   "answer": "TechPioneers, as a Senior Software Engineer",
+   "evidence": [
+    "a11",
+    "a12"
+   ]
+  },
+  {
+   "id": "q41",
+   "category": "temporal",
+   "question": "Which events did Alex attend or speak at in 2019?",
+   "answer": "DevOps Days (panelist, April 2019) and TechCrunch Disrupt (attended, September 2019)",
+   "evidence": [
+    "a34",
+    "a37"
+   ]
+  },
+  {
+   "id": "q42",
+   "category": "aggregation",
+   "question": "How many of Alex's friends are mentioned, and who are they?",
+   "answer": "Five: Sarah Chen, Michael Johnson, Emily Davis, Laura Smith, and Daniel Martinez",
+   "evidence": [
+    "a38",
+    "a39",
+    "a40",
+    "a41"
+   ]
+  },
+  {
+   "id": "q43",
+   "category": "unanswerable",
+   "question": "What is Alex's favorite food?",
+   "answer": "UNKNOWN: never mentioned",
+   "evidence": []
+  },
+  {
+   "id": "q44",
+   "category": "unanswerable",
+   "question": "What is Sarah Chen's phone number?",
+   "answer": "UNKNOWN: never mentioned",
+   "evidence": []
+  },
+  {
+   "id": "q45",
+   "category": "unanswerable",
+   "question": "In which city does Alex live?",
+   "answer": "UNKNOWN: never mentioned",
+   "evidence": []
+  }
+ ]
+}

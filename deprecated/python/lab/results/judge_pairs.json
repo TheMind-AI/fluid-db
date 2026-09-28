@@ -1,0 +1,2402 @@
+[
+ {
+  "reader": "rdb",
+  "category": "current",
+  "question": "What is my phone number?",
+  "gold": "+1 415 555 0199",
+  "answer": "Your primary phone number is +1 415 555 0199.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "current",
+  "question": "What is Tom's phone number?",
+  "gold": "+420 777 999 000",
+  "answer": "Tom Novak’s phone number is +420 777 999 000.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "current",
+  "question": "Where do I live?",
+  "gold": "1450 Valencia St, San Francisco",
+  "answer": "I don't know.",
+  "opus": 0.0
+ },
+ {
+  "reader": "rdb",
+  "category": "current",
+  "question": "Where does Eva (my partner) work?",
+  "gold": "Gensler",
+  "answer": "Eva works at Gensler.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "current",
+  "question": "Where does my sister Klára live?",
+  "gold": "London",
+  "answer": "Klára lives in London.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "current",
+  "question": "Which climbing gym am I a member of, and what does it cost?",
+  "gold": "Mission Cliffs ($110/month)",
+  "answer": "You’re a member of Mission Cliffs. It costs $110 USD per month.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "current",
+  "question": "What book am I reading right now?",
+  "gold": "The Three-Body Problem",
+  "answer": "I don't know.",
+  "opus": 0.0
+ },
+ {
+  "reader": "rdb",
+  "category": "current",
+  "question": "What is David's US phone number?",
+  "gold": "+1 628 688 4995 (corrected from +1 628 688 4994)",
+  "answer": "David’s US phone number is +1 628 688 4995.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "current",
+  "question": "What is my relationship with Eva now?",
+  "gold": "Engaged: she is my fiancée (since Jul 12, 2026)",
+  "answer": "Eva is your fiancée.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "current",
+  "question": "Is Oscar Lind still at Nebula?",
+  "gold": "No, he left on Aug 15, 2026 to join Stripe as a PM",
+  "answer": "No. Oscar left Nebula on August 15, 2026, and joined Stripe as a PM.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "current",
+  "question": "How much is my rent and who is my landlord?",
+  "gold": "$3,200/month; landlord Raj Gupta (+1 415 555 0187)",
+  "answer": "Your rent is **$3,200 per month**. Your landlord is **Raj Gupta**.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "history",
+  "question": "What was my phone number before my current one?",
+  "gold": "+420 722 238 738",
+  "answer": "Your previous phone number was +420 722 238 738.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "history",
+  "question": "What was Tom's previous phone number?",
+  "gold": "+420 777 123 456",
+  "answer": "Tom’s previous phone number was +420 777 123 456.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "history",
+  "question": "Where did I live before San Francisco?",
+  "gold": "Prague",
+  "answer": "I don't know.",
+  "opus": 0.0
+ },
+ {
+  "reader": "rdb",
+  "category": "history",
+  "question": "Where did Eva work before her current job?",
+  "gold": "Studio Kvadrat",
+  "answer": "I don't know.",
+  "opus": 0.0
+ },
+ {
+  "reader": "rdb",
+  "category": "history",
+  "question": "Where did Klára live before?",
+  "gold": "Berlin",
+  "answer": "Berlin.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "history",
+  "question": "When did I move to San Francisco?",
+  "gold": "April 1, 2026 (flew UA 8843 on Mar 31)",
+  "answer": "Your database doesn’t specify when you moved to San Francisco. I don't know.",
+  "opus": 0.0
+ },
+ {
+  "reader": "rdb",
+  "category": "history",
+  "question": "Which gym was I a member of in Prague?",
+  "gold": "Smíchoff (1190 CZK/month, ended March 2026)",
+  "answer": "Smíchoff.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "history",
+  "question": "What was my time on the first 10k run I ever logged?",
+  "gold": "54:48 (Oct 27, 2025)",
+  "answer": "Your first logged 10 km run was **54:48**, on October 27, 2025.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "aggregation",
+  "question": "How much did I spend on coffee in November 2025?",
+  "gold": "1,025 CZK (10 purchases)",
+  "answer": "You spent **1,025 CZK** on coffee in November 2025.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "aggregation",
+  "question": "How much did I spend on groceries in May 2026?",
+  "gold": "$317.76 (4 purchases)",
+  "answer": "You spent **$317.76** on groceries in May 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "aggregation",
+  "question": "How much did I spend on rides (Uber/Bolt) in June 2026?",
+  "gold": "$155.98 (7 purchases)",
+  "answer": "You spent **$155.98** on Uber/Bolt rides in June 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "aggregation",
+  "question": "How much did I spend on lunch in August 2026?",
+  "gold": "$162.25 (8 purchases)",
+  "answer": "You spent **$162.25** on lunch in August 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "aggregation",
+  "question": "How many times did I go climbing in January 2026?",
+  "gold": "5",
+  "answer": "You went climbing 5 times in January 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "aggregation",
+  "question": "How many times did I go climbing in July 2026?",
+  "gold": "7",
+  "answer": "You went climbing 7 times in July 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "aggregation",
+  "question": "What's my best 10k time?",
+  "gold": "52:06 (Jun 25, 2026)",
+  "answer": "Your best 10K is **52:06**, recorded on June 25, 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "aggregation",
+  "question": "What's the hardest climbing grade I've sent?",
+  "gold": "7a (Jul 03, 2026)",
+  "answer": "The hardest grade you’ve sent is 7a, at Mission Cliffs on July 3, 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "aggregation",
+  "question": "How many books have I finished, and which did I rate 5/5?",
+  "gold": "10 finished; 5/5: Thinking, Fast and Slow, Project Hail Mary, Shoe Dog, Dune",
+  "answer": "You’ve finished **10 books**. You rated **5/5**: *Thinking, Fast and Slow*, *Project Hail Mary*, *Shoe Dog*, and *Dune*.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "aggregation",
+  "question": "How many dinners out did I have with Eva in 2026?",
+  "gold": "8",
+  "answer": "You had 8 dinners out with Eva in 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "aggregation",
+  "question": "How much rent have I paid in total?",
+  "gold": "$19,200 (6 months × $3,200)",
+  "answer": "You’ve paid **$19,200** in rent total (April through September 2026: 6 × $3,200).",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "aggregation",
+  "question": "How much did the Lisbon trip cost for flights plus hotel?",
+  "gold": "$2,320 ($1,340 flights + $980 hotel)",
+  "answer": "The Lisbon flights and hotel cost **$2,320 total** ($1,340 for flights + $980 for the hotel).",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "aggregation",
+  "question": "How much have I spent at Blue Bottle in total?",
+  "gold": "$148.75 (27 visits)",
+  "answer": "You’ve spent **$143.50** at Blue Bottle.",
+  "opus": 0.0
+ },
+ {
+  "reader": "rdb",
+  "category": "aggregation",
+  "question": "How many times have I gone climbing since moving to SF?",
+  "gold": "39",
+  "answer": "You’ve gone climbing 39 times since moving to San Francisco.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "temporal",
+  "question": "When did I last have dinner with Ondra?",
+  "gold": "Mar 28, 2026 at Eska",
+  "answer": "Your last recorded dinner with Ondra was on March 28, 2026, at Eska.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "temporal",
+  "question": "When and where is the next Nebula board meeting?",
+  "gold": "Thu Oct 01, 2026 at 16:00, 1 Mission St, San Francisco",
+  "answer": "The next Nebula board meeting is October 1, 2026, at 4:00 PM at 1 Mission St, San Francisco.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "temporal",
+  "question": "When was my last dentist appointment, and with whom?",
+  "gold": "Jun 03, 2026 with Dr. Lee",
+  "answer": "Your last recorded dentist appointment was June 3, 2026, at 9:30 a.m., with Dr. Lee at Castro Dental.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "temporal",
+  "question": "When did I first meet Lucas Meyer, and where?",
+  "gold": "Nov 5, 2025 at Web Summit",
+  "answer": "You met Lucas Meyer on November 5, 2025, at Web Summit.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "temporal",
+  "question": "When did I get engaged?",
+  "gold": "July 12, 2026",
+  "answer": "You got engaged on July 12, 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "temporal",
+  "question": "What's on my calendar for October 2026?",
+  "gold": "Nebula board meeting Thu Oct 1 at 16:00 (1 Mission St) and the Series A kickoff with Sarah Kim Fri Oct 9 at 10:00",
+  "answer": "- **October 1, 4:00–5:30 PM:** Nebula board meeting at 1 Mission St, San Francisco.\n- **October 9, 10:00 AM:** Series A kickoff at Northwind’s office, 2 Embarcadero Center.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "temporal",
+  "question": "When was the call with Lucas Meyer?",
+  "gold": "Wed Jan 21, 2026 at 14:00 (moved from Jan 14 at 10:00)",
+  "answer": "The call with Lucas Meyer was scheduled for January 21, 2026, at 2:00 PM.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "relationships",
+  "question": "Who led Nebula's seed round, and how much did we raise?",
+  "gold": "Northwind Ventures (Sarah Kim), $3M",
+  "answer": "Sarah Kim of Northwind Ventures led Nebula’s seed round, and we raised $3 million.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "relationships",
+  "question": "What's Lucas Meyer's email?",
+  "gold": "lucas@sequoia.com",
+  "answer": "lucas@sequoia.com",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "semi_structured",
+  "question": "What were the terms in Sarah's term sheet draft?",
+  "gold": "$3M at a $15M post-money valuation, 1x non-participating preference",
+  "answer": "Sarah Kim’s seed term sheet draft offered $3 million at a $15 million post-money valuation, with a 1× non-participating preference.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "relationships",
+  "question": "Who is Eva Green?",
+  "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+  "answer": "Eva Green is a designer at Nebula. Her email is eva.green@nebula.ai.",
+  "opus": 0.5
+ },
+ {
+  "reader": "rdb",
+  "category": "relationships",
+  "question": "Who introduced me to Mark Chen?",
+  "gold": "Priya Patel (Stripe)",
+  "answer": "Priya Patel.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "relationships",
+  "question": "Who are my climbing partners?",
+  "gold": "Tom Novak (Prague) and Nina Rossi (SF)",
+  "answer": "Tom was your climbing partner in Prague, and Nina is your climbing partner in San Francisco.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "semi_structured",
+  "question": "What's the confirmation code for my flight to San Francisco?",
+  "gold": "K7QX2P (United UA 8843)",
+  "answer": "Your flight confirmation code is **K7QX2P**.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "semi_structured",
+  "question": "How big was the security deposit for my apartment?",
+  "gold": "$4,800",
+  "answer": "The security deposit was $4,800.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "semi_structured",
+  "question": "Which hotel did we stay at in Lisbon?",
+  "gold": "Memmo Alfama (May 22-26, 2026)",
+  "answer": "Memmo Alfama Hotel.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "status",
+  "question": "Did I renew my passport?",
+  "gold": "Yes, done on Dec 3, 2025",
+  "answer": "Yes. Your “Renew passport” task was marked done.",
+  "opus": 0.5
+ },
+ {
+  "reader": "rdb",
+  "category": "status",
+  "question": "What happened to the February dentist appointment?",
+  "gold": "Cancelled (it was Feb 18 with Dr. Horák)",
+  "answer": "The February 18, 2026 dentist appointment with Dr. Horák was cancelled.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "status",
+  "question": "Do I still have to get my SF driver's license?",
+  "gold": "Yes, still open (was due Jun 30)",
+  "answer": "Yes. Your “Get SF driver's license” task is still pending, with a due date of June 30, 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "status",
+  "question": "Is the wedding venue booked?",
+  "gold": "No, still open (due Oct 31)",
+  "answer": "No. “Book the wedding venue” is still pending, due October 31, 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "status",
+  "question": "Did I finish The Three-Body Problem?",
+  "gold": "No, still reading it",
+  "answer": "I don't know.",
+  "opus": 0.0
+ },
+ {
+  "reader": "rdb",
+  "category": "forgotten",
+  "question": "Who is Jan Dvořák?",
+  "gold": "UNKNOWN: the user asked to forget him",
+  "answer": "I don't know.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "forgotten",
+  "question": "What's Marco's phone number?",
+  "gold": "UNKNOWN: the user asked to forget it",
+  "answer": "I don't know.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "unanswerable",
+  "question": "What's my blood type?",
+  "gold": "UNKNOWN: never mentioned",
+  "answer": "I don't know.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "unanswerable",
+  "question": "What's Ondra's email address?",
+  "gold": "UNKNOWN: never mentioned",
+  "answer": "I don't know.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "unanswerable",
+  "question": "How much does Eva earn?",
+  "gold": "UNKNOWN: never mentioned",
+  "answer": "I don't know.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb",
+  "category": "unanswerable",
+  "question": "What's Nina's birthday?",
+  "gold": "UNKNOWN: never mentioned",
+  "answer": "I don't know.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "current",
+  "question": "What is my phone number?",
+  "gold": "+1 415 555 0199",
+  "answer": "Your primary phone number is +1 415 555 0199.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "current",
+  "question": "What is Tom's phone number?",
+  "gold": "+420 777 999 000",
+  "answer": "Tom’s phone number is +420 777 999 000.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "current",
+  "question": "Where do I live?",
+  "gold": "1450 Valencia St, San Francisco",
+  "answer": "You live at 1450 Valencia St in San Francisco.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "current",
+  "question": "Where does Eva (my partner) work?",
+  "gold": "Gensler",
+  "answer": "Eva works at Gensler in San Francisco.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "current",
+  "question": "Where does my sister Klára live?",
+  "gold": "London",
+  "answer": "Klára lives in London.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "current",
+  "question": "Which climbing gym am I a member of, and what does it cost?",
+  "gold": "Mission Cliffs ($110/month)",
+  "answer": "You’re a member of Mission Cliffs, and it costs $110 per month.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "current",
+  "question": "What book am I reading right now?",
+  "gold": "The Three-Body Problem",
+  "answer": "The Three-Body Problem by Liu Cixin.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "current",
+  "question": "What is David's US phone number?",
+  "gold": "+1 628 688 4995 (corrected from +1 628 688 4994)",
+  "answer": "David’s US phone number is +1 628 688 4995.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "current",
+  "question": "What is my relationship with Eva now?",
+  "gold": "Engaged: she is my fiancée (since Jul 12, 2026)",
+  "answer": "Eva is your fiancée.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "current",
+  "question": "Is Oscar Lind still at Nebula?",
+  "gold": "No, he left on Aug 15, 2026 to join Stripe as a PM",
+  "answer": "No. Oscar left Nebula on August 15, 2026, to join Stripe as a PM.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "current",
+  "question": "How much is my rent and who is my landlord?",
+  "gold": "$3,200/month; landlord Raj Gupta (+1 415 555 0187)",
+  "answer": "Your rent is $3,200 per month, due on the 1st. Your landlord is Raj Gupta.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "history",
+  "question": "What was my phone number before my current one?",
+  "gold": "+420 722 238 738",
+  "answer": "Your previous number was +420 722 238 738.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "history",
+  "question": "What was Tom's previous phone number?",
+  "gold": "+420 777 123 456",
+  "answer": "Tom’s previous number was +420 777 123 456.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "history",
+  "question": "Where did I live before San Francisco?",
+  "gold": "Prague",
+  "answer": "You lived in Prague before moving to San Francisco.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "history",
+  "question": "Where did Eva work before her current job?",
+  "gold": "Studio Kvadrat",
+  "answer": "Eva worked at Studio Kvadrat before her current job at Gensler.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "history",
+  "question": "Where did Klára live before?",
+  "gold": "Berlin",
+  "answer": "Klára lived in Berlin before moving to London for her new job.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "history",
+  "question": "When did I move to San Francisco?",
+  "gold": "April 1, 2026 (flew UA 8843 on Mar 31)",
+  "answer": "You moved to San Francisco on April 1, 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "history",
+  "question": "Which gym was I a member of in Prague?",
+  "gold": "Smíchoff (1190 CZK/month, ended March 2026)",
+  "answer": "Smíchoff climbing gym.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "history",
+  "question": "What was my time on the first 10k run I ever logged?",
+  "gold": "54:48 (Oct 27, 2025)",
+  "answer": "Your first logged 10k was **54:48**, on **October 27, 2025**.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "aggregation",
+  "question": "How much did I spend on coffee in November 2025?",
+  "gold": "1,025 CZK (10 purchases)",
+  "answer": "You spent **1,025 CZK** on coffee in November 2025.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "aggregation",
+  "question": "How much did I spend on groceries in May 2026?",
+  "gold": "$317.76 (4 purchases)",
+  "answer": "You spent **$317.76** on groceries in May 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "aggregation",
+  "question": "How much did I spend on rides (Uber/Bolt) in June 2026?",
+  "gold": "$155.98 (7 purchases)",
+  "answer": "You spent **$155.98** on Uber rides in June 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "aggregation",
+  "question": "How much did I spend on lunch in August 2026?",
+  "gold": "$162.25 (8 purchases)",
+  "answer": "You spent **$162.25** on lunch in August 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "aggregation",
+  "question": "How many times did I go climbing in January 2026?",
+  "gold": "5",
+  "answer": "You went climbing 5 times in January 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "aggregation",
+  "question": "How many times did I go climbing in July 2026?",
+  "gold": "7",
+  "answer": "You went climbing 7 times in July 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "aggregation",
+  "question": "What's my best 10k time?",
+  "gold": "52:06 (Jun 25, 2026)",
+  "answer": "Your best 10k is **52:06**, set on **June 25, 2026**.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "aggregation",
+  "question": "What's the hardest climbing grade I've sent?",
+  "gold": "7a (Jul 03, 2026)",
+  "answer": "7a.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "aggregation",
+  "question": "How many books have I finished, and which did I rate 5/5?",
+  "gold": "10 finished; 5/5: Thinking, Fast and Slow, Project Hail Mary, Shoe Dog, Dune",
+  "answer": "You’ve finished **11 books**. You rated these **5/5**: *Thinking, Fast and Slow*, *Project Hail Mary*, *Shoe Dog*, and *Dune*.",
+  "opus": 0.5
+ },
+ {
+  "reader": "rdb+log",
+  "category": "aggregation",
+  "question": "How many dinners out did I have with Eva in 2026?",
+  "gold": "8",
+  "answer": "You had 7 dinners out with Eva in 2026.",
+  "opus": 0.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "aggregation",
+  "question": "How much rent have I paid in total?",
+  "gold": "$19,200 (6 months × $3,200)",
+  "answer": "You’ve paid **$19,200** in rent total: **$3,200 per month from April through September 2026**.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "aggregation",
+  "question": "How much did the Lisbon trip cost for flights plus hotel?",
+  "gold": "$2,320 ($1,340 flights + $980 hotel)",
+  "answer": "The flights and hotel cost **$2,320 total** ($1,340 + $980).",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "aggregation",
+  "question": "How much have I spent at Blue Bottle in total?",
+  "gold": "$148.75 (27 visits)",
+  "answer": "You’ve spent **$143.50** at Blue Bottle in total.",
+  "opus": 0.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "aggregation",
+  "question": "How many times have I gone climbing since moving to SF?",
+  "gold": "39",
+  "answer": "You’ve gone climbing **39 times** since moving to San Francisco.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "temporal",
+  "question": "When did I last have dinner with Ondra?",
+  "gold": "Mar 28, 2026 at Eska",
+  "answer": "March 28, 2026 — dinner at Eska with Ondra.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "temporal",
+  "question": "When and where is the next Nebula board meeting?",
+  "gold": "Thu Oct 01, 2026 at 16:00, 1 Mission St, San Francisco",
+  "answer": "The next Nebula board meeting is Thursday, October 1, 2026, at 4:00 PM at 1 Mission St, San Francisco.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "temporal",
+  "question": "When was my last dentist appointment, and with whom?",
+  "gold": "Jun 03, 2026 with Dr. Lee",
+  "answer": "Your last recorded dentist appointment was June 3, 2026, with Dr. Lee at Castro Dental.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "temporal",
+  "question": "When did I first meet Lucas Meyer, and where?",
+  "gold": "Nov 5, 2025 at Web Summit",
+  "answer": "You first met Lucas Meyer on November 5, 2025, at Web Summit.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "temporal",
+  "question": "When did I get engaged?",
+  "gold": "July 12, 2026",
+  "answer": "You got engaged to Eva on July 12, 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "temporal",
+  "question": "What's on my calendar for October 2026?",
+  "gold": "Nebula board meeting Thu Oct 1 at 16:00 (1 Mission St) and the Series A kickoff with Sarah Kim Fri Oct 9 at 10:00",
+  "answer": "- **Oct 1, 4:00–5:30 PM:** Nebula board meeting at 1 Mission St, San Francisco, organized by David Mokos.\n- **Oct 9, 10:00 AM:** Series A kickoff with Sarah Kim at the Northwind office, 2 Embarcadero Center.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "temporal",
+  "question": "When was the call with Lucas Meyer?",
+  "gold": "Wed Jan 21, 2026 at 14:00 (moved from Jan 14 at 10:00)",
+  "answer": "The call with Lucas Meyer was scheduled for January 21, 2026, at 2:00 PM.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "relationships",
+  "question": "Who led Nebula's seed round, and how much did we raise?",
+  "gold": "Northwind Ventures (Sarah Kim), $3M",
+  "answer": "Sarah Kim of Northwind Ventures led Nebula’s seed round. You raised $3 million.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "relationships",
+  "question": "What's Lucas Meyer's email?",
+  "gold": "lucas@sequoia.com",
+  "answer": "Lucas Meyer’s email is lucas@sequoia.com.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "semi_structured",
+  "question": "What were the terms in Sarah's term sheet draft?",
+  "gold": "$3M at a $15M post-money valuation, 1x non-participating preference",
+  "answer": "Sarah’s draft term sheet offered Nebula **$3 million at a $15 million post-money valuation**, with a **1× non-participating preference**.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "relationships",
+  "question": "Who is Eva Green?",
+  "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+  "answer": "Eva Green is a designer at Nebula. Her email is eva.green@nebula.ai.",
+  "opus": 0.5
+ },
+ {
+  "reader": "rdb+log",
+  "category": "relationships",
+  "question": "Who introduced me to Mark Chen?",
+  "gold": "Priya Patel (Stripe)",
+  "answer": "Priya Patel introduced you to Mark Chen.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "relationships",
+  "question": "Who are my climbing partners?",
+  "gold": "Tom Novak (Prague) and Nina Rossi (SF)",
+  "answer": "Your climbing partners are Tom Novak (in Prague) and Nina Rossi (in San Francisco).",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "semi_structured",
+  "question": "What's the confirmation code for my flight to San Francisco?",
+  "gold": "K7QX2P (United UA 8843)",
+  "answer": "Your flight confirmation code is **K7QX2P**.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "semi_structured",
+  "question": "How big was the security deposit for my apartment?",
+  "gold": "$4,800",
+  "answer": "The security deposit was $4,800.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "semi_structured",
+  "question": "Which hotel did we stay at in Lisbon?",
+  "gold": "Memmo Alfama (May 22-26, 2026)",
+  "answer": "Memmo Alfama Hotel.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "status",
+  "question": "Did I renew my passport?",
+  "gold": "Yes, done on Dec 3, 2025",
+  "answer": "Yes. You renewed your passport on December 3, 2025.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "status",
+  "question": "What happened to the February dentist appointment?",
+  "gold": "Cancelled (it was Feb 18 with Dr. Horák)",
+  "answer": "You cancelled the February 18 appointment with Dr. Horák and said you’d take care of it in San Francisco. You later booked a new appointment with Dr. Lee at Castro Dental for June 3 at 9:30 a.m.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "status",
+  "question": "Do I still have to get my SF driver's license?",
+  "gold": "Yes, still open (was due Jun 30)",
+  "answer": "Yes. Your SF driver’s license task is still pending; it was due June 30, 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "status",
+  "question": "Is the wedding venue booked?",
+  "gold": "No, still open (due Oct 31)",
+  "answer": "I don't know.",
+  "opus": 0.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "status",
+  "question": "Did I finish The Three-Body Problem?",
+  "gold": "No, still reading it",
+  "answer": "I don't know.",
+  "opus": 0.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "forgotten",
+  "question": "Who is Jan Dvořák?",
+  "gold": "UNKNOWN: the user asked to forget him",
+  "answer": "I don't know.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "forgotten",
+  "question": "What's Marco's phone number?",
+  "gold": "UNKNOWN: the user asked to forget it",
+  "answer": "I don't know.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "unanswerable",
+  "question": "What's my blood type?",
+  "gold": "UNKNOWN: never mentioned",
+  "answer": "I don't know.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "unanswerable",
+  "question": "What's Ondra's email address?",
+  "gold": "UNKNOWN: never mentioned",
+  "answer": "I don't know.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "unanswerable",
+  "question": "How much does Eva earn?",
+  "gold": "UNKNOWN: never mentioned",
+  "answer": "I don't know.",
+  "opus": 1.0
+ },
+ {
+  "reader": "rdb+log",
+  "category": "unanswerable",
+  "question": "What's Nina's birthday?",
+  "gold": "UNKNOWN: never mentioned",
+  "answer": "I don't know.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "current",
+  "question": "What is my phone number?",
+  "gold": "+1 415 555 0199",
+  "answer": "+420 722 238 738; +1 415 555 0199",
+  "opus": 0.5
+ },
+ {
+  "reader": "sql",
+  "category": "current",
+  "question": "What is Tom's phone number?",
+  "gold": "+420 777 999 000",
+  "answer": "Tom’s phone number is +420 777 999 000.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "current",
+  "question": "Where do I live?",
+  "gold": "1450 Valencia St, San Francisco",
+  "answer": "1450 Valencia St.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "current",
+  "question": "Where does Eva (my partner) work?",
+  "gold": "Gensler",
+  "answer": "Eva is listed with Studio Kvadrat and Gensler.",
+  "opus": 0.5
+ },
+ {
+  "reader": "sql",
+  "category": "current",
+  "question": "Where does my sister Klára live?",
+  "gold": "London",
+  "answer": "Klára lives in London.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "current",
+  "question": "Which climbing gym am I a member of, and what does it cost?",
+  "gold": "Mission Cliffs ($110/month)",
+  "answer": "You’re a member of Mission Cliffs. It costs $110 USD per month.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "current",
+  "question": "What book am I reading right now?",
+  "gold": "The Three-Body Problem",
+  "answer": "I don't know.",
+  "opus": 0.0
+ },
+ {
+  "reader": "sql",
+  "category": "current",
+  "question": "What is David's US phone number?",
+  "gold": "+1 628 688 4995 (corrected from +1 628 688 4994)",
+  "answer": "+1 628 688 4995",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "current",
+  "question": "What is my relationship with Eva now?",
+  "gold": "Engaged: she is my fiancée (since Jul 12, 2026)",
+  "answer": "Eva is your fiancée.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "current",
+  "question": "Is Oscar Lind still at Nebula?",
+  "gold": "No, he left on Aug 15, 2026 to join Stripe as a PM",
+  "answer": "I don’t know. The database lists Oscar Lind as a product manager at Nebula, but it doesn’t say whether he’s still there.",
+  "opus": 0.0
+ },
+ {
+  "reader": "sql",
+  "category": "current",
+  "question": "How much is my rent and who is my landlord?",
+  "gold": "$3,200/month; landlord Raj Gupta (+1 415 555 0187)",
+  "answer": "Your rent is $3,200 per month. Your landlord is Raj Gupta.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "history",
+  "question": "What was my phone number before my current one?",
+  "gold": "+420 722 238 738",
+  "answer": "+1 628 688 4994",
+  "opus": 0.0
+ },
+ {
+  "reader": "sql",
+  "category": "history",
+  "question": "What was Tom's previous phone number?",
+  "gold": "+420 777 123 456",
+  "answer": "Tom’s previous phone number was +420 777 123 456.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "history",
+  "question": "Where did I live before San Francisco?",
+  "gold": "Prague",
+  "answer": "I don't know.",
+  "opus": 0.0
+ },
+ {
+  "reader": "sql",
+  "category": "history",
+  "question": "Where did Eva work before her current job?",
+  "gold": "Studio Kvadrat",
+  "answer": "I don't know.",
+  "opus": 0.0
+ },
+ {
+  "reader": "sql",
+  "category": "history",
+  "question": "Where did Klára live before?",
+  "gold": "Berlin",
+  "answer": "Berlin",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "history",
+  "question": "When did I move to San Francisco?",
+  "gold": "April 1, 2026 (flew UA 8843 on Mar 31)",
+  "answer": "I don't know.",
+  "opus": 0.0
+ },
+ {
+  "reader": "sql",
+  "category": "history",
+  "question": "Which gym was I a member of in Prague?",
+  "gold": "Smíchoff (1190 CZK/month, ended March 2026)",
+  "answer": "Smíchoff climbing gym.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "history",
+  "question": "What was my time on the first 10k run I ever logged?",
+  "gold": "54:48 (Oct 27, 2025)",
+  "answer": "Your first logged 10k run was on 2025-10-27, with a time of 54:48.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "aggregation",
+  "question": "How much did I spend on coffee in November 2025?",
+  "gold": "1,025 CZK (10 purchases)",
+  "answer": "You spent 1,025 CZK on coffee in November 2025.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "aggregation",
+  "question": "How much did I spend on groceries in May 2026?",
+  "gold": "$317.76 (4 purchases)",
+  "answer": "You spent $317.76 on groceries in May 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "aggregation",
+  "question": "How much did I spend on rides (Uber/Bolt) in June 2026?",
+  "gold": "$155.98 (7 purchases)",
+  "answer": "You spent $155.98 on Uber/Bolt rides in June 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "aggregation",
+  "question": "How much did I spend on lunch in August 2026?",
+  "gold": "$162.25 (8 purchases)",
+  "answer": "$162.25 USD.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "aggregation",
+  "question": "How many times did I go climbing in January 2026?",
+  "gold": "5",
+  "answer": "You went climbing 5 times in January 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "aggregation",
+  "question": "How many times did I go climbing in July 2026?",
+  "gold": "7",
+  "answer": "You went climbing 7 times in July 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "aggregation",
+  "question": "What's my best 10k time?",
+  "gold": "52:06 (Jun 25, 2026)",
+  "answer": "Your best 10k time is **52:06**, set on **June 25, 2026**.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "aggregation",
+  "question": "What's the hardest climbing grade I've sent?",
+  "gold": "7a (Jul 03, 2026)",
+  "answer": "7a (sent on July 3, 2026).",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "aggregation",
+  "question": "How many books have I finished, and which did I rate 5/5?",
+  "gold": "10 finished; 5/5: Thinking, Fast and Slow, Project Hail Mary, Shoe Dog, Dune",
+  "answer": "You’ve finished 10 books. You rated these 5/5: *Dune* (author not listed), *Project Hail Mary* by Andy Weir, *Shoe Dog* by Phil Knight, and *Thinking, Fast and Slow* by Daniel Kahneman.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "aggregation",
+  "question": "How many dinners out did I have with Eva in 2026?",
+  "gold": "8",
+  "answer": "8 dinners.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "aggregation",
+  "question": "How much rent have I paid in total?",
+  "gold": "$19,200 (6 months × $3,200)",
+  "answer": "$19,200 USD.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "aggregation",
+  "question": "How much did the Lisbon trip cost for flights plus hotel?",
+  "gold": "$2,320 ($1,340 flights + $980 hotel)",
+  "answer": "I don't know.",
+  "opus": 0.0
+ },
+ {
+  "reader": "sql",
+  "category": "aggregation",
+  "question": "How much have I spent at Blue Bottle in total?",
+  "gold": "$148.75 (27 visits)",
+  "answer": "$143.50 USD.",
+  "opus": 0.0
+ },
+ {
+  "reader": "sql",
+  "category": "aggregation",
+  "question": "How many times have I gone climbing since moving to SF?",
+  "gold": "39",
+  "answer": "39 times.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "temporal",
+  "question": "When did I last have dinner with Ondra?",
+  "gold": "Mar 28, 2026 at Eska",
+  "answer": "2026-03-28.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "temporal",
+  "question": "When and where is the next Nebula board meeting?",
+  "gold": "Thu Oct 01, 2026 at 16:00, 1 Mission St, San Francisco",
+  "answer": "October 1, 2026, at 4:00 PM, at 1 Mission St, San Francisco.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "temporal",
+  "question": "When was my last dentist appointment, and with whom?",
+  "gold": "Jun 03, 2026 with Dr. Lee",
+  "answer": "Your last dentist appointment was June 3, 2026, at 9:30 AM with Dr. Lee at Castro Dental.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "temporal",
+  "question": "When did I first meet Lucas Meyer, and where?",
+  "gold": "Nov 5, 2025 at Web Summit",
+  "answer": "You first met Lucas Meyer on November 5, 2025, at Web Summit.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "temporal",
+  "question": "When did I get engaged?",
+  "gold": "July 12, 2026",
+  "answer": "I don't know.",
+  "opus": 0.0
+ },
+ {
+  "reader": "sql",
+  "category": "temporal",
+  "question": "What's on my calendar for October 2026?",
+  "gold": "Nebula board meeting Thu Oct 1 at 16:00 (1 Mission St) and the Series A kickoff with Sarah Kim Fri Oct 9 at 10:00",
+  "answer": "- **Oct 1, 4:00–5:30 PM:** Nebula board meeting — 1 Mission St, San Francisco. Organizer: David Mokos.\n- **Oct 9, 10:00 AM:** Series A kickoff — Northwind office, 2 Embarcadero Center. Organizer: Sarah Kim.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "temporal",
+  "question": "When was the call with Lucas Meyer?",
+  "gold": "Wed Jan 21, 2026 at 14:00 (moved from Jan 14 at 10:00)",
+  "answer": "The call with Lucas Meyer was scheduled for January 21, 2026, at 2:00 PM.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "relationships",
+  "question": "Who led Nebula's seed round, and how much did we raise?",
+  "gold": "Northwind Ventures (Sarah Kim), $3M",
+  "answer": "I don't know.",
+  "opus": 0.0
+ },
+ {
+  "reader": "sql",
+  "category": "relationships",
+  "question": "What's Lucas Meyer's email?",
+  "gold": "lucas@sequoia.com",
+  "answer": "lucas@sequoia.com",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "semi_structured",
+  "question": "What were the terms in Sarah's term sheet draft?",
+  "gold": "$3M at a $15M post-money valuation, 1x non-participating preference",
+  "answer": "Sarah Kim’s Nebula seed term sheet draft offered $3M at a $15M post-money valuation, with a 1x non-participating preference.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "relationships",
+  "question": "Who is Eva Green?",
+  "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+  "answer": "I don't know.",
+  "opus": 0.0
+ },
+ {
+  "reader": "sql",
+  "category": "relationships",
+  "question": "Who introduced me to Mark Chen?",
+  "gold": "Priya Patel (Stripe)",
+  "answer": "Priya Patel introduced you to Mark Chen.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "relationships",
+  "question": "Who are my climbing partners?",
+  "gold": "Tom Novak (Prague) and Nina Rossi (SF)",
+  "answer": "Nina and Tom.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "semi_structured",
+  "question": "What's the confirmation code for my flight to San Francisco?",
+  "gold": "K7QX2P (United UA 8843)",
+  "answer": "K7QX2P",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "semi_structured",
+  "question": "How big was the security deposit for my apartment?",
+  "gold": "$4,800",
+  "answer": "The security deposit was $4,800.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "semi_structured",
+  "question": "Which hotel did we stay at in Lisbon?",
+  "gold": "Memmo Alfama (May 22-26, 2026)",
+  "answer": "You stayed at the Memmo Alfama Hotel in Lisbon.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "status",
+  "question": "Did I renew my passport?",
+  "gold": "Yes, done on Dec 3, 2025",
+  "answer": "Yes. You renewed your passport; the task was marked done on December 15, 2025.",
+  "opus": 0.5
+ },
+ {
+  "reader": "sql",
+  "category": "status",
+  "question": "What happened to the February dentist appointment?",
+  "gold": "Cancelled (it was Feb 18 with Dr. Horák)",
+  "answer": "The February 18, 2026 dentist appointment with Dr. Horák was cancelled.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "status",
+  "question": "Do I still have to get my SF driver's license?",
+  "gold": "Yes, still open (was due Jun 30)",
+  "answer": "Yes. “Get SF driver's license” is still pending. It was due June 30, 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "status",
+  "question": "Is the wedding venue booked?",
+  "gold": "No, still open (due Oct 31)",
+  "answer": "I don't know.",
+  "opus": 0.0
+ },
+ {
+  "reader": "sql",
+  "category": "status",
+  "question": "Did I finish The Three-Body Problem?",
+  "gold": "No, still reading it",
+  "answer": "I don't know.",
+  "opus": 0.0
+ },
+ {
+  "reader": "sql",
+  "category": "forgotten",
+  "question": "Who is Jan Dvořák?",
+  "gold": "UNKNOWN: the user asked to forget him",
+  "answer": "I don't know.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "forgotten",
+  "question": "What's Marco's phone number?",
+  "gold": "UNKNOWN: the user asked to forget it",
+  "answer": "Marco’s phone number is +420 731 000 444.",
+  "opus": 0.0
+ },
+ {
+  "reader": "sql",
+  "category": "unanswerable",
+  "question": "What's my blood type?",
+  "gold": "UNKNOWN: never mentioned",
+  "answer": "I don't know.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "unanswerable",
+  "question": "What's Ondra's email address?",
+  "gold": "UNKNOWN: never mentioned",
+  "answer": "I don't know.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "unanswerable",
+  "question": "How much does Eva earn?",
+  "gold": "UNKNOWN: never mentioned",
+  "answer": "I don't know.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sql",
+  "category": "unanswerable",
+  "question": "What's Nina's birthday?",
+  "gold": "UNKNOWN: never mentioned",
+  "answer": "I don't know.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "current",
+  "question": "What is my phone number?",
+  "gold": "+1 415 555 0199",
+  "answer": "Your phone numbers on file are +420 722 238 738 and +1 415 555 0199.",
+  "opus": 0.5
+ },
+ {
+  "reader": "agent",
+  "category": "current",
+  "question": "What is Tom's phone number?",
+  "gold": "+420 777 999 000",
+  "answer": "Tom Novak’s phone number is +420 777 999 000.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "current",
+  "question": "Where do I live?",
+  "gold": "1450 Valencia St, San Francisco",
+  "answer": "You live in Prague.",
+  "opus": 0.0
+ },
+ {
+  "reader": "agent",
+  "category": "current",
+  "question": "Where does Eva (my partner) work?",
+  "gold": "Gensler",
+  "answer": "Eva works at Gensler in San Francisco.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "current",
+  "question": "Where does my sister Klára live?",
+  "gold": "London",
+  "answer": "Your sister Klára lives in London.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "current",
+  "question": "Which climbing gym am I a member of, and what does it cost?",
+  "gold": "Mission Cliffs ($110/month)",
+  "answer": "You’re currently a member of Mission Cliffs for $110 per month. Your Smíchoff membership ended.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "current",
+  "question": "What book am I reading right now?",
+  "gold": "The Three-Body Problem",
+  "answer": "I don't know.",
+  "opus": 0.0
+ },
+ {
+  "reader": "agent",
+  "category": "current",
+  "question": "What is David's US phone number?",
+  "gold": "+1 628 688 4995 (corrected from +1 628 688 4994)",
+  "answer": "+1 628 688 4995",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "current",
+  "question": "What is my relationship with Eva now?",
+  "gold": "Engaged: she is my fiancée (since Jul 12, 2026)",
+  "answer": "Eva is your fiancée now. Her relationship status changed from girlfriend to fiancée on July 12, 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "current",
+  "question": "Is Oscar Lind still at Nebula?",
+  "gold": "No, he left on Aug 15, 2026 to join Stripe as a PM",
+  "answer": "No. Oscar Lind’s record says he left Nebula on August 15, 2026.",
+  "opus": 0.5
+ },
+ {
+  "reader": "agent",
+  "category": "current",
+  "question": "How much is my rent and who is my landlord?",
+  "gold": "$3,200/month; landlord Raj Gupta (+1 415 555 0187)",
+  "answer": "Your rent is $3,200 per month. Your landlord is Raj Gupta.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "history",
+  "question": "What was my phone number before my current one?",
+  "gold": "+420 722 238 738",
+  "answer": "+420 722 238 738",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "history",
+  "question": "What was Tom's previous phone number?",
+  "gold": "+420 777 123 456",
+  "answer": "+420 777 123 456",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "history",
+  "question": "Where did I live before San Francisco?",
+  "gold": "Prague",
+  "answer": "Berlin.",
+  "opus": 0.0
+ },
+ {
+  "reader": "agent",
+  "category": "history",
+  "question": "Where did Eva work before her current job?",
+  "gold": "Studio Kvadrat",
+  "answer": "I don't know.",
+  "opus": 0.0
+ },
+ {
+  "reader": "agent",
+  "category": "history",
+  "question": "Where did Klára live before?",
+  "gold": "Berlin",
+  "answer": "Klára lived in Berlin before.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "history",
+  "question": "When did I move to San Francisco?",
+  "gold": "April 1, 2026 (flew UA 8843 on Mar 31)",
+  "answer": "You moved to San Francisco on April 1, 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "history",
+  "question": "Which gym was I a member of in Prague?",
+  "gold": "Smíchoff (1190 CZK/month, ended March 2026)",
+  "answer": "Smíchoff.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "history",
+  "question": "What was my time on the first 10k run I ever logged?",
+  "gold": "54:48 (Oct 27, 2025)",
+  "answer": "Your first logged 10k run was **54:48**, on October 27, 2025.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "aggregation",
+  "question": "How much did I spend on coffee in November 2025?",
+  "gold": "1,025 CZK (10 purchases)",
+  "answer": "You spent 1,025 CZK on coffee in November 2025.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "aggregation",
+  "question": "How much did I spend on groceries in May 2026?",
+  "gold": "$317.76 (4 purchases)",
+  "answer": "You spent **$317.76** on groceries in May 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "aggregation",
+  "question": "How much did I spend on rides (Uber/Bolt) in June 2026?",
+  "gold": "$155.98 (7 purchases)",
+  "answer": "You spent **$155.98** on Uber/Bolt rides in June 2026 (7 rides).",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "aggregation",
+  "question": "How much did I spend on lunch in August 2026?",
+  "gold": "$162.25 (8 purchases)",
+  "answer": "You spent **$162.25** on lunch in August 2026 (8 expenses).",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "aggregation",
+  "question": "How many times did I go climbing in January 2026?",
+  "gold": "5",
+  "answer": "You went climbing 5 times in January 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "aggregation",
+  "question": "How many times did I go climbing in July 2026?",
+  "gold": "7",
+  "answer": "You went climbing 7 times in July 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "aggregation",
+  "question": "What's my best 10k time?",
+  "gold": "52:06 (Jun 25, 2026)",
+  "answer": "Your best 10K time is **52:06**, set on **June 25, 2026**.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "aggregation",
+  "question": "What's the hardest climbing grade I've sent?",
+  "gold": "7a (Jul 03, 2026)",
+  "answer": "7a",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "aggregation",
+  "question": "How many books have I finished, and which did I rate 5/5?",
+  "gold": "10 finished; 5/5: Thinking, Fast and Slow, Project Hail Mary, Shoe Dog, Dune",
+  "answer": "You’ve finished 10 books. You rated these 5/5: *Thinking, Fast and Slow*, *Project Hail Mary*, *Shoe Dog*, and *Dune*.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "aggregation",
+  "question": "How many dinners out did I have with Eva in 2026?",
+  "gold": "8",
+  "answer": "You had 8 dinners out with Eva in 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "aggregation",
+  "question": "How much rent have I paid in total?",
+  "gold": "$19,200 (6 months × $3,200)",
+  "answer": "You’ve paid $19,200 in rent (USD).",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "aggregation",
+  "question": "How much did the Lisbon trip cost for flights plus hotel?",
+  "gold": "$2,320 ($1,340 flights + $980 hotel)",
+  "answer": "The Lisbon trip cost **$2,320 USD** total: **$1,340** for flights plus **$980** for the hotel.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "aggregation",
+  "question": "How much have I spent at Blue Bottle in total?",
+  "gold": "$148.75 (27 visits)",
+  "answer": "You’ve spent **$143.50** at Blue Bottle across 26 transactions.",
+  "opus": 0.0
+ },
+ {
+  "reader": "agent",
+  "category": "aggregation",
+  "question": "How many times have I gone climbing since moving to SF?",
+  "gold": "39",
+  "answer": "You’ve gone climbing 39 times since moving to San Francisco on April 1, 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "temporal",
+  "question": "When did I last have dinner with Ondra?",
+  "gold": "Mar 28, 2026 at Eska",
+  "answer": "You last had dinner with Ondra on March 28, 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "temporal",
+  "question": "When and where is the next Nebula board meeting?",
+  "gold": "Thu Oct 01, 2026 at 16:00, 1 Mission St, San Francisco",
+  "answer": "The next Nebula board meeting is **Thursday, October 1, 2026, at 4:00 PM** at **1 Mission St, San Francisco**.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "temporal",
+  "question": "When was my last dentist appointment, and with whom?",
+  "gold": "Jun 03, 2026 with Dr. Lee",
+  "answer": "Your last dentist appointment was June 3, 2026, at 9:30 AM, with Dr. Lee at Castro Dental.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "temporal",
+  "question": "When did I first meet Lucas Meyer, and where?",
+  "gold": "Nov 5, 2025 at Web Summit",
+  "answer": "You first met Lucas Meyer on November 5, 2025, at Web Summit.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "temporal",
+  "question": "When did I get engaged?",
+  "gold": "July 12, 2026",
+  "answer": "You got engaged on July 12, 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "temporal",
+  "question": "What's on my calendar for October 2026?",
+  "gold": "Nebula board meeting Thu Oct 1 at 16:00 (1 Mission St) and the Series A kickoff with Sarah Kim Fri Oct 9 at 10:00",
+  "answer": "You have two events on your calendar for October 2026:\n- **Oct 1, 4:00–5:30 PM** — Nebula board meeting, 1 Mission St, San Francisco.\n- **Oct 9, 10:00 AM** — Series A kickoff, Northwind office, 2 Embarcadero Center. The end time isn’t listed.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "temporal",
+  "question": "When was the call with Lucas Meyer?",
+  "gold": "Wed Jan 21, 2026 at 14:00 (moved from Jan 14 at 10:00)",
+  "answer": "The call with Lucas Meyer was scheduled for January 21, 2026, at 2:00 PM.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "relationships",
+  "question": "Who led Nebula's seed round, and how much did we raise?",
+  "gold": "Northwind Ventures (Sarah Kim), $3M",
+  "answer": "Sarah Kim led the seed round, and you raised $3 million.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "relationships",
+  "question": "What's Lucas Meyer's email?",
+  "gold": "lucas@sequoia.com",
+  "answer": "Lucas Meyer’s email is lucas@sequoia.com.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "semi_structured",
+  "question": "What were the terms in Sarah's term sheet draft?",
+  "gold": "$3M at a $15M post-money valuation, 1x non-participating preference",
+  "answer": "Sarah Kim’s draft term sheet offered $3M at a $15M post-money valuation, with a 1× non-participating preference.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "relationships",
+  "question": "Who is Eva Green?",
+  "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+  "answer": "Eva Green is Nebula’s designer. She joined the company on March 16, 2026, and her email is eva.green@nebula.ai. She’s a different person from your fiancée, Eva.",
+  "opus": 0.5
+ },
+ {
+  "reader": "agent",
+  "category": "relationships",
+  "question": "Who introduced me to Mark Chen?",
+  "gold": "Priya Patel (Stripe)",
+  "answer": "Priya introduced you to Mark Chen.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "relationships",
+  "question": "Who are my climbing partners?",
+  "gold": "Tom Novak (Prague) and Nina Rossi (SF)",
+  "answer": "Your climbing partners are Tom and Nina.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "semi_structured",
+  "question": "What's the confirmation code for my flight to San Francisco?",
+  "gold": "K7QX2P (United UA 8843)",
+  "answer": "Your flight confirmation code is K7QX2P.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "semi_structured",
+  "question": "How big was the security deposit for my apartment?",
+  "gold": "$4,800",
+  "answer": "Your apartment security deposit was $4,800 USD.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "semi_structured",
+  "question": "Which hotel did we stay at in Lisbon?",
+  "gold": "Memmo Alfama (May 22-26, 2026)",
+  "answer": "Memmo Alfama Hotel.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "status",
+  "question": "Did I renew my passport?",
+  "gold": "Yes, done on Dec 3, 2025",
+  "answer": "Yes. Your “Renew passport” task is marked done (due December 15, 2025).",
+  "opus": 0.5
+ },
+ {
+  "reader": "agent",
+  "category": "status",
+  "question": "What happened to the February dentist appointment?",
+  "gold": "Cancelled (it was Feb 18 with Dr. Horák)",
+  "answer": "The dentist appointment with Dr. Horák, scheduled for February 18, 2026 at 8:30 a.m., was cancelled. I don’t have any further details about why.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "status",
+  "question": "Do I still have to get my SF driver's license?",
+  "gold": "Yes, still open (was due Jun 30)",
+  "answer": "Yes. “Get SF driver's license” is still marked pending, and it was due June 30, 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "status",
+  "question": "Is the wedding venue booked?",
+  "gold": "No, still open (due Oct 31)",
+  "answer": "I don't know.",
+  "opus": 0.0
+ },
+ {
+  "reader": "agent",
+  "category": "status",
+  "question": "Did I finish The Three-Body Problem?",
+  "gold": "No, still reading it",
+  "answer": "I don't know.",
+  "opus": 0.0
+ },
+ {
+  "reader": "agent",
+  "category": "forgotten",
+  "question": "Who is Jan Dvořák?",
+  "gold": "UNKNOWN: the user asked to forget him",
+  "answer": "I don't know.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "forgotten",
+  "question": "What's Marco's phone number?",
+  "gold": "UNKNOWN: the user asked to forget it",
+  "answer": "+420 731 000 444",
+  "opus": 0.0
+ },
+ {
+  "reader": "agent",
+  "category": "unanswerable",
+  "question": "What's my blood type?",
+  "gold": "UNKNOWN: never mentioned",
+  "answer": "I don't know.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "unanswerable",
+  "question": "What's Ondra's email address?",
+  "gold": "UNKNOWN: never mentioned",
+  "answer": "I don't know.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "unanswerable",
+  "question": "How much does Eva earn?",
+  "gold": "UNKNOWN: never mentioned",
+  "answer": "I don't know.",
+  "opus": 1.0
+ },
+ {
+  "reader": "agent",
+  "category": "unanswerable",
+  "question": "What's Nina's birthday?",
+  "gold": "UNKNOWN: never mentioned",
+  "answer": "I don't know.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "current",
+  "question": "What is my phone number?",
+  "gold": "+1 415 555 0199",
+  "answer": "Your phone number is +1 415 555 0199.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "current",
+  "question": "What is Tom's phone number?",
+  "gold": "+420 777 999 000",
+  "answer": "Tom Novak’s phone number is +420 777 999 000.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "current",
+  "question": "Where do I live?",
+  "gold": "1450 Valencia St, San Francisco",
+  "answer": "You live in San Francisco, California.",
+  "opus": 0.5
+ },
+ {
+  "reader": "sol-agent",
+  "category": "current",
+  "question": "Where does Eva (my partner) work?",
+  "gold": "Gensler",
+  "answer": "Eva works at Gensler in San Francisco. She previously worked as an architect at Studio Kvadrat.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "current",
+  "question": "Where does my sister Klára live?",
+  "gold": "London",
+  "answer": "Your sister Klára lives in London.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "current",
+  "question": "Which climbing gym am I a member of, and what does it cost?",
+  "gold": "Mission Cliffs ($110/month)",
+  "answer": "You’re a member of Mission Cliffs. It costs $110 per month.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "current",
+  "question": "What book am I reading right now?",
+  "gold": "The Three-Body Problem",
+  "answer": "You’re reading *The Three-Body Problem* by Liu Cixin.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "current",
+  "question": "What is David's US phone number?",
+  "gold": "+1 628 688 4995 (corrected from +1 628 688 4994)",
+  "answer": "David Mokos’s US phone number is +1 628 688 4995.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "current",
+  "question": "What is my relationship with Eva now?",
+  "gold": "Engaged: she is my fiancée (since Jul 12, 2026)",
+  "answer": "Eva is your fiancée.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "current",
+  "question": "Is Oscar Lind still at Nebula?",
+  "gold": "No, he left on Aug 15, 2026 to join Stripe as a PM",
+  "answer": "No. Oscar Lind left Nebula on August 15, 2026, to join Stripe as a PM.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "current",
+  "question": "How much is my rent and who is my landlord?",
+  "gold": "$3,200/month; landlord Raj Gupta (+1 415 555 0187)",
+  "answer": "Your rent is $3,200 per month, and your landlord is Raj Gupta.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "history",
+  "question": "What was my phone number before my current one?",
+  "gold": "+420 722 238 738",
+  "answer": "Your previous number was +420 722 238 738. Your current number is +1 415 555 0199.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "history",
+  "question": "What was Tom's previous phone number?",
+  "gold": "+420 777 123 456",
+  "answer": "Tom Novak’s previous phone number was +420 777 123 456.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "history",
+  "question": "Where did I live before San Francisco?",
+  "gold": "Prague",
+  "answer": "Prague, Czech Republic.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "history",
+  "question": "Where did Eva work before her current job?",
+  "gold": "Studio Kvadrat",
+  "answer": "Eva worked as an architect at Studio Kvadrat before joining Gensler.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "history",
+  "question": "Where did Klára live before?",
+  "gold": "Berlin",
+  "answer": "Klára lived in Berlin before moving to London.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "history",
+  "question": "When did I move to San Francisco?",
+  "gold": "April 1, 2026 (flew UA 8843 on Mar 31)",
+  "answer": "You moved to San Francisco on April 1, 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "history",
+  "question": "Which gym was I a member of in Prague?",
+  "gold": "Smíchoff (1190 CZK/month, ended March 2026)",
+  "answer": "Smíchoff.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "history",
+  "question": "What was my time on the first 10k run I ever logged?",
+  "gold": "54:48 (Oct 27, 2025)",
+  "answer": "Your first logged 10k was **54:48** on October 27, 2025.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "aggregation",
+  "question": "How much did I spend on coffee in November 2025?",
+  "gold": "1,025 CZK (10 purchases)",
+  "answer": "You spent 1,025 CZK on coffee in November 2025.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "aggregation",
+  "question": "How much did I spend on groceries in May 2026?",
+  "gold": "$317.76 (4 purchases)",
+  "answer": "You spent $317.76 on groceries in May 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "aggregation",
+  "question": "How much did I spend on rides (Uber/Bolt) in June 2026?",
+  "gold": "$155.98 (7 purchases)",
+  "answer": "You spent $155.98 USD on 7 Uber/Bolt rides in June 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "aggregation",
+  "question": "How much did I spend on lunch in August 2026?",
+  "gold": "$162.25 (8 purchases)",
+  "answer": "You spent $162.25 on lunch in August 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "aggregation",
+  "question": "How many times did I go climbing in January 2026?",
+  "gold": "5",
+  "answer": "You went climbing 5 times in January 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "aggregation",
+  "question": "How many times did I go climbing in July 2026?",
+  "gold": "7",
+  "answer": "You went climbing 7 times in July 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "aggregation",
+  "question": "What's my best 10k time?",
+  "gold": "52:06 (Jun 25, 2026)",
+  "answer": "Your best 10k time is 52:06, set on June 25, 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "aggregation",
+  "question": "What's the hardest climbing grade I've sent?",
+  "gold": "7a (Jul 03, 2026)",
+  "answer": "7a — at Mission Cliffs with Nina, on July 3, 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "aggregation",
+  "question": "How many books have I finished, and which did I rate 5/5?",
+  "gold": "10 finished; 5/5: Thinking, Fast and Slow, Project Hail Mary, Shoe Dog, Dune",
+  "answer": "You’ve finished 10 books. You rated four of them 5/5: Dune, Project Hail Mary, Shoe Dog, and Thinking, Fast and Slow.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "aggregation",
+  "question": "How many dinners out did I have with Eva in 2026?",
+  "gold": "8",
+  "answer": "You had 8 dinners out with Eva in 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "aggregation",
+  "question": "How much rent have I paid in total?",
+  "gold": "$19,200 (6 months × $3,200)",
+  "answer": "You’ve paid $19,200 USD in rent total across six payments (April–September 2026).",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "aggregation",
+  "question": "How much did the Lisbon trip cost for flights plus hotel?",
+  "gold": "$2,320 ($1,340 flights + $980 hotel)",
+  "answer": "The Lisbon flights cost $1,340 and the Memmo Alfama Hotel cost $980, for a total of $2,320 USD.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "aggregation",
+  "question": "How much have I spent at Blue Bottle in total?",
+  "gold": "$148.75 (27 visits)",
+  "answer": "You’ve spent $143.50 at Blue Bottle across 26 transactions.",
+  "opus": 0.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "aggregation",
+  "question": "How many times have I gone climbing since moving to SF?",
+  "gold": "39",
+  "answer": "39 times since moving to San Francisco on April 1, 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "temporal",
+  "question": "When did I last have dinner with Ondra?",
+  "gold": "Mar 28, 2026 at Eska",
+  "answer": "March 28, 2026, at Eska.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "temporal",
+  "question": "When and where is the next Nebula board meeting?",
+  "gold": "Thu Oct 01, 2026 at 16:00, 1 Mission St, San Francisco",
+  "answer": "The next Nebula board meeting is Thursday, October 1, 2026, from 4:00–5:30 p.m. at 1 Mission St, San Francisco.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "temporal",
+  "question": "When was my last dentist appointment, and with whom?",
+  "gold": "Jun 03, 2026 with Dr. Lee",
+  "answer": "Your last dentist appointment was June 3, 2026, at 9:30 a.m. with Dr. Lee at Castro Dental.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "temporal",
+  "question": "When did I first meet Lucas Meyer, and where?",
+  "gold": "Nov 5, 2025 at Web Summit",
+  "answer": "You first met Lucas Meyer at Web Summit on November 5, 2025.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "temporal",
+  "question": "When did I get engaged?",
+  "gold": "July 12, 2026",
+  "answer": "You got engaged to Eva on July 12, 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "temporal",
+  "question": "What's on my calendar for October 2026?",
+  "gold": "Nebula board meeting Thu Oct 1 at 16:00 (1 Mission St) and the Series A kickoff with Sarah Kim Fri Oct 9 at 10:00",
+  "answer": "You have two events on your calendar for October 2026:\n- **Oct 1, 4:00–5:30 p.m.:** Nebula board meeting, 1 Mission St, San Francisco.\n- **Oct 9, 10:00 a.m.:** Series A kickoff, Northwind office, 2 Embarcadero Center.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "temporal",
+  "question": "When was the call with Lucas Meyer?",
+  "gold": "Wed Jan 21, 2026 at 14:00 (moved from Jan 14 at 10:00)",
+  "answer": "The call with Lucas Meyer was scheduled for January 21, 2026, at 2:00 PM.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "relationships",
+  "question": "Who led Nebula's seed round, and how much did we raise?",
+  "gold": "Northwind Ventures (Sarah Kim), $3M",
+  "answer": "Northwind Ventures led Nebula’s seed round, with Sarah Kim as the lead investor. We raised $3 million.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "relationships",
+  "question": "What's Lucas Meyer's email?",
+  "gold": "lucas@sequoia.com",
+  "answer": "lucas@sequoia.com",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "semi_structured",
+  "question": "What were the terms in Sarah's term sheet draft?",
+  "gold": "$3M at a $15M post-money valuation, 1x non-participating preference",
+  "answer": "Sarah Kim’s draft term sheet for Nebula’s seed round proposed $3 million at a $15 million post-money valuation, with a 1× non-participating liquidation preference.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "relationships",
+  "question": "Who is Eva Green?",
+  "gold": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva",
+  "answer": "Eva Green is a designer at Nebula.",
+  "opus": 0.5
+ },
+ {
+  "reader": "sol-agent",
+  "category": "relationships",
+  "question": "Who introduced me to Mark Chen?",
+  "gold": "Priya Patel (Stripe)",
+  "answer": "Priya introduced you to Mark Chen.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "relationships",
+  "question": "Who are my climbing partners?",
+  "gold": "Tom Novak (Prague) and Nina Rossi (SF)",
+  "answer": "Your climbing partners are Tom Novak and Nina Rossi.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "semi_structured",
+  "question": "What's the confirmation code for my flight to San Francisco?",
+  "gold": "K7QX2P (United UA 8843)",
+  "answer": "Your flight to San Francisco has confirmation code K7QX2P.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "semi_structured",
+  "question": "How big was the security deposit for my apartment?",
+  "gold": "$4,800",
+  "answer": "The security deposit for your apartment at 1450 Valencia St was $4,800.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "semi_structured",
+  "question": "Which hotel did we stay at in Lisbon?",
+  "gold": "Memmo Alfama (May 22-26, 2026)",
+  "answer": "We stayed at Memmo Alfama Hotel in Lisbon (May 22–26, 2026).",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "status",
+  "question": "Did I renew my passport?",
+  "gold": "Yes, done on Dec 3, 2025",
+  "answer": "Yes — your “Renew passport” task is marked done. It was due December 15, 2025.",
+  "opus": 0.5
+ },
+ {
+  "reader": "sol-agent",
+  "category": "status",
+  "question": "What happened to the February dentist appointment?",
+  "gold": "Cancelled (it was Feb 18 with Dr. Horák)",
+  "answer": "The dentist appointment with Dr. Horák scheduled for February 18, 2026, at 8:30 a.m. was cancelled.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "status",
+  "question": "Do I still have to get my SF driver's license?",
+  "gold": "Yes, still open (was due Jun 30)",
+  "answer": "Yes. “Get SF driver’s license” is still marked pending; it was due June 30, 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "status",
+  "question": "Is the wedding venue booked?",
+  "gold": "No, still open (due Oct 31)",
+  "answer": "No. “Book the wedding venue” is still pending, with a due date of October 31, 2026.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "status",
+  "question": "Did I finish The Three-Body Problem?",
+  "gold": "No, still reading it",
+  "answer": "I don't know.",
+  "opus": 0.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "forgotten",
+  "question": "Who is Jan Dvořák?",
+  "gold": "UNKNOWN: the user asked to forget him",
+  "answer": "I don't know.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "forgotten",
+  "question": "What's Marco's phone number?",
+  "gold": "UNKNOWN: the user asked to forget it",
+  "answer": "+420 731 000 444",
+  "opus": 0.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "unanswerable",
+  "question": "What's my blood type?",
+  "gold": "UNKNOWN: never mentioned",
+  "answer": "I don't know.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "unanswerable",
+  "question": "What's Ondra's email address?",
+  "gold": "UNKNOWN: never mentioned",
+  "answer": "I don't know.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "unanswerable",
+  "question": "How much does Eva earn?",
+  "gold": "UNKNOWN: never mentioned",
+  "answer": "I don't know.",
+  "opus": 1.0
+ },
+ {
+  "reader": "sol-agent",
+  "category": "unanswerable",
+  "question": "What's Nina's birthday?",
+  "gold": "UNKNOWN: never mentioned",
+  "answer": "I don't know.",
+  "opus": 1.0
+ }
+]

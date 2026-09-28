@@ -1,0 +1,44 @@
+{
+ "v2 / gpt-6-luna": {
+  "read": "sql",
+  "wall_p50": 6.51,
+  "wall_mean": 7.87,
+  "cost_per_question": 0.00095,
+  "rows_in_db": 52
+ },
+ "v2jev / gpt-6-luna": {
+  "read": "jev",
+  "wall_p50": 2.28,
+  "wall_mean": 2.31,
+  "cost_per_question": 0.00097,
+  "rows_in_db": 56
+ },
+ "v21jev / gpt-6-luna": {
+  "read": "hybrid",
+  "wall_p50": 8.89,
+  "wall_mean": 9.97,
+  "cost_per_question": 0.00261,
+  "rows_in_db": 79
+ },
+ "v2 / claude-sonnet-5": {
+  "read": "sql",
+  "wall_p50": 6.48,
+  "wall_mean": 7.68,
+  "cost_per_question": 0.02419,
+  "rows_in_db": 56
+ },
+ "v2jev / claude-sonnet-5": {
+  "read": "jev",
+  "wall_p50": 2.7,
+  "wall_mean": 2.82,
+  "cost_per_question": 0.00295,
+  "rows_in_db": 58
+ },
+ "v21jev / claude-sonnet-5": {
+  "read": "hybrid",
+  "wall_p50": 4.61,
+  "wall_mean": 5.2,
+  "cost_per_question": 0.01704,
+  "rows_in_db": 53
+ }
+}

@@ -1,0 +1,137 @@
+{
+ "scenario": "support",
+ "messages": 676,
+ "truth_records": 615,
+ "write_accuracy": 0.8244,
+ "tiers": {
+  "C": 581,
+  "C-skip": 95
+ },
+ "tier_a_after_bootstrap": 0.0,
+ "by_kind": {
+  "coverage": {
+   "ok": 1,
+   "of": 1,
+   "acc": 1.0
+  },
+  "csat": {
+   "ok": 31,
+   "of": 39,
+   "acc": 0.795
+  },
+  "meeting": {
+   "ok": 4,
+   "of": 4,
+   "acc": 1.0
+  },
+  "meeting_note": {
+   "ok": 3,
+   "of": 3,
+   "acc": 1.0
+  },
+  "plans": {
+   "ok": 1,
+   "of": 1,
+   "acc": 1.0
+  },
+  "pref": {
+   "ok": 4,
+   "of": 4,
+   "acc": 1.0
+  },
+  "promise": {
+   "ok": 4,
+   "of": 4,
+   "acc": 1.0
+  },
+  "promise_done": {
+   "ok": 2,
+   "of": 2,
+   "acc": 1.0
+  },
+  "refund": {
+   "ok": 9,
+   "of": 9,
+   "acc": 1.0
+  },
+  "sla": {
+   "ok": 1,
+   "of": 1,
+   "acc": 1.0
+  },
+  "team": {
+   "ok": 1,
+   "of": 1,
+   "acc": 1.0
+  },
+  "team_change": {
+   "ok": 2,
+   "of": 2,
+   "acc": 1.0
+  },
+  "ticket_escalate": {
+   "ok": 21,
+   "of": 22,
+   "acc": 0.955
+  },
+  "ticket_new": {
+   "ok": 101,
+   "of": 166,
+   "acc": 0.608
+  },
+  "ticket_reopen": {
+   "ok": 16,
+   "of": 17,
+   "acc": 0.941
+  },
+  "ticket_resolve": {
+   "ok": 159,
+   "of": 173,
+   "acc": 0.919
+  },
+  "ticket_triage": {
+   "ok": 147,
+   "of": 166,
+   "acc": 0.886
+  }
+ },
+ "by_tier": {
+  "C": 0.907,
+  "C-skip": 0.0
+ },
+ "top_misses": {
+  "ticket_new: no row": 65,
+  "ticket_triage: no row": 14,
+  "ticket_resolve: no row": 10,
+  "csat: no row": 6,
+  "ticket_triage.priority": 3,
+  "ticket_resolve.ticket": 3,
+  "csat.ticket": 2,
+  "ticket_triage.assignee": 2,
+  "ticket_resolve.status": 1,
+  "ticket_escalate: no row": 1,
+  "ticket_reopen.ticket": 1
+ },
+ "forget": [
+  {
+   "request": "Initech asked us to erase Carl Weber's personal data under GDPR — please forget ",
+   "left_behind": [
+    "Carl Weber"
+   ]
+  }
+ ],
+ "tables": {
+  "communication_preferences": 4,
+  "emails": 1,
+  "events": 17,
+  "expenses": 9,
+  "organization_policies": 2,
+  "organizations": 8,
+  "people": 12,
+  "responsibilities": 6,
+  "shifts": 1,
+  "tasks": 3,
+  "tickets": 156
+ },
+ "ingest_spent": 0.1269
+}

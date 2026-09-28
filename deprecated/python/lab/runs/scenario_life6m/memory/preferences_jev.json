@@ -1,0 +1,290 @@
+[
+ {
+  "id": 46,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Flow",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 76,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Deep Work",
+  "target_kind": "book",
+  "detail": "4/5"
+ },
+ {
+  "id": 146,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Oppenheimer",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 199,
+  "holder": "I",
+  "stance": "rated",
+  "target": "The Wild Robot",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 224,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Dune",
+  "target_kind": "book",
+  "detail": "5/5"
+ },
+ {
+  "id": 231,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Bugonia",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 268,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Perfect Days",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 294,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": "Praise directed at the assistant"
+ },
+ {
+  "id": 301,
+  "holder": "I",
+  "stance": "likes",
+  "target": "Lisbon trip",
+  "target_kind": "trip",
+  "detail": "Called it amazing"
+ },
+ {
+  "id": 301,
+  "holder": "I",
+  "stance": "likes",
+  "target": "pastéis de nata at Manteigaria",
+  "target_kind": "food",
+  "detail": "Called them unreal"
+ },
+ {
+  "id": 341,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Nosferatu",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 353,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Atomic Habits",
+  "target_kind": "book",
+  "detail": "3/5"
+ },
+ {
+  "id": 451,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Challengers",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 460,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Sinners",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 466,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Frankenstein",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 475,
+  "holder": "I",
+  "stance": "rated",
+  "target": "The Brutalist",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 486,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Dune: Part Two",
+  "target_kind": "movie",
+  "detail": "5/5"
+ },
+ {
+  "id": 527,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Inside Out 2",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 544,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Anora",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 548,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Superman",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 557,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Zero to One",
+  "target_kind": "book",
+  "detail": "4/5"
+ },
+ {
+  "id": 586,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Marty Supreme",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 602,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Oppenheimer",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 643,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Heretic",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 674,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Superman",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 705,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": "Praised the assistant"
+ },
+ {
+  "id": 734,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Weapons",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 758,
+  "holder": "I",
+  "stance": "none",
+  "target": "",
+  "target_kind": "other",
+  "detail": "Praised the assistant"
+ },
+ {
+  "id": 778,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Frankenstein",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 836,
+  "holder": "I",
+  "stance": "rated",
+  "target": "The Brutalist",
+  "target_kind": "movie",
+  "detail": "3/5"
+ },
+ {
+  "id": 844,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Sinners",
+  "target_kind": "movie",
+  "detail": "4/5"
+ },
+ {
+  "id": 928,
+  "holder": "I",
+  "stance": "none",
+  "target": "assistant",
+  "target_kind": "person",
+  "detail": "Says the assistant is the best."
+ },
+ {
+  "id": 950,
+  "holder": "I",
+  "stance": "none",
+  "target": "assistant",
+  "target_kind": "person",
+  "detail": "Says the assistant is the best."
+ },
+ {
+  "id": 972,
+  "holder": "I",
+  "stance": "none",
+  "target": "kitchen stuff",
+  "target_kind": "other",
+  "detail": "Order totaling $59.54."
+ },
+ {
+  "id": 986,
+  "holder": "I",
+  "stance": "rated",
+  "target": "Mickey 17",
+  "target_kind": "movie",
+  "detail": "2/5"
+ },
+ {
+  "id": 1012,
+  "holder": "I",
+  "stance": "rated",
+  "target": "The Brutalist",
+  "target_kind": "movie",
+  "detail": "3/5"
+ }
+]

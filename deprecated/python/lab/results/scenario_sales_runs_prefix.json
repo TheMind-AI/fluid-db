@@ -1,0 +1,3946 @@
+{
+ "log_rag": {
+  "rows": [
+   {
+    "id": "sa01",
+    "type": "semantic_current",
+    "question": "What stage is the Contoso deal in?",
+    "gold": "Lost to Quantix",
+    "answer": "Contoso was lost to Quantix at the last step on April 6, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1400,
+    "answer_tokens_in": 706,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa02",
+    "type": "semantic_current",
+    "question": "Who is my contact at Tailspin Toys?",
+    "gold": "Owen Brooks (CTO)",
+    "answer": "Your contact at Tailspin Toys is Owen Brooks, their CTO.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1287,
+    "answer_tokens_in": 699,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa03",
+    "type": "semantic_current",
+    "question": "Which deals are open in proposal or negotiation right now?",
+    "gold": "Fourth Coffee (negotiation), Trey Research (negotiation), Wide World Importers (proposal)",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 756,
+    "answer_tokens_in": 549,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa04",
+    "type": "semantic_history",
+    "question": "What was the Fabrikam deal worth before the discount?",
+    "gold": "$90,000 ARR (then $76,500 after 15% off)",
+    "answer": "The Fabrikam deal was worth $90,000 ARR before the 15% discount.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1086,
+    "answer_tokens_in": 690,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa05",
+    "type": "semantic_history",
+    "question": "What was the original target close date for Adventure Works?",
+    "gold": "May 1, 2026 (it slipped to May 18, 2026)",
+    "answer": "The original target close date for Adventure Works was May 1, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1305,
+    "answer_tokens_in": 735,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa06",
+    "type": "semantic_history",
+    "question": "What was the list price per seat before May?",
+    "gold": "$1,500 per seat per year (then $1,800 from May 1)",
+    "answer": "The list price before May 1 was **$1,500 per seat per year**.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1351,
+    "answer_tokens_in": 789,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa07",
+    "type": "aggregate",
+    "question": "How much new ARR did I win in Q2?",
+    "gold": "$736,500 (11 deals)",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1216,
+    "answer_tokens_in": 680,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa08",
+    "type": "aggregate",
+    "question": "How many deals did I lose to Quantix?",
+    "gold": "7",
+    "answer": "You lost 6 deals to Quantix: Lucerne Publishing, Contoso, Wingtip, Bellows College, Relecloud, and Consolidated Messenger.",
+    "score": 0.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 768,
+    "answer_tokens_in": 552,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa09",
+    "type": "aggregate",
+    "question": "How many demos did I run in March?",
+    "gold": "3",
+    "answer": "I don't know. The March entry mentions an Alpine Ski House demo, but the evidence doesn’t establish how many demos you ran that month.",
+    "score": 0.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1475,
+    "answer_tokens_in": 731,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa10",
+    "type": "episodic_event",
+    "question": "How did the Contoso demo go?",
+    "gold": "On Feb 24, 2026, with Omar: \"Contoso demo with Omar: lots of questions on data residency in the EU, overall positive\"",
+    "answer": "The Contoso demo with Omar was overall positive on February 24, 2026, though they asked many questions about EU data residency. Contoso was later lost to Quantix at the last step on April 6.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1116,
+    "answer_tokens_in": 616,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa11",
+    "type": "episodic_event",
+    "question": "How did the Northwind Traders deal go, start to finish?",
+    "gold": "outbound lead on Apr 6, 2026; demo Apr 23, 2026; proposal $90,000 on Apr 27, 2026; negotiation; signed on May 25, 2026 for $90,000",
+    "answer": "Northwind Traders came in as a lead on April 6: Luis Ortega, Head of Data, for about 60 seats. After a discovery call on April 13, where Luis raised SSO concerns, Daniel scheduled a demo for April 23; the demo with Omar went well, and they liked the alerts. Daniel sent a proposal on April 27 for 60 seats at $90,000 ARR, targeting a May 24 close, and was still negotiating at that price with no discount on May 5; the deal closed won on May 25 for $90,000 ARR.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1042,
+    "answer_tokens_in": 648,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa12",
+    "type": "episodic_event",
+    "question": "What did Wingtip's CFO tell me?",
+    "gold": "Their analytics budget is frozen until the Q3 planning cycle; revisit in September",
+    "answer": "Wingtip’s CFO, Paul Grant, told you their analytics budget is frozen until the Q3 planning cycle and they can revisit it in September.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 954,
+    "answer_tokens_in": 612,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa13",
+    "type": "episodic_time",
+    "question": "When did Northwind Traders sign?",
+    "gold": "May 25, 2026",
+    "answer": "Northwind Traders signed on May 25, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 989,
+    "answer_tokens_in": 649,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa14",
+    "type": "episodic_time",
+    "question": "When did I lose Contoso, and to whom?",
+    "gold": "Apr 6, 2026, to Quantix",
+    "answer": "You lost Contoso on April 6, 2026, to Quantix.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1106,
+    "answer_tokens_in": 665,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa15",
+    "type": "episodic_time",
+    "question": "When did I start covering EMEA?",
+    "gold": "April 1, 2026",
+    "answer": "You started covering EMEA accounts on April 1, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 83,
+    "answer_tokens_in": 299,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa16",
+    "type": "routine",
+    "question": "Which days of the week do I usually run demos?",
+    "gold": "Tuesdays and Thursdays",
+    "answer": "You usually run demos on Tuesdays and Thursdays.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1012,
+    "answer_tokens_in": 593,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa17",
+    "type": "routine",
+    "question": "Who usually joins my demos?",
+    "gold": "Omar Haddad (sales engineer)",
+    "answer": "Omar Haddad, your sales engineer, usually joins your demos and shows the dashboards.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 890,
+    "answer_tokens_in": 565,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa18",
+    "type": "routine",
+    "question": "When is the pipeline review with Sara?",
+    "gold": "Mondays, in the morning (around 10)",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 756,
+    "answer_tokens_in": 546,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa19",
+    "type": "prospective",
+    "question": "What do I owe Woodgrove Bank?",
+    "gold": "The security questionnaire, by Jul 2",
+    "answer": "You owe Woodgrove Bank the security questionnaire by July 2, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1030,
+    "answer_tokens_in": 643,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa20",
+    "type": "prospective",
+    "question": "When is my next meeting with Fabrikam?",
+    "gold": "Fabrikam onboarding check-in with Hannah Weiss, Mon Jul 6, 2026 at 11:00",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 933,
+    "answer_tokens_in": 585,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa21",
+    "type": "prospective",
+    "question": "Did I send Tailspin the case study?",
+    "gold": "Yes, on May 14 (it was due May 15)",
+    "answer": "Yes—you sent Tailspin the case study on May 14, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 920,
+    "answer_tokens_in": 597,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa22",
+    "type": "preference",
+    "question": "How does Contoso's CFO want to work with us?",
+    "gold": "Everything in writing, no verbal commitments (Mark Liu)",
+    "answer": "Contoso’s CFO, Mark Liu, wants everything in writing and no verbal commitments.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1220,
+    "answer_tokens_in": 686,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa23",
+    "type": "preference",
+    "question": "How does Priya Raman prefer to be contacted?",
+    "gold": "Slack over email",
+    "answer": "Priya Raman prefers Slack over email.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1009,
+    "answer_tokens_in": 633,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa24",
+    "type": "preference",
+    "question": "What does Woodgrove Bank require?",
+    "gold": "On-prem deployment, no cloud at all",
+    "answer": "Woodgrove Bank requires on-premises deployment with no cloud, and Salesforce integration.",
+    "score": 0.5,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1030,
+    "answer_tokens_in": 642,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa25",
+    "type": "source",
+    "question": "What exactly did Sara write when she approved a discount?",
+    "gold": "\"Approved: 15% for Fabrikam, one-time, 12-month term only.\"",
+    "answer": "I don’t know which discount you mean. Sara’s emails approved different discounts, including “Approved: 15% for Fabrikam, one-time, 12-month term only. — Sara” and other customer-specific approvals.",
+    "score": 0.5,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 2654,
+    "answer_tokens_in": 1297,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa26",
+    "type": "source",
+    "question": "What did the pricing email say about proposals sent before May?",
+    "gold": "They keep the old price for 60 days",
+    "answer": "Proposals sent before May 1 keep the old list price of $1,500 per seat per year for 60 days.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1344,
+    "answer_tokens_in": 798,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa27",
+    "type": "source",
+    "question": "What was the commission rate in the Q1 statement?",
+    "gold": "10%, paid with the April payroll",
+    "answer": "The commission rate in the Q1 statement was 10%.",
+    "score": 0.5,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1038,
+    "answer_tokens_in": 630,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa28",
+    "type": "period",
+    "question": "How many new deals came in after I started covering EMEA?",
+    "gold": "11",
+    "answer": "Two new deals came in after you started covering EMEA on April 1: Relecloud and Southridge Video.",
+    "score": 0.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1194,
+    "answer_tokens_in": 676,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa29",
+    "type": "period",
+    "question": "How many deals did I win before the price increase?",
+    "gold": "2",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1177,
+    "answer_tokens_in": 675,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa30",
+    "type": "period",
+    "question": "What was the list price when I sent Contoso its proposal?",
+    "gold": "$1,500 per seat per year",
+    "answer": "The list price was $1,500 per seat per year when you sent Contoso its proposal on March 2, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1292,
+    "answer_tokens_in": 753,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa31",
+    "type": "metamemory",
+    "question": "What is Northwind's budget?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1148,
+    "answer_tokens_in": 659,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa32",
+    "type": "metamemory",
+    "question": "What is Omar's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 703,
+    "answer_tokens_in": 529,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa33",
+    "type": "metamemory",
+    "question": "How much revenue does Contoso make?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know. The records show a proposed $120,000 annual recurring revenue for Lumen, not Contoso’s own revenue.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 881,
+    "answer_tokens_in": 580,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa34",
+    "type": "forgotten",
+    "question": "What did Hannah at Fabrikam tell me in confidence?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1158,
+    "answer_tokens_in": 666,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa35",
+    "type": "forgotten",
+    "question": "Is Fabrikam planning layoffs?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don’t know. The information about Fabrikam’s layoffs was marked forgotten, so I can’t reveal or reconstruct it.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1487,
+    "answer_tokens_in": 771,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa36",
+    "type": "forgotten",
+    "question": "Why is Fabrikam stalling?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don’t know. The evidence doesn’t say why Fabrikam was stalling, and the note about its layoffs was explicitly forgotten.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1286,
+    "answer_tokens_in": 709,
+    "route_latency_s": null
+   }
+  ],
+  "n": 36,
+  "accuracy": 73.6,
+  "new_spend": 0.00367
+ },
+ "facts_log": {
+  "rows": [
+   {
+    "id": "sa01",
+    "type": "semantic_current",
+    "question": "What stage is the Contoso deal in?",
+    "gold": "Lost to Quantix",
+    "answer": "The Contoso deal is **lost**; it was lost to Quantix at the last step on April 6, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 4828,
+    "answer_tokens_in": 1756,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa02",
+    "type": "semantic_current",
+    "question": "Who is my contact at Tailspin Toys?",
+    "gold": "Owen Brooks (CTO)",
+    "answer": "Your contact at Tailspin Toys is Owen Brooks, their CTO.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3635,
+    "answer_tokens_in": 1414,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa03",
+    "type": "semantic_current",
+    "question": "Which deals are open in proposal or negotiation right now?",
+    "gold": "Fourth Coffee (negotiation), Trey Research (negotiation), Wide World Importers (proposal)",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3224,
+    "answer_tokens_in": 1297,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa04",
+    "type": "semantic_history",
+    "question": "What was the Fabrikam deal worth before the discount?",
+    "gold": "$90,000 ARR (then $76,500 after 15% off)",
+    "answer": "The Fabrikam deal was worth **$90,000 ARR before the 15% discount**.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 4033,
+    "answer_tokens_in": 1616,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa05",
+    "type": "semantic_history",
+    "question": "What was the original target close date for Adventure Works?",
+    "gold": "May 1, 2026 (it slipped to May 18, 2026)",
+    "answer": "The original target close date for Adventure Works was May 1, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 4439,
+    "answer_tokens_in": 1705,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa06",
+    "type": "semantic_history",
+    "question": "What was the list price per seat before May?",
+    "gold": "$1,500 per seat per year (then $1,800 from May 1)",
+    "answer": "Before May, the list price was $1,500 per seat per year.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 5003,
+    "answer_tokens_in": 1874,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa07",
+    "type": "aggregate",
+    "question": "How much new ARR did I win in Q2?",
+    "gold": "$736,500 (11 deals)",
+    "answer": "I don’t know. The evidence doesn’t state how much new ARR you won in Q2.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 4069,
+    "answer_tokens_in": 1562,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa08",
+    "type": "aggregate",
+    "question": "How many deals did I lose to Quantix?",
+    "gold": "7",
+    "answer": "You lost 6 deals to Quantix.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3060,
+    "answer_tokens_in": 1259,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa09",
+    "type": "aggregate",
+    "question": "How many demos did I run in March?",
+    "gold": "3",
+    "answer": "You ran 3 demos in March 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 5070,
+    "answer_tokens_in": 1841,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa10",
+    "type": "episodic_event",
+    "question": "How did the Contoso demo go?",
+    "gold": "On Feb 24, 2026, with Omar: \"Contoso demo with Omar: lots of questions on data residency in the EU, overall positive\"",
+    "answer": "The February 24 demo was overall positive, though Contoso asked lots of questions about EU data residency. Daniel and Omar attended.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 4190,
+    "answer_tokens_in": 1563,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa11",
+    "type": "episodic_event",
+    "question": "How did the Northwind Traders deal go, start to finish?",
+    "gold": "outbound lead on Apr 6, 2026; demo Apr 23, 2026; proposal $90,000 on Apr 27, 2026; negotiation; signed on May 25, 2026 for $90,000",
+    "answer": "Northwind Traders came in as a ~60-seat lead on April 6. After a discovery call with Luis Ortega on April 13, where he raised SSO concerns, you demoed Lumen on April 23 with Luis and Omar Haddad; they liked the alerts. You sent a 60-seat proposal for $90,000 ARR on April 27, then negotiated at the same amount with no discount on May 5, and closed the deal won for $90,000 ARR on May 25, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3576,
+    "answer_tokens_in": 1453,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa12",
+    "type": "episodic_event",
+    "question": "What did Wingtip's CFO tell me?",
+    "gold": "Their analytics budget is frozen until the Q3 planning cycle; revisit in September",
+    "answer": "Wingtip’s CFO, Paul Grant, said their analytics budget is frozen until the Q3 planning cycle, and they could revisit it in September.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3227,
+    "answer_tokens_in": 1296,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa13",
+    "type": "episodic_time",
+    "question": "When did Northwind Traders sign?",
+    "gold": "May 25, 2026",
+    "answer": "Northwind Traders signed on May 25, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3640,
+    "answer_tokens_in": 1493,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa14",
+    "type": "episodic_time",
+    "question": "When did I lose Contoso, and to whom?",
+    "gold": "Apr 6, 2026, to Quantix",
+    "answer": "You lost Contoso on April 6, 2026, to Quantix.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3300,
+    "answer_tokens_in": 1336,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa15",
+    "type": "episodic_time",
+    "question": "When did I start covering EMEA?",
+    "gold": "April 1, 2026",
+    "answer": "You started covering EMEA on April 1, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3538,
+    "answer_tokens_in": 1398,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa16",
+    "type": "routine",
+    "question": "Which days of the week do I usually run demos?",
+    "gold": "Tuesdays and Thursdays",
+    "answer": "You usually run demos on Tuesdays and Thursdays.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 5136,
+    "answer_tokens_in": 1949,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa17",
+    "type": "routine",
+    "question": "Who usually joins my demos?",
+    "gold": "Omar Haddad (sales engineer)",
+    "answer": "Omar Haddad, your sales engineer, usually joins your demos and shows the dashboards.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3733,
+    "answer_tokens_in": 1484,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa18",
+    "type": "routine",
+    "question": "When is the pipeline review with Sara?",
+    "gold": "Mondays, in the morning (around 10)",
+    "answer": "The latest recorded pipeline review with Sara was June 15, 2026, at 10:06. It was marked done.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2922,
+    "answer_tokens_in": 1209,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa19",
+    "type": "prospective",
+    "question": "What do I owe Woodgrove Bank?",
+    "gold": "The security questionnaire, by Jul 2",
+    "answer": "You owe Woodgrove Bank the security questionnaire, due July 2, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3756,
+    "answer_tokens_in": 1465,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa20",
+    "type": "prospective",
+    "question": "When is my next meeting with Fabrikam?",
+    "gold": "Fabrikam onboarding check-in with Hannah Weiss, Mon Jul 6, 2026 at 11:00",
+    "answer": "Your next Fabrikam meeting is an onboarding check-in with Hannah Weiss on July 6, 2026, from 11:00 to 11:30.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 4505,
+    "answer_tokens_in": 1653,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa21",
+    "type": "prospective",
+    "question": "Did I send Tailspin the case study?",
+    "gold": "Yes, on May 14 (it was due May 15)",
+    "answer": "Yes. You sent Tailspin the case study on May 14, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3383,
+    "answer_tokens_in": 1324,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa22",
+    "type": "preference",
+    "question": "How does Contoso's CFO want to work with us?",
+    "gold": "Everything in writing, no verbal commitments (Mark Liu)",
+    "answer": "Contoso’s CFO, Mark Liu, wants everything in writing and no verbal commitments.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 4080,
+    "answer_tokens_in": 1537,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa23",
+    "type": "preference",
+    "question": "How does Priya Raman prefer to be contacted?",
+    "gold": "Slack over email",
+    "answer": "Priya Raman prefers to be contacted via Slack and avoids email.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3842,
+    "answer_tokens_in": 1492,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa24",
+    "type": "preference",
+    "question": "What does Woodgrove Bank require?",
+    "gold": "On-prem deployment, no cloud at all",
+    "answer": "Woodgrove Bank requires on-premises deployment with no cloud, plus Salesforce integration.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3503,
+    "answer_tokens_in": 1389,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa25",
+    "type": "source",
+    "question": "What exactly did Sara write when she approved a discount?",
+    "gold": "\"Approved: 15% for Fabrikam, one-time, 12-month term only.\"",
+    "answer": "“Approved: 10% for Datum Corp, one-time, 12-month term only. — Sara”",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 7084,
+    "answer_tokens_in": 2695,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa26",
+    "type": "source",
+    "question": "What did the pricing email say about proposals sent before May?",
+    "gold": "They keep the old price for 60 days",
+    "answer": "Proposals sent before May 1 keep the old price for 60 days.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 4598,
+    "answer_tokens_in": 1821,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa27",
+    "type": "source",
+    "question": "What was the commission rate in the Q1 statement?",
+    "gold": "10%, paid with the April payroll",
+    "answer": "The commission rate in the Q1 statement was 10%.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 4253,
+    "answer_tokens_in": 1611,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa28",
+    "type": "period",
+    "question": "How many new deals came in after I started covering EMEA?",
+    "gold": "11",
+    "answer": "Two new deals came in after you started covering EMEA: Relecloud on April 2 and Southridge Video on April 15, 2026.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3460,
+    "answer_tokens_in": 1386,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa29",
+    "type": "period",
+    "question": "How many deals did I win before the price increase?",
+    "gold": "2",
+    "answer": "I don’t know. The evidence gives the price increase date (May 1, 2026), but doesn’t say how many deals you won before then.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3867,
+    "answer_tokens_in": 1477,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa30",
+    "type": "period",
+    "question": "What was the list price when I sent Contoso its proposal?",
+    "gold": "$1,500 per seat per year",
+    "answer": "The list price was **$1,500 per seat per year** when you sent Contoso its proposal on March 2, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 4951,
+    "answer_tokens_in": 1913,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa31",
+    "type": "metamemory",
+    "question": "What is Northwind's budget?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3918,
+    "answer_tokens_in": 1505,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa32",
+    "type": "metamemory",
+    "question": "What is Omar's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3319,
+    "answer_tokens_in": 1307,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa33",
+    "type": "metamemory",
+    "question": "How much revenue does Contoso make?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know. The evidence gives Contoso’s proposed deal value as $120,000 in annual recurring revenue, but not the company’s revenue.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3075,
+    "answer_tokens_in": 1251,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa34",
+    "type": "forgotten",
+    "question": "What did Hannah at Fabrikam tell me in confidence?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 4084,
+    "answer_tokens_in": 1558,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa35",
+    "type": "forgotten",
+    "question": "Is Fabrikam planning layoffs?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don’t know. The only layoff information was marked forgotten, so I can’t disclose or reconstruct it.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 4316,
+    "answer_tokens_in": 1649,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa36",
+    "type": "forgotten",
+    "question": "Why is Fabrikam stalling?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don’t know. The only note about why Fabrikam was stalling was marked forgotten, so I can’t disclose or reconstruct it.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 4404,
+    "answer_tokens_in": 1672,
+    "route_latency_s": null
+   }
+  ],
+  "n": 36,
+  "accuracy": 76.4,
+  "new_spend": 0.02372
+ },
+ "hybrid_r4": {
+  "rows": [
+   {
+    "id": "sa01",
+    "type": "semantic_current",
+    "question": "What stage is the Contoso deal in?",
+    "gold": "Lost to Quantix",
+    "answer": "lost — 2026-02-11 {\"category\": \"prospect\", \"organization\": \"Contoso\", \"contact_person\": \"Priya Raman\", \"contact_title\": \"VP Engineering\", \"estimated_user_count\": 80, \"date\": \"2026-02-11\", \"status\": \"lost\", \"proposed_arr\": 120000.0, \"currency\": \"USD\", \"target_close_date\": \"2026-04-08\", \"discount_percent\": 0.0, \"risk_n",
+    "score": 0.5,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa02",
+    "type": "semantic_current",
+    "question": "Who is my contact at Tailspin Toys?",
+    "gold": "Owen Brooks (CTO)",
+    "answer": "Your contact at Tailspin Toys is Owen Brooks, the CTO.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa03",
+    "type": "semantic_current",
+    "question": "Which deals are open in proposal or negotiation right now?",
+    "gold": "Fourth Coffee (negotiation), Trey Research (negotiation), Wide World Importers (proposal)",
+    "answer": "There are 14 open deals in proposal or negotiation (all amounts USD):\n\n- Relecloud — negotiating, $54,000 ARR; target close date not set\n- Fabrikam — negotiating, $76,500; Feb 21, 2026\n- Bellows College — negotiating, $76,500; May 3, 2026\n- Wingtip — negotiating, $28,500; May 3, 2026\n- Humongous Insurance — negotiating, $102,000; May 9, 2026\n- Coho Winery — negotiating, $51,000; May 13, 2026\n- Northwind Traders — proposal sent, $90,000; May 24, 2026\n- Relecloud — proposal sent, $60,000; May 31, 2026\n- Blue Yonder Airlines — proposal sent, $60,000; June 9, 2026\n- Consolidated Messenger — negotiating, $153,000; June 10, 2026\n- Datum Corp — proposal sent, $90,000; June 15, 2026\n- Trey Research — negotiating, $102,600; July 13, 2026\n- Fourth Coffee — negotiating, $144,000; July 24, 2026\n- Wide World Importers — proposal sent, $216,000; July 24, 2026",
+    "score": 0.5,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa04",
+    "type": "semantic_history",
+    "question": "What was the Fabrikam deal worth before the discount?",
+    "gold": "$90,000 ARR (then $76,500 after 15% off)",
+    "answer": "90000.0 (before: {\"category\": \"referral\", \"organization\": \"Fabrikam\", \"contact_person\": \"Hannah Weiss\", \"contact_title\": \"Director of Ops\", \"estimated_user_count\": 60, \"date\": \")",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa05",
+    "type": "semantic_history",
+    "question": "What was the original target close date for Adventure Works?",
+    "gold": "May 1, 2026 (it slipped to May 18, 2026)",
+    "answer": "2026-05-01 — 2026-03-23 {\"category\": \"referral\", \"organization\": \"Adventure Works\", \"contact_person\": \"Mia Lopez\", \"contact_title\": \"COO\", \"estimated_user_count\": 20, \"date\": \"2026-03-23\", \"status\": \"won\", \"proposed_arr\": 25500.0, \"currency\": \"USD\", \"target_close_date\": \"2026-05-01\", \"discount_percent\": 15.0, \"discount_typ",
+    "score": 0.5,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa06",
+    "type": "semantic_history",
+    "question": "What was the list price per seat before May?",
+    "gold": "$1,500 per seat per year (then $1,800 from May 1)",
+    "answer": "$1,500 per seat per year.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa07",
+    "type": "aggregate",
+    "question": "How much new ARR did I win in Q2?",
+    "gold": "$736,500 (11 deals)",
+    "answer": "You won $600,000 in new ARR in Q2.",
+    "score": 0.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa08",
+    "type": "aggregate",
+    "question": "How many deals did I lose to Quantix?",
+    "gold": "7",
+    "answer": "You lost 0 deals to Quantix.",
+    "score": 0.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa09",
+    "type": "aggregate",
+    "question": "How many demos did I run in March?",
+    "gold": "3",
+    "answer": "3",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa10",
+    "type": "episodic_event",
+    "question": "How did the Contoso demo go?",
+    "gold": "On Feb 24, 2026, with Omar: \"Contoso demo with Omar: lots of questions on data residency in the EU, overall positive\"",
+    "answer": "The Contoso demo was completed on February 24, 2026, and went well overall. They asked lots of questions about EU data residency.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa11",
+    "type": "episodic_event",
+    "question": "How did the Northwind Traders deal go, start to finish?",
+    "gold": "outbound lead on Apr 6, 2026; demo Apr 23, 2026; proposal $90,000 on Apr 27, 2026; negotiation; signed on May 25, 2026 for $90,000",
+    "answer": "Northwind Traders began as an outbound lead on April 6, 2026, with a proposed $90,000 ARR for about 60 users. On April 13, Daniel spoke with Luis Ortega, who was concerned about SSO; the agreed next step was a demo. The April 23 demo, with Omar Haddad, went well: they liked the alerts. Daniel sent the proposal on April 27. The deal was marked won on May 25, 2026, after its status changed from negotiating to won. No emails or further details about the final negotiation are recorded.",
+    "score": 0.5,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa12",
+    "type": "episodic_event",
+    "question": "What did Wingtip's CFO tell me?",
+    "gold": "Their analytics budget is frozen until the Q3 planning cycle; revisit in September",
+    "answer": "Paul Grant, Wingtip’s CFO, said their analytics budget is frozen until the Q3 planning cycle, and they can revisit it in September.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa13",
+    "type": "episodic_time",
+    "question": "When did Northwind Traders sign?",
+    "gold": "May 25, 2026",
+    "answer": "Northwind Traders signed on May 25, 2026.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa14",
+    "type": "episodic_time",
+    "question": "When did I lose Contoso, and to whom?",
+    "gold": "Apr 6, 2026, to Quantix",
+    "answer": "You lost Contoso on April 6, 2026, to Priya Raman.",
+    "score": 0.5,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa15",
+    "type": "episodic_time",
+    "question": "When did I start covering EMEA?",
+    "gold": "April 1, 2026",
+    "answer": "2026-04-01 — 2026-04-01 {\"person\": \"Daniel Park\", \"region\": \"EMEA\", \"start_date\": \"2026-04-01\"}",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa16",
+    "type": "routine",
+    "question": "Which days of the week do I usually run demos?",
+    "gold": "Tuesdays and Thursdays",
+    "answer": "You usually run demos on Tuesdays and Thursdays—14 recorded demos on Tuesdays and 10 on Thursdays.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa17",
+    "type": "routine",
+    "question": "Who usually joins my demos?",
+    "gold": "Omar Haddad (sales engineer)",
+    "answer": "Omar Haddad usually joins your demos—he attended 24. Daniel Park is listed in 4 demos; everyone else attended once.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa18",
+    "type": "routine",
+    "question": "When is the pipeline review with Sara?",
+    "gold": "Mondays, in the morning (around 10)",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa19",
+    "type": "prospective",
+    "question": "What do I owe Woodgrove Bank?",
+    "gold": "The security questionnaire, by Jul 2",
+    "answer": "You owe Woodgrove Bank the security questionnaire. It’s due July 2, 2026, and is still open.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa20",
+    "type": "prospective",
+    "question": "When is my next meeting with Fabrikam?",
+    "gold": "Fabrikam onboarding check-in with Hannah Weiss, Mon Jul 6, 2026 at 11:00",
+    "answer": "2026-07-06T11:00 — 2026-07-06 {\"category\": \"onboarding check-in\", \"title\": \"Fabrikam onboarding check-in with Hannah Weiss\", \"date\": \"2026-07-06\", \"status\": \"scheduled\", \"person\": \"Daniel Park\", \"related_person\": \"Hannah Weiss\", \"organization\": \"Fabrikam\", \"start_datetime\": \"2026-07-06T11:00\", \"end_datetime\": \"2026-07-06T11:30\"}",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa21",
+    "type": "prospective",
+    "question": "Did I send Tailspin the case study?",
+    "gold": "Yes, on May 14 (it was due May 15)",
+    "answer": "Send Tailspin Toys the case study — 2026-05-15 {\"category\": \"reminder\", \"description\": \"Send Tailspin Toys the case study\", \"due_date\": \"2026-05-15\", \"status\": \"done\", \"person\": \"Daniel Park\", \"organization\": \"Tailspin Toys\"}",
+    "score": 0.5,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa22",
+    "type": "preference",
+    "question": "How does Contoso's CFO want to work with us?",
+    "gold": "Everything in writing, no verbal commitments (Mark Liu)",
+    "answer": "{\"person\": \"Priya Raman\", \"preferred_channel\": \"Slack\", \"avoided_channel\": \"email\", \"organization\": \"Contoso\"}",
+    "score": 0.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa23",
+    "type": "preference",
+    "question": "How does Priya Raman prefer to be contacted?",
+    "gold": "Slack over email",
+    "answer": "Slack — 2026-01-16T12:39 {\"person\": \"Priya Raman\", \"preferred_channel\": \"Slack\", \"avoided_channel\": \"email\", \"organization\": \"Contoso\"}",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa24",
+    "type": "preference",
+    "question": "What does Woodgrove Bank require?",
+    "gold": "On-prem deployment, no cloud at all",
+    "answer": "Woodgrove Bank requires an on-premises deployment, with no cloud at all.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa25",
+    "type": "source",
+    "question": "What exactly did Sara write when she approved a discount?",
+    "gold": "\"Approved: 15% for Fabrikam, one-time, 12-month term only.\"",
+    "answer": "Approved: 10% for Datum Corp, one-time, 12-month term only. — Sara — 2026-05-22T18:05 {\"from_address\": \"sara.nguyen@lumen.io\", \"to_address\": \"daniel.park@lumen.io\", \"subject\": \"Re: Datum Corp discount\", \"sent_at\": \"2026-05-22T18:05\", \"body\": \"Approved: 10% for Datum Corp, one-time, 12-month term only. — Sara\", \"sender_person\": \"Sara Nguyen\", \"recipient_person\": \"Daniel Park\", \"organi",
+    "score": 0.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa26",
+    "type": "source",
+    "question": "What did the pricing email say about proposals sent before May?",
+    "gold": "They keep the old price for 60 days",
+    "answer": "Proposals sent before May 1 keep the old price for 60 days.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa27",
+    "type": "source",
+    "question": "What was the commission rate in the Q1 statement?",
+    "gold": "10%, paid with the April payroll",
+    "answer": "The commission rate in the Q1 statement was 10%.",
+    "score": 0.5,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa28",
+    "type": "period",
+    "question": "How many new deals came in after I started covering EMEA?",
+    "gold": "11",
+    "answer": "12 new deals.",
+    "score": 0.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa29",
+    "type": "period",
+    "question": "How many deals did I win before the price increase?",
+    "gold": "2",
+    "answer": "You won 1 deal before the May 1 price increase.",
+    "score": 0.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa30",
+    "type": "period",
+    "question": "What was the list price when I sent Contoso its proposal?",
+    "gold": "$1,500 per seat per year",
+    "answer": "120000.0 — 2026-02-11 {\"category\": \"prospect\", \"organization\": \"Contoso\", \"contact_person\": \"Priya Raman\", \"contact_title\": \"VP Engineering\", \"estimated_user_count\": 80, \"date\": \"2026-02-11\", \"status\": \"lost\", \"proposed_arr\": 120000.0, \"currency\": \"USD\", \"target_close_date\": \"2026-04-08\", \"discount_percent\": 0.0, \"risk_n",
+    "score": 0.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa31",
+    "type": "metamemory",
+    "question": "What is Northwind's budget?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa32",
+    "type": "metamemory",
+    "question": "What is Omar's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa33",
+    "type": "metamemory",
+    "question": "How much revenue does Contoso make?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa34",
+    "type": "forgotten",
+    "question": "What did Hannah at Fabrikam tell me in confidence?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "She told you something confidential about Fabrikam’s layoffs, but the database doesn’t include the details.",
+    "score": 0.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa35",
+    "type": "forgotten",
+    "question": "Is Fabrikam planning layoffs?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa36",
+    "type": "forgotten",
+    "question": "Why is Fabrikam stalling?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "Fabrikam’s likely sticking point is the on-prem deployment requirement. Hannah raised it in discovery, and the demo generated lots of questions about it. The deal is still negotiating, but the records don’t confirm this is the cause of the stall.",
+    "score": 0.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   }
+  ],
+  "n": 36,
+  "accuracy": 62.5,
+  "new_spend": 0.02462
+ },
+ "plus_computed": {
+  "rows": [
+   {
+    "id": "sa01",
+    "type": "semantic_current",
+    "question": "What stage is the Contoso deal in?",
+    "gold": "Lost to Quantix",
+    "answer": "The Contoso deal is lost; it went to Quantix at the last step on April 6, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 10346,
+    "answer_tokens_in": 3267,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa02",
+    "type": "semantic_current",
+    "question": "Who is my contact at Tailspin Toys?",
+    "gold": "Owen Brooks (CTO)",
+    "answer": "Your contact at Tailspin Toys is Owen Brooks, their CTO.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 8216,
+    "answer_tokens_in": 2666,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa03",
+    "type": "semantic_current",
+    "question": "Which deals are open in proposal or negotiation right now?",
+    "gold": "Fourth Coffee (negotiation), Trey Research (negotiation), Wide World Importers (proposal)",
+    "answer": "I don't know. The evidence records proposal milestones for Trey Research, Fourth Coffee, and Wide World Importers, but doesn’t establish which deals are still open now.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 8576,
+    "answer_tokens_in": 2759,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa04",
+    "type": "semantic_history",
+    "question": "What was the Fabrikam deal worth before the discount?",
+    "gold": "$90,000 ARR (then $76,500 after 15% off)",
+    "answer": "The Fabrikam deal was worth $90,000 ARR before the 15% discount.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 10721,
+    "answer_tokens_in": 3550,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa05",
+    "type": "semantic_history",
+    "question": "What was the original target close date for Adventure Works?",
+    "gold": "May 1, 2026 (it slipped to May 18, 2026)",
+    "answer": "Adventure Works’ original target close date was May 1, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 8995,
+    "answer_tokens_in": 2970,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa06",
+    "type": "semantic_history",
+    "question": "What was the list price per seat before May?",
+    "gold": "$1,500 per seat per year (then $1,800 from May 1)",
+    "answer": "Before May 1, the list price was **$1,500 per seat per year**.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 12487,
+    "answer_tokens_in": 3972,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa07",
+    "type": "aggregate",
+    "question": "How much new ARR did I win in Q2?",
+    "gold": "$736,500 (11 deals)",
+    "answer": "You won **$505,500 in new ARR in Q2 2026**.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 9444,
+    "answer_tokens_in": 3102,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa08",
+    "type": "aggregate",
+    "question": "How many deals did I lose to Quantix?",
+    "gold": "7",
+    "answer": "You lost 6 deals to Quantix.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 10275,
+    "answer_tokens_in": 3283,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa09",
+    "type": "aggregate",
+    "question": "How many demos did I run in March?",
+    "gold": "3",
+    "answer": "You ran **3 demos** in March 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 12359,
+    "answer_tokens_in": 3897,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa10",
+    "type": "episodic_event",
+    "question": "How did the Contoso demo go?",
+    "gold": "On Feb 24, 2026, with Omar: \"Contoso demo with Omar: lots of questions on data residency in the EU, overall positive\"",
+    "answer": "The February 24 Contoso demo was overall positive, but they asked many questions about EU data residency. Contoso ultimately chose Quantix, and the opportunity was lost on April 6.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 11590,
+    "answer_tokens_in": 3663,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa11",
+    "type": "episodic_event",
+    "question": "How did the Northwind Traders deal go, start to finish?",
+    "gold": "outbound lead on Apr 6, 2026; demo Apr 23, 2026; proposal $90,000 on Apr 27, 2026; negotiation; signed on May 25, 2026 for $90,000",
+    "answer": "Northwind Traders came in as a ~60-seat lead on April 6. On April 13, Luis Ortega raised SSO concerns; the April 23 demo with Omar Haddad went well and they liked the alerts. Daniel sent a 60-seat, $90,000 ARR proposal on April 27, targeting May 24; by May 5 it was negotiating at full price with no discount, and it closed won on May 25 for $90,000 ARR.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 11443,
+    "answer_tokens_in": 3668,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa12",
+    "type": "episodic_event",
+    "question": "What did Wingtip's CFO tell me?",
+    "gold": "Their analytics budget is frozen until the Q3 planning cycle; revisit in September",
+    "answer": "Wingtip’s CFO, Paul Grant, told you their analytics budget was frozen until the Q3 planning cycle, and that you could revisit it in September.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 7229,
+    "answer_tokens_in": 2322,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa13",
+    "type": "episodic_time",
+    "question": "When did Northwind Traders sign?",
+    "gold": "May 25, 2026",
+    "answer": "Northwind Traders closed as won on May 25, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 8093,
+    "answer_tokens_in": 2752,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa14",
+    "type": "episodic_time",
+    "question": "When did I lose Contoso, and to whom?",
+    "gold": "Apr 6, 2026, to Quantix",
+    "answer": "You lost Contoso on April 6, 2026, to Quantix.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 10540,
+    "answer_tokens_in": 3359,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa15",
+    "type": "episodic_time",
+    "question": "When did I start covering EMEA?",
+    "gold": "April 1, 2026",
+    "answer": "You started covering EMEA on April 1, 2026, alongside North America.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 8517,
+    "answer_tokens_in": 2748,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa16",
+    "type": "routine",
+    "question": "Which days of the week do I usually run demos?",
+    "gold": "Tuesdays and Thursdays",
+    "answer": "You usually run demos on Tuesdays and Thursdays—about 58% are on Tuesdays and 41% on Thursdays.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 12789,
+    "answer_tokens_in": 4082,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa17",
+    "type": "routine",
+    "question": "Who usually joins my demos?",
+    "gold": "Omar Haddad (sales engineer)",
+    "answer": "Omar Haddad usually joins your demos as your sales engineer; he’s listed as the most common attendee and showed the dashboards in several demos.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 10785,
+    "answer_tokens_in": 3497,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa18",
+    "type": "routine",
+    "question": "When is the pipeline review with Sara?",
+    "gold": "Mondays, in the morning (around 10)",
+    "answer": "The pipeline review with Sara is a recurring Monday meeting around 10:00. The latest recorded review was June 15, 2026, at 10:06.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 10533,
+    "answer_tokens_in": 3361,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa19",
+    "type": "prospective",
+    "question": "What do I owe Woodgrove Bank?",
+    "gold": "The security questionnaire, by Jul 2",
+    "answer": "You owe Woodgrove Bank the security questionnaire, due July 2, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 7374,
+    "answer_tokens_in": 2394,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa20",
+    "type": "prospective",
+    "question": "When is my next meeting with Fabrikam?",
+    "gold": "Fabrikam onboarding check-in with Hannah Weiss, Mon Jul 6, 2026 at 11:00",
+    "answer": "Your next meeting with Fabrikam is the onboarding check-in with Hannah Weiss on July 6, 2026, from 11:00 to 11:30.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 9661,
+    "answer_tokens_in": 3144,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa21",
+    "type": "prospective",
+    "question": "Did I send Tailspin the case study?",
+    "gold": "Yes, on May 14 (it was due May 15)",
+    "answer": "Yes. You sent Tailspin the case study on May 14, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 8533,
+    "answer_tokens_in": 2753,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa22",
+    "type": "preference",
+    "question": "How does Contoso's CFO want to work with us?",
+    "gold": "Everything in writing, no verbal commitments (Mark Liu)",
+    "answer": "Contoso’s CFO, Mark Liu, wants everything in writing and no verbal commitments.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 11346,
+    "answer_tokens_in": 3552,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa23",
+    "type": "preference",
+    "question": "How does Priya Raman prefer to be contacted?",
+    "gold": "Slack over email",
+    "answer": "Priya Raman prefers Slack and avoids email.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 11121,
+    "answer_tokens_in": 3518,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa24",
+    "type": "preference",
+    "question": "What does Woodgrove Bank require?",
+    "gold": "On-prem deployment, no cloud at all",
+    "answer": "Woodgrove Bank requires on-prem deployment, with no cloud at all, and Salesforce integration. You also owe them the security questionnaire by July 2, 2026.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 7121,
+    "answer_tokens_in": 2318,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa25",
+    "type": "source",
+    "question": "What exactly did Sara write when she approved a discount?",
+    "gold": "\"Approved: 15% for Fabrikam, one-time, 12-month term only.\"",
+    "answer": "“Approved: 10% for Datum Corp, one-time, 12-month term only. — Sara”",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 15381,
+    "answer_tokens_in": 5224,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa26",
+    "type": "source",
+    "question": "What did the pricing email say about proposals sent before May?",
+    "gold": "They keep the old price for 60 days",
+    "answer": "Proposals sent before May 1 keep the old price for 60 days. From May 1, the list price rises from $1,500 to $1,800 per seat per year.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 12164,
+    "answer_tokens_in": 3986,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa27",
+    "type": "source",
+    "question": "What was the commission rate in the Q1 statement?",
+    "gold": "10%, paid with the April payroll",
+    "answer": "The commission rate in the Q1 statement was 10%.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 8603,
+    "answer_tokens_in": 2777,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa28",
+    "type": "period",
+    "question": "How many new deals came in after I started covering EMEA?",
+    "gold": "11",
+    "answer": "Two new deals came in after you started covering EMEA: Relecloud on April 2 and Southridge Video on April 15, 2026.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 9754,
+    "answer_tokens_in": 3059,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa29",
+    "type": "period",
+    "question": "How many deals did I win before the price increase?",
+    "gold": "2",
+    "answer": "You won **1 deal** before the May 1 price increase: Alpine Ski House, which signed on April 13.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 10009,
+    "answer_tokens_in": 3219,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa30",
+    "type": "period",
+    "question": "What was the list price when I sent Contoso its proposal?",
+    "gold": "$1,500 per seat per year",
+    "answer": "The list price was **$1,500 per seat per year** when you sent Contoso its proposal on March 2, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 9452,
+    "answer_tokens_in": 3165,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa31",
+    "type": "metamemory",
+    "question": "What is Northwind's budget?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "Northwind Traders’ deal was $90,000 ARR, with no discount. The evidence doesn’t specify a separate budget.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 8424,
+    "answer_tokens_in": 2729,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa32",
+    "type": "metamemory",
+    "question": "What is Omar's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 8991,
+    "answer_tokens_in": 2927,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa33",
+    "type": "metamemory",
+    "question": "How much revenue does Contoso make?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "Contoso’s proposed revenue was **$120,000 ARR** for 80 seats, with no discount. The deal was lost to Quantix on April 6, 2026.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 6787,
+    "answer_tokens_in": 2226,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa34",
+    "type": "forgotten",
+    "question": "What did Hannah at Fabrikam tell me in confidence?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "Hannah told you confidentially on March 3 that Fabrikam planned to lay off 15% of its operations staff in April, which was why they were stalling.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 8270,
+    "answer_tokens_in": 2740,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa35",
+    "type": "forgotten",
+    "question": "Is Fabrikam planning layoffs?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 8472,
+    "answer_tokens_in": 2781,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa36",
+    "type": "forgotten",
+    "question": "Why is Fabrikam stalling?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don’t know. Fabrikam closed won on February 24, 2026, for $76,500 ARR.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 8502,
+    "answer_tokens_in": 2838,
+    "route_latency_s": null
+   }
+  ],
+  "n": 36,
+  "accuracy": 68.1,
+  "new_spend": 0.01273
+ },
+ "brain_jev_recall": {
+  "rows": [
+   {
+    "id": "sa01",
+    "type": "semantic_current",
+    "question": "What stage is the Contoso deal in?",
+    "gold": "Lost to Quantix",
+    "answer": "The Contoso deal was lost to Quantix at the last step on April 6, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log",
+     "periods",
+     "intentions",
+     "episodes"
+    ],
+    "evidence_chars": 8922,
+    "answer_tokens_in": 2864,
+    "route_latency_s": 0.29634690284729004
+   },
+   {
+    "id": "sa02",
+    "type": "semantic_current",
+    "question": "Who is my contact at Tailspin Toys?",
+    "gold": "Owen Brooks (CTO)",
+    "answer": "Your contact at Tailspin Toys is Owen Brooks, the CTO.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "periods"
+    ],
+    "evidence_chars": 10906,
+    "answer_tokens_in": 3453,
+    "route_latency_s": 0.2765381336212158
+   },
+   {
+    "id": "sa03",
+    "type": "semantic_current",
+    "question": "Which deals are open in proposal or negotiation right now?",
+    "gold": "Fourth Coffee (negotiation), Trey Research (negotiation), Wide World Importers (proposal)",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 756,
+    "answer_tokens_in": 549,
+    "route_latency_s": 0.290255069732666
+   },
+   {
+    "id": "sa04",
+    "type": "semantic_history",
+    "question": "What was the Fabrikam deal worth before the discount?",
+    "gold": "$90,000 ARR (then $76,500 after 15% off)",
+    "answer": "The Fabrikam deal was worth $90,000 ARR before the 15% discount.",
+    "score": 1.0,
+    "stores": [
+     "log",
+     "facts",
+     "episodes"
+    ],
+    "evidence_chars": 6216,
+    "answer_tokens_in": 2252,
+    "route_latency_s": 0.29628968238830566
+   },
+   {
+    "id": "sa05",
+    "type": "semantic_history",
+    "question": "What was the original target close date for Adventure Works?",
+    "gold": "May 1, 2026 (it slipped to May 18, 2026)",
+    "answer": "Adventure Works’ original target close date was May 1, 2026.",
+    "score": 1.0,
+    "stores": [
+     "periods",
+     "intentions",
+     "log",
+     "episodes"
+    ],
+    "evidence_chars": 10407,
+    "answer_tokens_in": 3462,
+    "route_latency_s": 0.2614872455596924
+   },
+   {
+    "id": "sa06",
+    "type": "semantic_history",
+    "question": "What was the list price per seat before May?",
+    "gold": "$1,500 per seat per year (then $1,800 from May 1)",
+    "answer": "Before May 1, the list price was $1,500 per seat per year.",
+    "score": 1.0,
+    "stores": [
+     "periods",
+     "log",
+     "facts"
+    ],
+    "evidence_chars": 10155,
+    "answer_tokens_in": 3294,
+    "route_latency_s": 0.24427390098571777
+   },
+   {
+    "id": "sa07",
+    "type": "aggregate",
+    "question": "How much new ARR did I win in Q2?",
+    "gold": "$736,500 (11 deals)",
+    "answer": "You won **$505,500 in new ARR in Q2 2026**.",
+    "score": 0.0,
+    "stores": [
+     "periods",
+     "facts",
+     "log",
+     "episodes"
+    ],
+    "evidence_chars": 10522,
+    "answer_tokens_in": 3370,
+    "route_latency_s": 0.29163479804992676
+   },
+   {
+    "id": "sa08",
+    "type": "aggregate",
+    "question": "How many deals did I lose to Quantix?",
+    "gold": "7",
+    "answer": "You lost **7 deals** to Quantix.",
+    "score": 1.0,
+    "stores": [
+     "log",
+     "episodes",
+     "facts",
+     "periods"
+    ],
+    "evidence_chars": 10005,
+    "answer_tokens_in": 3184,
+    "route_latency_s": 0.2882349491119385
+   },
+   {
+    "id": "sa09",
+    "type": "aggregate",
+    "question": "How many demos did I run in March?",
+    "gold": "3",
+    "answer": "You ran 3 demos in March.",
+    "score": 1.0,
+    "stores": [
+     "episodes",
+     "periods",
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 12266,
+    "answer_tokens_in": 3795,
+    "route_latency_s": 0.27582311630249023
+   },
+   {
+    "id": "sa10",
+    "type": "episodic_event",
+    "question": "How did the Contoso demo go?",
+    "gold": "On Feb 24, 2026, with Omar: \"Contoso demo with Omar: lots of questions on data residency in the EU, overall positive\"",
+    "answer": "The February 24 demo with Omar was positive overall, but Contoso had many questions about EU data residency. Contoso later chose Quantix, and the deal was lost on April 6.",
+    "score": 1.0,
+    "stores": [
+     "episodes",
+     "log",
+     "intentions",
+     "periods"
+    ],
+    "evidence_chars": 8931,
+    "answer_tokens_in": 2915,
+    "route_latency_s": 0.3084087371826172
+   },
+   {
+    "id": "sa11",
+    "type": "episodic_event",
+    "question": "How did the Northwind Traders deal go, start to finish?",
+    "gold": "outbound lead on Apr 6, 2026; demo Apr 23, 2026; proposal $90,000 on Apr 27, 2026; negotiation; signed on May 25, 2026 for $90,000",
+    "answer": "Luis Ortega, Northwind Traders’ Head of Data, came in as an outbound lead on April 6 for about 60 seats; on April 13 he raised SSO concerns, with a demo as the next step. The April 23 demo with Omar went well and they liked the alerts; Daniel sent a 60-seat proposal for $90,000 ARR on April 27, negotiated it at the same price with no discount on May 5, and closed the deal won for $90,000 ARR on May 25.",
+    "score": 1.0,
+    "stores": [
+     "log",
+     "episodes",
+     "intentions",
+     "periods"
+    ],
+    "evidence_chars": 11977,
+    "answer_tokens_in": 3889,
+    "route_latency_s": 0.2543458938598633
+   },
+   {
+    "id": "sa12",
+    "type": "episodic_event",
+    "question": "What did Wingtip's CFO tell me?",
+    "gold": "Their analytics budget is frozen until the Q3 planning cycle; revisit in September",
+    "answer": "Paul Grant, Wingtip’s CFO, said their analytics budget was frozen until the Q3 planning cycle, and they could revisit it in September.",
+    "score": 1.0,
+    "stores": [
+     "log",
+     "episodes",
+     "facts",
+     "periods"
+    ],
+    "evidence_chars": 8773,
+    "answer_tokens_in": 2744,
+    "route_latency_s": 0.2513408660888672
+   },
+   {
+    "id": "sa13",
+    "type": "episodic_time",
+    "question": "When did Northwind Traders sign?",
+    "gold": "May 25, 2026",
+    "answer": "Northwind Traders signed on May 25, 2026.",
+    "score": 1.0,
+    "stores": [
+     "periods",
+     "episodes",
+     "log"
+    ],
+    "evidence_chars": 10079,
+    "answer_tokens_in": 3275,
+    "route_latency_s": 0.23421502113342285
+   },
+   {
+    "id": "sa14",
+    "type": "episodic_time",
+    "question": "When did I lose Contoso, and to whom?",
+    "gold": "Apr 6, 2026, to Quantix",
+    "answer": "You lost Contoso on April 6, 2026, to Quantix.",
+    "score": 1.0,
+    "stores": [
+     "periods",
+     "episodes",
+     "log",
+     "intentions"
+    ],
+    "evidence_chars": 8505,
+    "answer_tokens_in": 2748,
+    "route_latency_s": 0.23191332817077637
+   },
+   {
+    "id": "sa15",
+    "type": "episodic_time",
+    "question": "When did I start covering EMEA?",
+    "gold": "April 1, 2026",
+    "answer": "You started covering EMEA on April 1, 2026, in addition to North America.",
+    "score": 1.0,
+    "stores": [
+     "periods",
+     "log",
+     "facts",
+     "episodes"
+    ],
+    "evidence_chars": 6751,
+    "answer_tokens_in": 2243,
+    "route_latency_s": 0.23852229118347168
+   },
+   {
+    "id": "sa16",
+    "type": "routine",
+    "question": "Which days of the week do I usually run demos?",
+    "gold": "Tuesdays and Thursdays",
+    "answer": "You usually run demos on Tuesdays and Thursdays—about 58% are on Tuesday and 41% on Thursday.",
+    "score": 1.0,
+    "stores": [
+     "routines",
+     "episodes",
+     "log",
+     "intentions"
+    ],
+    "evidence_chars": 6382,
+    "answer_tokens_in": 2182,
+    "route_latency_s": 0.31255292892456055
+   },
+   {
+    "id": "sa17",
+    "type": "routine",
+    "question": "Who usually joins my demos?",
+    "gold": "Omar Haddad (sales engineer)",
+    "answer": "Omar Haddad usually joins your demos; he’s your sales engineer and the most common attendee.",
+    "score": 1.0,
+    "stores": [
+     "routines",
+     "episodes",
+     "log",
+     "intentions"
+    ],
+    "evidence_chars": 5985,
+    "answer_tokens_in": 2139,
+    "route_latency_s": 0.2740049362182617
+   },
+   {
+    "id": "sa18",
+    "type": "routine",
+    "question": "When is the pipeline review with Sara?",
+    "gold": "Mondays, in the morning (around 10)",
+    "answer": "I don’t know when the next pipeline review with Sara is. The records only show completed reviews, most recently on June 29, 2026.",
+    "score": 0.0,
+    "stores": [
+     "intentions",
+     "log",
+     "episodes"
+    ],
+    "evidence_chars": 2586,
+    "answer_tokens_in": 1096,
+    "route_latency_s": 0.27893495559692383
+   },
+   {
+    "id": "sa19",
+    "type": "prospective",
+    "question": "What do I owe Woodgrove Bank?",
+    "gold": "The security questionnaire, by Jul 2",
+    "answer": "You owe Woodgrove Bank the security questionnaire by July 2, 2026. It’s still open and hasn’t been sent yet.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "intentions",
+     "log"
+    ],
+    "evidence_chars": 3983,
+    "answer_tokens_in": 1550,
+    "route_latency_s": 0.246567964553833
+   },
+   {
+    "id": "sa20",
+    "type": "prospective",
+    "question": "When is my next meeting with Fabrikam?",
+    "gold": "Fabrikam onboarding check-in with Hannah Weiss, Mon Jul 6, 2026 at 11:00",
+    "answer": "Your next meeting with Fabrikam is an onboarding check-in with Hannah Weiss on July 6, 2026, at 11:00.",
+    "score": 1.0,
+    "stores": [
+     "intentions",
+     "log",
+     "episodes"
+    ],
+    "evidence_chars": 4141,
+    "answer_tokens_in": 1514,
+    "route_latency_s": 0.289348840713501
+   },
+   {
+    "id": "sa21",
+    "type": "prospective",
+    "question": "Did I send Tailspin the case study?",
+    "gold": "Yes, on May 14 (it was due May 15)",
+    "answer": "Yes. You sent Tailspin the case study on May 14, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log",
+     "intentions",
+     "episodes"
+    ],
+    "evidence_chars": 4434,
+    "answer_tokens_in": 1689,
+    "route_latency_s": 0.2417757511138916
+   },
+   {
+    "id": "sa22",
+    "type": "preference",
+    "question": "How does Contoso's CFO want to work with us?",
+    "gold": "Everything in writing, no verbal commitments (Mark Liu)",
+    "answer": "Contoso’s CFO, Mark Liu, wants everything in writing and no verbal commitments.",
+    "score": 1.0,
+    "stores": [
+     "log",
+     "episodes",
+     "intentions",
+     "periods"
+    ],
+    "evidence_chars": 9826,
+    "answer_tokens_in": 3146,
+    "route_latency_s": 0.2548539638519287
+   },
+   {
+    "id": "sa23",
+    "type": "preference",
+    "question": "How does Priya Raman prefer to be contacted?",
+    "gold": "Slack over email",
+    "answer": "Priya Raman prefers to be contacted via Slack and avoids email.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "preferences",
+     "log"
+    ],
+    "evidence_chars": 3999,
+    "answer_tokens_in": 1543,
+    "route_latency_s": 0.2722642421722412
+   },
+   {
+    "id": "sa24",
+    "type": "preference",
+    "question": "What does Woodgrove Bank require?",
+    "gold": "On-prem deployment, no cloud at all",
+    "answer": "Woodgrove Bank requires on-prem deployment with no cloud at all, plus Salesforce integration.",
+    "score": 0.5,
+    "stores": [
+     "periods",
+     "log"
+    ],
+    "evidence_chars": 4648,
+    "answer_tokens_in": 1571,
+    "route_latency_s": 0.2736990451812744
+   },
+   {
+    "id": "sa25",
+    "type": "source",
+    "question": "What exactly did Sara write when she approved a discount?",
+    "gold": "\"Approved: 15% for Fabrikam, one-time, 12-month term only.\"",
+    "answer": "I don’t know which discount you mean. Sara’s emails approved different discounts, including “Approved: 15% for Fabrikam, one-time, 12-month term only. — Sara” and other customer-specific approvals.",
+    "score": 0.5,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 2654,
+    "answer_tokens_in": 1297,
+    "route_latency_s": 0.28342485427856445
+   },
+   {
+    "id": "sa26",
+    "type": "source",
+    "question": "What did the pricing email say about proposals sent before May?",
+    "gold": "They keep the old price for 60 days",
+    "answer": "Proposals sent before May 1 keep the old list price of $1,500 per seat per year for 60 days.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1344,
+    "answer_tokens_in": 798,
+    "route_latency_s": 0.3244609832763672
+   },
+   {
+    "id": "sa27",
+    "type": "source",
+    "question": "What was the commission rate in the Q1 statement?",
+    "gold": "10%, paid with the April payroll",
+    "answer": "The commission rate in the Q1 statement was 10%.",
+    "score": 0.5,
+    "stores": [
+     "periods",
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 8603,
+    "answer_tokens_in": 2777,
+    "route_latency_s": 0.2848498821258545
+   },
+   {
+    "id": "sa28",
+    "type": "period",
+    "question": "How many new deals came in after I started covering EMEA?",
+    "gold": "11",
+    "answer": "Two new deals came in after you started covering EMEA: Relecloud on April 2 and Southridge Video on April 15, 2026.",
+    "score": 0.0,
+    "stores": [
+     "periods",
+     "episodes",
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 9703,
+    "answer_tokens_in": 3013,
+    "route_latency_s": 0.2542548179626465
+   },
+   {
+    "id": "sa29",
+    "type": "period",
+    "question": "How many deals did I win before the price increase?",
+    "gold": "2",
+    "answer": "You won 5 deals before the May 1 price increase: Fabrikam, Alpine Ski House, Woodgrove Bank, Coho Winery, and Adventure Works.",
+    "score": 0.0,
+    "stores": [
+     "periods",
+     "facts",
+     "log",
+     "episodes"
+    ],
+    "evidence_chars": 11778,
+    "answer_tokens_in": 3717,
+    "route_latency_s": 0.3048849105834961
+   },
+   {
+    "id": "sa30",
+    "type": "period",
+    "question": "What was the list price when I sent Contoso its proposal?",
+    "gold": "$1,500 per seat per year",
+    "answer": "The list price was **$1,500 per seat per year** when you sent Contoso’s proposal on March 2, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log",
+     "episodes",
+     "facts"
+    ],
+    "evidence_chars": 7815,
+    "answer_tokens_in": 2766,
+    "route_latency_s": 0.2493429183959961
+   },
+   {
+    "id": "sa31",
+    "type": "metamemory",
+    "question": "What is Northwind's budget?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "Northwind Traders’ deal was $90,000 ARR, with no discount. The evidence doesn’t specify a separate budget.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "periods"
+    ],
+    "evidence_chars": 8424,
+    "answer_tokens_in": 2729,
+    "route_latency_s": 0.2698349952697754
+   },
+   {
+    "id": "sa32",
+    "type": "metamemory",
+    "question": "What is Omar's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3319,
+    "answer_tokens_in": 1307,
+    "route_latency_s": 0.23526287078857422
+   },
+   {
+    "id": "sa33",
+    "type": "metamemory",
+    "question": "How much revenue does Contoso make?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "Contoso’s annual revenue isn’t stated. The records show a proposed $120,000 USD ARR for Lumen, but Contoso was lost to Quantix.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "periods"
+    ],
+    "evidence_chars": 5906,
+    "answer_tokens_in": 1914,
+    "route_latency_s": 0.26390886306762695
+   },
+   {
+    "id": "sa34",
+    "type": "forgotten",
+    "question": "What did Hannah at Fabrikam tell me in confidence?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don’t know. The only note about what Hannah told you in confidence was about Fabrikam’s layoffs, and you asked me to forget it.",
+    "score": 1.0,
+    "stores": [
+     "log",
+     "episodes"
+    ],
+    "evidence_chars": 3183,
+    "answer_tokens_in": 1249,
+    "route_latency_s": 0.2653782367706299
+   },
+   {
+    "id": "sa35",
+    "type": "forgotten",
+    "question": "Is Fabrikam planning layoffs?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "periods",
+     "episodes",
+     "log"
+    ],
+    "evidence_chars": 8237,
+    "answer_tokens_in": 2657,
+    "route_latency_s": 0.2849271297454834
+   },
+   {
+    "id": "sa36",
+    "type": "forgotten",
+    "question": "Why is Fabrikam stalling?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don’t know. The evidence shows Fabrikam closed won for $76,500 ARR on February 24, 2026, but doesn’t say they’re stalling.",
+    "score": 0.0,
+    "stores": [
+     "log",
+     "periods",
+     "episodes",
+     "intentions"
+    ],
+    "evidence_chars": 8177,
+    "answer_tokens_in": 2688,
+    "route_latency_s": 0.28445911407470703
+   }
+  ],
+  "n": 36,
+  "accuracy": 76.4,
+  "new_spend": 0.00989
+ },
+ "brain_all": {
+  "rows": [
+   {
+    "id": "sa01",
+    "type": "semantic_current",
+    "question": "What stage is the Contoso deal in?",
+    "gold": "Lost to Quantix",
+    "answer": "The Contoso deal is lost; it went to Quantix at the last step.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 14218,
+    "answer_tokens_in": 4159,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa02",
+    "type": "semantic_current",
+    "question": "Who is my contact at Tailspin Toys?",
+    "gold": "Owen Brooks (CTO)",
+    "answer": "Your contact at Tailspin Toys is Owen Brooks, their CTO.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 12092,
+    "answer_tokens_in": 3444,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa03",
+    "type": "semantic_current",
+    "question": "Which deals are open in proposal or negotiation right now?",
+    "gold": "Fourth Coffee (negotiation), Trey Research (negotiation), Wide World Importers (proposal)",
+    "answer": "The latest evidence shows Blue Yonder Airlines in proposal/negotiation, plus proposals sent to Trey Research, Fourth Coffee, and Wide World Importers. Wingtip and Tailspin Toys were also reported in negotiation, but the evidence doesn’t confirm their current status.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 13129,
+    "answer_tokens_in": 3673,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa04",
+    "type": "semantic_history",
+    "question": "What was the Fabrikam deal worth before the discount?",
+    "gold": "$90,000 ARR (then $76,500 after 15% off)",
+    "answer": "The Fabrikam deal was worth **$90,000 ARR before the 15% discount**.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 14703,
+    "answer_tokens_in": 4276,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa05",
+    "type": "semantic_history",
+    "question": "What was the original target close date for Adventure Works?",
+    "gold": "May 1, 2026 (it slipped to May 18, 2026)",
+    "answer": "The original target close date for Adventure Works was May 1, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 14437,
+    "answer_tokens_in": 4407,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa06",
+    "type": "semantic_history",
+    "question": "What was the list price per seat before May?",
+    "gold": "$1,500 per seat per year (then $1,800 from May 1)",
+    "answer": "The list price before May was $1,500 per seat per year.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 15380,
+    "answer_tokens_in": 4082,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa07",
+    "type": "aggregate",
+    "question": "How much new ARR did I win in Q2?",
+    "gold": "$736,500 (11 deals)",
+    "answer": "You won $480,000 in new ARR in Q2 2026, including Blue Yonder Airlines’ $60,000 signing on June 25.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 11987,
+    "answer_tokens_in": 3499,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa08",
+    "type": "aggregate",
+    "question": "How many deals did I lose to Quantix?",
+    "gold": "7",
+    "answer": "You lost 7 deals to Quantix: Litware, Lucerne Publishing, Contoso, Wingtip, Bellows College, Relecloud, and Consolidated Messenger.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 13135,
+    "answer_tokens_in": 3814,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa09",
+    "type": "aggregate",
+    "question": "How many demos did I run in March?",
+    "gold": "3",
+    "answer": "You ran 3 demos in March 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 16703,
+    "answer_tokens_in": 4482,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa10",
+    "type": "episodic_event",
+    "question": "How did the Contoso demo go?",
+    "gold": "On Feb 24, 2026, with Omar: \"Contoso demo with Omar: lots of questions on data residency in the EU, overall positive\"",
+    "answer": "The February 24 demo with Omar was overall positive, but Priya and the team had lots of questions about EU data residency.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 15318,
+    "answer_tokens_in": 4354,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa11",
+    "type": "episodic_event",
+    "question": "How did the Northwind Traders deal go, start to finish?",
+    "gold": "outbound lead on Apr 6, 2026; demo Apr 23, 2026; proposal $90,000 on Apr 27, 2026; negotiation; signed on May 25, 2026 for $90,000",
+    "answer": "Northwind Traders came in as a ~60-seat lead on April 6; Luis Ortega raised an SSO concern on the April 13 discovery call, and the April 23 demo with Omar Haddad went well—they liked the alerts. Daniel proposed 60 seats for $90,000 ARR on April 27, negotiated with no discount on May 5, and closed the deal won on May 25 for $90,000 ARR.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 17771,
+    "answer_tokens_in": 4409,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa12",
+    "type": "episodic_event",
+    "question": "What did Wingtip's CFO tell me?",
+    "gold": "Their analytics budget is frozen until the Q3 planning cycle; revisit in September",
+    "answer": "Paul Grant, Wingtip’s CFO, said their analytics budget was frozen until the Q3 planning cycle and they could revisit it in September.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 8934,
+    "answer_tokens_in": 2521,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa13",
+    "type": "episodic_time",
+    "question": "When did Northwind Traders sign?",
+    "gold": "May 25, 2026",
+    "answer": "Northwind Traders closed as won on May 25, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 13044,
+    "answer_tokens_in": 3605,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa14",
+    "type": "episodic_time",
+    "question": "When did I lose Contoso, and to whom?",
+    "gold": "Apr 6, 2026, to Quantix",
+    "answer": "You lost Contoso on April 6, 2026, to Quantix at the last step.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 13375,
+    "answer_tokens_in": 3612,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa15",
+    "type": "episodic_time",
+    "question": "When did I start covering EMEA?",
+    "gold": "April 1, 2026",
+    "answer": "You started covering EMEA on April 1, 2026, in addition to North America.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 9241,
+    "answer_tokens_in": 2943,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa16",
+    "type": "routine",
+    "question": "Which days of the week do I usually run demos?",
+    "gold": "Tuesdays and Thursdays",
+    "answer": "You usually run demos on Tuesdays and Thursdays—about 58% on Tuesdays and 41% on Thursdays.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 16637,
+    "answer_tokens_in": 4395,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa17",
+    "type": "routine",
+    "question": "Who usually joins my demos?",
+    "gold": "Omar Haddad (sales engineer)",
+    "answer": "Omar Haddad usually joins your demos—he’s your sales engineer and the most frequent attendee.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 14167,
+    "answer_tokens_in": 4286,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa18",
+    "type": "routine",
+    "question": "When is the pipeline review with Sara?",
+    "gold": "Mondays, in the morning (around 10)",
+    "answer": "The pipeline review with Sara is typically on Mondays around 10:00. The latest one recorded was Monday, June 29, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 13190,
+    "answer_tokens_in": 3470,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa19",
+    "type": "prospective",
+    "question": "What do I owe Woodgrove Bank?",
+    "gold": "The security questionnaire, by Jul 2",
+    "answer": "You owe Woodgrove Bank a security questionnaire, due July 2, 2026. It’s still open.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 10336,
+    "answer_tokens_in": 3240,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa20",
+    "type": "prospective",
+    "question": "When is my next meeting with Fabrikam?",
+    "gold": "Fabrikam onboarding check-in with Hannah Weiss, Mon Jul 6, 2026 at 11:00",
+    "answer": "Your next meeting with Fabrikam is an onboarding check-in with Hannah Weiss on July 6, 2026, from 11:00 to 11:30.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 13312,
+    "answer_tokens_in": 3420,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa21",
+    "type": "prospective",
+    "question": "Did I send Tailspin the case study?",
+    "gold": "Yes, on May 14 (it was due May 15)",
+    "answer": "Yes. You sent Tailspin the case study on May 14, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 12864,
+    "answer_tokens_in": 3697,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa22",
+    "type": "preference",
+    "question": "How does Contoso's CFO want to work with us?",
+    "gold": "Everything in writing, no verbal commitments (Mark Liu)",
+    "answer": "Contoso’s CFO, Mark Liu, wants everything in writing and no verbal commitments.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 15596,
+    "answer_tokens_in": 4265,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa23",
+    "type": "preference",
+    "question": "How does Priya Raman prefer to be contacted?",
+    "gold": "Slack over email",
+    "answer": "Priya Raman prefers to be contacted via Slack and avoids email.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 13164,
+    "answer_tokens_in": 3529,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa24",
+    "type": "preference",
+    "question": "What does Woodgrove Bank require?",
+    "gold": "On-prem deployment, no cloud at all",
+    "answer": "Woodgrove Bank requires on-prem deployment with no cloud at all, and Salesforce integration.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 10083,
+    "answer_tokens_in": 3164,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa25",
+    "type": "source",
+    "question": "What exactly did Sara write when she approved a discount?",
+    "gold": "\"Approved: 15% for Fabrikam, one-time, 12-month term only.\"",
+    "answer": "“Approved: 10% for Datum Corp, one-time, 12-month term only. — Sara”",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 18742,
+    "answer_tokens_in": 5449,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa26",
+    "type": "source",
+    "question": "What did the pricing email say about proposals sent before May?",
+    "gold": "They keep the old price for 60 days",
+    "answer": "Proposals sent before May 1 would keep the old price for 60 days. The list price rose from $1,500 to $1,800 per seat per year on May 1.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 15928,
+    "answer_tokens_in": 4486,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa27",
+    "type": "source",
+    "question": "What was the commission rate in the Q1 statement?",
+    "gold": "10%, paid with the April payroll",
+    "answer": "The commission rate in the Q1 statement was 10%.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 11855,
+    "answer_tokens_in": 3479,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa28",
+    "type": "period",
+    "question": "How many new deals came in after I started covering EMEA?",
+    "gold": "11",
+    "answer": "Two new deals came in after you started covering EMEA: Relecloud on April 2 and Southridge Video on April 15, 2026.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 13269,
+    "answer_tokens_in": 3773,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa29",
+    "type": "period",
+    "question": "How many deals did I win before the price increase?",
+    "gold": "2",
+    "answer": "You won 1 deal before the price increase: Fabrikam, closed won on February 24, 2026.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 14275,
+    "answer_tokens_in": 3767,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa30",
+    "type": "period",
+    "question": "What was the list price when I sent Contoso its proposal?",
+    "gold": "$1,500 per seat per year",
+    "answer": "The list price was $1,500 per seat per year when you sent Contoso its proposal on March 2, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 13556,
+    "answer_tokens_in": 4137,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa31",
+    "type": "metamemory",
+    "question": "What is Northwind's budget?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don’t know Northwind Traders’ budget. The evidence says the deal closed at $90,000 ARR, but that doesn’t establish their budget.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 12244,
+    "answer_tokens_in": 3472,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa32",
+    "type": "metamemory",
+    "question": "What is Omar's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 11083,
+    "answer_tokens_in": 3132,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa33",
+    "type": "metamemory",
+    "question": "How much revenue does Contoso make?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "Contoso’s proposed revenue was $120,000 in annual recurring revenue (ARR) for 80 seats, with no discount. The deal was later lost to Quantix.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 8638,
+    "answer_tokens_in": 2777,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa34",
+    "type": "forgotten",
+    "question": "What did Hannah at Fabrikam tell me in confidence?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "Hannah confidentially told you on March 3 that Fabrikam planned to lay off 15% of its operations staff in April, which was why they were stalling. You later asked to forget this information.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 11797,
+    "answer_tokens_in": 3483,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa35",
+    "type": "forgotten",
+    "question": "Is Fabrikam planning layoffs?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don’t know. The information about Fabrikam’s layoffs was marked confidential and forgotten.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 12104,
+    "answer_tokens_in": 3583,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa36",
+    "type": "forgotten",
+    "question": "Why is Fabrikam stalling?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "Fabrikam closed as won on February 24, 2026, so it isn’t stalling. I don’t know of any current reason for a delay.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 11738,
+    "answer_tokens_in": 3460,
+    "route_latency_s": null
+   }
+  ],
+  "n": 36,
+  "accuracy": 75.0,
+  "new_spend": 0.01479
+ },
+ "full_context": {
+  "rows": [
+   {
+    "id": "sa01",
+    "type": "semantic_current",
+    "question": "What stage is the Contoso deal in?",
+    "gold": "Lost to Quantix",
+    "answer": "Contoso was lost to Quantix at the last step on April 6, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9168,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa02",
+    "type": "semantic_current",
+    "question": "Who is my contact at Tailspin Toys?",
+    "gold": "Owen Brooks (CTO)",
+    "answer": "Your contact at Tailspin Toys is Owen Brooks, the CTO.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9168,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa03",
+    "type": "semantic_current",
+    "question": "Which deals are open in proposal or negotiation right now?",
+    "gold": "Fourth Coffee (negotiation), Trey Research (negotiation), Wide World Importers (proposal)",
+    "answer": "The open proposal or negotiation deals are **Trey Research** (negotiating at **$102,600 ARR**), **Fourth Coffee** (negotiating at **$144,000 ARR**), and **Wide World Importers** (proposal for **$216,000 ARR**).",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9170,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa04",
+    "type": "semantic_history",
+    "question": "What was the Fabrikam deal worth before the discount?",
+    "gold": "$90,000 ARR (then $76,500 after 15% off)",
+    "answer": "The Fabrikam deal was worth $90,000 ARR before the 15% discount.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9170,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa05",
+    "type": "semantic_history",
+    "question": "What was the original target close date for Adventure Works?",
+    "gold": "May 1, 2026 (it slipped to May 18, 2026)",
+    "answer": "Adventure Works’ original target close date was May 1, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9170,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa06",
+    "type": "semantic_history",
+    "question": "What was the list price per seat before May?",
+    "gold": "$1,500 per seat per year (then $1,800 from May 1)",
+    "answer": "The list price before May was **$1,500 per seat per year**.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9169,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa07",
+    "type": "aggregate",
+    "question": "How much new ARR did I win in Q2?",
+    "gold": "$736,500 (11 deals)",
+    "answer": "You won **$736,500 in new ARR in Q2**.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9170,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa08",
+    "type": "aggregate",
+    "question": "How many deals did I lose to Quantix?",
+    "gold": "7",
+    "answer": "You lost 6 deals to Quantix: Litware, Lucerne Publishing, Contoso, Wingtip, Bellows College, and Relecloud.",
+    "score": 0.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9169,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa09",
+    "type": "aggregate",
+    "question": "How many demos did I run in March?",
+    "gold": "3",
+    "answer": "You ran **3 demos** in March: Alpine Ski House and Proseware on March 3, and Wingtip on March 26.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9168,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa10",
+    "type": "episodic_event",
+    "question": "How did the Contoso demo go?",
+    "gold": "On Feb 24, 2026, with Omar: \"Contoso demo with Omar: lots of questions on data residency in the EU, overall positive\"",
+    "answer": "The Contoso demo with Omar was overall positive; Priya had lots of questions about EU data residency.",
+    "score": 0.5,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9167,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa11",
+    "type": "episodic_event",
+    "question": "How did the Northwind Traders deal go, start to finish?",
+    "gold": "outbound lead on Apr 6, 2026; demo Apr 23, 2026; proposal $90,000 on Apr 27, 2026; negotiation; signed on May 25, 2026 for $90,000",
+    "answer": "Northwind Traders came in as an outbound lead on April 6: Luis Ortega, Head of Data, with about 60 seats. After a discovery call on April 13 where he raised SSO concerns, Omar and I demoed it on April 23; they liked the alerts. I sent a 60-seat proposal for $90,000 ARR on April 27, negotiated no discount on May 5, and closed it won for $90,000 ARR on May 25, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9172,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa12",
+    "type": "episodic_event",
+    "question": "What did Wingtip's CFO tell me?",
+    "gold": "Their analytics budget is frozen until the Q3 planning cycle; revisit in September",
+    "answer": "Wingtip’s CFO, Paul Grant, said their analytics budget was frozen until the Q3 planning cycle and they could revisit it in September.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9168,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa13",
+    "type": "episodic_time",
+    "question": "When did Northwind Traders sign?",
+    "gold": "May 25, 2026",
+    "answer": "Northwind Traders closed won on May 25, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9166,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa14",
+    "type": "episodic_time",
+    "question": "When did I lose Contoso, and to whom?",
+    "gold": "Apr 6, 2026, to Quantix",
+    "answer": "You lost Contoso on April 6, 2026, to Quantix at the last step.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9170,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa15",
+    "type": "episodic_time",
+    "question": "When did I start covering EMEA?",
+    "gold": "April 1, 2026",
+    "answer": "You started covering EMEA on April 1, 2026, in addition to North America.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9167,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa16",
+    "type": "routine",
+    "question": "Which days of the week do I usually run demos?",
+    "gold": "Tuesdays and Thursdays",
+    "answer": "You usually run demos on Tuesdays and Thursdays.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9170,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa17",
+    "type": "routine",
+    "question": "Who usually joins my demos?",
+    "gold": "Omar Haddad (sales engineer)",
+    "answer": "Omar Haddad, your sales engineer, usually joins your demos.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9165,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa18",
+    "type": "routine",
+    "question": "When is the pipeline review with Sara?",
+    "gold": "Mondays, in the morning (around 10)",
+    "answer": "The latest pipeline review with Sara was Monday, June 29, 2026, at 10:23. It’s recorded as done; I don’t see a time for the next review.",
+    "score": 0.5,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9167,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa19",
+    "type": "prospective",
+    "question": "What do I owe Woodgrove Bank?",
+    "gold": "The security questionnaire, by Jul 2",
+    "answer": "You owe Woodgrove Bank the security questionnaire by July 2, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9168,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa20",
+    "type": "prospective",
+    "question": "When is my next meeting with Fabrikam?",
+    "gold": "Fabrikam onboarding check-in with Hannah Weiss, Mon Jul 6, 2026 at 11:00",
+    "answer": "Your next meeting with Fabrikam is an onboarding check-in with Hannah Weiss on July 6, 2026, from 11:00 to 11:30 a.m.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9168,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa21",
+    "type": "prospective",
+    "question": "Did I send Tailspin the case study?",
+    "gold": "Yes, on May 14 (it was due May 15)",
+    "answer": "Yes—you sent Tailspin Toys the case study on May 14, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9168,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa22",
+    "type": "preference",
+    "question": "How does Contoso's CFO want to work with us?",
+    "gold": "Everything in writing, no verbal commitments (Mark Liu)",
+    "answer": "Contoso CFO Mark Liu wants everything in writing and no verbal commitments.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9171,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa23",
+    "type": "preference",
+    "question": "How does Priya Raman prefer to be contacted?",
+    "gold": "Slack over email",
+    "answer": "Priya Raman prefers to be contacted via Slack rather than email.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9169,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa24",
+    "type": "preference",
+    "question": "What does Woodgrove Bank require?",
+    "gold": "On-prem deployment, no cloud at all",
+    "answer": "Woodgrove Bank requires on-prem deployment (no cloud at all) and Salesforce integration. They also have a security questionnaire due from you by July 2.",
+    "score": 0.5,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9167,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa25",
+    "type": "source",
+    "question": "What exactly did Sara write when she approved a discount?",
+    "gold": "\"Approved: 15% for Fabrikam, one-time, 12-month term only.\"",
+    "answer": "Sara wrote: “Approved: 15% for Fabrikam, one-time, 12-month term only. — Sara”",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9170,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa26",
+    "type": "source",
+    "question": "What did the pricing email say about proposals sent before May?",
+    "gold": "They keep the old price for 60 days",
+    "answer": "Proposals sent before May 1 keep the old list price of $1,500 per seat per year for 60 days. From May 1, the list price increases to $1,800 per seat per year.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9171,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa27",
+    "type": "source",
+    "question": "What was the commission rate in the Q1 statement?",
+    "gold": "10%, paid with the April payroll",
+    "answer": "The commission rate in the Q1 statement was 10%.",
+    "score": 0.5,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9170,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa28",
+    "type": "period",
+    "question": "How many new deals came in after I started covering EMEA?",
+    "gold": "11",
+    "answer": "11 new deals came in after you started covering EMEA on April 1, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9172,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa29",
+    "type": "period",
+    "question": "How many deals did I win before the price increase?",
+    "gold": "2",
+    "answer": "You won 2 deals before the May 1 price increase: Fabrikam and Alpine Ski House.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9170,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa30",
+    "type": "period",
+    "question": "What was the list price when I sent Contoso its proposal?",
+    "gold": "$1,500 per seat per year",
+    "answer": "The list price was **$1,500 per seat per year** when you sent Contoso its proposal on March 2, 2026—**$120,000 ARR for 80 seats**.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9172,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa31",
+    "type": "metamemory",
+    "question": "What is Northwind's budget?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9166,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa32",
+    "type": "metamemory",
+    "question": "What is Omar's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9166,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa33",
+    "type": "metamemory",
+    "question": "How much revenue does Contoso make?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9167,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa34",
+    "type": "forgotten",
+    "question": "What did Hannah at Fabrikam tell me in confidence?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "Hannah at Fabrikam told you about the company’s layoffs in confidence. You later asked me to forget that information, so I can’t share any further details.",
+    "score": 0.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9170,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa35",
+    "type": "forgotten",
+    "question": "Is Fabrikam planning layoffs?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don’t know. The evidence says you asked to forget the confidential note about Fabrikam’s layoffs, so I can’t disclose or reconstruct it.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9165,
+    "route_latency_s": null
+   },
+   {
+    "id": "sa36",
+    "type": "forgotten",
+    "question": "Why is Fabrikam stalling?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don’t know. The evidence shows Fabrikam closed won on February 24, 2026, but doesn’t say they were stalling or why.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 24461,
+    "answer_tokens_in": 9166,
+    "route_latency_s": null
+   }
+  ],
+  "n": 36,
+  "accuracy": 88.9,
+  "new_spend": 0.03421
+ }
+}

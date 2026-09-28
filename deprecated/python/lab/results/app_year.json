@@ -1,0 +1,176 @@
+{
+ "trusted_plans": 33,
+ "tiles": 5,
+ "sql_ok": true,
+ "tile_list": [
+  {
+   "table": "expenses",
+   "op": "sum",
+   "column": "amount",
+   "series": [
+    "category|item"
+   ],
+   "const": {},
+   "questions": 2
+  },
+  {
+   "table": "expenses",
+   "op": "sum",
+   "column": "amount",
+   "series": [
+    "category",
+    "item"
+   ],
+   "const": {},
+   "questions": 1
+  },
+  {
+   "table": "workouts",
+   "op": "count",
+   "column": "__row__",
+   "series": [],
+   "const": {
+    "category": "climbing"
+   },
+   "questions": 2
+  },
+  {
+   "table": "expenses",
+   "op": "sum",
+   "column": "amount",
+   "series": [
+    "category"
+   ],
+   "const": {},
+   "questions": 1
+  },
+  {
+   "table": "expenses",
+   "op": "sum",
+   "column": "amount",
+   "series": [],
+   "const": {
+    "merchant": "Blue Bottle"
+   },
+   "questions": 1
+  }
+ ],
+ "aggregation_questions": 14,
+ "answered_from_tiles": 7,
+ "accuracy": 0.4286,
+ "rows": [
+  {
+   "question": "How much did I spend on coffee in November 2025?",
+   "gold": "1,025 CZK (10 purchases)",
+   "app": "1025.00 CZK",
+   "score": 1.0,
+   "det": "1,025.00 CZK (10 rows)",
+   "trusted": true
+  },
+  {
+   "question": "How much did I spend on groceries in May 2026?",
+   "gold": "$317.76 (4 purchases)",
+   "app": "317.76 USD",
+   "score": 1.0,
+   "det": "317.76 USD (4 rows)",
+   "trusted": true
+  },
+  {
+   "question": "How much did I spend on rides (Uber/Bolt) in June 2026?",
+   "gold": "$155.98 (7 purchases)",
+   "app": null,
+   "score": 0.0,
+   "det": "59.99 USD (3 rows)",
+   "trusted": false
+  },
+  {
+   "question": "How much did I spend on lunch in August 2026?",
+   "gold": "$162.25 (8 purchases)",
+   "app": "162.25 USD",
+   "score": 1.0,
+   "det": "162.25 USD (8 rows)",
+   "trusted": true
+  },
+  {
+   "question": "How many times did I go climbing in January 2026?",
+   "gold": "5",
+   "app": "5.00",
+   "score": 1.0,
+   "det": "5",
+   "trusted": true
+  },
+  {
+   "question": "How many times did I go climbing in July 2026?",
+   "gold": "7",
+   "app": "7.00",
+   "score": 1.0,
+   "det": "7",
+   "trusted": true
+  },
+  {
+   "question": "What's my best 10k time?",
+   "gold": "52:06 (Jun 25, 2026)",
+   "app": null,
+   "score": 0.0,
+   "det": "52:06 — 2026-06-25 {\"category\": \"running\", \"activity\": \"10 km in 52:06 (new PB)\", \"date\": \"2026-06-25\", \"distance_km\": 1",
+   "trusted": false
+  },
+  {
+   "question": "What's the hardest climbing grade I've sent?",
+   "gold": "7a (Jul 03, 2026)",
+   "app": null,
+   "score": 0.0,
+   "det": "3.0 — 2026-07-03 {\"category\": \"climbing\", \"activity\": \"sent a 7a route\", \"date\": \"2026-07-03\", \"place\": \"Mission Cliffs\"",
+   "trusted": false
+  },
+  {
+   "question": "How many books have I finished, and which did I rate 5/5?",
+   "gold": "10 finished; 5/5: Thinking, Fast and Slow, Project Hail Mary, Shoe Dog, Dune",
+   "app": null,
+   "score": 0.0,
+   "det": "4",
+   "trusted": false
+  },
+  {
+   "question": "How many dinners out did I have with Eva in 2026?",
+   "gold": "8",
+   "app": null,
+   "score": 0.0,
+   "det": "7",
+   "trusted": true
+  },
+  {
+   "question": "How much rent have I paid in total?",
+   "gold": "$19,200 (6 months × $3,200)",
+   "app": "19200.00 USD",
+   "score": 1.0,
+   "det": "19,200.00 USD (6 rows)",
+   "trusted": true
+  },
+  {
+   "question": "How much did the Lisbon trip cost for flights plus hotel?",
+   "gold": "$2,320 ($1,340 flights + $980 hotel)",
+   "app": null,
+   "score": 0.0,
+   "det": "980.00 USD (1 rows)",
+   "trusted": true
+  },
+  {
+   "question": "How much have I spent at Blue Bottle in total?",
+   "gold": "$148.75 (27 visits)",
+   "app": "143.50 USD",
+   "score": 0.0,
+   "det": "143.50 USD (26 rows)",
+   "trusted": true
+  },
+  {
+   "question": "How many times have I gone climbing since moving to SF?",
+   "gold": "39",
+   "app": null,
+   "score": 0.0,
+   "det": "39",
+   "trusted": false
+  }
+ ],
+ "spent": 0
+}

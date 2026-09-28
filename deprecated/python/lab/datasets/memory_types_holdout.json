@@ -1,0 +1,222 @@
+{
+ "name": "memory_types_holdout",
+ "source": "life_scale.json",
+ "questions": [
+  {
+   "id": "ho01",
+   "type": "semantic_current",
+   "question": "What is David Mokos's email?",
+   "answer": "david@nebula.ai"
+  },
+  {
+   "id": "ho02",
+   "type": "semantic_current",
+   "question": "Who is my landlord?",
+   "answer": "Raj Gupta (+1 415 555 0187)"
+  },
+  {
+   "id": "ho03",
+   "type": "semantic_current",
+   "question": "Where does Ondra work?",
+   "answer": "Productboard"
+  },
+  {
+   "id": "ho04",
+   "type": "semantic_history",
+   "question": "Where did Klára live in December 2025?",
+   "answer": "Berlin"
+  },
+  {
+   "id": "ho05",
+   "type": "semantic_history",
+   "question": "What was Eva to me before we got engaged?",
+   "answer": "My girlfriend"
+  },
+  {
+   "id": "ho06",
+   "type": "semantic_history",
+   "question": "What was Tom's phone number in 2025?",
+   "answer": "+420 777 123 456 (he changed it on Feb 10, 2026)"
+  },
+  {
+   "id": "ho07",
+   "type": "aggregate",
+   "question": "How much did I spend on lunch in Prague in 2025?",
+   "answer": "64,729 CZK (227 lunches)"
+  },
+  {
+   "id": "ho08",
+   "type": "aggregate",
+   "question": "How many movies did I watch in 2025?",
+   "answer": "39"
+  },
+  {
+   "id": "ho09",
+   "type": "aggregate",
+   "question": "How many times did I go running in August 2026?",
+   "answer": "5"
+  },
+  {
+   "id": "ho10",
+   "type": "episodic_event",
+   "question": "What did I do on November 29, 2024?",
+   "answer": "Coffee at Doubleshot, lunch at Bistro Monk, climbing at Smíchoff with Tom, dinner at Maso a Kobliha with Tom (1,560 CZK), drinks with Tom at U Hrocha, ordered climbing shoes from Decathlon, Bolt home"
+  },
+  {
+   "id": "ho11",
+   "type": "episodic_event",
+   "question": "Who did I have dinner with on August 5, 2026, and where?",
+   "answer": "David (David Mokos), at Zuni Café ($135.40)"
+  },
+  {
+   "id": "ho12",
+   "type": "episodic_event",
+   "question": "What happened on February 20, 2026?",
+   "answer": "We closed the seed round: $3M led by Northwind Ventures (Sarah Kim); I also went climbing with Tom"
+  },
+  {
+   "id": "ho13",
+   "type": "episodic_time",
+   "question": "When did Nina Rossi start at Nebula?",
+   "answer": "March 1, 2026"
+  },
+  {
+   "id": "ho14",
+   "type": "episodic_time",
+   "question": "When did I finish Project Hail Mary?",
+   "answer": "December 31, 2025"
+  },
+  {
+   "id": "ho15",
+   "type": "episodic_time",
+   "question": "When did Klára move to London?",
+   "answer": "June 2026 (I mentioned it on June 10, 2026)"
+  },
+  {
+   "id": "ho16",
+   "type": "routine",
+   "question": "Which days do I usually buy groceries?",
+   "answer": "Wednesdays and Saturdays"
+  },
+  {
+   "id": "ho17",
+   "type": "routine",
+   "question": "Where did I usually get coffee in Prague?",
+   "answer": "A rotation of cafés, most often Café Savoy, EMA Espresso Bar and Kafe Francin (also Café Lounge, Doubleshot)"
+  },
+  {
+   "id": "ho18",
+   "type": "routine",
+   "question": "How often do I go climbing?",
+   "answer": "About 1.6 times a week (Tuesdays and Fridays, sometimes Sundays)"
+  },
+  {
+   "id": "ho19",
+   "type": "prospective",
+   "question": "Do I still need to cancel my Czech phone plan?",
+   "answer": "No: it was done on Apr 28, 2026"
+  },
+  {
+   "id": "ho20",
+   "type": "prospective",
+   "question": "When was my dentist appointment in San Francisco?",
+   "answer": "June 3, 2026 at 9:30, with Dr. Lee at Castro Dental"
+  },
+  {
+   "id": "ho21",
+   "type": "prospective",
+   "question": "Did I send the Q2 investor update?",
+   "answer": "Yes, on Jul 3, 2026"
+  },
+  {
+   "id": "ho22",
+   "type": "preference",
+   "question": "Which movies did I rate 5/5?",
+   "answer": "Dune: Part Two, Flow, Hamnet, One Battle After Another, Past Lives, Perfect Days, Sentimental Value, The Wild Robot"
+  },
+  {
+   "id": "ho23",
+   "type": "preference",
+   "question": "How did I like Sapiens?",
+   "answer": "3/5"
+  },
+  {
+   "id": "ho24",
+   "type": "preference",
+   "question": "What did I think of Dune: Part Two?",
+   "answer": "Loved it: 5/5 (watched it three times)"
+  },
+  {
+   "id": "ho25",
+   "type": "source",
+   "question": "What was the post-money valuation in the term sheet?",
+   "answer": "$15M"
+  },
+  {
+   "id": "ho26",
+   "type": "source",
+   "question": "What are the check-in and check-out dates of the Lisbon hotel?",
+   "answer": "Check-in May 22, check-out May 26, 2026 (Memmo Alfama)"
+  },
+  {
+   "id": "ho27",
+   "type": "source",
+   "question": "What is my landlord's email address?",
+   "answer": "raj.gupta@gmail.com"
+  },
+  {
+   "id": "ho28",
+   "type": "period",
+   "question": "Which gym was I climbing at when Nina joined Nebula?",
+   "answer": "Smíchoff, in Prague"
+  },
+  {
+   "id": "ho29",
+   "type": "period",
+   "question": "Where was I living when Oscar joined Nebula?",
+   "answer": "Prague (Jan 12, 2026)"
+  },
+  {
+   "id": "ho30",
+   "type": "period",
+   "question": "What was going on in my life in May 2026?",
+   "answer": "Any three of: Eva got the job at Gensler (May 4) and moved to SF (May 20); the Lisbon trip with Eva (May 22-26); booked the Lisbon flights and hotel (May 2-3); finished Dune (May 11); Priya introduced me to Mark Chen (May 12)"
+  },
+  {
+   "id": "ho31",
+   "type": "metamemory",
+   "question": "What's Klára's phone number?",
+   "answer": "UNKNOWN: never mentioned"
+  },
+  {
+   "id": "ho32",
+   "type": "metamemory",
+   "question": "Where did Mark Chen work before Stripe?",
+   "answer": "UNKNOWN: never mentioned"
+  },
+  {
+   "id": "ho33",
+   "type": "metamemory",
+   "question": "What is my passport number?",
+   "answer": "UNKNOWN: never mentioned"
+  },
+  {
+   "id": "ho34",
+   "type": "forgotten",
+   "question": "What's the number of the guy from Rohlik I met at a meetup?",
+   "answer": "UNKNOWN: the user asked to forget him"
+  },
+  {
+   "id": "ho35",
+   "type": "forgotten",
+   "question": "What is Marco's number again?",
+   "answer": "UNKNOWN: the user asked to forget it"
+  },
+  {
+   "id": "ho36",
+   "type": "forgotten",
+   "question": "Where does Jan Dvořák work?",
+   "answer": "UNKNOWN: the user asked to forget him"
+  }
+ ]
+}

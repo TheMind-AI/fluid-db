@@ -1,0 +1,103 @@
+{
+ "scenario": "projects",
+ "messages": 197,
+ "truth_records": 93,
+ "write_accuracy": 0.9677,
+ "tiers": {
+  "C": 119,
+  "C-skip": 30,
+  "A": 48
+ },
+ "tier_a_after_bootstrap": 0.6234,
+ "by_kind": {
+  "action": {
+   "ok": 12,
+   "of": 12,
+   "acc": 1.0
+  },
+  "action_done": {
+   "ok": 9,
+   "of": 9,
+   "acc": 1.0
+  },
+  "action_slip": {
+   "ok": 2,
+   "of": 2,
+   "acc": 1.0
+  },
+  "decision": {
+   "ok": 4,
+   "of": 4,
+   "acc": 1.0
+  },
+  "hire": {
+   "ok": 1,
+   "of": 2,
+   "acc": 0.5
+  },
+  "incident": {
+   "ok": 3,
+   "of": 3,
+   "acc": 1.0
+  },
+  "launch": {
+   "ok": 2,
+   "of": 2,
+   "acc": 1.0
+  },
+  "one_on_one": {
+   "ok": 50,
+   "of": 52,
+   "acc": 0.962
+  },
+  "owner": {
+   "ok": 1,
+   "of": 1,
+   "acc": 1.0
+  },
+  "postmortem": {
+   "ok": 3,
+   "of": 3,
+   "acc": 1.0
+  },
+  "reorg": {
+   "ok": 2,
+   "of": 2,
+   "acc": 1.0
+  },
+  "team": {
+   "ok": 1,
+   "of": 1,
+   "acc": 1.0
+  }
+ },
+ "by_tier": {
+  "A": 1.0,
+  "C": 0.9589
+ },
+ "top_misses": {
+  "one_on_one: no row": 1,
+  "one_on_one.date": 1,
+  "hire: no row": 1
+ },
+ "forget": [
+  {
+   "request": "please forget what I wrote about Tom's surgery, that's private",
+   "left_behind": []
+  }
+ ],
+ "tables": {
+  "emails": 1,
+  "events": 122,
+  "hiring_plans": 1,
+  "incidents": 3,
+  "interests": 2,
+  "people": 5,
+  "preferences": 1,
+  "projects": 3,
+  "tasks": 12,
+  "team_members": 5,
+  "teams": 2
+ },
+ "ingest_spent": 0.0815
+}

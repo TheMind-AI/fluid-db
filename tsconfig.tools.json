@@ -1,0 +1,7 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "types": ["bun"]
+  },
+  "include": ["scripts", "examples", "packages/worker/scripts/*.ts", "evals", "test"]
+}

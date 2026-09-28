@@ -1,0 +1,570 @@
+{
+ "name": "memory_types",
+ "source": "life_scale.json",
+ "questions": [
+  {
+   "id": "mt01",
+   "type": "semantic_current",
+   "question": "What is my phone number?",
+   "answer": "+1 415 555 0199"
+  },
+  {
+   "id": "mt02",
+   "type": "semantic_current",
+   "question": "What is Tom's phone number?",
+   "answer": "+420 777 999 000"
+  },
+  {
+   "id": "mt03",
+   "type": "semantic_current",
+   "question": "Where does Eva (my partner) work?",
+   "answer": "Gensler"
+  },
+  {
+   "id": "mt04",
+   "type": "semantic_current",
+   "question": "Where does my sister Klára live?",
+   "answer": "London"
+  },
+  {
+   "id": "mt05",
+   "type": "semantic_current",
+   "question": "What is David's US phone number?",
+   "answer": "+1 628 688 4995 (corrected from +1 628 688 4994)"
+  },
+  {
+   "id": "mt06",
+   "type": "semantic_current",
+   "question": "What is my relationship with Eva now?",
+   "answer": "Engaged: she is my fiancée (since Jul 12, 2026)"
+  },
+  {
+   "id": "mt07",
+   "type": "semantic_current",
+   "question": "What's Lucas Meyer's email?",
+   "answer": "lucas@sequoia.com"
+  },
+  {
+   "id": "mt08",
+   "type": "semantic_current",
+   "question": "What is Priya Patel's email?",
+   "answer": "priya@stripe.com"
+  },
+  {
+   "id": "mt09",
+   "type": "semantic_history",
+   "question": "What was my phone number before my current one?",
+   "answer": "+420 722 238 738"
+  },
+  {
+   "id": "mt10",
+   "type": "semantic_history",
+   "question": "What was Tom's previous phone number?",
+   "answer": "+420 777 123 456"
+  },
+  {
+   "id": "mt11",
+   "type": "semantic_history",
+   "question": "Where did I live before San Francisco?",
+   "answer": "Prague"
+  },
+  {
+   "id": "mt12",
+   "type": "semantic_history",
+   "question": "Where did Eva work before her current job?",
+   "answer": "Studio Kvadrat"
+  },
+  {
+   "id": "mt13",
+   "type": "semantic_history",
+   "question": "Where did Klára live before?",
+   "answer": "Berlin"
+  },
+  {
+   "id": "mt14",
+   "type": "semantic_history",
+   "question": "Which gym was I a member of in Prague?",
+   "answer": "Smíchoff (1190 CZK/month, ended March 2026)"
+  },
+  {
+   "id": "mt15",
+   "type": "semantic_history",
+   "question": "What was David's US number before I corrected it?",
+   "answer": "+1 628 688 4994"
+  },
+  {
+   "id": "mt16",
+   "type": "semantic_history",
+   "question": "What was Oscar Lind's job at Nebula?",
+   "answer": "Product manager (he left on Aug 15, 2026 for Stripe)"
+  },
+  {
+   "id": "mt17",
+   "type": "aggregate",
+   "question": "How much did I spend on coffee in 2025?",
+   "answer": "34,875 CZK (380 purchases)"
+  },
+  {
+   "id": "mt18",
+   "type": "aggregate",
+   "question": "What was my average sleep in February 2026?",
+   "answer": "6.98 hours (24 nights)"
+  },
+  {
+   "id": "mt19",
+   "type": "aggregate",
+   "question": "How much have I spent on drinks with Kuba?",
+   "answer": "4,520 CZK (15 times)"
+  },
+  {
+   "id": "mt20",
+   "type": "aggregate",
+   "question": "How many times did I get coffee at Doubleshot?",
+   "answer": "93"
+  },
+  {
+   "id": "mt21",
+   "type": "aggregate",
+   "question": "How many Uber rides have I taken?",
+   "answer": "88"
+  },
+  {
+   "id": "mt22",
+   "type": "aggregate",
+   "question": "How many times did I go climbing in January 2026?",
+   "answer": "7"
+  },
+  {
+   "id": "mt23",
+   "type": "aggregate",
+   "question": "How many dinners out did I have with Eva in 2026?",
+   "answer": "11"
+  },
+  {
+   "id": "mt24",
+   "type": "aggregate",
+   "question": "How much have I spent at Blue Bottle in total?",
+   "answer": "$166.00 (29 visits)"
+  },
+  {
+   "id": "mt25",
+   "type": "episodic_event",
+   "question": "What did I do on March 28, 2025?",
+   "answer": "Coffee at Můj šálek kávy, lunch at Bistro Monk, climbing at Smíchoff with Tom, ordered shelves from IKEA, watched The Phoenician Scheme (3/5), drinks with Tom at Vinograf"
+  },
+  {
+   "id": "mt26",
+   "type": "episodic_event",
+   "question": "What did I do on June 23, 2026?",
+   "answer": "Coffee at Philz Coffee, lunch at Deli Board, climbing at Mission Cliffs, dinner with Eva at Flour + Water ($96.80), watched Sinners (4/5), Uber home"
+  },
+  {
+   "id": "mt27",
+   "type": "episodic_event",
+   "question": "Who did I have drinks with after climbing on March 28, 2025, and where?",
+   "answer": "Tom, at Vinograf (320 CZK)"
+  },
+  {
+   "id": "mt28",
+   "type": "episodic_event",
+   "question": "What happened on July 12, 2026?",
+   "answer": "I proposed to Eva and she said yes: we got engaged"
+  },
+  {
+   "id": "mt29",
+   "type": "episodic_event",
+   "question": "Where did I meet Lucas Meyer?",
+   "answer": "At Web Summit (Nov 5, 2025)"
+  },
+  {
+   "id": "mt30",
+   "type": "episodic_event",
+   "question": "Where did I meet Priya Patel?",
+   "answer": "At a YC mixer (Apr 22, 2026)"
+  },
+  {
+   "id": "mt31",
+   "type": "episodic_event",
+   "question": "What did I do for Christmas 2025?",
+   "answer": "Took the train to Brno to spend Christmas with my parents, back on Jan 2"
+  },
+  {
+   "id": "mt32",
+   "type": "episodic_event",
+   "question": "What did I do on April 6, 2025?",
+   "answer": "Coffee at Doubleshot, climbing at Smíchoff with Tom, dinner at Sasazu with Ondra (2,480 CZK), Bolt home, drinks with Ondra at U Hrocha"
+  },
+  {
+   "id": "mt33",
+   "type": "episodic_time",
+   "question": "When did I get engaged?",
+   "answer": "July 12, 2026"
+  },
+  {
+   "id": "mt34",
+   "type": "episodic_time",
+   "question": "When did we close the seed round?",
+   "answer": "February 20, 2026"
+  },
+  {
+   "id": "mt35",
+   "type": "episodic_time",
+   "question": "When did I move to San Francisco?",
+   "answer": "April 1, 2026 (flew UA 8843 on Mar 31)"
+  },
+  {
+   "id": "mt36",
+   "type": "episodic_time",
+   "question": "When did I last have dinner with Ondra?",
+   "answer": "Mar 18, 2026 at Eska"
+  },
+  {
+   "id": "mt37",
+   "type": "episodic_time",
+   "question": "When did I first send a 6c?",
+   "answer": "November 12, 2024"
+  },
+  {
+   "id": "mt38",
+   "type": "episodic_time",
+   "question": "When did Eva move to San Francisco?",
+   "answer": "May 20, 2026"
+  },
+  {
+   "id": "mt39",
+   "type": "episodic_time",
+   "question": "When did Oscar leave Nebula?",
+   "answer": "August 15, 2026"
+  },
+  {
+   "id": "mt40",
+   "type": "episodic_time",
+   "question": "When did I get my flu shot?",
+   "answer": "November 25, 2025"
+  },
+  {
+   "id": "mt41",
+   "type": "routine",
+   "question": "Which days of the week do I usually go climbing?",
+   "answer": "Tuesdays and Fridays (sometimes Sundays)"
+  },
+  {
+   "id": "mt42",
+   "type": "routine",
+   "question": "Which days do I usually run, and at what time of day?",
+   "answer": "Thursdays and Mondays, in the morning"
+  },
+  {
+   "id": "mt43",
+   "type": "routine",
+   "question": "Who do I usually climb with these days?",
+   "answer": "Nina (Nina Rossi), since moving to SF"
+  },
+  {
+   "id": "mt44",
+   "type": "routine",
+   "question": "What time of day do I usually go climbing?",
+   "answer": "In the evening (around 7-9 pm)"
+  },
+  {
+   "id": "mt45",
+   "type": "routine",
+   "question": "How much does a coffee usually cost me in San Francisco?",
+   "answer": "about $5.50 (between $4.50 and $6.75)"
+  },
+  {
+   "id": "mt46",
+   "type": "routine",
+   "question": "Which grocery stores do I use in San Francisco, and on which days?",
+   "answer": "Trader Joe's and Whole Foods, on Wednesdays and Saturdays"
+  },
+  {
+   "id": "mt47",
+   "type": "routine",
+   "question": "Where do I usually get lunch in San Francisco?",
+   "answer": "mostly Souvla, Mixt, Nopalito, Tartine Manufactory"
+  },
+  {
+   "id": "mt48",
+   "type": "routine",
+   "question": "What's my usual 10k time these days?",
+   "answer": "about 47 minutes (recent 10k runs 46:53-48:44)"
+  },
+  {
+   "id": "mt49",
+   "type": "prospective",
+   "question": "What reminders are still open?",
+   "answer": "Get my SF driver's license (was due Jun 30) and book the wedding venue (due Oct 31)"
+  },
+  {
+   "id": "mt50",
+   "type": "prospective",
+   "question": "What's my next meeting?",
+   "answer": "The Nebula board meeting on Thu Oct 1, 2026 at 16:00, 1 Mission St, San Francisco"
+  },
+  {
+   "id": "mt51",
+   "type": "prospective",
+   "question": "When and where is the Series A kickoff?",
+   "answer": "Fri Oct 9, 2026 at 10:00 at the Northwind office, 2 Embarcadero Center (with Sarah Kim)"
+  },
+  {
+   "id": "mt52",
+   "type": "prospective",
+   "question": "What happened to the February dentist appointment?",
+   "answer": "Cancelled (it was Feb 18 with Dr. Horák)"
+  },
+  {
+   "id": "mt53",
+   "type": "prospective",
+   "question": "What happened to my reminder to renew my Czech ID card?",
+   "answer": "I dropped it on Feb 25, 2026: not needed anymore"
+  },
+  {
+   "id": "mt54",
+   "type": "prospective",
+   "question": "Is the wedding venue booked?",
+   "answer": "No, still open (due Oct 31)"
+  },
+  {
+   "id": "mt55",
+   "type": "prospective",
+   "question": "When was the call with Lucas Meyer?",
+   "answer": "Wed Jan 21, 2026 at 14:00 (moved from Jan 14 at 10:00)"
+  },
+  {
+   "id": "mt56",
+   "type": "prospective",
+   "question": "Which of my reminders are overdue?",
+   "answer": "Get my SF driver's license (it was due Jun 30, 2026)"
+  },
+  {
+   "id": "mt57",
+   "type": "preference",
+   "question": "What does Mom love?",
+   "answer": "Orchids"
+  },
+  {
+   "id": "mt58",
+   "type": "preference",
+   "question": "What is Eva allergic to?",
+   "answer": "Peanuts"
+  },
+  {
+   "id": "mt59",
+   "type": "preference",
+   "question": "Which books did I rate 5/5?",
+   "answer": "Thinking, Fast and Slow; Project Hail Mary; Shoe Dog; Dune"
+  },
+  {
+   "id": "mt60",
+   "type": "preference",
+   "question": "What did I think of The Substance?",
+   "answer": "Not much: I rated it 2/5"
+  },
+  {
+   "id": "mt61",
+   "type": "preference",
+   "question": "What did I love about the Lisbon trip?",
+   "answer": "The pastéis de nata at Manteigaria (it was an amazing trip)"
+  },
+  {
+   "id": "mt62",
+   "type": "preference",
+   "question": "Which movies did I rate 2/5?",
+   "answer": "Emilia Pérez, Materialists, Mickey 17, The Substance"
+  },
+  {
+   "id": "mt63",
+   "type": "preference",
+   "question": "How did I rate Atomic Habits?",
+   "answer": "3/5"
+  },
+  {
+   "id": "mt64",
+   "type": "preference",
+   "question": "Which of my friends climbs, besides Tom?",
+   "answer": "Nina Rossi (she climbs too; my climbing partner in SF)"
+  },
+  {
+   "id": "mt65",
+   "type": "source",
+   "question": "How big was the security deposit for my apartment?",
+   "answer": "$4,800"
+  },
+  {
+   "id": "mt66",
+   "type": "source",
+   "question": "What's the confirmation code for my flight to San Francisco?",
+   "answer": "K7QX2P (United UA 8843)"
+  },
+  {
+   "id": "mt67",
+   "type": "source",
+   "question": "What time did my flight to San Francisco leave, and which flight was it?",
+   "answer": "10:05 on Tue Mar 31, 2026, United UA 8843 (PRG to SFO)"
+  },
+  {
+   "id": "mt68",
+   "type": "source",
+   "question": "What were the terms in Sarah's term sheet draft?",
+   "answer": "$3M at a $15M post-money valuation, 1x non-participating preference"
+  },
+  {
+   "id": "mt69",
+   "type": "source",
+   "question": "How many guests was the Lisbon hotel booked for, and what did it cost?",
+   "answer": "2 guests, $980 in total (Memmo Alfama, May 22-26)"
+  },
+  {
+   "id": "mt70",
+   "type": "source",
+   "question": "Who sends the invites for the Nebula board meetings?",
+   "answer": "David Mokos (david@nebula.ai)"
+  },
+  {
+   "id": "mt71",
+   "type": "source",
+   "question": "Where did you learn that Eva is allergic to peanuts?",
+   "answer": "From my message on Oct 6, 2025 (the one saying she works as an architect at Studio Kvadrat)"
+  },
+  {
+   "id": "mt72",
+   "type": "source",
+   "question": "According to my lease, when is rent due and how much is it?",
+   "answer": "$3,200 a month, due on the 1st"
+  },
+  {
+   "id": "mt73",
+   "type": "period",
+   "question": "What book was I reading when I moved to San Francisco?",
+   "answer": "Deep Work by Cal Newport"
+  },
+  {
+   "id": "mt74",
+   "type": "period",
+   "question": "Where did I live in 2025?",
+   "answer": "Prague"
+  },
+  {
+   "id": "mt75",
+   "type": "period",
+   "question": "Who was my climbing partner when I lived in Prague?",
+   "answer": "Tom Novak"
+  },
+  {
+   "id": "mt76",
+   "type": "period",
+   "question": "Where was I living when we closed the seed?",
+   "answer": "Prague"
+  },
+  {
+   "id": "mt77",
+   "type": "period",
+   "question": "What were the big events of my first six months in San Francisco?",
+   "answer": "Any three of: joined Mission Cliffs (Apr 3), got a US number (Apr 10), met Priya Patel (Apr 22), Eva got the job at Gensler and moved to SF (May 20), the Lisbon trip (May 22-26), got engaged to Eva (Jul 12), Oscar left Nebula (Aug 15)"
+  },
+  {
+   "id": "mt78",
+   "type": "period",
+   "question": "How long have I lived in San Francisco?",
+   "answer": "Since April 1, 2026: about six months"
+  },
+  {
+   "id": "mt79",
+   "type": "period",
+   "question": "Where did I climb, and with whom, in each city I lived in?",
+   "answer": "Prague: Smíchoff with Tom; San Francisco: Mission Cliffs with Nina"
+  },
+  {
+   "id": "mt80",
+   "type": "period",
+   "question": "Which city was I living in when I finished Thinking, Fast and Slow?",
+   "answer": "Prague (Nov 6, 2025)"
+  },
+  {
+   "id": "mt81",
+   "type": "metamemory",
+   "question": "What's my blood type?",
+   "answer": "UNKNOWN: never mentioned"
+  },
+  {
+   "id": "mt82",
+   "type": "metamemory",
+   "question": "What's Ondra's email address?",
+   "answer": "UNKNOWN: never mentioned"
+  },
+  {
+   "id": "mt83",
+   "type": "metamemory",
+   "question": "How much does Eva earn?",
+   "answer": "UNKNOWN: never mentioned"
+  },
+  {
+   "id": "mt84",
+   "type": "metamemory",
+   "question": "What's Nina's birthday?",
+   "answer": "UNKNOWN: never mentioned"
+  },
+  {
+   "id": "mt85",
+   "type": "metamemory",
+   "question": "What is Nina's phone number?",
+   "answer": "UNKNOWN: never mentioned"
+  },
+  {
+   "id": "mt86",
+   "type": "metamemory",
+   "question": "When is Dad's birthday?",
+   "answer": "UNKNOWN: never mentioned"
+  },
+  {
+   "id": "mt87",
+   "type": "metamemory",
+   "question": "What's Sarah Kim's phone number?",
+   "answer": "UNKNOWN: never mentioned"
+  },
+  {
+   "id": "mt88",
+   "type": "metamemory",
+   "question": "What car do I drive?",
+   "answer": "UNKNOWN: never mentioned"
+  },
+  {
+   "id": "mt89",
+   "type": "forgotten",
+   "question": "Who is Jan Dvořák?",
+   "answer": "UNKNOWN: the user asked to forget him"
+  },
+  {
+   "id": "mt90",
+   "type": "forgotten",
+   "question": "What's Marco's phone number?",
+   "answer": "UNKNOWN: the user asked to forget it"
+  },
+  {
+   "id": "mt91",
+   "type": "forgotten",
+   "question": "What's Jan Dvořák's phone number?",
+   "answer": "UNKNOWN: the user asked to forget him"
+  },
+  {
+   "id": "mt92",
+   "type": "forgotten",
+   "question": "What's my barber's phone number?",
+   "answer": "UNKNOWN: the user asked to forget it"
+  },
+  {
+   "id": "mt93",
+   "type": "forgotten",
+   "question": "Who did I meet at a meetup in October 2025?",
+   "answer": "UNKNOWN: the user asked to forget him"
+  },
+  {
+   "id": "mt94",
+   "type": "forgotten",
+   "question": "What's the phone number of the Rohlik CTO I met?",
+   "answer": "UNKNOWN: the user asked to forget him"
+  }
+ ]
+}

@@ -1,0 +1,35 @@
+{
+ "periods": [
+  {
+   "start": "2026-01-05",
+   "end": "2026-03-31",
+   "label": "Coverage included North America accounts"
+  },
+  {
+   "start": "2026-04-01",
+   "end": "2026-06-30",
+   "label": "Covered EMEA accounts in addition to North America"
+  },
+  {
+   "start": "2026-01-05",
+   "end": "2026-04-30",
+   "label": "List price was $1,500 per seat per year"
+  },
+  {
+   "start": "2026-05-01",
+   "end": "2026-06-30",
+   "label": "List price was $1,800 per seat per year"
+  },
+  {
+   "start": "2026-03-18",
+   "end": "2026-06-30",
+   "label": "Wingtip's analytics budget was frozen until its Q3 planning cycle; revisit planned for September"
+  }
+ ],
+ "breaks": [
+  {
+   "date": "2026-04-01",
+   "why": "Daniel began covering EMEA accounts in addition to North America."
+  }
+ ]
+}

@@ -1,0 +1,59 @@
+{
+ "periods": [
+  {
+   "start": "2024-04-01",
+   "end": "2026-03-31",
+   "label": "Adam lived in Prague"
+  },
+  {
+   "start": "2026-04-01",
+   "end": "2026-09-30",
+   "label": "Adam lived in San Francisco"
+  },
+  {
+   "start": "2026-01-12",
+   "end": "2026-08-15",
+   "label": "Oscar Lind was Nebula's product manager"
+  },
+  {
+   "start": "2026-02-20",
+   "end": "2026-09-30",
+   "label": "Nebula had closed its $3M seed round led by Northwind Ventures"
+  },
+  {
+   "start": "2026-03-01",
+   "end": "2026-09-30",
+   "label": "Nina Rossi was Nebula's first engineer"
+  },
+  {
+   "start": "2026-03-16",
+   "end": "2026-09-30",
+   "label": "Eva Green was Nebula's designer"
+  },
+  {
+   "start": "2026-04-03",
+   "end": "2026-09-30",
+   "label": "Adam was a member of Mission Cliffs"
+  },
+  {
+   "start": "2026-05-20",
+   "end": "2026-09-30",
+   "label": "Eva was moving to San Francisco for her job at Gensler"
+  },
+  {
+   "start": "2026-07-12",
+   "end": "2026-09-30",
+   "label": "Adam and Eva were engaged"
+  }
+ ],
+ "breaks": [
+  {
+   "date": "2026-03-01",
+   "why": "Nina Rossi started as Nebula's first engineer, changing the team."
+  },
+  {
+   "date": "2026-04-01",
+   "why": "Adam moved from Prague to San Francisco and into his new place."
+  }
+ ]
+}

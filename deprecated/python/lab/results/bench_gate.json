@@ -1,0 +1,330 @@
+{
+ "n": 152,
+ "n_write": 122,
+ "methods": {
+  "jev": {
+   "intent_accuracy": 0.9342,
+   "write": {
+    "accuracy": 0.9803,
+    "precision": 0.976,
+    "recall": 1.0,
+    "f1": 0.9879,
+    "false_negatives": 0,
+    "false_positives": 3
+   },
+   "cost_per_1k": 0.0217,
+   "latency_p50": 0.275,
+   "latency_mean": 0.311,
+   "calls": 152,
+   "calibration": [
+    {
+     "confidence": "0.0-0.5",
+     "n": 5,
+     "accuracy": 0.6
+    },
+    {
+     "confidence": "0.5-0.7",
+     "n": 5,
+     "accuracy": 1.0
+    },
+    {
+     "confidence": "0.7-0.9",
+     "n": 7,
+     "accuracy": 0.429
+    },
+    {
+     "confidence": "0.9-1.0",
+     "n": 135,
+     "accuracy": 0.97
+    }
+   ],
+   "errors": [
+    {
+     "text": "David Mokos phone is 733544390. David's phone is also 6286884994, it's a US phone",
+     "gold": "change",
+     "pred": "share",
+     "conf": 1,
+     "worth": 0.82,
+     "write": true
+    },
+    {
+     "text": "Finished Thinking, Fast and Slow. 5/5, the System 1 vs System 2 stuff is gold",
+     "gold": "change",
+     "pred": "chat",
+     "conf": 0.4,
+     "worth": 0.78,
+     "write": true
+    },
+    {
+     "text": "Landed in SF. New chapter!",
+     "gold": "change",
+     "pred": "share",
+     "conf": 0.81,
+     "worth": 0.88,
+     "write": true
+    },
+    {
+     "text": "Happy birthday to David today 🎂",
+     "gold": "chat",
+     "pred": "chat",
+     "conf": 0.95,
+     "worth": 0.81,
+     "write": true
+    },
+    {
+     "text": "Need a gift for Eva's birthday, maybe a sushi-making class?",
+     "gold": "share",
+     "pred": "ask",
+     "conf": 0.88,
+     "worth": 0.88,
+     "write": true
+    },
+    {
+     "text": "Started reading The Pragmatic Programmer",
+     "gold": "change",
+     "pred": "share",
+     "conf": 0.98,
+     "worth": 0.84,
+     "write": true
+    },
+    {
+     "text": "can you plan a 3-day trip to Lisbon?",
+     "gold": "ask",
+     "pred": "ask",
+     "conf": 1,
+     "worth": 0.55,
+     "write": true
+    },
+    {
+     "text": "nvm",
+     "gold": "chat",
+     "pred": "remove",
+     "conf": 0.32,
+     "worth": 0.03,
+     "write": true
+    },
+    {
+     "text": "Help me plan Eva's birthday dinner, she's turning 29 on the 28th",
+     "gold": "share",
+     "pred": "ask",
+     "conf": 0.89,
+     "worth": 0.95,
+     "write": true
+    },
+    {
+     "text": "I'm flying to NYC on Oct 5 for a conference, can you find me hotels near Javits?",
+     "gold": "share",
+     "pred": "ask",
+     "conf": 1,
+     "worth": 0.93,
+     "write": true
+    },
+    {
+     "text": "Can you write an email to David? btw his personal email is d.mokos@gmail.com",
+     "gold": "share",
+     "pred": "ask",
+     "conf": 0.86,
+     "worth": 0.79,
+     "write": true
+    },
+    {
+     "text": "My new work email is adam@nebula.so",
+     "gold": "change",
+     "pred": "share",
+     "conf": 0.95,
+     "worth": 0.89,
+     "write": true
+    }
+   ]
+  },
+  "openai:gpt-6-luna": {
+   "intent_accuracy": 0.9342,
+   "write": {
+    "accuracy": 0.9868,
+    "precision": 0.9918,
+    "recall": 0.9918,
+    "f1": 0.9918,
+    "false_negatives": 1,
+    "false_positives": 1
+   },
+   "cost_per_1k": 0.0408,
+   "latency_p50": 1.215,
+   "latency_mean": 1.285,
+   "calls": 152,
+   "errors": [
+    {
+     "text": "Remind me to renew my passport before October.",
+     "gold": "share",
+     "pred": "ask",
+     "write": true
+    },
+    {
+     "text": "David Mokos phone is 733544390. David's phone is also 6286884994, it's a US phone",
+     "gold": "change",
+     "pred": "share",
+     "write": true
+    },
+    {
+     "text": "Finished Thinking, Fast and Slow. 5/5, the System 1 vs System 2 stuff is gold",
+     "gold": "change",
+     "pred": "share",
+     "write": true
+    },
+    {
+     "text": "Landed in SF. New chapter!",
+     "gold": "change",
+     "pred": "share",
+     "write": true
+    },
+    {
+     "text": "Happy birthday to David today 🎂",
+     "gold": "chat",
+     "pred": "share",
+     "write": true
+    },
+    {
+     "text": "Need a gift for Eva's birthday, maybe a sushi-making class?",
+     "gold": "share",
+     "pred": "ask",
+     "write": false
+    },
+    {
+     "text": "Started reading The Pragmatic Programmer",
+     "gold": "change",
+     "pred": "share",
+     "write": true
+    },
+    {
+     "text": "Help me plan Eva's birthday dinner, she's turning 29 on the 28th",
+     "gold": "share",
+     "pred": "ask",
+     "write": true
+    },
+    {
+     "text": "Can you write an email to David? btw his personal email is d.mokos@gmail.com",
+     "gold": "share",
+     "pred": "ask",
+     "write": true
+    },
+    {
+     "text": "My new work email is adam@nebula.so",
+     "gold": "change",
+     "pred": "share",
+     "write": true
+    }
+   ]
+  },
+  "anthropic:claude-haiku-4-5": {
+   "intent_accuracy": 0.9605,
+   "write": {
+    "accuracy": 0.9868,
+    "precision": 0.9918,
+    "recall": 0.9918,
+    "f1": 0.9918,
+    "false_negatives": 1,
+    "false_positives": 1
+   },
+   "cost_per_1k": 0.4866,
+   "latency_p50": 0.854,
+   "latency_mean": 0.983,
+   "calls": 152,
+   "errors": [
+    {
+     "text": "David Mokos phone is 733544390. David's phone is also 6286884994, it's a US phone",
+     "gold": "change",
+     "pred": "share",
+     "write": true
+    },
+    {
+     "text": "Landed in SF. New chapter!",
+     "gold": "change",
+     "pred": "share",
+     "write": true
+    },
+    {
+     "text": "Happy birthday to David today 🎂",
+     "gold": "chat",
+     "pred": "share",
+     "write": true
+    },
+    {
+     "text": "Need a gift for Eva's birthday, maybe a sushi-making class?",
+     "gold": "share",
+     "pred": "ask",
+     "write": false
+    },
+    {
+     "text": "Started reading The Pragmatic Programmer",
+     "gold": "change",
+     "pred": "share",
+     "write": true
+    },
+    {
+     "text": "My new work email is adam@nebula.so",
+     "gold": "change",
+     "pred": "share",
+     "write": true
+    }
+   ]
+  },
+  "anthropic:claude-sonnet-5": {
+   "intent_accuracy": 0.9539,
+   "write": {
+    "accuracy": 0.9934,
+    "precision": 1.0,
+    "recall": 0.9918,
+    "f1": 0.9959,
+    "false_negatives": 1,
+    "false_positives": 0
+   },
+   "cost_per_1k": 1.2356,
+   "latency_p50": 1.535,
+   "latency_mean": 1.584,
+   "calls": 152,
+   "errors": [
+    {
+     "text": "Finished Thinking, Fast and Slow. 5/5, the System 1 vs System 2 stuff is gold",
+     "gold": "change",
+     "pred": "share",
+     "write": true
+    },
+    {
+     "text": "Landed in SF. New chapter!",
+     "gold": "change",
+     "pred": "share",
+     "write": true
+    },
+    {
+     "text": "Need a gift for Eva's birthday, maybe a sushi-making class?",
+     "gold": "share",
+     "pred": "ask",
+     "write": false
+    },
+    {
+     "text": "Started reading The Pragmatic Programmer",
+     "gold": "change",
+     "pred": "share",
+     "write": true
+    },
+    {
+     "text": "Our seed round closed! $3M led by Northwind Ventures 🎉",
+     "gold": "share",
+     "pred": "change",
+     "write": true
+    },
+    {
+     "text": "Help me plan Eva's birthday dinner, she's turning 29 on the 28th",
+     "gold": "share",
+     "pred": "ask",
+     "write": true
+    },
+    {
+     "text": "I'm flying to NYC on Oct 5 for a conference, can you find me hotels near Javits?",
+     "gold": "share",
+     "pred": "ask",
+     "write": true
+    }
+   ]
+  }
+ }
+}

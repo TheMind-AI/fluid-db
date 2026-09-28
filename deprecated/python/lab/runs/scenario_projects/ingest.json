@@ -1,0 +1,1894 @@
+{
+ "trace": [
+  {
+   "i": 0,
+   "id": "pr0001",
+   "tier": "C",
+   "wall": 9.1143,
+   "cost": 0.000507,
+   "ops": 9,
+   "crash": null
+  },
+  {
+   "i": 1,
+   "id": "pr0002",
+   "tier": "C",
+   "wall": 2.882,
+   "cost": 0.000313,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 2,
+   "id": "pr0003",
+   "tier": "C",
+   "wall": 5.3731,
+   "cost": 0.000459,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 3,
+   "id": "pr0004",
+   "tier": "C",
+   "wall": 3.069,
+   "cost": 0.000339,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 4,
+   "id": "pr0005",
+   "tier": "C-skip",
+   "wall": 0.2389,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 5,
+   "id": "pr0006",
+   "tier": "C",
+   "wall": 2.7916,
+   "cost": 0.000342,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 6,
+   "id": "pr0007",
+   "tier": "C-skip",
+   "wall": 0.3372,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 7,
+   "id": "pr0008",
+   "tier": "C",
+   "wall": 2.6188,
+   "cost": 0.000337,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 8,
+   "id": "pr0009",
+   "tier": "C",
+   "wall": 4.2307,
+   "cost": 0.000434,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 9,
+   "id": "pr0010",
+   "tier": "C",
+   "wall": 4.5262,
+   "cost": 0.000475,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 10,
+   "id": "pr0011",
+   "tier": "C",
+   "wall": 2.8028,
+   "cost": 0.000401,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 11,
+   "id": "pr0012",
+   "tier": "C",
+   "wall": 3.8103,
+   "cost": 0.000454,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 12,
+   "id": "pr0013",
+   "tier": "C",
+   "wall": 2.3053,
+   "cost": 0.000362,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 13,
+   "id": "pr0014",
+   "tier": "C",
+   "wall": 4.4423,
+   "cost": 0.0004,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 14,
+   "id": "pr0015",
+   "tier": "C",
+   "wall": 2.8422,
+   "cost": 0.000386,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 15,
+   "id": "pr0016",
+   "tier": "C-skip",
+   "wall": 0.2696,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 16,
+   "id": "pr0017",
+   "tier": "C",
+   "wall": 2.5762,
+   "cost": 0.000389,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 17,
+   "id": "pr0018",
+   "tier": "C",
+   "wall": 2.4845,
+   "cost": 0.000407,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 18,
+   "id": "pr0019",
+   "tier": "C",
+   "wall": 2.318,
+   "cost": 0.000416,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 19,
+   "id": "pr0020",
+   "tier": "C",
+   "wall": 3.1366,
+   "cost": 0.000426,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 20,
+   "id": "pr0021",
+   "tier": "C",
+   "wall": 1.9938,
+   "cost": 0.000395,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 21,
+   "id": "pr0022",
+   "tier": "C",
+   "wall": 2.3416,
+   "cost": 0.000423,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 22,
+   "id": "pr0023",
+   "tier": "C",
+   "wall": 2.4154,
+   "cost": 0.000439,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 23,
+   "id": "pr0024",
+   "tier": "C",
+   "wall": 2.6174,
+   "cost": 0.000446,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 24,
+   "id": "pr0025",
+   "tier": "C",
+   "wall": 2.267,
+   "cost": 0.000436,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 25,
+   "id": "pr0026",
+   "tier": "C",
+   "wall": 2.4169,
+   "cost": 0.000468,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 26,
+   "id": "pr0027",
+   "tier": "C",
+   "wall": 2.4944,
+   "cost": 0.000452,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 27,
+   "id": "pr0028",
+   "tier": "C-skip",
+   "wall": 0.2465,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 28,
+   "id": "pr0029",
+   "tier": "C-skip",
+   "wall": 0.2675,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 29,
+   "id": "pr0030",
+   "tier": "C",
+   "wall": 2.7772,
+   "cost": 0.000484,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 30,
+   "id": "pr0031",
+   "tier": "C-skip",
+   "wall": 0.3144,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 31,
+   "id": "pr0032",
+   "tier": "C",
+   "wall": 2.5961,
+   "cost": 0.000468,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 32,
+   "id": "pr0033",
+   "tier": "C",
+   "wall": 2.2364,
+   "cost": 0.000467,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 33,
+   "id": "pr0034",
+   "tier": "C",
+   "wall": 2.6247,
+   "cost": 0.000493,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 34,
+   "id": "pr0035",
+   "tier": "C",
+   "wall": 2.009,
+   "cost": 0.000446,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 35,
+   "id": "pr0036",
+   "tier": "C-skip",
+   "wall": 0.253,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 36,
+   "id": "pr0037",
+   "tier": "C-skip",
+   "wall": 0.2362,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 37,
+   "id": "pr0038",
+   "tier": "C",
+   "wall": 3.3887,
+   "cost": 0.00054,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 38,
+   "id": "pr0039",
+   "tier": "C",
+   "wall": 2.0785,
+   "cost": 0.000457,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 39,
+   "id": "pr0040",
+   "tier": "C",
+   "wall": 2.532,
+   "cost": 0.000484,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 40,
+   "id": "pr0041",
+   "tier": "C",
+   "wall": 3.1885,
+   "cost": 0.000513,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 41,
+   "id": "pr0042",
+   "tier": "C",
+   "wall": 3.3452,
+   "cost": 0.000559,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 42,
+   "id": "pr0043",
+   "tier": "C",
+   "wall": 3.3604,
+   "cost": 0.000578,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 43,
+   "id": "pr0044",
+   "tier": "C-skip",
+   "wall": 0.2858,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 44,
+   "id": "pr0045",
+   "tier": "C",
+   "wall": 3.0265,
+   "cost": 0.000588,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 45,
+   "id": "pr0046",
+   "tier": "C",
+   "wall": 2.4348,
+   "cost": 0.000539,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 46,
+   "id": "pr0047",
+   "tier": "C",
+   "wall": 1.8425,
+   "cost": 0.000513,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 47,
+   "id": "pr0048",
+   "tier": "C",
+   "wall": 3.2406,
+   "cost": 0.000577,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 48,
+   "id": "pr0049",
+   "tier": "C",
+   "wall": 2.4493,
+   "cost": 0.000562,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 49,
+   "id": "pr0050",
+   "tier": "C",
+   "wall": 4.5852,
+   "cost": 0.00066,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 50,
+   "id": "pr0051",
+   "tier": "C",
+   "wall": 5.3577,
+   "cost": 0.00062,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 51,
+   "id": "pr0052",
+   "tier": "C",
+   "wall": 2.0677,
+   "cost": 0.000564,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 52,
+   "id": "pr0053",
+   "tier": "C-skip",
+   "wall": 0.2395,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 53,
+   "id": "pr0054",
+   "tier": "C",
+   "wall": 2.3659,
+   "cost": 0.00058,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 54,
+   "id": "pr0055",
+   "tier": "C",
+   "wall": 2.1206,
+   "cost": 0.000551,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 55,
+   "id": "pr0056",
+   "tier": "C",
+   "wall": 2.4698,
+   "cost": 0.000598,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 56,
+   "id": "pr0057",
+   "tier": "C",
+   "wall": 2.2447,
+   "cost": 0.000583,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 57,
+   "id": "pr0058",
+   "tier": "C",
+   "wall": 2.2214,
+   "cost": 0.000569,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 58,
+   "id": "pr0059",
+   "tier": "C",
+   "wall": 2.2226,
+   "cost": 0.000561,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 59,
+   "id": "pr0060",
+   "tier": "C",
+   "wall": 2.4121,
+   "cost": 0.000589,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 60,
+   "id": "pr0061",
+   "tier": "C",
+   "wall": 2.7069,
+   "cost": 0.000607,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 61,
+   "id": "pr0062",
+   "tier": "C",
+   "wall": 1.9731,
+   "cost": 0.000586,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 62,
+   "id": "pr0063",
+   "tier": "C",
+   "wall": 1.9557,
+   "cost": 0.000594,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 63,
+   "id": "pr0064",
+   "tier": "C-skip",
+   "wall": 0.2546,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 64,
+   "id": "pr0065",
+   "tier": "C",
+   "wall": 3.0111,
+   "cost": 0.000618,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 65,
+   "id": "pr0066",
+   "tier": "C",
+   "wall": 3.3676,
+   "cost": 0.00068,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 66,
+   "id": "pr0067",
+   "tier": "C",
+   "wall": 2.5863,
+   "cost": 0.000647,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 67,
+   "id": "pr0068",
+   "tier": "C",
+   "wall": 2.1901,
+   "cost": 0.000615,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 68,
+   "id": "pr0069",
+   "tier": "C",
+   "wall": 1.898,
+   "cost": 0.000591,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 69,
+   "id": "pr0070",
+   "tier": "C",
+   "wall": 1.855,
+   "cost": 0.000608,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 70,
+   "id": "pr0071",
+   "tier": "C",
+   "wall": 2.3994,
+   "cost": 0.000637,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 71,
+   "id": "pr0072",
+   "tier": "C-skip",
+   "wall": 0.2832,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 72,
+   "id": "pr0073",
+   "tier": "C",
+   "wall": 3.7517,
+   "cost": 0.000705,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 73,
+   "id": "pr0074",
+   "tier": "C",
+   "wall": 3.1273,
+   "cost": 0.000689,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 74,
+   "id": "pr0075",
+   "tier": "C",
+   "wall": 2.3897,
+   "cost": 0.000664,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 75,
+   "id": "pr0076",
+   "tier": "C-skip",
+   "wall": 0.283,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 76,
+   "id": "pr0077",
+   "tier": "C-skip",
+   "wall": 0.2371,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 77,
+   "id": "pr0078",
+   "tier": "C",
+   "wall": 2.606,
+   "cost": 0.000686,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 78,
+   "id": "pr0079",
+   "tier": "C",
+   "wall": 2.4017,
+   "cost": 0.000675,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 79,
+   "id": "pr0080",
+   "tier": "C",
+   "wall": 3.4805,
+   "cost": 0.000702,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 80,
+   "id": "pr0081",
+   "tier": "C",
+   "wall": 2.1564,
+   "cost": 0.00069,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 81,
+   "id": "pr0082",
+   "tier": "C",
+   "wall": 1.7528,
+   "cost": 0.000656,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 82,
+   "id": "pr0083",
+   "tier": "C",
+   "wall": 2.6663,
+   "cost": 0.000695,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 83,
+   "id": "pr0084",
+   "tier": "C",
+   "wall": 2.0489,
+   "cost": 0.000697,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 84,
+   "id": "pr0085",
+   "tier": "C-skip",
+   "wall": 0.2566,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 85,
+   "id": "pr0086",
+   "tier": "C",
+   "wall": 3.2665,
+   "cost": 0.000755,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 86,
+   "id": "pr0087",
+   "tier": "C",
+   "wall": 1.8734,
+   "cost": 0.000662,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 87,
+   "id": "pr0088",
+   "tier": "C",
+   "wall": 2.3587,
+   "cost": 0.000719,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 88,
+   "id": "pr0089",
+   "tier": "C",
+   "wall": 1.8977,
+   "cost": 0.000695,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 89,
+   "id": "pr0090",
+   "tier": "C",
+   "wall": 2.8385,
+   "cost": 0.000743,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 90,
+   "id": "pr0091",
+   "tier": "C",
+   "wall": 2.6678,
+   "cost": 0.000747,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 91,
+   "id": "pr0092",
+   "tier": "C-skip",
+   "wall": 0.2959,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 92,
+   "id": "pr0093",
+   "tier": "C",
+   "wall": 2.594,
+   "cost": 0.000751,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 93,
+   "id": "pr0094",
+   "tier": "C",
+   "wall": 1.7192,
+   "cost": 0.00068,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 94,
+   "id": "pr0095",
+   "tier": "C",
+   "wall": 2.056,
+   "cost": 0.000723,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 95,
+   "id": "pr0096",
+   "tier": "C",
+   "wall": 2.3702,
+   "cost": 0.000724,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 96,
+   "id": "pr0097",
+   "tier": "C",
+   "wall": 2.3299,
+   "cost": 0.000728,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 97,
+   "id": "pr0098",
+   "tier": "C",
+   "wall": 3.804,
+   "cost": 0.0008,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 98,
+   "id": "pr0099",
+   "tier": "C-skip",
+   "wall": 0.3165,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 99,
+   "id": "pr0100",
+   "tier": "C",
+   "wall": 3.2276,
+   "cost": 0.000781,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 100,
+   "id": "pr0101",
+   "tier": "C",
+   "wall": 5.2456,
+   "cost": 0.000802,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 101,
+   "id": "pr0102",
+   "tier": "C",
+   "wall": 2.8779,
+   "cost": 0.000723,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 102,
+   "id": "pr0103",
+   "tier": "C",
+   "wall": 2.8967,
+   "cost": 0.000803,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 103,
+   "id": "pr0104",
+   "tier": "C-skip",
+   "wall": 0.3003,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 104,
+   "id": "pr0105",
+   "tier": "C",
+   "wall": 3.0988,
+   "cost": 0.000756,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 105,
+   "id": "pr0106",
+   "tier": "C-skip",
+   "wall": 0.3074,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 106,
+   "id": "pr0107",
+   "tier": "C",
+   "wall": 2.3312,
+   "cost": 0.000782,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 107,
+   "id": "pr0108",
+   "tier": "C",
+   "wall": 2.7032,
+   "cost": 0.000797,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 108,
+   "id": "pr0109",
+   "tier": "C",
+   "wall": 3.2064,
+   "cost": 0.000816,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 109,
+   "id": "pr0110",
+   "tier": "C-skip",
+   "wall": 0.2423,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 110,
+   "id": "pr0111",
+   "tier": "C",
+   "wall": 2.3103,
+   "cost": 0.000778,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 111,
+   "id": "pr0112",
+   "tier": "C",
+   "wall": 2.109,
+   "cost": 0.000782,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 112,
+   "id": "pr0113",
+   "tier": "C",
+   "wall": 2.0205,
+   "cost": 0.00078,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 113,
+   "id": "pr0114",
+   "tier": "C",
+   "wall": 2.4558,
+   "cost": 0.000809,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 114,
+   "id": "pr0115",
+   "tier": "C",
+   "wall": 2.3791,
+   "cost": 0.000819,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 115,
+   "id": "pr0116",
+   "tier": "C",
+   "wall": 2.3583,
+   "cost": 0.00083,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 116,
+   "id": "pr0117",
+   "tier": "C",
+   "wall": 1.9174,
+   "cost": 0.000801,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 117,
+   "id": "pr0118",
+   "tier": "C",
+   "wall": 1.9981,
+   "cost": 0.000807,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 118,
+   "id": "pr0119",
+   "tier": "C-skip",
+   "wall": 0.2631,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 119,
+   "id": "pr0120",
+   "tier": "C",
+   "wall": 2.741,
+   "cost": 0.000854,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 120,
+   "id": "pr0121",
+   "tier": "A",
+   "wall": 0.0047,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 121,
+   "id": "pr0122",
+   "tier": "A",
+   "wall": 0.0023,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 122,
+   "id": "pr0123",
+   "tier": "A",
+   "wall": 0.0018,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 123,
+   "id": "pr0124",
+   "tier": "A",
+   "wall": 0.0021,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 124,
+   "id": "pr0125",
+   "tier": "A",
+   "wall": 0.0086,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 125,
+   "id": "pr0126",
+   "tier": "A",
+   "wall": 0.0015,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 126,
+   "id": "pr0127",
+   "tier": "A",
+   "wall": 0.0093,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 127,
+   "id": "pr0128",
+   "tier": "A",
+   "wall": 0.0015,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 128,
+   "id": "pr0129",
+   "tier": "C-skip",
+   "wall": 0.3907,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 129,
+   "id": "pr0130",
+   "tier": "A",
+   "wall": 0.0052,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 130,
+   "id": "pr0131",
+   "tier": "C",
+   "wall": 2.0657,
+   "cost": 0.000863,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 131,
+   "id": "pr0132",
+   "tier": "A",
+   "wall": 0.0017,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 132,
+   "id": "pr0133",
+   "tier": "C",
+   "wall": 1.9959,
+   "cost": 0.000859,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 133,
+   "id": "pr0134",
+   "tier": "A",
+   "wall": 0.0029,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 134,
+   "id": "pr0135",
+   "tier": "A",
+   "wall": 0.002,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 135,
+   "id": "pr0136",
+   "tier": "C",
+   "wall": 2.8629,
+   "cost": 0.000933,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 136,
+   "id": "pr0137",
+   "tier": "C-skip",
+   "wall": 0.2817,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 137,
+   "id": "pr0138",
+   "tier": "A",
+   "wall": 0.0021,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 138,
+   "id": "pr0139",
+   "tier": "C",
+   "wall": 2.2538,
+   "cost": 0.000897,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 139,
+   "id": "pr0140",
+   "tier": "C",
+   "wall": 1.8321,
+   "cost": 0.000871,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 140,
+   "id": "pr0141",
+   "tier": "A",
+   "wall": 0.002,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 141,
+   "id": "pr0142",
+   "tier": "C",
+   "wall": 3.2418,
+   "cost": 0.000956,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 142,
+   "id": "pr0143",
+   "tier": "A",
+   "wall": 0.0025,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 143,
+   "id": "pr0144",
+   "tier": "C",
+   "wall": 2.1048,
+   "cost": 0.000885,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 144,
+   "id": "pr0145",
+   "tier": "C-skip",
+   "wall": 0.356,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 145,
+   "id": "pr0146",
+   "tier": "C",
+   "wall": 2.1198,
+   "cost": 0.0009,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 146,
+   "id": "pr0147",
+   "tier": "C",
+   "wall": 2.3573,
+   "cost": 0.000909,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 147,
+   "id": "pr0148",
+   "tier": "A",
+   "wall": 0.0037,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 148,
+   "id": "pr0149",
+   "tier": "C-skip",
+   "wall": 0.26,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 149,
+   "id": "pr0150",
+   "tier": "C",
+   "wall": 9.5571,
+   "cost": 0.001505,
+   "ops": 11,
+   "crash": null
+  },
+  {
+   "i": 150,
+   "id": "pr0151",
+   "tier": "A",
+   "wall": 0.0046,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 151,
+   "id": "pr0152",
+   "tier": "A",
+   "wall": 0.0023,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 152,
+   "id": "pr0153",
+   "tier": "A",
+   "wall": 0.0019,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 153,
+   "id": "pr0154",
+   "tier": "A",
+   "wall": 0.0021,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 154,
+   "id": "pr0155",
+   "tier": "A",
+   "wall": 0.0018,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 155,
+   "id": "pr0156",
+   "tier": "A",
+   "wall": 0.0017,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 156,
+   "id": "pr0157",
+   "tier": "C",
+   "wall": 2.5869,
+   "cost": 0.001025,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 157,
+   "id": "pr0158",
+   "tier": "A",
+   "wall": 0.0042,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 158,
+   "id": "pr0159",
+   "tier": "A",
+   "wall": 0.0019,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 159,
+   "id": "pr0160",
+   "tier": "C",
+   "wall": 4.0786,
+   "cost": 0.001115,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 160,
+   "id": "pr0161",
+   "tier": "C-skip",
+   "wall": 0.3015,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 161,
+   "id": "pr0162",
+   "tier": "A",
+   "wall": 0.0021,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 162,
+   "id": "pr0163",
+   "tier": "A",
+   "wall": 0.0021,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 163,
+   "id": "pr0164",
+   "tier": "A",
+   "wall": 0.0013,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 164,
+   "id": "pr0165",
+   "tier": "C",
+   "wall": 3.7479,
+   "cost": 0.00113,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 165,
+   "id": "pr0166",
+   "tier": "A",
+   "wall": 0.0041,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 166,
+   "id": "pr0167",
+   "tier": "A",
+   "wall": 0.0024,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 167,
+   "id": "pr0168",
+   "tier": "C",
+   "wall": 1.8098,
+   "cost": 0.001036,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 168,
+   "id": "pr0169",
+   "tier": "A",
+   "wall": 0.0031,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 169,
+   "id": "pr0170",
+   "tier": "C",
+   "wall": 3.0072,
+   "cost": 0.001115,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 170,
+   "id": "pr0171",
+   "tier": "A",
+   "wall": 0.0031,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 171,
+   "id": "pr0172",
+   "tier": "A",
+   "wall": 0.0023,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 172,
+   "id": "pr0173",
+   "tier": "C-skip",
+   "wall": 0.2749,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 173,
+   "id": "pr0174",
+   "tier": "C",
+   "wall": 2.3146,
+   "cost": 0.001081,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 174,
+   "id": "pr0175",
+   "tier": "C-skip",
+   "wall": 0.2739,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 175,
+   "id": "pr0176",
+   "tier": "C",
+   "wall": 2.2063,
+   "cost": 0.001059,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 176,
+   "id": "pr0177",
+   "tier": "A",
+   "wall": 0.0025,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 177,
+   "id": "pr0178",
+   "tier": "C",
+   "wall": 3.6182,
+   "cost": 0.001151,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 178,
+   "id": "pr0179",
+   "tier": "C",
+   "wall": 2.4157,
+   "cost": 0.001102,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 179,
+   "id": "pr0180",
+   "tier": "A",
+   "wall": 0.0017,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 180,
+   "id": "pr0181",
+   "tier": "A",
+   "wall": 0.0019,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 181,
+   "id": "pr0182",
+   "tier": "A",
+   "wall": 0.0025,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 182,
+   "id": "pr0183",
+   "tier": "C",
+   "wall": 2.2462,
+   "cost": 0.001102,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 183,
+   "id": "pr0184",
+   "tier": "A",
+   "wall": 0.0022,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 184,
+   "id": "pr0185",
+   "tier": "A",
+   "wall": 0.0018,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 185,
+   "id": "pr0186",
+   "tier": "A",
+   "wall": 0.0015,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 186,
+   "id": "pr0187",
+   "tier": "A",
+   "wall": 0.0019,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 187,
+   "id": "pr0188",
+   "tier": "A",
+   "wall": 0.0016,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 188,
+   "id": "pr0189",
+   "tier": "A",
+   "wall": 0.0017,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 189,
+   "id": "pr0190",
+   "tier": "A",
+   "wall": 0.0017,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 190,
+   "id": "pr0191",
+   "tier": "C-skip",
+   "wall": 0.276,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 191,
+   "id": "pr0192",
+   "tier": "A",
+   "wall": 0.0026,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 192,
+   "id": "pr0193",
+   "tier": "A",
+   "wall": 0.003,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 193,
+   "id": "pr0194",
+   "tier": "A",
+   "wall": 0.0029,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 194,
+   "id": "pr0195",
+   "tier": "C-skip",
+   "wall": 0.3595,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 195,
+   "id": "pr0196",
+   "tier": "A",
+   "wall": 0.0023,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 196,
+   "id": "pr0197",
+   "tier": "A",
+   "wall": 0.0021,
+   "cost": 0,
+   "table": "events"
+  }
+ ],
+ "compiles": [
+  {
+   "at": 120,
+   "tables": [
+    {
+     "table": "events",
+     "examples": 70,
+     "proposed": 5,
+     "kept": 4,
+     "coverage": 1.0
+    }
+   ],
+   "s": 13.1
+  }
+ ],
+ "patterns_report": [
+  {
+   "table": "events",
+   "regex": "1:1\\s+with\\s+(?P<name>[^:]+?)\\s*:\\s*(?P<details>.+?)\\s*$",
+   "keep": false,
+   "matched": 26,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 1.0,
+   "wrong": [
+    "\"1:1 with Aisha: alerting gaps after the outage\": {\"name\": {\"got\": \"Aisha\", \"want\": \"1:1 with Aisha Khan\"}}",
+    "\"1:1 with Raj: Atlas cutover worries\": {\"name\": {\"got\": \"Raj\", \"want\": \"1:1 with Raj Patel\"}}",
+    "\"1:1 with Tom: Stripe Billing migration plan\": {\"name\": {\"got\": \"Tom\", \"want\": \"1:1 with Tom Becker\"}}"
+   ]
+  },
+  {
+   "table": "events",
+   "regex": "standup\\s*:\\s*(?P<details>.+?)\\s*$",
+   "keep": true,
+   "matched": 33,
+   "exact": 33,
+   "false_hits": 0,
+   "coverage": 0.73,
+   "wrong": []
+  },
+  {
+   "table": "events",
+   "regex": "sprint\\s+planning\\s+(?P<status>done)\\s*:\\s*(?P<points_committed>\\d+)\\s+points\\s+committed\\s*$",
+   "keep": true,
+   "matched": 8,
+   "exact": 8,
+   "false_hits": 0,
+   "coverage": 1.0,
+   "wrong": []
+  },
+  {
+   "table": "events",
+   "regex": "retro\\s*:\\s*(?P<details>.+?)\\s*$",
+   "keep": true,
+   "matched": 3,
+   "exact": 3,
+   "false_hits": 0,
+   "coverage": 1.0,
+   "wrong": []
+  },
+  {
+   "table": "events",
+   "regex": "(?P<name>1:1\\s+with\\s+[^:]+?)\\s*:\\s*(?P<details>.+?)\\s*$",
+   "keep": true,
+   "matched": 26,
+   "exact": 26,
+   "false_hits": 0,
+   "coverage": 1.0,
+   "wrong": []
+  }
+ ],
+ "patterns": {
+  "events": [
+   {
+    "regex": "standup\\s*:\\s*(?P<details>.+?)\\s*$",
+    "values": [
+     {
+      "column": "category",
+      "source": "const:standup"
+     },
+     {
+      "column": "name",
+      "source": "const:Standup"
+     },
+     {
+      "column": "date",
+      "source": "date"
+     },
+     {
+      "column": "details",
+      "source": "group:details"
+     }
+    ]
+   },
+   {
+    "regex": "sprint\\s+planning\\s+(?P<status>done)\\s*:\\s*(?P<points_committed>\\d+)\\s+points\\s+committed\\s*$",
+    "values": [
+     {
+      "column": "category",
+      "source": "const:sprint planning"
+     },
+     {
+      "column": "name",
+      "source": "const:Sprint planning"
+     },
+     {
+      "column": "status",
+      "source": "group:status"
+     },
+     {
+      "column": "date",
+      "source": "date"
+     },
+     {
+      "column": "points_committed",
+      "source": "group:points_committed"
+     }
+    ]
+   },
+   {
+    "regex": "retro\\s*:\\s*(?P<details>.+?)\\s*$",
+    "values": [
+     {
+      "column": "category",
+      "source": "const:retro"
+     },
+     {
+      "column": "name",
+      "source": "const:Retro"
+     },
+     {
+      "column": "date",
+      "source": "date"
+     },
+     {
+      "column": "details",
+      "source": "group:details"
+     }
+    ]
+   },
+   {
+    "regex": "(?P<name>1:1\\s+with\\s+[^:]+?)\\s*:\\s*(?P<details>.+?)\\s*$",
+    "values": [
+     {
+      "column": "category",
+      "source": "const:1:1"
+     },
+     {
+      "column": "name",
+      "source": "group:name"
+     },
+     {
+      "column": "date",
+      "source": "date"
+     },
+     {
+      "column": "details",
+      "source": "group:details"
+     }
+    ]
+   }
+  ]
+ },
+ "spent": 0.0815,
+ "cost_if_fresh": 0.0822
+}

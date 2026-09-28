@@ -1,0 +1,9 @@
+dist/
+**/.wrangler/
+bun.lock
+deprecated/
+llp/
+AGENTS.md
+CLAUDE.md
+.context/
+.cache/

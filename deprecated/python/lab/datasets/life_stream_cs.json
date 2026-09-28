@@ -1,0 +1,789 @@
+{
+ "name": "life_stream_cs",
+ "description": "Seven weeks of messages a user sends to a personal AI. Tests the 'fluid' part of FluidDB: new facts, corrections, deletions, aliases, semi-structured inputs (email JSON, receipts, calendar invites, contact cards), chit-chat and questions that must not be stored. QA is asked at `now` and must reflect the final state. (Czech translation)",
+ "user": "Adam Zvada",
+ "now": "2026-09-21T10:00:00",
+ "messages": [
+  {
+   "id": "m01",
+   "ts": "2026-08-01T09:12:00",
+   "kind": "store",
+   "text": "Ahoj, jsem Adam Zvada. Žiju v Praze a se svým spoluzakladatelem Davidem Mokosem buduju startup Nebula."
+  },
+  {
+   "id": "m02",
+   "ts": "2026-08-01T09:15:00",
+   "kind": "store",
+   "text": "Moje telefonní číslo je +420 722 238 738."
+  },
+  {
+   "id": "m03",
+   "ts": "2026-08-01T09:20:00",
+   "kind": "store",
+   "text": "Telefonní číslo Davida Mokose je 733544390."
+  },
+  {
+   "id": "m04",
+   "ts": "2026-08-01T18:40:00",
+   "kind": "chitchat",
+   "text": "Lol, ok, díky."
+  },
+  {
+   "id": "m05",
+   "ts": "2026-08-02T11:05:00",
+   "kind": "store",
+   "text": "Až moc často přemýšlím o Římské říši."
+  },
+  {
+   "id": "m06",
+   "ts": "2026-08-02T11:30:00",
+   "kind": "store",
+   "text": "David má narozeniny 2. září."
+  },
+  {
+   "id": "m07",
+   "ts": "2026-08-02T20:00:00",
+   "kind": "store",
+   "text": "Moje oblíbená restaurace v Praze je Sasazu."
+  },
+  {
+   "id": "m08",
+   "ts": "2026-08-03T08:00:00",
+   "kind": "question",
+   "text": "Jaké je dnes v Praze počasí?"
+  },
+  {
+   "id": "m09",
+   "ts": "2026-08-03T19:22:00",
+   "kind": "store",
+   "text": "Dneska večer jsem byl s Tomem lézt na Smíchoffu a dal jsem svoje první 6c!"
+  },
+  {
+   "id": "m10",
+   "ts": "2026-08-03T19:25:00",
+   "kind": "store",
+   "text": "Tom Novak má číslo +420 777 123 456, je to můj parťák na lezení."
+  },
+  {
+   "id": "m11",
+   "ts": "2026-08-04T10:00:00",
+   "kind": "store",
+   "text": "Připomeň mi, ať si před říjnem obnovím pas."
+  },
+  {
+   "id": "m12",
+   "ts": "2026-08-05T08:31:00",
+   "kind": "store",
+   "text": "Snídaně v Café Savoy, 385 CZK"
+  },
+  {
+   "id": "m13",
+   "ts": "2026-08-06T21:10:00",
+   "kind": "store",
+   "text": "Moje přítelkyně Eva je alergická na arašídy."
+  },
+  {
+   "id": "m14",
+   "ts": "2026-08-06T21:12:00",
+   "kind": "store",
+   "text": "Eva má narozeniny 28. září a miluje sushi."
+  },
+  {
+   "id": "m15",
+   "ts": "2026-08-07T07:45:00",
+   "kind": "store",
+   "text": "Dneska ráno mám za sebou 10k za 52:30."
+  },
+  {
+   "id": "m16",
+   "ts": "2026-08-08T14:00:00",
+   "kind": "store",
+   "text": {
+    "type": "email",
+    "from": "sarah@northwind.vc",
+    "to": "adam@nebula.ai",
+    "subject": "Večeře zakladatelů příští týden",
+    "date": "2026-08-08T13:52:00",
+    "body": "Ahoj Adame, jsem ráda, že jsme se spojili. Budu moc ráda, když dorazíš na naši Founders Dinner 14. srpna v 19:00 na střešní terasu Hotel Josef. Měj se, Sarah Kim, Partner @ Northwind Ventures"
+   }
+  },
+  {
+   "id": "m17",
+   "ts": "2026-08-09T10:00:00",
+   "kind": "store",
+   "text": "Moje auto je Škoda Octavia z roku 2019, SPZ 5A1 2345"
+  },
+  {
+   "id": "m18",
+   "ts": "2026-08-10T17:30:00",
+   "kind": "store",
+   "text": "Zase lezu ve Smíchoffu, jen tak na pohodu."
+  },
+  {
+   "id": "m19",
+   "ts": "2026-08-11T09:00:00",
+   "kind": "question",
+   "text": "Jaké je Davidovo telefonní číslo?"
+  },
+  {
+   "id": "m20",
+   "ts": "2026-08-12T22:10:00",
+   "kind": "store",
+   "text": "Večeře se sushi s Evou v Sasazu, 2,140 CZK. Bylo to fakt dobrý."
+  },
+  {
+   "id": "m21",
+   "ts": "2026-08-13T12:00:00",
+   "kind": "store",
+   "text": "Návštěva zubaře 20. srpna v 9:00 u Dr. Horáka"
+  },
+  {
+   "id": "m22",
+   "ts": "2026-08-14T23:30:00",
+   "kind": "store",
+   "text": "Večeře zakladatelů byla skvělá. Potkal/a jsem Sarah Kim z Northwind Ventures, chce se podívat na náš deck. Taky jsem se seznámil/a s Janem Dvořákem, CTO v Rohlíku, moc fajn chlap."
+  },
+  {
+   "id": "m23",
+   "ts": "2026-08-15T09:10:00",
+   "kind": "store",
+   "text": "Tip na čtení pro knižní klub: Čtu Myšlení, rychlé a pomalé od Daniela Kahnemana."
+  },
+  {
+   "id": "m24",
+   "ts": "2026-08-15T09:12:00",
+   "kind": "store",
+   "text": "Taky si chci jako další přečíst The Pragmatic Programmer."
+  },
+  {
+   "id": "m25",
+   "ts": "2026-08-16T11:00:00",
+   "kind": "update",
+   "text": "Telefon na Davida Mokose je 733544390. David má taky číslo 6286884994, je to americké číslo."
+  },
+  {
+   "id": "m26",
+   "ts": "2026-08-17T18:00:00",
+   "kind": "store",
+   "text": "Zase lezu s Tomem, zkusil jsem projekt za 6c+, zatím jsem ho nevylezl."
+  },
+  {
+   "id": "m27",
+   "ts": "2026-08-18T19:00:00",
+   "kind": "store",
+   "text": "Nákup v Albertu, 1,262 CZK"
+  },
+  {
+   "id": "m28",
+   "ts": "2026-08-19T08:00:00",
+   "kind": "delete",
+   "text": "Vlastně jsem zrušil/a tu návštěvu u zubaře, přeobjednám se později."
+  },
+  {
+   "id": "m29",
+   "ts": "2026-08-20T16:00:00",
+   "kind": "store",
+   "text": "Schůzka k pitchi se Sarah Kim: Sep 23 v 10:00 v SF, v kanceláři Northwind, 2 Embarcadero Center"
+  },
+  {
+   "id": "m30",
+   "ts": "2026-08-21T12:30:00",
+   "kind": "chitchat",
+   "text": "Díky, to pomohlo!"
+  },
+  {
+   "id": "m31",
+   "ts": "2026-08-22T13:15:00",
+   "kind": "store",
+   "text": "Oběd v Lokálu, 329 CZK"
+  },
+  {
+   "id": "m32",
+   "ts": "2026-08-23T10:00:00",
+   "kind": "store",
+   "text": "1. září se stěhuju do San Francisca! Našla jsem byt na adrese 1450 Valencia St."
+  },
+  {
+   "id": "m33",
+   "ts": "2026-08-24T09:00:00",
+   "kind": "store",
+   "text": "Máma má narozeniny 3. října a miluje orchideje."
+  },
+  {
+   "id": "m34",
+   "ts": "2026-08-25T20:00:00",
+   "kind": "store",
+   "text": "Adam rád jezdí na velkých černých koních."
+  },
+  {
+   "id": "m35",
+   "ts": "2026-08-26T15:00:00",
+   "kind": "store",
+   "text": "Let do Prahy → San Francisca na 1. září je zamluvený, United UA 8843, 18,450 CZK."
+  },
+  {
+   "id": "m36",
+   "ts": "2026-08-27T10:00:00",
+   "kind": "update",
+   "text": "Pas obnovenej ✅"
+  },
+  {
+   "id": "m37",
+   "ts": "2026-08-28T18:00:00",
+   "kind": "update",
+   "text": "Dneska se prodala Skoda za 310,000 CZK."
+  },
+  {
+   "id": "m38",
+   "ts": "2026-08-29T11:00:00",
+   "kind": "update",
+   "text": "Tom si změnil číslo, nové je +420 777 999 000."
+  },
+  {
+   "id": "m39",
+   "ts": "2026-08-30T21:00:00",
+   "kind": "update",
+   "text": "Dočetl/a jsem Myšlení, rychlé a pomalé. 5/5, ty věci o Systému 1 a Systému 2 jsou zlato."
+  },
+  {
+   "id": "m40",
+   "ts": "2026-08-31T09:00:00",
+   "kind": "question",
+   "text": "Kdo je vlastně Jan Dvořák?"
+  },
+  {
+   "id": "m41",
+   "ts": "2026-09-01T22:00:00",
+   "kind": "update",
+   "text": "Přistál jsem v SF. Začíná nová kapitola!"
+  },
+  {
+   "id": "m42",
+   "ts": "2026-09-02T09:00:00",
+   "kind": "store",
+   "text": {
+    "type": "email",
+    "from": "sarah@northwind.vc",
+    "to": "adam@nebula.ai",
+    "subject": "Návrh podmínek",
+    "date": "2026-09-02T08:41:00",
+    "body": "Adame, v příloze posílám návrh podmínek pro seedové kolo Nebuly: $3M při post-money valuaci $15M. Probereme to na schůzce. — Sarah"
+   }
+  },
+  {
+   "id": "m43",
+   "ts": "2026-09-02T09:05:00",
+   "kind": "chitchat",
+   "text": "Všechno nejlepší k narozeninám Davidovi, který dnes slaví 🎂"
+  },
+  {
+   "id": "m44",
+   "ts": "2026-09-03T08:40:00",
+   "kind": "store",
+   "text": "BLUE BOTTLE COFFEE - Mint Plaza, San Francisco\n09/03/2026 8:37 AM\n1x Oat Latte          $5.50\n1x Mandlový croissant    $4.75\nCELKEM                 $10.25\nVISA ****4421"
+  },
+  {
+   "id": "m45",
+   "ts": "2026-09-04T17:00:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Schůze představenstva Nebula\nDTSTART:20260925T160000\nDTEND:20260925T173000\nLOCATION:1 Mission St, San Francisco\nORGANIZER;CN=David Mokos:mailto:david@nebula.ai\nEND:VEVENT"
+  },
+  {
+   "id": "m46",
+   "ts": "2026-09-05T23:10:00",
+   "kind": "store",
+   "text": "Uber domů z Missionu, $23.40"
+  },
+  {
+   "id": "m47",
+   "ts": "2026-09-06T07:30:00",
+   "kind": "store",
+   "text": "Nový osobák na 10 km!!! 49:58 🏃"
+  },
+  {
+   "id": "m48",
+   "ts": "2026-09-06T12:00:00",
+   "kind": "store",
+   "text": "Potřebuju dárek k Evinu narozeninám, co třeba kurz přípravy sushi?"
+  },
+  {
+   "id": "m49",
+   "ts": "2026-09-07T10:00:00",
+   "kind": "store",
+   "text": "Začal/a jsem chodit do lezeckého centra Mission Cliffs, členství stojí $110/měsíc."
+  },
+  {
+   "id": "m50",
+   "ts": "2026-09-08T12:00:00",
+   "kind": "update",
+   "text": "Davidovo americké číslo je vlastně +1 628 688 4995, předtím jsem tam měl překlep."
+  },
+  {
+   "id": "m51",
+   "ts": "2026-09-09T09:30:00",
+   "kind": "update",
+   "text": "Sarah přesunula naši schůzku na Sep 24 ve 14:00, na stejné místo."
+  },
+  {
+   "id": "m52",
+   "ts": "2026-09-10T21:45:00",
+   "kind": "store",
+   "text": "Večeře s Davidem v Tartine, $96.80, oslavili jsme term sheet"
+  },
+  {
+   "id": "m53",
+   "ts": "2026-09-11T08:00:00",
+   "kind": "chitchat",
+   "text": "ok"
+  },
+  {
+   "id": "m54",
+   "ts": "2026-09-12T14:00:00",
+   "kind": "store",
+   "text": {
+    "type": "contact_card",
+    "name": "Priya Patel",
+    "company": "Stripe",
+    "role": "Vedoucí inženýrského týmu",
+    "email": "priya@stripe.com",
+    "phone": "+1 415 555 0142",
+    "met_at": "Setkání zakladatelů YC"
+   }
+  },
+  {
+   "id": "m55",
+   "ts": "2026-09-12T15:00:00",
+   "kind": "store",
+   "text": "Kancelář společnosti Nebula je na adrese 1 Mission St, San Francisco"
+  },
+  {
+   "id": "m56",
+   "ts": "2026-09-13T16:00:00",
+   "kind": "store",
+   "text": "Priya mě seznámila se svým kolegou Markem Chenem, který má na starosti partnerství ve Stripe."
+  },
+  {
+   "id": "m57",
+   "ts": "2026-09-14T10:00:00",
+   "kind": "update",
+   "text": "Začal jsem číst The Pragmatic Programmer."
+  },
+  {
+   "id": "m58",
+   "ts": "2026-09-15T19:00:00",
+   "kind": "store",
+   "text": "Eva je na návštěvě v SF od 10. října do 20. října."
+  },
+  {
+   "id": "m59",
+   "ts": "2026-09-16T11:00:00",
+   "kind": "delete",
+   "text": "Zapomeň na informace o Janu Dvořákovi, už je nepotřebuju."
+  },
+  {
+   "id": "m60",
+   "ts": "2026-09-17T09:00:00",
+   "kind": "store",
+   "text": "Naše seedové kolo je uzavřené! 3 miliony dolarů vedla společnost Northwind Ventures 🎉"
+  },
+  {
+   "id": "m61",
+   "ts": "2026-09-18T18:30:00",
+   "kind": "store",
+   "text": "Lezení v Mission Cliffs, konečně jsem dal 6c+!"
+  },
+  {
+   "id": "m62",
+   "ts": "2026-09-19T12:00:00",
+   "kind": "question",
+   "text": "Co mě čeká příští týden?"
+  },
+  {
+   "id": "m63",
+   "ts": "2026-09-20T20:00:00",
+   "kind": "update",
+   "text": "Změnil/a jsem si telefonní číslo na americké: +1 415 555 0199"
+  }
+ ],
+ "qa": [
+  {
+   "id": "q01",
+   "category": "update",
+   "question": "Jaké je moje telefonní číslo?",
+   "answer": "+1 415 555 0199 (switched from the Czech +420 722 238 738 on Sep 20)",
+   "evidence": [
+    "m02",
+    "m63"
+   ]
+  },
+  {
+   "id": "q02",
+   "category": "update",
+   "question": "Jaké je Davidovo telefonní číslo?",
+   "answer": "Czech: +420 733 544 390; US: +1 628 688 4995 (corrected from ...4994)",
+   "evidence": [
+    "m03",
+    "m25",
+    "m50"
+   ]
+  },
+  {
+   "id": "q03",
+   "category": "update",
+   "question": "Jaké je Tomovo telefonní číslo?",
+   "answer": "+420 777 999 000 (his new number; the old one was +420 777 123 456)",
+   "evidence": [
+    "m10",
+    "m38"
+   ]
+  },
+  {
+   "id": "q04",
+   "category": "update",
+   "question": "Kde teď bydlím?",
+   "answer": "San Francisco, at 1450 Valencia St.",
+   "evidence": [
+    "m32",
+    "m41"
+   ]
+  },
+  {
+   "id": "q05",
+   "category": "single",
+   "question": "Kdy má David narozeniny?",
+   "answer": "September 2",
+   "evidence": [
+    "m06"
+   ]
+  },
+  {
+   "id": "q06",
+   "category": "aggregation",
+   "question": "Čí narozeniny znám a kdy je mají?",
+   "answer": "David: Sep 2; Eva: Sep 28; Mom: Oct 3",
+   "evidence": [
+    "m06",
+    "m14",
+    "m33"
+   ]
+  },
+  {
+   "id": "q07",
+   "category": "multi_hop",
+   "question": "Jaký je e-mail na toho investora, kterého jsem potkal na Founders Dinner?",
+   "answer": "sarah@northwind.vc (Sarah Kim, Northwind Ventures)",
+   "evidence": [
+    "m16",
+    "m22"
+   ]
+  },
+  {
+   "id": "q08",
+   "category": "update",
+   "question": "Kdy a kde mám schůzku se Sarah Kim?",
+   "answer": "Sep 24, 2026 at 14:00 at the Northwind office, 2 Embarcadero Center, SF (moved from Sep 23 10:00)",
+   "evidence": [
+    "m29",
+    "m51"
+   ]
+  },
+  {
+   "id": "q09",
+   "category": "delete",
+   "question": "Mám v nejbližší době nějakou schůzku u zubaře?",
+   "answer": "No. The Aug 20 appointment with Dr. Horák was cancelled.",
+   "evidence": [
+    "m21",
+    "m28"
+   ]
+  },
+  {
+   "id": "q10",
+   "category": "aggregation",
+   "question": "Kolik jsem v srpnu utratil/a za jídlo v restauracích a kavárnách?",
+   "answer": "2,854 CZK (Café Savoy 385 + Sasazu 2,140 + Lokál 329)",
+   "evidence": [
+    "m12",
+    "m20",
+    "m31"
+   ]
+  },
+  {
+   "id": "q11",
+   "category": "aggregation",
+   "question": "Jaký je můj nejlepší čas na 10 km?",
+   "answer": "49:58 (Sep 6, 2026)",
+   "evidence": [
+    "m15",
+    "m47"
+   ]
+  },
+  {
+   "id": "q12",
+   "category": "update",
+   "question": "Které knížky už jsem dočetl/a a jak jsem je ohodnotil/a?",
+   "answer": "Thinking, Fast and Slow, rated 5/5",
+   "evidence": [
+    "m23",
+    "m39"
+   ]
+  },
+  {
+   "id": "q13",
+   "category": "update",
+   "question": "Jakou knihu teď čtu?",
+   "answer": "The Pragmatic Programmer",
+   "evidence": [
+    "m24",
+    "m57"
+   ]
+  },
+  {
+   "id": "q14",
+   "category": "single",
+   "question": "Na co je Eva alergická?",
+   "answer": "Peanuts",
+   "evidence": [
+    "m13"
+   ]
+  },
+  {
+   "id": "q15",
+   "category": "update",
+   "question": "Mám auto?",
+   "answer": "No, the 2019 Skoda Octavia was sold on Aug 28",
+   "evidence": [
+    "m17",
+    "m37"
+   ]
+  },
+  {
+   "id": "q16",
+   "category": "update",
+   "question": "Už jsem si obnovil pas?",
+   "answer": "Yes, it was renewed (Aug 27)",
+   "evidence": [
+    "m11",
+    "m36"
+   ]
+  },
+  {
+   "id": "q17",
+   "category": "semi_structured",
+   "question": "Kdy a kde se koná zasedání představenstva Nebula?",
+   "answer": "Sep 25, 2026, 16:00-17:30, at 1 Mission St, San Francisco",
+   "evidence": [
+    "m45"
+   ]
+  },
+  {
+   "id": "q18",
+   "category": "semi_structured",
+   "question": "Jaké byly podmínky v návrhu term sheetu?",
+   "answer": "$3M seed round at a $15M post-money valuation",
+   "evidence": [
+    "m42"
+   ]
+  },
+  {
+   "id": "q19",
+   "category": "multi_hop",
+   "question": "Jaká je e-mailová adresa mého spoluzakladatele?",
+   "answer": "david@nebula.ai",
+   "evidence": [
+    "m01",
+    "m45"
+   ]
+  },
+  {
+   "id": "q20",
+   "category": "aggregation",
+   "question": "Kolikrát jsem byl v srpnu lézt?",
+   "answer": "3 times (Aug 3, Aug 10, Aug 17)",
+   "evidence": [
+    "m09",
+    "m18",
+    "m26"
+   ]
+  },
+  {
+   "id": "q21",
+   "category": "aggregation",
+   "question": "Jakou nejtěžší obtížnost jsem vylezl?",
+   "answer": "6c+ (sent on Sep 18 at Mission Cliffs)",
+   "evidence": [
+    "m09",
+    "m26",
+    "m61"
+   ]
+  },
+  {
+   "id": "q22",
+   "category": "multi_hop",
+   "question": "Jaké mám tipy na dárky pro mámu a pro Evu?",
+   "answer": "Mom: orchids; Eva: a sushi-making class",
+   "evidence": [
+    "m33",
+    "m48"
+   ]
+  },
+  {
+   "id": "q23",
+   "category": "single",
+   "question": "Kolik stál let do San Francisca?",
+   "answer": "18,450 CZK (United UA 8843)",
+   "evidence": [
+    "m35"
+   ]
+  },
+  {
+   "id": "q24",
+   "category": "semi_structured",
+   "question": "Kdo je Priya Patel?",
+   "answer": "Engineering Manager at Stripe, met at a YC founder mixer (priya@stripe.com, +1 415 555 0142)",
+   "evidence": [
+    "m54"
+   ]
+  },
+  {
+   "id": "q25",
+   "category": "single",
+   "question": "Kdo má ve Stripe na starosti partnerství?",
+   "answer": "Mark Chen, Priya's colleague",
+   "evidence": [
+    "m56"
+   ]
+  },
+  {
+   "id": "q26",
+   "category": "single",
+   "question": "Kolik Nebula získala a kdo vedl investiční kolo?",
+   "answer": "$3M seed, led by Northwind Ventures",
+   "evidence": [
+    "m60"
+   ]
+  },
+  {
+   "id": "q27",
+   "category": "single",
+   "question": "Kdy Eva přijede do SF?",
+   "answer": "Oct 10 to Oct 20",
+   "evidence": [
+    "m58"
+   ]
+  },
+  {
+   "id": "q28",
+   "category": "single",
+   "question": "Do které lezecké stěny jsem se přihlásil/a a kolik to stojí?",
+   "answer": "Mission Cliffs, $110/month",
+   "evidence": [
+    "m49"
+   ]
+  },
+  {
+   "id": "q29",
+   "category": "aggregation",
+   "question": "Kolik jsem v září utratil/a za jídlo a kávu?",
+   "answer": "$107.05 (Blue Bottle $10.25 + Tartine $96.80)",
+   "evidence": [
+    "m44",
+    "m52"
+   ]
+  },
+  {
+   "id": "q30",
+   "category": "single",
+   "question": "Jaká je moje oblíbená restaurace v Praze?",
+   "answer": "Sasazu",
+   "evidence": [
+    "m07"
+   ]
+  },
+  {
+   "id": "q31",
+   "category": "single",
+   "question": "O čem rád přemýšlím?",
+   "answer": "The Roman Empire",
+   "evidence": [
+    "m05"
+   ]
+  },
+  {
+   "id": "q32",
+   "category": "single",
+   "question": "Na čem rád jezdím?",
+   "answer": "Big black horses",
+   "evidence": [
+    "m34"
+   ]
+  },
+  {
+   "id": "q33",
+   "category": "temporal",
+   "question": "Jaké schůzky mám příští týden?",
+   "answer": "Thu Sep 24 14:00: pitch meeting with Sarah Kim at the Northwind office (2 Embarcadero Center); Fri Sep 25 16:00: Nebula board meeting at 1 Mission St",
+   "evidence": [
+    "m29",
+    "m51",
+    "m45"
+   ]
+  },
+  {
+   "id": "q34",
+   "category": "single",
+   "question": "Za kolik jsem prodal/a auto?",
+   "answer": "310,000 CZK",
+   "evidence": [
+    "m37"
+   ]
+  },
+  {
+   "id": "q35",
+   "category": "update",
+   "question": "Kde jsem bydlel/a před San Franciscem?",
+   "answer": "Prague",
+   "evidence": [
+    "m01",
+    "m32"
+   ]
+  },
+  {
+   "id": "q36",
+   "category": "deleted",
+   "question": "Kdo je Jan Dvořák?",
+   "answer": "UNKNOWN: the user asked to forget Jan Dvořák's info, so nothing should be returned",
+   "evidence": [
+    "m59"
+   ]
+  },
+  {
+   "id": "q37",
+   "category": "unanswerable",
+   "question": "Kdy má Tom narozeniny?",
+   "answer": "UNKNOWN: never mentioned",
+   "evidence": []
+  },
+  {
+   "id": "q38",
+   "category": "unanswerable",
+   "question": "Jaké je telefonní číslo Sarah Kim?",
+   "answer": "UNKNOWN: never mentioned",
+   "evidence": []
+  },
+  {
+   "id": "q39",
+   "category": "unanswerable",
+   "question": "Jaké je Eviino příjmení?",
+   "answer": "UNKNOWN: never mentioned",
+   "evidence": []
+  },
+  {
+   "id": "q40",
+   "category": "unanswerable",
+   "question": "Kolik platím nájem v San Franciscu?",
+   "answer": "UNKNOWN: never mentioned",
+   "evidence": []
+  }
+ ]
+}

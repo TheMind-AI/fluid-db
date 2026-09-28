@@ -1,0 +1,113 @@
+{
+ "rows": 4516,
+ "wrong": 163,
+ "strategies": {
+  "random": {
+   "auroc": 0.5,
+   "caught": {
+    "1%": 0.0123,
+    "2%": 0.0184,
+    "5%": 0.0613,
+    "10%": 0.1104
+   },
+   "caught_at_5pct_by_field": {
+    "amount": 0.0,
+    "date": 0.065,
+    "merchant": 0.0,
+    "sent": 0.0,
+    "with": 0.077
+   }
+  },
+  "planner_first": {
+   "auroc": 0.5522,
+   "caught": {
+    "1%": 0.0,
+    "2%": 0.0061,
+    "5%": 0.0491,
+    "10%": 0.1043
+   },
+   "caught_at_5pct_by_field": {
+    "amount": 0.0,
+    "date": 0.065,
+    "merchant": 0.0,
+    "sent": 0.0,
+    "with": 0.0
+   }
+  },
+  "code": {
+   "auroc": 0.9743,
+   "caught": {
+    "1%": 0.2086,
+    "2%": 0.3681,
+    "5%": 0.7546,
+    "10%": 0.9693
+   },
+   "caught_at_5pct_by_field": {
+    "amount": 0.0,
+    "date": 0.789,
+    "merchant": 0.0,
+    "sent": 0.0,
+    "with": 0.788
+   }
+  },
+  "jev": {
+   "auroc": 0.8035,
+   "caught": {
+    "1%": 0.1595,
+    "2%": 0.3067,
+    "5%": 0.4601,
+    "10%": 0.5276
+   },
+   "caught_at_5pct_by_field": {
+    "amount": 0.0,
+    "date": 0.309,
+    "merchant": 0.0,
+    "sent": 1.0,
+    "with": 0.962
+   }
+  },
+  "combined": {
+   "auroc": 0.9877,
+   "caught": {
+    "1%": 0.1595,
+    "2%": 0.3988,
+    "5%": 0.8037,
+    "10%": 0.9939
+   },
+   "caught_at_5pct_by_field": {
+    "amount": 0.0,
+    "date": 0.764,
+    "merchant": 0.0,
+    "sent": 0.0,
+    "with": 1.0
+   }
+  }
+ },
+ "signals": {
+  "person_not_linked": {
+   "flagged": 182,
+   "precision": 0.396,
+   "recall": 0.442
+  },
+  "late_night_date": {
+   "flagged": 106,
+   "precision": 1.0,
+   "recall": 0.65
+  },
+  "linked_not_mentioned": {
+   "flagged": 79,
+   "precision": 0.392,
+   "recall": 0.19
+  },
+  "missing_date": {
+   "flagged": 12,
+   "precision": 1.0,
+   "recall": 0.074
+  }
+ },
+ "jev_questions": {
+  "faithful": 0.6716,
+  "date": 0.5753,
+  "people": 0.7541
+ }
+}

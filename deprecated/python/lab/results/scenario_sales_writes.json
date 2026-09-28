@@ -1,0 +1,117 @@
+{
+ "scenario": "sales",
+ "messages": 253,
+ "truth_records": 186,
+ "write_accuracy": 0.9409,
+ "tiers": {
+  "C": 199,
+  "C-skip": 43,
+  "A": 11
+ },
+ "tier_a_after_bootstrap": 0.0827,
+ "by_kind": {
+  "approval": {
+   "ok": 10,
+   "of": 10,
+   "acc": 1.0
+  },
+  "deal_new": {
+   "ok": 24,
+   "of": 24,
+   "acc": 1.0
+  },
+  "deal_note": {
+   "ok": 24,
+   "of": 24,
+   "acc": 1.0
+  },
+  "deal_slip": {
+   "ok": 1,
+   "of": 4,
+   "acc": 0.25
+  },
+  "deal_stage": {
+   "ok": 82,
+   "of": 88,
+   "acc": 0.932
+  },
+  "demo": {
+   "ok": 23,
+   "of": 24,
+   "acc": 0.958
+  },
+  "doc": {
+   "ok": 2,
+   "of": 2,
+   "acc": 1.0
+  },
+  "meeting": {
+   "ok": 1,
+   "of": 1,
+   "acc": 1.0
+  },
+  "pref": {
+   "ok": 3,
+   "of": 3,
+   "acc": 1.0
+  },
+  "pricing": {
+   "ok": 0,
+   "of": 1,
+   "acc": 0.0
+  },
+  "quota": {
+   "ok": 1,
+   "of": 1,
+   "acc": 1.0
+  },
+  "territory": {
+   "ok": 1,
+   "of": 1,
+   "acc": 1.0
+  },
+  "todo": {
+   "ok": 2,
+   "of": 2,
+   "acc": 1.0
+  },
+  "todo_done": {
+   "ok": 1,
+   "of": 1,
+   "acc": 1.0
+  }
+ },
+ "by_tier": {
+  "C": 0.9409
+ },
+ "top_misses": {
+  "deal_stage.stage": 4,
+  "deal_slip.date": 3,
+  "deal_stage: no row": 2,
+  "pricing.amount": 1,
+  "demo: no row": 1
+ },
+ "forget": [
+  {
+   "request": "please forget what I noted about Fabrikam's layoffs, that was confidential",
+   "left_behind": [
+    "laying off",
+    "15% of ops"
+   ]
+  }
+ ],
+ "tables": {
+  "communication_preferences": 1,
+  "emails": 13,
+  "event_attendees": 52,
+  "events": 71,
+  "organizations": 24,
+  "people": 29,
+  "sales_leads": 34,
+  "sales_targets": 1,
+  "sales_territories": 2,
+  "tasks": 2,
+  "work_relationships": 2
+ },
+ "ingest_spent": 0.1662
+}

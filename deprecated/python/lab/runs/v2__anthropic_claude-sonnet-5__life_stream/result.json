@@ -1,0 +1,6650 @@
+{
+ "run": "v2__anthropic_claude-sonnet-5__life_stream",
+ "system": "v2",
+ "model": "anthropic:claude-sonnet-5",
+ "dataset": "life_stream",
+ "opts": {},
+ "accuracy": 0.8125,
+ "by_category": {
+  "aggregation": 1.0,
+  "delete": 1.0,
+  "deleted": 1.0,
+  "multi_hop": 0.0,
+  "semi_structured": 0.667,
+  "single": 0.773,
+  "temporal": 1.0,
+  "unanswerable": 1.0,
+  "update": 0.9
+ },
+ "ingest": {
+  "messages": 63,
+  "crashes": 0,
+  "sql_errors": 0,
+  "cost": 0.7932,
+  "llm_latency_mean": 3.802,
+  "wall_mean": 3.129,
+  "llm_calls": 63,
+  "jev_calls": 0
+ },
+ "qa_cost": 0.8686,
+ "qa_wall_mean": 5.639,
+ "ledger": {
+  "calls": 227,
+  "input_tokens": 734866,
+  "output_tokens": 26613,
+  "cost": 1.809966,
+  "latency": 538.622
+ },
+ "ingest_trace": [
+  {
+   "id": "m01",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 0,
+    "notes": "Adam introduces himself, location, and startup Nebula with cofounder David Mokos. Storing people, organization, and linking founders via founders table.",
+    "ops": [
+     {
+      "op": "create_table",
+      "table": "people",
+      "description": "A person known to Adam",
+      "columns": [
+       {
+        "name": "name",
+        "type": "TEXT",
+        "description": "Full name"
+       },
+       {
+        "name": "city",
+        "type": "TEXT",
+        "description": "City of residence"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "create_table",
+      "table": "organizations",
+      "description": "A company or startup",
+      "columns": [
+       {
+        "name": "name",
+        "type": "TEXT",
+        "description": "Organization name"
+       },
+       {
+        "name": "description",
+        "type": "TEXT",
+        "description": "What the organization does"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "create_table",
+      "table": "organization_members",
+      "description": "Link between people and organizations they are part of, with their role",
+      "columns": [
+       {
+        "name": "organization_id",
+        "type": "INTEGER",
+        "description": "Reference to organizations.id"
+       },
+       {
+        "name": "person_id",
+        "type": "INTEGER",
+        "description": "Reference to people.id"
+       },
+       {
+        "name": "role",
+        "type": "TEXT",
+        "description": "Role at the organization"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "insert",
+      "table": "people",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": "adam",
+      "values": [
+       {
+        "column": "name",
+        "value": "Adam Zvada"
+       },
+       {
+        "column": "city",
+        "value": "Prague"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "people",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": "david",
+      "values": [
+       {
+        "column": "name",
+        "value": "David Mokos"
+       },
+       {
+        "column": "city",
+        "value": null
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "organizations",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": "nebula",
+      "values": [
+       {
+        "column": "name",
+        "value": "Nebula"
+       },
+       {
+        "column": "description",
+        "value": "Startup being built by Adam Zvada and David Mokos"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "organization_members",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "organization_id",
+        "value": "@nebula"
+       },
+       {
+        "column": "person_id",
+        "value": "@adam"
+       },
+       {
+        "column": "role",
+        "value": "Cofounder"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "organization_members",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "organization_id",
+        "value": "@nebula"
+       },
+       {
+        "column": "person_id",
+        "value": "@david"
+       },
+       {
+        "column": "role",
+        "value": "Cofounder"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 0.002,
+   "llm_latency": 10.134,
+   "cost": 0.012358,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m02",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 5,
+    "notes": "Adam provides his phone number; adding it to his existing people row.",
+    "ops": [
+     {
+      "op": "add_columns",
+      "table": "people",
+      "description": null,
+      "columns": [
+       {
+        "name": "phone",
+        "type": "TEXT",
+        "description": "Phone number with country code"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "update",
+      "table": "people",
+      "description": null,
+      "columns": [],
+      "row_id": 1,
+      "ref": null,
+      "values": [
+       {
+        "column": "phone",
+        "value": "+420 722 238 738"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 0.004,
+   "llm_latency": 4.207,
+   "cost": 0.00605,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m03",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 5,
+    "notes": "Adam provided David Mokos's phone number; updating his existing person record.",
+    "ops": [
+     {
+      "op": "update",
+      "table": "people",
+      "description": null,
+      "columns": [],
+      "row_id": 2,
+      "ref": null,
+      "values": [
+       {
+        "column": "phone",
+        "value": "+420 733 544 390"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 0.001,
+   "llm_latency": 4.064,
+   "cost": 0.00566,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m04",
+   "kind": "chitchat",
+   "trace": {
+    "errors": [],
+    "context_rows": 5,
+    "notes": "Small talk with no durable information to store.",
+    "ops": []
+   },
+   "crashed": null,
+   "wall": 0.002,
+   "llm_latency": 1.546,
+   "cost": 0.004708,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m05",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 5,
+    "notes": "Casual musing about liking to think about the Roman Empire; not a durable fact worth storing.",
+    "ops": []
+   },
+   "crashed": null,
+   "wall": 0.001,
+   "llm_latency": 2.866,
+   "cost": 0.005466,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m06",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 5,
+    "notes": "Store David Mokos's birthday by adding a birthday column to people and updating his row.",
+    "ops": [
+     {
+      "op": "add_columns",
+      "table": "people",
+      "description": null,
+      "columns": [
+       {
+        "name": "birthday",
+        "type": "TEXT",
+        "description": "Birthday in MM-DD or YYYY-MM-DD format"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "update",
+      "table": "people",
+      "description": null,
+      "columns": [],
+      "row_id": 2,
+      "ref": null,
+      "values": [
+       {
+        "column": "birthday",
+        "value": "09-02"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 0.002,
+   "llm_latency": 3.859,
+   "cost": 0.006484,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m07",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 5,
+    "notes": "Adam mentions his favorite restaurant in Prague, Sasazu; storing it as a place with a favorite flag.",
+    "ops": [
+     {
+      "op": "create_table",
+      "table": "places",
+      "description": "A place of interest such as a restaurant, venue, or landmark",
+      "columns": [
+       {
+        "name": "name",
+        "type": "TEXT",
+        "description": "Place name"
+       },
+       {
+        "name": "city",
+        "type": "TEXT",
+        "description": "City where the place is located"
+       },
+       {
+        "name": "category",
+        "type": "TEXT",
+        "description": "Type of place, e.g. restaurant"
+       },
+       {
+        "name": "is_favorite",
+        "type": "BOOLEAN",
+        "description": "Whether this is a favorite place of Adam's"
+       },
+       {
+        "name": "person_id",
+        "type": "INTEGER",
+        "description": "Reference to people.id for whom this is a favorite"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "insert",
+      "table": "places",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "name",
+        "value": "Sasazu"
+       },
+       {
+        "column": "city",
+        "value": "Prague"
+       },
+       {
+        "column": "category",
+        "value": "restaurant"
+       },
+       {
+        "column": "is_favorite",
+        "value": true
+       },
+       {
+        "column": "person_id",
+        "value": 1
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 0.002,
+   "llm_latency": 5.138,
+   "cost": 0.008656,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m08",
+   "kind": "question",
+   "trace": {
+    "errors": [],
+    "context_rows": 6,
+    "notes": "This is a question, not durable information; no database changes needed.",
+    "ops": []
+   },
+   "crashed": null,
+   "wall": 0.001,
+   "llm_latency": 1.762,
+   "cost": 0.005268,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m09",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 6,
+    "notes": "Adam went climbing at Smíchoff climbing gym with Tom tonight, sending his first 6c grade; storing new person Tom, new place Smíchoff, and a climbing_sessions table logging the session.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "people",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": "tom",
+      "values": [
+       {
+        "column": "name",
+        "value": "Tom"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "places",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": "smichoff",
+      "values": [
+       {
+        "column": "name",
+        "value": "Smíchoff"
+       },
+       {
+        "column": "city",
+        "value": "Prague"
+       },
+       {
+        "column": "category",
+        "value": "climbing gym"
+       }
+      ]
+     },
+     {
+      "op": "create_table",
+      "table": "climbing_sessions",
+      "description": "A climbing session Adam attended, including who he climbed with and achievements",
+      "columns": [
+       {
+        "name": "place_id",
+        "type": "INTEGER",
+        "description": "Reference to places.id where the session took place"
+       },
+       {
+        "name": "date",
+        "type": "DATETIME",
+        "description": "Date and time of the climbing session"
+       },
+       {
+        "name": "companion_id",
+        "type": "INTEGER",
+        "description": "Reference to people.id for who Adam climbed with"
+       },
+       {
+        "name": "achievement",
+        "type": "TEXT",
+        "description": "Notable achievement during the session, e.g. hardest grade sent"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "insert",
+      "table": "climbing_sessions",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "place_id",
+        "value": "@smichoff"
+       },
+       {
+        "column": "date",
+        "value": "2026-08-03T19:22"
+       },
+       {
+        "column": "companion_id",
+        "value": "@tom"
+       },
+       {
+        "column": "achievement",
+        "value": "First 6c sent"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 0.003,
+   "llm_latency": 6.288,
+   "cost": 0.01148,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m10",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 9,
+    "notes": "Adds phone number and full surname for existing contact Tom, who is Adam's climbing buddy.",
+    "ops": [
+     {
+      "op": "update",
+      "table": "people",
+      "description": null,
+      "columns": [],
+      "row_id": 3,
+      "ref": null,
+      "values": [
+       {
+        "column": "name",
+        "value": "Tom Novak"
+       },
+       {
+        "column": "phone",
+        "value": "+420 777 123 456"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 0.002,
+   "llm_latency": 2.703,
+   "cost": 0.006994,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m11",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 9,
+    "notes": "Adam wants a reminder to renew his passport before October; storing as a task with due date.",
+    "ops": [
+     {
+      "op": "create_table",
+      "table": "tasks",
+      "description": "A task or reminder for Adam",
+      "columns": [
+       {
+        "name": "title",
+        "type": "TEXT",
+        "description": "Short description of the task"
+       },
+       {
+        "name": "due_date",
+        "type": "DATE",
+        "description": "Date by which the task should be completed"
+       },
+       {
+        "name": "status",
+        "type": "TEXT",
+        "description": "Status of the task, e.g. pending, done, cancelled"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "insert",
+      "table": "tasks",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "title",
+        "value": "Renew passport"
+       },
+       {
+        "column": "due_date",
+        "value": "2026-09-30"
+       },
+       {
+        "column": "status",
+        "value": "pending"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 4.297,
+   "llm_latency": 4.294,
+   "cost": 0.008524,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m12",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 10,
+    "notes": "Adam had breakfast at Café Savoy costing 385 CZK; storing as a new expense and creating the place.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "places",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": "savoy",
+      "values": [
+       {
+        "column": "name",
+        "value": "Café Savoy"
+       },
+       {
+        "column": "city",
+        "value": "Prague"
+       },
+       {
+        "column": "category",
+        "value": "restaurant"
+       }
+      ]
+     },
+     {
+      "op": "create_table",
+      "table": "expenses",
+      "description": "A purchase or expense made by Adam",
+      "columns": [
+       {
+        "name": "description",
+        "type": "TEXT",
+        "description": "What the expense was for"
+       },
+       {
+        "name": "amount",
+        "type": "REAL",
+        "description": "Amount spent"
+       },
+       {
+        "name": "currency",
+        "type": "TEXT",
+        "description": "Currency of the amount"
+       },
+       {
+        "name": "date",
+        "type": "DATE",
+        "description": "Date of the expense"
+       },
+       {
+        "name": "place_id",
+        "type": "INTEGER",
+        "description": "Reference to places.id where the expense occurred"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "insert",
+      "table": "expenses",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "description",
+        "value": "Breakfast"
+       },
+       {
+        "column": "amount",
+        "value": 385
+       },
+       {
+        "column": "currency",
+        "value": "CZK"
+       },
+       {
+        "column": "date",
+        "value": "2026-08-05"
+       },
+       {
+        "column": "place_id",
+        "value": "@savoy"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 5.949,
+   "llm_latency": 5.947,
+   "cost": 0.010682,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m13",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 12,
+    "notes": "Adam mentions his girlfriend Eva has a peanut allergy; add her as a new person with relationship and allergy info, extending people table with new columns.",
+    "ops": [
+     {
+      "op": "add_columns",
+      "table": "people",
+      "description": null,
+      "columns": [
+       {
+        "name": "relationship_to_adam",
+        "type": "TEXT",
+        "description": "Relationship of this person to Adam Zvada, e.g. girlfriend"
+       },
+       {
+        "name": "allergies",
+        "type": "TEXT",
+        "description": "Known allergies of this person"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "insert",
+      "table": "people",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": "eva",
+      "values": [
+       {
+        "column": "name",
+        "value": "Eva"
+       },
+       {
+        "column": "relationship_to_adam",
+        "value": "girlfriend"
+       },
+       {
+        "column": "allergies",
+        "value": "peanuts"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 4.535,
+   "llm_latency": 4.532,
+   "cost": 0.009858,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m14",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 13,
+    "notes": "Eva's birthday and sushi preference recorded; storing as birthday and a favorite-food note since no dedicated column exists.",
+    "ops": [
+     {
+      "op": "update",
+      "table": "people",
+      "description": null,
+      "columns": [],
+      "row_id": 4,
+      "ref": null,
+      "values": [
+       {
+        "column": "birthday",
+        "value": "09-28"
+       }
+      ]
+     },
+     {
+      "op": "add_columns",
+      "table": "people",
+      "description": null,
+      "columns": [
+       {
+        "name": "favorite_food",
+        "type": "TEXT",
+        "description": "Favorite food or cuisine of this person"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "update",
+      "table": "people",
+      "description": null,
+      "columns": [],
+      "row_id": 4,
+      "ref": null,
+      "values": [
+       {
+        "column": "favorite_food",
+        "value": "sushi"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 3.327,
+   "llm_latency": 3.325,
+   "cost": 0.009066,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m15",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 13,
+    "notes": "Adam ran 10k this morning in 52:30; store as a new running session record.",
+    "ops": [
+     {
+      "op": "create_table",
+      "table": "runs",
+      "description": "A running session completed by Adam",
+      "columns": [
+       {
+        "name": "distance_km",
+        "type": "REAL",
+        "description": "Distance run in kilometers"
+       },
+       {
+        "name": "duration",
+        "type": "TEXT",
+        "description": "Duration of the run, e.g. 52:30"
+       },
+       {
+        "name": "date",
+        "type": "DATETIME",
+        "description": "Date and time of the run"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "insert",
+      "table": "runs",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "distance_km",
+        "value": 10
+       },
+       {
+        "column": "duration",
+        "value": "52:30"
+       },
+       {
+        "column": "date",
+        "value": "2026-08-07T07:45"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 4.196,
+   "llm_latency": 4.192,
+   "cost": 0.009592,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m16",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 14,
+    "notes": "Stored new contact Sarah Kim and her firm Northwind Ventures, the venue Hotel Josef rooftop, and the Founders Dinner event on 2026-08-14 19:00.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "people",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": "sarah",
+      "values": [
+       {
+        "column": "name",
+        "value": "Sarah Kim"
+       },
+       {
+        "column": "relationship_to_adam",
+        "value": "contact - Partner at Northwind Ventures"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "organizations",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": "northwind",
+      "values": [
+       {
+        "column": "name",
+        "value": "Northwind Ventures"
+       },
+       {
+        "column": "description",
+        "value": "Venture capital firm"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "organization_members",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "organization_id",
+        "value": "@northwind"
+       },
+       {
+        "column": "person_id",
+        "value": "@sarah"
+       },
+       {
+        "column": "role",
+        "value": "Partner"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "places",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": "hoteljosef",
+      "values": [
+       {
+        "column": "name",
+        "value": "Hotel Josef rooftop"
+       },
+       {
+        "column": "city",
+        "value": "Prague"
+       },
+       {
+        "column": "category",
+        "value": "event venue"
+       }
+      ]
+     },
+     {
+      "op": "create_table",
+      "table": "events",
+      "description": "An event or gathering Adam is invited to or attends",
+      "columns": [
+       {
+        "name": "title",
+        "type": "TEXT",
+        "description": "Name of the event"
+       },
+       {
+        "name": "date",
+        "type": "DATETIME",
+        "description": "Date and time of the event"
+       },
+       {
+        "name": "place_id",
+        "type": "INTEGER",
+        "description": "Reference to places.id where the event occurs"
+       },
+       {
+        "name": "organizer_id",
+        "type": "INTEGER",
+        "description": "Reference to people.id who organized/invited"
+       },
+       {
+        "name": "status",
+        "type": "TEXT",
+        "description": "Status of the event, e.g. invited, confirmed, cancelled"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "insert",
+      "table": "events",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "title",
+        "value": "Founders Dinner"
+       },
+       {
+        "column": "date",
+        "value": "2026-08-14T19:00"
+       },
+       {
+        "column": "place_id",
+        "value": "@hoteljosef"
+       },
+       {
+        "column": "organizer_id",
+        "value": "@sarah"
+       },
+       {
+        "column": "status",
+        "value": "invited"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 8.587,
+   "llm_latency": 8.583,
+   "cost": 0.016674,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m17",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 19,
+    "notes": "Adam shared details about his car; storing in a new vehicles table linked to Adam.",
+    "ops": [
+     {
+      "op": "create_table",
+      "table": "vehicles",
+      "description": "A vehicle owned by a person",
+      "columns": [
+       {
+        "name": "person_id",
+        "type": "INTEGER",
+        "description": "Reference to people.id who owns the vehicle"
+       },
+       {
+        "name": "make",
+        "type": "TEXT",
+        "description": "Vehicle manufacturer"
+       },
+       {
+        "name": "model",
+        "type": "TEXT",
+        "description": "Vehicle model"
+       },
+       {
+        "name": "year",
+        "type": "INTEGER",
+        "description": "Model year of the vehicle"
+       },
+       {
+        "name": "plate",
+        "type": "TEXT",
+        "description": "License plate number"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "insert",
+      "table": "vehicles",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "make",
+        "value": "Skoda"
+       },
+       {
+        "column": "model",
+        "value": "Octavia"
+       },
+       {
+        "column": "year",
+        "value": 2019
+       },
+       {
+        "column": "plate",
+        "value": "5A1 2345"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 4.262,
+   "llm_latency": 4.26,
+   "cost": 0.011608,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m18",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 20,
+    "notes": "Adam had another climbing session at Smíchoff (chill, no specific achievement or companion mentioned); logged as new session on the input date/time.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "climbing_sessions",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "place_id",
+        "value": 2
+       },
+       {
+        "column": "date",
+        "value": "2026-08-10T17:30"
+       },
+       {
+        "column": "achievement",
+        "value": "Chill session"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 4.171,
+   "llm_latency": 4.169,
+   "cost": 0.010592,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m19",
+   "kind": "question",
+   "trace": {
+    "errors": [],
+    "context_rows": 21,
+    "notes": "User asked a question about existing data; no database changes needed.",
+    "ops": []
+   },
+   "crashed": null,
+   "wall": 1.576,
+   "llm_latency": 1.575,
+   "cost": 0.00848,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m20",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 21,
+    "notes": "Adam had sushi dinner with Eva at Sasazu, cost 2140 CZK; logging as an expense.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "expenses",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "description",
+        "value": "Sushi dinner with Eva"
+       },
+       {
+        "column": "amount",
+        "value": 2140.0
+       },
+       {
+        "column": "currency",
+        "value": "CZK"
+       },
+       {
+        "column": "date",
+        "value": "2026-08-12"
+       },
+       {
+        "column": "place_id",
+        "value": 1
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 3.169,
+   "llm_latency": 3.163,
+   "cost": 0.010414,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m21",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 22,
+    "notes": "Adam has a dentist appointment on 2026-08-20 at 09:00 with Dr. Horák; stored as a new event, creating a person record for Dr. Horák as organizer.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "people",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": "horak",
+      "values": [
+       {
+        "column": "name",
+        "value": "Dr. Horák"
+       },
+       {
+        "column": "relationship_to_adam",
+        "value": "dentist"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "events",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "title",
+        "value": "Dentist appointment"
+       },
+       {
+        "column": "date",
+        "value": "2026-08-20T09:00"
+       },
+       {
+        "column": "organizer_id",
+        "value": "@horak"
+       },
+       {
+        "column": "status",
+        "value": "confirmed"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 4.983,
+   "llm_latency": 4.98,
+   "cost": 0.012276,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m22",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 24,
+    "notes": "Founders dinner happened; event marked attended. New contact Jan Dvořák (CTO at Rohlik) added, with Rohlik organization and membership link. Sarah Kim wants to see the deck - noted as a task.",
+    "ops": [
+     {
+      "op": "update",
+      "table": "events",
+      "description": null,
+      "columns": [],
+      "row_id": 1,
+      "ref": null,
+      "values": [
+       {
+        "column": "status",
+        "value": "attended"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "organizations",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": "rohlik",
+      "values": [
+       {
+        "column": "name",
+        "value": "Rohlik"
+       },
+       {
+        "column": "description",
+        "value": "Grocery delivery company"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "people",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": "jan",
+      "values": [
+       {
+        "column": "name",
+        "value": "Jan Dvořák"
+       },
+       {
+        "column": "relationship_to_adam",
+        "value": "contact - CTO at Rohlik"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "organization_members",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "organization_id",
+        "value": "@rohlik"
+       },
+       {
+        "column": "person_id",
+        "value": "@jan"
+       },
+       {
+        "column": "role",
+        "value": "CTO"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "tasks",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "title",
+        "value": "Send deck to Sarah Kim"
+       },
+       {
+        "column": "due_date",
+        "value": null
+       },
+       {
+        "column": "status",
+        "value": "pending"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 5.761,
+   "llm_latency": 5.757,
+   "cost": 0.014474,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m23",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 28,
+    "notes": "Adam is reading a book for book club; creating a books table to track it.",
+    "ops": [
+     {
+      "op": "create_table",
+      "table": "books",
+      "description": "A book Adam is reading or has read",
+      "columns": [
+       {
+        "name": "title",
+        "type": "TEXT",
+        "description": "Title of the book"
+       },
+       {
+        "name": "author",
+        "type": "TEXT",
+        "description": "Author of the book"
+       },
+       {
+        "name": "status",
+        "type": "TEXT",
+        "description": "Reading status, e.g. reading, finished"
+       },
+       {
+        "name": "context",
+        "type": "TEXT",
+        "description": "Context or reason for reading, e.g. book club"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "insert",
+      "table": "books",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "title",
+        "value": "Thinking, Fast and Slow"
+       },
+       {
+        "column": "author",
+        "value": "Daniel Kahneman"
+       },
+       {
+        "column": "status",
+        "value": "reading"
+       },
+       {
+        "column": "context",
+        "value": "Book club"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 3.837,
+   "llm_latency": 3.831,
+   "cost": 0.01221,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m24",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 29,
+    "notes": "Adam wants to read a new book next; add to books table with status 'to read'.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "books",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "title",
+        "value": "The Pragmatic Programmer"
+       },
+       {
+        "column": "author",
+        "value": null
+       },
+       {
+        "column": "status",
+        "value": "to read"
+       },
+       {
+        "column": "context",
+        "value": null
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 2.265,
+   "llm_latency": 2.258,
+   "cost": 0.010732,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m25",
+   "kind": "update",
+   "trace": {
+    "errors": [],
+    "context_rows": 30,
+    "notes": "David Mokos confirmed his existing CZ phone number and added a second US phone number; storing both.",
+    "ops": [
+     {
+      "op": "update",
+      "table": "people",
+      "description": null,
+      "columns": [],
+      "row_id": 2,
+      "ref": null,
+      "values": [
+       {
+        "column": "phone",
+        "value": "+420 733 544 390"
+       }
+      ]
+     },
+     {
+      "op": "add_columns",
+      "table": "people",
+      "description": null,
+      "columns": [
+       {
+        "name": "phone_secondary",
+        "type": "TEXT",
+        "description": "An additional phone number for this person, e.g. a US number"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "update",
+      "table": "people",
+      "description": null,
+      "columns": [],
+      "row_id": 2,
+      "ref": null,
+      "values": [
+       {
+        "column": "phone_secondary",
+        "value": "+1 6286884994"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 3.855,
+   "llm_latency": 3.85,
+   "cost": 0.012444,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m26",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 30,
+    "notes": "New climbing session with Tom Novak at Smíchoff, attempted 6c+ project without sending; logged as a new row.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "climbing_sessions",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "place_id",
+        "value": 2
+       },
+       {
+        "column": "date",
+        "value": "2026-08-17T18:00"
+       },
+       {
+        "column": "companion_id",
+        "value": 3
+       },
+       {
+        "column": "achievement",
+        "value": "Attempted 6c+ project, no send yet"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 4.069,
+   "llm_latency": 4.067,
+   "cost": 0.012154,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m27",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 31,
+    "notes": "New expense: groceries at Albert for 1262 CZK; Albert is a new place, add it and link expense.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "places",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": "albert",
+      "values": [
+       {
+        "column": "name",
+        "value": "Albert"
+       },
+       {
+        "column": "city",
+        "value": "Prague"
+       },
+       {
+        "column": "category",
+        "value": "grocery store"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "expenses",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "description",
+        "value": "Groceries"
+       },
+       {
+        "column": "amount",
+        "value": 1262.0
+       },
+       {
+        "column": "currency",
+        "value": "CZK"
+       },
+       {
+        "column": "date",
+        "value": "2026-08-18"
+       },
+       {
+        "column": "place_id",
+        "value": "@albert"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 3.694,
+   "llm_latency": 3.691,
+   "cost": 0.01239,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m28",
+   "kind": "delete",
+   "trace": {
+    "errors": [],
+    "context_rows": 33,
+    "notes": "Adam cancelled his dentist appointment (events#2); update its status to cancelled.",
+    "ops": [
+     {
+      "op": "update",
+      "table": "events",
+      "description": null,
+      "columns": [],
+      "row_id": 2,
+      "ref": null,
+      "values": [
+       {
+        "column": "status",
+        "value": "cancelled"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 2.196,
+   "llm_latency": 2.194,
+   "cost": 0.010712,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m29",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 33,
+    "notes": "New pitch meeting event with Sarah Kim added, plus new place for Northwind office in SF.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "places",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": "northwind_office",
+      "values": [
+       {
+        "column": "name",
+        "value": "Northwind office"
+       },
+       {
+        "column": "city",
+        "value": "San Francisco"
+       },
+       {
+        "column": "category",
+        "value": "office"
+       },
+       {
+        "column": "address",
+        "value": "2 Embarcadero Center"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "events",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "title",
+        "value": "Pitch meeting with Sarah Kim"
+       },
+       {
+        "column": "date",
+        "value": "2026-09-23T10:00"
+       },
+       {
+        "column": "place_id",
+        "value": "@northwind_office"
+       },
+       {
+        "column": "organizer_id",
+        "value": 5
+       },
+       {
+        "column": "status",
+        "value": "invited"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 4.046,
+   "llm_latency": 4.044,
+   "cost": 0.013414,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m30",
+   "kind": "chitchat",
+   "trace": {
+    "errors": [],
+    "context_rows": 35,
+    "notes": "Small talk / thanks, no durable information to store.",
+    "ops": []
+   },
+   "crashed": null,
+   "wall": 2.029,
+   "llm_latency": 2.027,
+   "cost": 0.010258,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m31",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 35,
+    "notes": "Adam had lunch at Lokál for 329 CZK; new place created since not in existing rows.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "places",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": "lokal",
+      "values": [
+       {
+        "column": "name",
+        "value": "Lokál"
+       },
+       {
+        "column": "city",
+        "value": "Prague"
+       },
+       {
+        "column": "category",
+        "value": "restaurant"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "expenses",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "description",
+        "value": "Lunch"
+       },
+       {
+        "column": "amount",
+        "value": 329.0
+       },
+       {
+        "column": "currency",
+        "value": "CZK"
+       },
+       {
+        "column": "date",
+        "value": "2026-08-22"
+       },
+       {
+        "column": "place_id",
+        "value": "@lokal"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 3.43,
+   "llm_latency": 3.428,
+   "cost": 0.012792,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m32",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 37,
+    "notes": "Adam is moving to San Francisco on 2026-09-01 and found an apartment at 1450 Valencia St; update Adam's person record with move date and new city, and add the apartment as a place.",
+    "ops": [
+     {
+      "op": "add_columns",
+      "table": "people",
+      "description": null,
+      "columns": [
+       {
+        "name": "move_date",
+        "type": "DATE",
+        "description": "Date this person is moving to a new city"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "update",
+      "table": "people",
+      "description": null,
+      "columns": [],
+      "row_id": 1,
+      "ref": null,
+      "values": [
+       {
+        "column": "city",
+        "value": "San Francisco"
+       },
+       {
+        "column": "move_date",
+        "value": "2026-09-01"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "places",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": "apartment",
+      "values": [
+       {
+        "column": "name",
+        "value": "Adam's apartment"
+       },
+       {
+        "column": "city",
+        "value": "San Francisco"
+       },
+       {
+        "column": "category",
+        "value": "apartment"
+       },
+       {
+        "column": "address",
+        "value": "1450 Valencia St"
+       },
+       {
+        "column": "person_id",
+        "value": 1
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 5.445,
+   "llm_latency": 5.442,
+   "cost": 0.014716,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m33",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 38,
+    "notes": "Adam mentions his mom's birthday (Oct 3) and that she loves orchids; no existing row for mom, so create a new person row and add a column to store her preference for flowers.",
+    "ops": [
+     {
+      "op": "add_columns",
+      "table": "people",
+      "description": null,
+      "columns": [
+       {
+        "name": "favorite_flower",
+        "type": "TEXT",
+        "description": "Favorite flower of this person"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "insert",
+      "table": "people",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": "mom",
+      "values": [
+       {
+        "column": "name",
+        "value": "Mom"
+       },
+       {
+        "column": "relationship_to_adam",
+        "value": "mother"
+       },
+       {
+        "column": "birthday",
+        "value": "10-03"
+       },
+       {
+        "column": "favorite_flower",
+        "value": "orchids"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 4.973,
+   "llm_latency": 4.97,
+   "cost": 0.014102,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m34",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 39,
+    "notes": "Adam likes riding big black horses; storing this as a personal detail on his people row via a new hobby column.",
+    "ops": [
+     {
+      "op": "add_columns",
+      "table": "people",
+      "description": null,
+      "columns": [
+       {
+        "name": "hobby",
+        "type": "TEXT",
+        "description": "A hobby or activity this person enjoys"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "update",
+      "table": "people",
+      "description": null,
+      "columns": [],
+      "row_id": 1,
+      "ref": null,
+      "values": [
+       {
+        "column": "hobby",
+        "value": "Riding big black horses"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 4.195,
+   "llm_latency": 4.193,
+   "cost": 0.013264,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m35",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 39,
+    "notes": "Adam booked a flight from Prague to San Francisco on Sep 1 (United UA 8843, 18,450 CZK); creating a flights table and inserting this booking.",
+    "ops": [
+     {
+      "op": "create_table",
+      "table": "flights",
+      "description": "A flight booked by Adam",
+      "columns": [
+       {
+        "name": "origin",
+        "type": "TEXT",
+        "description": "Departure city or airport"
+       },
+       {
+        "name": "destination",
+        "type": "TEXT",
+        "description": "Arrival city or airport"
+       },
+       {
+        "name": "date",
+        "type": "DATE",
+        "description": "Date of the flight"
+       },
+       {
+        "name": "airline",
+        "type": "TEXT",
+        "description": "Airline operating the flight"
+       },
+       {
+        "name": "flight_number",
+        "type": "TEXT",
+        "description": "Flight number"
+       },
+       {
+        "name": "amount",
+        "type": "REAL",
+        "description": "Cost of the flight"
+       },
+       {
+        "name": "currency",
+        "type": "TEXT",
+        "description": "Currency of the amount"
+       },
+       {
+        "name": "person_id",
+        "type": "INTEGER",
+        "description": "Reference to people.id who booked/flew"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "insert",
+      "table": "flights",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "origin",
+        "value": "Prague"
+       },
+       {
+        "column": "destination",
+        "value": "San Francisco"
+       },
+       {
+        "column": "date",
+        "value": "2026-09-01"
+       },
+       {
+        "column": "airline",
+        "value": "United"
+       },
+       {
+        "column": "flight_number",
+        "value": "UA 8843"
+       },
+       {
+        "column": "amount",
+        "value": 18450.0
+       },
+       {
+        "column": "currency",
+        "value": "CZK"
+       },
+       {
+        "column": "person_id",
+        "value": "@adam"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 5.675,
+   "llm_latency": 5.671,
+   "cost": 0.016162,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m36",
+   "kind": "update",
+   "trace": {
+    "errors": [],
+    "context_rows": 40,
+    "notes": "Passport renewal task marked done.",
+    "ops": [
+     {
+      "op": "update",
+      "table": "tasks",
+      "description": null,
+      "columns": [],
+      "row_id": 1,
+      "ref": null,
+      "values": [
+       {
+        "column": "status",
+        "value": "done"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 2.554,
+   "llm_latency": 2.551,
+   "cost": 0.01194,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m37",
+   "kind": "update",
+   "trace": {
+    "errors": [],
+    "context_rows": 40,
+    "notes": "Adam sold his Skoda Octavia today for 310,000 CZK; update vehicle record with sale status and add expense-like sale info.",
+    "ops": [
+     {
+      "op": "update",
+      "table": "vehicles",
+      "description": null,
+      "columns": [],
+      "row_id": 1,
+      "ref": null,
+      "values": [
+       {
+        "column": "status",
+        "value": "sold"
+       },
+       {
+        "column": "sale_amount",
+        "value": 310000
+       },
+       {
+        "column": "sale_currency",
+        "value": "CZK"
+       },
+       {
+        "column": "sale_date",
+        "value": "2026-08-28"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 3.361,
+   "llm_latency": 3.357,
+   "cost": 0.013134,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m38",
+   "kind": "update",
+   "trace": {
+    "errors": [],
+    "context_rows": 40,
+    "notes": "Tom Novak's phone number updated.",
+    "ops": [
+     {
+      "op": "update",
+      "table": "people",
+      "description": null,
+      "columns": [],
+      "row_id": 3,
+      "ref": null,
+      "values": [
+       {
+        "column": "phone",
+        "value": "+420 777 999 000"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 2.048,
+   "llm_latency": 2.045,
+   "cost": 0.012206,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m39",
+   "kind": "update",
+   "trace": {
+    "errors": [],
+    "context_rows": 40,
+    "notes": "Adam finished reading 'Thinking, Fast and Slow', rated it 5/5, with a note about liking the System 1 vs System 2 content; updating the existing book row.",
+    "ops": [
+     {
+      "op": "add_columns",
+      "table": "books",
+      "description": null,
+      "columns": [
+       {
+        "name": "rating",
+        "type": "INTEGER",
+        "description": "Rating out of 5 given by Adam"
+       },
+       {
+        "name": "notes",
+        "type": "TEXT",
+        "description": "Adam's notes or thoughts about the book"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "update",
+      "table": "books",
+      "description": null,
+      "columns": [],
+      "row_id": 1,
+      "ref": null,
+      "values": [
+       {
+        "column": "status",
+        "value": "finished"
+       },
+       {
+        "column": "rating",
+        "value": 5
+       },
+       {
+        "column": "notes",
+        "value": "The System 1 vs System 2 stuff is gold"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 4.02,
+   "llm_latency": 4.016,
+   "cost": 0.014534,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m40",
+   "kind": "question",
+   "trace": {
+    "errors": [],
+    "context_rows": 40,
+    "notes": "User asked a question about existing data; no database changes needed.",
+    "ops": []
+   },
+   "crashed": null,
+   "wall": 1.793,
+   "llm_latency": 1.791,
+   "cost": 0.011766,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m41",
+   "kind": "update",
+   "trace": {
+    "errors": [],
+    "context_rows": 40,
+    "notes": "Small talk/celebratory update about landing in SF; Adam's move to San Francisco is already recorded (move_date 2026-09-01, city San Francisco), so no new facts to store.",
+    "ops": []
+   },
+   "crashed": null,
+   "wall": 3.152,
+   "llm_latency": 3.15,
+   "cost": 0.01293,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m42",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 40,
+    "notes": "Sarah Kim sent a draft term sheet for Nebula's seed round ($3M at $15M post-money valuation); storing as a funding round record linked to Nebula.",
+    "ops": [
+     {
+      "op": "create_table",
+      "table": "funding_rounds",
+      "description": "A funding round or term sheet for an organization",
+      "columns": [
+       {
+        "name": "organization_id",
+        "type": "INTEGER",
+        "description": "Reference to organizations.id"
+       },
+       {
+        "name": "stage",
+        "type": "TEXT",
+        "description": "Funding round stage, e.g. seed, series A"
+       },
+       {
+        "name": "amount",
+        "type": "REAL",
+        "description": "Amount being raised"
+       },
+       {
+        "name": "currency",
+        "type": "TEXT",
+        "description": "Currency of the amount"
+       },
+       {
+        "name": "valuation",
+        "type": "REAL",
+        "description": "Valuation amount"
+       },
+       {
+        "name": "valuation_type",
+        "type": "TEXT",
+        "description": "Type of valuation, e.g. post-money, pre-money"
+       },
+       {
+        "name": "status",
+        "type": "TEXT",
+        "description": "Status of the round, e.g. draft, signed, closed"
+       },
+       {
+        "name": "investor_id",
+        "type": "INTEGER",
+        "description": "Reference to people.id for the investor contact"
+       },
+       {
+        "name": "date",
+        "type": "DATE",
+        "description": "Date the term sheet or round was recorded"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "insert",
+      "table": "funding_rounds",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "organization_id",
+        "value": 1
+       },
+       {
+        "column": "stage",
+        "value": "seed"
+       },
+       {
+        "column": "amount",
+        "value": 3000000
+       },
+       {
+        "column": "currency",
+        "value": "USD"
+       },
+       {
+        "column": "valuation",
+        "value": 15000000
+       },
+       {
+        "column": "valuation_type",
+        "value": "post-money"
+       },
+       {
+        "column": "status",
+        "value": "draft"
+       },
+       {
+        "column": "investor_id",
+        "value": 5
+       },
+       {
+        "column": "date",
+        "value": "2026-09-02"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 6.757,
+   "llm_latency": 6.754,
+   "cost": 0.018362,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m43",
+   "kind": "chitchat",
+   "trace": {
+    "errors": [],
+    "context_rows": 41,
+    "notes": "Message is a birthday greeting for David Mokos; his birthday (09-02) is already recorded, so no changes needed.",
+    "ops": []
+   },
+   "crashed": null,
+   "wall": 2.305,
+   "llm_latency": 2.302,
+   "cost": 0.013088,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m44",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 41,
+    "notes": "Coffee shop receipt for Adam at Blue Bottle Coffee, San Francisco; store new place and expense.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "places",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": "blue_bottle",
+      "values": [
+       {
+        "column": "name",
+        "value": "Blue Bottle Coffee"
+       },
+       {
+        "column": "city",
+        "value": "San Francisco"
+       },
+       {
+        "column": "category",
+        "value": "cafe"
+       },
+       {
+        "column": "address",
+        "value": "Mint Plaza"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "expenses",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "description",
+        "value": "Oat Latte and Almond Croissant"
+       },
+       {
+        "column": "amount",
+        "value": 10.25
+       },
+       {
+        "column": "currency",
+        "value": "USD"
+       },
+       {
+        "column": "date",
+        "value": "2026-09-03"
+       },
+       {
+        "column": "place_id",
+        "value": "@blue_bottle"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 3.851,
+   "llm_latency": 3.848,
+   "cost": 0.015434,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m45",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 43,
+    "notes": "New calendar invite for Nebula board meeting on 2026-09-25 organized by David Mokos at 1 Mission St, San Francisco; created a new place and event row.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "places",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": "boardvenue",
+      "values": [
+       {
+        "column": "name",
+        "value": "1 Mission St"
+       },
+       {
+        "column": "city",
+        "value": "San Francisco"
+       },
+       {
+        "column": "category",
+        "value": "office"
+       },
+       {
+        "column": "address",
+        "value": "1 Mission St, San Francisco"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "events",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "title",
+        "value": "Nebula board meeting"
+       },
+       {
+        "column": "date",
+        "value": "2026-09-25T16:00"
+       },
+       {
+        "column": "place_id",
+        "value": "@boardvenue"
+       },
+       {
+        "column": "organizer_id",
+        "value": 2
+       },
+       {
+        "column": "status",
+        "value": "invited"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 4.22,
+   "llm_latency": 4.217,
+   "cost": 0.016102,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m46",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 45,
+    "notes": "Adam took an Uber home from the Mission for $23.40; logged as an expense on 2026-09-05, destination Adam's apartment.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "expenses",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "description",
+        "value": "Uber home from the Mission"
+       },
+       {
+        "column": "amount",
+        "value": 23.4
+       },
+       {
+        "column": "currency",
+        "value": "USD"
+       },
+       {
+        "column": "date",
+        "value": "2026-09-05"
+       },
+       {
+        "column": "place_id",
+        "value": 8
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 3.366,
+   "llm_latency": 3.363,
+   "cost": 0.01528,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m47",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 46,
+    "notes": "Adam recorded a new 10k run with a PB time; adding a new run entry.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "runs",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "distance_km",
+        "value": 10.0
+       },
+       {
+        "column": "duration",
+        "value": "49:58"
+       },
+       {
+        "column": "date",
+        "value": "2026-09-06T07:30"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 2.526,
+   "llm_latency": 2.523,
+   "cost": 0.014254,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m48",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 47,
+    "notes": "Adam wants to plan a gift for Eva's birthday (sushi-making class idea); stored as a task.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "tasks",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "title",
+        "value": "Find birthday gift for Eva (maybe sushi-making class)"
+       },
+       {
+        "column": "due_date",
+        "value": "2026-09-28"
+       },
+       {
+        "column": "status",
+        "value": "pending"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 2.865,
+   "llm_latency": 2.862,
+   "cost": 0.014798,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m49",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 48,
+    "notes": "Adam joined Mission Cliffs climbing gym in SF with $110/month membership; add place and record expense.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "places",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": "mission_cliffs",
+      "values": [
+       {
+        "column": "name",
+        "value": "Mission Cliffs"
+       },
+       {
+        "column": "city",
+        "value": "San Francisco"
+       },
+       {
+        "column": "category",
+        "value": "climbing gym"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "expenses",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "description",
+        "value": "Mission Cliffs membership"
+       },
+       {
+        "column": "amount",
+        "value": 110.0
+       },
+       {
+        "column": "currency",
+        "value": "USD"
+       },
+       {
+        "column": "date",
+        "value": "2026-09-07"
+       },
+       {
+        "column": "place_id",
+        "value": "@mission_cliffs"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 3.677,
+   "llm_latency": 3.675,
+   "cost": 0.016138,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m50",
+   "kind": "update",
+   "trace": {
+    "errors": [],
+    "context_rows": 50,
+    "notes": "Correcting David Mokos's secondary US phone number due to a typo.",
+    "ops": [
+     {
+      "op": "update",
+      "table": "people",
+      "description": null,
+      "columns": [],
+      "row_id": 2,
+      "ref": null,
+      "values": [
+       {
+        "column": "phone_secondary",
+        "value": "+1 628 688 4995"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 2.878,
+   "llm_latency": 2.876,
+   "cost": 0.014292,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m51",
+   "kind": "update",
+   "trace": {
+    "errors": [],
+    "context_rows": 50,
+    "notes": "Sarah Kim rescheduled the pitch meeting to Sep 24 at 14:00, same place; updating events#3.",
+    "ops": [
+     {
+      "op": "update",
+      "table": "events",
+      "description": null,
+      "columns": [],
+      "row_id": 3,
+      "ref": null,
+      "values": [
+       {
+        "column": "date",
+        "value": "2026-09-24T14:00"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 2.428,
+   "llm_latency": 2.426,
+   "cost": 0.01444,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m52",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 50,
+    "notes": "New expense: dinner with David Mokos at Tartine (new place in SF) celebrating the term sheet, $96.80.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "places",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": "tartine",
+      "values": [
+       {
+        "column": "name",
+        "value": "Tartine"
+       },
+       {
+        "column": "city",
+        "value": "San Francisco"
+       },
+       {
+        "column": "category",
+        "value": "restaurant"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "expenses",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "description",
+        "value": "Dinner with David celebrating term sheet"
+       },
+       {
+        "column": "amount",
+        "value": 96.8
+       },
+       {
+        "column": "currency",
+        "value": "USD"
+       },
+       {
+        "column": "date",
+        "value": "2026-09-10"
+       },
+       {
+        "column": "place_id",
+        "value": "@tartine"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 4.71,
+   "llm_latency": 4.703,
+   "cost": 0.017022,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m53",
+   "kind": "chitchat",
+   "trace": {
+    "errors": [],
+    "context_rows": 52,
+    "notes": "No durable information to store; simple acknowledgment.",
+    "ops": []
+   },
+   "crashed": null,
+   "wall": 1.788,
+   "llm_latency": 1.786,
+   "cost": 0.01373,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m54",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 52,
+    "notes": "New contact card for Priya Patel, Engineering Manager at Stripe, met at YC founder mixer; add person, org, and membership link. Adding email column to people table.",
+    "ops": [
+     {
+      "op": "add_columns",
+      "table": "people",
+      "description": null,
+      "columns": [
+       {
+        "name": "email",
+        "type": "TEXT",
+        "description": "Email address of this person"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "insert",
+      "table": "people",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": "priya",
+      "values": [
+       {
+        "column": "name",
+        "value": "Priya Patel"
+       },
+       {
+        "column": "phone",
+        "value": "+1 415 555 0142"
+       },
+       {
+        "column": "email",
+        "value": "priya@stripe.com"
+       },
+       {
+        "column": "relationship_to_adam",
+        "value": "contact - Engineering Manager at Stripe, met at YC founder mixer"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "organizations",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": "stripe",
+      "values": [
+       {
+        "column": "name",
+        "value": "Stripe"
+       },
+       {
+        "column": "description",
+        "value": "Payments company"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "organization_members",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "organization_id",
+        "value": "@stripe"
+       },
+       {
+        "column": "person_id",
+        "value": "@priya"
+       },
+       {
+        "column": "role",
+        "value": "Engineering Manager"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 5.625,
+   "llm_latency": 5.622,
+   "cost": 0.018708,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m55",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 55,
+    "notes": "The input confirms Nebula's office location as 1 Mission St, San Francisco, which already exists as places#10; adding an organization_id link to associate it with Nebula.",
+    "ops": [
+     {
+      "op": "add_columns",
+      "table": "places",
+      "description": null,
+      "columns": [
+       {
+        "name": "organization_id",
+        "type": "INTEGER",
+        "description": "Reference to organizations.id if this place is an organization's office"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "update",
+      "table": "places",
+      "description": null,
+      "columns": [],
+      "row_id": 10,
+      "ref": null,
+      "values": [
+       {
+        "column": "organization_id",
+        "value": 1
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 5.551,
+   "llm_latency": 5.547,
+   "cost": 0.017284,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m56",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 55,
+    "notes": "New contact Mark Chen introduced by Priya, runs partnerships at Stripe; add person and organization membership.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "people",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": "mark",
+      "values": [
+       {
+        "column": "name",
+        "value": "Mark Chen"
+       },
+       {
+        "column": "relationship_to_adam",
+        "value": "contact - runs partnerships at Stripe, introduced by Priya Patel"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "organization_members",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "organization_id",
+        "value": 4
+       },
+       {
+        "column": "person_id",
+        "value": "@mark"
+       },
+       {
+        "column": "role",
+        "value": "Head of Partnerships"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 3.712,
+   "llm_latency": 3.708,
+   "cost": 0.016804,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m57",
+   "kind": "update",
+   "trace": {
+    "errors": [],
+    "context_rows": 57,
+    "notes": "Adam started reading The Pragmatic Programmer, previously marked to read.",
+    "ops": [
+     {
+      "op": "update",
+      "table": "books",
+      "description": null,
+      "columns": [],
+      "row_id": 2,
+      "ref": null,
+      "values": [
+       {
+        "column": "status",
+        "value": "reading"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 2.502,
+   "llm_latency": 2.5,
+   "cost": 0.015202,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m58",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 57,
+    "notes": "Eva is visiting Adam in SF Oct 10-20; storing as a visit period on her existing person record.",
+    "ops": [
+     {
+      "op": "add_columns",
+      "table": "people",
+      "description": null,
+      "columns": [
+       {
+        "name": "visit_start",
+        "type": "DATE",
+        "description": "Start date of a visit to Adam's city"
+       },
+       {
+        "name": "visit_end",
+        "type": "DATE",
+        "description": "End date of a visit to Adam's city"
+       },
+       {
+        "name": "visit_city",
+        "type": "TEXT",
+        "description": "City being visited"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "update",
+      "table": "people",
+      "description": null,
+      "columns": [],
+      "row_id": 4,
+      "ref": null,
+      "values": [
+       {
+        "column": "visit_start",
+        "value": "2026-10-10"
+       },
+       {
+        "column": "visit_end",
+        "value": "2026-10-20"
+       },
+       {
+        "column": "visit_city",
+        "value": "San Francisco"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 4.807,
+   "llm_latency": 4.804,
+   "cost": 0.0178,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m59",
+   "kind": "delete",
+   "trace": {
+    "errors": [],
+    "context_rows": 57,
+    "notes": "Delete Jan Dvořák (people#7) and his organization membership link (organization_members#4) since Adam no longer needs the info.",
+    "ops": [
+     {
+      "op": "delete",
+      "table": "organization_members",
+      "description": null,
+      "columns": [],
+      "row_id": 4,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "delete",
+      "table": "people",
+      "description": null,
+      "columns": [],
+      "row_id": 7,
+      "ref": null,
+      "values": []
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 3.027,
+   "llm_latency": 3.023,
+   "cost": 0.015978,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m60",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 55,
+    "notes": "Seed round for Nebula has closed, funded by Northwind Ventures, updating funding_rounds status from draft to closed.",
+    "ops": [
+     {
+      "op": "update",
+      "table": "funding_rounds",
+      "description": null,
+      "columns": [],
+      "row_id": 1,
+      "ref": null,
+      "values": [
+       {
+        "column": "status",
+        "value": "closed"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 2.3,
+   "llm_latency": 2.298,
+   "cost": 0.01531,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m61",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 55,
+    "notes": "Adam records a new climbing session at Mission Cliffs where he finally sent a 6c+.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "climbing_sessions",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "place_id",
+        "value": 11
+       },
+       {
+        "column": "date",
+        "value": "2026-09-18T18:30"
+       },
+       {
+        "column": "achievement",
+        "value": "Finally sent 6c+"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 2.429,
+   "llm_latency": 2.427,
+   "cost": 0.015666,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m62",
+   "kind": "question",
+   "trace": {
+    "errors": [],
+    "context_rows": 56,
+    "notes": "User asked a question about their upcoming schedule; no new durable facts to store.",
+    "ops": []
+   },
+   "crashed": null,
+   "wall": 1.612,
+   "llm_latency": 1.611,
+   "cost": 0.01462,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "m63",
+   "kind": "update",
+   "trace": {
+    "errors": [],
+    "context_rows": 56,
+    "notes": "Adam's phone number update to a new US number; updating people#1's phone, keeping old one in phone_secondary.",
+    "ops": [
+     {
+      "op": "update",
+      "table": "people",
+      "description": null,
+      "columns": [],
+      "row_id": 1,
+      "ref": null,
+      "values": [
+       {
+        "column": "phone_secondary",
+        "value": "+420 722 238 738"
+       },
+       {
+        "column": "phone",
+        "value": "+1 415 555 0199"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 2.729,
+   "llm_latency": 2.727,
+   "cost": 0.015648,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  }
+ ],
+ "qa": [
+  {
+   "id": "q01",
+   "category": "update",
+   "question": "What is my phone number?",
+   "answer": "+1 415 555 0199 (switched from the Czech +420 722 238 738 on Sep 20)",
+   "evidence": [
+    "m02",
+    "m63"
+   ],
+   "system_answer": "Your phone number is +1 415 555 0199 (secondary: +420 722 238 738).",
+   "verdict": "partial",
+   "score": 0.5,
+   "judge_reason": "The current number +1 415 555 0199 is correct. However, the answer calls the old Czech number a 'secondary' number, which suggests it is still active. The gold answer says the user switched away from it, so this detail is misleading.",
+   "wall": 4.612,
+   "context": [
+    {
+     "sql": "SELECT * FROM people WHERE name LIKE '%Adam%'",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Adam Zvada",
+       "city": "San Francisco",
+       "phone": "+1 415 555 0199",
+       "birthday": null,
+       "relationship_to_adam": null,
+       "allergies": null,
+       "favorite_food": null,
+       "phone_secondary": "+420 722 238 738",
+       "move_date": "2026-09-01",
+       "favorite_flower": null,
+       "hobby": "Riding big black horses",
+       "email": null,
+       "visit_start": null,
+       "visit_end": null,
+       "visit_city": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q02",
+   "category": "update",
+   "question": "What is David's phone number?",
+   "answer": "Czech: +420 733 544 390; US: +1 628 688 4995 (corrected from ...4994)",
+   "evidence": [
+    "m03",
+    "m25",
+    "m50"
+   ],
+   "system_answer": "David Mokos's phone number is +420 733 544 390 (secondary: +1 628 688 4995).",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "Both numbers match the gold, including the corrected US number ending in 4995.",
+   "wall": 5.015,
+   "context": [
+    {
+     "sql": "SELECT * FROM people WHERE name LIKE '%David%'",
+     "rows": [
+      {
+       "id": 2,
+       "name": "David Mokos",
+       "city": null,
+       "phone": "+420 733 544 390",
+       "birthday": "09-02",
+       "relationship_to_adam": null,
+       "allergies": null,
+       "favorite_food": null,
+       "phone_secondary": "+1 628 688 4995",
+       "move_date": null,
+       "favorite_flower": null,
+       "hobby": null,
+       "email": null,
+       "visit_start": null,
+       "visit_end": null,
+       "visit_city": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q03",
+   "category": "update",
+   "question": "What is Tom's phone number?",
+   "answer": "+420 777 999 000 (his new number; the old one was +420 777 123 456)",
+   "evidence": [
+    "m10",
+    "m38"
+   ],
+   "system_answer": "Tom Novak's phone number is +420 777 999 000.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer gives Tom's current number, +420 777 999 000, which matches the gold answer. It does not present the outdated number as current.",
+   "wall": 4.769,
+   "context": [
+    {
+     "sql": "SELECT * FROM people WHERE name LIKE '%Tom%'",
+     "rows": [
+      {
+       "id": 3,
+       "name": "Tom Novak",
+       "city": null,
+       "phone": "+420 777 999 000",
+       "birthday": null,
+       "relationship_to_adam": null,
+       "allergies": null,
+       "favorite_food": null,
+       "phone_secondary": null,
+       "move_date": null,
+       "favorite_flower": null,
+       "hobby": null,
+       "email": null,
+       "visit_start": null,
+       "visit_end": null,
+       "visit_city": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q04",
+   "category": "update",
+   "question": "Where do I live now?",
+   "answer": "San Francisco, at 1450 Valencia St.",
+   "evidence": [
+    "m32",
+    "m41"
+   ],
+   "system_answer": "San Francisco.",
+   "verdict": "partial",
+   "score": 0.5,
+   "judge_reason": "The answer names the right city, San Francisco, but leaves out the street address, 1450 Valencia St.",
+   "wall": 4.771,
+   "context": [
+    {
+     "sql": "SELECT * FROM people WHERE name LIKE '%Adam%'",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Adam Zvada",
+       "city": "San Francisco",
+       "phone": "+1 415 555 0199",
+       "birthday": null,
+       "relationship_to_adam": null,
+       "allergies": null,
+       "favorite_food": null,
+       "phone_secondary": "+420 722 238 738",
+       "move_date": "2026-09-01",
+       "favorite_flower": null,
+       "hobby": "Riding big black horses",
+       "email": null,
+       "visit_start": null,
+       "visit_end": null,
+       "visit_city": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q05",
+   "category": "single",
+   "question": "When is David's birthday?",
+   "answer": "September 2",
+   "evidence": [
+    "m06"
+   ],
+   "system_answer": "David Mokos's birthday is September 2nd (09-02).",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer gives September 2, which matches the gold answer. The extra surname and numeric format don't contradict it.",
+   "wall": 6.486,
+   "context": [
+    {
+     "sql": "SELECT * FROM people WHERE name LIKE '%David%'",
+     "rows": [
+      {
+       "id": 2,
+       "name": "David Mokos",
+       "city": null,
+       "phone": "+420 733 544 390",
+       "birthday": "09-02",
+       "relationship_to_adam": null,
+       "allergies": null,
+       "favorite_food": null,
+       "phone_secondary": "+1 628 688 4995",
+       "move_date": null,
+       "favorite_flower": null,
+       "hobby": null,
+       "email": null,
+       "visit_start": null,
+       "visit_end": null,
+       "visit_city": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q06",
+   "category": "aggregation",
+   "question": "Whose birthdays do I know about, and when are they?",
+   "answer": "David: Sep 2; Eva: Sep 28; Mom: Oct 3",
+   "evidence": [
+    "m06",
+    "m14",
+    "m33"
+   ],
+   "system_answer": "Here are the birthdays in your database:\n\n- David Mokos – September 2\n- Eva – September 28\n- Mom – October 3",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "All three birthdays match the gold answer: David on Sep 2, Eva on Sep 28 and Mom on Oct 3. The added surname for David is extra detail and doesn't contradict anything.",
+   "wall": 4.762,
+   "context": [
+    {
+     "sql": "SELECT name, birthday FROM people WHERE birthday IS NOT NULL",
+     "rows": [
+      {
+       "name": "David Mokos",
+       "birthday": "09-02"
+      },
+      {
+       "name": "Eva",
+       "birthday": "09-28"
+      },
+      {
+       "name": "Mom",
+       "birthday": "10-03"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q07",
+   "category": "multi_hop",
+   "question": "What's the email of the investor I met at the Founders Dinner?",
+   "answer": "sarah@northwind.vc (Sarah Kim, Northwind Ventures)",
+   "evidence": [
+    "m16",
+    "m22"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer is a real fact (sarah@northwind.vc), but the answer says it doesn't know, so it misses the key fact.",
+   "wall": 9.067,
+   "context": [
+    {
+     "sql": "SELECT * FROM events WHERE title LIKE '%Founders Dinner%'",
+     "rows": [
+      {
+       "id": 1,
+       "title": "Founders Dinner",
+       "date": "2026-08-14T19:00",
+       "place_id": 4,
+       "organizer_id": 5,
+       "status": "attended"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM people WHERE id IN (SELECT organizer_id FROM events WHERE title LIKE '%Founders Dinner%')",
+     "rows": [
+      {
+       "id": 5,
+       "name": "Sarah Kim",
+       "city": null,
+       "phone": null,
+       "birthday": null,
+       "relationship_to_adam": "contact - Partner at Northwind Ventures",
+       "allergies": null,
+       "favorite_food": null,
+       "phone_secondary": null,
+       "move_date": null,
+       "favorite_flower": null,
+       "hobby": null,
+       "email": null,
+       "visit_start": null,
+       "visit_end": null,
+       "visit_city": null
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM funding_rounds WHERE investor_id=5",
+     "rows": [
+      {
+       "id": 1,
+       "organization_id": 1,
+       "stage": "seed",
+       "amount": 3000000.0,
+       "currency": "USD",
+       "valuation": 15000000.0,
+       "valuation_type": "post-money",
+       "status": "closed",
+       "investor_id": 5,
+       "date": "2026-09-02"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM organization_members WHERE person_id=5",
+     "rows": [
+      {
+       "id": 3,
+       "organization_id": 2,
+       "person_id": 5,
+       "role": "Partner"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q08",
+   "category": "update",
+   "question": "When and where is my meeting with Sarah Kim?",
+   "answer": "Sep 24, 2026 at 14:00 at the Northwind office, 2 Embarcadero Center, SF (moved from Sep 23 10:00)",
+   "evidence": [
+    "m29",
+    "m51"
+   ],
+   "system_answer": "Your pitch meeting with Sarah Kim is on 2026-09-24 at 14:00, at Northwind office, 2 Embarcadero Center.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer gives the current date (Sep 24, 2026), time (14:00), and location (Northwind office, 2 Embarcadero Center), all matching the gold. It does not present the outdated Sep 23 slot as current.",
+   "wall": 5.535,
+   "context": [
+    {
+     "sql": "SELECT e.*, p.name AS place_name, p.address FROM events e LEFT JOIN places p ON e.place_id = p.id LEFT JOIN people pe ON e.organizer_id = pe.id WHERE e.title LIKE '%Sarah Kim%' OR pe.name LIKE '%Sarah Kim%'",
+     "rows": [
+      {
+       "id": 1,
+       "title": "Founders Dinner",
+       "date": "2026-08-14T19:00",
+       "place_id": 4,
+       "organizer_id": 5,
+       "status": "attended",
+       "place_name": "Hotel Josef rooftop",
+       "address": null
+      },
+      {
+       "id": 3,
+       "title": "Pitch meeting with Sarah Kim",
+       "date": "2026-09-24T14:00",
+       "place_id": 6,
+       "organizer_id": 5,
+       "status": "invited",
+       "place_name": "Northwind office",
+       "address": "2 Embarcadero Center"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q09",
+   "category": "delete",
+   "question": "Do I have a dentist appointment coming up?",
+   "answer": "No. The Aug 20 appointment with Dr. Horák was cancelled.",
+   "evidence": [
+    "m21",
+    "m28"
+   ],
+   "system_answer": "No — your only dentist appointment on record (2026-08-20 09:00) is marked as cancelled, and it's already in the past.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "Answer says no and notes the Aug 20 appointment was cancelled, which matches the gold answer. It omits Dr. Horák's name, but that is a minor detail. The added remark that the date has passed does not contradict the gold answer.",
+   "wall": 6.307,
+   "context": [
+    {
+     "sql": "SELECT * FROM events WHERE title LIKE '%dentist%'",
+     "rows": [
+      {
+       "id": 2,
+       "title": "Dentist appointment",
+       "date": "2026-08-20T09:00",
+       "place_id": null,
+       "organizer_id": 6,
+       "status": "cancelled"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM tasks WHERE title LIKE '%dentist%'",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q10",
+   "category": "aggregation",
+   "question": "How much did I spend eating out (restaurants and cafés) in August?",
+   "answer": "2,854 CZK (Café Savoy 385 + Sasazu 2,140 + Lokál 329)",
+   "evidence": [
+    "m12",
+    "m20",
+    "m31"
+   ],
+   "system_answer": "Restaurant/café spending in August 2026: 385 + 2140 + 329 = **2,854 CZK**",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "Total 2,854 CZK matches the gold answer, and the three components (385 + 2,140 + 329) are the same ones listed in the gold.",
+   "wall": 5.922,
+   "context": [
+    {
+     "sql": "SELECT e.*, p.name, p.category FROM expenses e LEFT JOIN places p ON e.place_id = p.id WHERE e.date LIKE '2026-08%'",
+     "rows": [
+      {
+       "id": 1,
+       "description": "Breakfast",
+       "amount": 385.0,
+       "currency": "CZK",
+       "date": "2026-08-05",
+       "place_id": 3,
+       "name": "Café Savoy",
+       "category": "restaurant"
+      },
+      {
+       "id": 2,
+       "description": "Sushi dinner with Eva",
+       "amount": 2140.0,
+       "currency": "CZK",
+       "date": "2026-08-12",
+       "place_id": 1,
+       "name": "Sasazu",
+       "category": "restaurant"
+      },
+      {
+       "id": 3,
+       "description": "Groceries",
+       "amount": 1262.0,
+       "currency": "CZK",
+       "date": "2026-08-18",
+       "place_id": 5,
+       "name": "Albert",
+       "category": "grocery store"
+      },
+      {
+       "id": 4,
+       "description": "Lunch",
+       "amount": 329.0,
+       "currency": "CZK",
+       "date": "2026-08-22",
+       "place_id": 7,
+       "name": "Lokál",
+       "category": "restaurant"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q11",
+   "category": "aggregation",
+   "question": "What's my best 10k running time?",
+   "answer": "49:58 (Sep 6, 2026)",
+   "evidence": [
+    "m15",
+    "m47"
+   ],
+   "system_answer": "Your best 10k time is 49:58, set on 2026-09-06.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The time 49:58 and the date Sep 6, 2026 both match the gold answer; only the date format differs.",
+   "wall": 4.938,
+   "context": [
+    {
+     "sql": "SELECT * FROM runs WHERE distance_km = 10.0 ORDER BY duration ASC",
+     "rows": [
+      {
+       "id": 2,
+       "distance_km": 10.0,
+       "duration": "49:58",
+       "date": "2026-09-06T07:30"
+      },
+      {
+       "id": 1,
+       "distance_km": 10.0,
+       "duration": "52:30",
+       "date": "2026-08-07T07:45"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q12",
+   "category": "update",
+   "question": "Which books have I finished, and how did I rate them?",
+   "answer": "Thinking, Fast and Slow, rated 5/5",
+   "evidence": [
+    "m23",
+    "m39"
+   ],
+   "system_answer": "You've finished \"Thinking, Fast and Slow\" by Daniel Kahneman, rated 5/5.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer names the same book, Thinking, Fast and Slow, with the same 5/5 rating. Adding the author is correct extra detail.",
+   "wall": 5.227,
+   "context": [
+    {
+     "sql": "SELECT title, author, rating, notes FROM books WHERE status='finished'",
+     "rows": [
+      {
+       "title": "Thinking, Fast and Slow",
+       "author": "Daniel Kahneman",
+       "rating": 5,
+       "notes": "The System 1 vs System 2 stuff is gold"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q13",
+   "category": "update",
+   "question": "What book am I reading right now?",
+   "answer": "The Pragmatic Programmer",
+   "evidence": [
+    "m24",
+    "m57"
+   ],
+   "system_answer": "You're currently reading \"The Pragmatic Programmer.\"",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer names the same book as the gold answer, \"The Pragmatic Programmer,\" and adds nothing that contradicts it.",
+   "wall": 5.025,
+   "context": [
+    {
+     "sql": "SELECT * FROM books WHERE status LIKE '%reading%'",
+     "rows": [
+      {
+       "id": 2,
+       "title": "The Pragmatic Programmer",
+       "author": null,
+       "status": "reading",
+       "context": null,
+       "rating": null,
+       "notes": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q14",
+   "category": "single",
+   "question": "What is Eva allergic to?",
+   "answer": "Peanuts",
+   "evidence": [
+    "m13"
+   ],
+   "system_answer": "Eva is allergic to peanuts.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer states Eva is allergic to peanuts, which matches the gold answer.",
+   "wall": 4.729,
+   "context": [
+    {
+     "sql": "SELECT * FROM people WHERE name LIKE '%Eva%'",
+     "rows": [
+      {
+       "id": 4,
+       "name": "Eva",
+       "city": null,
+       "phone": null,
+       "birthday": "09-28",
+       "relationship_to_adam": "girlfriend",
+       "allergies": "peanuts",
+       "favorite_food": "sushi",
+       "phone_secondary": null,
+       "move_date": null,
+       "favorite_flower": null,
+       "hobby": null,
+       "email": null,
+       "visit_start": "2026-10-10",
+       "visit_end": "2026-10-20",
+       "visit_city": "San Francisco"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q15",
+   "category": "update",
+   "question": "Do I own a car?",
+   "answer": "No, the 2019 Skoda Octavia was sold on Aug 28",
+   "evidence": [
+    "m17",
+    "m37"
+   ],
+   "system_answer": "No — your Skoda Octavia (2019) was sold on 2026-08-28 for 310,000 CZK.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer says no car is owned and gives the same 2019 Skoda Octavia with the Aug 28 sale date, matching the gold. The added sale price is extra detail that does not contradict anything.",
+   "wall": 5.348,
+   "context": [
+    {
+     "sql": "SELECT * FROM vehicles WHERE person_id=1",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "make": "Skoda",
+       "model": "Octavia",
+       "year": 2019,
+       "plate": "5A1 2345",
+       "status": "sold",
+       "sale_amount": 310000,
+       "sale_currency": "CZK",
+       "sale_date": "2026-08-28"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q16",
+   "category": "update",
+   "question": "Have I renewed my passport yet?",
+   "answer": "Yes, it was renewed (Aug 27)",
+   "evidence": [
+    "m11",
+    "m36"
+   ],
+   "system_answer": "Yes — \"Renew passport\" is marked as done (due date was 2026-09-30).",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer confirms the passport was renewed, which is the key fact in the gold answer. It gives the due date instead of the Aug 27 completion date, but the due date doesn't contradict it.",
+   "wall": 4.673,
+   "context": [
+    {
+     "sql": "SELECT * FROM tasks WHERE title LIKE '%passport%'",
+     "rows": [
+      {
+       "id": 1,
+       "title": "Renew passport",
+       "due_date": "2026-09-30",
+       "status": "done"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q17",
+   "category": "semi_structured",
+   "question": "When and where is the Nebula board meeting?",
+   "answer": "Sep 25, 2026, 16:00-17:30, at 1 Mission St, San Francisco",
+   "evidence": [
+    "m45"
+   ],
+   "system_answer": "The Nebula board meeting is on 2026-09-25 at 16:00, at 1 Mission St, San Francisco.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The date, start time and location all match the gold answer. The end time is omitted, but the start time and venue carry the key facts and nothing contradicts the gold.",
+   "wall": 6.411,
+   "context": [
+    {
+     "sql": "SELECT * FROM events WHERE title LIKE '%board%' OR title LIKE '%Nebula%'",
+     "rows": [
+      {
+       "id": 4,
+       "title": "Nebula board meeting",
+       "date": "2026-09-25T16:00",
+       "place_id": 10,
+       "organizer_id": 2,
+       "status": "invited"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM places WHERE id=10",
+     "rows": [
+      {
+       "id": 10,
+       "name": "1 Mission St",
+       "city": "San Francisco",
+       "category": "office",
+       "is_favorite": null,
+       "person_id": null,
+       "address": "1 Mission St, San Francisco",
+       "organization_id": 1
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q18",
+   "category": "semi_structured",
+   "question": "What were the terms in the term sheet draft?",
+   "answer": "$3M seed round at a $15M post-money valuation",
+   "evidence": [
+    "m42"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "Gold is a real fact ($3M seed at $15M post-money); answer says I don't know.",
+   "wall": 6.914,
+   "context": [
+    {
+     "sql": "SELECT * FROM funding_rounds WHERE status LIKE '%draft%'",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM funding_rounds",
+     "rows": [
+      {
+       "id": 1,
+       "organization_id": 1,
+       "stage": "seed",
+       "amount": 3000000.0,
+       "currency": "USD",
+       "valuation": 15000000.0,
+       "valuation_type": "post-money",
+       "status": "closed",
+       "investor_id": 5,
+       "date": "2026-09-02"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q19",
+   "category": "multi_hop",
+   "question": "What is my cofounder's email address?",
+   "answer": "david@nebula.ai",
+   "evidence": [
+    "m01",
+    "m45"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer gives a real fact (david@nebula.ai), but the response says it doesn't know, which the rules count as incorrect.",
+   "wall": 7.864,
+   "context": [
+    {
+     "sql": "SELECT om.*, p.name, p.email FROM organization_members om JOIN people p ON om.person_id = p.id WHERE om.role LIKE '%Cofounder%'",
+     "rows": [
+      {
+       "id": 1,
+       "organization_id": 1,
+       "person_id": 1,
+       "role": "Cofounder",
+       "name": "Adam Zvada",
+       "email": null
+      },
+      {
+       "id": 2,
+       "organization_id": 1,
+       "person_id": 2,
+       "role": "Cofounder",
+       "name": "David Mokos",
+       "email": null
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM people WHERE name LIKE '%Mokos%'",
+     "rows": [
+      {
+       "id": 2,
+       "name": "David Mokos",
+       "city": null,
+       "phone": "+420 733 544 390",
+       "birthday": "09-02",
+       "relationship_to_adam": null,
+       "allergies": null,
+       "favorite_food": null,
+       "phone_secondary": "+1 628 688 4995",
+       "move_date": null,
+       "favorite_flower": null,
+       "hobby": null,
+       "email": null,
+       "visit_start": null,
+       "visit_end": null,
+       "visit_city": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q20",
+   "category": "aggregation",
+   "question": "How many times did I go climbing in August?",
+   "answer": "3 times (Aug 3, Aug 10, Aug 17)",
+   "evidence": [
+    "m09",
+    "m18",
+    "m26"
+   ],
+   "system_answer": "You went climbing 3 times in August 2026 (Aug 3, Aug 10, Aug 17).",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer matches the gold on the count (3) and on all three dates. The added year is harmless extra detail.",
+   "wall": 4.735,
+   "context": [
+    {
+     "sql": "SELECT * FROM climbing_sessions WHERE date LIKE '2026-08%'",
+     "rows": [
+      {
+       "id": 1,
+       "place_id": 2,
+       "date": "2026-08-03T19:22",
+       "companion_id": 3,
+       "achievement": "First 6c sent"
+      },
+      {
+       "id": 2,
+       "place_id": 2,
+       "date": "2026-08-10T17:30",
+       "companion_id": null,
+       "achievement": "Chill session"
+      },
+      {
+       "id": 3,
+       "place_id": 2,
+       "date": "2026-08-17T18:00",
+       "companion_id": 3,
+       "achievement": "Attempted 6c+ project, no send yet"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q21",
+   "category": "aggregation",
+   "question": "What's the hardest climbing grade I've sent?",
+   "answer": "6c+ (sent on Sep 18 at Mission Cliffs)",
+   "evidence": [
+    "m09",
+    "m26",
+    "m61"
+   ],
+   "system_answer": "Based on your climbing sessions, your hardest sent grade is **6c+**, achieved on 2026-09-18 (\"Finally sent 6c+\").",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer gives 6c+ sent on Sep 18, which matches the gold answer. Omitting the location, Mission Cliffs, is acceptable because the key fact is the grade.",
+   "wall": 5.518,
+   "context": [
+    {
+     "sql": "SELECT * FROM climbing_sessions",
+     "rows": [
+      {
+       "id": 1,
+       "place_id": 2,
+       "date": "2026-08-03T19:22",
+       "companion_id": 3,
+       "achievement": "First 6c sent"
+      },
+      {
+       "id": 2,
+       "place_id": 2,
+       "date": "2026-08-10T17:30",
+       "companion_id": null,
+       "achievement": "Chill session"
+      },
+      {
+       "id": 3,
+       "place_id": 2,
+       "date": "2026-08-17T18:00",
+       "companion_id": 3,
+       "achievement": "Attempted 6c+ project, no send yet"
+      },
+      {
+       "id": 4,
+       "place_id": 11,
+       "date": "2026-09-18T18:30",
+       "companion_id": null,
+       "achievement": "Finally sent 6c+"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q22",
+   "category": "multi_hop",
+   "question": "What gift ideas do I have for Mom and for Eva?",
+   "answer": "Mom: orchids; Eva: a sushi-making class",
+   "evidence": [
+    "m33",
+    "m48"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer gives concrete gift ideas (orchids for Mom, a sushi-making class for Eva), but the answer only says 'I don't know' and provides neither.",
+   "wall": 5.64,
+   "context": [
+    {
+     "sql": "SELECT * FROM tasks WHERE title LIKE '%gift%' OR title LIKE '%Mom%' OR title LIKE '%Eva%'",
+     "rows": [
+      {
+       "id": 3,
+       "title": "Find birthday gift for Eva (maybe sushi-making class)",
+       "due_date": "2026-09-28",
+       "status": "pending"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q23",
+   "category": "single",
+   "question": "How much did the flight to San Francisco cost?",
+   "answer": "18,450 CZK (United UA 8843)",
+   "evidence": [
+    "m35"
+   ],
+   "system_answer": "18,450 CZK (United flight UA 8843, Prague → San Francisco, 2026-09-01).",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer gives the correct price, 18,450 CZK, and the correct flight, UA 8843. The added route and date do not contradict the gold answer.",
+   "wall": 6.289,
+   "context": [
+    {
+     "sql": "SELECT * FROM flights WHERE destination LIKE '%San Francisco%'",
+     "rows": [
+      {
+       "id": 1,
+       "origin": "Prague",
+       "destination": "San Francisco",
+       "date": "2026-09-01",
+       "airline": "United",
+       "flight_number": "UA 8843",
+       "amount": 18450.0,
+       "currency": "CZK",
+       "person_id": "@adam"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q24",
+   "category": "semi_structured",
+   "question": "Who is Priya Patel?",
+   "answer": "Engineering Manager at Stripe, met at a YC founder mixer (priya@stripe.com, +1 415 555 0142)",
+   "evidence": [
+    "m54"
+   ],
+   "system_answer": "Priya Patel is an Engineering Manager at Stripe, whom Adam met at a YC founder mixer. Contact info: priya@stripe.com, +1 415 555 0142.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer matches every key fact in the gold answer: her role as Engineering Manager at Stripe, meeting at a YC founder mixer, her email, and her phone number.",
+   "wall": 4.652,
+   "context": [
+    {
+     "sql": "SELECT * FROM people WHERE name LIKE '%Priya%'",
+     "rows": [
+      {
+       "id": 9,
+       "name": "Priya Patel",
+       "city": null,
+       "phone": "+1 415 555 0142",
+       "birthday": null,
+       "relationship_to_adam": "contact - Engineering Manager at Stripe, met at YC founder mixer",
+       "allergies": null,
+       "favorite_food": null,
+       "phone_secondary": null,
+       "move_date": null,
+       "favorite_flower": null,
+       "hobby": null,
+       "email": "priya@stripe.com",
+       "visit_start": null,
+       "visit_end": null,
+       "visit_city": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q25",
+   "category": "single",
+   "question": "Who runs partnerships at Stripe?",
+   "answer": "Mark Chen, Priya's colleague",
+   "evidence": [
+    "m56"
+   ],
+   "system_answer": "Mark Chen (Head of Partnerships at Stripe), introduced by Priya Patel.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer correctly identifies Mark Chen as the person who runs partnerships at Stripe. The link to Priya (introduced by her rather than described as her colleague) is consistent with the gold answer and does not contradict it.",
+   "wall": 6.996,
+   "context": [
+    {
+     "sql": "SELECT * FROM organizations WHERE name LIKE '%Stripe%' OR description LIKE '%Stripe%'",
+     "rows": [
+      {
+       "id": 4,
+       "name": "Stripe",
+       "description": "Payments company"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM people WHERE name LIKE '%Stripe%' OR relationship_to_adam LIKE '%Stripe%'",
+     "rows": [
+      {
+       "id": 9,
+       "name": "Priya Patel",
+       "city": null,
+       "phone": "+1 415 555 0142",
+       "birthday": null,
+       "relationship_to_adam": "contact - Engineering Manager at Stripe, met at YC founder mixer",
+       "allergies": null,
+       "favorite_food": null,
+       "phone_secondary": null,
+       "move_date": null,
+       "favorite_flower": null,
+       "hobby": null,
+       "email": "priya@stripe.com",
+       "visit_start": null,
+       "visit_end": null,
+       "visit_city": null
+      },
+      {
+       "id": 10,
+       "name": "Mark Chen",
+       "city": null,
+       "phone": null,
+       "birthday": null,
+       "relationship_to_adam": "contact - runs partnerships at Stripe, introduced by Priya Patel",
+       "allergies": null,
+       "favorite_food": null,
+       "phone_secondary": null,
+       "move_date": null,
+       "favorite_flower": null,
+       "hobby": null,
+       "email": null,
+       "visit_start": null,
+       "visit_end": null,
+       "visit_city": null
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM organization_members WHERE role LIKE '%partner%'",
+     "rows": [
+      {
+       "id": 3,
+       "organization_id": 2,
+       "person_id": 5,
+       "role": "Partner"
+      },
+      {
+       "id": 6,
+       "organization_id": 4,
+       "person_id": 10,
+       "role": "Head of Partnerships"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM places WHERE name LIKE '%Stripe%'",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q26",
+   "category": "single",
+   "question": "How much did Nebula raise, and who led the round?",
+   "answer": "$3M seed, led by Northwind Ventures",
+   "evidence": [
+    "m60"
+   ],
+   "system_answer": "Nebula raised $3,000,000 (seed round, closed 2026-09-02), led by Sarah Kim.",
+   "verdict": "partial",
+   "score": 0.5,
+   "judge_reason": "The amount ($3M seed) is correct, but the lead investor is wrong: the answer names Sarah Kim instead of Northwind Ventures.",
+   "wall": 5.586,
+   "context": [
+    {
+     "sql": "SELECT fr.*, o.name as org_name, p.name as investor_name FROM funding_rounds fr JOIN organizations o ON fr.organization_id=o.id LEFT JOIN people p ON fr.investor_id=p.id WHERE o.name LIKE '%Nebula%'",
+     "rows": [
+      {
+       "id": 1,
+       "organization_id": 1,
+       "stage": "seed",
+       "amount": 3000000.0,
+       "currency": "USD",
+       "valuation": 15000000.0,
+       "valuation_type": "post-money",
+       "status": "closed",
+       "investor_id": 5,
+       "date": "2026-09-02",
+       "org_name": "Nebula",
+       "investor_name": "Sarah Kim"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q27",
+   "category": "single",
+   "question": "When is Eva visiting SF?",
+   "answer": "Oct 10 to Oct 20",
+   "evidence": [
+    "m58"
+   ],
+   "system_answer": "Eva is visiting San Francisco from 2026-10-10 to 2026-10-20.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer gives Oct 10 to Oct 20, which matches the gold answer. The added year and the date format are acceptable differences.",
+   "wall": 5.182,
+   "context": [
+    {
+     "sql": "SELECT * FROM people WHERE name LIKE '%Eva%'",
+     "rows": [
+      {
+       "id": 4,
+       "name": "Eva",
+       "city": null,
+       "phone": null,
+       "birthday": "09-28",
+       "relationship_to_adam": "girlfriend",
+       "allergies": "peanuts",
+       "favorite_food": "sushi",
+       "phone_secondary": null,
+       "move_date": null,
+       "favorite_flower": null,
+       "hobby": null,
+       "email": null,
+       "visit_start": "2026-10-10",
+       "visit_end": "2026-10-20",
+       "visit_city": "San Francisco"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q28",
+   "category": "single",
+   "question": "Which climbing gym did I join, and what does it cost?",
+   "answer": "Mission Cliffs, $110/month",
+   "evidence": [
+    "m49"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer is a real fact (Mission Cliffs, $110/month), but the answer says 'I don't know' and gives neither the gym nor the cost.",
+   "wall": 6.109,
+   "context": [
+    {
+     "sql": "SELECT * FROM places WHERE category LIKE '%climb%'",
+     "rows": [
+      {
+       "id": 2,
+       "name": "Smíchoff",
+       "city": "Prague",
+       "category": "climbing gym",
+       "is_favorite": null,
+       "person_id": null,
+       "address": null,
+       "organization_id": null
+      },
+      {
+       "id": 11,
+       "name": "Mission Cliffs",
+       "city": "San Francisco",
+       "category": "climbing gym",
+       "is_favorite": null,
+       "person_id": null,
+       "address": null,
+       "organization_id": null
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM expenses WHERE description LIKE '%climb%' OR description LIKE '%gym%'",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM climbing_sessions",
+     "rows": [
+      {
+       "id": 1,
+       "place_id": 2,
+       "date": "2026-08-03T19:22",
+       "companion_id": 3,
+       "achievement": "First 6c sent"
+      },
+      {
+       "id": 2,
+       "place_id": 2,
+       "date": "2026-08-10T17:30",
+       "companion_id": null,
+       "achievement": "Chill session"
+      },
+      {
+       "id": 3,
+       "place_id": 2,
+       "date": "2026-08-17T18:00",
+       "companion_id": 3,
+       "achievement": "Attempted 6c+ project, no send yet"
+      },
+      {
+       "id": 4,
+       "place_id": 11,
+       "date": "2026-09-18T18:30",
+       "companion_id": null,
+       "achievement": "Finally sent 6c+"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q29",
+   "category": "aggregation",
+   "question": "How much did I spend on food and coffee in September?",
+   "answer": "$107.05 (Blue Bottle $10.25 + Tartine $96.80)",
+   "evidence": [
+    "m44",
+    "m52"
+   ],
+   "system_answer": "Based on the data: Oat Latte and Almond Croissant ($10.25, Sep 3) and Dinner with David ($96.80, Sep 10) total **$107.05** in food and coffee spending for September 2026.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer gives the total of $107.05 and lists both expenses, $10.25 and $96.80, which matches the gold answer.",
+   "wall": 6.291,
+   "context": [
+    {
+     "sql": "SELECT * FROM expenses WHERE date LIKE '2026-09%'",
+     "rows": [
+      {
+       "id": 5,
+       "description": "Oat Latte and Almond Croissant",
+       "amount": 10.25,
+       "currency": "USD",
+       "date": "2026-09-03",
+       "place_id": 9
+      },
+      {
+       "id": 6,
+       "description": "Uber home from the Mission",
+       "amount": 23.4,
+       "currency": "USD",
+       "date": "2026-09-05",
+       "place_id": 8
+      },
+      {
+       "id": 7,
+       "description": "Mission Cliffs membership",
+       "amount": 110.0,
+       "currency": "USD",
+       "date": "2026-09-07",
+       "place_id": 11
+      },
+      {
+       "id": 8,
+       "description": "Dinner with David celebrating term sheet",
+       "amount": 96.8,
+       "currency": "USD",
+       "date": "2026-09-10",
+       "place_id": 12
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q30",
+   "category": "single",
+   "question": "What's my favorite restaurant in Prague?",
+   "answer": "Sasazu",
+   "evidence": [
+    "m07"
+   ],
+   "system_answer": "Your favorite restaurant in Prague is Sasazu.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer names Sasazu, which matches the gold answer.",
+   "wall": 5.767,
+   "context": [
+    {
+     "sql": "SELECT * FROM places WHERE city='Prague' AND category='restaurant' AND is_favorite=1",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Sasazu",
+       "city": "Prague",
+       "category": "restaurant",
+       "is_favorite": 1,
+       "person_id": 1,
+       "address": null,
+       "organization_id": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q31",
+   "category": "single",
+   "question": "What do I like to think about?",
+   "answer": "The Roman Empire",
+   "evidence": [
+    "m05"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer is a real fact (the Roman Empire), but the response says it doesn't know.",
+   "wall": 6.473,
+   "context": [
+    {
+     "sql": "SELECT * FROM people WHERE name LIKE '%Adam%'",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Adam Zvada",
+       "city": "San Francisco",
+       "phone": "+1 415 555 0199",
+       "birthday": null,
+       "relationship_to_adam": null,
+       "allergies": null,
+       "favorite_food": null,
+       "phone_secondary": "+420 722 238 738",
+       "move_date": "2026-09-01",
+       "favorite_flower": null,
+       "hobby": "Riding big black horses",
+       "email": null,
+       "visit_start": null,
+       "visit_end": null,
+       "visit_city": null
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM books",
+     "rows": [
+      {
+       "id": 1,
+       "title": "Thinking, Fast and Slow",
+       "author": "Daniel Kahneman",
+       "status": "finished",
+       "context": "Book club",
+       "rating": 5,
+       "notes": "The System 1 vs System 2 stuff is gold"
+      },
+      {
+       "id": 2,
+       "title": "The Pragmatic Programmer",
+       "author": null,
+       "status": "reading",
+       "context": null,
+       "rating": null,
+       "notes": null
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM tasks",
+     "rows": [
+      {
+       "id": 1,
+       "title": "Renew passport",
+       "due_date": "2026-09-30",
+       "status": "done"
+      },
+      {
+       "id": 2,
+       "title": "Send deck to Sarah Kim",
+       "due_date": null,
+       "status": "pending"
+      },
+      {
+       "id": 3,
+       "title": "Find birthday gift for Eva (maybe sushi-making class)",
+       "due_date": "2026-09-28",
+       "status": "pending"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM people",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Adam Zvada",
+       "city": "San Francisco",
+       "phone": "+1 415 555 0199",
+       "birthday": null,
+       "relationship_to_adam": null,
+       "allergies": null,
+       "favorite_food": null,
+       "phone_secondary": "+420 722 238 738",
+       "move_date": "2026-09-01",
+       "favorite_flower": null,
+       "hobby": "Riding big black horses",
+       "email": null,
+       "visit_start": null,
+       "visit_end": null,
+       "visit_city": null
+      },
+      {
+       "id": 2,
+       "name": "David Mokos",
+       "city": null,
+       "phone": "+420 733 544 390",
+       "birthday": "09-02",
+       "relationship_to_adam": null,
+       "allergies": null,
+       "favorite_food": null,
+       "phone_secondary": "+1 628 688 4995",
+       "move_date": null,
+       "favorite_flower": null,
+       "hobby": null,
+       "email": null,
+       "visit_start": null,
+       "visit_end": null,
+       "visit_city": null
+      },
+      {
+       "id": 3,
+       "name": "Tom Novak",
+       "city": null,
+       "phone": "+420 777 999 000",
+       "birthday": null,
+       "relationship_to_adam": null,
+       "allergies": null,
+       "favorite_food": null,
+       "phone_secondary": null,
+       "move_date": null,
+       "favorite_flower": null,
+       "hobby": null,
+       "email": null,
+       "visit_start": null,
+       "visit_end": null,
+       "visit_city": null
+      },
+      {
+       "id": 4,
+       "name": "Eva",
+       "city": null,
+       "phone": null,
+       "birthday": "09-28",
+       "relationship_to_adam": "girlfriend",
+       "allergies": "peanuts",
+       "favorite_food": "sushi",
+       "phone_secondary": null,
+       "move_date": null,
+       "favorite_flower": null,
+       "hobby": null,
+       "email": null,
+       "visit_start": "2026-10-10",
+       "visit_end": "2026-10-20",
+       "visit_city": "San Francisco"
+      },
+      {
+       "id": 5,
+       "name": "Sarah Kim",
+       "city": null,
+       "phone": null,
+       "birthday": null,
+       "relationship_to_adam": "contact - Partner at Northwind Ventures",
+       "allergies": null,
+       "favorite_food": null,
+       "phone_secondary": null,
+       "move_date": null,
+       "favorite_flower": null,
+       "hobby": null,
+       "email": null,
+       "visit_start": null,
+       "visit_end": null,
+       "visit_city": null
+      },
+      {
+       "id": 6,
+       "name": "Dr. Horák",
+       "city": null,
+       "phone": null,
+       "birthday": null,
+       "relationship_to_adam": "dentist",
+       "allergies": null,
+       "favorite_food": null,
+       "phone_secondary": null,
+       "move_date": null,
+       "favorite_flower": null,
+       "hobby": null,
+       "email": null,
+       "visit_start": null,
+       "visit_end": null,
+       "visit_city": null
+      },
+      {
+       "id": 8,
+       "name": "Mom",
+       "city": null,
+       "phone": null,
+       "birthday": "10-03",
+       "relationship_to_adam": "mother",
+       "allergies": null,
+       "favorite_food": null,
+       "phone_secondary": null,
+       "move_date": null,
+       "favorite_flower": "orchids",
+       "hobby": null,
+       "email": null,
+       "visit_start": null,
+       "visit_end": null,
+       "visit_city": null
+      },
+      {
+       "id": 9,
+       "name": "Priya Patel",
+       "city": null,
+       "phone": "+1 415 555 0142",
+       "birthday": null,
+       "relationship_to_adam": "contact - Engineering Manager at Stripe, met at YC founder mixer",
+       "allergies": null,
+       "favorite_food": null,
+       "phone_secondary": null,
+       "move_date": null,
+       "favorite_flower": null,
+       "hobby": null,
+       "email": "priya@stripe.com",
+       "visit_start": null,
+       "visit_end": null,
+       "visit_city": null
+      },
+      {
+       "id": 10,
+       "name": "Mark Chen",
+       "city": null,
+       "phone": null,
+       "birthday": null,
+       "relationship_to_adam": "contact - runs partnerships at Stripe, introduced by Priya Patel",
+       "allergies": null,
+       "favorite_food": null,
+       "phone_secondary": null,
+       "move_date": null,
+       "favorite_flower": null,
+       "hobby": null,
+       "email": null,
+       "visit_start": null,
+       "visit_end": null,
+       "visit_city": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q32",
+   "category": "single",
+   "question": "What do I like riding?",
+   "answer": "Big black horses",
+   "evidence": [
+    "m34"
+   ],
+   "system_answer": "You like riding big black horses.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer matches the gold answer exactly: big black horses.",
+   "wall": 5.48,
+   "context": [
+    {
+     "sql": "SELECT * FROM people WHERE name LIKE '%Adam%'",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Adam Zvada",
+       "city": "San Francisco",
+       "phone": "+1 415 555 0199",
+       "birthday": null,
+       "relationship_to_adam": null,
+       "allergies": null,
+       "favorite_food": null,
+       "phone_secondary": "+420 722 238 738",
+       "move_date": "2026-09-01",
+       "favorite_flower": null,
+       "hobby": "Riding big black horses",
+       "email": null,
+       "visit_start": null,
+       "visit_end": null,
+       "visit_city": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q33",
+   "category": "temporal",
+   "question": "What meetings do I have this coming week?",
+   "answer": "Thu Sep 24 14:00: pitch meeting with Sarah Kim at the Northwind office (2 Embarcadero Center); Fri Sep 25 16:00: Nebula board meeting at 1 Mission St",
+   "evidence": [
+    "m29",
+    "m51",
+    "m45"
+   ],
+   "system_answer": "This week you have:\n- **Pitch meeting with Sarah Kim** — Sep 24, 2026 at 14:00 (status: invited)\n- **Nebula board meeting** — Sep 25, 2026 at 16:00 (status: invited)",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "Both meetings are listed with the correct dates and times. The locations are omitted, but the key facts (which meetings, when) match the gold answer and nothing contradicts it.",
+   "wall": 5.03,
+   "context": [
+    {
+     "sql": "SELECT * FROM events WHERE date >= '2026-09-21' AND date < '2026-09-28' ORDER BY date",
+     "rows": [
+      {
+       "id": 3,
+       "title": "Pitch meeting with Sarah Kim",
+       "date": "2026-09-24T14:00",
+       "place_id": 6,
+       "organizer_id": 5,
+       "status": "invited"
+      },
+      {
+       "id": 4,
+       "title": "Nebula board meeting",
+       "date": "2026-09-25T16:00",
+       "place_id": 10,
+       "organizer_id": 2,
+       "status": "invited"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q34",
+   "category": "single",
+   "question": "How much did I sell my car for?",
+   "answer": "310,000 CZK",
+   "evidence": [
+    "m37"
+   ],
+   "system_answer": "You sold your Skoda Octavia (2019) for 310,000 CZK on 2026-08-28.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer states 310,000 CZK, which matches the gold answer. The extra details about the car and the date don't contradict it.",
+   "wall": 4.583,
+   "context": [
+    {
+     "sql": "SELECT * FROM vehicles;",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "make": "Skoda",
+       "model": "Octavia",
+       "year": 2019,
+       "plate": "5A1 2345",
+       "status": "sold",
+       "sale_amount": 310000,
+       "sale_currency": "CZK",
+       "sale_date": "2026-08-28"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q35",
+   "category": "update",
+   "question": "Where did I live before San Francisco?",
+   "answer": "Prague",
+   "evidence": [
+    "m01",
+    "m32"
+   ],
+   "system_answer": "Prague",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer says Prague, which matches the gold answer exactly.",
+   "wall": 6.067,
+   "context": [
+    {
+     "sql": "SELECT * FROM people WHERE name LIKE '%Adam%'",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Adam Zvada",
+       "city": "San Francisco",
+       "phone": "+1 415 555 0199",
+       "birthday": null,
+       "relationship_to_adam": null,
+       "allergies": null,
+       "favorite_food": null,
+       "phone_secondary": "+420 722 238 738",
+       "move_date": "2026-09-01",
+       "favorite_flower": null,
+       "hobby": "Riding big black horses",
+       "email": null,
+       "visit_start": null,
+       "visit_end": null,
+       "visit_city": null
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM places WHERE city NOT LIKE '%San Francisco%'",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Sasazu",
+       "city": "Prague",
+       "category": "restaurant",
+       "is_favorite": 1,
+       "person_id": 1,
+       "address": null,
+       "organization_id": null
+      },
+      {
+       "id": 2,
+       "name": "Smíchoff",
+       "city": "Prague",
+       "category": "climbing gym",
+       "is_favorite": null,
+       "person_id": null,
+       "address": null,
+       "organization_id": null
+      },
+      {
+       "id": 3,
+       "name": "Café Savoy",
+       "city": "Prague",
+       "category": "restaurant",
+       "is_favorite": null,
+       "person_id": null,
+       "address": null,
+       "organization_id": null
+      },
+      {
+       "id": 4,
+       "name": "Hotel Josef rooftop",
+       "city": "Prague",
+       "category": "event venue",
+       "is_favorite": null,
+       "person_id": null,
+       "address": null,
+       "organization_id": null
+      },
+      {
+       "id": 5,
+       "name": "Albert",
+       "city": "Prague",
+       "category": "grocery store",
+       "is_favorite": null,
+       "person_id": null,
+       "address": null,
+       "organization_id": null
+      },
+      {
+       "id": 7,
+       "name": "Lokál",
+       "city": "Prague",
+       "category": "restaurant",
+       "is_favorite": null,
+       "person_id": null,
+       "address": null,
+       "organization_id": null
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM expenses",
+     "rows": [
+      {
+       "id": 1,
+       "description": "Breakfast",
+       "amount": 385.0,
+       "currency": "CZK",
+       "date": "2026-08-05",
+       "place_id": 3
+      },
+      {
+       "id": 2,
+       "description": "Sushi dinner with Eva",
+       "amount": 2140.0,
+       "currency": "CZK",
+       "date": "2026-08-12",
+       "place_id": 1
+      },
+      {
+       "id": 3,
+       "description": "Groceries",
+       "amount": 1262.0,
+       "currency": "CZK",
+       "date": "2026-08-18",
+       "place_id": 5
+      },
+      {
+       "id": 4,
+       "description": "Lunch",
+       "amount": 329.0,
+       "currency": "CZK",
+       "date": "2026-08-22",
+       "place_id": 7
+      },
+      {
+       "id": 5,
+       "description": "Oat Latte and Almond Croissant",
+       "amount": 10.25,
+       "currency": "USD",
+       "date": "2026-09-03",
+       "place_id": 9
+      },
+      {
+       "id": 6,
+       "description": "Uber home from the Mission",
+       "amount": 23.4,
+       "currency": "USD",
+       "date": "2026-09-05",
+       "place_id": 8
+      },
+      {
+       "id": 7,
+       "description": "Mission Cliffs membership",
+       "amount": 110.0,
+       "currency": "USD",
+       "date": "2026-09-07",
+       "place_id": 11
+      },
+      {
+       "id": 8,
+       "description": "Dinner with David celebrating term sheet",
+       "amount": 96.8,
+       "currency": "USD",
+       "date": "2026-09-10",
+       "place_id": 12
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM flights",
+     "rows": [
+      {
+       "id": 1,
+       "origin": "Prague",
+       "destination": "San Francisco",
+       "date": "2026-09-01",
+       "airline": "United",
+       "flight_number": "UA 8843",
+       "amount": 18450.0,
+       "currency": "CZK",
+       "person_id": "@adam"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q36",
+   "category": "deleted",
+   "question": "Who is Jan Dvořák?",
+   "answer": "UNKNOWN: the user asked to forget Jan Dvořák's info, so nothing should be returned",
+   "evidence": [
+    "m59"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The gold answer is UNKNOWN, meaning the information should not be returned. The answer says it doesn't know and gives no concrete value, so it complies.",
+   "wall": 5.3,
+   "context": [
+    {
+     "sql": "SELECT * FROM people WHERE name LIKE '%Dvořák%' OR name LIKE '%Dvorak%'",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q37",
+   "category": "unanswerable",
+   "question": "When is Tom's birthday?",
+   "answer": "UNKNOWN: never mentioned",
+   "evidence": [],
+   "system_answer": "I don't know.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "Gold is UNKNOWN and the answer says it doesn't know.",
+   "wall": 5.18,
+   "context": [
+    {
+     "sql": "SELECT * FROM people WHERE name LIKE '%Tom%'",
+     "rows": [
+      {
+       "id": 3,
+       "name": "Tom Novak",
+       "city": null,
+       "phone": "+420 777 999 000",
+       "birthday": null,
+       "relationship_to_adam": null,
+       "allergies": null,
+       "favorite_food": null,
+       "phone_secondary": null,
+       "move_date": null,
+       "favorite_flower": null,
+       "hobby": null,
+       "email": null,
+       "visit_start": null,
+       "visit_end": null,
+       "visit_city": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q38",
+   "category": "unanswerable",
+   "question": "What's Sarah Kim's phone number?",
+   "answer": "UNKNOWN: never mentioned",
+   "evidence": [],
+   "system_answer": "I don't know.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "Gold is UNKNOWN and the answer correctly states it doesn't know.",
+   "wall": 5.493,
+   "context": [
+    {
+     "sql": "SELECT * FROM people WHERE name LIKE '%Sarah%Kim%'",
+     "rows": [
+      {
+       "id": 5,
+       "name": "Sarah Kim",
+       "city": null,
+       "phone": null,
+       "birthday": null,
+       "relationship_to_adam": "contact - Partner at Northwind Ventures",
+       "allergies": null,
+       "favorite_food": null,
+       "phone_secondary": null,
+       "move_date": null,
+       "favorite_flower": null,
+       "hobby": null,
+       "email": null,
+       "visit_start": null,
+       "visit_end": null,
+       "visit_city": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q39",
+   "category": "unanswerable",
+   "question": "What's Eva's last name?",
+   "answer": "UNKNOWN: never mentioned",
+   "evidence": [],
+   "system_answer": "I don't know.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The gold answer is UNKNOWN, and the answer correctly says it doesn't know.",
+   "wall": 5.243,
+   "context": [
+    {
+     "sql": "SELECT * FROM people WHERE name LIKE '%Eva%'",
+     "rows": [
+      {
+       "id": 4,
+       "name": "Eva",
+       "city": null,
+       "phone": null,
+       "birthday": "09-28",
+       "relationship_to_adam": "girlfriend",
+       "allergies": "peanuts",
+       "favorite_food": "sushi",
+       "phone_secondary": null,
+       "move_date": null,
+       "favorite_flower": null,
+       "hobby": null,
+       "email": null,
+       "visit_start": "2026-10-10",
+       "visit_end": "2026-10-20",
+       "visit_city": "San Francisco"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q40",
+   "category": "unanswerable",
+   "question": "How much is my rent in San Francisco?",
+   "answer": "UNKNOWN: never mentioned",
+   "evidence": [],
+   "system_answer": "I don't know.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "Gold is UNKNOWN and the answer says it doesn't know.",
+   "wall": 5.581,
+   "context": [
+    {
+     "sql": "SELECT * FROM expenses WHERE description LIKE '%rent%'",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM places WHERE city LIKE '%San Francisco%'",
+     "rows": [
+      {
+       "id": 6,
+       "name": "Northwind office",
+       "city": "San Francisco",
+       "category": "office",
+       "is_favorite": null,
+       "person_id": null,
+       "address": "2 Embarcadero Center",
+       "organization_id": null
+      },
+      {
+       "id": 8,
+       "name": "Adam's apartment",
+       "city": "San Francisco",
+       "category": "apartment",
+       "is_favorite": null,
+       "person_id": 1,
+       "address": "1450 Valencia St",
+       "organization_id": null
+      },
+      {
+       "id": 9,
+       "name": "Blue Bottle Coffee",
+       "city": "San Francisco",
+       "category": "cafe",
+       "is_favorite": null,
+       "person_id": null,
+       "address": "Mint Plaza",
+       "organization_id": null
+      },
+      {
+       "id": 10,
+       "name": "1 Mission St",
+       "city": "San Francisco",
+       "category": "office",
+       "is_favorite": null,
+       "person_id": null,
+       "address": "1 Mission St, San Francisco",
+       "organization_id": 1
+      },
+      {
+       "id": 11,
+       "name": "Mission Cliffs",
+       "city": "San Francisco",
+       "category": "climbing gym",
+       "is_favorite": null,
+       "person_id": null,
+       "address": null,
+       "organization_id": null
+      },
+      {
+       "id": 12,
+       "name": "Tartine",
+       "city": "San Francisco",
+       "category": "restaurant",
+       "is_favorite": null,
+       "person_id": null,
+       "address": null,
+       "organization_id": null
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM expenses e JOIN places p ON e.place_id=p.id WHERE p.city LIKE '%San Francisco%'",
+     "rows": [
+      {
+       "id": 5,
+       "description": "Oat Latte and Almond Croissant",
+       "amount": 10.25,
+       "currency": "USD",
+       "date": "2026-09-03",
+       "place_id": 9,
+       "name": "Blue Bottle Coffee",
+       "city": "San Francisco",
+       "category": "cafe",
+       "is_favorite": null,
+       "person_id": null,
+       "address": "Mint Plaza",
+       "organization_id": null
+      },
+      {
+       "id": 6,
+       "description": "Uber home from the Mission",
+       "amount": 23.4,
+       "currency": "USD",
+       "date": "2026-09-05",
+       "place_id": 8,
+       "name": "Adam's apartment",
+       "city": "San Francisco",
+       "category": "apartment",
+       "is_favorite": null,
+       "person_id": 1,
+       "address": "1450 Valencia St",
+       "organization_id": null
+      },
+      {
+       "id": 7,
+       "description": "Mission Cliffs membership",
+       "amount": 110.0,
+       "currency": "USD",
+       "date": "2026-09-07",
+       "place_id": 11,
+       "name": "Mission Cliffs",
+       "city": "San Francisco",
+       "category": "climbing gym",
+       "is_favorite": null,
+       "person_id": null,
+       "address": null,
+       "organization_id": null
+      },
+      {
+       "id": 8,
+       "description": "Dinner with David celebrating term sheet",
+       "amount": 96.8,
+       "currency": "USD",
+       "date": "2026-09-10",
+       "place_id": 12,
+       "name": "Tartine",
+       "city": "San Francisco",
+       "category": "restaurant",
+       "is_favorite": null,
+       "person_id": null,
+       "address": null,
+       "organization_id": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  }
+ ],
+ "db": {
+  "books": {
+   "description": "A book Adam is reading or has read",
+   "columns": [
+    {
+     "name": "title",
+     "type": "TEXT",
+     "description": "Title of the book"
+    },
+    {
+     "name": "author",
+     "type": "TEXT",
+     "description": "Author of the book"
+    },
+    {
+     "name": "status",
+     "type": "TEXT",
+     "description": "Reading status, e.g. reading, finished"
+    },
+    {
+     "name": "context",
+     "type": "TEXT",
+     "description": "Context or reason for reading, e.g. book club"
+    },
+    {
+     "name": "rating",
+     "type": "INTEGER",
+     "description": "Rating out of 5 given by Adam"
+    },
+    {
+     "name": "notes",
+     "type": "TEXT",
+     "description": "Adam's notes or thoughts about the book"
+    }
+   ],
+   "rows": [
+    {
+     "id": 1,
+     "title": "Thinking, Fast and Slow",
+     "author": "Daniel Kahneman",
+     "status": "finished",
+     "context": "Book club",
+     "rating": 5,
+     "notes": "The System 1 vs System 2 stuff is gold"
+    },
+    {
+     "id": 2,
+     "title": "The Pragmatic Programmer",
+     "status": "reading"
+    }
+   ]
+  },
+  "climbing_sessions": {
+   "description": "A climbing session Adam attended, including who he climbed with and achievements",
+   "columns": [
+    {
+     "name": "place_id",
+     "type": "INTEGER",
+     "description": "Reference to places.id where the session took place"
+    },
+    {
+     "name": "date",
+     "type": "DATETIME",
+     "description": "Date and time of the climbing session"
+    },
+    {
+     "name": "companion_id",
+     "type": "INTEGER",
+     "description": "Reference to people.id for who Adam climbed with"
+    },
+    {
+     "name": "achievement",
+     "type": "TEXT",
+     "description": "Notable achievement during the session, e.g. hardest grade sent"
+    }
+   ],
+   "rows": [
+    {
+     "id": 1,
+     "place_id": 2,
+     "date": "2026-08-03T19:22",
+     "companion_id": 3,
+     "achievement": "First 6c sent"
+    },
+    {
+     "id": 2,
+     "place_id": 2,
+     "date": "2026-08-10T17:30",
+     "achievement": "Chill session"
+    },
+    {
+     "id": 3,
+     "place_id": 2,
+     "date": "2026-08-17T18:00",
+     "companion_id": 3,
+     "achievement": "Attempted 6c+ project, no send yet"
+    },
+    {
+     "id": 4,
+     "place_id": 11,
+     "date": "2026-09-18T18:30",
+     "achievement": "Finally sent 6c+"
+    }
+   ]
+  },
+  "events": {
+   "description": "An event or gathering Adam is invited to or attends",
+   "columns": [
+    {
+     "name": "title",
+     "type": "TEXT",
+     "description": "Name of the event"
+    },
+    {
+     "name": "date",
+     "type": "DATETIME",
+     "description": "Date and time of the event"
+    },
+    {
+     "name": "place_id",
+     "type": "INTEGER",
+     "description": "Reference to places.id where the event occurs"
+    },
+    {
+     "name": "organizer_id",
+     "type": "INTEGER",
+     "description": "Reference to people.id who organized/invited"
+    },
+    {
+     "name": "status",
+     "type": "TEXT",
+     "description": "Status of the event, e.g. invited, confirmed, cancelled"
+    }
+   ],
+   "rows": [
+    {
+     "id": 1,
+     "title": "Founders Dinner",
+     "date": "2026-08-14T19:00",
+     "place_id": 4,
+     "organizer_id": 5,
+     "status": "attended"
+    },
+    {
+     "id": 2,
+     "title": "Dentist appointment",
+     "date": "2026-08-20T09:00",
+     "organizer_id": 6,
+     "status": "cancelled"
+    },
+    {
+     "id": 3,
+     "title": "Pitch meeting with Sarah Kim",
+     "date": "2026-09-24T14:00",
+     "place_id": 6,
+     "organizer_id": 5,
+     "status": "invited"
+    },
+    {
+     "id": 4,
+     "title": "Nebula board meeting",
+     "date": "2026-09-25T16:00",
+     "place_id": 10,
+     "organizer_id": 2,
+     "status": "invited"
+    }
+   ]
+  },
+  "expenses": {
+   "description": "A purchase or expense made by Adam",
+   "columns": [
+    {
+     "name": "description",
+     "type": "TEXT",
+     "description": "What the expense was for"
+    },
+    {
+     "name": "amount",
+     "type": "REAL",
+     "description": "Amount spent"
+    },
+    {
+     "name": "currency",
+     "type": "TEXT",
+     "description": "Currency of the amount"
+    },
+    {
+     "name": "date",
+     "type": "DATE",
+     "description": "Date of the expense"
+    },
+    {
+     "name": "place_id",
+     "type": "INTEGER",
+     "description": "Reference to places.id where the expense occurred"
+    }
+   ],
+   "rows": [
+    {
+     "id": 1,
+     "description": "Breakfast",
+     "amount": 385.0,
+     "currency": "CZK",
+     "date": "2026-08-05",
+     "place_id": 3
+    },
+    {
+     "id": 2,
+     "description": "Sushi dinner with Eva",
+     "amount": 2140.0,
+     "currency": "CZK",
+     "date": "2026-08-12",
+     "place_id": 1
+    },
+    {
+     "id": 3,
+     "description": "Groceries",
+     "amount": 1262.0,
+     "currency": "CZK",
+     "date": "2026-08-18",
+     "place_id": 5
+    },
+    {
+     "id": 4,
+     "description": "Lunch",
+     "amount": 329.0,
+     "currency": "CZK",
+     "date": "2026-08-22",
+     "place_id": 7
+    },
+    {
+     "id": 5,
+     "description": "Oat Latte and Almond Croissant",
+     "amount": 10.25,
+     "currency": "USD",
+     "date": "2026-09-03",
+     "place_id": 9
+    },
+    {
+     "id": 6,
+     "description": "Uber home from the Mission",
+     "amount": 23.4,
+     "currency": "USD",
+     "date": "2026-09-05",
+     "place_id": 8
+    },
+    {
+     "id": 7,
+     "description": "Mission Cliffs membership",
+     "amount": 110.0,
+     "currency": "USD",
+     "date": "2026-09-07",
+     "place_id": 11
+    },
+    {
+     "id": 8,
+     "description": "Dinner with David celebrating term sheet",
+     "amount": 96.8,
+     "currency": "USD",
+     "date": "2026-09-10",
+     "place_id": 12
+    }
+   ]
+  },
+  "flights": {
+   "description": "A flight booked by Adam",
+   "columns": [
+    {
+     "name": "origin",
+     "type": "TEXT",
+     "description": "Departure city or airport"
+    },
+    {
+     "name": "destination",
+     "type": "TEXT",
+     "description": "Arrival city or airport"
+    },
+    {
+     "name": "date",
+     "type": "DATE",
+     "description": "Date of the flight"
+    },
+    {
+     "name": "airline",
+     "type": "TEXT",
+     "description": "Airline operating the flight"
+    },
+    {
+     "name": "flight_number",
+     "type": "TEXT",
+     "description": "Flight number"
+    },
+    {
+     "name": "amount",
+     "type": "REAL",
+     "description": "Cost of the flight"
+    },
+    {
+     "name": "currency",
+     "type": "TEXT",
+     "description": "Currency of the amount"
+    },
+    {
+     "name": "person_id",
+     "type": "INTEGER",
+     "description": "Reference to people.id who booked/flew"
+    }
+   ],
+   "rows": [
+    {
+     "id": 1,
+     "origin": "Prague",
+     "destination": "San Francisco",
+     "date": "2026-09-01",
+     "airline": "United",
+     "flight_number": "UA 8843",
+     "amount": 18450.0,
+     "currency": "CZK",
+     "person_id": "@adam"
+    }
+   ]
+  },
+  "funding_rounds": {
+   "description": "A funding round or term sheet for an organization",
+   "columns": [
+    {
+     "name": "organization_id",
+     "type": "INTEGER",
+     "description": "Reference to organizations.id"
+    },
+    {
+     "name": "stage",
+     "type": "TEXT",
+     "description": "Funding round stage, e.g. seed, series A"
+    },
+    {
+     "name": "amount",
+     "type": "REAL",
+     "description": "Amount being raised"
+    },
+    {
+     "name": "currency",
+     "type": "TEXT",
+     "description": "Currency of the amount"
+    },
+    {
+     "name": "valuation",
+     "type": "REAL",
+     "description": "Valuation amount"
+    },
+    {
+     "name": "valuation_type",
+     "type": "TEXT",
+     "description": "Type of valuation, e.g. post-money, pre-money"
+    },
+    {
+     "name": "status",
+     "type": "TEXT",
+     "description": "Status of the round, e.g. draft, signed, closed"
+    },
+    {
+     "name": "investor_id",
+     "type": "INTEGER",
+     "description": "Reference to people.id for the investor contact"
+    },
+    {
+     "name": "date",
+     "type": "DATE",
+     "description": "Date the term sheet or round was recorded"
+    }
+   ],
+   "rows": [
+    {
+     "id": 1,
+     "organization_id": 1,
+     "stage": "seed",
+     "amount": 3000000.0,
+     "currency": "USD",
+     "valuation": 15000000.0,
+     "valuation_type": "post-money",
+     "status": "closed",
+     "investor_id": 5,
+     "date": "2026-09-02"
+    }
+   ]
+  },
+  "organization_members": {
+   "description": "Link between people and organizations they are part of, with their role",
+   "columns": [
+    {
+     "name": "organization_id",
+     "type": "INTEGER",
+     "description": "Reference to organizations.id"
+    },
+    {
+     "name": "person_id",
+     "type": "INTEGER",
+     "description": "Reference to people.id"
+    },
+    {
+     "name": "role",
+     "type": "TEXT",
+     "description": "Role at the organization"
+    }
+   ],
+   "rows": [
+    {
+     "id": 1,
+     "organization_id": 1,
+     "person_id": 1,
+     "role": "Cofounder"
+    },
+    {
+     "id": 2,
+     "organization_id": 1,
+     "person_id": 2,
+     "role": "Cofounder"
+    },
+    {
+     "id": 3,
+     "organization_id": 2,
+     "person_id": 5,
+     "role": "Partner"
+    },
+    {
+     "id": 5,
+     "organization_id": 4,
+     "person_id": 9,
+     "role": "Engineering Manager"
+    },
+    {
+     "id": 6,
+     "organization_id": 4,
+     "person_id": 10,
+     "role": "Head of Partnerships"
+    }
+   ]
+  },
+  "organizations": {
+   "description": "A company or startup",
+   "columns": [
+    {
+     "name": "name",
+     "type": "TEXT",
+     "description": "Organization name"
+    },
+    {
+     "name": "description",
+     "type": "TEXT",
+     "description": "What the organization does"
+    }
+   ],
+   "rows": [
+    {
+     "id": 1,
+     "name": "Nebula",
+     "description": "Startup being built by Adam Zvada and David Mokos"
+    },
+    {
+     "id": 2,
+     "name": "Northwind Ventures",
+     "description": "Venture capital firm"
+    },
+    {
+     "id": 3,
+     "name": "Rohlik",
+     "description": "Grocery delivery company"
+    },
+    {
+     "id": 4,
+     "name": "Stripe",
+     "description": "Payments company"
+    }
+   ]
+  },
+  "people": {
+   "description": "A person known to Adam",
+   "columns": [
+    {
+     "name": "name",
+     "type": "TEXT",
+     "description": "Full name"
+    },
+    {
+     "name": "city",
+     "type": "TEXT",
+     "description": "City of residence"
+    },
+    {
+     "name": "phone",
+     "type": "TEXT",
+     "description": "Phone number with country code"
+    },
+    {
+     "name": "birthday",
+     "type": "TEXT",
+     "description": "Birthday in MM-DD or YYYY-MM-DD format"
+    },
+    {
+     "name": "relationship_to_adam",
+     "type": "TEXT",
+     "description": "Relationship of this person to Adam Zvada, e.g. girlfriend"
+    },
+    {
+     "name": "allergies",
+     "type": "TEXT",
+     "description": "Known allergies of this person"
+    },
+    {
+     "name": "favorite_food",
+     "type": "TEXT",
+     "description": "Favorite food or cuisine of this person"
+    },
+    {
+     "name": "phone_secondary",
+     "type": "TEXT",
+     "description": "An additional phone number for this person, e.g. a US number"
+    },
+    {
+     "name": "move_date",
+     "type": "DATE",
+     "description": "Date this person is moving to a new city"
+    },
+    {
+     "name": "favorite_flower",
+     "type": "TEXT",
+     "description": "Favorite flower of this person"
+    },
+    {
+     "name": "hobby",
+     "type": "TEXT",
+     "description": "A hobby or activity this person enjoys"
+    },
+    {
+     "name": "email",
+     "type": "TEXT",
+     "description": "Email address of this person"
+    },
+    {
+     "name": "visit_start",
+     "type": "DATE",
+     "description": "Start date of a visit to Adam's city"
+    },
+    {
+     "name": "visit_end",
+     "type": "DATE",
+     "description": "End date of a visit to Adam's city"
+    },
+    {
+     "name": "visit_city",
+     "type": "TEXT",
+     "description": "City being visited"
+    }
+   ],
+   "rows": [
+    {
+     "id": 1,
+     "name": "Adam Zvada",
+     "city": "San Francisco",
+     "phone": "+1 415 555 0199",
+     "phone_secondary": "+420 722 238 738",
+     "move_date": "2026-09-01",
+     "hobby": "Riding big black horses"
+    },
+    {
+     "id": 2,
+     "name": "David Mokos",
+     "phone": "+420 733 544 390",
+     "birthday": "09-02",
+     "phone_secondary": "+1 628 688 4995"
+    },
+    {
+     "id": 3,
+     "name": "Tom Novak",
+     "phone": "+420 777 999 000"
+    },
+    {
+     "id": 4,
+     "name": "Eva",
+     "birthday": "09-28",
+     "relationship_to_adam": "girlfriend",
+     "allergies": "peanuts",
+     "favorite_food": "sushi",
+     "visit_start": "2026-10-10",
+     "visit_end": "2026-10-20",
+     "visit_city": "San Francisco"
+    },
+    {
+     "id": 5,
+     "name": "Sarah Kim",
+     "relationship_to_adam": "contact - Partner at Northwind Ventures"
+    },
+    {
+     "id": 6,
+     "name": "Dr. Horák",
+     "relationship_to_adam": "dentist"
+    },
+    {
+     "id": 8,
+     "name": "Mom",
+     "birthday": "10-03",
+     "relationship_to_adam": "mother",
+     "favorite_flower": "orchids"
+    },
+    {
+     "id": 9,
+     "name": "Priya Patel",
+     "phone": "+1 415 555 0142",
+     "relationship_to_adam": "contact - Engineering Manager at Stripe, met at YC founder mixer",
+     "email": "priya@stripe.com"
+    },
+    {
+     "id": 10,
+     "name": "Mark Chen",
+     "relationship_to_adam": "contact - runs partnerships at Stripe, introduced by Priya Patel"
+    }
+   ]
+  },
+  "places": {
+   "description": "A place of interest such as a restaurant, venue, or landmark",
+   "columns": [
+    {
+     "name": "name",
+     "type": "TEXT",
+     "description": "Place name"
+    },
+    {
+     "name": "city",
+     "type": "TEXT",
+     "description": "City where the place is located"
+    },
+    {
+     "name": "category",
+     "type": "TEXT",
+     "description": "Type of place, e.g. restaurant"
+    },
+    {
+     "name": "is_favorite",
+     "type": "BOOLEAN",
+     "description": "Whether this is a favorite place of Adam's"
+    },
+    {
+     "name": "person_id",
+     "type": "INTEGER",
+     "description": "Reference to people.id for whom this is a favorite"
+    },
+    {
+     "name": "address",
+     "type": "TEXT",
+     "description": ""
+    },
+    {
+     "name": "organization_id",
+     "type": "INTEGER",
+     "description": "Reference to organizations.id if this place is an organization's office"
+    }
+   ],
+   "rows": [
+    {
+     "id": 1,
+     "name": "Sasazu",
+     "city": "Prague",
+     "category": "restaurant",
+     "is_favorite": 1,
+     "person_id": 1
+    },
+    {
+     "id": 2,
+     "name": "Smíchoff",
+     "city": "Prague",
+     "category": "climbing gym"
+    },
+    {
+     "id": 3,
+     "name": "Café Savoy",
+     "city": "Prague",
+     "category": "restaurant"
+    },
+    {
+     "id": 4,
+     "name": "Hotel Josef rooftop",
+     "city": "Prague",
+     "category": "event venue"
+    },
+    {
+     "id": 5,
+     "name": "Albert",
+     "city": "Prague",
+     "category": "grocery store"
+    },
+    {
+     "id": 6,
+     "name": "Northwind office",
+     "city": "San Francisco",
+     "category": "office",
+     "address": "2 Embarcadero Center"
+    },
+    {
+     "id": 7,
+     "name": "Lokál",
+     "city": "Prague",
+     "category": "restaurant"
+    },
+    {
+     "id": 8,
+     "name": "Adam's apartment",
+     "city": "San Francisco",
+     "category": "apartment",
+     "person_id": 1,
+     "address": "1450 Valencia St"
+    },
+    {
+     "id": 9,
+     "name": "Blue Bottle Coffee",
+     "city": "San Francisco",
+     "category": "cafe",
+     "address": "Mint Plaza"
+    },
+    {
+     "id": 10,
+     "name": "1 Mission St",
+     "city": "San Francisco",
+     "category": "office",
+     "address": "1 Mission St, San Francisco",
+     "organization_id": 1
+    },
+    {
+     "id": 11,
+     "name": "Mission Cliffs",
+     "city": "San Francisco",
+     "category": "climbing gym"
+    },
+    {
+     "id": 12,
+     "name": "Tartine",
+     "city": "San Francisco",
+     "category": "restaurant"
+    }
+   ]
+  },
+  "runs": {
+   "description": "A running session completed by Adam",
+   "columns": [
+    {
+     "name": "distance_km",
+     "type": "REAL",
+     "description": "Distance run in kilometers"
+    },
+    {
+     "name": "duration",
+     "type": "TEXT",
+     "description": "Duration of the run, e.g. 52:30"
+    },
+    {
+     "name": "date",
+     "type": "DATETIME",
+     "description": "Date and time of the run"
+    }
+   ],
+   "rows": [
+    {
+     "id": 1,
+     "distance_km": 10.0,
+     "duration": "52:30",
+     "date": "2026-08-07T07:45"
+    },
+    {
+     "id": 2,
+     "distance_km": 10.0,
+     "duration": "49:58",
+     "date": "2026-09-06T07:30"
+    }
+   ]
+  },
+  "tasks": {
+   "description": "A task or reminder for Adam",
+   "columns": [
+    {
+     "name": "title",
+     "type": "TEXT",
+     "description": "Short description of the task"
+    },
+    {
+     "name": "due_date",
+     "type": "DATE",
+     "description": "Date by which the task should be completed"
+    },
+    {
+     "name": "status",
+     "type": "TEXT",
+     "description": "Status of the task, e.g. pending, done, cancelled"
+    }
+   ],
+   "rows": [
+    {
+     "id": 1,
+     "title": "Renew passport",
+     "due_date": "2026-09-30",
+     "status": "done"
+    },
+    {
+     "id": 2,
+     "title": "Send deck to Sarah Kim",
+     "status": "pending"
+    },
+    {
+     "id": 3,
+     "title": "Find birthday gift for Eva (maybe sushi-making class)",
+     "due_date": "2026-09-28",
+     "status": "pending"
+    }
+   ]
+  },
+  "vehicles": {
+   "description": "A vehicle owned by a person",
+   "columns": [
+    {
+     "name": "person_id",
+     "type": "INTEGER",
+     "description": "Reference to people.id who owns the vehicle"
+    },
+    {
+     "name": "make",
+     "type": "TEXT",
+     "description": "Vehicle manufacturer"
+    },
+    {
+     "name": "model",
+     "type": "TEXT",
+     "description": "Vehicle model"
+    },
+    {
+     "name": "year",
+     "type": "INTEGER",
+     "description": "Model year of the vehicle"
+    },
+    {
+     "name": "plate",
+     "type": "TEXT",
+     "description": "License plate number"
+    },
+    {
+     "name": "status",
+     "type": "TEXT",
+     "description": ""
+    },
+    {
+     "name": "sale_amount",
+     "type": "INTEGER",
+     "description": ""
+    },
+    {
+     "name": "sale_currency",
+     "type": "TEXT",
+     "description": ""
+    },
+    {
+     "name": "sale_date",
+     "type": "TEXT",
+     "description": ""
+    }
+   ],
+   "rows": [
+    {
+     "id": 1,
+     "person_id": 1,
+     "make": "Skoda",
+     "model": "Octavia",
+     "year": 2019,
+     "plate": "5A1 2345",
+     "status": "sold",
+     "sale_amount": 310000,
+     "sale_currency": "CZK",
+     "sale_date": "2026-08-28"
+    }
+   ]
+  }
+ }
+}

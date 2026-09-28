@@ -1,0 +1,86 @@
+{
+ "life6m": {
+  "tokens": "~26k",
+  "full_context": {
+   "accuracy": 83.3,
+   "aggregate": 33.3,
+   "answer_tokens": 25604
+  },
+  "facts_log": {
+   "accuracy": 81.9,
+   "aggregate": 66.7,
+   "answer_tokens": 1069
+  },
+  "brain_jev_recall": {
+   "accuracy": 90.3,
+   "aggregate": 66.7,
+   "answer_tokens": 2334
+  },
+  "brain_all": {
+   "accuracy": 90.3,
+   "aggregate": 66.7,
+   "answer_tokens": 3813
+  },
+  "brain_all_minus_full": [
+   6.9,
+   0.0,
+   15.3
+  ]
+ },
+ "life12m": {
+  "tokens": "~51k",
+  "full_context": {
+   "accuracy": 90.3,
+   "aggregate": 66.7,
+   "answer_tokens": 50318
+  },
+  "facts_log": {
+   "accuracy": 77.8,
+   "aggregate": 66.7,
+   "answer_tokens": 1107
+  },
+  "brain_jev_recall": {
+   "accuracy": 93.1,
+   "aggregate": 66.7,
+   "answer_tokens": 2443
+  },
+  "brain_all": {
+   "accuracy": 88.9,
+   "aggregate": 66.7,
+   "answer_tokens": 3972
+  },
+  "brain_all_minus_full": [
+   -1.4,
+   -9.7,
+   8.3
+  ]
+ },
+ "life30m": {
+  "tokens": "~122k",
+  "full_context": {
+   "accuracy": 83.3,
+   "aggregate": 33.3,
+   "answer_tokens": 122157
+  },
+  "facts_log": {
+   "accuracy": 81.9,
+   "aggregate": 66.7,
+   "answer_tokens": 1201
+  },
+  "brain_jev_recall": {
+   "accuracy": 88.9,
+   "aggregate": 66.7,
+   "answer_tokens": 2466
+  },
+  "brain_all": {
+   "accuracy": 87.5,
+   "aggregate": 66.7,
+   "answer_tokens": 4124
+  },
+  "brain_all_minus_full": [
+   4.2,
+   -4.2,
+   13.9
+  ]
+ }
+}

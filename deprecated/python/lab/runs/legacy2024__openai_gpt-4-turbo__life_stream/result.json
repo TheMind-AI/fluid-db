@@ -1,0 +1,3027 @@
+{
+ "run": "legacy2024__openai_gpt-4-turbo__life_stream",
+ "system": "legacy2024",
+ "model": "openai:gpt-4-turbo",
+ "dataset": "life_stream",
+ "opts": {},
+ "accuracy": 0.4,
+ "by_category": {
+  "aggregation": 0.25,
+  "delete": 0.0,
+  "deleted": 1.0,
+  "multi_hop": 0.0,
+  "semi_structured": 0.667,
+  "single": 0.364,
+  "temporal": 0.5,
+  "unanswerable": 1.0,
+  "update": 0.3
+ },
+ "ingest": {
+  "messages": 63,
+  "crashes": 0,
+  "sql_errors": 1,
+  "cost": 1.2633,
+  "llm_latency_mean": 7.114,
+  "wall_mean": 7.116,
+  "llm_calls": 125,
+  "jev_calls": 0
+ },
+ "qa_cost": 0.5379,
+ "qa_wall_mean": 4.459,
+ "ledger": {
+  "calls": 245,
+  "input_tokens": 163520,
+  "output_tokens": 15970,
+  "cost": 1.944824,
+  "latency": 704.186
+ },
+ "ingest_trace": [
+  {
+   "id": "m01",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 1,
+    "sql": [
+     "CREATE TABLE Users (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, city TEXT);",
+     "CREATE TABLE Startups (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, founder_id INTEGER, cofounder_id INTEGER, FOREIGN KEY(founder_id) REFERENCES Users(id), FOREIGN KEY(cofounder_id) REFERENCES Users(id));",
+     "INSERT INTO Users (name, city) VALUES ('Adam Zvada', 'Prague');",
+     "INSERT INTO Users (name, city) VALUES ('David Mokos', 'Prague');",
+     "INSERT INTO Startups (name, founder_id, cofounder_id) VALUES ('Nebula', (SELECT id FROM Users WHERE name = 'Adam Zvada'), (SELECT id FROM Users WHERE name = 'David Mokos'));"
+    ]
+   },
+   "crashed": null,
+   "wall": 7.174,
+   "llm_latency": 7.17,
+   "cost": 0.0112,
+   "calls": [
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m02",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": []
+   },
+   "crashed": null,
+   "wall": 5.464,
+   "llm_latency": 5.463,
+   "cost": 0.01283,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m03",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "ALTER TABLE Users ADD COLUMN phone TEXT",
+     "UPDATE Users SET phone = '733544390' WHERE id = 2"
+    ]
+   },
+   "crashed": null,
+   "wall": 7.638,
+   "llm_latency": 7.637,
+   "cost": 0.01641,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m04",
+   "kind": "chitchat",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": []
+   },
+   "crashed": null,
+   "wall": 5.797,
+   "llm_latency": 5.796,
+   "cost": 0.01386,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m05",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": []
+   },
+   "crashed": null,
+   "wall": 6.261,
+   "llm_latency": 6.26,
+   "cost": 0.01331,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m06",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "ALTER TABLE Users ADD COLUMN birthday TEXT",
+     "UPDATE Users SET birthday = 'September 2' WHERE name LIKE '%David%'"
+    ]
+   },
+   "crashed": null,
+   "wall": 8.562,
+   "llm_latency": 8.561,
+   "cost": 0.01479,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m07",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": []
+   },
+   "crashed": null,
+   "wall": 6.194,
+   "llm_latency": 6.193,
+   "cost": 0.01316,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m08",
+   "kind": "question",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": []
+   },
+   "crashed": null,
+   "wall": 5.212,
+   "llm_latency": 5.211,
+   "cost": 0.01304,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m09",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE Activities (\n  id INTEGER PRIMARY KEY,\n  description TEXT,\n  location TEXT,\n  date TEXT\n);",
+     "INSERT INTO Activities (description, location, date) VALUES ('sent my first 6c', 'Smíchoff', '2026-08-03');"
+    ]
+   },
+   "crashed": null,
+   "wall": 7.145,
+   "llm_latency": 7.143,
+   "cost": 0.01523,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m10",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO Users (name, phone) VALUES ('Tom Novak', '+420 777 123 456');"
+    ]
+   },
+   "crashed": null,
+   "wall": 6.826,
+   "llm_latency": 6.825,
+   "cost": 0.0148,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m11",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE Reminders (\n  id INTEGER PRIMARY KEY,\n  description TEXT,\n  due_date TEXT\n);",
+     "INSERT INTO Reminders (description, due_date) VALUES ('Renew passport', '2026-10-01');"
+    ]
+   },
+   "crashed": null,
+   "wall": 9.088,
+   "llm_latency": 9.086,
+   "cost": 0.01615,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m12",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO Activities (description, location) VALUES ('Breakfast', 'Café Savoy');"
+    ]
+   },
+   "crashed": null,
+   "wall": 10.654,
+   "llm_latency": 10.653,
+   "cost": 0.01653,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m13",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE Allergies (id INTEGER PRIMARY KEY, person_name TEXT, allergy TEXT);",
+     "INSERT INTO Allergies (person_name, allergy) VALUES ('Eva', 'peanuts');"
+    ]
+   },
+   "crashed": null,
+   "wall": 5.568,
+   "llm_latency": 5.566,
+   "cost": 0.01555,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m14",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO Users (name) VALUES ('Eva');",
+     "ALTER TABLE Users ADD COLUMN interests TEXT;",
+     "UPDATE Users SET birthday = 'September 28', interests = 'sushi' WHERE name = 'Eva';"
+    ]
+   },
+   "crashed": null,
+   "wall": 6.335,
+   "llm_latency": 6.332,
+   "cost": 0.01664,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m15",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": []
+   },
+   "crashed": null,
+   "wall": 6.1,
+   "llm_latency": 6.099,
+   "cost": 0.01544,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m16",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE Emails (\n  id INTEGER PRIMARY KEY,\n  type TEXT,\n  sender TEXT,\n  recipient TEXT,\n  subject TEXT,\n  date TEXT,\n  body TEXT\n);",
+     "INSERT INTO Emails (type, sender, recipient, subject, date, body) VALUES ('email', 'sarah@northwind.vc', 'adam@nebula.ai', 'Founders Dinner next week', '2026-08-08T13:52:00', 'Hi Adam, great to connect. Would love to have you at our Founders Dinner on Aug 14 at 19:00, Hotel Josef rooftop. Best, Sarah Kim, Partner @ Northwind Ventures');",
+     "CREATE TABLE Events (\n  id INTEGER PRIMARY KEY,\n  description TEXT,\n  location TEXT,\n  date TEXT\n);",
+     "INSERT INTO Events (description, location, date) VALUES ('Founders Dinner', 'Hotel Josef rooftop', '2026-08-14T19:00:00');"
+    ]
+   },
+   "crashed": null,
+   "wall": 12.882,
+   "llm_latency": 12.88,
+   "cost": 0.02452,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m17",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE Cars (\n  id INTEGER PRIMARY KEY,\n  model TEXT,\n  year INTEGER,\n  plate TEXT\n);",
+     "INSERT INTO Cars (model, year, plate) VALUES ('Skoda Octavia', 2019, '5A1 2345');"
+    ]
+   },
+   "crashed": null,
+   "wall": 6.789,
+   "llm_latency": 6.787,
+   "cost": 0.01876,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m18",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO Activities (description, location, date) VALUES ('Climbing again at Smíchoff, just a chill session', 'Smíchoff', '2026-08-10')"
+    ]
+   },
+   "crashed": null,
+   "wall": 6.812,
+   "llm_latency": 6.81,
+   "cost": 0.01867,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m19",
+   "kind": "question",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "SELECT phone FROM Users WHERE name = 'David Mokos';"
+    ]
+   },
+   "crashed": null,
+   "wall": 6.423,
+   "llm_latency": 6.422,
+   "cost": 0.01717,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m20",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO Events (description, location, date) VALUES ('Sushi dinner with Eva, 2,140 CZK. so good', 'Sasazu', '2026-08-12');"
+    ]
+   },
+   "crashed": null,
+   "wall": 6.036,
+   "llm_latency": 6.034,
+   "cost": 0.01978,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m21",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO Events (description, location, date) VALUES ('Dentist appointment with Dr. Horák', 'Not specified', '2026-08-20 09:00');"
+    ]
+   },
+   "crashed": null,
+   "wall": 7.58,
+   "llm_latency": 7.579,
+   "cost": 0.02006,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m22",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "SELECT * FROM Users WHERE name LIKE '%Sarah Kim%';",
+     "SELECT * FROM Users WHERE name LIKE '%Jan Dvořák%';"
+    ]
+   },
+   "crashed": null,
+   "wall": 5.389,
+   "llm_latency": 5.388,
+   "cost": 0.01765,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m23",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE Books (id INTEGER PRIMARY KEY, title TEXT, author TEXT);",
+     "INSERT INTO Books (title, author) VALUES ('Thinking, Fast and Slow', 'Daniel Kahneman');"
+    ]
+   },
+   "crashed": null,
+   "wall": 7.046,
+   "llm_latency": 7.044,
+   "cost": 0.0187,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m24",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO Books (title, author) VALUES ('The Pragmatic Programmer', NULL);"
+    ]
+   },
+   "crashed": null,
+   "wall": 5.908,
+   "llm_latency": 5.907,
+   "cost": 0.01731,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m25",
+   "kind": "update",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "UPDATE Users SET phone = '733544390, 6286884994' WHERE id = 2"
+    ]
+   },
+   "crashed": null,
+   "wall": 3.96,
+   "llm_latency": 3.959,
+   "cost": 0.01799,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m26",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "UPDATE Activities SET description = 'Climbing again at Smíchoff, just a chill session. Tried the 6c+ project, no send yet' WHERE id = 3"
+    ]
+   },
+   "crashed": null,
+   "wall": 8.589,
+   "llm_latency": 8.588,
+   "cost": 0.02051,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m27",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE Groceries (\n  id INTEGER PRIMARY KEY,\n  store TEXT,\n  amount INTEGER\n);",
+     "INSERT INTO Groceries (store, amount) VALUES ('Albert', 1262);"
+    ]
+   },
+   "crashed": null,
+   "wall": 4.847,
+   "llm_latency": 4.845,
+   "cost": 0.01709,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m28",
+   "kind": "delete",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "UPDATE Reminders SET due_date = NULL WHERE description LIKE '%dentist%'"
+    ]
+   },
+   "crashed": null,
+   "wall": 5.638,
+   "llm_latency": 5.637,
+   "cost": 0.01773,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m29",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "SELECT * FROM Users WHERE name = 'Sarah Kim';",
+     "SELECT * FROM Events WHERE location = 'Northwind office, 2 Embarcadero Center' AND date = '2026-09-23 10:00';"
+    ]
+   },
+   "crashed": null,
+   "wall": 7.279,
+   "llm_latency": 7.277,
+   "cost": 0.02071,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m30",
+   "kind": "chitchat",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": []
+   },
+   "crashed": null,
+   "wall": 5.103,
+   "llm_latency": 5.102,
+   "cost": 0.0172,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m31",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO Events (description, location, date) VALUES ('Lunch', 'Lokál', '2026-08-22');"
+    ]
+   },
+   "crashed": null,
+   "wall": 5.622,
+   "llm_latency": 5.618,
+   "cost": 0.01992,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m32",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO Users (city) VALUES ('San Francisco');"
+    ]
+   },
+   "crashed": null,
+   "wall": 6.869,
+   "llm_latency": 6.867,
+   "cost": 0.02004,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m33",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO Users (birthday, interests) VALUES ('October 3', 'orchids');"
+    ]
+   },
+   "crashed": null,
+   "wall": 5.559,
+   "llm_latency": 5.557,
+   "cost": 0.01752,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m34",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "UPDATE Users SET interests = 'riding big black horses' WHERE id = 1"
+    ]
+   },
+   "crashed": null,
+   "wall": 6.091,
+   "llm_latency": 6.089,
+   "cost": 0.01916,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m35",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE Flights (\n  id INTEGER PRIMARY KEY,\n  origin TEXT,\n  destination TEXT,\n  date TEXT,\n  airline TEXT,\n  flight_number TEXT,\n  price INTEGER\n);",
+     "INSERT INTO Flights (origin, destination, date, airline, flight_number, price) VALUES ('Prague', 'San Francisco', '2026-09-01', 'United', 'UA 8843', 18450);"
+    ]
+   },
+   "crashed": null,
+   "wall": 9.037,
+   "llm_latency": 9.034,
+   "cost": 0.02276,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m36",
+   "kind": "update",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE PassportRenewals (\n  id INTEGER PRIMARY KEY,\n  renewal_date TEXT\n);",
+     "INSERT INTO PassportRenewals (renewal_date) VALUES ('2026-08-27');"
+    ]
+   },
+   "crashed": null,
+   "wall": 5.499,
+   "llm_latency": 5.497,
+   "cost": 0.01894,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m37",
+   "kind": "update",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "DELETE FROM Cars WHERE model = 'Skoda Octavia' AND year = 2019 AND plate = '5A1 2345'"
+    ]
+   },
+   "crashed": null,
+   "wall": 5.492,
+   "llm_latency": 5.491,
+   "cost": 0.0194,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m38",
+   "kind": "update",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "UPDATE Users SET phone = '+420 777 999 000' WHERE id = 3;"
+    ]
+   },
+   "crashed": null,
+   "wall": 6.34,
+   "llm_latency": 6.338,
+   "cost": 0.01949,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m39",
+   "kind": "update",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE BookReviews (id INTEGER PRIMARY KEY, book_id INTEGER, rating INTEGER, review TEXT, FOREIGN KEY(book_id) REFERENCES Books(id));",
+     "INSERT INTO BookReviews (book_id, rating, review) VALUES (1, 5, 'the System 1 vs System 2 stuff is gold');"
+    ]
+   },
+   "crashed": null,
+   "wall": 6.908,
+   "llm_latency": 6.906,
+   "cost": 0.02038,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m40",
+   "kind": "question",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "SELECT * FROM Users WHERE name LIKE '%Jan Dvořák%'"
+    ]
+   },
+   "crashed": null,
+   "wall": 7.612,
+   "llm_latency": 7.611,
+   "cost": 0.01983,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m41",
+   "kind": "update",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO Events (description, location, date) VALUES ('New chapter!', 'San Francisco', '2026-09-01');"
+    ]
+   },
+   "crashed": null,
+   "wall": 5.012,
+   "llm_latency": 5.01,
+   "cost": 0.02033,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m42",
+   "kind": "store",
+   "trace": {
+    "errors": [
+     {
+      "phase": "update",
+      "sql": "INSERT INTO Emails (type, sender, recipient, subject, date, body) VALUES ('email', 'sarah@northwind.vc', 'adam@nebula.ai', 'Term sheet draft', '2026-09-02T08:41:00', 'Adam, attached is a draft term sheet for Nebula\\'s seed round: $3M at a $15M post-money valuation. Let\\'s discuss at our meeting. — Sarah');",
+      "error": "OperationalError: near \"s\": syntax error"
+     }
+    ],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO Emails (type, sender, recipient, subject, date, body) VALUES ('email', 'sarah@northwind.vc', 'adam@nebula.ai', 'Term sheet draft', '2026-09-02T08:41:00', 'Adam, attached is a draft term sheet for Nebula\\'s seed round: $3M at a $15M post-money valuation. Let\\'s discuss at our meeting. — Sarah');"
+    ]
+   },
+   "crashed": null,
+   "wall": 8.513,
+   "llm_latency": 8.512,
+   "cost": 0.0243,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m43",
+   "kind": "chitchat",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "SELECT id, birthday FROM Users WHERE name = 'David';"
+    ]
+   },
+   "crashed": null,
+   "wall": 6.405,
+   "llm_latency": 6.404,
+   "cost": 0.01986,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m44",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE Receipts (\n  id INTEGER PRIMARY KEY,\n  store TEXT,\n  location TEXT,\n  date TEXT,\n  item TEXT,\n  price REAL,\n  payment_method TEXT\n);",
+     "INSERT INTO Receipts (store, location, date, item, price, payment_method) VALUES ('BLUE BOTTLE COFFEE', 'Mint Plaza, San Francisco', '09/03/2026 8:37 AM', '1x Oat Latte', 5.50, 'VISA ****4421');",
+     "INSERT INTO Receipts (store, location, date, item, price, payment_method) VALUES ('BLUE BOTTLE COFFEE', 'Mint Plaza, San Francisco', '09/03/2026 8:37 AM', '1x Almond Croissant', 4.75, 'VISA ****4421');"
+    ]
+   },
+   "crashed": null,
+   "wall": 11.864,
+   "llm_latency": 11.861,
+   "cost": 0.02775,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m45",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO Events (description, location, date) VALUES ('Nebula board meeting', '1 Mission St, San Francisco', '2026-09-25 16:00:00');"
+    ]
+   },
+   "crashed": null,
+   "wall": 8.292,
+   "llm_latency": 8.29,
+   "cost": 0.02405,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m46",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO Receipts (store, location, date, item, price, payment_method) VALUES ('Uber', 'Mission', '2026-09-05', 'Uber ride', 23.40, 'Unknown');"
+    ]
+   },
+   "crashed": null,
+   "wall": 7.892,
+   "llm_latency": 7.89,
+   "cost": 0.02279,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m47",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE SportsAchievements (\n  id INTEGER PRIMARY KEY,\n  type TEXT,\n  description TEXT,\n  time TEXT\n);",
+     "INSERT INTO SportsAchievements (type, description, time) VALUES ('Running', '10k Personal Best', '49:58');"
+    ]
+   },
+   "crashed": null,
+   "wall": 7.741,
+   "llm_latency": 7.738,
+   "cost": 0.02299,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m48",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "SELECT birthday FROM Users WHERE name = 'Eva';",
+     "SELECT * FROM Activities WHERE description LIKE '%sushi-making class%';"
+    ]
+   },
+   "crashed": null,
+   "wall": 6.655,
+   "llm_latency": 6.654,
+   "cost": 0.02185,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m49",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE GymMemberships (\n  id INTEGER PRIMARY KEY,\n  gym_name TEXT,\n  membership_cost REAL,\n  start_date TEXT\n);",
+     "INSERT INTO GymMemberships (gym_name, membership_cost, start_date) VALUES ('Mission Cliffs', 110, '2026-09-07');"
+    ]
+   },
+   "crashed": null,
+   "wall": 8.465,
+   "llm_latency": 8.458,
+   "cost": 0.02417,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m50",
+   "kind": "update",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO Users (name, phone) VALUES ('David', '+1 628 688 4995');"
+    ]
+   },
+   "crashed": null,
+   "wall": 7.265,
+   "llm_latency": 7.262,
+   "cost": 0.02283,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m51",
+   "kind": "update",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "UPDATE Reminders SET due_date = '2026-09-24 14:00' WHERE description LIKE '%meeting%' AND due_date LIKE '%Sep 24%';",
+     "UPDATE Events SET date = '2026-09-24 14:00' WHERE description LIKE '%meeting%' AND date LIKE '%Sep 24%';"
+    ]
+   },
+   "crashed": null,
+   "wall": 8.387,
+   "llm_latency": 8.384,
+   "cost": 0.02587,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m52",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE IF NOT EXISTS Events (id INTEGER PRIMARY KEY, description TEXT, location TEXT, date TEXT);",
+     "INSERT INTO Events (description, location, date) VALUES ('Dinner with David, celebrated the term sheet', 'Tartine', '2026-09-10');",
+     "CREATE TABLE IF NOT EXISTS Receipts (id INTEGER PRIMARY KEY, store TEXT, location TEXT, date TEXT, item TEXT, price REAL, payment_method TEXT);",
+     "INSERT INTO Receipts (store, location, date, item, price, payment_method) VALUES ('Tartine', 'Unknown', '2026-09-10', 'Dinner with David', 96.80, 'Unknown');"
+    ]
+   },
+   "crashed": null,
+   "wall": 11.246,
+   "llm_latency": 11.243,
+   "cost": 0.02779,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m53",
+   "kind": "chitchat",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": []
+   },
+   "crashed": null,
+   "wall": 3.616,
+   "llm_latency": 3.614,
+   "cost": 0.02031,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m54",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE ContactCards (\n  id INTEGER PRIMARY KEY,\n  name TEXT,\n  company TEXT,\n  role TEXT,\n  email TEXT,\n  phone TEXT,\n  met_at TEXT\n);",
+     "INSERT INTO ContactCards (name, company, role, email, phone, met_at) VALUES ('Priya Patel', 'Stripe', 'Engineering Manager', 'priya@stripe.com', '+1 415 555 0142', 'YC founder mixer');"
+    ]
+   },
+   "crashed": null,
+   "wall": 6.513,
+   "llm_latency": 6.51,
+   "cost": 0.02403,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m55",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE OfficeLocations (id INTEGER PRIMARY KEY, startup_id INTEGER, address TEXT);",
+     "INSERT INTO OfficeLocations (startup_id, address) VALUES (1, '1 Mission St, San Francisco');"
+    ]
+   },
+   "crashed": null,
+   "wall": 10.401,
+   "llm_latency": 10.398,
+   "cost": 0.02616,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m56",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "SELECT * FROM ContactCards WHERE name = 'Mark Chen' AND company = 'Stripe';",
+     "SELECT * FROM Users WHERE name = 'Mark Chen';"
+    ]
+   },
+   "crashed": null,
+   "wall": 5.974,
+   "llm_latency": 5.971,
+   "cost": 0.02405,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m57",
+   "kind": "update",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO BookReviews (book_id, rating, review) VALUES (2, NULL, 'Started reading')"
+    ]
+   },
+   "crashed": null,
+   "wall": 6.93,
+   "llm_latency": 6.927,
+   "cost": 0.02343,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m58",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO Events (description, location, date) VALUES ('Visit to SF', 'San Francisco', '2026-10-10 to 2026-10-20');",
+     "INSERT INTO Activities (description, location, date) VALUES ('Visit to SF', 'San Francisco', '2026-10-10 to 2026-10-20');"
+    ]
+   },
+   "crashed": null,
+   "wall": 7.591,
+   "llm_latency": 7.588,
+   "cost": 0.02656,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m59",
+   "kind": "delete",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "DELETE FROM Users WHERE name = 'Jan Dvořák';",
+     "DELETE FROM Allergies WHERE person_name = 'Jan Dvořák';",
+     "DELETE FROM ContactCards WHERE name = 'Jan Dvořák';"
+    ]
+   },
+   "crashed": null,
+   "wall": 8.06,
+   "llm_latency": 8.058,
+   "cost": 0.0263,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m60",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "CREATE TABLE FundingEvents (\n  id INTEGER PRIMARY KEY,\n  startup_id INTEGER,\n  amount INTEGER,\n  investor TEXT,\n  date TEXT,\n  FOREIGN KEY(startup_id) REFERENCES Startups(id)\n);",
+     "INSERT INTO FundingEvents (startup_id, amount, investor, date) VALUES (1, 3000000, 'Northwind Ventures', '2026-09-17');"
+    ]
+   },
+   "crashed": null,
+   "wall": 8.078,
+   "llm_latency": 8.076,
+   "cost": 0.02654,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m61",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "INSERT INTO Activities (description, location, date) VALUES ('Climbing at Mission Cliffs, finally sent a 6c+!', 'Mission Cliffs', '2026-09-18');"
+    ]
+   },
+   "crashed": null,
+   "wall": 6.567,
+   "llm_latency": 6.565,
+   "cost": 0.02493,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m62",
+   "kind": "question",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "SELECT * FROM Events WHERE date BETWEEN '2026-09-19' AND '2026-09-26';",
+     "SELECT * FROM Reminders WHERE due_date BETWEEN '2026-09-19' AND '2026-09-26';",
+     "SELECT * FROM Flights WHERE date BETWEEN '2026-09-19' AND '2026-09-26';",
+     "SELECT * FROM PassportRenewals WHERE renewal_date BETWEEN '2026-09-19' AND '2026-09-26';",
+     "SELECT * FROM GymMemberships WHERE start_date BETWEEN '2026-09-19' AND '2026-09-26';"
+    ]
+   },
+   "crashed": null,
+   "wall": 12.309,
+   "llm_latency": 12.307,
+   "cost": 0.03251,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  },
+  {
+   "id": "m63",
+   "kind": "update",
+   "trace": {
+    "errors": [],
+    "llm_calls": 2,
+    "sql": [
+     "UPDATE Users SET phone = '+1 415 555 0199'"
+    ]
+   },
+   "crashed": null,
+   "wall": 5.177,
+   "llm_latency": 5.175,
+   "cost": 0.02365,
+   "calls": [
+    "gpt-4-turbo",
+    "gpt-4-turbo"
+   ]
+  }
+ ],
+ "qa": [
+  {
+   "id": "q01",
+   "category": "update",
+   "question": "What is my phone number?",
+   "answer": "+1 415 555 0199 (switched from the Czech +420 722 238 738 on Sep 20)",
+   "evidence": [
+    "m02",
+    "m63"
+   ],
+   "system_answer": "Your phone number is +1 415 555 0199.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer gives the current number, +1 415 555 0199, which matches the gold. Leaving out the old number is fine.",
+   "wall": 6.23,
+   "context": [
+    {
+     "sql": "SELECT * FROM Users;",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Adam Zvada",
+       "city": "Prague",
+       "phone": "+1 415 555 0199",
+       "birthday": null,
+       "interests": "riding big black horses"
+      },
+      {
+       "id": 2,
+       "name": "David Mokos",
+       "city": "Prague",
+       "phone": "+1 415 555 0199",
+       "birthday": "September 2",
+       "interests": null
+      },
+      {
+       "id": 3,
+       "name": "Tom Novak",
+       "city": null,
+       "phone": "+1 415 555 0199",
+       "birthday": null,
+       "interests": null
+      },
+      {
+       "id": 4,
+       "name": "Eva",
+       "city": null,
+       "phone": "+1 415 555 0199",
+       "birthday": "September 28",
+       "interests": "sushi"
+      },
+      {
+       "id": 5,
+       "name": null,
+       "city": "San Francisco",
+       "phone": "+1 415 555 0199",
+       "birthday": null,
+       "interests": null
+      },
+      {
+       "id": 6,
+       "name": null,
+       "city": null,
+       "phone": "+1 415 555 0199",
+       "birthday": "October 3",
+       "interests": "orchids"
+      },
+      {
+       "id": 7,
+       "name": "David",
+       "city": null,
+       "phone": "+1 415 555 0199",
+       "birthday": null,
+       "interests": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q02",
+   "category": "update",
+   "question": "What is David's phone number?",
+   "answer": "Czech: +420 733 544 390; US: +1 628 688 4995 (corrected from ...4994)",
+   "evidence": [
+    "m03",
+    "m25",
+    "m50"
+   ],
+   "system_answer": "+1 415 555 0199",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The answer gives +1 415 555 0199, which matches neither of David's numbers: the Czech +420 733 544 390 or the US +1 628 688 4995.",
+   "wall": 4.641,
+   "context": [
+    {
+     "sql": "SELECT * FROM Users WHERE name LIKE '%David%';",
+     "rows": [
+      {
+       "id": 2,
+       "name": "David Mokos",
+       "city": "Prague",
+       "phone": "+1 415 555 0199",
+       "birthday": "September 2",
+       "interests": null
+      },
+      {
+       "id": 7,
+       "name": "David",
+       "city": null,
+       "phone": "+1 415 555 0199",
+       "birthday": null,
+       "interests": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q03",
+   "category": "update",
+   "question": "What is Tom's phone number?",
+   "answer": "+420 777 999 000 (his new number; the old one was +420 777 123 456)",
+   "evidence": [
+    "m10",
+    "m38"
+   ],
+   "system_answer": "Tom's phone number is +1 415 555 0199.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The answer gives +1 415 555 0199, which matches neither Tom's current number (+420 777 999 000) nor his old one.",
+   "wall": 4.232,
+   "context": [
+    {
+     "sql": "SELECT * FROM Users WHERE name LIKE '%Tom%';",
+     "rows": [
+      {
+       "id": 3,
+       "name": "Tom Novak",
+       "city": null,
+       "phone": "+1 415 555 0199",
+       "birthday": null,
+       "interests": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q04",
+   "category": "update",
+   "question": "Where do I live now?",
+   "answer": "San Francisco, at 1450 Valencia St.",
+   "evidence": [
+    "m32",
+    "m41"
+   ],
+   "system_answer": "Prague",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The answer says Prague, but the gold answer is San Francisco (1450 Valencia St). Prague is likely an outdated or wrong location.",
+   "wall": 3.764,
+   "context": [
+    {
+     "sql": "SELECT * FROM Users WHERE city LIKE '%';",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Adam Zvada",
+       "city": "Prague",
+       "phone": "+1 415 555 0199",
+       "birthday": null,
+       "interests": "riding big black horses"
+      },
+      {
+       "id": 2,
+       "name": "David Mokos",
+       "city": "Prague",
+       "phone": "+1 415 555 0199",
+       "birthday": "September 2",
+       "interests": null
+      },
+      {
+       "id": 5,
+       "name": null,
+       "city": "San Francisco",
+       "phone": "+1 415 555 0199",
+       "birthday": null,
+       "interests": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q05",
+   "category": "single",
+   "question": "When is David's birthday?",
+   "answer": "September 2",
+   "evidence": [
+    "m06"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer is a real fact (September 2), but the response says it doesn't know, so it misses the key fact.",
+   "wall": 4.314,
+   "context": [
+    {
+     "sql": "SELECT * FROM Users WHERE name LIKE '%David%';",
+     "rows": [
+      {
+       "id": 2,
+       "name": "David Mokos",
+       "city": "Prague",
+       "phone": "+1 415 555 0199",
+       "birthday": "September 2",
+       "interests": null
+      },
+      {
+       "id": 7,
+       "name": "David",
+       "city": null,
+       "phone": "+1 415 555 0199",
+       "birthday": null,
+       "interests": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q06",
+   "category": "aggregation",
+   "question": "Whose birthdays do I know about, and when are they?",
+   "answer": "David: Sep 2; Eva: Sep 28; Mom: Oct 3",
+   "evidence": [
+    "m06",
+    "m14",
+    "m33"
+   ],
+   "system_answer": "You know the birthdays of the following individuals:\n- David Mokos: September 2\n- Eva: September 28\n- The individual with ID 6 (name not provided): October 3",
+   "verdict": "partial",
+   "score": 0.5,
+   "judge_reason": "David and Eva are correct. The October 3 birthday has the right date, but the answer does not identify the person as Mom, so one key fact is missing.",
+   "wall": 4.735,
+   "context": [
+    {
+     "sql": "SELECT * FROM Users WHERE birthday IS NOT NULL;",
+     "rows": [
+      {
+       "id": 2,
+       "name": "David Mokos",
+       "city": "Prague",
+       "phone": "+1 415 555 0199",
+       "birthday": "September 2",
+       "interests": null
+      },
+      {
+       "id": 4,
+       "name": "Eva",
+       "city": null,
+       "phone": "+1 415 555 0199",
+       "birthday": "September 28",
+       "interests": "sushi"
+      },
+      {
+       "id": 6,
+       "name": null,
+       "city": null,
+       "phone": "+1 415 555 0199",
+       "birthday": "October 3",
+       "interests": "orchids"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q07",
+   "category": "multi_hop",
+   "question": "What's the email of the investor I met at the Founders Dinner?",
+   "answer": "sarah@northwind.vc (Sarah Kim, Northwind Ventures)",
+   "evidence": [
+    "m16",
+    "m22"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer is a real fact (sarah@northwind.vc), but the answer says it doesn't know, so it misses the key fact.",
+   "wall": 4.176,
+   "context": [
+    {
+     "sql": "SELECT * FROM ContactCards WHERE met_at LIKE '%Founders Dinner%';",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q08",
+   "category": "update",
+   "question": "When and where is my meeting with Sarah Kim?",
+   "answer": "Sep 24, 2026 at 14:00 at the Northwind office, 2 Embarcadero Center, SF (moved from Sep 23 10:00)",
+   "evidence": [
+    "m29",
+    "m51"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "Gold answer is a real fact; the answer says it doesn't know.",
+   "wall": 4.777,
+   "context": [
+    {
+     "sql": "SELECT * FROM Events WHERE description LIKE '%Sarah Kim%';",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM Reminders WHERE description LIKE '%Sarah Kim%';",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM ContactCards WHERE name LIKE '%Sarah Kim%';",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q09",
+   "category": "delete",
+   "question": "Do I have a dentist appointment coming up?",
+   "answer": "No. The Aug 20 appointment with Dr. Horák was cancelled.",
+   "evidence": [
+    "m21",
+    "m28"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "Gold answer is a real fact (appointment was cancelled, so no upcoming appointment); answering 'I don't know' is incorrect.",
+   "wall": 4.506,
+   "context": [
+    {
+     "sql": "SELECT * FROM Reminders WHERE description LIKE '%dentist%';",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM Events WHERE description LIKE '%dentist%';",
+     "rows": [
+      {
+       "id": 3,
+       "description": "Dentist appointment with Dr. Horák",
+       "location": "Not specified",
+       "date": "2026-08-20 09:00"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q10",
+   "category": "aggregation",
+   "question": "How much did I spend eating out (restaurants and cafés) in August?",
+   "answer": "2,854 CZK (Café Savoy 385 + Sasazu 2,140 + Lokál 329)",
+   "evidence": [
+    "m12",
+    "m20",
+    "m31"
+   ],
+   "system_answer": "You spent $0 eating out in August 2026.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The answer says $0 was spent, but the gold total is 2,854 CZK across three restaurant/café visits. It is also in the wrong currency.",
+   "wall": 4.118,
+   "context": [
+    {
+     "sql": "SELECT * FROM Receipts WHERE (store LIKE '%restaurant%' OR store LIKE '%cafe%') AND date LIKE '2026-08%'",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q11",
+   "category": "aggregation",
+   "question": "What's my best 10k running time?",
+   "answer": "49:58 (Sep 6, 2026)",
+   "evidence": [
+    "m15",
+    "m47"
+   ],
+   "system_answer": "Your best 10k running time is 49:58.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer gives the key fact, the 49:58 time. Leaving out the date is acceptable.",
+   "wall": 5.45,
+   "context": [
+    {
+     "sql": "SELECT * FROM SportsAchievements WHERE description LIKE '%10k%' ORDER BY time ASC;",
+     "rows": [
+      {
+       "id": 1,
+       "type": "Running",
+       "description": "10k Personal Best",
+       "time": "49:58"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q12",
+   "category": "update",
+   "question": "Which books have I finished, and how did I rate them?",
+   "answer": "Thinking, Fast and Slow, rated 5/5",
+   "evidence": [
+    "m23",
+    "m39"
+   ],
+   "system_answer": "You have finished \"Thinking, Fast and Slow\" by Daniel Kahneman and rated it 5.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer names the same book, Thinking, Fast and Slow, and the same rating of 5. Adding the author is correct extra detail and contradicts nothing.",
+   "wall": 5.022,
+   "context": [
+    {
+     "sql": "SELECT b.*, br.rating, br.review FROM Books b JOIN BookReviews br ON b.id = br.book_id",
+     "rows": [
+      {
+       "id": 1,
+       "title": "Thinking, Fast and Slow",
+       "author": "Daniel Kahneman",
+       "rating": 5,
+       "review": "the System 1 vs System 2 stuff is gold"
+      },
+      {
+       "id": 2,
+       "title": "The Pragmatic Programmer",
+       "author": null,
+       "rating": null,
+       "review": "Started reading"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q13",
+   "category": "update",
+   "question": "What book am I reading right now?",
+   "answer": "The Pragmatic Programmer",
+   "evidence": [
+    "m24",
+    "m57"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer is a real fact (The Pragmatic Programmer), and the answer says 'I don't know', which the rules count as incorrect.",
+   "wall": 4.826,
+   "context": [
+    {
+     "sql": "SELECT * FROM BookReviews ORDER BY id DESC LIMIT 1;",
+     "rows": [
+      {
+       "id": 2,
+       "book_id": 2,
+       "rating": null,
+       "review": "Started reading"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q14",
+   "category": "single",
+   "question": "What is Eva allergic to?",
+   "answer": "Peanuts",
+   "evidence": [
+    "m13"
+   ],
+   "system_answer": "Eva is allergic to peanuts.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer states Eva is allergic to peanuts, which matches the gold answer.",
+   "wall": 5.211,
+   "context": [
+    {
+     "sql": "SELECT * FROM Allergies WHERE person_name LIKE '%Eva%'",
+     "rows": [
+      {
+       "id": 1,
+       "person_name": "Eva",
+       "allergy": "peanuts"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q15",
+   "category": "update",
+   "question": "Do I own a car?",
+   "answer": "No, the 2019 Skoda Octavia was sold on Aug 28",
+   "evidence": [
+    "m17",
+    "m37"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "Gold answer is a real fact (car sold Aug 28, no car owned); answer says I don't know.",
+   "wall": 3.576,
+   "context": [
+    {
+     "sql": "SELECT * FROM Cars;",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q16",
+   "category": "update",
+   "question": "Have I renewed my passport yet?",
+   "answer": "Yes, it was renewed (Aug 27)",
+   "evidence": [
+    "m11",
+    "m36"
+   ],
+   "system_answer": "Yes, you renewed your passport on 2026-08-27.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer confirms the passport was renewed and gives the date as Aug 27, which matches the gold answer. The added year is only a formatting difference.",
+   "wall": 3.702,
+   "context": [
+    {
+     "sql": "SELECT * FROM PassportRenewals;",
+     "rows": [
+      {
+       "id": 1,
+       "renewal_date": "2026-08-27"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q17",
+   "category": "semi_structured",
+   "question": "When and where is the Nebula board meeting?",
+   "answer": "Sep 25, 2026, 16:00-17:30, at 1 Mission St, San Francisco",
+   "evidence": [
+    "m45"
+   ],
+   "system_answer": "The Nebula board meeting is on September 25, 2026, at 16:00, located at 1 Mission St, San Francisco.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The date, start time, and location all match the gold answer. The end time (17:30) is not given, but nothing in the answer contradicts the gold, and the key when/where facts are present.",
+   "wall": 4.483,
+   "context": [
+    {
+     "sql": "SELECT * FROM Events WHERE description LIKE '%Nebula%';",
+     "rows": [
+      {
+       "id": 6,
+       "description": "Nebula board meeting",
+       "location": "1 Mission St, San Francisco",
+       "date": "2026-09-25 16:00:00"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q18",
+   "category": "semi_structured",
+   "question": "What were the terms in the term sheet draft?",
+   "answer": "$3M seed round at a $15M post-money valuation",
+   "evidence": [
+    "m42"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "Gold is a real fact ($3M seed at $15M post-money); answer says I don't know.",
+   "wall": 4.816,
+   "context": [
+    {
+     "sql": "",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q19",
+   "category": "multi_hop",
+   "question": "What is my cofounder's email address?",
+   "answer": "david@nebula.ai",
+   "evidence": [
+    "m01",
+    "m45"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer gives a real fact (david@nebula.ai), but the response says it doesn't know, which the rules count as incorrect.",
+   "wall": 4.75,
+   "context": [
+    {
+     "sql": "SELECT * FROM Startups;",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Nebula",
+       "founder_id": 1,
+       "cofounder_id": 2
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM Users WHERE id IN (SELECT cofounder_id FROM Startups);",
+     "rows": [
+      {
+       "id": 2,
+       "name": "David Mokos",
+       "city": "Prague",
+       "phone": "+1 415 555 0199",
+       "birthday": "September 2",
+       "interests": null
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM Emails WHERE recipient IN (SELECT name FROM Users WHERE id IN (SELECT cofounder_id FROM Startups));",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q20",
+   "category": "aggregation",
+   "question": "How many times did I go climbing in August?",
+   "answer": "3 times (Aug 3, Aug 10, Aug 17)",
+   "evidence": [
+    "m09",
+    "m18",
+    "m26"
+   ],
+   "system_answer": "You went climbing once in August.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The answer says you climbed once, but the gold answer is 3 times (Aug 3, 10, 17).",
+   "wall": 3.423,
+   "context": [
+    {
+     "sql": "SELECT * FROM Activities WHERE description LIKE '%climbing%' AND date LIKE '2026-08%'",
+     "rows": [
+      {
+       "id": 3,
+       "description": "Climbing again at Smíchoff, just a chill session. Tried the 6c+ project, no send yet",
+       "location": "Smíchoff",
+       "date": "2026-08-10"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q21",
+   "category": "aggregation",
+   "question": "What's the hardest climbing grade I've sent?",
+   "answer": "6c+ (sent on Sep 18 at Mission Cliffs)",
+   "evidence": [
+    "m09",
+    "m26",
+    "m61"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "Gold answer is a real fact (6c+); answer says it doesn't know.",
+   "wall": 3.602,
+   "context": [
+    {
+     "sql": "SELECT * FROM SportsAchievements WHERE description LIKE '%climb%';",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q22",
+   "category": "multi_hop",
+   "question": "What gift ideas do I have for Mom and for Eva?",
+   "answer": "Mom: orchids; Eva: a sushi-making class",
+   "evidence": [
+    "m33",
+    "m48"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer gives concrete gift ideas (orchids for Mom, a sushi-making class for Eva), but the answer only says 'I don't know' and provides neither.",
+   "wall": 5.448,
+   "context": [
+    {
+     "sql": "SELECT * FROM Books WHERE title LIKE '%gift%' OR author LIKE '%gift%';",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM Groceries WHERE store LIKE '%gift%';",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM Receipts WHERE item LIKE '%gift%';",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q23",
+   "category": "single",
+   "question": "How much did the flight to San Francisco cost?",
+   "answer": "18,450 CZK (United UA 8843)",
+   "evidence": [
+    "m35"
+   ],
+   "system_answer": "The flight to San Francisco cost 18,450.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer gives the correct amount of 18,450, which is the key fact. It omits the CZK currency and the flight number, but neither is required by the question.",
+   "wall": 4.239,
+   "context": [
+    {
+     "sql": "SELECT * FROM Flights WHERE destination LIKE '%San Francisco%'",
+     "rows": [
+      {
+       "id": 1,
+       "origin": "Prague",
+       "destination": "San Francisco",
+       "date": "2026-09-01",
+       "airline": "United",
+       "flight_number": "UA 8843",
+       "price": 18450
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q24",
+   "category": "semi_structured",
+   "question": "Who is Priya Patel?",
+   "answer": "Engineering Manager at Stripe, met at a YC founder mixer (priya@stripe.com, +1 415 555 0142)",
+   "evidence": [
+    "m54"
+   ],
+   "system_answer": "Priya Patel is an Engineering Manager at Stripe. Her email is priya@stripe.com and her phone number is +1 415 555 0142. She was met at a YC founder mixer.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer matches every key fact in the gold answer: her role, company, where they met, her email, and her phone number.",
+   "wall": 4.978,
+   "context": [
+    {
+     "sql": "SELECT * FROM Users WHERE name LIKE '%Priya Patel%';",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM Allergies WHERE person_name LIKE '%Priya Patel%';",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM ContactCards WHERE name LIKE '%Priya Patel%';",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Priya Patel",
+       "company": "Stripe",
+       "role": "Engineering Manager",
+       "email": "priya@stripe.com",
+       "phone": "+1 415 555 0142",
+       "met_at": "YC founder mixer"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q25",
+   "category": "single",
+   "question": "Who runs partnerships at Stripe?",
+   "answer": "Mark Chen, Priya's colleague",
+   "evidence": [
+    "m56"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer gives a real fact (Mark Chen, Priya's colleague), but the answer says 'I don't know' and names no one.",
+   "wall": 3.815,
+   "context": [
+    {
+     "sql": "SELECT * FROM ContactCards WHERE company LIKE '%Stripe%' AND role LIKE '%partnerships%';",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q26",
+   "category": "single",
+   "question": "How much did Nebula raise, and who led the round?",
+   "answer": "$3M seed, led by Northwind Ventures",
+   "evidence": [
+    "m60"
+   ],
+   "system_answer": "Nebula raised $3,000,000, and the round was led by Northwind Ventures.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer gives the right amount ($3M) and the right lead investor (Northwind Ventures). Leaving out the word 'seed' does not contradict the gold answer.",
+   "wall": 5.2,
+   "context": [
+    {
+     "sql": "SELECT * FROM Startups WHERE name LIKE '%Nebula%';",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Nebula",
+       "founder_id": 1,
+       "cofounder_id": 2
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM FundingEvents WHERE startup_id IN (SELECT id FROM Startups WHERE name LIKE '%Nebula%');",
+     "rows": [
+      {
+       "id": 1,
+       "startup_id": 1,
+       "amount": 3000000,
+       "investor": "Northwind Ventures",
+       "date": "2026-09-17"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q27",
+   "category": "single",
+   "question": "When is Eva visiting SF?",
+   "answer": "Oct 10 to Oct 20",
+   "evidence": [
+    "m58"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer is a real fact (Oct 10 to Oct 20). The answer says 'I don't know', which misses the key fact.",
+   "wall": 4.458,
+   "context": [
+    {
+     "sql": "SELECT * FROM Events WHERE description LIKE '%Eva%' AND location LIKE '%SF%';",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM Flights WHERE origin LIKE '%Eva%' AND destination LIKE '%SF%';",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM Activities WHERE description LIKE '%Eva%' AND location LIKE '%SF%';",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q28",
+   "category": "single",
+   "question": "Which climbing gym did I join, and what does it cost?",
+   "answer": "Mission Cliffs, $110/month",
+   "evidence": [
+    "m49"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer is a real fact (Mission Cliffs, $110/month), but the answer says 'I don't know' and gives neither the gym nor the cost.",
+   "wall": 3.803,
+   "context": [
+    {
+     "sql": "SELECT * FROM GymMemberships WHERE gym_name LIKE '%climbing%'",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q29",
+   "category": "aggregation",
+   "question": "How much did I spend on food and coffee in September?",
+   "answer": "$107.05 (Blue Bottle $10.25 + Tartine $96.80)",
+   "evidence": [
+    "m44",
+    "m52"
+   ],
+   "system_answer": "$0",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The answer gives $0, but the gold total is $107.05 (Blue Bottle $10.25 + Tartine $96.80), so it misses the key fact.",
+   "wall": 3.88,
+   "context": [
+    {
+     "sql": "SELECT * FROM Receipts WHERE date LIKE '2026-09%' AND (item LIKE '%food%' OR item LIKE '%coffee%');",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q30",
+   "category": "single",
+   "question": "What's my favorite restaurant in Prague?",
+   "answer": "Sasazu",
+   "evidence": [
+    "m07"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer is a real fact (Sasazu), but the answer says it doesn't know.",
+   "wall": 5.031,
+   "context": [
+    {
+     "sql": "SELECT * FROM Users WHERE city LIKE '%Prague%';",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Adam Zvada",
+       "city": "Prague",
+       "phone": "+1 415 555 0199",
+       "birthday": null,
+       "interests": "riding big black horses"
+      },
+      {
+       "id": 2,
+       "name": "David Mokos",
+       "city": "Prague",
+       "phone": "+1 415 555 0199",
+       "birthday": "September 2",
+       "interests": null
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM Activities WHERE location LIKE '%Prague%';",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM Events WHERE location LIKE '%Prague%';",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM Receipts WHERE location LIKE '%Prague%';",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q31",
+   "category": "single",
+   "question": "What do I like to think about?",
+   "answer": "The Roman Empire",
+   "evidence": [
+    "m05"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer is a real fact (the Roman Empire), but the response says it doesn't know.",
+   "wall": 2.908,
+   "context": [
+    {
+     "sql": "SELECT * FROM Users WHERE interests LIKE '%';",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Adam Zvada",
+       "city": "Prague",
+       "phone": "+1 415 555 0199",
+       "birthday": null,
+       "interests": "riding big black horses"
+      },
+      {
+       "id": 4,
+       "name": "Eva",
+       "city": null,
+       "phone": "+1 415 555 0199",
+       "birthday": "September 28",
+       "interests": "sushi"
+      },
+      {
+       "id": 6,
+       "name": null,
+       "city": null,
+       "phone": "+1 415 555 0199",
+       "birthday": "October 3",
+       "interests": "orchids"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q32",
+   "category": "single",
+   "question": "What do I like riding?",
+   "answer": "Big black horses",
+   "evidence": [
+    "m34"
+   ],
+   "system_answer": "You like riding big black horses.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer matches the gold answer exactly: big black horses.",
+   "wall": 3.244,
+   "context": [
+    {
+     "sql": "SELECT * FROM Users WHERE interests LIKE '%riding%';",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Adam Zvada",
+       "city": "Prague",
+       "phone": "+1 415 555 0199",
+       "birthday": null,
+       "interests": "riding big black horses"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q33",
+   "category": "temporal",
+   "question": "What meetings do I have this coming week?",
+   "answer": "Thu Sep 24 14:00: pitch meeting with Sarah Kim at the Northwind office (2 Embarcadero Center); Fri Sep 25 16:00: Nebula board meeting at 1 Mission St",
+   "evidence": [
+    "m29",
+    "m51",
+    "m45"
+   ],
+   "system_answer": "You have a Nebula board meeting on September 25, 2026, at 16:00, located at 1 Mission St, San Francisco.",
+   "verdict": "partial",
+   "score": 0.5,
+   "judge_reason": "The answer gets the Nebula board meeting right, but it leaves out the Thursday Sep 24 14:00 pitch meeting with Sarah Kim.",
+   "wall": 4.322,
+   "context": [
+    {
+     "sql": "SELECT * FROM Events WHERE date >= '2026-09-21' AND date <= '2026-09-28';",
+     "rows": [
+      {
+       "id": 6,
+       "description": "Nebula board meeting",
+       "location": "1 Mission St, San Francisco",
+       "date": "2026-09-25 16:00:00"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q34",
+   "category": "single",
+   "question": "How much did I sell my car for?",
+   "answer": "310,000 CZK",
+   "evidence": [
+    "m37"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer is a real fact (310,000 CZK), but the answer says 'I don't know', which is graded incorrect.",
+   "wall": 4.532,
+   "context": [
+    {
+     "sql": "SELECT * FROM Receipts WHERE item LIKE '%car%';",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q35",
+   "category": "update",
+   "question": "Where did I live before San Francisco?",
+   "answer": "Prague",
+   "evidence": [
+    "m01",
+    "m32"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer is a real fact (Prague), but the answer says it doesn't know, which the rules count as incorrect.",
+   "wall": 4.937,
+   "context": [
+    {
+     "sql": "SELECT * FROM Users WHERE city NOT LIKE 'San Francisco';",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Adam Zvada",
+       "city": "Prague",
+       "phone": "+1 415 555 0199",
+       "birthday": null,
+       "interests": "riding big black horses"
+      },
+      {
+       "id": 2,
+       "name": "David Mokos",
+       "city": "Prague",
+       "phone": "+1 415 555 0199",
+       "birthday": "September 2",
+       "interests": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q36",
+   "category": "deleted",
+   "question": "Who is Jan Dvořák?",
+   "answer": "UNKNOWN: the user asked to forget Jan Dvořák's info, so nothing should be returned",
+   "evidence": [
+    "m59"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The gold answer is UNKNOWN, meaning the information should not be returned. The answer says it doesn't know and gives no concrete value, so it complies.",
+   "wall": 7.23,
+   "context": [
+    {
+     "sql": "SELECT * FROM Users WHERE name LIKE '%Jan Dvořák%';",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM ContactCards WHERE name LIKE '%Jan Dvořák%';",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM Emails WHERE sender LIKE '%Jan Dvořák%' OR recipient LIKE '%Jan Dvořák%';",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM Allergies WHERE person_name LIKE '%Jan Dvořák%';",
+     "rows": []
+    },
+    {
+     "sql": "SELECT * FROM Startups WHERE founder_id IN (SELECT id FROM Users WHERE name LIKE '%Jan Dvořák%') OR cofounder_id IN (SELECT id FROM Users WHERE name LIKE '%Jan Dvořák%');",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q37",
+   "category": "unanswerable",
+   "question": "When is Tom's birthday?",
+   "answer": "UNKNOWN: never mentioned",
+   "evidence": [],
+   "system_answer": "I don't know.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "Gold is UNKNOWN and the answer says it doesn't know.",
+   "wall": 4.15,
+   "context": [
+    {
+     "sql": "SELECT * FROM Users WHERE name LIKE '%Tom%'",
+     "rows": [
+      {
+       "id": 3,
+       "name": "Tom Novak",
+       "city": null,
+       "phone": "+1 415 555 0199",
+       "birthday": null,
+       "interests": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q38",
+   "category": "unanswerable",
+   "question": "What's Sarah Kim's phone number?",
+   "answer": "UNKNOWN: never mentioned",
+   "evidence": [],
+   "system_answer": "I don't know.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "Gold is UNKNOWN and the answer correctly states it doesn't know.",
+   "wall": 2.904,
+   "context": [
+    {
+     "sql": "SELECT * FROM Users WHERE name LIKE '%Sarah Kim%'",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q39",
+   "category": "unanswerable",
+   "question": "What's Eva's last name?",
+   "answer": "UNKNOWN: never mentioned",
+   "evidence": [],
+   "system_answer": "I don't know.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The gold answer is UNKNOWN, and the answer correctly says it doesn't know.",
+   "wall": 4.558,
+   "context": [
+    {
+     "sql": "SELECT * FROM Users WHERE name LIKE '%Eva%'",
+     "rows": [
+      {
+       "id": 4,
+       "name": "Eva",
+       "city": null,
+       "phone": "+1 415 555 0199",
+       "birthday": "September 28",
+       "interests": "sushi"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q40",
+   "category": "unanswerable",
+   "question": "How much is my rent in San Francisco?",
+   "answer": "UNKNOWN: never mentioned",
+   "evidence": [],
+   "system_answer": "I don't know.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "Gold is UNKNOWN and the answer says it doesn't know.",
+   "wall": 4.386,
+   "context": [
+    {
+     "sql": "SELECT * FROM Receipts WHERE item LIKE '%rent%' AND location LIKE '%San Francisco%';",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  }
+ ],
+ "db": {
+  "Users": {
+   "columns": [
+    "id",
+    "name",
+    "city",
+    "phone",
+    "birthday",
+    "interests"
+   ],
+   "rows": [
+    [
+     1,
+     "Adam Zvada",
+     "Prague",
+     "+1 415 555 0199",
+     null,
+     "riding big black horses"
+    ],
+    [
+     2,
+     "David Mokos",
+     "Prague",
+     "+1 415 555 0199",
+     "September 2",
+     null
+    ],
+    [
+     3,
+     "Tom Novak",
+     null,
+     "+1 415 555 0199",
+     null,
+     null
+    ],
+    [
+     4,
+     "Eva",
+     null,
+     "+1 415 555 0199",
+     "September 28",
+     "sushi"
+    ],
+    [
+     5,
+     null,
+     "San Francisco",
+     "+1 415 555 0199",
+     null,
+     null
+    ],
+    [
+     6,
+     null,
+     null,
+     "+1 415 555 0199",
+     "October 3",
+     "orchids"
+    ],
+    [
+     7,
+     "David",
+     null,
+     "+1 415 555 0199",
+     null,
+     null
+    ]
+   ]
+  },
+  "Startups": {
+   "columns": [
+    "id",
+    "name",
+    "founder_id",
+    "cofounder_id"
+   ],
+   "rows": [
+    [
+     1,
+     "Nebula",
+     1,
+     2
+    ]
+   ]
+  },
+  "Activities": {
+   "columns": [
+    "id",
+    "description",
+    "location",
+    "date"
+   ],
+   "rows": [
+    [
+     1,
+     "sent my first 6c",
+     "Smíchoff",
+     "2026-08-03"
+    ],
+    [
+     2,
+     "Breakfast",
+     "Café Savoy",
+     null
+    ],
+    [
+     3,
+     "Climbing again at Smíchoff, just a chill session. Tried the 6c+ project, no send yet",
+     "Smíchoff",
+     "2026-08-10"
+    ],
+    [
+     4,
+     "Visit to SF",
+     "San Francisco",
+     "2026-10-10 to 2026-10-20"
+    ],
+    [
+     5,
+     "Climbing at Mission Cliffs, finally sent a 6c+!",
+     "Mission Cliffs",
+     "2026-09-18"
+    ]
+   ]
+  },
+  "Reminders": {
+   "columns": [
+    "id",
+    "description",
+    "due_date"
+   ],
+   "rows": [
+    [
+     1,
+     "Renew passport",
+     "2026-10-01"
+    ]
+   ]
+  },
+  "Allergies": {
+   "columns": [
+    "id",
+    "person_name",
+    "allergy"
+   ],
+   "rows": [
+    [
+     1,
+     "Eva",
+     "peanuts"
+    ]
+   ]
+  },
+  "Emails": {
+   "columns": [
+    "id",
+    "type",
+    "sender",
+    "recipient",
+    "subject",
+    "date",
+    "body"
+   ],
+   "rows": [
+    [
+     1,
+     "email",
+     "sarah@northwind.vc",
+     "adam@nebula.ai",
+     "Founders Dinner next week",
+     "2026-08-08T13:52:00",
+     "Hi Adam, great to connect. Would love to have you at our Founders Dinner on Aug 14 at 19:00, Hotel Josef rooftop. Best, Sarah Kim, Partner @ Northwind Ventures"
+    ]
+   ]
+  },
+  "Events": {
+   "columns": [
+    "id",
+    "description",
+    "location",
+    "date"
+   ],
+   "rows": [
+    [
+     1,
+     "Founders Dinner",
+     "Hotel Josef rooftop",
+     "2026-08-14T19:00:00"
+    ],
+    [
+     2,
+     "Sushi dinner with Eva, 2,140 CZK. so good",
+     "Sasazu",
+     "2026-08-12"
+    ],
+    [
+     3,
+     "Dentist appointment with Dr. Horák",
+     "Not specified",
+     "2026-08-20 09:00"
+    ],
+    [
+     4,
+     "Lunch",
+     "Lokál",
+     "2026-08-22"
+    ],
+    [
+     5,
+     "New chapter!",
+     "San Francisco",
+     "2026-09-01"
+    ],
+    [
+     6,
+     "Nebula board meeting",
+     "1 Mission St, San Francisco",
+     "2026-09-25 16:00:00"
+    ],
+    [
+     7,
+     "Dinner with David, celebrated the term sheet",
+     "Tartine",
+     "2026-09-10"
+    ],
+    [
+     8,
+     "Visit to SF",
+     "San Francisco",
+     "2026-10-10 to 2026-10-20"
+    ]
+   ]
+  },
+  "Cars": {
+   "columns": [
+    "id",
+    "model",
+    "year",
+    "plate"
+   ],
+   "rows": []
+  },
+  "Books": {
+   "columns": [
+    "id",
+    "title",
+    "author"
+   ],
+   "rows": [
+    [
+     1,
+     "Thinking, Fast and Slow",
+     "Daniel Kahneman"
+    ],
+    [
+     2,
+     "The Pragmatic Programmer",
+     null
+    ]
+   ]
+  },
+  "Groceries": {
+   "columns": [
+    "id",
+    "store",
+    "amount"
+   ],
+   "rows": [
+    [
+     1,
+     "Albert",
+     1262
+    ]
+   ]
+  },
+  "Flights": {
+   "columns": [
+    "id",
+    "origin",
+    "destination",
+    "date",
+    "airline",
+    "flight_number",
+    "price"
+   ],
+   "rows": [
+    [
+     1,
+     "Prague",
+     "San Francisco",
+     "2026-09-01",
+     "United",
+     "UA 8843",
+     18450
+    ]
+   ]
+  },
+  "PassportRenewals": {
+   "columns": [
+    "id",
+    "renewal_date"
+   ],
+   "rows": [
+    [
+     1,
+     "2026-08-27"
+    ]
+   ]
+  },
+  "BookReviews": {
+   "columns": [
+    "id",
+    "book_id",
+    "rating",
+    "review"
+   ],
+   "rows": [
+    [
+     1,
+     1,
+     5,
+     "the System 1 vs System 2 stuff is gold"
+    ],
+    [
+     2,
+     2,
+     null,
+     "Started reading"
+    ]
+   ]
+  },
+  "Receipts": {
+   "columns": [
+    "id",
+    "store",
+    "location",
+    "date",
+    "item",
+    "price",
+    "payment_method"
+   ],
+   "rows": [
+    [
+     1,
+     "BLUE BOTTLE COFFEE",
+     "Mint Plaza, San Francisco",
+     "09/03/2026 8:37 AM",
+     "1x Oat Latte",
+     5.5,
+     "VISA ****4421"
+    ],
+    [
+     2,
+     "BLUE BOTTLE COFFEE",
+     "Mint Plaza, San Francisco",
+     "09/03/2026 8:37 AM",
+     "1x Almond Croissant",
+     4.75,
+     "VISA ****4421"
+    ],
+    [
+     3,
+     "Uber",
+     "Mission",
+     "2026-09-05",
+     "Uber ride",
+     23.4,
+     "Unknown"
+    ],
+    [
+     4,
+     "Tartine",
+     "Unknown",
+     "2026-09-10",
+     "Dinner with David",
+     96.8,
+     "Unknown"
+    ]
+   ]
+  },
+  "SportsAchievements": {
+   "columns": [
+    "id",
+    "type",
+    "description",
+    "time"
+   ],
+   "rows": [
+    [
+     1,
+     "Running",
+     "10k Personal Best",
+     "49:58"
+    ]
+   ]
+  },
+  "GymMemberships": {
+   "columns": [
+    "id",
+    "gym_name",
+    "membership_cost",
+    "start_date"
+   ],
+   "rows": [
+    [
+     1,
+     "Mission Cliffs",
+     110.0,
+     "2026-09-07"
+    ]
+   ]
+  },
+  "ContactCards": {
+   "columns": [
+    "id",
+    "name",
+    "company",
+    "role",
+    "email",
+    "phone",
+    "met_at"
+   ],
+   "rows": [
+    [
+     1,
+     "Priya Patel",
+     "Stripe",
+     "Engineering Manager",
+     "priya@stripe.com",
+     "+1 415 555 0142",
+     "YC founder mixer"
+    ]
+   ]
+  },
+  "OfficeLocations": {
+   "columns": [
+    "id",
+    "startup_id",
+    "address"
+   ],
+   "rows": [
+    [
+     1,
+     1,
+     "1 Mission St, San Francisco"
+    ]
+   ]
+  },
+  "FundingEvents": {
+   "columns": [
+    "id",
+    "startup_id",
+    "amount",
+    "investor",
+    "date"
+   ],
+   "rows": [
+    [
+     1,
+     1,
+     3000000,
+     "Northwind Ventures",
+     "2026-09-17"
+    ]
+   ]
+  }
+ }
+}

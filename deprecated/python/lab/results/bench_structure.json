@@ -1,0 +1,4915 @@
+[
+ {
+  "run": "legacy2024__anthropic_claude-sonnet-5__alex_rivera",
+  "tables": 7,
+  "columns": 29,
+  "rows": 35,
+  "empty_tables": [],
+  "fill_rate": 0.517,
+  "fk_checked": 20,
+  "fk_broken": 0,
+  "unresolved_refs": 0,
+  "broken_examples": [],
+  "type_violations": 0,
+  "type_examples": [],
+  "duplicate_people": []
+ },
+ {
+  "run": "legacy2024__anthropic_claude-sonnet-5__life_stream",
+  "tables": 15,
+  "columns": 75,
+  "rows": 36,
+  "empty_tables": [
+   "appointments"
+  ],
+  "fill_rate": 0.717,
+  "fk_checked": 2,
+  "fk_broken": 0,
+  "unresolved_refs": 0,
+  "broken_examples": [],
+  "type_violations": 0,
+  "type_examples": [],
+  "duplicate_people": [],
+  "audit": {
+   "correct": 39,
+   "partial": 9,
+   "missing": 4,
+   "wrong": 1,
+   "n": 53,
+   "fact_score": 0.821,
+   "structured_share": 0.979,
+   "forbid_violations": [
+    "N04"
+   ],
+   "details": {
+    "expect": [
+     {
+      "id": "F01",
+      "status": "wrong",
+      "form": "structured",
+      "where": "users#1.city",
+      "note": "City still 'Prague'; SF only appears in moves#1"
+     },
+     {
+      "id": "F02",
+      "status": "correct",
+      "form": "structured",
+      "where": "moves#1.address",
+      "note": "1450 Valencia St., San Francisco"
+     },
+     {
+      "id": "F03",
+      "status": "partial",
+      "form": "structured",
+      "where": "users#1.us_phone; users#2.phone",
+      "note": "New number stored, but the old Czech number sits in a separate unlabeled users row's phone column"
+     },
+     {
+      "id": "F04",
+      "status": "correct",
+      "form": "structured",
+      "where": "startups#1",
+      "note": ""
+     },
+     {
+      "id": "F05",
+      "status": "correct",
+      "form": "structured",
+      "where": "users#3.phone",
+      "note": ""
+     },
+     {
+      "id": "F06",
+      "status": "correct",
+      "form": "structured",
+      "where": "users#3.us_phone",
+      "note": ""
+     },
+     {
+      "id": "F07",
+      "status": "correct",
+      "form": "structured",
+      "where": "users#3.birthday",
+      "note": ""
+     },
+     {
+      "id": "F08",
+      "status": "partial",
+      "form": "structured",
+      "where": "events#3.organizer_email",
+      "note": "Only stored as the event organizer email, not on David's row"
+     },
+     {
+      "id": "F09",
+      "status": "correct",
+      "form": "structured",
+      "where": "users#4.phone",
+      "note": ""
+     },
+     {
+      "id": "F10",
+      "status": "partial",
+      "form": "structured",
+      "where": "climbing_sessions#1.companion",
+      "note": "Tom appears as climbing companion; no relationship stored"
+     },
+     {
+      "id": "F11",
+      "status": "correct",
+      "form": "structured",
+      "where": "contacts#1.relationship",
+      "note": ""
+     },
+     {
+      "id": "F12",
+      "status": "correct",
+      "form": "structured",
+      "where": "contacts#1.allergy",
+      "note": ""
+     },
+     {
+      "id": "F13",
+      "status": "correct",
+      "form": "structured",
+      "where": "contacts#1.birthday",
+      "note": ""
+     },
+     {
+      "id": "F14",
+      "status": "correct",
+      "form": "structured",
+      "where": "contacts#1.favorite_food",
+      "note": ""
+     },
+     {
+      "id": "F15",
+      "status": "correct",
+      "form": "structured",
+      "where": "visits#1",
+      "note": ""
+     },
+     {
+      "id": "F16",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": ""
+     },
+     {
+      "id": "F17",
+      "status": "correct",
+      "form": "structured",
+      "where": "contacts#4.birthday",
+      "note": ""
+     },
+     {
+      "id": "F18",
+      "status": "correct",
+      "form": "structured",
+      "where": "contacts#4.favorite_flower",
+      "note": ""
+     },
+     {
+      "id": "F19",
+      "status": "correct",
+      "form": "free_text",
+      "where": "events#1.organizer",
+      "note": "'Partner @ Northwind Ventures'; contacts#2 role and company are empty"
+     },
+     {
+      "id": "F20",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#1.organizer_email",
+      "note": "Not on the contacts row"
+     },
+     {
+      "id": "F21",
+      "status": "correct",
+      "form": "structured",
+      "where": "contacts#5",
+      "note": ""
+     },
+     {
+      "id": "F22",
+      "status": "partial",
+      "form": "structured",
+      "where": "contacts#5.email",
+      "note": "Phone missing"
+     },
+     {
+      "id": "F23",
+      "status": "correct",
+      "form": "structured",
+      "where": "contacts#6",
+      "note": ""
+     },
+     {
+      "id": "F24",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#1",
+      "note": ""
+     },
+     {
+      "id": "F25",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#2",
+      "note": ""
+     },
+     {
+      "id": "F26",
+      "status": "partial",
+      "form": "structured",
+      "where": "events#3",
+      "note": "End time 17:30 missing"
+     },
+     {
+      "id": "F27",
+      "status": "correct",
+      "form": "structured",
+      "where": "startups#1.office_address",
+      "note": ""
+     },
+     {
+      "id": "F28",
+      "status": "correct",
+      "form": "structured",
+      "where": "funding_rounds#1",
+      "note": ""
+     },
+     {
+      "id": "F29",
+      "status": "partial",
+      "form": "structured",
+      "where": "funding_rounds#1",
+      "note": "Valuation stored, but the Sep 2 draft is not captured (date is 09-17, status closed)"
+     },
+     {
+      "id": "F30",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#1",
+      "note": ""
+     },
+     {
+      "id": "F31",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#2",
+      "note": ""
+     },
+     {
+      "id": "F32",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#3",
+      "note": ""
+     },
+     {
+      "id": "F33",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#4",
+      "note": ""
+     },
+     {
+      "id": "F34",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#5",
+      "note": "Sep 1 departure and flight number are only in the description"
+     },
+     {
+      "id": "F35",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#6",
+      "note": ""
+     },
+     {
+      "id": "F36",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#7",
+      "note": ""
+     },
+     {
+      "id": "F37",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#9",
+      "note": ""
+     },
+     {
+      "id": "F38",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#8",
+      "note": ""
+     },
+     {
+      "id": "F39",
+      "status": "correct",
+      "form": "structured",
+      "where": "climbing_sessions#1",
+      "note": ""
+     },
+     {
+      "id": "F40",
+      "status": "correct",
+      "form": "structured",
+      "where": "climbing_sessions#2",
+      "note": ""
+     },
+     {
+      "id": "F41",
+      "status": "correct",
+      "form": "structured",
+      "where": "climbing_sessions#3",
+      "note": ""
+     },
+     {
+      "id": "F42",
+      "status": "correct",
+      "form": "structured",
+      "where": "climbing_sessions#4",
+      "note": ""
+     },
+     {
+      "id": "F43",
+      "status": "correct",
+      "form": "structured",
+      "where": "running_sessions#1",
+      "note": ""
+     },
+     {
+      "id": "F44",
+      "status": "partial",
+      "form": "structured",
+      "where": "running_sessions#2",
+      "note": "Personal best not marked"
+     },
+     {
+      "id": "F45",
+      "status": "correct",
+      "form": "structured",
+      "where": "books#1",
+      "note": ""
+     },
+     {
+      "id": "F46",
+      "status": "partial",
+      "form": "structured",
+      "where": "books#2",
+      "note": "Date stored, but no reading status"
+     },
+     {
+      "id": "F47",
+      "status": "correct",
+      "form": "structured",
+      "where": "favorite_restaurants#1",
+      "note": ""
+     },
+     {
+      "id": "F48",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": ""
+     },
+     {
+      "id": "F49",
+      "status": "correct",
+      "form": "structured",
+      "where": "interests#1",
+      "note": ""
+     },
+     {
+      "id": "F50",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": ""
+     },
+     {
+      "id": "F51",
+      "status": "correct",
+      "form": "structured",
+      "where": "cars#1",
+      "note": ""
+     },
+     {
+      "id": "F52",
+      "status": "partial",
+      "form": "structured",
+      "where": "moves#1; users#1.city",
+      "note": "Move date stored; prior Prague residence only implied by the stale city value"
+     },
+     {
+      "id": "F53",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": "Appointments table is empty"
+     }
+    ],
+    "forbid": [
+     {
+      "id": "N01",
+      "violated": false,
+      "evidence": ""
+     },
+     {
+      "id": "N02",
+      "violated": false,
+      "evidence": "appointments table empty"
+     },
+     {
+      "id": "N03",
+      "violated": false,
+      "evidence": ""
+     },
+     {
+      "id": "N04",
+      "violated": true,
+      "evidence": "users#2 holds Adam's old phone as a separate person row besides users#1"
+     },
+     {
+      "id": "N05",
+      "violated": false,
+      "evidence": ""
+     }
+    ]
+   }
+  }
+ },
+ {
+  "run": "legacy2024__openai_gpt-4-turbo__alex_rivera",
+  "tables": 15,
+  "columns": 49,
+  "rows": 36,
+  "empty_tables": [
+   "Testimonials",
+   "SustainableTechLeadership"
+  ],
+  "fill_rate": 0.547,
+  "fk_checked": 18,
+  "fk_broken": 1,
+  "unresolved_refs": 0,
+  "broken_examples": [
+   "Conferences.person_id=2 -> no Person row"
+  ],
+  "type_violations": 0,
+  "type_examples": [],
+  "duplicate_people": []
+ },
+ {
+  "run": "legacy2024__openai_gpt-4-turbo__life_stream",
+  "tables": 19,
+  "columns": 65,
+  "rows": 40,
+  "empty_tables": [
+   "Cars"
+  ],
+  "fill_rate": 0.885,
+  "fk_checked": 4,
+  "fk_broken": 0,
+  "unresolved_refs": 0,
+  "broken_examples": [],
+  "type_violations": 0,
+  "type_examples": [],
+  "duplicate_people": [],
+  "audit": {
+   "correct": 22,
+   "partial": 14,
+   "missing": 12,
+   "wrong": 5,
+   "n": 53,
+   "fact_score": 0.547,
+   "structured_share": 0.889,
+   "forbid_violations": [
+    "N02",
+    "N04"
+   ],
+   "details": {
+    "expect": [
+     {
+      "id": "F01",
+      "status": "wrong",
+      "form": "structured",
+      "where": "Users#1.city",
+      "note": "City still Prague; SF only in nameless Users#5"
+     },
+     {
+      "id": "F02",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": ""
+     },
+     {
+      "id": "F03",
+      "status": "correct",
+      "form": "structured",
+      "where": "Users#1.phone",
+      "note": "Old Czech number not stored"
+     },
+     {
+      "id": "F04",
+      "status": "correct",
+      "form": "structured",
+      "where": "Startups#1",
+      "note": ""
+     },
+     {
+      "id": "F05",
+      "status": "wrong",
+      "form": "structured",
+      "where": "Users#2.phone",
+      "note": "Phone column holds Adam's number"
+     },
+     {
+      "id": "F06",
+      "status": "wrong",
+      "form": "structured",
+      "where": "Users#2.phone",
+      "note": "Phone column holds Adam's number"
+     },
+     {
+      "id": "F07",
+      "status": "correct",
+      "form": "structured",
+      "where": "Users#2.birthday",
+      "note": ""
+     },
+     {
+      "id": "F08",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": ""
+     },
+     {
+      "id": "F09",
+      "status": "wrong",
+      "form": "structured",
+      "where": "Users#3.phone",
+      "note": "Holds Adam's number"
+     },
+     {
+      "id": "F10",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": ""
+     },
+     {
+      "id": "F11",
+      "status": "missing",
+      "form": "none",
+      "where": "Users#4",
+      "note": "No relationship stored"
+     },
+     {
+      "id": "F12",
+      "status": "correct",
+      "form": "structured",
+      "where": "Allergies#1",
+      "note": ""
+     },
+     {
+      "id": "F13",
+      "status": "correct",
+      "form": "structured",
+      "where": "Users#4.birthday",
+      "note": ""
+     },
+     {
+      "id": "F14",
+      "status": "correct",
+      "form": "structured",
+      "where": "Users#4.interests",
+      "note": ""
+     },
+     {
+      "id": "F15",
+      "status": "partial",
+      "form": "structured",
+      "where": "Events#8, Activities#4",
+      "note": "Dates present but not linked to Eva"
+     },
+     {
+      "id": "F16",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": ""
+     },
+     {
+      "id": "F17",
+      "status": "partial",
+      "form": "structured",
+      "where": "Users#6.birthday",
+      "note": "Nameless row, not identified as mom"
+     },
+     {
+      "id": "F18",
+      "status": "partial",
+      "form": "structured",
+      "where": "Users#6.interests",
+      "note": "Nameless row"
+     },
+     {
+      "id": "F19",
+      "status": "correct",
+      "form": "free_text",
+      "where": "Emails#1.body",
+      "note": ""
+     },
+     {
+      "id": "F20",
+      "status": "correct",
+      "form": "structured",
+      "where": "Emails#1.sender",
+      "note": ""
+     },
+     {
+      "id": "F21",
+      "status": "correct",
+      "form": "structured",
+      "where": "ContactCards#1",
+      "note": ""
+     },
+     {
+      "id": "F22",
+      "status": "correct",
+      "form": "structured",
+      "where": "ContactCards#1",
+      "note": ""
+     },
+     {
+      "id": "F23",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": ""
+     },
+     {
+      "id": "F24",
+      "status": "correct",
+      "form": "structured",
+      "where": "Events#1; Emails#1",
+      "note": "Host only in email"
+     },
+     {
+      "id": "F25",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": ""
+     },
+     {
+      "id": "F26",
+      "status": "partial",
+      "form": "structured",
+      "where": "Events#6",
+      "note": "No end time"
+     },
+     {
+      "id": "F27",
+      "status": "correct",
+      "form": "structured",
+      "where": "OfficeLocations#1",
+      "note": ""
+     },
+     {
+      "id": "F28",
+      "status": "correct",
+      "form": "structured",
+      "where": "FundingEvents#1",
+      "note": ""
+     },
+     {
+      "id": "F29",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": ""
+     },
+     {
+      "id": "F30",
+      "status": "partial",
+      "form": "structured",
+      "where": "Activities#2",
+      "note": "No amount or date"
+     },
+     {
+      "id": "F31",
+      "status": "correct",
+      "form": "free_text",
+      "where": "Events#2.description",
+      "note": "Amount only in description"
+     },
+     {
+      "id": "F32",
+      "status": "partial",
+      "form": "structured",
+      "where": "Groceries#1",
+      "note": "No date"
+     },
+     {
+      "id": "F33",
+      "status": "partial",
+      "form": "structured",
+      "where": "Events#4",
+      "note": "No amount"
+     },
+     {
+      "id": "F34",
+      "status": "correct",
+      "form": "structured",
+      "where": "Flights#1",
+      "note": ""
+     },
+     {
+      "id": "F35",
+      "status": "correct",
+      "form": "structured",
+      "where": "Receipts#1, Receipts#2",
+      "note": "Split across items"
+     },
+     {
+      "id": "F36",
+      "status": "correct",
+      "form": "structured",
+      "where": "Receipts#3",
+      "note": ""
+     },
+     {
+      "id": "F37",
+      "status": "correct",
+      "form": "structured",
+      "where": "Receipts#4",
+      "note": ""
+     },
+     {
+      "id": "F38",
+      "status": "correct",
+      "form": "structured",
+      "where": "GymMemberships#1",
+      "note": ""
+     },
+     {
+      "id": "F39",
+      "status": "partial",
+      "form": "structured",
+      "where": "Activities#1",
+      "note": "Tom not mentioned"
+     },
+     {
+      "id": "F40",
+      "status": "partial",
+      "form": "structured",
+      "where": "Activities#3",
+      "note": "Merged with Aug 17 content"
+     },
+     {
+      "id": "F41",
+      "status": "wrong",
+      "form": "free_text",
+      "where": "Activities#3",
+      "note": "Attributed to Aug 10; Aug 17 session missing"
+     },
+     {
+      "id": "F42",
+      "status": "correct",
+      "form": "structured",
+      "where": "Activities#5",
+      "note": ""
+     },
+     {
+      "id": "F43",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": ""
+     },
+     {
+      "id": "F44",
+      "status": "partial",
+      "form": "structured",
+      "where": "SportsAchievements#1",
+      "note": "No date"
+     },
+     {
+      "id": "F45",
+      "status": "correct",
+      "form": "structured",
+      "where": "Books#1, BookReviews#1",
+      "note": ""
+     },
+     {
+      "id": "F46",
+      "status": "partial",
+      "form": "free_text",
+      "where": "Books#2, BookReviews#2",
+      "note": "No start date"
+     },
+     {
+      "id": "F47",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": ""
+     },
+     {
+      "id": "F48",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": ""
+     },
+     {
+      "id": "F49",
+      "status": "correct",
+      "form": "structured",
+      "where": "Users#1.interests",
+      "note": ""
+     },
+     {
+      "id": "F50",
+      "status": "partial",
+      "form": "structured",
+      "where": "PassportRenewals#1; Reminders#1",
+      "note": "Reminder still appears open"
+     },
+     {
+      "id": "F51",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": "Cars table empty"
+     },
+     {
+      "id": "F52",
+      "status": "partial",
+      "form": "structured",
+      "where": "Flights#1; Events#5",
+      "note": "Implied only"
+     },
+     {
+      "id": "F53",
+      "status": "partial",
+      "form": "free_text",
+      "where": "Events#3.description",
+      "note": "Only as appointment text"
+     }
+    ],
+    "forbid": [
+     {
+      "id": "N01",
+      "violated": false,
+      "evidence": ""
+     },
+     {
+      "id": "N02",
+      "violated": true,
+      "evidence": "Events#3 dentist appointment 2026-08-20 not cancelled"
+     },
+     {
+      "id": "N03",
+      "violated": false,
+      "evidence": ""
+     },
+     {
+      "id": "N04",
+      "violated": true,
+      "evidence": "Users#2 David Mokos and Users#7 David"
+     },
+     {
+      "id": "N05",
+      "violated": false,
+      "evidence": "Placeholders like 'Not specified'/'Unknown' but no fabricated values evident"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "run": "legacy2024__openai_gpt-6-luna__alex_rivera",
+  "tables": 12,
+  "columns": 45,
+  "rows": 64,
+  "empty_tables": [],
+  "fill_rate": 0.656,
+  "fk_checked": 15,
+  "fk_broken": 1,
+  "unresolved_refs": 0,
+  "broken_examples": [
+   "education_courses.education_id=5 -> no education row"
+  ],
+  "type_violations": 0,
+  "type_examples": [],
+  "duplicate_people": [
+   "people#1 'alex rivera' ~ people#2 'alex'",
+   "people#1 'alex rivera' ~ people#3 'alex'",
+   "people#1 'alex rivera' ~ people#4 'alex'",
+   "people#1 'alex rivera' ~ people#5 'alex'",
+   "people#2 'alex' ~ people#3 'alex'",
+   "people#2 'alex' ~ people#4 'alex'",
+   "people#2 'alex' ~ people#5 'alex'",
+   "people#3 'alex' ~ people#4 'alex'",
+   "people#3 'alex' ~ people#5 'alex'",
+   "people#4 'alex' ~ people#5 'alex'"
+  ]
+ },
+ {
+  "run": "legacy2024__openai_gpt-6-luna__life_stream",
+  "tables": 17,
+  "columns": 92,
+  "rows": 41,
+  "empty_tables": [],
+  "fill_rate": 0.544,
+  "fk_checked": 5,
+  "fk_broken": 0,
+  "unresolved_refs": 0,
+  "broken_examples": [],
+  "type_violations": 0,
+  "type_examples": [],
+  "duplicate_people": [
+   "people#1 'adam zvada' ~ people#10 'adam'",
+   "people#2 'david mokos' ~ people#3 'david'"
+  ],
+  "audit": {
+   "correct": 28,
+   "partial": 14,
+   "missing": 7,
+   "wrong": 4,
+   "n": 53,
+   "fact_score": 0.66,
+   "structured_share": 0.952,
+   "forbid_violations": [
+    "N01",
+    "N04"
+   ],
+   "details": {
+    "expect": [
+     {
+      "id": "F01",
+      "status": "wrong",
+      "form": "structured",
+      "where": "people#1.city",
+      "note": "City still Prague; SF only in housing#1"
+     },
+     {
+      "id": "F02",
+      "status": "correct",
+      "form": "structured",
+      "where": "housing#1.address",
+      "note": ""
+     },
+     {
+      "id": "F03",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": "Adam phone null"
+     },
+     {
+      "id": "F04",
+      "status": "correct",
+      "form": "structured",
+      "where": "startups#1, startup_founders",
+      "note": ""
+     },
+     {
+      "id": "F05",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#2.phone_number",
+      "note": "733544390"
+     },
+     {
+      "id": "F06",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#2.phone_number",
+      "note": ""
+     },
+     {
+      "id": "F07",
+      "status": "partial",
+      "form": "structured",
+      "where": "people#3.birthday",
+      "note": "Stored on duplicate 'David' row"
+     },
+     {
+      "id": "F08",
+      "status": "partial",
+      "form": "structured",
+      "where": "events#1.organizer_email",
+      "note": "Not on people#2"
+     },
+     {
+      "id": "F09",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#4.phone_number",
+      "note": ""
+     },
+     {
+      "id": "F10",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#4.relationship",
+      "note": ""
+     },
+     {
+      "id": "F11",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#5.relationship",
+      "note": ""
+     },
+     {
+      "id": "F12",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#5.allergies",
+      "note": ""
+     },
+     {
+      "id": "F13",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#5.birthday",
+      "note": ""
+     },
+     {
+      "id": "F14",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": ""
+     },
+     {
+      "id": "F15",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#2",
+      "note": ""
+     },
+     {
+      "id": "F16",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": ""
+     },
+     {
+      "id": "F17",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": ""
+     },
+     {
+      "id": "F18",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": ""
+     },
+     {
+      "id": "F19",
+      "status": "partial",
+      "form": "free_text",
+      "where": "reminders#2.reminder_text",
+      "note": "people#6 role/company null"
+     },
+     {
+      "id": "F20",
+      "status": "partial",
+      "form": "structured",
+      "where": "term_sheet_emails#1.sender_email",
+      "note": "Not on people#6"
+     },
+     {
+      "id": "F21",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#11",
+      "note": ""
+     },
+     {
+      "id": "F22",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#11",
+      "note": ""
+     },
+     {
+      "id": "F23",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#12",
+      "note": ""
+     },
+     {
+      "id": "F24",
+      "status": "correct",
+      "form": "structured",
+      "where": "reminders#2",
+      "note": "Location/host in text"
+     },
+     {
+      "id": "F25",
+      "status": "wrong",
+      "form": "structured",
+      "where": "reminders#4.due_date",
+      "note": "Still Sep 23 10:00"
+     },
+     {
+      "id": "F26",
+      "status": "wrong",
+      "form": "structured",
+      "where": "events#1",
+      "note": "Stored Sep 24 14:00-15:30"
+     },
+     {
+      "id": "F27",
+      "status": "correct",
+      "form": "structured",
+      "where": "startups#1.office_address",
+      "note": ""
+     },
+     {
+      "id": "F28",
+      "status": "correct",
+      "form": "structured",
+      "where": "term_sheet_emails#1",
+      "note": ""
+     },
+     {
+      "id": "F29",
+      "status": "correct",
+      "form": "structured",
+      "where": "term_sheet_emails#1",
+      "note": ""
+     },
+     {
+      "id": "F30",
+      "status": "partial",
+      "form": "structured",
+      "where": "meals#1",
+      "note": "No date"
+     },
+     {
+      "id": "F31",
+      "status": "partial",
+      "form": "structured",
+      "where": "meals#2",
+      "note": "No date, no Eva"
+     },
+     {
+      "id": "F32",
+      "status": "partial",
+      "form": "structured",
+      "where": "meals#3",
+      "note": "No date"
+     },
+     {
+      "id": "F33",
+      "status": "partial",
+      "form": "structured",
+      "where": "meals#4",
+      "note": "No date"
+     },
+     {
+      "id": "F34",
+      "status": "correct",
+      "form": "structured",
+      "where": "flights#1",
+      "note": ""
+     },
+     {
+      "id": "F35",
+      "status": "correct",
+      "form": "structured",
+      "where": "meals#5",
+      "note": ""
+     },
+     {
+      "id": "F36",
+      "status": "partial",
+      "form": "structured",
+      "where": "rides#1",
+      "note": "No date"
+     },
+     {
+      "id": "F37",
+      "status": "partial",
+      "form": "structured",
+      "where": "meals#6",
+      "note": "No date"
+     },
+     {
+      "id": "F38",
+      "status": "correct",
+      "form": "structured",
+      "where": "gym_memberships#1",
+      "note": ""
+     },
+     {
+      "id": "F39",
+      "status": "correct",
+      "form": "structured",
+      "where": "climbing_sessions#1",
+      "note": ""
+     },
+     {
+      "id": "F40",
+      "status": "correct",
+      "form": "structured",
+      "where": "climbing_sessions#2",
+      "note": ""
+     },
+     {
+      "id": "F41",
+      "status": "wrong",
+      "form": "structured",
+      "where": "climbing_sessions#3",
+      "note": "Records a 6c+ send"
+     },
+     {
+      "id": "F42",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": ""
+     },
+     {
+      "id": "F43",
+      "status": "correct",
+      "form": "structured",
+      "where": "running_activities#1",
+      "note": ""
+     },
+     {
+      "id": "F44",
+      "status": "correct",
+      "form": "structured",
+      "where": "running_activities#2",
+      "note": ""
+     },
+     {
+      "id": "F45",
+      "status": "correct",
+      "form": "structured",
+      "where": "book_club_picks#1",
+      "note": ""
+     },
+     {
+      "id": "F46",
+      "status": "partial",
+      "form": "structured",
+      "where": "book_club_picks#2",
+      "note": "No start date"
+     },
+     {
+      "id": "F47",
+      "status": "correct",
+      "form": "structured",
+      "where": "favorite_restaurants#1",
+      "note": ""
+     },
+     {
+      "id": "F48",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": ""
+     },
+     {
+      "id": "F49",
+      "status": "partial",
+      "form": "structured",
+      "where": "people#10.horse_riding_preferences",
+      "note": "On duplicate Adam row"
+     },
+     {
+      "id": "F50",
+      "status": "partial",
+      "form": "structured",
+      "where": "passport_renewals#1",
+      "note": "No date; reminders#1 still open"
+     },
+     {
+      "id": "F51",
+      "status": "correct",
+      "form": "structured",
+      "where": "vehicles#1",
+      "note": ""
+     },
+     {
+      "id": "F52",
+      "status": "partial",
+      "form": "structured",
+      "where": "housing#1, flights#1",
+      "note": "Prague past residence not explicit"
+     },
+     {
+      "id": "F53",
+      "status": "correct",
+      "form": "free_text",
+      "where": "reminders#3.reminder_text",
+      "note": ""
+     }
+    ],
+    "forbid": [
+     {
+      "id": "N01",
+      "violated": true,
+      "evidence": "people#9 mentions Jan Dvořák"
+     },
+     {
+      "id": "N02",
+      "violated": false,
+      "evidence": "reminders#3 marked CANCELLED"
+     },
+     {
+      "id": "N03",
+      "violated": false,
+      "evidence": ""
+     },
+     {
+      "id": "N04",
+      "violated": true,
+      "evidence": "people#2/#3 David; people#1/#10 Adam"
+     },
+     {
+      "id": "N05",
+      "violated": false,
+      "evidence": ""
+     }
+    ]
+   }
+  }
+ },
+ {
+  "run": "v21__anthropic_claude-sonnet-5__alex_rivera",
+  "tables": 10,
+  "columns": 36,
+  "rows": 47,
+  "empty_tables": [],
+  "fill_rate": 0.864,
+  "fk_checked": 41,
+  "fk_broken": 0,
+  "unresolved_refs": 0,
+  "broken_examples": [],
+  "type_violations": 0,
+  "type_examples": [],
+  "duplicate_people": []
+ },
+ {
+  "run": "v21__anthropic_claude-sonnet-5__life_stream",
+  "tables": 15,
+  "columns": 74,
+  "rows": 62,
+  "empty_tables": [],
+  "fill_rate": 0.891,
+  "fk_checked": 51,
+  "fk_broken": 0,
+  "unresolved_refs": 1,
+  "broken_examples": [
+   "funding_rounds.organization_id='@nebula' (unresolved reference)"
+  ],
+  "type_violations": 0,
+  "type_examples": [],
+  "duplicate_people": [],
+  "audit": {
+   "correct": 45,
+   "partial": 8,
+   "missing": 0,
+   "wrong": 0,
+   "n": 53,
+   "fact_score": 0.925,
+   "structured_share": 0.925,
+   "forbid_violations": [
+    "N01"
+   ],
+   "details": {
+    "expect": [
+     {
+      "id": "F01",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#1 city",
+      "note": ""
+     },
+     {
+      "id": "F02",
+      "status": "correct",
+      "form": "structured",
+      "where": "places#2",
+      "note": "stored as apartment place"
+     },
+     {
+      "id": "F03",
+      "status": "correct",
+      "form": "structured",
+      "where": "contact_methods#1",
+      "note": "old number absent"
+     },
+     {
+      "id": "F04",
+      "status": "correct",
+      "form": "structured",
+      "where": "organizations#1; organization_members#1,#2",
+      "note": ""
+     },
+     {
+      "id": "F05",
+      "status": "correct",
+      "form": "structured",
+      "where": "contact_methods#2",
+      "note": ""
+     },
+     {
+      "id": "F06",
+      "status": "correct",
+      "form": "structured",
+      "where": "contact_methods#5",
+      "note": ""
+     },
+     {
+      "id": "F07",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#2 birthday",
+      "note": ""
+     },
+     {
+      "id": "F08",
+      "status": "correct",
+      "form": "free_text",
+      "where": "events#3 description",
+      "note": "not in contact_methods"
+     },
+     {
+      "id": "F09",
+      "status": "correct",
+      "form": "structured",
+      "where": "contact_methods#3",
+      "note": ""
+     },
+     {
+      "id": "F10",
+      "status": "partial",
+      "form": "structured",
+      "where": "interests#2; workouts#1,#4 companions",
+      "note": "relationship 'climbing buddy' not stated"
+     },
+     {
+      "id": "F11",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#4 relationship_to_adam",
+      "note": ""
+     },
+     {
+      "id": "F12",
+      "status": "correct",
+      "form": "structured",
+      "where": "allergies#1",
+      "note": ""
+     },
+     {
+      "id": "F13",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#4 birthday",
+      "note": ""
+     },
+     {
+      "id": "F14",
+      "status": "correct",
+      "form": "structured",
+      "where": "interests#3",
+      "note": ""
+     },
+     {
+      "id": "F15",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#4",
+      "note": "end date only in description"
+     },
+     {
+      "id": "F16",
+      "status": "correct",
+      "form": "free_text",
+      "where": "tasks#5 title",
+      "note": ""
+     },
+     {
+      "id": "F17",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#7 birthday",
+      "note": ""
+     },
+     {
+      "id": "F18",
+      "status": "correct",
+      "form": "structured",
+      "where": "interests#4",
+      "note": ""
+     },
+     {
+      "id": "F19",
+      "status": "correct",
+      "form": "structured",
+      "where": "organization_members#3",
+      "note": ""
+     },
+     {
+      "id": "F20",
+      "status": "correct",
+      "form": "structured",
+      "where": "contact_methods#4",
+      "note": ""
+     },
+     {
+      "id": "F21",
+      "status": "correct",
+      "form": "structured",
+      "where": "organization_members#5; people#8",
+      "note": ""
+     },
+     {
+      "id": "F22",
+      "status": "correct",
+      "form": "structured",
+      "where": "contact_methods#6,#7",
+      "note": ""
+     },
+     {
+      "id": "F23",
+      "status": "correct",
+      "form": "structured",
+      "where": "organization_members#6; people#9",
+      "note": ""
+     },
+     {
+      "id": "F24",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#1",
+      "note": ""
+     },
+     {
+      "id": "F25",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#2",
+      "note": ""
+     },
+     {
+      "id": "F26",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#3",
+      "note": "end time in description"
+     },
+     {
+      "id": "F27",
+      "status": "correct",
+      "form": "structured",
+      "where": "organizations#1 address",
+      "note": ""
+     },
+     {
+      "id": "F28",
+      "status": "partial",
+      "form": "structured",
+      "where": "funding_rounds#1",
+      "note": "status closed but lead investor not explicit; merged with draft; org_id '@nebula' invalid"
+     },
+     {
+      "id": "F29",
+      "status": "partial",
+      "form": "structured",
+      "where": "funding_rounds#1",
+      "note": "values right but status shows closed rather than draft"
+     },
+     {
+      "id": "F30",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#1",
+      "note": ""
+     },
+     {
+      "id": "F31",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#2",
+      "note": ""
+     },
+     {
+      "id": "F32",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#3",
+      "note": ""
+     },
+     {
+      "id": "F33",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#4",
+      "note": ""
+     },
+     {
+      "id": "F34",
+      "status": "correct",
+      "form": "structured",
+      "where": "flights#1",
+      "note": ""
+     },
+     {
+      "id": "F35",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#6",
+      "note": ""
+     },
+     {
+      "id": "F36",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#7",
+      "note": ""
+     },
+     {
+      "id": "F37",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#9",
+      "note": ""
+     },
+     {
+      "id": "F38",
+      "status": "partial",
+      "form": "structured",
+      "where": "places#3; expenses#8",
+      "note": "monthly nature not recorded"
+     },
+     {
+      "id": "F39",
+      "status": "correct",
+      "form": "structured",
+      "where": "workouts#1",
+      "note": ""
+     },
+     {
+      "id": "F40",
+      "status": "correct",
+      "form": "structured",
+      "where": "workouts#3",
+      "note": ""
+     },
+     {
+      "id": "F41",
+      "status": "correct",
+      "form": "structured",
+      "where": "workouts#4",
+      "note": ""
+     },
+     {
+      "id": "F42",
+      "status": "correct",
+      "form": "structured",
+      "where": "workouts#6",
+      "note": ""
+     },
+     {
+      "id": "F43",
+      "status": "correct",
+      "form": "structured",
+      "where": "workouts#2",
+      "note": ""
+     },
+     {
+      "id": "F44",
+      "status": "correct",
+      "form": "structured",
+      "where": "workouts#5",
+      "note": ""
+     },
+     {
+      "id": "F45",
+      "status": "correct",
+      "form": "structured",
+      "where": "books#1",
+      "note": "rating in context"
+     },
+     {
+      "id": "F46",
+      "status": "partial",
+      "form": "structured",
+      "where": "books#2",
+      "note": "start date missing"
+     },
+     {
+      "id": "F47",
+      "status": "correct",
+      "form": "structured",
+      "where": "places#1",
+      "note": ""
+     },
+     {
+      "id": "F48",
+      "status": "correct",
+      "form": "structured",
+      "where": "interests#1",
+      "note": ""
+     },
+     {
+      "id": "F49",
+      "status": "correct",
+      "form": "structured",
+      "where": "interests#5",
+      "note": ""
+     },
+     {
+      "id": "F50",
+      "status": "partial",
+      "form": "structured",
+      "where": "tasks#1",
+      "note": "done, but renewal date Aug 27 not stored"
+     },
+     {
+      "id": "F51",
+      "status": "correct",
+      "form": "structured",
+      "where": "vehicles#1",
+      "note": ""
+     },
+     {
+      "id": "F52",
+      "status": "partial",
+      "form": "free_text",
+      "where": "tasks#4; flights#1",
+      "note": "prior Prague residence implied only; move task still pending"
+     },
+     {
+      "id": "F53",
+      "status": "partial",
+      "form": "free_text",
+      "where": "tasks#2 title",
+      "note": "dentist relationship not explicit"
+     }
+    ],
+    "forbid": [
+     {
+      "id": "N01",
+      "violated": true,
+      "evidence": "organizations#3 Rohlik left orphaned (people#6 and organization_members#4 deleted), likely Jan's employer"
+     },
+     {
+      "id": "N02",
+      "violated": false,
+      "evidence": "tasks#2 status cancelled"
+     },
+     {
+      "id": "N03",
+      "violated": false,
+      "evidence": ""
+     },
+     {
+      "id": "N04",
+      "violated": false,
+      "evidence": ""
+     },
+     {
+      "id": "N05",
+      "violated": false,
+      "evidence": ""
+     }
+    ]
+   }
+  }
+ },
+ {
+  "run": "v21__openai_gpt-6-luna__alex_rivera",
+  "tables": 13,
+  "columns": 52,
+  "rows": 63,
+  "empty_tables": [],
+  "fill_rate": 0.786,
+  "fk_checked": 67,
+  "fk_broken": 0,
+  "unresolved_refs": 0,
+  "broken_examples": [],
+  "type_violations": 0,
+  "type_examples": [],
+  "duplicate_people": []
+ },
+ {
+  "run": "v21__openai_gpt-6-luna__life_stream",
+  "tables": 20,
+  "columns": 100,
+  "rows": 79,
+  "empty_tables": [],
+  "fill_rate": 0.779,
+  "fk_checked": 95,
+  "fk_broken": 0,
+  "unresolved_refs": 0,
+  "broken_examples": [],
+  "type_violations": 0,
+  "type_examples": [],
+  "duplicate_people": [],
+  "audit": {
+   "correct": 46,
+   "partial": 6,
+   "missing": 1,
+   "wrong": 0,
+   "n": 53,
+   "fact_score": 0.925,
+   "structured_share": 0.962,
+   "forbid_violations": [],
+   "details": {
+    "expect": [
+     {
+      "id": "F01",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#1; residences#1 -> places#9 (located in places#8 San Francisco)",
+      "note": "Current residence is in SF; no Prague residence is stored."
+     },
+     {
+      "id": "F02",
+      "status": "correct",
+      "form": "structured",
+      "where": "places#9 name, located_in_place_id=8",
+      "note": ""
+     },
+     {
+      "id": "F03",
+      "status": "correct",
+      "form": "structured",
+      "where": "contact_methods#1 value",
+      "note": "Old Czech number is absent."
+     },
+     {
+      "id": "F04",
+      "status": "correct",
+      "form": "structured",
+      "where": "organization_founders#1, organization_founders#2; organizations#1",
+      "note": ""
+     },
+     {
+      "id": "F05",
+      "status": "correct",
+      "form": "structured",
+      "where": "contact_methods#2 value",
+      "note": "Stored without the +420 prefix."
+     },
+     {
+      "id": "F06",
+      "status": "correct",
+      "form": "structured",
+      "where": "contact_methods#5 value",
+      "note": ""
+     },
+     {
+      "id": "F07",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#2 birthday",
+      "note": ""
+     },
+     {
+      "id": "F08",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": "No email is stored for David."
+     },
+     {
+      "id": "F09",
+      "status": "correct",
+      "form": "structured",
+      "where": "contact_methods#3 value",
+      "note": ""
+     },
+     {
+      "id": "F10",
+      "status": "correct",
+      "form": "structured",
+      "where": "relationships#1",
+      "note": ""
+     },
+     {
+      "id": "F11",
+      "status": "correct",
+      "form": "structured",
+      "where": "relationships#2",
+      "note": ""
+     },
+     {
+      "id": "F12",
+      "status": "correct",
+      "form": "structured",
+      "where": "allergies#1",
+      "note": ""
+     },
+     {
+      "id": "F13",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#4 birthday",
+      "note": ""
+     },
+     {
+      "id": "F14",
+      "status": "correct",
+      "form": "structured",
+      "where": "interests#2",
+      "note": ""
+     },
+     {
+      "id": "F15",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#6 date, end_date, city",
+      "note": ""
+     },
+     {
+      "id": "F16",
+      "status": "correct",
+      "form": "structured",
+      "where": "tasks#3",
+      "note": ""
+     },
+     {
+      "id": "F17",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#8 birthday; relationships#3",
+      "note": ""
+     },
+     {
+      "id": "F18",
+      "status": "correct",
+      "form": "structured",
+      "where": "interests#3",
+      "note": ""
+     },
+     {
+      "id": "F19",
+      "status": "partial",
+      "form": "free_text",
+      "where": "emails#1 body",
+      "note": "'Partner @ Northwind Ventures' appears only in the email body; no employment role row exists."
+     },
+     {
+      "id": "F20",
+      "status": "correct",
+      "form": "structured",
+      "where": "contact_methods#4",
+      "note": ""
+     },
+     {
+      "id": "F21",
+      "status": "correct",
+      "form": "structured",
+      "where": "employment_roles#2; events#5",
+      "note": "The mixer link is stored only in the event description."
+     },
+     {
+      "id": "F22",
+      "status": "correct",
+      "form": "structured",
+      "where": "contact_methods#6, contact_methods#7",
+      "note": ""
+     },
+     {
+      "id": "F23",
+      "status": "partial",
+      "form": "structured",
+      "where": "employment_roles#3",
+      "note": "The colleague-of-Priya relationship is not stored."
+     },
+     {
+      "id": "F24",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#1",
+      "note": ""
+     },
+     {
+      "id": "F25",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#3 date, time, address",
+      "note": ""
+     },
+     {
+      "id": "F26",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#4",
+      "note": ""
+     },
+     {
+      "id": "F27",
+      "status": "correct",
+      "form": "structured",
+      "where": "organizations#1 office_place_id=11",
+      "note": ""
+     },
+     {
+      "id": "F28",
+      "status": "correct",
+      "form": "structured",
+      "where": "funding_rounds#1",
+      "note": ""
+     },
+     {
+      "id": "F29",
+      "status": "correct",
+      "form": "free_text",
+      "where": "emails#2 body",
+      "note": ""
+     },
+     {
+      "id": "F30",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#1",
+      "note": ""
+     },
+     {
+      "id": "F31",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#2",
+      "note": ""
+     },
+     {
+      "id": "F32",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#3",
+      "note": ""
+     },
+     {
+      "id": "F33",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#4",
+      "note": ""
+     },
+     {
+      "id": "F34",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#5",
+      "note": ""
+     },
+     {
+      "id": "F35",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#6",
+      "note": ""
+     },
+     {
+      "id": "F36",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#7",
+      "note": ""
+     },
+     {
+      "id": "F37",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#8",
+      "note": ""
+     },
+     {
+      "id": "F38",
+      "status": "correct",
+      "form": "structured",
+      "where": "recurring_expenses#1",
+      "note": ""
+     },
+     {
+      "id": "F39",
+      "status": "correct",
+      "form": "structured",
+      "where": "workouts#1",
+      "note": ""
+     },
+     {
+      "id": "F40",
+      "status": "correct",
+      "form": "structured",
+      "where": "workouts#3",
+      "note": ""
+     },
+     {
+      "id": "F41",
+      "status": "correct",
+      "form": "structured",
+      "where": "workouts#4",
+      "note": ""
+     },
+     {
+      "id": "F42",
+      "status": "correct",
+      "form": "structured",
+      "where": "workouts#6",
+      "note": ""
+     },
+     {
+      "id": "F43",
+      "status": "correct",
+      "form": "structured",
+      "where": "workouts#2",
+      "note": ""
+     },
+     {
+      "id": "F44",
+      "status": "correct",
+      "form": "structured",
+      "where": "workouts#5",
+      "note": ""
+     },
+     {
+      "id": "F45",
+      "status": "correct",
+      "form": "structured",
+      "where": "books#1",
+      "note": ""
+     },
+     {
+      "id": "F46",
+      "status": "partial",
+      "form": "structured",
+      "where": "books#2",
+      "note": "Sep 14 start date is missing."
+     },
+     {
+      "id": "F47",
+      "status": "correct",
+      "form": "structured",
+      "where": "favorite_places#1",
+      "note": ""
+     },
+     {
+      "id": "F48",
+      "status": "correct",
+      "form": "structured",
+      "where": "interests#1",
+      "note": ""
+     },
+     {
+      "id": "F49",
+      "status": "correct",
+      "form": "structured",
+      "where": "interests#4",
+      "note": ""
+     },
+     {
+      "id": "F50",
+      "status": "partial",
+      "form": "structured",
+      "where": "tasks#1 status",
+      "note": "Marked done, but the Aug 27 renewal date is not stored."
+     },
+     {
+      "id": "F51",
+      "status": "correct",
+      "form": "structured",
+      "where": "vehicles#1",
+      "note": ""
+     },
+     {
+      "id": "F52",
+      "status": "partial",
+      "form": "structured",
+      "where": "residences#1 move_date",
+      "note": "The move date is stored, but the earlier Prague residence is not."
+     },
+     {
+      "id": "F53",
+      "status": "partial",
+      "form": "structured",
+      "where": "people#6; events#2 host",
+      "note": "No dentist relationship row exists."
+     }
+    ],
+    "forbid": [
+     {
+      "id": "N01",
+      "violated": false,
+      "evidence": "No Jan Dvořák rows remain (people#7 and employment_roles#1 are absent). organizations#3 Rohlik is unlinked; it may be a leftover of his employer, but it holds no information about him."
+     },
+     {
+      "id": "N02",
+      "violated": false,
+      "evidence": "events#2 status is cancelled."
+     },
+     {
+      "id": "N03",
+      "violated": false,
+      "evidence": "No chit-chat rows found."
+     },
+     {
+      "id": "N04",
+      "violated": false,
+      "evidence": "No duplicate people found."
+     },
+     {
+      "id": "N05",
+      "violated": false,
+      "evidence": "No clearly invented values found."
+     }
+    ]
+   }
+  }
+ },
+ {
+  "run": "v21jev__anthropic_claude-sonnet-5__alex_rivera",
+  "tables": 12,
+  "columns": 44,
+  "rows": 56,
+  "empty_tables": [],
+  "fill_rate": 0.795,
+  "fk_checked": 52,
+  "fk_broken": 0,
+  "unresolved_refs": 0,
+  "broken_examples": [],
+  "type_violations": 0,
+  "type_examples": [],
+  "duplicate_people": []
+ },
+ {
+  "run": "v21jev__anthropic_claude-sonnet-5__life_stream",
+  "tables": 14,
+  "columns": 79,
+  "rows": 53,
+  "empty_tables": [],
+  "fill_rate": 0.789,
+  "fk_checked": 38,
+  "fk_broken": 0,
+  "unresolved_refs": 1,
+  "broken_examples": [
+   "expenses.person_id='@adam' (unresolved reference)"
+  ],
+  "type_violations": 0,
+  "type_examples": [],
+  "duplicate_people": [],
+  "audit": {
+   "correct": 47,
+   "partial": 5,
+   "missing": 1,
+   "wrong": 0,
+   "n": 53,
+   "fact_score": 0.934,
+   "structured_share": 0.904,
+   "forbid_violations": [
+    "N01"
+   ],
+   "details": {
+    "expect": [
+     {
+      "id": "F01",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#1 city",
+      "note": ""
+     },
+     {
+      "id": "F02",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#1 address",
+      "note": ""
+     },
+     {
+      "id": "F03",
+      "status": "correct",
+      "form": "structured",
+      "where": "contact_methods#1",
+      "note": "Old Czech number not stored"
+     },
+     {
+      "id": "F04",
+      "status": "correct",
+      "form": "structured",
+      "where": "organizations#1 founder1_id/founder2_id",
+      "note": ""
+     },
+     {
+      "id": "F05",
+      "status": "correct",
+      "form": "structured",
+      "where": "contact_methods#2",
+      "note": ""
+     },
+     {
+      "id": "F06",
+      "status": "correct",
+      "form": "structured",
+      "where": "contact_methods#5",
+      "note": ""
+     },
+     {
+      "id": "F07",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#2 birthday",
+      "note": ""
+     },
+     {
+      "id": "F08",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": "No email for David"
+     },
+     {
+      "id": "F09",
+      "status": "correct",
+      "form": "structured",
+      "where": "contact_methods#3",
+      "note": ""
+     },
+     {
+      "id": "F10",
+      "status": "partial",
+      "form": "structured",
+      "where": "climbing_sessions#1,#3 partner_id",
+      "note": "Relationship not stated on people#3; only implied via sessions"
+     },
+     {
+      "id": "F11",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#4 relationship",
+      "note": ""
+     },
+     {
+      "id": "F12",
+      "status": "correct",
+      "form": "structured",
+      "where": "allergies#1",
+      "note": ""
+     },
+     {
+      "id": "F13",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#4 birthday",
+      "note": ""
+     },
+     {
+      "id": "F14",
+      "status": "correct",
+      "form": "structured",
+      "where": "interests#3",
+      "note": ""
+     },
+     {
+      "id": "F15",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#4",
+      "note": ""
+     },
+     {
+      "id": "F16",
+      "status": "correct",
+      "form": "free_text",
+      "where": "tasks#5 title",
+      "note": ""
+     },
+     {
+      "id": "F17",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#7 birthday",
+      "note": ""
+     },
+     {
+      "id": "F18",
+      "status": "correct",
+      "form": "structured",
+      "where": "interests#4",
+      "note": ""
+     },
+     {
+      "id": "F19",
+      "status": "correct",
+      "form": "free_text",
+      "where": "people#5 relationship; organizations#2 description",
+      "note": "company/role columns empty"
+     },
+     {
+      "id": "F20",
+      "status": "correct",
+      "form": "structured",
+      "where": "contact_methods#4",
+      "note": ""
+     },
+     {
+      "id": "F21",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#8",
+      "note": ""
+     },
+     {
+      "id": "F22",
+      "status": "correct",
+      "form": "structured",
+      "where": "contact_methods#6,#7",
+      "note": ""
+     },
+     {
+      "id": "F23",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#9",
+      "note": ""
+     },
+     {
+      "id": "F24",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#1",
+      "note": ""
+     },
+     {
+      "id": "F25",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#2",
+      "note": ""
+     },
+     {
+      "id": "F26",
+      "status": "partial",
+      "form": "structured",
+      "where": "events#3",
+      "note": "End time 17:30 missing"
+     },
+     {
+      "id": "F27",
+      "status": "correct",
+      "form": "structured",
+      "where": "organizations#1 address",
+      "note": ""
+     },
+     {
+      "id": "F28",
+      "status": "partial",
+      "form": "structured",
+      "where": "funding_rounds#1",
+      "note": "Closed $3M seed stored but lead by Northwind not explicit"
+     },
+     {
+      "id": "F29",
+      "status": "correct",
+      "form": "structured",
+      "where": "funding_rounds#1",
+      "note": "Draft details in same row; status closed"
+     },
+     {
+      "id": "F30",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#1",
+      "note": "person_id malformed '@adam'"
+     },
+     {
+      "id": "F31",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#2",
+      "note": ""
+     },
+     {
+      "id": "F32",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#3",
+      "note": ""
+     },
+     {
+      "id": "F33",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#4",
+      "note": ""
+     },
+     {
+      "id": "F34",
+      "status": "correct",
+      "form": "structured",
+      "where": "flights#1; expenses#5",
+      "note": ""
+     },
+     {
+      "id": "F35",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#6",
+      "note": ""
+     },
+     {
+      "id": "F36",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#7",
+      "note": ""
+     },
+     {
+      "id": "F37",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#9",
+      "note": ""
+     },
+     {
+      "id": "F38",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#8",
+      "note": ""
+     },
+     {
+      "id": "F39",
+      "status": "correct",
+      "form": "structured",
+      "where": "climbing_sessions#1",
+      "note": ""
+     },
+     {
+      "id": "F40",
+      "status": "correct",
+      "form": "structured",
+      "where": "climbing_sessions#2",
+      "note": ""
+     },
+     {
+      "id": "F41",
+      "status": "correct",
+      "form": "structured",
+      "where": "climbing_sessions#3",
+      "note": ""
+     },
+     {
+      "id": "F42",
+      "status": "correct",
+      "form": "structured",
+      "where": "climbing_sessions#4",
+      "note": ""
+     },
+     {
+      "id": "F43",
+      "status": "correct",
+      "form": "structured",
+      "where": "workouts#1",
+      "note": ""
+     },
+     {
+      "id": "F44",
+      "status": "correct",
+      "form": "structured",
+      "where": "workouts#2",
+      "note": ""
+     },
+     {
+      "id": "F45",
+      "status": "correct",
+      "form": "structured",
+      "where": "books#1",
+      "note": ""
+     },
+     {
+      "id": "F46",
+      "status": "correct",
+      "form": "structured",
+      "where": "books#2",
+      "note": ""
+     },
+     {
+      "id": "F47",
+      "status": "correct",
+      "form": "free_text",
+      "where": "interests#2",
+      "note": ""
+     },
+     {
+      "id": "F48",
+      "status": "correct",
+      "form": "structured",
+      "where": "interests#1",
+      "note": ""
+     },
+     {
+      "id": "F49",
+      "status": "correct",
+      "form": "structured",
+      "where": "interests#5",
+      "note": ""
+     },
+     {
+      "id": "F50",
+      "status": "partial",
+      "form": "structured",
+      "where": "tasks#1",
+      "note": "Done but renewal date Aug 27 not stored"
+     },
+     {
+      "id": "F51",
+      "status": "correct",
+      "form": "structured",
+      "where": "cars#1",
+      "note": ""
+     },
+     {
+      "id": "F52",
+      "status": "partial",
+      "form": "free_text",
+      "where": "tasks#4",
+      "note": "Move on Sep 1 recorded; prior Prague residence only implied"
+     },
+     {
+      "id": "F53",
+      "status": "correct",
+      "form": "free_text",
+      "where": "tasks#2 title",
+      "note": ""
+     }
+    ],
+    "forbid": [
+     {
+      "id": "N01",
+      "violated": true,
+      "evidence": "organizations#3 'Rohlik' 'Company (details removed)' appears to be residue from the forgotten Jan Dvořák info"
+     },
+     {
+      "id": "N02",
+      "violated": false,
+      "evidence": "tasks#2 status cancelled"
+     },
+     {
+      "id": "N03",
+      "violated": false,
+      "evidence": ""
+     },
+     {
+      "id": "N04",
+      "violated": false,
+      "evidence": ""
+     },
+     {
+      "id": "N05",
+      "violated": false,
+      "evidence": ""
+     }
+    ]
+   }
+  }
+ },
+ {
+  "run": "v21jev__openai_gpt-6-luna__alex_rivera",
+  "tables": 15,
+  "columns": 62,
+  "rows": 68,
+  "empty_tables": [],
+  "fill_rate": 0.823,
+  "fk_checked": 68,
+  "fk_broken": 0,
+  "unresolved_refs": 0,
+  "broken_examples": [],
+  "type_violations": 0,
+  "type_examples": [],
+  "duplicate_people": []
+ },
+ {
+  "run": "v21jev__openai_gpt-6-luna__life_stream",
+  "tables": 20,
+  "columns": 103,
+  "rows": 79,
+  "empty_tables": [],
+  "fill_rate": 0.708,
+  "fk_checked": 86,
+  "fk_broken": 0,
+  "unresolved_refs": 0,
+  "broken_examples": [],
+  "type_violations": 0,
+  "type_examples": [],
+  "duplicate_people": [],
+  "audit": {
+   "correct": 47,
+   "partial": 5,
+   "missing": 0,
+   "wrong": 1,
+   "n": 53,
+   "fact_score": 0.934,
+   "structured_share": 0.962,
+   "forbid_violations": [],
+   "details": {
+    "expect": [
+     {
+      "id": "F01",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#1; residences#1 -> places#5 (San Francisco)",
+      "note": ""
+     },
+     {
+      "id": "F02",
+      "status": "correct",
+      "form": "structured",
+      "where": "places#5 address/city",
+      "note": ""
+     },
+     {
+      "id": "F03",
+      "status": "correct",
+      "form": "structured",
+      "where": "contact_methods#1",
+      "note": "No Czech number stored"
+     },
+     {
+      "id": "F04",
+      "status": "correct",
+      "form": "structured",
+      "where": "organizations#1; organization_memberships#1,#2",
+      "note": ""
+     },
+     {
+      "id": "F05",
+      "status": "correct",
+      "form": "structured",
+      "where": "contact_methods#2",
+      "note": ""
+     },
+     {
+      "id": "F06",
+      "status": "correct",
+      "form": "structured",
+      "where": "contact_methods#5",
+      "note": ""
+     },
+     {
+      "id": "F07",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#2 birthday",
+      "note": ""
+     },
+     {
+      "id": "F08",
+      "status": "correct",
+      "form": "free_text",
+      "where": "events#4 details",
+      "note": "Not in contact_methods"
+     },
+     {
+      "id": "F09",
+      "status": "correct",
+      "form": "structured",
+      "where": "contact_methods#3",
+      "note": ""
+     },
+     {
+      "id": "F10",
+      "status": "correct",
+      "form": "structured",
+      "where": "relationships#1",
+      "note": ""
+     },
+     {
+      "id": "F11",
+      "status": "correct",
+      "form": "structured",
+      "where": "relationships#2",
+      "note": ""
+     },
+     {
+      "id": "F12",
+      "status": "correct",
+      "form": "structured",
+      "where": "allergies#1",
+      "note": ""
+     },
+     {
+      "id": "F13",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#4 birthday",
+      "note": ""
+     },
+     {
+      "id": "F14",
+      "status": "correct",
+      "form": "structured",
+      "where": "interests#2",
+      "note": ""
+     },
+     {
+      "id": "F15",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#5",
+      "note": ""
+     },
+     {
+      "id": "F16",
+      "status": "correct",
+      "form": "structured",
+      "where": "gift_ideas#1",
+      "note": ""
+     },
+     {
+      "id": "F17",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#8 birthday",
+      "note": ""
+     },
+     {
+      "id": "F18",
+      "status": "correct",
+      "form": "structured",
+      "where": "interests#3",
+      "note": ""
+     },
+     {
+      "id": "F19",
+      "status": "correct",
+      "form": "structured",
+      "where": "organization_memberships#3",
+      "note": ""
+     },
+     {
+      "id": "F20",
+      "status": "correct",
+      "form": "structured",
+      "where": "contact_methods#4",
+      "note": ""
+     },
+     {
+      "id": "F21",
+      "status": "correct",
+      "form": "structured",
+      "where": "organization_memberships#6; contact_methods#6 context",
+      "note": "Mixer only in context column"
+     },
+     {
+      "id": "F22",
+      "status": "correct",
+      "form": "structured",
+      "where": "contact_methods#6,#7",
+      "note": ""
+     },
+     {
+      "id": "F23",
+      "status": "correct",
+      "form": "structured",
+      "where": "organization_memberships#7; relationships#4",
+      "note": ""
+     },
+     {
+      "id": "F24",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#1",
+      "note": ""
+     },
+     {
+      "id": "F25",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#3",
+      "note": ""
+     },
+     {
+      "id": "F26",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#4",
+      "note": ""
+     },
+     {
+      "id": "F27",
+      "status": "correct",
+      "form": "structured",
+      "where": "organizations#1 office_place_id -> places#7",
+      "note": ""
+     },
+     {
+      "id": "F28",
+      "status": "correct",
+      "form": "structured",
+      "where": "organizations#1",
+      "note": ""
+     },
+     {
+      "id": "F29",
+      "status": "correct",
+      "form": "free_text",
+      "where": "emails#2 body",
+      "note": ""
+     },
+     {
+      "id": "F30",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#1",
+      "note": ""
+     },
+     {
+      "id": "F31",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#2",
+      "note": ""
+     },
+     {
+      "id": "F32",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#3",
+      "note": ""
+     },
+     {
+      "id": "F33",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#4",
+      "note": ""
+     },
+     {
+      "id": "F34",
+      "status": "correct",
+      "form": "structured",
+      "where": "flights#1",
+      "note": ""
+     },
+     {
+      "id": "F35",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#5",
+      "note": ""
+     },
+     {
+      "id": "F36",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#6",
+      "note": ""
+     },
+     {
+      "id": "F37",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#7",
+      "note": ""
+     },
+     {
+      "id": "F38",
+      "status": "partial",
+      "form": "structured",
+      "where": "organization_memberships#5",
+      "note": "Fee currency missing"
+     },
+     {
+      "id": "F39",
+      "status": "correct",
+      "form": "structured",
+      "where": "activities#1",
+      "note": ""
+     },
+     {
+      "id": "F40",
+      "status": "correct",
+      "form": "structured",
+      "where": "activities#3",
+      "note": ""
+     },
+     {
+      "id": "F41",
+      "status": "correct",
+      "form": "structured",
+      "where": "activities#5",
+      "note": ""
+     },
+     {
+      "id": "F42",
+      "status": "wrong",
+      "form": "structured",
+      "where": "activities#8",
+      "note": "place_id 7 = 1 Mission St, not Mission Cliffs"
+     },
+     {
+      "id": "F43",
+      "status": "correct",
+      "form": "structured",
+      "where": "activities#2",
+      "note": ""
+     },
+     {
+      "id": "F44",
+      "status": "correct",
+      "form": "structured",
+      "where": "activities#7",
+      "note": ""
+     },
+     {
+      "id": "F45",
+      "status": "correct",
+      "form": "structured",
+      "where": "books#1",
+      "note": ""
+     },
+     {
+      "id": "F46",
+      "status": "partial",
+      "form": "structured",
+      "where": "books#2",
+      "note": "Start date Sep 14 missing"
+     },
+     {
+      "id": "F47",
+      "status": "correct",
+      "form": "structured",
+      "where": "restaurant_preferences#1",
+      "note": ""
+     },
+     {
+      "id": "F48",
+      "status": "correct",
+      "form": "structured",
+      "where": "interests#1",
+      "note": ""
+     },
+     {
+      "id": "F49",
+      "status": "correct",
+      "form": "structured",
+      "where": "interests#4",
+      "note": ""
+     },
+     {
+      "id": "F50",
+      "status": "partial",
+      "form": "structured",
+      "where": "tasks#1",
+      "note": "Done, but renewal date Aug 27 missing"
+     },
+     {
+      "id": "F51",
+      "status": "correct",
+      "form": "structured",
+      "where": "vehicles#1",
+      "note": ""
+     },
+     {
+      "id": "F52",
+      "status": "partial",
+      "form": "structured",
+      "where": "residences#1; flights#1; activities#6",
+      "note": "No prior Prague residence row"
+     },
+     {
+      "id": "F53",
+      "status": "partial",
+      "form": "structured",
+      "where": "people#6; events#2",
+      "note": "Dentist role only implied via appointment"
+     }
+    ],
+    "forbid": [
+     {
+      "id": "N01",
+      "violated": false,
+      "evidence": ""
+     },
+     {
+      "id": "N02",
+      "violated": false,
+      "evidence": "events#2 status cancelled"
+     },
+     {
+      "id": "N03",
+      "violated": false,
+      "evidence": ""
+     },
+     {
+      "id": "N04",
+      "violated": false,
+      "evidence": ""
+     },
+     {
+      "id": "N05",
+      "violated": false,
+      "evidence": ""
+     }
+    ]
+   }
+  }
+ },
+ {
+  "run": "v2__anthropic_claude-sonnet-5__alex_rivera",
+  "tables": 10,
+  "columns": 38,
+  "rows": 42,
+  "empty_tables": [],
+  "fill_rate": 0.895,
+  "fk_checked": 36,
+  "fk_broken": 0,
+  "unresolved_refs": 0,
+  "broken_examples": [],
+  "type_violations": 0,
+  "type_examples": [],
+  "duplicate_people": []
+ },
+ {
+  "run": "v2__anthropic_claude-sonnet-5__life_stream",
+  "tables": 13,
+  "columns": 79,
+  "rows": 56,
+  "empty_tables": [],
+  "fill_rate": 0.598,
+  "fk_checked": 30,
+  "fk_broken": 0,
+  "unresolved_refs": 1,
+  "broken_examples": [
+   "flights.person_id='@adam' (unresolved reference)"
+  ],
+  "type_violations": 0,
+  "type_examples": [],
+  "duplicate_people": [],
+  "audit": {
+   "correct": 41,
+   "partial": 9,
+   "missing": 3,
+   "wrong": 0,
+   "n": 53,
+   "fact_score": 0.858,
+   "structured_share": 0.98,
+   "forbid_violations": [],
+   "details": {
+    "expect": [
+     {
+      "id": "F01",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#1.city",
+      "note": "San Francisco"
+     },
+     {
+      "id": "F02",
+      "status": "correct",
+      "form": "structured",
+      "where": "places#8.address",
+      "note": "1450 Valencia St, SF, linked to person 1"
+     },
+     {
+      "id": "F03",
+      "status": "partial",
+      "form": "structured",
+      "where": "people#1.phone / phone_secondary",
+      "note": "Main phone is correct, but the old Czech number is kept as phone_secondary, which implies it is still an active number"
+     },
+     {
+      "id": "F04",
+      "status": "correct",
+      "form": "structured",
+      "where": "organizations#1; organization_members#1,#2",
+      "note": ""
+     },
+     {
+      "id": "F05",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#2.phone",
+      "note": ""
+     },
+     {
+      "id": "F06",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#2.phone_secondary",
+      "note": "4995"
+     },
+     {
+      "id": "F07",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#2.birthday",
+      "note": ""
+     },
+     {
+      "id": "F08",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": "people#2.email is null"
+     },
+     {
+      "id": "F09",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#3.phone",
+      "note": ""
+     },
+     {
+      "id": "F10",
+      "status": "partial",
+      "form": "structured",
+      "where": "climbing_sessions#1,#3.companion_id",
+      "note": "relationship_to_adam is null; only implied by sessions"
+     },
+     {
+      "id": "F11",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#4.relationship_to_adam",
+      "note": ""
+     },
+     {
+      "id": "F12",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#4.allergies",
+      "note": ""
+     },
+     {
+      "id": "F13",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#4.birthday",
+      "note": ""
+     },
+     {
+      "id": "F14",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#4.favorite_food",
+      "note": ""
+     },
+     {
+      "id": "F15",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#4.visit_start/visit_end/visit_city",
+      "note": ""
+     },
+     {
+      "id": "F16",
+      "status": "correct",
+      "form": "free_text",
+      "where": "tasks#3.title",
+      "note": ""
+     },
+     {
+      "id": "F17",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#8.birthday",
+      "note": ""
+     },
+     {
+      "id": "F18",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#8.favorite_flower",
+      "note": ""
+     },
+     {
+      "id": "F19",
+      "status": "correct",
+      "form": "structured",
+      "where": "organization_members#3; people#5",
+      "note": ""
+     },
+     {
+      "id": "F20",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": "people#5.email is null"
+     },
+     {
+      "id": "F21",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#9; organization_members#5",
+      "note": "mixer detail stored in relationship text"
+     },
+     {
+      "id": "F22",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#9.email/phone",
+      "note": ""
+     },
+     {
+      "id": "F23",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#10; organization_members#6",
+      "note": ""
+     },
+     {
+      "id": "F24",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#1",
+      "note": "organizer Sarah Kim, venue places#4"
+     },
+     {
+      "id": "F25",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#3; places#6",
+      "note": ""
+     },
+     {
+      "id": "F26",
+      "status": "partial",
+      "form": "structured",
+      "where": "events#4",
+      "note": "no end time 17:30"
+     },
+     {
+      "id": "F27",
+      "status": "correct",
+      "form": "structured",
+      "where": "places#10.organization_id",
+      "note": ""
+     },
+     {
+      "id": "F28",
+      "status": "correct",
+      "form": "structured",
+      "where": "funding_rounds#1",
+      "note": "closed, investor Sarah Kim of Northwind"
+     },
+     {
+      "id": "F29",
+      "status": "partial",
+      "form": "structured",
+      "where": "funding_rounds#1",
+      "note": "values present but merged with closed round; draft status lost"
+     },
+     {
+      "id": "F30",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#1",
+      "note": ""
+     },
+     {
+      "id": "F31",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#2",
+      "note": ""
+     },
+     {
+      "id": "F32",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#3",
+      "note": ""
+     },
+     {
+      "id": "F33",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#4",
+      "note": ""
+     },
+     {
+      "id": "F34",
+      "status": "correct",
+      "form": "structured",
+      "where": "flights#1",
+      "note": ""
+     },
+     {
+      "id": "F35",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#5",
+      "note": ""
+     },
+     {
+      "id": "F36",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#6",
+      "note": ""
+     },
+     {
+      "id": "F37",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#8",
+      "note": ""
+     },
+     {
+      "id": "F38",
+      "status": "partial",
+      "form": "structured",
+      "where": "expenses#7",
+      "note": "monthly nature not recorded"
+     },
+     {
+      "id": "F39",
+      "status": "correct",
+      "form": "structured",
+      "where": "climbing_sessions#1",
+      "note": ""
+     },
+     {
+      "id": "F40",
+      "status": "correct",
+      "form": "structured",
+      "where": "climbing_sessions#2",
+      "note": ""
+     },
+     {
+      "id": "F41",
+      "status": "correct",
+      "form": "structured",
+      "where": "climbing_sessions#3",
+      "note": ""
+     },
+     {
+      "id": "F42",
+      "status": "correct",
+      "form": "structured",
+      "where": "climbing_sessions#4",
+      "note": ""
+     },
+     {
+      "id": "F43",
+      "status": "correct",
+      "form": "structured",
+      "where": "runs#1",
+      "note": ""
+     },
+     {
+      "id": "F44",
+      "status": "partial",
+      "form": "structured",
+      "where": "runs#2",
+      "note": "PB not noted"
+     },
+     {
+      "id": "F45",
+      "status": "correct",
+      "form": "structured",
+      "where": "books#1",
+      "note": ""
+     },
+     {
+      "id": "F46",
+      "status": "partial",
+      "form": "structured",
+      "where": "books#2",
+      "note": "start date missing"
+     },
+     {
+      "id": "F47",
+      "status": "correct",
+      "form": "structured",
+      "where": "places#1.is_favorite",
+      "note": ""
+     },
+     {
+      "id": "F48",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": ""
+     },
+     {
+      "id": "F49",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#1.hobby",
+      "note": ""
+     },
+     {
+      "id": "F50",
+      "status": "partial",
+      "form": "structured",
+      "where": "tasks#1.status",
+      "note": "renewal date Aug 27 not stored"
+     },
+     {
+      "id": "F51",
+      "status": "correct",
+      "form": "structured",
+      "where": "vehicles#1",
+      "note": ""
+     },
+     {
+      "id": "F52",
+      "status": "partial",
+      "form": "structured",
+      "where": "people#1.move_date; flights#1",
+      "note": "prior Prague residence only implied"
+     },
+     {
+      "id": "F53",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#6",
+      "note": ""
+     }
+    ],
+    "forbid": [
+     {
+      "id": "N01",
+      "violated": false,
+      "evidence": "No Jan Dvořák row found (people#7 absent); organizations#3 Rohlik is unlinked"
+     },
+     {
+      "id": "N02",
+      "violated": false,
+      "evidence": "events#2 status cancelled"
+     },
+     {
+      "id": "N03",
+      "violated": false,
+      "evidence": "none found"
+     },
+     {
+      "id": "N04",
+      "violated": false,
+      "evidence": "no duplicates"
+     },
+     {
+      "id": "N05",
+      "violated": false,
+      "evidence": "no clear invented values"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "run": "v2__openai_gpt-6-luna__alex_rivera",
+  "tables": 12,
+  "columns": 66,
+  "rows": 66,
+  "empty_tables": [],
+  "fill_rate": 0.626,
+  "fk_checked": 74,
+  "fk_broken": 0,
+  "unresolved_refs": 0,
+  "broken_examples": [],
+  "type_violations": 0,
+  "type_examples": [],
+  "duplicate_people": []
+ },
+ {
+  "run": "v2__openai_gpt-6-luna__life_stream",
+  "tables": 11,
+  "columns": 82,
+  "rows": 52,
+  "empty_tables": [],
+  "fill_rate": 0.548,
+  "fk_checked": 41,
+  "fk_broken": 0,
+  "unresolved_refs": 0,
+  "broken_examples": [],
+  "type_violations": 0,
+  "type_examples": [],
+  "duplicate_people": [],
+  "audit": {
+   "correct": 43,
+   "partial": 7,
+   "missing": 3,
+   "wrong": 0,
+   "n": 53,
+   "fact_score": 0.877,
+   "structured_share": 1.0,
+   "forbid_violations": [
+    "N01"
+   ],
+   "details": {
+    "expect": [
+     {
+      "id": "F01",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#1 home_city_id=7 (places#7 San Francisco)",
+      "note": ""
+     },
+     {
+      "id": "F02",
+      "status": "partial",
+      "form": "structured",
+      "where": "places#7 address",
+      "note": "Address is stored on the San Francisco city row, not linked to Adam."
+     },
+     {
+      "id": "F03",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#1 phone",
+      "note": "Old Czech number not stored."
+     },
+     {
+      "id": "F04",
+      "status": "correct",
+      "form": "structured",
+      "where": "organizations#1; people#1, people#2 organization_id/role",
+      "note": ""
+     },
+     {
+      "id": "F05",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#2 phone",
+      "note": "Stored as 733544390 without the +420 prefix."
+     },
+     {
+      "id": "F06",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#2 alternate_phone",
+      "note": ""
+     },
+     {
+      "id": "F07",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#2 birthday",
+      "note": ""
+     },
+     {
+      "id": "F08",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#2 email",
+      "note": ""
+     },
+     {
+      "id": "F09",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#3 phone",
+      "note": ""
+     },
+     {
+      "id": "F10",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#3 relationship_to_adam",
+      "note": ""
+     },
+     {
+      "id": "F11",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#4 relationship_to_adam",
+      "note": ""
+     },
+     {
+      "id": "F12",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#4 allergies",
+      "note": ""
+     },
+     {
+      "id": "F13",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#4 birthday",
+      "note": ""
+     },
+     {
+      "id": "F14",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#4 favorite_food",
+      "note": ""
+     },
+     {
+      "id": "F15",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#6",
+      "note": ""
+     },
+     {
+      "id": "F16",
+      "status": "correct",
+      "form": "structured",
+      "where": "tasks#3",
+      "note": ""
+     },
+     {
+      "id": "F17",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": "No row for Adam's mom."
+     },
+     {
+      "id": "F18",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": "No row for Adam's mom."
+     },
+     {
+      "id": "F19",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#5 role/organization_id",
+      "note": ""
+     },
+     {
+      "id": "F20",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#5 email",
+      "note": ""
+     },
+     {
+      "id": "F21",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#8 role/organization_id, notes",
+      "note": "The mixer is mentioned only in notes."
+     },
+     {
+      "id": "F22",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#8 email/phone",
+      "note": ""
+     },
+     {
+      "id": "F23",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#9 role/organization_id, notes",
+      "note": ""
+     },
+     {
+      "id": "F24",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#1",
+      "note": ""
+     },
+     {
+      "id": "F25",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#3; places#8",
+      "note": ""
+     },
+     {
+      "id": "F26",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#5",
+      "note": "The end time appears only in notes."
+     },
+     {
+      "id": "F27",
+      "status": "correct",
+      "form": "structured",
+      "where": "organizations#1 office_place_id=10",
+      "note": ""
+     },
+     {
+      "id": "F28",
+      "status": "correct",
+      "form": "structured",
+      "where": "funding_rounds#1",
+      "note": ""
+     },
+     {
+      "id": "F29",
+      "status": "partial",
+      "form": "structured",
+      "where": "funding_rounds#1",
+      "note": "Valuation is stored, but the Sep 2 draft from Sarah is not captured."
+     },
+     {
+      "id": "F30",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#1",
+      "note": ""
+     },
+     {
+      "id": "F31",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#2",
+      "note": ""
+     },
+     {
+      "id": "F32",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#3",
+      "note": ""
+     },
+     {
+      "id": "F33",
+      "status": "partial",
+      "form": "structured",
+      "where": "expenses#4",
+      "note": "Lokál is not recorded."
+     },
+     {
+      "id": "F34",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#4; expenses#5",
+      "note": ""
+     },
+     {
+      "id": "F35",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#6",
+      "note": ""
+     },
+     {
+      "id": "F36",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#7",
+      "note": ""
+     },
+     {
+      "id": "F37",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#8",
+      "note": ""
+     },
+     {
+      "id": "F38",
+      "status": "correct",
+      "form": "structured",
+      "where": "memberships#1",
+      "note": ""
+     },
+     {
+      "id": "F39",
+      "status": "correct",
+      "form": "structured",
+      "where": "workouts#1",
+      "note": ""
+     },
+     {
+      "id": "F40",
+      "status": "correct",
+      "form": "structured",
+      "where": "workouts#3",
+      "note": ""
+     },
+     {
+      "id": "F41",
+      "status": "correct",
+      "form": "structured",
+      "where": "workouts#4",
+      "note": ""
+     },
+     {
+      "id": "F42",
+      "status": "correct",
+      "form": "structured",
+      "where": "workouts#6",
+      "note": ""
+     },
+     {
+      "id": "F43",
+      "status": "correct",
+      "form": "structured",
+      "where": "workouts#2",
+      "note": ""
+     },
+     {
+      "id": "F44",
+      "status": "correct",
+      "form": "structured",
+      "where": "workouts#5",
+      "note": ""
+     },
+     {
+      "id": "F45",
+      "status": "correct",
+      "form": "structured",
+      "where": "books#1",
+      "note": "The rating is in notes."
+     },
+     {
+      "id": "F46",
+      "status": "partial",
+      "form": "structured",
+      "where": "books#2",
+      "note": "Start date Sep 14 is missing."
+     },
+     {
+      "id": "F47",
+      "status": "correct",
+      "form": "structured",
+      "where": "places#2 favorite_person_id",
+      "note": ""
+     },
+     {
+      "id": "F48",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": ""
+     },
+     {
+      "id": "F49",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#1 interests",
+      "note": ""
+     },
+     {
+      "id": "F50",
+      "status": "partial",
+      "form": "structured",
+      "where": "tasks#1",
+      "note": "Status is done, but the Aug 27 renewal date is missing."
+     },
+     {
+      "id": "F51",
+      "status": "correct",
+      "form": "structured",
+      "where": "vehicles#1",
+      "note": ""
+     },
+     {
+      "id": "F52",
+      "status": "partial",
+      "form": "structured",
+      "where": "events#4",
+      "note": "Only implied by the flight origin; prior residence is not stored."
+     },
+     {
+      "id": "F53",
+      "status": "partial",
+      "form": "structured",
+      "where": "people#6; events#2",
+      "note": "No dentist relationship field is set."
+     }
+    ],
+    "forbid": [
+     {
+      "id": "N01",
+      "violated": true,
+      "evidence": "events#1 notes mention Jan Dvořák, CTO at Rohlik; organizations#3 Rohlik"
+     },
+     {
+      "id": "N02",
+      "violated": false,
+      "evidence": "events#2 status cancelled"
+     },
+     {
+      "id": "N03",
+      "violated": false,
+      "evidence": ""
+     },
+     {
+      "id": "N04",
+      "violated": false,
+      "evidence": ""
+     },
+     {
+      "id": "N05",
+      "violated": false,
+      "evidence": ""
+     }
+    ]
+   }
+  }
+ },
+ {
+  "run": "v2jev__anthropic_claude-sonnet-5__alex_rivera",
+  "tables": 11,
+  "columns": 44,
+  "rows": 42,
+  "empty_tables": [],
+  "fill_rate": 0.858,
+  "fk_checked": 38,
+  "fk_broken": 0,
+  "unresolved_refs": 0,
+  "broken_examples": [],
+  "type_violations": 0,
+  "type_examples": [],
+  "duplicate_people": []
+ },
+ {
+  "run": "v2jev__anthropic_claude-sonnet-5__life_stream",
+  "tables": 14,
+  "columns": 81,
+  "rows": 58,
+  "empty_tables": [],
+  "fill_rate": 0.766,
+  "fk_checked": 58,
+  "fk_broken": 0,
+  "unresolved_refs": 3,
+  "broken_examples": [
+   "places.person_id='@adam' (unresolved reference)",
+   "places.person_id='@adam' (unresolved reference)",
+   "places.person_id='@adam' (unresolved reference)"
+  ],
+  "type_violations": 0,
+  "type_examples": [],
+  "duplicate_people": [],
+  "audit": {
+   "correct": 43,
+   "partial": 6,
+   "missing": 4,
+   "wrong": 0,
+   "n": 53,
+   "fact_score": 0.868,
+   "structured_share": 0.878,
+   "forbid_violations": [
+    "N01"
+   ],
+   "details": {
+    "expect": [
+     {
+      "id": "F01",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#1 name, city",
+      "note": "City is San Francisco."
+     },
+     {
+      "id": "F02",
+      "status": "correct",
+      "form": "structured",
+      "where": "places#7 address",
+      "note": "Address is 1450 Valencia St, San Francisco."
+     },
+     {
+      "id": "F03",
+      "status": "partial",
+      "form": "structured",
+      "where": "people#1 phone, phone_2",
+      "note": "The main phone is correct, but the old Czech number is still stored in phone_2 with no marker that it is outdated."
+     },
+     {
+      "id": "F04",
+      "status": "correct",
+      "form": "structured",
+      "where": "organizations#1; organization_members#1,#2",
+      "note": "Nebula with both people linked as Cofounder."
+     },
+     {
+      "id": "F05",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#2 phone",
+      "note": "+420 733 544 390."
+     },
+     {
+      "id": "F06",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#2 phone_2",
+      "note": "+1 628 688 4995."
+     },
+     {
+      "id": "F07",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#2 birthday",
+      "note": "09-02."
+     },
+     {
+      "id": "F08",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": "The email column is null."
+     },
+     {
+      "id": "F09",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#3 phone",
+      "note": "Only the current number is stored."
+     },
+     {
+      "id": "F10",
+      "status": "partial",
+      "form": "free_text",
+      "where": "climbing_sessions#1 person_id, climbing_sessions#3 notes",
+      "note": "The relationship column is null; the climbing link is only implied by sessions."
+     },
+     {
+      "id": "F11",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#4 relationship",
+      "note": "girlfriend."
+     },
+     {
+      "id": "F12",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#4 allergies",
+      "note": "peanuts."
+     },
+     {
+      "id": "F13",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#4 birthday",
+      "note": "09-28."
+     },
+     {
+      "id": "F14",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#4 favorite_food",
+      "note": "sushi."
+     },
+     {
+      "id": "F15",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#2",
+      "note": "Oct 10 to Oct 20."
+     },
+     {
+      "id": "F16",
+      "status": "correct",
+      "form": "free_text",
+      "where": "tasks#6 title",
+      "note": "The gift idea appears only in the task title."
+     },
+     {
+      "id": "F17",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#7 birthday",
+      "note": "10-03."
+     },
+     {
+      "id": "F18",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": "favorite_flower is null."
+     },
+     {
+      "id": "F19",
+      "status": "correct",
+      "form": "structured",
+      "where": "organization_members#3",
+      "note": "Partner at Northwind Ventures."
+     },
+     {
+      "id": "F20",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": "The email column is null."
+     },
+     {
+      "id": "F21",
+      "status": "correct",
+      "form": "structured",
+      "where": "organization_members#5; tasks#7",
+      "note": "The mixer detail appears only in the task title."
+     },
+     {
+      "id": "F22",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#8 email, phone",
+      "note": "Both email and phone are stored."
+     },
+     {
+      "id": "F23",
+      "status": "correct",
+      "form": "structured",
+      "where": "organization_members#6",
+      "note": "Head of Partnerships at Stripe."
+     },
+     {
+      "id": "F24",
+      "status": "partial",
+      "form": "free_text",
+      "where": "tasks#2",
+      "note": "The 19:00 time is missing; the host is only implied via Sarah Kim."
+     },
+     {
+      "id": "F25",
+      "status": "correct",
+      "form": "free_text",
+      "where": "tasks#4",
+      "note": "Date is structured; time and address are in the title."
+     },
+     {
+      "id": "F26",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#1",
+      "note": "Sep 25, 16:00 to 17:30, 1 Mission St."
+     },
+     {
+      "id": "F27",
+      "status": "correct",
+      "form": "structured",
+      "where": "places#11 address",
+      "note": "1 Mission St, San Francisco."
+     },
+     {
+      "id": "F28",
+      "status": "correct",
+      "form": "structured",
+      "where": "funding_rounds#1",
+      "note": "Northwind is linked only via the investor person (Sarah Kim)."
+     },
+     {
+      "id": "F29",
+      "status": "partial",
+      "form": "structured",
+      "where": "funding_rounds#1",
+      "note": "The draft and closed round are merged into one row; the draft status is not preserved."
+     },
+     {
+      "id": "F30",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#1",
+      "note": "385 CZK on 2026-08-05."
+     },
+     {
+      "id": "F31",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#2",
+      "note": "2,140 CZK on 2026-08-12."
+     },
+     {
+      "id": "F32",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#3",
+      "note": "1,262 CZK on 2026-08-18."
+     },
+     {
+      "id": "F33",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#4",
+      "note": "329 CZK on 2026-08-22."
+     },
+     {
+      "id": "F34",
+      "status": "correct",
+      "form": "structured",
+      "where": "flights#1",
+      "note": "UA8843 on Sep 1, 18,450 CZK."
+     },
+     {
+      "id": "F35",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#6",
+      "note": "$10.25 on 2026-09-03."
+     },
+     {
+      "id": "F36",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#7",
+      "note": "$23.40 on 2026-09-05."
+     },
+     {
+      "id": "F37",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#9",
+      "note": "$96.80 on 2026-09-10."
+     },
+     {
+      "id": "F38",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#8; places#9",
+      "note": "$110 monthly membership."
+     },
+     {
+      "id": "F39",
+      "status": "correct",
+      "form": "structured",
+      "where": "climbing_sessions#1",
+      "note": "Aug 3, Smíchoff, with Tom, 6c sent."
+     },
+     {
+      "id": "F40",
+      "status": "correct",
+      "form": "structured",
+      "where": "climbing_sessions#2",
+      "note": "Chill session on Aug 10."
+     },
+     {
+      "id": "F41",
+      "status": "correct",
+      "form": "free_text",
+      "where": "climbing_sessions#3 notes",
+      "note": "Tom and the 6c+ attempt are only in notes."
+     },
+     {
+      "id": "F42",
+      "status": "correct",
+      "form": "structured",
+      "where": "climbing_sessions#4",
+      "note": "6c+ sent on Sep 18."
+     },
+     {
+      "id": "F43",
+      "status": "correct",
+      "form": "structured",
+      "where": "workouts#1",
+      "note": "10k in 52:30 on Aug 7."
+     },
+     {
+      "id": "F44",
+      "status": "correct",
+      "form": "structured",
+      "where": "workouts#2",
+      "note": "The personal-best flag is not stored."
+     },
+     {
+      "id": "F45",
+      "status": "correct",
+      "form": "structured",
+      "where": "books#1",
+      "note": "The rating appears only in context."
+     },
+     {
+      "id": "F46",
+      "status": "partial",
+      "form": "structured",
+      "where": "books#2",
+      "note": "The Sep 14 start date is missing."
+     },
+     {
+      "id": "F47",
+      "status": "correct",
+      "form": "structured",
+      "where": "places#1 is_favorite",
+      "note": "Sasazu, Prague, marked favorite."
+     },
+     {
+      "id": "F48",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": "No interest row for the Roman Empire."
+     },
+     {
+      "id": "F49",
+      "status": "correct",
+      "form": "structured",
+      "where": "interests#1",
+      "note": "Riding big black horses."
+     },
+     {
+      "id": "F50",
+      "status": "partial",
+      "form": "structured",
+      "where": "tasks#1",
+      "note": "Status is done, but the Aug 27 renewal date is not stored."
+     },
+     {
+      "id": "F51",
+      "status": "correct",
+      "form": "structured",
+      "where": "cars#1",
+      "note": "Sold 2026-08-28 for 310,000 CZK."
+     },
+     {
+      "id": "F52",
+      "status": "correct",
+      "form": "structured",
+      "where": "tasks#5; flights#1",
+      "note": "Prior residence is implied by the move task and the Prague to SF flight."
+     },
+     {
+      "id": "F53",
+      "status": "correct",
+      "form": "free_text",
+      "where": "tasks#3 title",
+      "note": "Dr. Horák appears only in the appointment title."
+     }
+    ],
+    "forbid": [
+     {
+      "id": "N01",
+      "violated": true,
+      "evidence": "organizations#3 description mentions Jan Dvořák"
+     },
+     {
+      "id": "N02",
+      "violated": false,
+      "evidence": "tasks#3 status cancelled"
+     },
+     {
+      "id": "N03",
+      "violated": false,
+      "evidence": "No chit-chat rows found"
+     },
+     {
+      "id": "N04",
+      "violated": false,
+      "evidence": "No duplicate persons found"
+     },
+     {
+      "id": "N05",
+      "violated": false,
+      "evidence": "No clearly invented values; places#8 'Mint Plaza' is unverified"
+     }
+    ]
+   }
+  }
+ },
+ {
+  "run": "v2jev__openai_gpt-6-luna__alex_rivera",
+  "tables": 11,
+  "columns": 56,
+  "rows": 50,
+  "empty_tables": [],
+  "fill_rate": 0.72,
+  "fk_checked": 42,
+  "fk_broken": 0,
+  "unresolved_refs": 0,
+  "broken_examples": [],
+  "type_violations": 0,
+  "type_examples": [],
+  "duplicate_people": []
+ },
+ {
+  "run": "v2jev__openai_gpt-6-luna__life_stream",
+  "tables": 13,
+  "columns": 86,
+  "rows": 56,
+  "empty_tables": [],
+  "fill_rate": 0.617,
+  "fk_checked": 59,
+  "fk_broken": 0,
+  "unresolved_refs": 0,
+  "broken_examples": [],
+  "type_violations": 0,
+  "type_examples": [],
+  "duplicate_people": [],
+  "audit": {
+   "correct": 48,
+   "partial": 4,
+   "missing": 1,
+   "wrong": 0,
+   "n": 53,
+   "fact_score": 0.943,
+   "structured_share": 0.962,
+   "forbid_violations": [],
+   "details": {
+    "expect": [
+     {
+      "id": "F01",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#1 name, home_city_id=3 (places#3 San Francisco)",
+      "note": ""
+     },
+     {
+      "id": "F02",
+      "status": "correct",
+      "form": "structured",
+      "where": "places#4 address, city_id=3",
+      "note": ""
+     },
+     {
+      "id": "F03",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#1 phone_number",
+      "note": "The old Czech number is not stored."
+     },
+     {
+      "id": "F04",
+      "status": "correct",
+      "form": "structured",
+      "where": "organizations#1; people#1 and people#2 organization_id=1, role=cofounder",
+      "note": ""
+     },
+     {
+      "id": "F05",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#2 phone_number",
+      "note": "Stored as 733544390 without the +420 prefix."
+     },
+     {
+      "id": "F06",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#2 secondary_phone_number",
+      "note": ""
+     },
+     {
+      "id": "F07",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#2 birthday",
+      "note": ""
+     },
+     {
+      "id": "F08",
+      "status": "missing",
+      "form": "none",
+      "where": "",
+      "note": "people#2 email is null."
+     },
+     {
+      "id": "F09",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#3 phone_number",
+      "note": "The old number is not stored."
+     },
+     {
+      "id": "F10",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#3 relationship_to_adam",
+      "note": ""
+     },
+     {
+      "id": "F11",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#4 relationship_to_adam",
+      "note": ""
+     },
+     {
+      "id": "F12",
+      "status": "correct",
+      "form": "structured",
+      "where": "allergies#1",
+      "note": ""
+     },
+     {
+      "id": "F13",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#4 birthday",
+      "note": ""
+     },
+     {
+      "id": "F14",
+      "status": "correct",
+      "form": "structured",
+      "where": "interests#2",
+      "note": ""
+     },
+     {
+      "id": "F15",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#7 date, end_date",
+      "note": ""
+     },
+     {
+      "id": "F16",
+      "status": "correct",
+      "form": "free_text",
+      "where": "tasks#3 title",
+      "note": "The gift idea appears only inside the task title."
+     },
+     {
+      "id": "F17",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#7 birthday",
+      "note": ""
+     },
+     {
+      "id": "F18",
+      "status": "correct",
+      "form": "structured",
+      "where": "interests#3",
+      "note": ""
+     },
+     {
+      "id": "F19",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#5 role, organization_id=2",
+      "note": ""
+     },
+     {
+      "id": "F20",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#5 email",
+      "note": ""
+     },
+     {
+      "id": "F21",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#8 role, organization_id=4; events#6",
+      "note": ""
+     },
+     {
+      "id": "F22",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#8 email, phone_number",
+      "note": ""
+     },
+     {
+      "id": "F23",
+      "status": "correct",
+      "form": "structured",
+      "where": "people#9 role, organization_id=4, relationship_to_adam",
+      "note": ""
+     },
+     {
+      "id": "F24",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#1",
+      "note": ""
+     },
+     {
+      "id": "F25",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#3",
+      "note": "The Sep 23 10:00 time is not stored."
+     },
+     {
+      "id": "F26",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#5",
+      "note": ""
+     },
+     {
+      "id": "F27",
+      "status": "correct",
+      "form": "structured",
+      "where": "places#6 address",
+      "note": ""
+     },
+     {
+      "id": "F28",
+      "status": "correct",
+      "form": "structured",
+      "where": "funding_rounds#1 amount, status, lead_organization_id",
+      "note": ""
+     },
+     {
+      "id": "F29",
+      "status": "correct",
+      "form": "structured",
+      "where": "funding_rounds#1 amount, valuation, valuation_basis, date, contact_person_id",
+      "note": ""
+     },
+     {
+      "id": "F30",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#1",
+      "note": ""
+     },
+     {
+      "id": "F31",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#2",
+      "note": ""
+     },
+     {
+      "id": "F32",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#3",
+      "note": ""
+     },
+     {
+      "id": "F33",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#4",
+      "note": ""
+     },
+     {
+      "id": "F34",
+      "status": "correct",
+      "form": "structured",
+      "where": "events#4; expenses#5",
+      "note": ""
+     },
+     {
+      "id": "F35",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#6",
+      "note": ""
+     },
+     {
+      "id": "F36",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#7",
+      "note": ""
+     },
+     {
+      "id": "F37",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#9",
+      "note": ""
+     },
+     {
+      "id": "F38",
+      "status": "correct",
+      "form": "structured",
+      "where": "expenses#8; places#5",
+      "note": ""
+     },
+     {
+      "id": "F39",
+      "status": "correct",
+      "form": "structured",
+      "where": "workouts#1",
+      "note": ""
+     },
+     {
+      "id": "F40",
+      "status": "partial",
+      "form": "structured",
+      "where": "workouts#3",
+      "note": "The 'chill session' detail is not recorded."
+     },
+     {
+      "id": "F41",
+      "status": "correct",
+      "form": "structured",
+      "where": "workouts#4",
+      "note": ""
+     },
+     {
+      "id": "F42",
+      "status": "correct",
+      "form": "structured",
+      "where": "workouts#6",
+      "note": ""
+     },
+     {
+      "id": "F43",
+      "status": "correct",
+      "form": "structured",
+      "where": "workouts#2",
+      "note": ""
+     },
+     {
+      "id": "F44",
+      "status": "correct",
+      "form": "structured",
+      "where": "workouts#5",
+      "note": ""
+     },
+     {
+      "id": "F45",
+      "status": "correct",
+      "form": "structured",
+      "where": "books#1",
+      "note": ""
+     },
+     {
+      "id": "F46",
+      "status": "partial",
+      "form": "structured",
+      "where": "books#2",
+      "note": "The Sep 14 start date is missing."
+     },
+     {
+      "id": "F47",
+      "status": "correct",
+      "form": "structured",
+      "where": "restaurants#1 favorite_for_person_id",
+      "note": ""
+     },
+     {
+      "id": "F48",
+      "status": "correct",
+      "form": "structured",
+      "where": "interests#1",
+      "note": ""
+     },
+     {
+      "id": "F49",
+      "status": "correct",
+      "form": "structured",
+      "where": "interests#4",
+      "note": ""
+     },
+     {
+      "id": "F50",
+      "status": "partial",
+      "form": "structured",
+      "where": "tasks#1 status",
+      "note": "Status is done, but the Aug 27 renewal date is missing."
+     },
+     {
+      "id": "F51",
+      "status": "correct",
+      "form": "structured",
+      "where": "vehicles#1",
+      "note": ""
+     },
+     {
+      "id": "F52",
+      "status": "partial",
+      "form": "structured",
+      "where": "people#1 move_date; events#4",
+      "note": "Prior residence in Prague is only implied by the flight."
+     },
+     {
+      "id": "F53",
+      "status": "correct",
+      "form": "free_text",
+      "where": "events#2 name",
+      "note": "Dr. Horák appears only in the appointment name."
+     }
+    ],
+    "forbid": [
+     {
+      "id": "N01",
+      "violated": false,
+      "evidence": ""
+     },
+     {
+      "id": "N02",
+      "violated": false,
+      "evidence": "events#2 status cancelled"
+     },
+     {
+      "id": "N03",
+      "violated": false,
+      "evidence": ""
+     },
+     {
+      "id": "N04",
+      "violated": false,
+      "evidence": ""
+     },
+     {
+      "id": "N05",
+      "violated": false,
+      "evidence": ""
+     }
+    ]
+   }
+  }
+ }
+]

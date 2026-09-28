@@ -1,0 +1,12 @@
+<evaluation>
+  <qa_pair><question>In the frozen fixture, which city should be used for the family member visited weekly, after following correction history? Return only the city.</question><answer>Porto</answer></qa_pair>
+  <qa_pair><question>What weekday does the person visit the relative whose earlier residence is superseded? Return the weekday.</question><answer>Sunday</answer></qa_pair>
+  <qa_pair><question>Who leads the recurring hands-on class, after identifying which activity meets early in the week? Return the first name.</question><answer>Mira</answer></qa_pair>
+  <qa_pair><question>What weekday is the class led by that instructor? Use the class and instructor source records; return the weekday.</question><answer>Tuesday</answer></qa_pair>
+  <qa_pair><question>Ignoring travel preparation, what is the latest departure time to arrive at work when it starts? Combine the commute duration and start time. Return HH:MM.</question><answer>07:55</answer></qa_pair>
+  <qa_pair><question>Which language should a reply use after applying the current brevity preference? Check both communication preference sources; return the language name in English.</question><answer>Czech</answer></qa_pair>
+  <qa_pair><question>Should a response follow the older detailed style or the corrected concise style? Resolve the group's change date and return detailed or short.</question><answer>short</answer></qa_pair>
+  <qa_pair><question>On which date was the response-length preference corrected? Resolve the superseded fact's group and the replacement source. Return YYYY-MM-DD.</question><answer>2026-02-09</answer></qa_pair>
+  <qa_pair><question>What colour was the item associated with the visit that was later cancelled? Follow the cancellation's replacement link and return the colour.</question><answer>blue</answer></qa_pair>
+  <qa_pair><question>At what time must the preparation exercise start to finish before the latest train departure for work? Combine the exercise duration, commute duration and work start. Return HH:MM.</question><answer>07:50</answer></qa_pair>
+</evaluation>

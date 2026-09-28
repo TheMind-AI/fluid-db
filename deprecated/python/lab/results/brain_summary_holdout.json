@@ -1,0 +1,199 @@
+{
+ "configs": {
+  "hybrid_r4": {
+   "accuracy": 81.9,
+   "by_type": {
+    "semantic_current": 100.0,
+    "semantic_history": 100.0,
+    "aggregate": 66.7,
+    "episodic_event": 50.0,
+    "episodic_time": 100.0,
+    "routine": 83.3,
+    "prospective": 66.7,
+    "preference": 100.0,
+    "source": 100.0,
+    "period": 16.7,
+    "metamemory": 100.0,
+    "forgotten": 100.0
+   },
+   "n": 36,
+   "nominal_cost": 0.04818
+  },
+  "facts_only": {
+   "accuracy": 70.8,
+   "by_type": {
+    "semantic_current": 100.0,
+    "semantic_history": 66.7,
+    "aggregate": 66.7,
+    "episodic_event": 0.0,
+    "episodic_time": 100.0,
+    "routine": 33.3,
+    "prospective": 83.3,
+    "preference": 100.0,
+    "source": 100.0,
+    "period": 0.0,
+    "metamemory": 100.0,
+    "forgotten": 100.0
+   },
+   "n": 36,
+   "nominal_cost": 0.02009
+  },
+  "log_rag": {
+   "accuracy": 52.8,
+   "by_type": {
+    "semantic_current": 0.0,
+    "semantic_history": 33.3,
+    "aggregate": 0.0,
+    "episodic_event": 83.3,
+    "episodic_time": 100.0,
+    "routine": 0.0,
+    "prospective": 100.0,
+    "preference": 16.7,
+    "source": 66.7,
+    "period": 33.3,
+    "metamemory": 100.0,
+    "forgotten": 100.0
+   },
+   "n": 36,
+   "nominal_cost": 0.00309
+  },
+  "facts_log": {
+   "accuracy": 83.3,
+   "by_type": {
+    "semantic_current": 100.0,
+    "semantic_history": 66.7,
+    "aggregate": 66.7,
+    "episodic_event": 83.3,
+    "episodic_time": 100.0,
+    "routine": 33.3,
+    "prospective": 100.0,
+    "preference": 100.0,
+    "source": 100.0,
+    "period": 50.0,
+    "metamemory": 100.0,
+    "forgotten": 100.0
+   },
+   "n": 36,
+   "nominal_cost": 0.02092
+  },
+  "brain_jev": {
+   "accuracy": 86.1,
+   "by_type": {
+    "semantic_current": 100.0,
+    "semantic_history": 66.7,
+    "aggregate": 66.7,
+    "episodic_event": 83.3,
+    "episodic_time": 100.0,
+    "routine": 66.7,
+    "prospective": 100.0,
+    "preference": 100.0,
+    "source": 100.0,
+    "period": 50.0,
+    "metamemory": 100.0,
+    "forgotten": 100.0
+   },
+   "n": 36,
+   "nominal_cost": 0.01654
+  },
+  "brain_jev_recall": {
+   "accuracy": 88.9,
+   "by_type": {
+    "semantic_current": 100.0,
+    "semantic_history": 66.7,
+    "aggregate": 66.7,
+    "episodic_event": 83.3,
+    "episodic_time": 100.0,
+    "routine": 66.7,
+    "prospective": 100.0,
+    "preference": 100.0,
+    "source": 100.0,
+    "period": 83.3,
+    "metamemory": 100.0,
+    "forgotten": 100.0
+   },
+   "n": 36,
+   "nominal_cost": 0.02103
+  },
+  "brain_llm_router": {
+   "accuracy": 86.1,
+   "by_type": {
+    "semantic_current": 100.0,
+    "semantic_history": 66.7,
+    "aggregate": 66.7,
+    "episodic_event": 83.3,
+    "episodic_time": 100.0,
+    "routine": 66.7,
+    "prospective": 100.0,
+    "preference": 100.0,
+    "source": 100.0,
+    "period": 50.0,
+    "metamemory": 100.0,
+    "forgotten": 100.0
+   },
+   "n": 36,
+   "nominal_cost": 0.02644
+  },
+  "brain_all": {
+   "accuracy": 91.7,
+   "by_type": {
+    "semantic_current": 100.0,
+    "semantic_history": 100.0,
+    "aggregate": 66.7,
+    "episodic_event": 83.3,
+    "episodic_time": 100.0,
+    "routine": 66.7,
+    "prospective": 100.0,
+    "preference": 100.0,
+    "source": 100.0,
+    "period": 83.3,
+    "metamemory": 100.0,
+    "forgotten": 100.0
+   },
+   "n": 36,
+   "nominal_cost": 0.03058
+  },
+  "brain_oracle": {
+   "accuracy": 87.5,
+   "by_type": {
+    "semantic_current": 100.0,
+    "semantic_history": 66.7,
+    "aggregate": 66.7,
+    "episodic_event": 83.3,
+    "episodic_time": 100.0,
+    "routine": 66.7,
+    "prospective": 100.0,
+    "preference": 83.3,
+    "source": 100.0,
+    "period": 83.3,
+    "metamemory": 100.0,
+    "forgotten": 100.0
+   },
+   "n": 36,
+   "nominal_cost": 0.0175
+  }
+ },
+ "H1": {
+  "brain_jev": 86.1,
+  "hybrid_r4": 81.9,
+  "log_rag": 52.8,
+  "facts_only": 70.8,
+  "facts_log": 83.3,
+  "holds": false
+ },
+ "H2": {
+  "stores": {},
+  "holds": false
+ },
+ "H3": {
+  "jev": 86.1,
+  "llm": 86.1,
+  "oracle": 87.5,
+  "jev_route_latency_median_s": 0.288,
+  "llm_route_latency_median_s": 3.369,
+  "holds": true,
+  "brain_jev_oracle_recall": 0.759,
+  "brain_jev_extra_stores": 0.97,
+  "brain_llm_router_oracle_recall": 0.912,
+  "brain_llm_router_extra_stores": 1.33
+ }
+}

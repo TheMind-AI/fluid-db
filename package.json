@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "fluiddb-workspace",
+  "description": "FluidDB: TypeScript conversation memory with a Cloudflare service",
+  "private": true,
+  "type": "module",
+  "packageManager": "bun@1.3.14",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "catalog": {
+      "zod": "4.6.5",
+      "hono": "4.13.9",
+      "typescript": "7.0.2",
+      "@types/bun": "1.4.2",
+      "@cloudflare/workers-types": "5.20260927.1"
+    }
+  },
+  "scripts": {
+    "typecheck": "bun run --filter './packages/*' typecheck && tsc -p tsconfig.tools.json",
+    "test": "bun test && FLUID_LIVE=0 bun run --filter './packages/*' test",
+    "format": "prettier --write .",
+    "check": "bun run skills:check && bun run typecheck && bun run test && bun run eval && prettier --check .",
+    "demo": "bun examples/local.ts",
+    "build": "bun scripts/build.ts",
+    "pack": "bun run build && bun scripts/pack.ts",
+    "verify:packages": "bun run pack && bun scripts/verify-packages.ts",
+    "verify:registry": "bun scripts/verify-packages.ts --registry",
+    "test:runtime": "bun run --cwd packages/worker test:runtime",
+    "eval": "bun evals/run.ts",
+    "test:adapters": "node --import tsx --test packages/postgres/test/conformance.node.ts packages/firestore/test/conformance.node.ts packages/sql/test/conformance.node.ts packages/firestore/test/rest.node.ts",
+    "test:firestore:runtime": "bun run --cwd packages/worker test:firestore-runtime",
+    "skills:generate": "bun scripts/skills.ts",
+    "skills:check": "bun scripts/skills.ts --check",
+    "eval:compare": "bun evals/compare.ts",
+    "release:check": "bun scripts/release.ts"
+  },
+  "devDependencies": {
+    "prettier": "3.9.9",
+    "typescript": "catalog:",
+    "@types/bun": "catalog:",
+    "@fluiddb/core": "workspace:*",
+    "@fluiddb/sql": "workspace:*",
+    "zod": "catalog:",
+    "@fluiddb/providers": "workspace:*",
+    "@fluiddb/schema": "workspace:*",
+    "tsx": "4.23.15",
+    "@fluiddb/eval": "workspace:*"
+  },
+  "prettier": {
+    "semi": false,
+    "printWidth": 120
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheMind-AI/fluid-db.git"
+  },
+  "homepage": "https://github.com/TheMind-AI/fluid-db#readme",
+  "bugs": {
+    "url": "https://github.com/TheMind-AI/fluid-db/issues"
+  },
+  "license": "Apache-2.0"
+}

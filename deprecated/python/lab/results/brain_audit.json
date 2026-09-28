@@ -1,0 +1,27 @@
+{
+ "build_cost_by_step": {
+  "aspects": 0.0646,
+  "episodes": 0.0476,
+  "intentions": 0.0039,
+  "months": 0.0113,
+  "preferences": 0.0028
+ },
+ "build_cost": 0.1302,
+ "rebuild_from_cache_s": 3.2,
+ "leaks": {
+  "602 555 777": {},
+  "Dvořák": {},
+  "Dvorak": {},
+  "731 000 444": {},
+  "my barber": {}
+ },
+ "store_sizes": {
+  "log": 5050,
+  "facts": 4685,
+  "episodes": 911,
+  "routines": 37,
+  "intentions": 31,
+  "preferences": 115,
+  "periods": 54
+ }
+}

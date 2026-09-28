@@ -1,0 +1,7378 @@
+{
+ "trace": [
+  {
+   "i": 0,
+   "id": "su0001",
+   "tier": "C",
+   "wall": 0.4287,
+   "cost": 0.000487,
+   "ops": 10,
+   "crash": null
+  },
+  {
+   "i": 1,
+   "id": "su0002",
+   "tier": "C",
+   "wall": 0.0305,
+   "cost": 0.000365,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 2,
+   "id": "su0003",
+   "tier": "C",
+   "wall": 0.0077,
+   "cost": 0.000517,
+   "ops": 5,
+   "crash": null
+  },
+  {
+   "i": 3,
+   "id": "su0004",
+   "tier": "C",
+   "wall": 0.0073,
+   "cost": 0.000338,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 4,
+   "id": "su0005",
+   "tier": "C",
+   "wall": 8.6786,
+   "cost": 0.000404,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 5,
+   "id": "su0006",
+   "tier": "C",
+   "wall": 1.9917,
+   "cost": 0.000302,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 6,
+   "id": "su0007",
+   "tier": "C",
+   "wall": 3.5487,
+   "cost": 0.000426,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 7,
+   "id": "su0008",
+   "tier": "C",
+   "wall": 2.0547,
+   "cost": 0.000315,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 8,
+   "id": "su0009",
+   "tier": "C",
+   "wall": 4.7474,
+   "cost": 0.000533,
+   "ops": 9,
+   "crash": null
+  },
+  {
+   "i": 9,
+   "id": "su0010",
+   "tier": "C",
+   "wall": 3.4262,
+   "cost": 0.000394,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 10,
+   "id": "su0011",
+   "tier": "C",
+   "wall": 2.9554,
+   "cost": 0.000416,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 11,
+   "id": "su0012",
+   "tier": "C",
+   "wall": 2.6346,
+   "cost": 0.000404,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 12,
+   "id": "su0013",
+   "tier": "C",
+   "wall": 3.2206,
+   "cost": 0.000405,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 13,
+   "id": "su0014",
+   "tier": "C",
+   "wall": 1.912,
+   "cost": 0.000353,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 14,
+   "id": "su0015",
+   "tier": "C",
+   "wall": 4.1421,
+   "cost": 0.000457,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 15,
+   "id": "su0016",
+   "tier": "C",
+   "wall": 1.9893,
+   "cost": 0.000364,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 16,
+   "id": "su0017",
+   "tier": "C-skip",
+   "wall": 0.0077,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 17,
+   "id": "su0018",
+   "tier": "C",
+   "wall": 2.0912,
+   "cost": 0.000371,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 18,
+   "id": "su0019",
+   "tier": "C",
+   "wall": 3.4092,
+   "cost": 0.00049,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 19,
+   "id": "su0020",
+   "tier": "C",
+   "wall": 3.6321,
+   "cost": 0.000473,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 20,
+   "id": "su0021",
+   "tier": "C",
+   "wall": 1.7741,
+   "cost": 0.000398,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 21,
+   "id": "su0022",
+   "tier": "C",
+   "wall": 1.9517,
+   "cost": 0.000401,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 22,
+   "id": "su0023",
+   "tier": "C",
+   "wall": 2.8103,
+   "cost": 0.000474,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 23,
+   "id": "su0024",
+   "tier": "C",
+   "wall": 1.9863,
+   "cost": 0.000401,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 24,
+   "id": "su0025",
+   "tier": "C-skip",
+   "wall": 0.0018,
+   "cost": 3.7e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 25,
+   "id": "su0026",
+   "tier": "C",
+   "wall": 2.4484,
+   "cost": 0.000413,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 26,
+   "id": "su0027",
+   "tier": "C",
+   "wall": 1.9195,
+   "cost": 0.000404,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 27,
+   "id": "su0028",
+   "tier": "C",
+   "wall": 2.8337,
+   "cost": 0.0005,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 28,
+   "id": "su0029",
+   "tier": "C",
+   "wall": 1.5205,
+   "cost": 0.000413,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 29,
+   "id": "su0030",
+   "tier": "C",
+   "wall": 2.0679,
+   "cost": 0.00041,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 30,
+   "id": "su0031",
+   "tier": "C",
+   "wall": 3.2896,
+   "cost": 0.000529,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 31,
+   "id": "su0032",
+   "tier": "C",
+   "wall": 2.6484,
+   "cost": 0.000501,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 32,
+   "id": "su0033",
+   "tier": "C",
+   "wall": 2.0042,
+   "cost": 0.000447,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 33,
+   "id": "su0034",
+   "tier": "C",
+   "wall": 1.7695,
+   "cost": 0.000447,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 34,
+   "id": "su0035",
+   "tier": "C",
+   "wall": 2.7698,
+   "cost": 0.000504,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 35,
+   "id": "su0036",
+   "tier": "C",
+   "wall": 1.9944,
+   "cost": 0.000455,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 36,
+   "id": "su0037",
+   "tier": "C",
+   "wall": 2.722,
+   "cost": 0.000459,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 37,
+   "id": "su0038",
+   "tier": "C",
+   "wall": 3.049,
+   "cost": 0.000533,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 38,
+   "id": "su0039",
+   "tier": "C",
+   "wall": 2.051,
+   "cost": 0.000475,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 39,
+   "id": "su0040",
+   "tier": "C",
+   "wall": 1.4874,
+   "cost": 0.000467,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 40,
+   "id": "su0041",
+   "tier": "C",
+   "wall": 1.9093,
+   "cost": 0.000476,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 41,
+   "id": "su0042",
+   "tier": "C",
+   "wall": 1.7767,
+   "cost": 0.00047,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 42,
+   "id": "su0043",
+   "tier": "C",
+   "wall": 1.9454,
+   "cost": 0.000507,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 43,
+   "id": "su0044",
+   "tier": "C",
+   "wall": 2.0127,
+   "cost": 0.000484,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 44,
+   "id": "su0045",
+   "tier": "C",
+   "wall": 2.208,
+   "cost": 0.000524,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 45,
+   "id": "su0046",
+   "tier": "C",
+   "wall": 1.7801,
+   "cost": 0.000495,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 46,
+   "id": "su0047",
+   "tier": "C",
+   "wall": 2.8658,
+   "cost": 0.000566,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 47,
+   "id": "su0048",
+   "tier": "C",
+   "wall": 2.9764,
+   "cost": 0.000573,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 48,
+   "id": "su0049",
+   "tier": "C",
+   "wall": 2.2817,
+   "cost": 0.00052,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 49,
+   "id": "su0050",
+   "tier": "C",
+   "wall": 1.4387,
+   "cost": 0.000472,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 50,
+   "id": "su0051",
+   "tier": "C",
+   "wall": 2.2243,
+   "cost": 0.000535,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 51,
+   "id": "su0052",
+   "tier": "C",
+   "wall": 2.6196,
+   "cost": 0.000577,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 52,
+   "id": "su0053",
+   "tier": "C",
+   "wall": 2.1766,
+   "cost": 0.000528,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 53,
+   "id": "su0054",
+   "tier": "C",
+   "wall": 3.1004,
+   "cost": 0.000596,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 54,
+   "id": "su0055",
+   "tier": "C",
+   "wall": 2.6421,
+   "cost": 0.000585,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 55,
+   "id": "su0056",
+   "tier": "C",
+   "wall": 1.5327,
+   "cost": 0.000536,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 56,
+   "id": "su0057",
+   "tier": "C",
+   "wall": 2.9202,
+   "cost": 0.000608,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 57,
+   "id": "su0058",
+   "tier": "C",
+   "wall": 2.2137,
+   "cost": 0.000543,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 58,
+   "id": "su0059",
+   "tier": "C",
+   "wall": 3.0688,
+   "cost": 0.00062,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 59,
+   "id": "su0060",
+   "tier": "C",
+   "wall": 1.9592,
+   "cost": 0.000555,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 60,
+   "id": "su0061",
+   "tier": "C",
+   "wall": 2.07,
+   "cost": 0.000562,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 61,
+   "id": "su0062",
+   "tier": "C",
+   "wall": 1.8397,
+   "cost": 0.000561,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 62,
+   "id": "su0063",
+   "tier": "C",
+   "wall": 2.0752,
+   "cost": 0.000572,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 63,
+   "id": "su0064",
+   "tier": "C",
+   "wall": 3.0042,
+   "cost": 0.000677,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 64,
+   "id": "su0065",
+   "tier": "C",
+   "wall": 2.2792,
+   "cost": 0.000634,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 65,
+   "id": "su0066",
+   "tier": "C",
+   "wall": 2.0026,
+   "cost": 0.000588,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 66,
+   "id": "su0067",
+   "tier": "C",
+   "wall": 1.7463,
+   "cost": 0.000596,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 67,
+   "id": "su0068",
+   "tier": "C",
+   "wall": 2.5459,
+   "cost": 0.000655,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 68,
+   "id": "su0069",
+   "tier": "C",
+   "wall": 1.9584,
+   "cost": 0.000605,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 69,
+   "id": "su0070",
+   "tier": "C",
+   "wall": 1.825,
+   "cost": 0.000601,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 70,
+   "id": "su0071",
+   "tier": "C",
+   "wall": 2.2799,
+   "cost": 0.000617,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 71,
+   "id": "su0072",
+   "tier": "C-skip",
+   "wall": 0.0019,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 72,
+   "id": "su0073",
+   "tier": "C",
+   "wall": 3.3499,
+   "cost": 0.000696,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 73,
+   "id": "su0074",
+   "tier": "C",
+   "wall": 2.1038,
+   "cost": 0.000632,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 74,
+   "id": "su0075",
+   "tier": "C",
+   "wall": 2.0471,
+   "cost": 0.000615,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 75,
+   "id": "su0076",
+   "tier": "C",
+   "wall": 2.8807,
+   "cost": 0.00069,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 76,
+   "id": "su0077",
+   "tier": "C",
+   "wall": 1.7443,
+   "cost": 0.000626,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 77,
+   "id": "su0078",
+   "tier": "C",
+   "wall": 2.0514,
+   "cost": 0.000626,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 78,
+   "id": "su0079",
+   "tier": "C",
+   "wall": 2.589,
+   "cost": 0.000663,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 79,
+   "id": "su0080",
+   "tier": "C",
+   "wall": 1.7532,
+   "cost": 0.000631,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 80,
+   "id": "su0081",
+   "tier": "C",
+   "wall": 1.9642,
+   "cost": 0.000637,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 81,
+   "id": "su0082",
+   "tier": "C",
+   "wall": 2.7181,
+   "cost": 0.000681,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 82,
+   "id": "su0083",
+   "tier": "C",
+   "wall": 2.8478,
+   "cost": 0.000708,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 83,
+   "id": "su0084",
+   "tier": "C",
+   "wall": 3.746,
+   "cost": 0.000771,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 84,
+   "id": "su0085",
+   "tier": "C",
+   "wall": 2.0479,
+   "cost": 0.000663,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 85,
+   "id": "su0086",
+   "tier": "C",
+   "wall": 1.9215,
+   "cost": 0.000677,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 86,
+   "id": "su0087",
+   "tier": "C",
+   "wall": 2.9435,
+   "cost": 0.000728,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 87,
+   "id": "su0088",
+   "tier": "C",
+   "wall": 2.3777,
+   "cost": 0.000696,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 88,
+   "id": "su0089",
+   "tier": "C",
+   "wall": 2.4706,
+   "cost": 0.000708,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 89,
+   "id": "su0090",
+   "tier": "C",
+   "wall": 1.8872,
+   "cost": 0.000671,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 90,
+   "id": "su0091",
+   "tier": "C",
+   "wall": 1.8634,
+   "cost": 0.000676,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 91,
+   "id": "su0092",
+   "tier": "C",
+   "wall": 2.2935,
+   "cost": 0.000712,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 92,
+   "id": "su0093",
+   "tier": "C",
+   "wall": 1.8904,
+   "cost": 0.000677,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 93,
+   "id": "su0094",
+   "tier": "C",
+   "wall": 1.9999,
+   "cost": 0.000679,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 94,
+   "id": "su0095",
+   "tier": "C",
+   "wall": 1.5818,
+   "cost": 0.00068,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 95,
+   "id": "su0096",
+   "tier": "C",
+   "wall": 2.3507,
+   "cost": 0.000742,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 96,
+   "id": "su0097",
+   "tier": "C",
+   "wall": 1.1816,
+   "cost": 0.000645,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 97,
+   "id": "su0098",
+   "tier": "C",
+   "wall": 1.9808,
+   "cost": 0.000687,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 98,
+   "id": "su0099",
+   "tier": "C",
+   "wall": 2.2255,
+   "cost": 0.00071,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 99,
+   "id": "su0100",
+   "tier": "C",
+   "wall": 2.0374,
+   "cost": 0.00073,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 100,
+   "id": "su0101",
+   "tier": "C",
+   "wall": 3.8405,
+   "cost": 0.000815,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 101,
+   "id": "su0102",
+   "tier": "C",
+   "wall": 1.8776,
+   "cost": 0.000727,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 102,
+   "id": "su0103",
+   "tier": "C",
+   "wall": 2.4725,
+   "cost": 0.000766,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 103,
+   "id": "su0104",
+   "tier": "C",
+   "wall": 1.956,
+   "cost": 0.000727,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 104,
+   "id": "su0105",
+   "tier": "C",
+   "wall": 1.8826,
+   "cost": 0.000731,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 105,
+   "id": "su0106",
+   "tier": "C",
+   "wall": 2.193,
+   "cost": 0.000763,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 106,
+   "id": "su0107",
+   "tier": "C-skip",
+   "wall": 0.004,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 107,
+   "id": "su0108",
+   "tier": "C",
+   "wall": 2.9475,
+   "cost": 0.000733,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 108,
+   "id": "su0109",
+   "tier": "C",
+   "wall": 3.117,
+   "cost": 0.000794,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 109,
+   "id": "su0110",
+   "tier": "C",
+   "wall": 2.8009,
+   "cost": 0.000809,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 110,
+   "id": "su0111",
+   "tier": "C",
+   "wall": 2.2135,
+   "cost": 0.000755,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 111,
+   "id": "su0112",
+   "tier": "C",
+   "wall": 2.1331,
+   "cost": 0.000749,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 112,
+   "id": "su0113",
+   "tier": "C",
+   "wall": 1.7553,
+   "cost": 0.000743,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 113,
+   "id": "su0114",
+   "tier": "C",
+   "wall": 2.3425,
+   "cost": 0.000786,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 114,
+   "id": "su0115",
+   "tier": "C",
+   "wall": 1.6903,
+   "cost": 0.000738,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 115,
+   "id": "su0116",
+   "tier": "C",
+   "wall": 3.3265,
+   "cost": 0.000859,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 116,
+   "id": "su0117",
+   "tier": "C",
+   "wall": 1.8975,
+   "cost": 0.000767,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 117,
+   "id": "su0118",
+   "tier": "C",
+   "wall": 2.3717,
+   "cost": 0.000769,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 118,
+   "id": "su0119",
+   "tier": "C",
+   "wall": 2.7346,
+   "cost": 0.00083,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 119,
+   "id": "su0120",
+   "tier": "C",
+   "wall": 1.4919,
+   "cost": 0.000759,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 120,
+   "id": "su0121",
+   "tier": "C",
+   "wall": 2.6094,
+   "cost": 0.000837,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 121,
+   "id": "su0122",
+   "tier": "C",
+   "wall": 2.121,
+   "cost": 0.0008,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 122,
+   "id": "su0123",
+   "tier": "C",
+   "wall": 2.4246,
+   "cost": 0.000833,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 123,
+   "id": "su0124",
+   "tier": "C",
+   "wall": 2.7229,
+   "cost": 0.000853,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 124,
+   "id": "su0125",
+   "tier": "C",
+   "wall": 2.8359,
+   "cost": 0.000875,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 125,
+   "id": "su0126",
+   "tier": "C",
+   "wall": 2.2861,
+   "cost": 0.000827,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 126,
+   "id": "su0127",
+   "tier": "C",
+   "wall": 2.4858,
+   "cost": 0.000867,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 127,
+   "id": "su0128",
+   "tier": "C",
+   "wall": 2.7801,
+   "cost": 0.000856,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 128,
+   "id": "su0129",
+   "tier": "C",
+   "wall": 2.7917,
+   "cost": 0.000894,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 129,
+   "id": "su0130",
+   "tier": "C",
+   "wall": 3.0117,
+   "cost": 0.000901,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 130,
+   "id": "su0131",
+   "tier": "C",
+   "wall": 2.4325,
+   "cost": 0.000878,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 131,
+   "id": "su0132",
+   "tier": "A",
+   "wall": 0.0031,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 132,
+   "id": "su0133",
+   "tier": "C",
+   "wall": 2.4351,
+   "cost": 0.000864,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 133,
+   "id": "su0134",
+   "tier": "A",
+   "wall": 0.0018,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 134,
+   "id": "su0135",
+   "tier": "C",
+   "wall": 3.0431,
+   "cost": 0.000918,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 135,
+   "id": "su0136",
+   "tier": "A",
+   "wall": 0.0018,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 136,
+   "id": "su0137",
+   "tier": "C",
+   "wall": 1.7455,
+   "cost": 0.00086,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 137,
+   "id": "su0138",
+   "tier": "A",
+   "wall": 0.0019,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 138,
+   "id": "su0139",
+   "tier": "C",
+   "wall": 2.6938,
+   "cost": 0.000877,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 139,
+   "id": "su0140",
+   "tier": "A",
+   "wall": 0.0034,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 140,
+   "id": "su0141",
+   "tier": "C",
+   "wall": 2.3827,
+   "cost": 0.000896,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 141,
+   "id": "su0142",
+   "tier": "C",
+   "wall": 2.6523,
+   "cost": 0.000931,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 142,
+   "id": "su0143",
+   "tier": "C",
+   "wall": 2.0935,
+   "cost": 0.000877,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 143,
+   "id": "su0144",
+   "tier": "A",
+   "wall": 0.0069,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 144,
+   "id": "su0145",
+   "tier": "C",
+   "wall": 2.1721,
+   "cost": 0.000895,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 145,
+   "id": "su0146",
+   "tier": "A",
+   "wall": 0.0019,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 146,
+   "id": "su0147",
+   "tier": "C",
+   "wall": 2.9581,
+   "cost": 0.000937,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 147,
+   "id": "su0148",
+   "tier": "A",
+   "wall": 0.0029,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 148,
+   "id": "su0149",
+   "tier": "C",
+   "wall": 2.6281,
+   "cost": 0.000938,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 149,
+   "id": "su0150",
+   "tier": "C",
+   "wall": 3.0037,
+   "cost": 0.000975,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 150,
+   "id": "su0151",
+   "tier": "C",
+   "wall": 1.6627,
+   "cost": 0.000896,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 151,
+   "id": "su0152",
+   "tier": "C",
+   "wall": 3.2371,
+   "cost": 0.000979,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 152,
+   "id": "su0153",
+   "tier": "C",
+   "wall": 2.6779,
+   "cost": 0.000994,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 153,
+   "id": "su0154",
+   "tier": "A",
+   "wall": 0.0016,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 154,
+   "id": "su0155",
+   "tier": "C",
+   "wall": 2.1296,
+   "cost": 0.000954,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 155,
+   "id": "su0156",
+   "tier": "C",
+   "wall": 1.8075,
+   "cost": 0.000939,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 156,
+   "id": "su0157",
+   "tier": "C",
+   "wall": 2.4287,
+   "cost": 0.000996,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 157,
+   "id": "su0158",
+   "tier": "C",
+   "wall": 2.0512,
+   "cost": 0.000943,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 158,
+   "id": "su0159",
+   "tier": "A",
+   "wall": 0.0028,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 159,
+   "id": "su0160",
+   "tier": "A",
+   "wall": 0.0016,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 160,
+   "id": "su0161",
+   "tier": "A",
+   "wall": 0.0047,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 161,
+   "id": "su0162",
+   "tier": "C",
+   "wall": 2.7727,
+   "cost": 0.001025,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 162,
+   "id": "su0163",
+   "tier": "C",
+   "wall": 2.8041,
+   "cost": 0.000996,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 163,
+   "id": "su0164",
+   "tier": "C",
+   "wall": 2.5806,
+   "cost": 0.000995,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 164,
+   "id": "su0165",
+   "tier": "C",
+   "wall": 2.4734,
+   "cost": 0.001033,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 165,
+   "id": "su0166",
+   "tier": "C",
+   "wall": 2.1133,
+   "cost": 0.000985,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 166,
+   "id": "su0167",
+   "tier": "A",
+   "wall": 0.0068,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 167,
+   "id": "su0168",
+   "tier": "C",
+   "wall": 2.8878,
+   "cost": 0.001055,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 168,
+   "id": "su0169",
+   "tier": "C",
+   "wall": 2.73,
+   "cost": 0.001021,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 169,
+   "id": "su0170",
+   "tier": "A",
+   "wall": 0.0023,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 170,
+   "id": "su0171",
+   "tier": "A",
+   "wall": 0.0018,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 171,
+   "id": "su0172",
+   "tier": "C",
+   "wall": 2.7436,
+   "cost": 0.001058,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 172,
+   "id": "su0173",
+   "tier": "C",
+   "wall": 2.4438,
+   "cost": 0.001026,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 173,
+   "id": "su0174",
+   "tier": "C",
+   "wall": 3.4372,
+   "cost": 0.00204,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 174,
+   "id": "su0175",
+   "tier": "C",
+   "wall": 2.8849,
+   "cost": 0.001074,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 175,
+   "id": "su0176",
+   "tier": "C",
+   "wall": 1.591,
+   "cost": 0.001003,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 176,
+   "id": "su0177",
+   "tier": "C-skip",
+   "wall": 0.0144,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 177,
+   "id": "su0178",
+   "tier": "C",
+   "wall": 1.8712,
+   "cost": 0.001059,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 178,
+   "id": "su0179",
+   "tier": "C",
+   "wall": 1.7514,
+   "cost": 0.001013,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 179,
+   "id": "su0180",
+   "tier": "C",
+   "wall": 2.3534,
+   "cost": 0.001094,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 180,
+   "id": "su0181",
+   "tier": "C",
+   "wall": 1.9778,
+   "cost": 0.001041,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 181,
+   "id": "su0182",
+   "tier": "A",
+   "wall": 0.0029,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 182,
+   "id": "su0183",
+   "tier": "A",
+   "wall": 0.0026,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 183,
+   "id": "su0184",
+   "tier": "A",
+   "wall": 0.0026,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 184,
+   "id": "su0185",
+   "tier": "C",
+   "wall": 1.9129,
+   "cost": 0.001073,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 185,
+   "id": "su0186",
+   "tier": "C",
+   "wall": 2.775,
+   "cost": 0.00113,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 186,
+   "id": "su0187",
+   "tier": "C",
+   "wall": 2.1839,
+   "cost": 0.001075,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 187,
+   "id": "su0188",
+   "tier": "A",
+   "wall": 0.0019,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 188,
+   "id": "su0189",
+   "tier": "C",
+   "wall": 2.2787,
+   "cost": 0.0011,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 189,
+   "id": "su0190",
+   "tier": "A",
+   "wall": 0.0014,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 190,
+   "id": "su0191",
+   "tier": "C",
+   "wall": 2.4153,
+   "cost": 0.001134,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 191,
+   "id": "su0192",
+   "tier": "C",
+   "wall": 1.5548,
+   "cost": 0.001063,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 192,
+   "id": "su0193",
+   "tier": "A",
+   "wall": 0.0015,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 193,
+   "id": "su0194",
+   "tier": "A",
+   "wall": 0.0013,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 194,
+   "id": "su0195",
+   "tier": "A",
+   "wall": 0.0013,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 195,
+   "id": "su0196",
+   "tier": "A",
+   "wall": 0.0012,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 196,
+   "id": "su0197",
+   "tier": "C",
+   "wall": 1.7453,
+   "cost": 0.001092,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 197,
+   "id": "su0198",
+   "tier": "C",
+   "wall": 2.8202,
+   "cost": 0.001159,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 198,
+   "id": "su0199",
+   "tier": "C",
+   "wall": 1.4417,
+   "cost": 0.001086,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 199,
+   "id": "su0200",
+   "tier": "A",
+   "wall": 0.0018,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 200,
+   "id": "su0201",
+   "tier": "C",
+   "wall": 2.5837,
+   "cost": 0.001172,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 201,
+   "id": "su0202",
+   "tier": "C",
+   "wall": 2.282,
+   "cost": 0.001121,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 202,
+   "id": "su0203",
+   "tier": "A",
+   "wall": 0.0017,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 203,
+   "id": "su0204",
+   "tier": "C-skip",
+   "wall": 0.0029,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 204,
+   "id": "su0205",
+   "tier": "C",
+   "wall": 2.4011,
+   "cost": 0.001174,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 205,
+   "id": "su0206",
+   "tier": "A",
+   "wall": 0.0088,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 206,
+   "id": "su0207",
+   "tier": "C",
+   "wall": 2.6353,
+   "cost": 0.001159,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 207,
+   "id": "su0208",
+   "tier": "A",
+   "wall": 0.0016,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 208,
+   "id": "su0209",
+   "tier": "C",
+   "wall": 1.8969,
+   "cost": 0.001147,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 209,
+   "id": "su0210",
+   "tier": "A",
+   "wall": 0.0018,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 210,
+   "id": "su0211",
+   "tier": "C",
+   "wall": 1.599,
+   "cost": 0.001135,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 211,
+   "id": "su0212",
+   "tier": "C",
+   "wall": 2.82,
+   "cost": 0.001193,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 212,
+   "id": "su0213",
+   "tier": "C",
+   "wall": 2.235,
+   "cost": 0.001179,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 213,
+   "id": "su0214",
+   "tier": "C",
+   "wall": 1.8998,
+   "cost": 0.001152,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 214,
+   "id": "su0215",
+   "tier": "C",
+   "wall": 3.9923,
+   "cost": 0.00128,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 215,
+   "id": "su0216",
+   "tier": "C",
+   "wall": 3.3878,
+   "cost": 0.001251,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 216,
+   "id": "su0217",
+   "tier": "C",
+   "wall": 1.6464,
+   "cost": 0.001176,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 217,
+   "id": "su0218",
+   "tier": "C",
+   "wall": 2.7401,
+   "cost": 0.001228,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 218,
+   "id": "su0219",
+   "tier": "A",
+   "wall": 0.0018,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 219,
+   "id": "su0220",
+   "tier": "C",
+   "wall": 2.5701,
+   "cost": 0.001224,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 220,
+   "id": "su0221",
+   "tier": "C",
+   "wall": 2.517,
+   "cost": 0.001235,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 221,
+   "id": "su0222",
+   "tier": "A",
+   "wall": 0.0023,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 222,
+   "id": "su0223",
+   "tier": "A",
+   "wall": 0.0019,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 223,
+   "id": "su0224",
+   "tier": "C",
+   "wall": 1.7578,
+   "cost": 0.00119,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 224,
+   "id": "su0225",
+   "tier": "C",
+   "wall": 2.4946,
+   "cost": 0.001248,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 225,
+   "id": "su0226",
+   "tier": "C",
+   "wall": 1.639,
+   "cost": 0.001196,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 226,
+   "id": "su0227",
+   "tier": "C",
+   "wall": 3.5249,
+   "cost": 0.001246,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 227,
+   "id": "su0228",
+   "tier": "C",
+   "wall": 2.2566,
+   "cost": 0.001249,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 228,
+   "id": "su0229",
+   "tier": "C",
+   "wall": 1.4687,
+   "cost": 0.001198,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 229,
+   "id": "su0230",
+   "tier": "A",
+   "wall": 0.0017,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 230,
+   "id": "su0231",
+   "tier": "C",
+   "wall": 2.6814,
+   "cost": 0.001283,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 231,
+   "id": "su0232",
+   "tier": "C",
+   "wall": 1.9711,
+   "cost": 0.001235,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 232,
+   "id": "su0233",
+   "tier": "C",
+   "wall": 2.1801,
+   "cost": 0.00128,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 233,
+   "id": "su0234",
+   "tier": "C",
+   "wall": 2.2793,
+   "cost": 0.001265,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 234,
+   "id": "su0235",
+   "tier": "C",
+   "wall": 2.81,
+   "cost": 0.001317,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 235,
+   "id": "su0236",
+   "tier": "C",
+   "wall": 1.9424,
+   "cost": 0.001263,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 236,
+   "id": "su0237",
+   "tier": "C",
+   "wall": 3.4639,
+   "cost": 0.001358,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 237,
+   "id": "su0238",
+   "tier": "A",
+   "wall": 0.0019,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 238,
+   "id": "su0239",
+   "tier": "A",
+   "wall": 0.0016,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 239,
+   "id": "su0240",
+   "tier": "C",
+   "wall": 2.5104,
+   "cost": 0.0013,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 240,
+   "id": "su0241",
+   "tier": "C",
+   "wall": 2.0496,
+   "cost": 0.0013,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 241,
+   "id": "su0242",
+   "tier": "C",
+   "wall": 1.9074,
+   "cost": 0.001277,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 242,
+   "id": "su0243",
+   "tier": "A",
+   "wall": 0.0106,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 243,
+   "id": "su0244",
+   "tier": "C",
+   "wall": 1.9111,
+   "cost": 0.001279,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 244,
+   "id": "su0245",
+   "tier": "C",
+   "wall": 3.0403,
+   "cost": 0.001339,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 245,
+   "id": "su0246",
+   "tier": "C",
+   "wall": 2.0941,
+   "cost": 0.001296,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 246,
+   "id": "su0247",
+   "tier": "C",
+   "wall": 2.6607,
+   "cost": 0.001369,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 247,
+   "id": "su0248",
+   "tier": "C",
+   "wall": 2.08,
+   "cost": 0.001305,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 248,
+   "id": "su0249",
+   "tier": "C",
+   "wall": 2.6367,
+   "cost": 0.001363,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 249,
+   "id": "su0250",
+   "tier": "C",
+   "wall": 1.8507,
+   "cost": 0.001311,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 250,
+   "id": "su0251",
+   "tier": "C-skip",
+   "wall": 0.0031,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 251,
+   "id": "su0252",
+   "tier": "A",
+   "wall": 0.0026,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 252,
+   "id": "su0253",
+   "tier": "C",
+   "wall": 2.2698,
+   "cost": 0.001372,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 253,
+   "id": "su0254",
+   "tier": "C",
+   "wall": 2.0522,
+   "cost": 0.001342,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 254,
+   "id": "su0255",
+   "tier": "C",
+   "wall": 2.5607,
+   "cost": 0.001398,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 255,
+   "id": "su0256",
+   "tier": "C",
+   "wall": 2.0221,
+   "cost": 0.001329,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 256,
+   "id": "su0257",
+   "tier": "A",
+   "wall": 0.002,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 257,
+   "id": "su0258",
+   "tier": "C-skip",
+   "wall": 0.0023,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 258,
+   "id": "su0259",
+   "tier": "A",
+   "wall": 0.0021,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 259,
+   "id": "su0260",
+   "tier": "A",
+   "wall": 0.002,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 260,
+   "id": "su0261",
+   "tier": "C",
+   "wall": 1.5914,
+   "cost": 0.001327,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 261,
+   "id": "su0262",
+   "tier": "C",
+   "wall": 2.7889,
+   "cost": 0.001402,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 262,
+   "id": "su0263",
+   "tier": "C",
+   "wall": 2.5588,
+   "cost": 0.001375,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 263,
+   "id": "su0264",
+   "tier": "A",
+   "wall": 0.0015,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 264,
+   "id": "su0265",
+   "tier": "C-skip",
+   "wall": 0.0035,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 265,
+   "id": "su0266",
+   "tier": "A",
+   "wall": 0.0016,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 266,
+   "id": "su0267",
+   "tier": "A",
+   "wall": 0.0015,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 267,
+   "id": "su0268",
+   "tier": "A",
+   "wall": 0.0011,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 268,
+   "id": "su0269",
+   "tier": "C",
+   "wall": 2.0952,
+   "cost": 0.001383,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 269,
+   "id": "su0270",
+   "tier": "C",
+   "wall": 2.7104,
+   "cost": 0.001402,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 270,
+   "id": "su0271",
+   "tier": "C",
+   "wall": 2.8944,
+   "cost": 0.001435,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 271,
+   "id": "su0272",
+   "tier": "A",
+   "wall": 0.0021,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 272,
+   "id": "su0273",
+   "tier": "C",
+   "wall": 2.4597,
+   "cost": 0.001428,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 273,
+   "id": "su0274",
+   "tier": "A",
+   "wall": 0.0016,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 274,
+   "id": "su0275",
+   "tier": "C",
+   "wall": 2.6235,
+   "cost": 0.001452,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 275,
+   "id": "su0276",
+   "tier": "C-skip",
+   "wall": 0.0017,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 276,
+   "id": "su0277",
+   "tier": "A",
+   "wall": 0.0027,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 277,
+   "id": "su0278",
+   "tier": "C",
+   "wall": 2.2318,
+   "cost": 0.001396,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 278,
+   "id": "su0279",
+   "tier": "C",
+   "wall": 2.8569,
+   "cost": 0.001456,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 279,
+   "id": "su0280",
+   "tier": "A",
+   "wall": 0.0014,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 280,
+   "id": "su0281",
+   "tier": "C",
+   "wall": 2.7024,
+   "cost": 0.001469,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 281,
+   "id": "su0282",
+   "tier": "A",
+   "wall": 0.0017,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 282,
+   "id": "su0283",
+   "tier": "C",
+   "wall": 2.0243,
+   "cost": 0.001435,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 283,
+   "id": "su0284",
+   "tier": "A",
+   "wall": 0.0023,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 284,
+   "id": "su0285",
+   "tier": "C",
+   "wall": 2.9035,
+   "cost": 0.001477,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 285,
+   "id": "su0286",
+   "tier": "A",
+   "wall": 0.0019,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 286,
+   "id": "su0287",
+   "tier": "A",
+   "wall": 0.0016,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 287,
+   "id": "su0288",
+   "tier": "C",
+   "wall": 1.2654,
+   "cost": 0.001385,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 288,
+   "id": "su0289",
+   "tier": "A",
+   "wall": 0.0016,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 289,
+   "id": "su0290",
+   "tier": "A",
+   "wall": 0.0013,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 290,
+   "id": "su0291",
+   "tier": "C",
+   "wall": 2.3188,
+   "cost": 0.001469,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 291,
+   "id": "su0292",
+   "tier": "C",
+   "wall": 2.5087,
+   "cost": 0.001499,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 292,
+   "id": "su0293",
+   "tier": "A",
+   "wall": 0.0013,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 293,
+   "id": "su0294",
+   "tier": "A",
+   "wall": 0.0012,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 294,
+   "id": "su0295",
+   "tier": "A",
+   "wall": 0.0013,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 295,
+   "id": "su0296",
+   "tier": "A",
+   "wall": 0.0013,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 296,
+   "id": "su0297",
+   "tier": "A",
+   "wall": 0.0014,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 297,
+   "id": "su0298",
+   "tier": "A",
+   "wall": 0.0011,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 298,
+   "id": "su0299",
+   "tier": "C",
+   "wall": 2.5383,
+   "cost": 0.001499,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 299,
+   "id": "su0300",
+   "tier": "A",
+   "wall": 0.0021,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 300,
+   "id": "su0301",
+   "tier": "C",
+   "wall": 2.4733,
+   "cost": 0.001518,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 301,
+   "id": "su0302",
+   "tier": "A",
+   "wall": 0.0021,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 302,
+   "id": "su0303",
+   "tier": "A",
+   "wall": 0.0023,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 303,
+   "id": "su0304",
+   "tier": "C",
+   "wall": 1.8189,
+   "cost": 0.001484,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 304,
+   "id": "su0305",
+   "tier": "A",
+   "wall": 0.0038,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 305,
+   "id": "su0306",
+   "tier": "C",
+   "wall": 3.0084,
+   "cost": 0.001559,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 306,
+   "id": "su0307",
+   "tier": "C",
+   "wall": 2.1967,
+   "cost": 0.001501,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 307,
+   "id": "su0308",
+   "tier": "C-skip",
+   "wall": 0.0015,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 308,
+   "id": "su0309",
+   "tier": "C",
+   "wall": 2.1611,
+   "cost": 0.001528,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 309,
+   "id": "su0310",
+   "tier": "C",
+   "wall": 1.7172,
+   "cost": 0.001505,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 310,
+   "id": "su0311",
+   "tier": "C",
+   "wall": 2.8649,
+   "cost": 0.001567,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 311,
+   "id": "su0312",
+   "tier": "A",
+   "wall": 0.0026,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 312,
+   "id": "su0313",
+   "tier": "C",
+   "wall": 2.9591,
+   "cost": 0.001556,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 313,
+   "id": "su0314",
+   "tier": "C",
+   "wall": 3.0296,
+   "cost": 0.001582,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 314,
+   "id": "su0315",
+   "tier": "C",
+   "wall": 2.0802,
+   "cost": 0.001534,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 315,
+   "id": "su0316",
+   "tier": "C",
+   "wall": 2.7173,
+   "cost": 0.001596,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 316,
+   "id": "su0317",
+   "tier": "A",
+   "wall": 0.0022,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 317,
+   "id": "su0318",
+   "tier": "C",
+   "wall": 2.3181,
+   "cost": 0.001559,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 318,
+   "id": "su0319",
+   "tier": "A",
+   "wall": 0.0021,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 319,
+   "id": "su0320",
+   "tier": "A",
+   "wall": 0.0021,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 320,
+   "id": "su0321",
+   "tier": "A",
+   "wall": 0.0027,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 321,
+   "id": "su0322",
+   "tier": "C",
+   "wall": 2.5888,
+   "cost": 0.001589,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 322,
+   "id": "su0323",
+   "tier": "C",
+   "wall": 3.0537,
+   "cost": 0.001632,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 323,
+   "id": "su0324",
+   "tier": "C",
+   "wall": 2.4762,
+   "cost": 0.001619,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 324,
+   "id": "su0325",
+   "tier": "A",
+   "wall": 0.0031,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 325,
+   "id": "su0326",
+   "tier": "C",
+   "wall": 2.3605,
+   "cost": 0.001578,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 326,
+   "id": "su0327",
+   "tier": "C",
+   "wall": 2.8783,
+   "cost": 0.001637,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 327,
+   "id": "su0328",
+   "tier": "A",
+   "wall": 0.0025,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 328,
+   "id": "su0329",
+   "tier": "C",
+   "wall": 2.262,
+   "cost": 0.001599,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 329,
+   "id": "su0330",
+   "tier": "C",
+   "wall": 2.0659,
+   "cost": 0.001596,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 330,
+   "id": "su0331",
+   "tier": "A",
+   "wall": 0.0018,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 331,
+   "id": "su0332",
+   "tier": "A",
+   "wall": 0.0018,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 332,
+   "id": "su0333",
+   "tier": "C",
+   "wall": 2.8142,
+   "cost": 0.001636,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 333,
+   "id": "su0334",
+   "tier": "C",
+   "wall": 1.9496,
+   "cost": 0.001592,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 334,
+   "id": "su0335",
+   "tier": "C",
+   "wall": 1.4004,
+   "cost": 0.001556,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 335,
+   "id": "su0336",
+   "tier": "A",
+   "wall": 0.002,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 336,
+   "id": "su0337",
+   "tier": "A",
+   "wall": 0.0018,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 337,
+   "id": "su0338",
+   "tier": "C",
+   "wall": 2.3169,
+   "cost": 0.00164,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 338,
+   "id": "su0339",
+   "tier": "A",
+   "wall": 0.0024,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 339,
+   "id": "su0340",
+   "tier": "A",
+   "wall": 0.0035,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 340,
+   "id": "su0341",
+   "tier": "C",
+   "wall": 2.6241,
+   "cost": 0.001681,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 341,
+   "id": "su0342",
+   "tier": "C",
+   "wall": 3.434,
+   "cost": 0.0016,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 342,
+   "id": "su0343",
+   "tier": "C",
+   "wall": 2.2341,
+   "cost": 0.001663,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 343,
+   "id": "su0344",
+   "tier": "C",
+   "wall": 1.684,
+   "cost": 0.000827,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 344,
+   "id": "su0345",
+   "tier": "A",
+   "wall": 0.0018,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 345,
+   "id": "su0346",
+   "tier": "C",
+   "wall": 3.6138,
+   "cost": 0.000963,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 346,
+   "id": "su0347",
+   "tier": "C",
+   "wall": 2.3855,
+   "cost": 0.000815,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 347,
+   "id": "su0348",
+   "tier": "A",
+   "wall": 0.0016,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 348,
+   "id": "su0349",
+   "tier": "A",
+   "wall": 0.0024,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 349,
+   "id": "su0350",
+   "tier": "A",
+   "wall": 0.0019,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 350,
+   "id": "su0351",
+   "tier": "C",
+   "wall": 2.0316,
+   "cost": 0.000882,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 351,
+   "id": "su0352",
+   "tier": "C",
+   "wall": 2.2929,
+   "cost": 0.000874,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 352,
+   "id": "su0353",
+   "tier": "C",
+   "wall": 5.8399,
+   "cost": 0.00104,
+   "ops": 6,
+   "crash": null
+  },
+  {
+   "i": 353,
+   "id": "su0354",
+   "tier": "C-skip",
+   "wall": 0.0021,
+   "cost": 3.7e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 354,
+   "id": "su0355",
+   "tier": "A",
+   "wall": 0.0019,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 355,
+   "id": "su0356",
+   "tier": "C",
+   "wall": 3.3235,
+   "cost": 0.000922,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 356,
+   "id": "su0357",
+   "tier": "C",
+   "wall": 2.2258,
+   "cost": 0.000812,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 357,
+   "id": "su0358",
+   "tier": "C",
+   "wall": 3.7064,
+   "cost": 0.00098,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 358,
+   "id": "su0359",
+   "tier": "C",
+   "wall": 2.1869,
+   "cost": 0.000798,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 359,
+   "id": "su0360",
+   "tier": "A",
+   "wall": 0.002,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 360,
+   "id": "su0361",
+   "tier": "C",
+   "wall": 2.3244,
+   "cost": 0.000789,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 361,
+   "id": "su0362",
+   "tier": "C",
+   "wall": 2.1692,
+   "cost": 0.000827,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 362,
+   "id": "su0363",
+   "tier": "C",
+   "wall": 5.3066,
+   "cost": 0.00103,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 363,
+   "id": "su0364",
+   "tier": "A",
+   "wall": 0.002,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 364,
+   "id": "su0365",
+   "tier": "C-skip",
+   "wall": 0.0029,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 365,
+   "id": "su0366",
+   "tier": "C",
+   "wall": 1.4503,
+   "cost": 0.000785,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 366,
+   "id": "su0367",
+   "tier": "C",
+   "wall": 2.5584,
+   "cost": 0.000938,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 367,
+   "id": "su0368",
+   "tier": "A",
+   "wall": 0.0015,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 368,
+   "id": "su0369",
+   "tier": "C",
+   "wall": 4.3978,
+   "cost": 0.001018,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 369,
+   "id": "su0370",
+   "tier": "A",
+   "wall": 0.0017,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 370,
+   "id": "su0371",
+   "tier": "C",
+   "wall": 1.8032,
+   "cost": 0.000823,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 371,
+   "id": "su0372",
+   "tier": "A",
+   "wall": 0.0016,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 372,
+   "id": "su0373",
+   "tier": "A",
+   "wall": 0.0015,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 373,
+   "id": "su0374",
+   "tier": "A",
+   "wall": 0.0016,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 374,
+   "id": "su0375",
+   "tier": "C",
+   "wall": 4.2264,
+   "cost": 0.001611,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 375,
+   "id": "su0376",
+   "tier": "C",
+   "wall": 3.3961,
+   "cost": 0.000958,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 376,
+   "id": "su0377",
+   "tier": "C",
+   "wall": 3.6457,
+   "cost": 0.00094,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 377,
+   "id": "su0378",
+   "tier": "C",
+   "wall": 2.5732,
+   "cost": 0.000845,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 378,
+   "id": "su0379",
+   "tier": "C",
+   "wall": 1.5331,
+   "cost": 0.000806,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 379,
+   "id": "su0380",
+   "tier": "C",
+   "wall": 5.377,
+   "cost": 0.001036,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 380,
+   "id": "su0381",
+   "tier": "C",
+   "wall": 3.1211,
+   "cost": 0.00091,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 381,
+   "id": "su0382",
+   "tier": "A",
+   "wall": 0.0025,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 382,
+   "id": "su0383",
+   "tier": "C",
+   "wall": 2.8115,
+   "cost": 0.000974,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 383,
+   "id": "su0384",
+   "tier": "C",
+   "wall": 2.6616,
+   "cost": 0.000847,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 384,
+   "id": "su0385",
+   "tier": "C",
+   "wall": 3.694,
+   "cost": 0.000956,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 385,
+   "id": "su0386",
+   "tier": "A",
+   "wall": 0.0067,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 386,
+   "id": "su0387",
+   "tier": "C",
+   "wall": 2.1021,
+   "cost": 0.000837,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 387,
+   "id": "su0388",
+   "tier": "C",
+   "wall": 3.4554,
+   "cost": 0.000927,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 388,
+   "id": "su0389",
+   "tier": "A",
+   "wall": 0.0022,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 389,
+   "id": "su0390",
+   "tier": "A",
+   "wall": 0.002,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 390,
+   "id": "su0391",
+   "tier": "A",
+   "wall": 0.0021,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 391,
+   "id": "su0392",
+   "tier": "C-skip",
+   "wall": 0.0026,
+   "cost": 3.7e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 392,
+   "id": "su0393",
+   "tier": "C",
+   "wall": 3.4562,
+   "cost": 0.000871,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 393,
+   "id": "su0394",
+   "tier": "C",
+   "wall": 1.156,
+   "cost": 0.000831,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 394,
+   "id": "su0395",
+   "tier": "C",
+   "wall": 4.5797,
+   "cost": 0.000971,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 395,
+   "id": "su0396",
+   "tier": "C",
+   "wall": 2.0207,
+   "cost": 0.000861,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 396,
+   "id": "su0397",
+   "tier": "A",
+   "wall": 0.0017,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 397,
+   "id": "su0398",
+   "tier": "A",
+   "wall": 0.0015,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 398,
+   "id": "su0399",
+   "tier": "C",
+   "wall": 2.9177,
+   "cost": 0.001003,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 399,
+   "id": "su0400",
+   "tier": "C",
+   "wall": 2.3963,
+   "cost": 0.000854,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 400,
+   "id": "su0401",
+   "tier": "C",
+   "wall": 2.3644,
+   "cost": 0.000841,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 401,
+   "id": "su0402",
+   "tier": "A",
+   "wall": 0.0036,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 402,
+   "id": "su0403",
+   "tier": "A",
+   "wall": 0.0032,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 403,
+   "id": "su0404",
+   "tier": "A",
+   "wall": 0.0018,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 404,
+   "id": "su0405",
+   "tier": "C",
+   "wall": 2.3998,
+   "cost": 0.000801,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 405,
+   "id": "su0406",
+   "tier": "C",
+   "wall": 3.0947,
+   "cost": 0.001018,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 406,
+   "id": "su0407",
+   "tier": "C",
+   "wall": 4.1211,
+   "cost": 0.001001,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 407,
+   "id": "su0408",
+   "tier": "A",
+   "wall": 0.0023,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 408,
+   "id": "su0409",
+   "tier": "A",
+   "wall": 0.0038,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 409,
+   "id": "su0410",
+   "tier": "A",
+   "wall": 0.0017,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 410,
+   "id": "su0411",
+   "tier": "C",
+   "wall": 4.0671,
+   "cost": 0.000974,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 411,
+   "id": "su0412",
+   "tier": "C",
+   "wall": 2.656,
+   "cost": 0.000808,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 412,
+   "id": "su0413",
+   "tier": "C-skip",
+   "wall": 0.003,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 413,
+   "id": "su0414",
+   "tier": "A",
+   "wall": 0.002,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 414,
+   "id": "su0415",
+   "tier": "C-skip",
+   "wall": 0.0021,
+   "cost": 3.7e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 415,
+   "id": "su0416",
+   "tier": "C",
+   "wall": 3.6186,
+   "cost": 0.000985,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 416,
+   "id": "su0417",
+   "tier": "C",
+   "wall": 1.8213,
+   "cost": 0.000782,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 417,
+   "id": "su0418",
+   "tier": "A",
+   "wall": 0.002,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 418,
+   "id": "su0419",
+   "tier": "C-skip",
+   "wall": 0.0018,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 419,
+   "id": "su0420",
+   "tier": "C",
+   "wall": 3.5725,
+   "cost": 0.001008,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 420,
+   "id": "su0421",
+   "tier": "C",
+   "wall": 2.3597,
+   "cost": 0.000864,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 421,
+   "id": "su0422",
+   "tier": "C",
+   "wall": 3.7296,
+   "cost": 0.000996,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 422,
+   "id": "su0423",
+   "tier": "C",
+   "wall": 2.0329,
+   "cost": 0.000833,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 423,
+   "id": "su0424",
+   "tier": "A",
+   "wall": 0.0019,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 424,
+   "id": "su0425",
+   "tier": "C-skip",
+   "wall": 0.0018,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 425,
+   "id": "su0426",
+   "tier": "C",
+   "wall": 3.3727,
+   "cost": 0.000982,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 426,
+   "id": "su0427",
+   "tier": "C",
+   "wall": 2.139,
+   "cost": 0.000858,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 427,
+   "id": "su0428",
+   "tier": "A",
+   "wall": 0.0016,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 428,
+   "id": "su0429",
+   "tier": "C",
+   "wall": 3.5359,
+   "cost": 0.001017,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 429,
+   "id": "su0430",
+   "tier": "C",
+   "wall": 2.1014,
+   "cost": 0.000818,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 430,
+   "id": "su0431",
+   "tier": "C",
+   "wall": 2.3546,
+   "cost": 0.000858,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 431,
+   "id": "su0432",
+   "tier": "A",
+   "wall": 0.0021,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 432,
+   "id": "su0433",
+   "tier": "A",
+   "wall": 0.0031,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 433,
+   "id": "su0434",
+   "tier": "A",
+   "wall": 0.002,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 434,
+   "id": "su0435",
+   "tier": "C",
+   "wall": 2.2664,
+   "cost": 0.000847,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 435,
+   "id": "su0436",
+   "tier": "C",
+   "wall": 2.8969,
+   "cost": 0.000968,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 436,
+   "id": "su0437",
+   "tier": "C",
+   "wall": 2.4212,
+   "cost": 0.000863,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 437,
+   "id": "su0438",
+   "tier": "C-skip",
+   "wall": 0.0019,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 438,
+   "id": "su0439",
+   "tier": "C",
+   "wall": 3.2699,
+   "cost": 0.00099,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 439,
+   "id": "su0440",
+   "tier": "C",
+   "wall": 2.3737,
+   "cost": 0.000907,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 440,
+   "id": "su0441",
+   "tier": "C",
+   "wall": 1.8946,
+   "cost": 0.000825,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 441,
+   "id": "su0442",
+   "tier": "C",
+   "wall": 1.9453,
+   "cost": 0.000814,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 442,
+   "id": "su0443",
+   "tier": "A",
+   "wall": 0.0017,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 443,
+   "id": "su0444",
+   "tier": "C",
+   "wall": 3.6161,
+   "cost": 0.00096,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 444,
+   "id": "su0445",
+   "tier": "C",
+   "wall": 2.5088,
+   "cost": 0.000887,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 445,
+   "id": "su0446",
+   "tier": "A",
+   "wall": 0.0017,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 446,
+   "id": "su0447",
+   "tier": "C",
+   "wall": 3.8663,
+   "cost": 0.001068,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 447,
+   "id": "su0448",
+   "tier": "C",
+   "wall": 2.0777,
+   "cost": 0.000807,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 448,
+   "id": "su0449",
+   "tier": "C-skip",
+   "wall": 0.0016,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 449,
+   "id": "su0450",
+   "tier": "C",
+   "wall": 1.8223,
+   "cost": 0.000862,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 450,
+   "id": "su0451",
+   "tier": "A",
+   "wall": 0.0016,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 451,
+   "id": "su0452",
+   "tier": "C",
+   "wall": 3.5121,
+   "cost": 0.001,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 452,
+   "id": "su0453",
+   "tier": "C",
+   "wall": 2.031,
+   "cost": 0.000854,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 453,
+   "id": "su0454",
+   "tier": "A",
+   "wall": 0.0024,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 454,
+   "id": "su0455",
+   "tier": "A",
+   "wall": 0.0032,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 455,
+   "id": "su0456",
+   "tier": "A",
+   "wall": 0.0016,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 456,
+   "id": "su0457",
+   "tier": "A",
+   "wall": 0.002,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 457,
+   "id": "su0458",
+   "tier": "A",
+   "wall": 0.0016,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 458,
+   "id": "su0459",
+   "tier": "A",
+   "wall": 0.0013,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 459,
+   "id": "su0460",
+   "tier": "C",
+   "wall": 3.1819,
+   "cost": 0.00098,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 460,
+   "id": "su0461",
+   "tier": "C",
+   "wall": 3.1449,
+   "cost": 0.000882,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 461,
+   "id": "su0462",
+   "tier": "C",
+   "wall": 2.1883,
+   "cost": 0.000888,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 462,
+   "id": "su0463",
+   "tier": "C",
+   "wall": 2.9687,
+   "cost": 0.000928,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 463,
+   "id": "su0464",
+   "tier": "C-skip",
+   "wall": 0.002,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 464,
+   "id": "su0465",
+   "tier": "A",
+   "wall": 0.0019,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 465,
+   "id": "su0466",
+   "tier": "A",
+   "wall": 0.0042,
+   "cost": 0,
+   "table": "events",
+   "op": "insert"
+  },
+  {
+   "i": 466,
+   "id": "su0467",
+   "tier": "A",
+   "wall": 0.0017,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 467,
+   "id": "su0468",
+   "tier": "C",
+   "wall": 3.2398,
+   "cost": 0.000965,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 468,
+   "id": "su0469",
+   "tier": "C",
+   "wall": 3.1907,
+   "cost": 0.000959,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 469,
+   "id": "su0470",
+   "tier": "C",
+   "wall": 2.1871,
+   "cost": 0.000861,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 470,
+   "id": "su0471",
+   "tier": "A",
+   "wall": 0.0019,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 471,
+   "id": "su0472",
+   "tier": "C-skip",
+   "wall": 0.0022,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 472,
+   "id": "su0473",
+   "tier": "A",
+   "wall": 0.0019,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 473,
+   "id": "su0474",
+   "tier": "C",
+   "wall": 3.4628,
+   "cost": 0.001062,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 474,
+   "id": "su0475",
+   "tier": "A",
+   "wall": 0.0016,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 475,
+   "id": "su0476",
+   "tier": "A",
+   "wall": 0.0012,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 476,
+   "id": "su0477",
+   "tier": "A",
+   "wall": 0.0014,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 477,
+   "id": "su0478",
+   "tier": "C",
+   "wall": 3.223,
+   "cost": 0.000959,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 478,
+   "id": "su0479",
+   "tier": "A",
+   "wall": 0.0016,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 479,
+   "id": "su0480",
+   "tier": "A",
+   "wall": 0.0015,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 480,
+   "id": "su0481",
+   "tier": "C",
+   "wall": 2.5786,
+   "cost": 0.000859,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 481,
+   "id": "su0482",
+   "tier": "A",
+   "wall": 0.0018,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 482,
+   "id": "su0483",
+   "tier": "A",
+   "wall": 0.0014,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 483,
+   "id": "su0484",
+   "tier": "C",
+   "wall": 2.0431,
+   "cost": 0.000855,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 484,
+   "id": "su0485",
+   "tier": "C",
+   "wall": 2.7113,
+   "cost": 0.000864,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 485,
+   "id": "su0486",
+   "tier": "A",
+   "wall": 0.0016,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 486,
+   "id": "su0487",
+   "tier": "A",
+   "wall": 0.0017,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 487,
+   "id": "su0488",
+   "tier": "C",
+   "wall": 3.43,
+   "cost": 0.000975,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 488,
+   "id": "su0489",
+   "tier": "C",
+   "wall": 1.8107,
+   "cost": 0.000862,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 489,
+   "id": "su0490",
+   "tier": "C-skip",
+   "wall": 0.0018,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 490,
+   "id": "su0491",
+   "tier": "A",
+   "wall": 0.0018,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 491,
+   "id": "su0492",
+   "tier": "A",
+   "wall": 0.0022,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 492,
+   "id": "su0493",
+   "tier": "C",
+   "wall": 2.9398,
+   "cost": 0.000821,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 493,
+   "id": "su0494",
+   "tier": "A",
+   "wall": 0.0022,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 494,
+   "id": "su0495",
+   "tier": "A",
+   "wall": 0.0016,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 495,
+   "id": "su0496",
+   "tier": "A",
+   "wall": 0.0012,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 496,
+   "id": "su0497",
+   "tier": "C",
+   "wall": 2.1142,
+   "cost": 0.000834,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 497,
+   "id": "su0498",
+   "tier": "C",
+   "wall": 2.0756,
+   "cost": 0.001014,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 498,
+   "id": "su0499",
+   "tier": "A",
+   "wall": 0.0042,
+   "cost": 0,
+   "table": "events",
+   "op": "insert"
+  },
+  {
+   "i": 499,
+   "id": "su0500",
+   "tier": "C",
+   "wall": 2.1495,
+   "cost": 0.000857,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 500,
+   "id": "su0501",
+   "tier": "C",
+   "wall": 3.1406,
+   "cost": 0.000957,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 501,
+   "id": "su0502",
+   "tier": "A",
+   "wall": 0.0015,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 502,
+   "id": "su0503",
+   "tier": "C",
+   "wall": 3.1638,
+   "cost": 0.000976,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 503,
+   "id": "su0504",
+   "tier": "C",
+   "wall": 2.3393,
+   "cost": 0.0009,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 504,
+   "id": "su0505",
+   "tier": "C-skip",
+   "wall": 0.0021,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 505,
+   "id": "su0506",
+   "tier": "A",
+   "wall": 0.0018,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 506,
+   "id": "su0507",
+   "tier": "A",
+   "wall": 0.0017,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 507,
+   "id": "su0508",
+   "tier": "A",
+   "wall": 0.0017,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 508,
+   "id": "su0509",
+   "tier": "C-skip",
+   "wall": 0.0019,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 509,
+   "id": "su0510",
+   "tier": "A",
+   "wall": 0.0018,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 510,
+   "id": "su0511",
+   "tier": "A",
+   "wall": 0.0016,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 511,
+   "id": "su0512",
+   "tier": "A",
+   "wall": 0.0015,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 512,
+   "id": "su0513",
+   "tier": "C",
+   "wall": 6.87,
+   "cost": 0.001153,
+   "ops": 5,
+   "crash": null
+  },
+  {
+   "i": 513,
+   "id": "su0514",
+   "tier": "C",
+   "wall": 2.5729,
+   "cost": 0.000924,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 514,
+   "id": "su0515",
+   "tier": "C",
+   "wall": 1.8807,
+   "cost": 0.000781,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 515,
+   "id": "su0516",
+   "tier": "A",
+   "wall": 0.0017,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 516,
+   "id": "su0517",
+   "tier": "C",
+   "wall": 2.8028,
+   "cost": 0.00101,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 517,
+   "id": "su0518",
+   "tier": "C",
+   "wall": 3.4502,
+   "cost": 0.000986,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 518,
+   "id": "su0519",
+   "tier": "C",
+   "wall": 3.2791,
+   "cost": 0.000884,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 519,
+   "id": "su0520",
+   "tier": "C",
+   "wall": 2.0763,
+   "cost": 0.00081,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 520,
+   "id": "su0521",
+   "tier": "A",
+   "wall": 0.003,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 521,
+   "id": "su0522",
+   "tier": "A",
+   "wall": 0.0017,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 522,
+   "id": "su0523",
+   "tier": "C",
+   "wall": 1.9913,
+   "cost": 0.000917,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 523,
+   "id": "su0524",
+   "tier": "C",
+   "wall": 2.9683,
+   "cost": 0.001062,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 524,
+   "id": "su0525",
+   "tier": "A",
+   "wall": 0.0021,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 525,
+   "id": "su0526",
+   "tier": "A",
+   "wall": 0.0028,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 526,
+   "id": "su0527",
+   "tier": "C",
+   "wall": 2.8625,
+   "cost": 0.000981,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 527,
+   "id": "su0528",
+   "tier": "C",
+   "wall": 2.0135,
+   "cost": 0.000876,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 528,
+   "id": "su0529",
+   "tier": "C",
+   "wall": 2.3929,
+   "cost": 0.000956,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 529,
+   "id": "su0530",
+   "tier": "C",
+   "wall": 1.4523,
+   "cost": 0.000873,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 530,
+   "id": "su0531",
+   "tier": "C",
+   "wall": 3.8724,
+   "cost": 0.001036,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 531,
+   "id": "su0532",
+   "tier": "A",
+   "wall": 0.002,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 532,
+   "id": "su0533",
+   "tier": "A",
+   "wall": 0.0014,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 533,
+   "id": "su0534",
+   "tier": "A",
+   "wall": 0.002,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 534,
+   "id": "su0535",
+   "tier": "C-skip",
+   "wall": 0.0051,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 535,
+   "id": "su0536",
+   "tier": "A",
+   "wall": 0.007,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 536,
+   "id": "su0537",
+   "tier": "C",
+   "wall": 3.7418,
+   "cost": 0.001115,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 537,
+   "id": "su0538",
+   "tier": "A",
+   "wall": 0.0051,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 538,
+   "id": "su0539",
+   "tier": "C",
+   "wall": 2.3257,
+   "cost": 0.000905,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 539,
+   "id": "su0540",
+   "tier": "A",
+   "wall": 0.0026,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 540,
+   "id": "su0541",
+   "tier": "C",
+   "wall": 2.3288,
+   "cost": 0.000835,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 541,
+   "id": "su0542",
+   "tier": "C-skip",
+   "wall": 0.0024,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 542,
+   "id": "su0543",
+   "tier": "A",
+   "wall": 0.0033,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 543,
+   "id": "su0544",
+   "tier": "C",
+   "wall": 2.3808,
+   "cost": 0.000942,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 544,
+   "id": "su0545",
+   "tier": "C",
+   "wall": 2.7557,
+   "cost": 0.000961,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 545,
+   "id": "su0546",
+   "tier": "C",
+   "wall": 2.1354,
+   "cost": 0.00087,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 546,
+   "id": "su0547",
+   "tier": "A",
+   "wall": 0.0037,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 547,
+   "id": "su0548",
+   "tier": "C",
+   "wall": 3.2492,
+   "cost": 0.000986,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 548,
+   "id": "su0549",
+   "tier": "C",
+   "wall": 2.401,
+   "cost": 0.000931,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 549,
+   "id": "su0550",
+   "tier": "C",
+   "wall": 2.678,
+   "cost": 0.000956,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 550,
+   "id": "su0551",
+   "tier": "C",
+   "wall": 2.3186,
+   "cost": 0.000926,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 551,
+   "id": "su0552",
+   "tier": "A",
+   "wall": 0.0017,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 552,
+   "id": "su0553",
+   "tier": "A",
+   "wall": 0.0018,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 553,
+   "id": "su0554",
+   "tier": "A",
+   "wall": 0.0017,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 554,
+   "id": "su0555",
+   "tier": "C",
+   "wall": 2.3853,
+   "cost": 0.000928,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 555,
+   "id": "su0556",
+   "tier": "C",
+   "wall": 2.8723,
+   "cost": 0.00105,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 556,
+   "id": "su0557",
+   "tier": "C",
+   "wall": 2.0574,
+   "cost": 0.000894,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 557,
+   "id": "su0558",
+   "tier": "C",
+   "wall": 3.0185,
+   "cost": 0.000962,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 558,
+   "id": "su0559",
+   "tier": "C",
+   "wall": 1.8713,
+   "cost": 0.000915,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 559,
+   "id": "su0560",
+   "tier": "C",
+   "wall": 3.2523,
+   "cost": 0.00101,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 560,
+   "id": "su0561",
+   "tier": "C",
+   "wall": 2.1126,
+   "cost": 0.000901,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 561,
+   "id": "su0562",
+   "tier": "C",
+   "wall": 2.932,
+   "cost": 0.001009,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 562,
+   "id": "su0563",
+   "tier": "C",
+   "wall": 1.7862,
+   "cost": 0.000895,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 563,
+   "id": "su0564",
+   "tier": "A",
+   "wall": 0.0018,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 564,
+   "id": "su0565",
+   "tier": "C",
+   "wall": 3.0938,
+   "cost": 0.001025,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 565,
+   "id": "su0566",
+   "tier": "C",
+   "wall": 2.0893,
+   "cost": 0.000896,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 566,
+   "id": "su0567",
+   "tier": "A",
+   "wall": 0.0018,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 567,
+   "id": "su0568",
+   "tier": "C-skip",
+   "wall": 0.0022,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 568,
+   "id": "su0569",
+   "tier": "C",
+   "wall": 2.7654,
+   "cost": 0.000999,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 569,
+   "id": "su0570",
+   "tier": "A",
+   "wall": 0.002,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 570,
+   "id": "su0571",
+   "tier": "C",
+   "wall": 1.7172,
+   "cost": 0.000866,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 571,
+   "id": "su0572",
+   "tier": "A",
+   "wall": 0.0035,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 572,
+   "id": "su0573",
+   "tier": "C",
+   "wall": 1.9294,
+   "cost": 0.000821,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 573,
+   "id": "su0574",
+   "tier": "C",
+   "wall": 2.633,
+   "cost": 0.000976,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 574,
+   "id": "su0575",
+   "tier": "C",
+   "wall": 3.0595,
+   "cost": 0.000931,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 575,
+   "id": "su0576",
+   "tier": "C",
+   "wall": 1.8588,
+   "cost": 0.000902,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 576,
+   "id": "su0577",
+   "tier": "A",
+   "wall": 0.0015,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 577,
+   "id": "su0578",
+   "tier": "A",
+   "wall": 0.0016,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 578,
+   "id": "su0579",
+   "tier": "C",
+   "wall": 3.828,
+   "cost": 0.001056,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 579,
+   "id": "su0580",
+   "tier": "C",
+   "wall": 2.1597,
+   "cost": 0.000876,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 580,
+   "id": "su0581",
+   "tier": "C",
+   "wall": 2.9048,
+   "cost": 0.001063,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 581,
+   "id": "su0582",
+   "tier": "A",
+   "wall": 0.0024,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 582,
+   "id": "su0583",
+   "tier": "C",
+   "wall": 2.0937,
+   "cost": 0.000879,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 583,
+   "id": "su0584",
+   "tier": "C",
+   "wall": 2.216,
+   "cost": 0.000821,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 584,
+   "id": "su0585",
+   "tier": "A",
+   "wall": 0.0022,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 585,
+   "id": "su0586",
+   "tier": "C",
+   "wall": 2.231,
+   "cost": 0.00099,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 586,
+   "id": "su0587",
+   "tier": "C",
+   "wall": 2.0311,
+   "cost": 0.000898,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 587,
+   "id": "su0588",
+   "tier": "A",
+   "wall": 0.0023,
+   "cost": 0,
+   "table": "events",
+   "op": "insert"
+  },
+  {
+   "i": 588,
+   "id": "su0589",
+   "tier": "C-skip",
+   "wall": 0.0028,
+   "cost": 3.7e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 589,
+   "id": "su0590",
+   "tier": "C",
+   "wall": 2.6628,
+   "cost": 0.001011,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 590,
+   "id": "su0591",
+   "tier": "C",
+   "wall": 2.1848,
+   "cost": 0.000932,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 591,
+   "id": "su0592",
+   "tier": "C",
+   "wall": 10.0227,
+   "cost": 0.00149,
+   "ops": 26,
+   "crash": null
+  },
+  {
+   "i": 592,
+   "id": "su0593",
+   "tier": "A",
+   "wall": 0.0016,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 593,
+   "id": "su0594",
+   "tier": "A",
+   "wall": 0.0017,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 594,
+   "id": "su0595",
+   "tier": "A",
+   "wall": 0.0016,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 595,
+   "id": "su0596",
+   "tier": "C-skip",
+   "wall": 0.0034,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 596,
+   "id": "su0597",
+   "tier": "C",
+   "wall": 2.6417,
+   "cost": 0.000782,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 597,
+   "id": "su0598",
+   "tier": "A",
+   "wall": 0.0017,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 598,
+   "id": "su0599",
+   "tier": "A",
+   "wall": 0.0018,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 599,
+   "id": "su0600",
+   "tier": "C",
+   "wall": 4.0787,
+   "cost": 0.001011,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 600,
+   "id": "su0601",
+   "tier": "C",
+   "wall": 2.3109,
+   "cost": 0.000885,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 601,
+   "id": "su0602",
+   "tier": "A",
+   "wall": 0.0026,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 602,
+   "id": "su0603",
+   "tier": "A",
+   "wall": 0.0018,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 603,
+   "id": "su0604",
+   "tier": "C",
+   "wall": 2.0602,
+   "cost": 0.000833,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 604,
+   "id": "su0605",
+   "tier": "A",
+   "wall": 0.0044,
+   "cost": 0,
+   "table": "events",
+   "op": "insert"
+  },
+  {
+   "i": 605,
+   "id": "su0606",
+   "tier": "C",
+   "wall": 2.5867,
+   "cost": 0.000989,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 606,
+   "id": "su0607",
+   "tier": "C",
+   "wall": 2.9836,
+   "cost": 0.00097,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 607,
+   "id": "su0608",
+   "tier": "A",
+   "wall": 0.0016,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 608,
+   "id": "su0609",
+   "tier": "C",
+   "wall": 1.9657,
+   "cost": 0.000906,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 609,
+   "id": "su0610",
+   "tier": "A",
+   "wall": 0.0015,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 610,
+   "id": "su0611",
+   "tier": "C",
+   "wall": 2.7937,
+   "cost": 0.00104,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 611,
+   "id": "su0612",
+   "tier": "A",
+   "wall": 0.0016,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 612,
+   "id": "su0613",
+   "tier": "A",
+   "wall": 0.0014,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 613,
+   "id": "su0614",
+   "tier": "C",
+   "wall": 3.5775,
+   "cost": 0.001025,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 614,
+   "id": "su0615",
+   "tier": "A",
+   "wall": 0.0015,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 615,
+   "id": "su0616",
+   "tier": "A",
+   "wall": 0.003,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 616,
+   "id": "su0617",
+   "tier": "A",
+   "wall": 0.0162,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 617,
+   "id": "su0618",
+   "tier": "C",
+   "wall": 3.3475,
+   "cost": 0.000971,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 618,
+   "id": "su0619",
+   "tier": "C",
+   "wall": 2.2453,
+   "cost": 0.000897,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 619,
+   "id": "su0620",
+   "tier": "C",
+   "wall": 3.7115,
+   "cost": 0.001102,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 620,
+   "id": "su0621",
+   "tier": "A",
+   "wall": 0.0017,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 621,
+   "id": "su0622",
+   "tier": "C",
+   "wall": 2.9575,
+   "cost": 0.001058,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 622,
+   "id": "su0623",
+   "tier": "C",
+   "wall": 1.9954,
+   "cost": 0.000889,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 623,
+   "id": "su0624",
+   "tier": "A",
+   "wall": 0.0022,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 624,
+   "id": "su0625",
+   "tier": "A",
+   "wall": 0.0027,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 625,
+   "id": "su0626",
+   "tier": "C",
+   "wall": 3.1137,
+   "cost": 0.001008,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 626,
+   "id": "su0627",
+   "tier": "C",
+   "wall": 1.6923,
+   "cost": 0.00088,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 627,
+   "id": "su0628",
+   "tier": "A",
+   "wall": 0.0014,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 628,
+   "id": "su0629",
+   "tier": "C",
+   "wall": 2.7749,
+   "cost": 0.000979,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 629,
+   "id": "su0630",
+   "tier": "C",
+   "wall": 2.1661,
+   "cost": 0.00086,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 630,
+   "id": "su0631",
+   "tier": "C",
+   "wall": 2.1484,
+   "cost": 0.000998,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 631,
+   "id": "su0632",
+   "tier": "C",
+   "wall": 2.3667,
+   "cost": 0.000907,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 632,
+   "id": "su0633",
+   "tier": "C",
+   "wall": 3.5422,
+   "cost": 0.001062,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 633,
+   "id": "su0634",
+   "tier": "C",
+   "wall": 2.0515,
+   "cost": 0.000923,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 634,
+   "id": "su0635",
+   "tier": "A",
+   "wall": 0.0016,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 635,
+   "id": "su0636",
+   "tier": "A",
+   "wall": 0.0018,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 636,
+   "id": "su0637",
+   "tier": "A",
+   "wall": 0.0013,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 637,
+   "id": "su0638",
+   "tier": "C-skip",
+   "wall": 0.0039,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 638,
+   "id": "su0639",
+   "tier": "A",
+   "wall": 0.0021,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 639,
+   "id": "su0640",
+   "tier": "A",
+   "wall": 0.0015,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 640,
+   "id": "su0641",
+   "tier": "C",
+   "wall": 2.7417,
+   "cost": 0.001061,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 641,
+   "id": "su0642",
+   "tier": "C",
+   "wall": 2.0412,
+   "cost": 0.000916,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 642,
+   "id": "su0643",
+   "tier": "C",
+   "wall": 3.1068,
+   "cost": 0.001053,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 643,
+   "id": "su0644",
+   "tier": "A",
+   "wall": 0.0014,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 644,
+   "id": "su0645",
+   "tier": "A",
+   "wall": 0.0012,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 645,
+   "id": "su0646",
+   "tier": "C",
+   "wall": 3.0923,
+   "cost": 0.001065,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 646,
+   "id": "su0647",
+   "tier": "A",
+   "wall": 0.0022,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 647,
+   "id": "su0648",
+   "tier": "C",
+   "wall": 2.1663,
+   "cost": 0.000902,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 648,
+   "id": "su0649",
+   "tier": "C",
+   "wall": 2.219,
+   "cost": 0.000866,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 649,
+   "id": "su0650",
+   "tier": "C",
+   "wall": 2.6859,
+   "cost": 0.001038,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 650,
+   "id": "su0651",
+   "tier": "C",
+   "wall": 2.0488,
+   "cost": 0.000926,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 651,
+   "id": "su0652",
+   "tier": "C",
+   "wall": 1.2079,
+   "cost": 0.000886,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 652,
+   "id": "su0653",
+   "tier": "C",
+   "wall": 2.0377,
+   "cost": 0.000871,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 653,
+   "id": "su0654",
+   "tier": "C",
+   "wall": 2.9372,
+   "cost": 0.001006,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 654,
+   "id": "su0655",
+   "tier": "C",
+   "wall": 2.2618,
+   "cost": 0.00094,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 655,
+   "id": "su0656",
+   "tier": "A",
+   "wall": 0.0016,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 656,
+   "id": "su0657",
+   "tier": "C",
+   "wall": 2.2373,
+   "cost": 0.000925,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 657,
+   "id": "su0658",
+   "tier": "C",
+   "wall": 3.5989,
+   "cost": 0.001042,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 658,
+   "id": "su0659",
+   "tier": "A",
+   "wall": 0.0017,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 659,
+   "id": "su0660",
+   "tier": "A",
+   "wall": 0.0016,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 660,
+   "id": "su0661",
+   "tier": "A",
+   "wall": 0.0015,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 661,
+   "id": "su0662",
+   "tier": "A",
+   "wall": 0.0017,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 662,
+   "id": "su0663",
+   "tier": "A",
+   "wall": 0.0017,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 663,
+   "id": "su0664",
+   "tier": "C",
+   "wall": 3.104,
+   "cost": 0.000901,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 664,
+   "id": "su0665",
+   "tier": "C",
+   "wall": 2.7747,
+   "cost": 0.001013,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 665,
+   "id": "su0666",
+   "tier": "C",
+   "wall": 1.8657,
+   "cost": 0.000903,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 666,
+   "id": "su0667",
+   "tier": "C",
+   "wall": 2.6076,
+   "cost": 0.000996,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 667,
+   "id": "su0668",
+   "tier": "A",
+   "wall": 0.0015,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 668,
+   "id": "su0669",
+   "tier": "A",
+   "wall": 0.0013,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 669,
+   "id": "su0670",
+   "tier": "A",
+   "wall": 0.0014,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  },
+  {
+   "i": 670,
+   "id": "su0671",
+   "tier": "C",
+   "wall": 2.6726,
+   "cost": 0.00086,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 671,
+   "id": "su0672",
+   "tier": "C",
+   "wall": 3.2547,
+   "cost": 0.000998,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 672,
+   "id": "su0673",
+   "tier": "C",
+   "wall": 2.0279,
+   "cost": 0.000884,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 673,
+   "id": "su0674",
+   "tier": "C",
+   "wall": 2.9631,
+   "cost": 0.001053,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 674,
+   "id": "su0675",
+   "tier": "A",
+   "wall": 0.0015,
+   "cost": 0,
+   "table": "tickets",
+   "op": "update"
+  }
+ ],
+ "compiles": [
+  {
+   "at": 120,
+   "tables": [
+    {
+     "table": "tickets",
+     "examples": 23,
+     "proposed": 13,
+     "kept": 0,
+     "coverage": 0.0
+    },
+    {
+     "table": "tickets",
+     "update": true,
+     "examples": 66,
+     "proposed": 12,
+     "kept": 6,
+     "coverage": 0.545
+    }
+   ],
+   "s": 66.6
+  },
+  {
+   "at": 270,
+   "tables": [
+    {
+     "table": "tickets",
+     "examples": 62,
+     "proposed": 12,
+     "kept": 0,
+     "coverage": 0.0
+    },
+    {
+     "table": "csat_surveys",
+     "examples": 16,
+     "proposed": 3,
+     "kept": 0,
+     "coverage": 0.0
+    },
+    {
+     "table": "tickets",
+     "update": true,
+     "examples": 107,
+     "proposed": 18,
+     "kept": 1,
+     "coverage": 0.505
+    }
+   ],
+   "s": 90.9
+  },
+  {
+   "at": 420,
+   "tables": [
+    {
+     "table": "tickets",
+     "examples": 97,
+     "proposed": 9,
+     "kept": 0,
+     "coverage": 0.0
+    },
+    {
+     "table": "csat_surveys",
+     "examples": 23,
+     "proposed": 3,
+     "kept": 0,
+     "coverage": 0.0
+    },
+    {
+     "table": "events",
+     "examples": 13,
+     "proposed": 7,
+     "kept": 1,
+     "coverage": 0.308
+    },
+    {
+     "table": "tickets",
+     "update": true,
+     "examples": 130,
+     "proposed": 6,
+     "kept": 0,
+     "coverage": 0.415
+    }
+   ],
+   "s": 79.9
+  },
+  {
+   "at": 570,
+   "tables": [
+    {
+     "table": "tickets",
+     "examples": 132,
+     "proposed": 11,
+     "kept": 0,
+     "coverage": 0.0
+    },
+    {
+     "table": "csat_surveys",
+     "examples": 32,
+     "proposed": 3,
+     "kept": 0,
+     "coverage": 0.0
+    },
+    {
+     "table": "tickets",
+     "update": true,
+     "examples": 159,
+     "proposed": 6,
+     "kept": 0,
+     "coverage": 0.34
+    }
+   ],
+   "s": 76.2
+  }
+ ],
+ "patterns_report": [
+  {
+   "table": "tickets",
+   "regex": "New ticket #(?P<ticket_number>\\d+) from (?P<person>[^()]+?) \\((?P<organization>[^()]+?)\\): \"(?P<title>[^\"]+)\"\\s*>\\s*(?P<description>.+?)(?=\\s*$)",
+   "keep": false,
+   "why": "column received_at: group 'received_at' is not in the regex (its groups: ticket_number, person, organization, title, description)",
+   "wrong": [],
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0
+  },
+  {
+   "table": "tickets",
+   "regex": "MESSAGE \\(sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\): \"New ticket #(?P<ticket_number>\\d+) from (?P<person>[^()]+?) \\((?P<organization>[^()]+?)\\): \"(?P<title>[^\"]+)\"\\n> (?P<description>.+?)\"?\\s*$",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "MESSAGE \\(sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\): \"New ticket #(?P<ticket_number>\\d+) from (?P<person>[^()]+?) \\((?P<organization>[^()]+?)\\): \"(?P<title>[^\"]+)\"\\n> (?P<description>.+?)(?P<impact>It's blocking a few of our people\\.)\"?\\s*$",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "MESSAGE \\(sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\): \"New ticket #(?P<ticket_number>\\d+) from (?P<person>[^()]+?) \\((?P<organization>[^()]+?)\\): \"(?P<title>[^\"]+)\"\\n> (?P<description>.+?)(?P<impact>It's blocking a few of our people\\.)\"?\\s*$",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "MESSAGE \\(sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\): \"(?P<person>[^()]+?) \\((?P<organization>[^()]+?)\\) complained about (?P<description>.+?) — don't\"",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "MESSAGE\\s*\\(sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\):\\s*\"New ticket #(?P<ticket_number>\\d+) from (?P<person>[^()]+?) \\((?P<organization>[^()]+?)\\): \"(?P<title>[^\"]+)\"(?:\\r?\\n|\\\\n)>\\s*(?P<description>.+?)\"?\\s*$",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "MESSAGE\\s*\\(sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\):\\s*\"New ticket #(?P<ticket_number>\\d+) from (?P<person>[^()]+?) \\((?P<organization>[^()]+?)\\): \"(?P<title>[^\"]+)\"(?:\\r?\\n|\\\\n)>\\s*(?P<description>.+?)(?i:It's blocking a few of our people\\.)\"?\\s*$",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "MESSAGE\\s*\\(sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\):\\s*\"New ticket #(?P<ticket_number>\\d+) from (?P<person>[^()]+?) \\((?P<organization>[^()]+?)\\): \"(?P<title>[^\"]+)\"(?:\\r?\\n|\\\\n)>\\s*(?P<description>.+?)(?i:It's blocking a few of our people\\.)\"?\\s*$",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "MESSAGE\\s*\\(sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\):\\s*\"(?P<person>[^()]+?) \\((?P<organization>[^()]+?)\\) complained about (?P<complaint>.+?)\\s*[—-]\\s*don't\"?\\s*$",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "MESSAGE\\s*\\(sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\):\\s*\"New ticket #(?P<ticket_number>\\d+) from (?P<person>[^()]+?) \\((?P<organization>[^()]+?)\\): \\\\\"(?P<title>[^\"\\\\]+)\\\\\"(?:\\r?\\n|\\\\n)>\\s*(?P<description>.+?)\\s*\"?\\s*$",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "MESSAGE\\s*\\(sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\):\\s*\"New ticket #(?P<ticket_number>\\d+) from (?P<person>[^()]+?) \\((?P<organization>[^()]+?)\\): \\\\\"(?P<title>[^\"\\\\]+)\\\\\"(?:\\r?\\n|\\\\n)>\\s*(?P<description>.+?)(?i:It's blocking a few of our people\\.)\\s*\"?\\s*$",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "MESSAGE\\s*\\(sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\):\\s*\"New ticket #(?P<ticket_number>\\d+) from (?P<person>[^()]+?) \\((?P<organization>[^()]+?)\\): \\\\\"(?P<title>[^\"\\\\]+)\\\\\"(?:\\r?\\n|\\\\n)>\\s*(?P<description>.+?)(?i:It's blocking a few of our people\\.)\\s*\"?\\s*$",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "MESSAGE\\s*\\(sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\):\\s*\"(?P<person>[^()]+?) \\((?P<organization>[^()]+?)\\) complained about (?P<complaint>.+?)\\s*[—-]\\s*don't\"?\\s*$",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "#(?P<num>\\d+)\\s+(?:assigned\\s+to|→)\\s+(?P<name>[\\w][\\w .'-]*?)(?:,\\s*|\\s*,?\\s*)\\(?\\s*(?P<priority>P[1-4])\\s*\\)?",
+   "keep": false,
+   "matched": 7,
+   "exact": 0,
+   "false_hits": 0,
+   "wrong": [
+    "\"#1041 → Priya, P3\": row 2 (want 2), values null (want {\"priority\": \"P3\"})",
+    "\"#1052 → Leo, P2\": row 12 (want 12), values null (want {\"assignee_person_id\": 2, \"priority\": \"P2\"})",
+    "\"#1053 → Leo, P3\": row 14 (want 14), values null (want {\"priority\": \"P3\", \"assignee_person_id\": 2})"
+   ]
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "(?:assigned\\s+#(?P<num>\\d+)\\s+to|gave\\s+#(?P<num>\\d+)\\s+to)\\s+(?P<name>[\\w][\\w .'-]*?)\\s*\\(\\s*(?P<priority>P[1-4])\\s*\\)",
+   "keep": false,
+   "why": "bad regex: redefinition of group name 'num' as group 2; was group 1 at position 45",
+   "wrong": [],
+   "matched": 0,
+   "exact": 0
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "#(?P<num>\\d+)\\s+fixed\\s*\\((?P<resolution>[^)]+)\\)\\s*,?\\s*resolved",
+   "keep": true,
+   "matched": 7,
+   "exact": 7,
+   "false_hits": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "#(?P<num>\\d+)\\s+(?:resolved|closed)\\s*:\\s*(?P<resolution>.+)",
+   "keep": false,
+   "why": "column status: group 'status' is not in the regex (its groups: num, resolution)",
+   "wrong": [],
+   "matched": 0,
+   "exact": 0
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "closed\\s+#(?P<num>\\d+)\\s*,\\s*it was\\s+(?P<resolution>.+)",
+   "keep": true,
+   "matched": 12,
+   "exact": 12,
+   "false_hits": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "#(?P<num>\\d+)\\s+resolved again\\s*,\\s*for good this time",
+   "keep": true,
+   "matched": 3,
+   "exact": 3,
+   "false_hits": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "#(?P<num>\\d+)\\s+reopened\\b",
+   "keep": true,
+   "matched": 3,
+   "exact": 3,
+   "false_hits": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "#(?P<num>\\d+)\\s+escalated\\s+to\\s+(?P<target>[\\w -]+?)\\s*,\\s*now\\s+(?P<priority>P[1-4])",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "#(?P<num>\\d+)\\s*(?:→|->)\\s*(?P<name>[\\w][\\w .'-]*?)\\s*,?\\s*\\(?\\s*(?P<priority>P[1-4])\\s*\\)?",
+   "keep": false,
+   "matched": 7,
+   "exact": 0,
+   "false_hits": 0,
+   "wrong": [
+    "\"#1041 → Priya, P3\": row 2 (want 2), values null (want {\"priority\": \"P3\"})",
+    "\"#1052 → Leo, P2\": row 12 (want 12), values null (want {\"assignee_person_id\": 2, \"priority\": \"P2\"})",
+    "\"#1053 → Leo, P3\": row 14 (want 14), values null (want {\"priority\": \"P3\", \"assignee_person_id\": 2})"
+   ]
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "(?:assigned|gave)\\s+#(?P<num>\\d+)\\s+to\\s+(?P<name>[\\w][\\w .'-]*?)\\s*,?\\s*\\(?\\s*(?P<priority>P[1-4])\\s*\\)?",
+   "keep": false,
+   "matched": 23,
+   "exact": 9,
+   "false_hits": 0,
+   "wrong": [
+    "\"assigned #1042 to Sam Okafor, P2\": row 1 (want 1), values {\"assignee_person_id\": 3, \"priority\": \"P2\"} (want {\"person_id\": 3, \"priority\": \"P2\"})",
+    "\"gave #1044 to Priya (P3)\": row 3 (want 3), values null (want {\"person_id\": 1, \"priority\": \"P3\"})",
+    "\"gave #1047 to Leo (P3)\": row 7 (want 7), values null (want {\"assignee_person_id\": 2, \"priority\": \"P3\"})"
+   ]
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "#(?P<num>\\d+)\\s+(?P<status>resolved|closed)\\s*:\\s*(?P<resolution>.+)",
+   "keep": true,
+   "matched": 7,
+   "exact": 7,
+   "false_hits": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "escalated\\s+#(?P<num>\\d+)\\s+to\\s+(?P<target>[\\w -]+?)\\s*,\\s*now\\s+(?P<priority>P[1-4])",
+   "keep": true,
+   "matched": 4,
+   "exact": 4,
+   "false_hits": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "New ticket #(?P<ticket_number>\\d+) from (?P<person_id>[^()]+?) \\((?P<organization_id>[^()]+)\\): \"(?P<title>[^\"]+)\"\\s*>\\s*(?:Hi,\\s*(?P<description>[^\\r\\n]+)|Hello team, we see this:\\s*(?P<description_2>[^\\r\\n]+)|(?P<description_3>[^\\r\\n]+))",
+   "keep": false,
+   "why": "column received_at: group 'received_at' is not in the regex (its groups: ticket_number, person_id, organization_id, title, description, description_2, description_3)",
+   "wrong": [],
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0
+  },
+  {
+   "table": "tickets",
+   "regex": "New ticket #(?P<ticket_number>\\d+) from (?P<person_id>[^()]+?) \\((?P<organization_id>[^()]+)\\): \"(?P<title>[^\"]+)\"\\s*>\\s*(?:Hello team, we see this:\\s*(?P<description>[^\\r\\n]+?\\. It's blocking a few of our people\\.)|(?P<description_2>[^\\r\\n]+?\\. It's blocking a few of our people\\.))",
+   "keep": false,
+   "why": "column received_at: group 'received_at' is not in the regex (its groups: ticket_number, person_id, organization_id, title, description, description_2)",
+   "wrong": [],
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0
+  },
+  {
+   "table": "tickets",
+   "regex": "closed #(?P<ticket_number>\\d+), it was (?P<resolution>[^\\r\\n]+)",
+   "keep": false,
+   "matched": 1,
+   "exact": 1,
+   "false_hits": 12,
+   "coverage": 1.0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "promised (?P<person_id>[^()]+?) \\((?P<organization_id>[^()]+)\\) the (?P<title>.+?) by (?P<due_phrase>[^\\r\\n]+)",
+   "keep": false,
+   "why": "column description: group 'description' is not in the regex (its groups: person_id, organization_id, title, due_phrase); column received_at: group 'received_at' is not in the regex (its groups: person_id, organization_id, title, due_phrase)",
+   "wrong": [],
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0
+  },
+  {
+   "table": "tickets",
+   "regex": "MESSAGE \\(sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\):\\s*\"New ticket #(?P<ticket_number>\\d+) from (?P<person_id>[^()]+?) \\((?P<organization_id>[^()]+)\\): \\\"(?P<title>[^\\\"]+)\\\"\\s*\\n>\\s*(?:Hi,\\s*(?P<description>[^\\r\\n]+)|Hello team, we see this:\\s*(?P<description_2>[^\\r\\n]+)|(?P<description_3>[^\\r\\n]+))\"",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "MESSAGE \\(sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\):\\s*\"New ticket #(?P<ticket_number>\\d+) from (?P<person_id>[^()]+?) \\((?P<organization_id>[^()]+)\\): \\\"(?P<title>[^\\\"]+)\\\"\\s*\\n>\\s*(?:Hello team, we see this:\\s*(?P<description>[^\\r\\n]+?\\. It's blocking a few of our people\\.)|(?P<description_2>[^\\r\\n]+?\\. It's blocking a few of our people\\.))\"",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "MESSAGE \\(sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\):\\s*\"closed #(?P<ticket_number>\\d+), it was (?P<resolution>[^\\r\\n]+)\"",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "MESSAGE \\(sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\):\\s*\"promised (?P<person_id>[^()]+?) \\((?P<organization_id>[^()]+)\\) the (?P<title>.+?) by (?P<due_phrase>[^\\r\\n]+)\"",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "MESSAGE \\(sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\):\\s*\"New ticket #(?P<ticket_number>\\d+) from (?P<person_id>[^()]+?) \\((?P<organization_id>[^()]+)\\): \"(?P<title>[^\"]+)\"\\s*\\n>\\s*(?:Hi,\\s*(?P<description>[^\\r\\n]+)|Hello team, we see this:\\s*(?P<description_2>[^\\r\\n]+)|(?P<description_3>[^\\r\\n]+))\"",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "MESSAGE \\(sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\):\\s*\"New ticket #(?P<ticket_number>\\d+) from (?P<person_id>[^()]+?) \\((?P<organization_id>[^()]+)\\): \"(?P<title>[^\"]+)\"\\s*\\n>\\s*(?:Hello team, we see this:\\s*(?P<description>[^\\r\\n]+?\\. It's blocking a few of our people\\.)|(?P<description_2>[^\\r\\n]+?\\. It's blocking a few of our people\\.))\"",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "MESSAGE \\(sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\):\\s*\"closed #(?P<ticket_number>\\d+), it was (?P<resolution>[^\"\\r\\n]+)\"",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "MESSAGE \\(sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\):\\s*\"promised (?P<person_id>[^()]+?) \\((?P<organization_id>[^()]+)\\) the (?P<title>.+?) by (?P<due_date>Friday [A-Za-z]+ \\d{1,2})\"",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "csat_surveys",
+   "regex": "(?:MESSAGE \\(sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\):\\s*)?CSAT survey result for #(?P<ticket_id>\\d+):\\s*(?P<rating>\\d+)\\s*/\\s*(?P<maximum_rating>\\d+)\\s+from\\s+(?P<person_id>[^—\\n]+?)\\s*—\\s*\"(?P<comment>[^\"]*)\"",
+   "keep": false,
+   "matched": 16,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0.0,
+   "wrong": [
+    "\"CSAT survey result for #1043: 5/5 from Carl Weber — \\\"fast and friendly\\\"\": could not build a row (unknown linked name or bad capture)",
+    "\"CSAT survey result for #1046: 3/5 from Ben Ortiz — \\\"ok\\\"\": could not build a row (unknown linked name or bad capture)",
+    "\"CSAT survey result for #1063: 5/5 from Carl Weber — \\\"fast and friendly\\\"\": could not build a row (unknown linked name or bad capture)"
+   ]
+  },
+  {
+   "table": "csat_surveys",
+   "regex": "(?:MESSAGE \\(sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\):\\s*)?CSAT survey result for #(?P<ticket_id>\\d+):\\s*(?P<rating>\\d+)\\s*/\\s*(?P<maximum_rating>\\d+)\\s+from\\s+(?P<person_id>[^—\\n]+?)\\s*—\\s*\"(?P<comment>[^\"]*)\"",
+   "keep": false,
+   "matched": 16,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0.0,
+   "wrong": [
+    "\"CSAT survey result for #1043: 5/5 from Carl Weber — \\\"fast and friendly\\\"\": could not build a row (unknown linked name or bad capture)",
+    "\"CSAT survey result for #1046: 3/5 from Ben Ortiz — \\\"ok\\\"\": could not build a row (unknown linked name or bad capture)",
+    "\"CSAT survey result for #1063: 5/5 from Carl Weber — \\\"fast and friendly\\\"\": could not build a row (unknown linked name or bad capture)"
+   ]
+  },
+  {
+   "table": "csat_surveys",
+   "regex": "(?:MESSAGE \\(sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\):\\s*)?CSAT survey result for #(?P<ticket_id>\\d+):\\s*(?P<rating>\\d+)\\s*/\\s*(?P<maximum_rating>\\d+)\\s+from\\s+(?P<person_id>[^—\\n]+?)\\s*—\\s*\"(?P<comment>[^\"]*)\"",
+   "keep": false,
+   "matched": 16,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0.0,
+   "wrong": [
+    "\"CSAT survey result for #1043: 5/5 from Carl Weber — \\\"fast and friendly\\\"\": could not build a row (unknown linked name or bad capture)",
+    "\"CSAT survey result for #1046: 3/5 from Ben Ortiz — \\\"ok\\\"\": could not build a row (unknown linked name or bad capture)",
+    "\"CSAT survey result for #1063: 5/5 from Carl Weber — \\\"fast and friendly\\\"\": could not build a row (unknown linked name or bad capture)"
+   ]
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "(?:assigned\\s+#(?P<num>\\d+)\\s+to\\s+.+?,\\s*(?P<priority>P[1-3])|#(?P<num>\\d+)\\s*→\\s*.+?,\\s*(?P<priority>P[1-3])|gave\\s+#(?P<num>\\d+)\\s+to\\s+.+?\\s*\\(\\s*(?P<priority>P[1-3])\\s*\\))",
+   "keep": false,
+   "why": "bad regex: redefinition of group name 'num' as group 3; was group 1 at position 68",
+   "wrong": [],
+   "matched": 0,
+   "exact": 0
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "assigned\\s+#(?P<num>\\d+)\\s+to\\s+(?P<person>.+?),\\s*(?P<priority>P[1-3])",
+   "keep": true,
+   "matched": 18,
+   "exact": 17,
+   "false_hits": 0,
+   "wrong": [
+    "\"assigned #1042 to Sam Okafor, P2\": row 1 (want 1), values {\"assignee_person_id\": 3, \"priority\": \"P2\"} (want {\"person_id\": 3, \"priority\": \"P2\"})"
+   ]
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "#(?P<num>\\d+)\\s*→\\s*(?P<person>.+?),\\s*(?P<priority>P[1-3])",
+   "keep": false,
+   "matched": 25,
+   "exact": 0,
+   "false_hits": 0,
+   "wrong": [
+    "\"#1041 → Priya, P3\": row 2 (want 2), values null (want {\"priority\": \"P3\"})",
+    "\"#1052 → Leo, P2\": row 12 (want 12), values null (want {\"assignee_person_id\": 2, \"priority\": \"P2\"})",
+    "\"#1053 → Leo, P3\": row 14 (want 14), values null (want {\"priority\": \"P3\", \"assignee_person_id\": 2})"
+   ]
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "gave\\s+#(?P<num>\\d+)\\s+to\\s+(?P<person>.+?)\\s*\\(\\s*(?P<priority>P[1-3])\\s*\\)",
+   "keep": false,
+   "matched": 25,
+   "exact": 0,
+   "false_hits": 0,
+   "wrong": [
+    "\"gave #1044 to Priya (P3)\": row 3 (want 3), values null (want {\"person_id\": 1, \"priority\": \"P3\"})",
+    "\"gave #1047 to Leo (P3)\": row 7 (want 7), values null (want {\"assignee_person_id\": 2, \"priority\": \"P3\"})",
+    "\"gave #1048 to Sam (P3)\": row 8 (want 8), values null (want {\"assignee_person_id\": 3, \"priority\": \"P3\"})"
+   ]
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "missed\\s+the\\s+(?P<company>.+?)\\s+CSV\\s+deadline,\\s+told\\s+.+?\\s+the\\s+new\\s+ETA\\s+is\\s+(?P<date>.+?)\\s*$",
+   "keep": false,
+   "matched": 1,
+   "exact": 0,
+   "false_hits": 0,
+   "wrong": [
+    "\"missed the Globex CSV deadline, told Nora the new ETA is Mar 19\": row None (want 57), values {\"description\": \"Promised Nora the CSV export fix by Friday, March 13, 2026; missed the deadline and told Nora the new ETA is March 19, 2026.\"} (want {\"description\": \"Promised Nora the CSV export fix by Friday, March 13, 2026; missed the deadline and told Nora the new ETA is March 19, 2026.\", \"due_date\": \"2026-03-19\"})"
+   ]
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "shipped\\s+the\\s+CSV\\s+export\\s+fix,\\s+.+?\\s+confirmed\\s+it\\s+works",
+   "keep": false,
+   "matched": 1,
+   "exact": 0,
+   "false_hits": 0,
+   "wrong": [
+    "\"shipped the CSV export fix, Nora confirmed it works\": row None (want 57), values {\"status\": \"resolved\", \"resolution\": \"CSV export fix shipped; Nora confirmed it works\"} (want {\"status\": \"resolved\", \"resolution\": \"CSV export fix shipped; Nora confirmed it works\"})"
+   ]
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "#(?P<num>1041)\\s*→\\s*[^,]+,\\s*(?P<priority>P[1-3])",
+   "keep": false,
+   "matched": 1,
+   "exact": 1,
+   "false_hits": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "#(?P<num>\\d+)\\s*→\\s*(?P<person>[^,]+),\\s*(?P<priority>P[1-3])",
+   "keep": false,
+   "matched": 25,
+   "exact": 0,
+   "false_hits": 0,
+   "wrong": [
+    "\"#1041 → Priya, P3\": row 2 (want 2), values null (want {\"priority\": \"P3\"})",
+    "\"#1052 → Leo, P2\": row 12 (want 12), values null (want {\"assignee_person_id\": 2, \"priority\": \"P2\"})",
+    "\"#1053 → Leo, P3\": row 14 (want 14), values null (want {\"priority\": \"P3\", \"assignee_person_id\": 2})"
+   ]
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "gave\\s+#(?P<num>1044)\\s+to\\s+(?P<person>.+?)\\s*\\(\\s*(?P<priority>P[1-3])\\s*\\)",
+   "keep": false,
+   "matched": 1,
+   "exact": 0,
+   "false_hits": 0,
+   "wrong": [
+    "\"gave #1044 to Priya (P3)\": row 3 (want 3), values null (want {\"person_id\": 1, \"priority\": \"P3\"})"
+   ]
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "gave\\s+#(?P<num>\\d+)\\s+to\\s+(?P<person>.+?)\\s*\\(\\s*(?P<priority>P[1-3])\\s*\\)",
+   "keep": false,
+   "matched": 25,
+   "exact": 0,
+   "false_hits": 0,
+   "wrong": [
+    "\"gave #1044 to Priya (P3)\": row 3 (want 3), values null (want {\"person_id\": 1, \"priority\": \"P3\"})",
+    "\"gave #1047 to Leo (P3)\": row 7 (want 7), values null (want {\"assignee_person_id\": 2, \"priority\": \"P3\"})",
+    "\"gave #1048 to Sam (P3)\": row 8 (want 8), values null (want {\"assignee_person_id\": 3, \"priority\": \"P3\"})"
+   ]
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "New\\s+ticket\\s+#(?P<num>\\d+)\\s+from\\s+(?P<person>.+?)\\s*\\((?P<organization>[^)]+)\\):\\s*\"(?P<title>[^\"]+)\"\\s*>\\s*(?P<description>.+)",
+   "keep": false,
+   "matched": 1,
+   "exact": 1,
+   "false_hits": 59,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "missed\\s+the\\s+(?P<organization>.+?)\\s+CSV\\s+deadline,\\s*told\\s+(?P<person>.+?)\\s+the\\s+new\\s+ETA\\s+is\\s+(?P<date>.+?)\\s*$",
+   "keep": false,
+   "matched": 1,
+   "exact": 0,
+   "false_hits": 0,
+   "wrong": [
+    "\"missed the Globex CSV deadline, told Nora the new ETA is Mar 19\": row None (want 57), values {\"description\": \"Promised Nora the CSV export fix by Friday, March 13, 2026; missed the deadline and told Nora the new ETA is March 19, 2026.\"} (want {\"description\": \"Promised Nora the CSV export fix by Friday, March 13, 2026; missed the deadline and told Nora the new ETA is March 19, 2026.\", \"due_date\": \"2026-03-19\"})"
+   ]
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "shipped\\s+the\\s+CSV\\s+export\\s+fix,\\s*.+?\\s+confirmed\\s+it\\s+works\\s*$",
+   "keep": false,
+   "matched": 1,
+   "exact": 0,
+   "false_hits": 0,
+   "wrong": [
+    "\"shipped the CSV export fix, Nora confirmed it works\": row None (want 57), values {\"status\": \"resolved\", \"resolution\": \"CSV export fix shipped; Nora confirmed it works\"} (want {\"status\": \"resolved\", \"resolution\": \"CSV export fix shipped; Nora confirmed it works\"})"
+   ]
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "#(?P<num>\\d+)\\s*→\\s*[^,]+,\\s*(?P<priority>P[1-3])",
+   "keep": false,
+   "matched": 25,
+   "exact": 4,
+   "false_hits": 0,
+   "wrong": [
+    "\"#1052 → Leo, P2\": row 12 (want 12), values {\"priority\": \"P2\"} (want {\"assignee_person_id\": 2, \"priority\": \"P2\"})",
+    "\"#1053 → Leo, P3\": row 14 (want 14), values {\"priority\": \"P3\"} (want {\"priority\": \"P3\", \"assignee_person_id\": 2})",
+    "\"#1063 → Priya, P1\": row 22 (want 22), values {\"priority\": \"P1\"} (want {\"assignee_person_id\": 1, \"priority\": \"P1\"})"
+   ]
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "gave\\s+#(?P<num>\\d+)\\s+to\\s+(?P<person>[^()]+?)\\s*\\(\\s*(?P<priority>P[1-3])\\s*\\)",
+   "keep": false,
+   "matched": 25,
+   "exact": 0,
+   "false_hits": 0,
+   "wrong": [
+    "\"gave #1044 to Priya (P3)\": row 3 (want 3), values null (want {\"person_id\": 1, \"priority\": \"P3\"})",
+    "\"gave #1047 to Leo (P3)\": row 7 (want 7), values null (want {\"assignee_person_id\": 2, \"priority\": \"P3\"})",
+    "\"gave #1048 to Sam (P3)\": row 8 (want 8), values null (want {\"assignee_person_id\": 3, \"priority\": \"P3\"})"
+   ]
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "New\\s+ticket\\s+#(?P<num>\\d+)\\s+from\\s+(?P<person>.+?)\\s*\\((?P<organization>[^)]+)\\):\\s*\"(?P<title>[^\"]+)\"\\s*>\\s*(?P<description>.+)",
+   "keep": false,
+   "matched": 1,
+   "exact": 1,
+   "false_hits": 59,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "missed\\s+the\\s+(?P<company>.+?)\\s+CSV\\s+deadline,\\s+told\\s+(?P<person>.+?)\\s+the\\s+new\\s+ETA\\s+is\\s+(?P<date>.+)",
+   "keep": false,
+   "matched": 1,
+   "exact": 0,
+   "false_hits": 0,
+   "wrong": [
+    "\"missed the Globex CSV deadline, told Nora the new ETA is Mar 19\": row None (want 57), values {\"description\": \"Promised Nora the CSV export fix by Friday, March 13, 2026; missed the deadline and told Nora the new ETA is March 19, 2026.\"} (want {\"description\": \"Promised Nora the CSV export fix by Friday, March 13, 2026; missed the deadline and told Nora the new ETA is March 19, 2026.\", \"due_date\": \"2026-03-19\"})"
+   ]
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "shipped\\s+the\\s+(?P<item>CSV\\s+export\\s+fix),\\s+(?P<person>.+?)\\s+confirmed\\s+it\\s+works",
+   "keep": false,
+   "matched": 1,
+   "exact": 0,
+   "false_hits": 0,
+   "wrong": [
+    "\"shipped the CSV export fix, Nora confirmed it works\": row None (want 57), values {\"status\": \"resolved\", \"resolution\": \"CSV export fix shipped; Nora confirmed it works\"} (want {\"status\": \"resolved\", \"resolution\": \"CSV export fix shipped; Nora confirmed it works\"})"
+   ]
+  },
+  {
+   "table": "tickets",
+   "regex": "New ticket #(?P<number>\\d+) from (?P<reporter>[^()\\n]+?) \\((?P<organization>[^()\\n]+?)\\): \"(?P<title>[^\"]+)\"\\s*\\n>\\s*(?P<description>[^\\n]+?\\.)\\s*It's blocking a few of our people\\.",
+   "keep": false,
+   "why": "column received_at: group 'sent' is not in the regex (its groups: number, reporter, organization, title, description)",
+   "wrong": [],
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0
+  },
+  {
+   "table": "tickets",
+   "regex": "New ticket #(?P<number>\\d+) from (?P<reporter>[^()\\n]+?) \\((?P<organization>[^()\\n]+?)\\): \"(?P<title>[^\"]+)\"\\s*\\n>\\s*(?P<description>[^\\n]+?)\\s*$",
+   "keep": false,
+   "why": "column received_at: group 'sent' is not in the regex (its groups: number, reporter, organization, title, description)",
+   "wrong": [],
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0
+  },
+  {
+   "table": "tickets",
+   "regex": "closed #(?P<number>\\d+), it was (?P<resolution>.+?)\\s*$",
+   "keep": false,
+   "matched": 2,
+   "exact": 2,
+   "false_hits": 12,
+   "coverage": 1.0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "MESSAGE \\(sent (?P<sent>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\):\\s*\"New ticket #(?P<number>\\d+) from (?P<reporter>[^()\\n]+?) \\((?P<organization>[^()\\n]+?)\\): \\\"(?P<title>[^\\\"]+)\\\"\\s*\\\\n>\\s*(?P<description>[^\\n]*?It's blocking a few of our people\\.)\"",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "MESSAGE \\(sent (?P<sent>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\):\\s*\"New ticket #(?P<number>\\d+) from (?P<reporter>[^()\\n]+?) \\((?P<organization>[^()\\n]+?)\\): \\\"(?P<title>[^\\\"]+)\\\"\\s*\\\\n>\\s*(?P<description>(?![^\\n]*It's blocking a few of our people\\.)[^\\n]+)\"",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "MESSAGE \\(sent \\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}\\):\\s*\"closed #(?P<number>\\d+), it was (?P<resolution>[^\\\"\\n]+?)\\s*\"",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "MESSAGE \\(sent (?P<sent>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\):\\s*\"New ticket #(?P<number>\\d+) from (?P<reporter>[^()\\n]+?) \\((?P<organization>[^()\\n]+?)\\): \"(?P<title>[^\"]+)\"\\n>\\s*(?P<description>[^\\n]+?It's blocking a few of our people\\.)\"",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "MESSAGE \\(sent (?P<sent>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\):\\s*\"New ticket #(?P<number>\\d+) from (?P<reporter>[^()\\n]+?) \\((?P<organization>[^()\\n]+?)\\): \"(?P<title>[^\"]+)\"\\n>\\s*(?P<description>[^\\n]+?)\"",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "MESSAGE \\(sent \\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}\\):\\s*\"closed #(?P<number>\\d+), it was (?P<resolution>[^\"\\n]+)\"",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "csat_surveys",
+   "regex": "MESSAGE\\s*\\(sent\\s+(?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\):\\s*CSAT survey result for\\s+#(?P<ticket_id>\\d+):\\s*(?P<rating>\\d+)\\s*/\\s*(?P<maximum_rating>\\d+)\\s+from\\s+(?P<person_id>[^—\\n\"]+?)\\s*—\\s*\"(?P<comment>[^\"]*)\"",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "csat_surveys",
+   "regex": "MESSAGE\\s*\\(sent\\s+(?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\):\\s*CSAT survey result for\\s+#(?P<ticket_id>\\d+):\\s*(?P<rating>\\d+)\\s*/\\s*(?P<maximum_rating>\\d+)\\s+from\\s+(?P<person_id>[^—\\n\"]+?)\\s*—\\s*\"(?P<comment>[^\"]*)\"",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "csat_surveys",
+   "regex": "MESSAGE\\s*\\(sent\\s+(?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\):\\s*CSAT survey result for\\s+#(?P<ticket_id>\\d+):\\s*(?P<rating>\\d+)\\s*/\\s*(?P<maximum_rating>\\d+)\\s+from\\s+(?P<person_id>[^—\\n\"]+?)\\s*—\\s*\"(?P<comment>[^\"]*)\"",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "events",
+   "regex": "\\bteam sync done:\\s*(?P<open_tickets>\\d+)\\s+tickets?\\s+open,\\s*focus\\s+on\\s+(?P<focus>[^\\r\\n]+?)\\s*$",
+   "keep": false,
+   "matched": 7,
+   "exact": 7,
+   "false_hits": 2,
+   "coverage": 1.0,
+   "wrong": []
+  },
+  {
+   "table": "events",
+   "regex": "\\bMonday sync:\\s*(?P<focus>[^:\\r\\n]+?)\\s+at\\s+(?P<open_tickets>\\d+)\\s*$",
+   "keep": true,
+   "matched": 4,
+   "exact": 4,
+   "false_hits": 0,
+   "coverage": 1.0,
+   "wrong": []
+  },
+  {
+   "table": "events",
+   "regex": "BEGIN:VEVENT\\s*\\nSUMMARY:(?P<name>[^\\r\\n]+?)\\s*\\n(?=DTSTART:(?P<DATE>\\d{8})T)DTSTART:(?P<START>\\d{8}T\\d{6})\\s*\\nDTEND:(?P<END>\\d{8}T\\d{6})\\s*\\nLOCATION:(?P<location>[^\\r\\n]+?)\\s*\\nORGANIZER;CN=(?P<organizer_person_id>[^:;\\r\\n]+?):mailto:[^\\r\\n]+\\s*\\nEND:VEVENT",
+   "keep": false,
+   "why": "column organization_id: group 'organization_id' is not in the regex (its groups: name, DATE, START, END, location, organizer_person_id)",
+   "wrong": [],
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0
+  },
+  {
+   "table": "events",
+   "regex": "\\Ateam sync done:\\s*(?P<open_tickets>\\d+)\\s+tickets?\\s+open,\\s*focus\\s+on\\s+(?P<focus>[^\\r\\n]+?)\\s*\\Z",
+   "keep": false,
+   "matched": 7,
+   "exact": 7,
+   "false_hits": 2,
+   "coverage": 1.0,
+   "wrong": []
+  },
+  {
+   "table": "events",
+   "regex": "\\ABEGIN:VEVENT\\s*\\nSUMMARY:(?P<name>[^\\r\\n]+?\\s+with\\s+(?P<organization>[^\\r\\n]+?))\\s*\\nDTSTART:(?P<DATE>\\d{8})T(?P<START>\\d{6})\\s*\\nDTEND:\\d{8}T(?P<END>\\d{6})\\s*\\nLOCATION:(?P<location>[^\\r\\n]+?)\\s*\\nORGANIZER;CN=(?P<organizer_person>[^:;\\r\\n]+?):mailto:[^\\r\\n]+\\s*\\nEND:VEVENT\\Z",
+   "keep": false,
+   "matched": 2,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0.62,
+   "wrong": [
+    "\"BEGIN:VEVENT\\nSUMMARY:QBR with Acme Corp\\nDTSTART:20260205T150000\\nDTEND:20260205T160000\\nLOCATION:Zoom\\nORGANIZER;CN=Tom Reed:mailto:tom@acme.io\\nEND:VEVENT\": {\"date\": {\"got\": null, \"want\": \"2026-02-05\"}}",
+    "\"BEGIN:VEVENT\\nSUMMARY:QBR with Acme Corp\\nDTSTART:20260402T150000\\nDTEND:20260402T160000\\nLOCATION:Zoom\\nORGANIZER;CN=Tom Reed:mailto:tom@acme.io\\nEND:VEVENT\": {\"date\": {\"got\": null, \"want\": \"2026-04-02\"}}"
+   ]
+  },
+  {
+   "table": "events",
+   "regex": "\\Ateam sync done:\\s*(?P<open_tickets>\\d+)\\s+tickets?\\s+open,\\s*focus\\s+on\\s+(?P<focus>[^\\r\\n,]+?)\\s*\\Z",
+   "keep": false,
+   "matched": 7,
+   "exact": 7,
+   "false_hits": 2,
+   "coverage": 1.0,
+   "wrong": []
+  },
+  {
+   "table": "events",
+   "regex": "\\ABEGIN:VEVENT\\s*\\nSUMMARY:(?P<name>[^\\r\\n]+?\\s+with\\s+(?P<organization>[^\\r\\n]+?))\\s*\\n(?=DTSTART:(?P<DATE>\\d{8})T\\d{6}\\s*\\n)DTSTART:(?P<START>\\d{8}T\\d{6})\\s*\\nDTEND:(?P<END>\\d{8}T\\d{6})\\s*\\nLOCATION:(?P<location>[^\\r\\n]+?)\\s*\\nORGANIZER;CN=(?P<organizer_person>[^:;\\r\\n]+):mailto:[^\\r\\n]+\\s*\\nEND:VEVENT\\Z",
+   "keep": false,
+   "matched": 2,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0.62,
+   "wrong": [
+    "\"BEGIN:VEVENT\\nSUMMARY:QBR with Acme Corp\\nDTSTART:20260205T150000\\nDTEND:20260205T160000\\nLOCATION:Zoom\\nORGANIZER;CN=Tom Reed:mailto:tom@acme.io\\nEND:VEVENT\": {\"date\": {\"got\": null, \"want\": \"2026-02-05\"}}",
+    "\"BEGIN:VEVENT\\nSUMMARY:QBR with Acme Corp\\nDTSTART:20260402T150000\\nDTEND:20260402T160000\\nLOCATION:Zoom\\nORGANIZER;CN=Tom Reed:mailto:tom@acme.io\\nEND:VEVENT\": {\"date\": {\"got\": null, \"want\": \"2026-04-02\"}}"
+   ]
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "#(?P<num>\\d+)\\s*→\\s*(?P<person>[\\w][\\w .'-]*?)\\s*,\\s*(?P<priority>P[1-5])\\b",
+   "keep": false,
+   "matched": 41,
+   "exact": 0,
+   "false_hits": 0,
+   "wrong": [
+    "\"#1041 → Priya, P3\": row 2 (want 2), values null (want {\"priority\": \"P3\"})",
+    "\"#1052 → Leo, P2\": row 12 (want 12), values null (want {\"assignee_person_id\": 2, \"priority\": \"P2\"})",
+    "\"#1053 → Leo, P3\": row 14 (want 14), values null (want {\"priority\": \"P3\", \"assignee_person_id\": 2})"
+   ]
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "\\bgave\\s+#(?P<num>\\d+)\\s+to\\s+(?P<person>[\\w][\\w .'-]*?)\\s*\\(\\s*(?P<priority>P[1-5])\\s*\\)",
+   "keep": false,
+   "matched": 31,
+   "exact": 0,
+   "false_hits": 0,
+   "wrong": [
+    "\"gave #1044 to Priya (P3)\": row 3 (want 3), values null (want {\"person_id\": 1, \"priority\": \"P3\"})",
+    "\"gave #1047 to Leo (P3)\": row 7 (want 7), values null (want {\"assignee_person_id\": 2, \"priority\": \"P3\"})",
+    "\"gave #1048 to Sam (P3)\": row 8 (want 8), values null (want {\"assignee_person_id\": 3, \"priority\": \"P3\"})"
+   ]
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "#(?P<num>\\d+)\\s*→\\s*(?P<person>[\\w][\\w .'-]*?)\\s*,\\s*(?P<priority>P[1-5])\\b",
+   "keep": false,
+   "matched": 41,
+   "exact": 0,
+   "false_hits": 0,
+   "wrong": [
+    "\"#1041 → Priya, P3\": row 2 (want 2), values null (want {\"priority\": \"P3\"})",
+    "\"#1052 → Leo, P2\": row 12 (want 12), values null (want {\"assignee_person_id\": 2, \"priority\": \"P2\"})",
+    "\"#1053 → Leo, P3\": row 14 (want 14), values null (want {\"priority\": \"P3\", \"assignee_person_id\": 2})"
+   ]
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "\\bgave\\s+#(?P<num>\\d+)\\s+to\\s+(?P<person>[\\w][\\w .'-]*?)\\s*\\(\\s*(?P<priority>P[1-5])\\s*\\)",
+   "keep": false,
+   "matched": 31,
+   "exact": 0,
+   "false_hits": 0,
+   "wrong": [
+    "\"gave #1044 to Priya (P3)\": row 3 (want 3), values null (want {\"person_id\": 1, \"priority\": \"P3\"})",
+    "\"gave #1047 to Leo (P3)\": row 7 (want 7), values null (want {\"assignee_person_id\": 2, \"priority\": \"P3\"})",
+    "\"gave #1048 to Sam (P3)\": row 8 (want 8), values null (want {\"assignee_person_id\": 3, \"priority\": \"P3\"})"
+   ]
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "#(?P<num>\\d+)\\s*→\\s*(?P<person>[\\w][\\w .'-]*?)\\s*,\\s*(?P<priority>P[1-5])\\b",
+   "keep": false,
+   "matched": 41,
+   "exact": 0,
+   "false_hits": 0,
+   "wrong": [
+    "\"#1041 → Priya, P3\": row 2 (want 2), values null (want {\"priority\": \"P3\"})",
+    "\"#1052 → Leo, P2\": row 12 (want 12), values null (want {\"assignee_person_id\": 2, \"priority\": \"P2\"})",
+    "\"#1053 → Leo, P3\": row 14 (want 14), values null (want {\"priority\": \"P3\", \"assignee_person_id\": 2})"
+   ]
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "\\bgave\\s+#(?P<num>\\d+)\\s+to\\s+(?P<person>[\\w][\\w .'-]*?)\\s*\\(\\s*(?P<priority>P[1-5])\\s*\\)",
+   "keep": false,
+   "matched": 31,
+   "exact": 0,
+   "false_hits": 0,
+   "wrong": [
+    "\"gave #1044 to Priya (P3)\": row 3 (want 3), values null (want {\"person_id\": 1, \"priority\": \"P3\"})",
+    "\"gave #1047 to Leo (P3)\": row 7 (want 7), values null (want {\"assignee_person_id\": 2, \"priority\": \"P3\"})",
+    "\"gave #1048 to Sam (P3)\": row 8 (want 8), values null (want {\"assignee_person_id\": 3, \"priority\": \"P3\"})"
+   ]
+  },
+  {
+   "table": "tickets",
+   "regex": "sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}).*?New ticket #(?P<ticket_number>\\d+) from (?P<reporter_name>[^()]+?) \\((?P<organization_name>[^)]+)\\): \"(?P<title>[^\"]+)\"\\n> (?:(?:Hello team, we see this: )?)(?P<description>[^\\n]*?)(?: It's blocking a few of our people\\.)?$",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}).*?New ticket #(?P<ticket_number>\\d+) from (?P<reporter_name>[^()]+?) \\((?P<organization_name>[^)]+)\\): \"(?P<title>[^\"]+)\"\\n> (?:(?:Hello team, we see this: )?)(?P<description>[^\\n]*?) It's blocking a few of our people\\.$",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}).*?New ticket #(?P<ticket_number>\\d+) from (?P<reporter_name>[^()]+?) \\((?P<organization_name>[^)]+)\\): \"(?P<title>[^\"]+)\"\\n> (?:(?:Hello team, we see this: )?)(?P<description>[^\\n]*?) It's blocking a few of our people\\.$",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "closed #(?P<ticket_number>\\d+), it was (?P<resolution>.+)",
+   "keep": false,
+   "matched": 3,
+   "exact": 3,
+   "false_hits": 12,
+   "coverage": 1.0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "MESSAGE \\(sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\):\\s*\"New ticket #(?P<ticket_number>\\d+) from (?P<reporter_name>[^()]+?) \\((?P<organization_name>[^)]+)\\): \\\"(?P<title>[^\\\"]+)\\\"\\s*>\\s*(?P<description>[^\\n\"]+)\"",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "MESSAGE \\(sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\):\\s*\"New ticket #(?P<ticket_number>\\d+) from (?P<reporter_name>[^()]+?) \\((?P<organization_name>[^)]+)\\): \\\"(?P<title>[^\\\"]+)\\\"\\s*>\\s*(?P<description>[^\\n\"]*?) [Ii]t's blocking a few of our people\\.\"",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "MESSAGE \\(sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\):\\s*\"New ticket #(?P<ticket_number>\\d+) from (?P<reporter_name>[^()]+?) \\((?P<organization_name>[^)]+)\\): \\\"(?P<title>[^\\\"]+)\\\"\\s*>\\s*(?P<description>[^\\n\"]*?) It's blocking a few of our people\\.\"(?=\\s*$)",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "\\bclosed #(?P<ticket_number>\\d+), it was (?P<resolution>[^\\r\\n\"]+)\\s*\"?(?=\\s*$)",
+   "keep": false,
+   "matched": 3,
+   "exact": 3,
+   "false_hits": 12,
+   "coverage": 1.0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "MESSAGE \\(sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\):\\s*\"New ticket #(?P<ticket_number>\\d+) from (?P<reporter_name>[^()]+?) \\((?P<organization_name>[^)]+)\\): \"(?P<title>[^\"]+)\"\\s*>\\s*(?P<description>[^\"\\r\\n]+?)\"\\s*$",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "MESSAGE \\(sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\):\\s*\"New ticket #(?P<ticket_number>1059) from (?P<reporter_name>[^()]+?) \\((?P<organization_name>[^)]+)\\): \"(?P<title>[^\"]+)\"\\s*>\\s*(?P<description>[^\"\\r\\n]+?)\"\\s*$",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "tickets",
+   "regex": "\\Aclosed #(?P<ticket_number>\\d+), it was (?P<resolution>[^\\r\\n\"]+)\\Z",
+   "keep": false,
+   "matched": 3,
+   "exact": 3,
+   "false_hits": 12,
+   "coverage": 1.0,
+   "wrong": []
+  },
+  {
+   "table": "csat_surveys",
+   "regex": "MESSAGE \\(sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\): \"CSAT survey result for #(?P<ticket_id>\\d+): (?P<rating>\\d+)/(?P<maximum_rating>\\d+) from (?P<person_id>[^—]+?) — \\\\\"(?P<comment>[^\\\"]*)\\\\\"\"",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "csat_surveys",
+   "regex": "MESSAGE \\(sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\): \"CSAT survey result for #(?P<ticket>\\d+): (?P<rating>\\d+)/(?P<maximum_rating>\\d+) from (?P<person>[^—]+?)\\s+— \\\"(?P<comment>[^\\\"]*)\\\"\"",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "csat_surveys",
+   "regex": "(?:MESSAGE \\(sent (?P<received_at>\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2})\\):\\s*)?\"?CSAT survey result for #(?P<ticket>\\d+):\\s*(?P<rating>\\d+)/(?P<maximum_rating>\\d+) from (?P<person>[^—]+?)\\s+—\\s*\"(?P<comment>[^\"]*)\"",
+   "keep": false,
+   "matched": 32,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0.0,
+   "wrong": [
+    "\"CSAT survey result for #1043: 5/5 from Carl Weber — \\\"fast and friendly\\\"\": could not build a row (unknown linked name or bad capture)",
+    "\"CSAT survey result for #1046: 3/5 from Ben Ortiz — \\\"ok\\\"\": could not build a row (unknown linked name or bad capture)",
+    "\"CSAT survey result for #1063: 5/5 from Carl Weber — \\\"fast and friendly\\\"\": could not build a row (unknown linked name or bad capture)"
+   ]
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "#(?P<num>\\d+)\\s*→\\s*(?P<name>[A-Z][\\w'-]*(?:\\s+[A-Z][\\w'-]*)*)\\s*,\\s*(?P<priority>P[1-3])",
+   "keep": false,
+   "matched": 57,
+   "exact": 0,
+   "false_hits": 0,
+   "wrong": [
+    "\"#1041 → Priya, P3\": row 2 (want 2), values null (want {\"priority\": \"P3\"})",
+    "\"#1052 → Leo, P2\": row 12 (want 12), values null (want {\"assignee_person_id\": 2, \"priority\": \"P2\"})",
+    "\"#1053 → Leo, P3\": row 14 (want 14), values null (want {\"priority\": \"P3\", \"assignee_person_id\": 2})"
+   ]
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "gave\\s+#(?P<num>\\d+)\\s+to\\s+(?P<name>[A-Z][\\w'-]*(?:\\s+[A-Z][\\w'-]*)*)\\s*\\(\\s*(?P<priority>P[1-3])\\s*\\)",
+   "keep": false,
+   "matched": 43,
+   "exact": 0,
+   "false_hits": 0,
+   "wrong": [
+    "\"gave #1044 to Priya (P3)\": row 3 (want 3), values null (want {\"person_id\": 1, \"priority\": \"P3\"})",
+    "\"gave #1047 to Leo (P3)\": row 7 (want 7), values null (want {\"assignee_person_id\": 2, \"priority\": \"P3\"})",
+    "\"gave #1048 to Sam (P3)\": row 8 (want 8), values null (want {\"assignee_person_id\": 3, \"priority\": \"P3\"})"
+   ]
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "#(?P<num>\\d+)\\s*→\\s*(?P<name>[A-Z][\\w'-]*(?:\\s+[A-Z][\\w'-]*)*)\\s*,\\s*(?P<priority>P[1-3])",
+   "keep": false,
+   "matched": 57,
+   "exact": 0,
+   "false_hits": 0,
+   "wrong": [
+    "\"#1041 → Priya, P3\": row 2 (want 2), values null (want {\"priority\": \"P3\"})",
+    "\"#1052 → Leo, P2\": row 12 (want 12), values null (want {\"assignee_person_id\": 2, \"priority\": \"P2\"})",
+    "\"#1053 → Leo, P3\": row 14 (want 14), values null (want {\"priority\": \"P3\", \"assignee_person_id\": 2})"
+   ]
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "\\bgave\\s+#(?P<num>\\d+)\\s+to\\s+(?P<name>[A-Z][\\w'-]*(?:\\s+[A-Z][\\w'-]*)*)\\s*\\(\\s*(?P<priority>P[1-3])\\s*\\)",
+   "keep": false,
+   "matched": 43,
+   "exact": 0,
+   "false_hits": 0,
+   "wrong": [
+    "\"gave #1044 to Priya (P3)\": row 3 (want 3), values null (want {\"person_id\": 1, \"priority\": \"P3\"})",
+    "\"gave #1047 to Leo (P3)\": row 7 (want 7), values null (want {\"assignee_person_id\": 2, \"priority\": \"P3\"})",
+    "\"gave #1048 to Sam (P3)\": row 8 (want 8), values null (want {\"assignee_person_id\": 3, \"priority\": \"P3\"})"
+   ]
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "#(?P<num>\\d+)\\s*→\\s*(?P<name>[A-Z][\\w'-]*(?:\\s+[A-Z][\\w'-]*)*)\\s*,\\s*(?P<priority>P[1-3])",
+   "keep": false,
+   "matched": 57,
+   "exact": 0,
+   "false_hits": 0,
+   "wrong": [
+    "\"#1041 → Priya, P3\": row 2 (want 2), values null (want {\"priority\": \"P3\"})",
+    "\"#1052 → Leo, P2\": row 12 (want 12), values null (want {\"assignee_person_id\": 2, \"priority\": \"P2\"})",
+    "\"#1053 → Leo, P3\": row 14 (want 14), values null (want {\"priority\": \"P3\", \"assignee_person_id\": 2})"
+   ]
+  },
+  {
+   "table": "tickets",
+   "update": true,
+   "regex": "\\bgave\\s+#(?P<num>\\d+)\\s+to\\s+(?P<name>[A-Z][\\w'-]*(?:\\s+[A-Z][\\w'-]*)*)\\s*\\(\\s*(?P<priority>P[1-3])\\s*\\)",
+   "keep": false,
+   "matched": 43,
+   "exact": 0,
+   "false_hits": 0,
+   "wrong": [
+    "\"gave #1044 to Priya (P3)\": row 3 (want 3), values null (want {\"person_id\": 1, \"priority\": \"P3\"})",
+    "\"gave #1047 to Leo (P3)\": row 7 (want 7), values null (want {\"assignee_person_id\": 2, \"priority\": \"P3\"})",
+    "\"gave #1048 to Sam (P3)\": row 8 (want 8), values null (want {\"assignee_person_id\": 3, \"priority\": \"P3\"})"
+   ]
+  }
+ ],
+ "patterns": {
+  "events": [
+   {
+    "regex": "\\bMonday sync:\\s*(?P<focus>[^:\\r\\n]+?)\\s+at\\s+(?P<open_tickets>\\d+)\\s*$",
+    "values": [
+     {
+      "column": "category",
+      "source": "const:meeting"
+     },
+     {
+      "column": "name",
+      "source": "const:team sync"
+     },
+     {
+      "column": "date",
+      "source": "date"
+     },
+     {
+      "column": "focus",
+      "source": "group:focus"
+     },
+     {
+      "column": "open_tickets",
+      "source": "group:open_tickets"
+     }
+    ]
+   }
+  ]
+ },
+ "spent": 0.4227,
+ "cost_if_fresh": 0.4436
+}

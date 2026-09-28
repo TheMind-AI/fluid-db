@@ -1,0 +1,48 @@
+{
+ "filter_use": {
+  "expenses.person_id": 44,
+  "expenses.category": 35,
+  "expenses.description": 19,
+  "expenses.merchant": 16,
+  "body_measurements.person_id": 16,
+  "body_measurements.category": 16,
+  "body_measurements.unit": 14,
+  "events.person_id": 10
+ },
+ "5k": {
+  "rows": 2784,
+  "reader_in_code_ms": [
+   16.48,
+   15.0,
+   17.37
+  ],
+  "sql_ms": [
+   0.49,
+   0.27,
+   0.25
+  ],
+  "sql_indexed_ms": [
+   0.14,
+   0.03,
+   0.06
+  ]
+ },
+ "1M": {
+  "rows": 1002240,
+  "reader_in_code_ms": [
+   5332.22,
+   3447.54,
+   4105.27
+  ],
+  "sql_ms": [
+   120.76,
+   97.31,
+   67.58
+  ],
+  "sql_indexed_ms": [
+   37.79,
+   1.6,
+   11.65
+  ]
+ }
+}

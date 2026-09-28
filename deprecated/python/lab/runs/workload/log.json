@@ -1,0 +1,2230 @@
+{
+ "summary": {
+  "questions": 80,
+  "trusted": 65,
+  "flagged": 33,
+  "det_accuracy": 0.6875,
+  "hybrid_accuracy": 0.7063,
+  "signals": {
+   "disagree": 7,
+   "free_text": 19,
+   "low_trust": 15,
+   "relaxed": 1,
+   "unmatched": 9,
+   "variants": 2
+  },
+  "spent": 0.0001
+ },
+ "rows": [
+  {
+   "qid": "p001",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How much did I spend on lunches out this year?",
+   "path": "deterministic",
+   "answer": "17,611.00 CZK + 1,970.00 USD (172 rows)",
+   "plan": {
+    "table": "expenses",
+    "op": "sum",
+    "column": "amount",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "dining",
+     "description": "Lunch"
+    },
+    "period": "year:2026",
+    "text": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and description = 'Lunch', in 2026 (172 matching rows)"
+   },
+   "verified": 0.77,
+   "signals": [
+    "free_text:description"
+   ],
+   "agent_answer": null,
+   "latency_s": 0.231,
+   "det_answer": "17,611.00 CZK + 1,970.00 USD (172 rows)",
+   "template": "spend_kind",
+   "score_det": 0.5,
+   "score_path": 0.5
+  },
+  {
+   "qid": "p002",
+   "ts": "2026-09-30T21:00:00",
+   "question": "What was my total Uber and Bolt rides spend in September 2025?",
+   "path": "agent",
+   "answer": "Your total Uber and Bolt rides spend in September 2025 was 3,560 CZK.",
+   "plan": {
+    "table": "body_measurements",
+    "op": "sum",
+    "column": "value",
+    "filters": {},
+    "period": "in:2025-09",
+    "text": "total of value from body_measurements where no filter, in 2025-09 (42 matching rows)"
+   },
+   "verified": 0.02,
+   "signals": [
+    "low_trust",
+    "relaxed",
+    "unmatched:bolt,rides,uber",
+    "disagree"
+   ],
+   "agent_answer": "Your total Uber and Bolt rides spend in September 2025 was 3,560 CZK.",
+   "latency_s": 0.153,
+   "det_answer": "1,253.70 (42 rows)",
+   "template": "spend_kind",
+   "score_det": 0.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p003",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How much did I spend on coffee last month?",
+   "path": "deterministic",
+   "answer": "342.11 USD (38 rows)",
+   "plan": {
+    "table": "expenses",
+    "op": "sum",
+    "column": "amount",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "coffee",
+     "description": "Coffee"
+    },
+    "period": "in:2026-08",
+    "text": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'coffee' and description = 'Coffee', in 2026-08 (38 matching rows)"
+   },
+   "verified": 0.83,
+   "signals": [
+    "free_text:description"
+   ],
+   "agent_answer": null,
+   "latency_s": 0.286,
+   "det_answer": "342.11 USD (38 rows)",
+   "template": "spend_kind",
+   "score_det": 0.0,
+   "score_path": 0.0
+  },
+  {
+   "qid": "p004",
+   "ts": "2026-09-30T21:00:00",
+   "question": "What was my total Uber and Bolt rides spend in August 2026?",
+   "path": "agent",
+   "answer": "Your total Uber and Bolt rides spend in August 2026 was $300.69 (Uber; no Bolt spend found).",
+   "plan": {
+    "table": "expenses",
+    "op": "sum",
+    "column": "amount",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "transport",
+     "description": "Ride"
+    },
+    "period": "in:2026-08",
+    "text": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'transport' and description = 'Ride', in 2026-08 (10 matching rows)"
+   },
+   "verified": 0.56,
+   "signals": [
+    "low_trust",
+    "free_text:description",
+    "disagree"
+   ],
+   "agent_answer": "Your total Uber and Bolt rides spend in August 2026 was $300.69 (Uber; no Bolt spend found).",
+   "latency_s": 0.329,
+   "det_answer": "226.64 USD (10 rows)",
+   "template": "spend_kind",
+   "score_det": 0.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p005",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How much did I spend on lunches out last month?",
+   "path": "deterministic",
+   "answer": "318.75 USD (17 rows)",
+   "plan": {
+    "table": "expenses",
+    "op": "sum",
+    "column": "amount",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "dining",
+     "description": "Lunch"
+    },
+    "period": "in:2026-08",
+    "text": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and description = 'Lunch', in 2026-08 (17 matching rows)"
+   },
+   "verified": 0.84,
+   "signals": [
+    "free_text:description"
+   ],
+   "agent_answer": null,
+   "latency_s": 0.386,
+   "det_answer": "318.75 USD (17 rows)",
+   "template": "spend_kind",
+   "score_det": 0.0,
+   "score_path": 0.0
+  },
+  {
+   "qid": "p006",
+   "ts": "2026-09-30T21:00:00",
+   "question": "What was my total Uber and Bolt rides spend this year?",
+   "path": "agent",
+   "answer": "This year, you spent **12,110 CZK on Bolt** (50 rides) and **$1,916.65 on Uber** (88 rides)—138 rides total.",
+   "plan": {
+    "table": "expenses",
+    "op": "sum",
+    "column": "amount",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "transport",
+     "description": "Ride"
+    },
+    "period": "year:2026",
+    "text": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'transport' and description = 'Ride', in 2026 (129 matching rows)"
+   },
+   "verified": 0.51,
+   "signals": [
+    "low_trust",
+    "free_text:description"
+   ],
+   "agent_answer": "This year, you spent **12,110 CZK on Bolt** (50 rides) and **$1,916.65 on Uber** (88 rides)—138 rides total.",
+   "latency_s": 0.44,
+   "det_answer": "12,110.00 CZK + 1,685.58 USD (129 rows)",
+   "template": "spend_kind",
+   "score_det": 0.5,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p007",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How much did I spend on things I ordered or bought in shops in 2025?",
+   "path": "deterministic",
+   "answer": "36,677.00 CZK (23 rows)",
+   "plan": {
+    "table": "expenses",
+    "op": "sum",
+    "column": "amount",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "shopping"
+    },
+    "period": "year:2025",
+    "text": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'shopping', in 2025 (23 matching rows)"
+   },
+   "verified": 0.84,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.373,
+   "det_answer": "36,677.00 CZK (23 rows)",
+   "template": "spend_kind",
+   "score_det": 0.0,
+   "score_path": 0.0
+  },
+  {
+   "qid": "p008",
+   "ts": "2026-09-30T21:00:00",
+   "question": "What was my total lunches out spend in June 2024?",
+   "path": "deterministic",
+   "answer": "5,569.00 CZK (22 rows)",
+   "plan": {
+    "table": "expenses",
+    "op": "sum",
+    "column": "amount",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "dining",
+     "description": "Lunch"
+    },
+    "period": "in:2024-06",
+    "text": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and description = 'Lunch', in 2024-06 (22 matching rows)"
+   },
+   "verified": 0.87,
+   "signals": [
+    "free_text:description"
+   ],
+   "agent_answer": null,
+   "latency_s": 0.37,
+   "det_answer": "5,569.00 CZK (22 rows)",
+   "template": "spend_kind",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p009",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How many times did I go out for drinks in 2025?",
+   "path": "agent",
+   "answer": "You went out for drinks 21 times in 2025.",
+   "plan": {
+    "table": "events",
+    "op": "count",
+    "column": "title",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "status": "attended"
+    },
+    "period": "year:2025",
+    "text": "count of rows from events where person_id = 'Adam Zvada' and status = 'attended', in 2025 (56 matching rows)"
+   },
+   "verified": 0.33,
+   "signals": [
+    "low_trust",
+    "unmatched:drinks",
+    "disagree"
+   ],
+   "agent_answer": "You went out for drinks 21 times in 2025.",
+   "latency_s": 0.321,
+   "det_answer": "56",
+   "template": "count_kind",
+   "score_det": 0.0,
+   "score_path": 0.0
+  },
+  {
+   "qid": "p010",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How often did I do a grocery run in February 2025?",
+   "path": "deterministic",
+   "answer": "9",
+   "plan": {
+    "table": "expenses",
+    "op": "count",
+    "column": "occurred_at",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "groceries"
+    },
+    "period": "in:2025-02",
+    "text": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'groceries', in 2025-02 (9 matching rows)"
+   },
+   "verified": 0.9,
+   "signals": [
+    "unmatched:run"
+   ],
+   "agent_answer": null,
+   "latency_s": 0.751,
+   "det_answer": "9",
+   "template": "count_kind",
+   "score_det": 0.0,
+   "score_path": 0.0
+  },
+  {
+   "qid": "p011",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How many times did I buy groceries in July 2026?",
+   "path": "deterministic",
+   "answer": "9",
+   "plan": {
+    "table": "expenses",
+    "op": "count",
+    "column": "category",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "groceries",
+     "description": "Groceries"
+    },
+    "period": "in:2026-07",
+    "text": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'groceries' and description = 'Groceries', in 2026-07 (9 matching rows)"
+   },
+   "verified": 0.82,
+   "signals": [
+    "free_text:description"
+   ],
+   "agent_answer": null,
+   "latency_s": 0.294,
+   "det_answer": "9",
+   "template": "count_kind",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p012",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How often did I do a grocery run this year?",
+   "path": "deterministic",
+   "answer": "81",
+   "plan": {
+    "table": "expenses",
+    "op": "count",
+    "column": "occurred_at",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "groceries"
+    },
+    "period": "year:2026",
+    "text": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'groceries', in 2026 (81 matching rows)"
+   },
+   "verified": 0.78,
+   "signals": [
+    "unmatched:run"
+   ],
+   "agent_answer": null,
+   "latency_s": 0.259,
+   "det_answer": "81",
+   "template": "count_kind",
+   "score_det": 0.0,
+   "score_path": 0.0
+  },
+  {
+   "qid": "p013",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How many times did I buy something in a shop or online in 2024?",
+   "path": "deterministic",
+   "answer": "32",
+   "plan": {
+    "table": "expenses",
+    "op": "count",
+    "column": "__row__",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "shopping"
+    },
+    "period": "year:2024",
+    "text": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'shopping', in 2024 (32 matching rows)"
+   },
+   "verified": 0.83,
+   "signals": [
+    "unmatched:online"
+   ],
+   "agent_answer": null,
+   "latency_s": 0.26,
+   "det_answer": "32",
+   "template": "count_kind",
+   "score_det": 0.0,
+   "score_path": 0.0
+  },
+  {
+   "qid": "p014",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How often did I buy a coffee this year?",
+   "path": "deterministic",
+   "answer": "284",
+   "plan": {
+    "table": "expenses",
+    "op": "count",
+    "column": "description",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "coffee",
+     "description": "Coffee"
+    },
+    "period": "year:2026",
+    "text": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'coffee' and description = 'Coffee', in 2026 (284 matching rows)"
+   },
+   "verified": 0.75,
+   "signals": [
+    "free_text:description"
+   ],
+   "agent_answer": null,
+   "latency_s": 0.57,
+   "det_answer": "284",
+   "template": "count_kind",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p015",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How many times did I go out for drinks in September 2026?",
+   "path": "agent",
+   "answer": "You went out for drinks once in September 2026.",
+   "plan": {
+    "table": "events",
+    "op": "count",
+    "column": "title",
+    "filters": {
+     "person_id": "Adam Zvada"
+    },
+    "period": "in:2026-09",
+    "text": "count of rows from events where person_id = 'Adam Zvada', in 2026-09 (9 matching rows)"
+   },
+   "verified": 0.65,
+   "signals": [
+    "low_trust",
+    "unmatched:drinks",
+    "disagree"
+   ],
+   "agent_answer": "You went out for drinks once in September 2026.",
+   "latency_s": 0.233,
+   "det_answer": "9",
+   "template": "count_kind",
+   "score_det": 0.0,
+   "score_path": 0.0
+  },
+  {
+   "qid": "p016",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How often did I take an Uber or a Bolt in August 2025?",
+   "path": "agent",
+   "answer": "You took an Uber or Bolt 19 times in August 2025: all 19 were Bolt rides.",
+   "plan": {
+    "table": "expenses",
+    "op": "count",
+    "column": "merchant",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "transport"
+    },
+    "period": "in:2025-08",
+    "text": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'transport', in 2025-08 (19 matching rows)"
+   },
+   "verified": 0.31,
+   "signals": [
+    "low_trust"
+   ],
+   "agent_answer": "You took an Uber or Bolt 19 times in August 2025: all 19 were Bolt rides.",
+   "latency_s": 0.174,
+   "det_answer": "19",
+   "template": "count_kind",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p017",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How many times did I go to Bistro Monk in 2024?",
+   "path": "deterministic",
+   "answer": "25",
+   "plan": {
+    "table": "expenses",
+    "op": "count",
+    "column": "merchant",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "dining",
+     "merchant": "Bistro Monk"
+    },
+    "period": "year:2024",
+    "text": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'dining' and merchant = 'Bistro Monk', in 2024 (25 matching rows)"
+   },
+   "verified": 0.83,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.182,
+   "det_answer": "25",
+   "template": "count_merchant",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p018",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How many visits to Field in 2024?",
+   "path": "deterministic",
+   "answer": "17",
+   "plan": {
+    "table": "expenses",
+    "op": "count",
+    "column": "merchant",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "merchant": "Field"
+    },
+    "period": "year:2024",
+    "text": "count of rows from expenses where person_id = 'Adam Zvada' and merchant = 'Field', in 2024 (17 matching rows)"
+   },
+   "verified": 0.9,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.174,
+   "det_answer": "17",
+   "template": "count_merchant",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p019",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How many times did I go to Doubleshot in 2024?",
+   "path": "deterministic",
+   "answer": "38",
+   "plan": {
+    "table": "expenses",
+    "op": "count",
+    "column": "merchant",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "coffee",
+     "merchant": "Doubleshot"
+    },
+    "period": "year:2024",
+    "text": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'coffee' and merchant = 'Doubleshot', in 2024 (38 matching rows)"
+   },
+   "verified": 0.81,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.143,
+   "det_answer": "38",
+   "template": "count_merchant",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p020",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How many visits to Cafe Imperial in 2024?",
+   "path": "deterministic",
+   "answer": "14",
+   "plan": {
+    "table": "expenses",
+    "op": "count",
+    "column": "merchant",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "dining",
+     "merchant": "Café Imperial"
+    },
+    "period": "year:2024",
+    "text": "count of rows from expenses where person_id = 'Adam Zvada' and category = 'dining' and merchant = 'Café Imperial', in 2024 (14 matching rows)"
+   },
+   "verified": 0.87,
+   "signals": [
+    "variants:merchant"
+   ],
+   "agent_answer": null,
+   "latency_s": 0.15,
+   "det_answer": "14",
+   "template": "count_merchant",
+   "score_det": 0.0,
+   "score_path": 0.0
+  },
+  {
+   "qid": "p021",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How many times did I go to Sightglass?",
+   "path": "deterministic",
+   "answer": "26",
+   "plan": {
+    "table": "expenses",
+    "op": "count",
+    "column": "merchant",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "merchant": "Sightglass"
+    },
+    "period": "all",
+    "text": "count of rows from expenses where person_id = 'Adam Zvada' and merchant = 'Sightglass', any time (26 matching rows)"
+   },
+   "verified": 0.87,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.461,
+   "det_answer": "26",
+   "template": "count_merchant",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p022",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How many visits to Bolt?",
+   "path": "deterministic",
+   "answer": "402",
+   "plan": {
+    "table": "expenses",
+    "op": "count",
+    "column": "merchant",
+    "filters": {
+     "category": "transport",
+     "merchant": "Bolt"
+    },
+    "period": "all",
+    "text": "count of rows from expenses where category = 'transport' and merchant = 'Bolt', any time (402 matching rows)"
+   },
+   "verified": 0.9,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.134,
+   "det_answer": "402",
+   "template": "count_merchant",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p023",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How many times did I go to Café Lounge in 2024?",
+   "path": "deterministic",
+   "answer": "36",
+   "plan": {
+    "table": "expenses",
+    "op": "count",
+    "column": "merchant",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "merchant": "Café Lounge"
+    },
+    "period": "year:2024",
+    "text": "count of rows from expenses where person_id = 'Adam Zvada' and merchant = 'Café Lounge', in 2024 (36 matching rows)"
+   },
+   "verified": 0.86,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.13,
+   "det_answer": "36",
+   "template": "count_merchant",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p024",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How many visits to Eska in 2024?",
+   "path": "deterministic",
+   "answer": "12",
+   "plan": {
+    "table": "expenses",
+    "op": "count",
+    "column": "merchant",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "merchant": "Eska"
+    },
+    "period": "year:2024",
+    "text": "count of rows from expenses where person_id = 'Adam Zvada' and merchant = 'Eska', in 2024 (12 matching rows)"
+   },
+   "verified": 0.83,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.117,
+   "det_answer": "12",
+   "template": "count_merchant",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p025",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How much did I spend at Field in August 2024?",
+   "path": "deterministic",
+   "answer": "6,760.00 CZK (3 rows)",
+   "plan": {
+    "table": "expenses",
+    "op": "sum",
+    "column": "amount",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "merchant": "Field"
+    },
+    "period": "in:2024-08",
+    "text": "total of amount from expenses where person_id = 'Adam Zvada' and merchant = 'Field', in 2024-08 (3 matching rows)"
+   },
+   "verified": 0.91,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.089,
+   "det_answer": "6,760.00 CZK (3 rows)",
+   "template": "spend_merchant",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p026",
+   "ts": "2026-09-30T21:00:00",
+   "question": "What did I spend in total at EMA Espresso Bar?",
+   "path": "deterministic",
+   "answer": "8,860.00 CZK (100 rows)",
+   "plan": {
+    "table": "expenses",
+    "op": "sum",
+    "column": "amount",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "merchant": "EMA Espresso Bar"
+    },
+    "period": "all",
+    "text": "total of amount from expenses where person_id = 'Adam Zvada' and merchant = 'EMA Espresso Bar', any time (100 matching rows)"
+   },
+   "verified": 0.86,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.098,
+   "det_answer": "8,860.00 CZK (100 rows)",
+   "template": "spend_merchant",
+   "score_det": 0.0,
+   "score_path": 0.0
+  },
+  {
+   "qid": "p027",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How much did I spend at Onesip Coffee?",
+   "path": "deterministic",
+   "answer": "5,905.00 CZK (64 rows)",
+   "plan": {
+    "table": "expenses",
+    "op": "sum",
+    "column": "amount",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "coffee",
+     "merchant": "Onesip Coffee",
+     "description": "Coffee"
+    },
+    "period": "all",
+    "text": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'coffee' and merchant = 'Onesip Coffee' and description = 'Coffee', any time (64 matching rows)"
+   },
+   "verified": 0.82,
+   "signals": [
+    "free_text:description",
+    "variants:merchant"
+   ],
+   "agent_answer": null,
+   "latency_s": 0.133,
+   "det_answer": "5,905.00 CZK (64 rows)",
+   "template": "spend_merchant",
+   "score_det": 0.0,
+   "score_path": 0.0
+  },
+  {
+   "qid": "p028",
+   "ts": "2026-09-30T21:00:00",
+   "question": "What did I spend in total at Vinograf in 2024?",
+   "path": "deterministic",
+   "answer": "5,580.00 CZK (17 rows)",
+   "plan": {
+    "table": "expenses",
+    "op": "sum",
+    "column": "amount",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "merchant": "Vinograf"
+    },
+    "period": "year:2024",
+    "text": "total of amount from expenses where person_id = 'Adam Zvada' and merchant = 'Vinograf', in 2024 (17 matching rows)"
+   },
+   "verified": 0.91,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.134,
+   "det_answer": "5,580.00 CZK (17 rows)",
+   "template": "spend_merchant",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p029",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How much did I spend at Můj šálek kávy in 2025?",
+   "path": "deterministic",
+   "answer": "3,785.00 CZK (42 rows)",
+   "plan": {
+    "table": "expenses",
+    "op": "sum",
+    "column": "amount",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "merchant": "Můj šálek kávy"
+    },
+    "period": "year:2025",
+    "text": "total of amount from expenses where person_id = 'Adam Zvada' and merchant = 'Můj šálek kávy', in 2025 (42 matching rows)"
+   },
+   "verified": 0.9,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.151,
+   "det_answer": "3,785.00 CZK (42 rows)",
+   "template": "spend_merchant",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p030",
+   "ts": "2026-09-30T21:00:00",
+   "question": "What did I spend in total at Field?",
+   "path": "deterministic",
+   "answer": "61,980.00 CZK (36 rows)",
+   "plan": {
+    "table": "expenses",
+    "op": "sum",
+    "column": "amount",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "merchant": "Field"
+    },
+    "period": "all",
+    "text": "total of amount from expenses where person_id = 'Adam Zvada' and merchant = 'Field', any time (36 matching rows)"
+   },
+   "verified": 0.9,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.156,
+   "det_answer": "61,980.00 CZK (36 rows)",
+   "template": "spend_merchant",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p031",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How much did I spend at Pho Vietnam in 2025?",
+   "path": "deterministic",
+   "answer": "11,942.00 CZK (43 rows)",
+   "plan": {
+    "table": "expenses",
+    "op": "sum",
+    "column": "amount",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "dining",
+     "merchant": "Pho Vietnam"
+    },
+    "period": "year:2025",
+    "text": "total of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and merchant = 'Pho Vietnam', in 2025 (43 matching rows)"
+   },
+   "verified": 0.87,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.167,
+   "det_answer": "11,942.00 CZK (43 rows)",
+   "template": "spend_merchant",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p032",
+   "ts": "2026-09-30T21:00:00",
+   "question": "What did I spend in total at Uber?",
+   "path": "deterministic",
+   "answer": "1,916.65 USD (88 rows)",
+   "plan": {
+    "table": "expenses",
+    "op": "sum",
+    "column": "amount",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "merchant": "Uber"
+    },
+    "period": "all",
+    "text": "total of amount from expenses where person_id = 'Adam Zvada' and merchant = 'Uber', any time (88 matching rows)"
+   },
+   "verified": 0.86,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.145,
+   "det_answer": "1,916.65 USD (88 rows)",
+   "template": "spend_merchant",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p033",
+   "ts": "2026-09-30T21:00:00",
+   "question": "What's the most I've spent on a single lunch in Prague?",
+   "path": "agent",
+   "answer": "The most I spent on a single lunch was 385 CZK.",
+   "plan": {
+    "table": "expenses",
+    "op": "max",
+    "column": "amount",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "dining",
+     "description": "Lunch"
+    },
+    "period": "all",
+    "text": "row with the largest amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and description = 'Lunch', any time (571 matching rows)"
+   },
+   "verified": 0.66,
+   "signals": [
+    "low_trust",
+    "free_text:description"
+   ],
+   "agent_answer": "The most I spent on a single lunch was 385 CZK.",
+   "latency_s": 0.158,
+   "det_answer": "385.0 — 2024-04-01 {\"person\": \"Adam Zvada\", \"category\": \"dining\", \"date\": \"2024-04-01\", \"amount\": 385.0, \"currency\": \"CZK\", \"merchant\": \"Pho Vietnam\", \"description\": \"Lunch\"}",
+   "template": "max_kind_city",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p034",
+   "ts": "2026-09-30T21:00:00",
+   "question": "What was my most expensive grocery run in San Francisco?",
+   "path": "deterministic",
+   "answer": "127.38 — 2026-04-15 {\"person\": \"Adam Zvada\", \"category\": \"groceries\", \"date\": \"2026-04-15\", \"amount\": 127.38, \"currency\": \"USD\", \"merchant\": \"Trader Joe's\", \"description\": \"Groceries; San Francisco, CA\", \"occurred_at\": \"2026-04-15T16:13\", \"payment_method\": \"card\", \"card_last_four\": \"4421\"}",
+   "plan": {
+    "table": "expenses",
+    "op": "max",
+    "column": "amount",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "groceries",
+     "description": "Groceries; San Francisco, CA"
+    },
+    "period": "all",
+    "text": "row with the largest amount from expenses where person_id = 'Adam Zvada' and category = 'groceries' and description = 'Groceries; San Francisco, CA', any time (3 matching rows)"
+   },
+   "verified": 0.89,
+   "signals": [
+    "free_text:description",
+    "unmatched:run"
+   ],
+   "agent_answer": null,
+   "latency_s": 0.172,
+   "det_answer": "127.38 — 2026-04-15 {\"person\": \"Adam Zvada\", \"category\": \"groceries\", \"date\": \"2026-04-15\", \"amount\": 127.38, \"currency\": \"USD\", \"merchant\": \"Trader Joe's\", \"description\": \"Groceries; San Francisco, CA\", \"occurred_at\": \"2026-04-15T16:13\", \"payment_method\": \"card\", \"card_last_four\": \"4421\"}",
+   "template": "max_kind_city",
+   "score_det": 0.0,
+   "score_path": 0.0
+  },
+  {
+   "qid": "p035",
+   "ts": "2026-09-30T21:00:00",
+   "question": "What's the most I've spent on a single grocery run in Prague?",
+   "path": "agent",
+   "answer": "The largest recorded grocery run was 2,749 CZK at Rohlik.cz on October 7, 2024. The records don’t specify its location, so I can’t confirm it was in Prague.",
+   "plan": {
+    "table": "expenses",
+    "op": "max",
+    "column": "amount",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "groceries"
+    },
+    "period": "all",
+    "text": "row with the largest amount from expenses where person_id = 'Adam Zvada' and category = 'groceries', any time (266 matching rows)"
+   },
+   "verified": 0.69,
+   "signals": [
+    "low_trust",
+    "unmatched:run"
+   ],
+   "agent_answer": "The largest recorded grocery run was 2,749 CZK at Rohlik.cz on October 7, 2024. The records don’t specify its location, so I can’t confirm it was in Prague.",
+   "latency_s": 0.172,
+   "det_answer": "2749.0 — 2024-10-07 {\"person\": \"Adam Zvada\", \"category\": \"groceries\", \"date\": \"2024-10-07\", \"amount\": 2749.0, \"currency\": \"CZK\", \"merchant\": \"Rohlik.cz\", \"description\": \"Groceries delivery\"}",
+   "template": "max_kind_city",
+   "score_det": 0.0,
+   "score_path": 0.0
+  },
+  {
+   "qid": "p036",
+   "ts": "2026-09-30T21:00:00",
+   "question": "What was my most expensive dinner in Prague?",
+   "path": "agent",
+   "answer": "Your most expensive recorded dinner was 2,480 CZK. That amount is tied across multiple dinners, including at La Degustation, Café Imperial, Field, Eska, Sasazu, and Maso a Kobliha.",
+   "plan": {
+    "table": "expenses",
+    "op": "max",
+    "column": "amount",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "dining",
+     "description": "dinner"
+    },
+    "period": "all",
+    "text": "row with the largest amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and description = 'dinner', any time (170 matching rows)"
+   },
+   "verified": 0.64,
+   "signals": [
+    "low_trust",
+    "free_text:description"
+   ],
+   "agent_answer": "Your most expensive recorded dinner was 2,480 CZK. That amount is tied across multiple dinners, including at La Degustation, Café Imperial, Field, Eska, Sasazu, and Maso a Kobliha.",
+   "latency_s": 0.173,
+   "det_answer": "2480.0 — 2024-04-08 {\"person\": \"Adam Zvada\", \"category\": \"dining\", \"date\": \"2024-04-08\", \"amount\": 2480.0, \"currency\": \"CZK\", \"merchant\": \"La Degustation\", \"description\": \"Dinner with Tom\", \"with_person\": \"Tom Novak\"}",
+   "template": "max_kind_city",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p037",
+   "ts": "2026-09-30T21:00:00",
+   "question": "What's the most I've spent on a single coffee in Prague?",
+   "path": "agent",
+   "answer": "The most I have recorded for a single coffee is 125 CZK. The expense records don’t specify the city, so I can’t confirm that this purchase was in Prague.",
+   "plan": {
+    "table": "expenses",
+    "op": "max",
+    "column": "amount",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "coffee"
+    },
+    "period": "all",
+    "text": "row with the largest amount from expenses where person_id = 'Adam Zvada' and category = 'coffee', any time (949 matching rows)"
+   },
+   "verified": 0.57,
+   "signals": [
+    "low_trust"
+   ],
+   "agent_answer": "The most I have recorded for a single coffee is 125 CZK. The expense records don’t specify the city, so I can’t confirm that this purchase was in Prague.",
+   "latency_s": 0.195,
+   "det_answer": "125.0 — 2024-04-01 {\"person\": \"Adam Zvada\", \"category\": \"coffee\", \"date\": \"2024-04-01\", \"amount\": 125.0, \"currency\": \"CZK\", \"merchant\": \"Café Savoy\", \"description\": \"Coffee\"}",
+   "template": "max_kind_city",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p038",
+   "ts": "2026-09-30T21:00:00",
+   "question": "What was my most expensive night of drinks in Prague?",
+   "path": "agent",
+   "answer": "Your most expensive recorded night of drinks was June 13, 2025: 830 CZK total—420 CZK at U Hrocha and 410 CZK at Hemingway Bar.",
+   "plan": {
+    "table": "expenses",
+    "op": "max",
+    "column": "amount",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "dining"
+    },
+    "period": "all",
+    "text": "row with the largest amount from expenses where person_id = 'Adam Zvada' and category = 'dining', any time (959 matching rows)"
+   },
+   "verified": 0.13,
+   "signals": [
+    "low_trust",
+    "disagree"
+   ],
+   "agent_answer": "Your most expensive recorded night of drinks was June 13, 2025: 830 CZK total—420 CZK at U Hrocha and 410 CZK at Hemingway Bar.",
+   "latency_s": 0.208,
+   "det_answer": "2480.0 — 2024-04-01 {\"person\": \"Adam Zvada\", \"category\": \"dining\", \"date\": \"2024-04-01\", \"amount\": 2480.0, \"currency\": \"CZK\", \"merchant\": \"Café Imperial\", \"description\": \"With Eva\"}",
+   "template": "max_kind_city",
+   "score_det": 0.0,
+   "score_path": 0.0
+  },
+  {
+   "qid": "p039",
+   "ts": "2026-09-30T21:00:00",
+   "question": "What's the most I've spent on a single ride in San Francisco?",
+   "path": "agent",
+   "answer": "I don't know.",
+   "plan": {
+    "table": "expenses",
+    "op": "max",
+    "column": "amount",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "transport",
+     "description": "Ride"
+    },
+    "period": "all",
+    "text": "row with the largest amount from expenses where person_id = 'Adam Zvada' and category = 'transport' and description = 'Ride', any time (481 matching rows)"
+   },
+   "verified": 0.49,
+   "signals": [
+    "low_trust",
+    "free_text:description"
+   ],
+   "agent_answer": "I don't know.",
+   "latency_s": 0.206,
+   "det_answer": "380.0 — 2024-06-04 {\"person\": \"Adam Zvada\", \"category\": \"transport\", \"date\": \"2024-06-04\", \"amount\": 380.0, \"currency\": \"CZK\", \"merchant\": \"Bolt\", \"description\": \"Ride home\"}",
+   "template": "max_kind_city",
+   "score_det": 0.0,
+   "score_path": 0.0
+  },
+  {
+   "qid": "p040",
+   "ts": "2026-09-30T21:00:00",
+   "question": "What was my most expensive ride in Prague?",
+   "path": "agent",
+   "answer": "I don't know.",
+   "plan": {
+    "table": "expenses",
+    "op": "max",
+    "column": "description",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "transport",
+     "description": "Ride"
+    },
+    "period": "all",
+    "text": "row with the largest description from expenses where person_id = 'Adam Zvada' and category = 'transport' and description = 'Ride', any time (481 matching rows)"
+   },
+   "verified": 0.23,
+   "signals": [
+    "low_trust",
+    "free_text:description"
+   ],
+   "agent_answer": "I don't know.",
+   "latency_s": 0.209,
+   "det_answer": "Ride home — 2024-06-04 {\"person\": \"Adam Zvada\", \"category\": \"transport\", \"date\": \"2024-06-04\", \"amount\": 380.0, \"currency\": \"CZK\", \"merchant\": \"Bolt\", \"description\": \"Ride home\"}",
+   "template": "max_kind_city",
+   "score_det": 1.0,
+   "score_path": 0.0
+  },
+  {
+   "qid": "p041",
+   "ts": "2026-09-30T21:00:00",
+   "question": "What's my average dinner bill in November 2024?",
+   "path": "deterministic",
+   "answer": "1,602.50 (average of 4 rows)",
+   "plan": {
+    "table": "expenses",
+    "op": "avg",
+    "column": "amount",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "dining",
+     "description": "dinner"
+    },
+    "period": "in:2024-11",
+    "text": "average of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and description = 'dinner', in 2024-11 (4 matching rows)"
+   },
+   "verified": 0.85,
+   "signals": [
+    "free_text:description"
+   ],
+   "agent_answer": null,
+   "latency_s": 0.221,
+   "det_answer": "1,602.50 (average of 4 rows)",
+   "template": "avg_kind",
+   "score_det": 0.0,
+   "score_path": 0.0
+  },
+  {
+   "qid": "p042",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How much did a night of drinks cost me on average in November 2024?",
+   "path": "agent",
+   "answer": "A night of drinks cost 265 CZK on average in November 2024 (two nights: 260 CZK and 270 CZK).",
+   "plan": {
+    "table": "expenses",
+    "op": "avg",
+    "column": "amount",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "dining"
+    },
+    "period": "in:2024-11",
+    "text": "average of amount from expenses where person_id = 'Adam Zvada' and category = 'dining', in 2024-11 (34 matching rows)"
+   },
+   "verified": 0.42,
+   "signals": [
+    "low_trust",
+    "disagree"
+   ],
+   "agent_answer": "A night of drinks cost 265 CZK on average in November 2024 (two nights: 260 CZK and 270 CZK).",
+   "latency_s": 0.208,
+   "det_answer": "551.97 (average of 34 rows)",
+   "template": "avg_kind",
+   "score_det": 0.0,
+   "score_path": 0.0
+  },
+  {
+   "qid": "p043",
+   "ts": "2026-09-30T21:00:00",
+   "question": "What's my average dinner bill in June 2024?",
+   "path": "deterministic",
+   "answer": "1,528.75 (average of 8 rows)",
+   "plan": {
+    "table": "expenses",
+    "op": "avg",
+    "column": "amount",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "dining",
+     "description": "dinner"
+    },
+    "period": "in:2024-06",
+    "text": "average of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and description = 'dinner', in 2024-06 (8 matching rows)"
+   },
+   "verified": 0.84,
+   "signals": [
+    "free_text:description"
+   ],
+   "agent_answer": null,
+   "latency_s": 0.206,
+   "det_answer": "1,528.75 (average of 8 rows)",
+   "template": "avg_kind",
+   "score_det": 0.0,
+   "score_path": 0.0
+  },
+  {
+   "qid": "p044",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How much did a ride cost me on average in October 2024?",
+   "path": "deterministic",
+   "answer": "258.75 (average of 16 rows)",
+   "plan": {
+    "table": "expenses",
+    "op": "avg",
+    "column": "amount",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "transport",
+     "description": "Ride"
+    },
+    "period": "in:2024-10",
+    "text": "average of amount from expenses where person_id = 'Adam Zvada' and category = 'transport' and description = 'Ride', in 2024-10 (16 matching rows)"
+   },
+   "verified": 0.87,
+   "signals": [
+    "free_text:description"
+   ],
+   "agent_answer": null,
+   "latency_s": 0.216,
+   "det_answer": "258.75 (average of 16 rows)",
+   "template": "avg_kind",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p045",
+   "ts": "2026-09-30T21:00:00",
+   "question": "What's my average grocery run bill in October 2025?",
+   "path": "deterministic",
+   "answer": "1,182.22 (average of 9 rows)",
+   "plan": {
+    "table": "expenses",
+    "op": "avg",
+    "column": "amount",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "groceries"
+    },
+    "period": "in:2025-10",
+    "text": "average of amount from expenses where person_id = 'Adam Zvada' and category = 'groceries', in 2025-10 (9 matching rows)"
+   },
+   "verified": 0.9,
+   "signals": [
+    "unmatched:run"
+   ],
+   "agent_answer": null,
+   "latency_s": 0.203,
+   "det_answer": "1,182.22 (average of 9 rows)",
+   "template": "avg_kind",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p046",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How much did a lunch cost me on average last month?",
+   "path": "deterministic",
+   "answer": "18.75 (average of 17 rows)",
+   "plan": {
+    "table": "expenses",
+    "op": "avg",
+    "column": "amount",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "dining",
+     "description": "Lunch"
+    },
+    "period": "in:2026-08",
+    "text": "average of amount from expenses where person_id = 'Adam Zvada' and category = 'dining' and description = 'Lunch', in 2026-08 (17 matching rows)"
+   },
+   "verified": 0.83,
+   "signals": [
+    "free_text:description"
+   ],
+   "agent_answer": null,
+   "latency_s": 0.202,
+   "det_answer": "18.75 (average of 17 rows)",
+   "template": "avg_kind",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p047",
+   "ts": "2026-09-30T21:00:00",
+   "question": "What's my average ride bill in 2025?",
+   "path": "deterministic",
+   "answer": "226.32 (average of 201 rows)",
+   "plan": {
+    "table": "expenses",
+    "op": "avg",
+    "column": "amount",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "transport",
+     "description": "Ride"
+    },
+    "period": "year:2025",
+    "text": "average of amount from expenses where person_id = 'Adam Zvada' and category = 'transport' and description = 'Ride', in 2025 (201 matching rows)"
+   },
+   "verified": 0.87,
+   "signals": [
+    "free_text:description"
+   ],
+   "agent_answer": null,
+   "latency_s": 0.201,
+   "det_answer": "226.32 (average of 201 rows)",
+   "template": "avg_kind",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p048",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How much did a night of drinks cost me on average last month?",
+   "path": "agent",
+   "answer": "A night of drinks cost you about $16.71 on average last month (9 nights, August 2026).",
+   "plan": {
+    "table": "expenses",
+    "op": "avg",
+    "column": "amount",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "dining"
+    },
+    "period": "in:2026-08",
+    "text": "average of amount from expenses where person_id = 'Adam Zvada' and category = 'dining', in 2026-08 (31 matching rows)"
+   },
+   "verified": 0.44,
+   "signals": [
+    "low_trust",
+    "disagree"
+   ],
+   "agent_answer": "A night of drinks cost you about $16.71 on average last month (9 nights, August 2026).",
+   "latency_s": 0.201,
+   "det_answer": "41.42 (average of 31 rows)",
+   "template": "avg_kind",
+   "score_det": 0.0,
+   "score_path": 0.0
+  },
+  {
+   "qid": "p049",
+   "ts": "2026-09-30T21:00:00",
+   "question": "What was my average sleep in July 2024?",
+   "path": "deterministic",
+   "answer": "7.12 (average of 28 rows)",
+   "plan": {
+    "table": "body_measurements",
+    "op": "avg",
+    "column": "value",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "sleep",
+     "unit": "h"
+    },
+    "period": "in:2024-07",
+    "text": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2024-07 (28 matching rows)"
+   },
+   "verified": 0.91,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.189,
+   "det_answer": "7.12 (average of 28 rows)",
+   "template": "avg_sleep",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p050",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How many hours did I sleep on average in December 2024?",
+   "path": "deterministic",
+   "answer": "7.02 (average of 30 rows)",
+   "plan": {
+    "table": "body_measurements",
+    "op": "avg",
+    "column": "value",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "sleep",
+     "unit": "h"
+    },
+    "period": "in:2024-12",
+    "text": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2024-12 (30 matching rows)"
+   },
+   "verified": 0.89,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.167,
+   "det_answer": "7.02 (average of 30 rows)",
+   "template": "avg_sleep",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p051",
+   "ts": "2026-09-30T21:00:00",
+   "question": "What was my average sleep in September 2025?",
+   "path": "deterministic",
+   "answer": "6.91 (average of 28 rows)",
+   "plan": {
+    "table": "body_measurements",
+    "op": "avg",
+    "column": "value",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "sleep",
+     "unit": "h"
+    },
+    "period": "in:2025-09",
+    "text": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2025-09 (28 matching rows)"
+   },
+   "verified": 0.89,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.156,
+   "det_answer": "6.91 (average of 28 rows)",
+   "template": "avg_sleep",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p052",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How many hours did I sleep on average in September 2024?",
+   "path": "deterministic",
+   "answer": "7.03 (average of 28 rows)",
+   "plan": {
+    "table": "body_measurements",
+    "op": "avg",
+    "column": "value",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "sleep",
+     "unit": "h"
+    },
+    "period": "in:2024-09",
+    "text": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2024-09 (28 matching rows)"
+   },
+   "verified": 0.9,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.128,
+   "det_answer": "7.03 (average of 28 rows)",
+   "template": "avg_sleep",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p053",
+   "ts": "2026-09-30T21:00:00",
+   "question": "What was my average sleep in March 2025?",
+   "path": "deterministic",
+   "answer": "7.63 (average of 29 rows)",
+   "plan": {
+    "table": "body_measurements",
+    "op": "avg",
+    "column": "value",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "sleep",
+     "unit": "h"
+    },
+    "period": "in:2025-03",
+    "text": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2025-03 (29 matching rows)"
+   },
+   "verified": 0.9,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.106,
+   "det_answer": "7.63 (average of 29 rows)",
+   "template": "avg_sleep",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p054",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How many hours did I sleep on average in January 2026?",
+   "path": "deterministic",
+   "answer": "6.88 (average of 28 rows)",
+   "plan": {
+    "table": "body_measurements",
+    "op": "avg",
+    "column": "value",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "sleep",
+     "unit": "h"
+    },
+    "period": "in:2026-01",
+    "text": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2026-01 (28 matching rows)"
+   },
+   "verified": 0.88,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.094,
+   "det_answer": "6.88 (average of 28 rows)",
+   "template": "avg_sleep",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p055",
+   "ts": "2026-09-30T21:00:00",
+   "question": "What was my average sleep in April 2025?",
+   "path": "deterministic",
+   "answer": "7.10 (average of 28 rows)",
+   "plan": {
+    "table": "body_measurements",
+    "op": "avg",
+    "column": "value",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "sleep",
+     "unit": "h"
+    },
+    "period": "in:2025-04",
+    "text": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2025-04 (28 matching rows)"
+   },
+   "verified": 0.9,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.083,
+   "det_answer": "7.10 (average of 28 rows)",
+   "template": "avg_sleep",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p056",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How many hours did I sleep on average in April 2026?",
+   "path": "deterministic",
+   "answer": "6.60 (average of 26 rows)",
+   "plan": {
+    "table": "body_measurements",
+    "op": "avg",
+    "column": "value",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "sleep",
+     "unit": "h"
+    },
+    "period": "in:2026-04",
+    "text": "average of value from body_measurements where person_id = 'Adam Zvada' and category = 'sleep' and unit = 'h', in 2026-04 (26 matching rows)"
+   },
+   "verified": 0.89,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.081,
+   "det_answer": "6.60 (average of 26 rows)",
+   "template": "avg_sleep",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p057",
+   "ts": "2026-09-30T21:00:00",
+   "question": "What was my lowest weight in 2024?",
+   "path": "deterministic",
+   "answer": "73.8 — 2024-07-23 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 73.8, \"unit\": \"kg\", \"date\": \"2024-07-23\"}",
+   "plan": {
+    "table": "body_measurements",
+    "op": "min",
+    "column": "value",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "weight",
+     "unit": "kg"
+    },
+    "period": "year:2024",
+    "text": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight' and unit = 'kg', in 2024 (148 matching rows)"
+   },
+   "verified": 0.93,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.081,
+   "det_answer": "73.8 — 2024-07-23 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 73.8, \"unit\": \"kg\", \"date\": \"2024-07-23\"}",
+   "template": "min_weight",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p058",
+   "ts": "2026-09-30T21:00:00",
+   "question": "What's the least I weighed in 2025?",
+   "path": "deterministic",
+   "answer": "74.1 — 2025-02-04 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 74.1, \"unit\": \"kg\", \"date\": \"2025-02-04\"}",
+   "plan": {
+    "table": "body_measurements",
+    "op": "min",
+    "column": "value",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "weight"
+    },
+    "period": "year:2025",
+    "text": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight', in 2025 (172 matching rows)"
+   },
+   "verified": 0.92,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.078,
+   "det_answer": "74.1 — 2025-02-04 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 74.1, \"unit\": \"kg\", \"date\": \"2025-02-04\"}",
+   "template": "min_weight",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p059",
+   "ts": "2026-09-30T21:00:00",
+   "question": "What was my lowest weight in December 2024?",
+   "path": "deterministic",
+   "answer": "74.3 — 2024-12-03 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 74.3, \"unit\": \"kg\", \"date\": \"2024-12-03\"}",
+   "plan": {
+    "table": "body_measurements",
+    "op": "min",
+    "column": "value",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "weight",
+     "unit": "kg"
+    },
+    "period": "in:2024-12",
+    "text": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight' and unit = 'kg', in 2024-12 (16 matching rows)"
+   },
+   "verified": 0.94,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.076,
+   "det_answer": "74.3 — 2024-12-03 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 74.3, \"unit\": \"kg\", \"date\": \"2024-12-03\"}",
+   "template": "min_weight",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p060",
+   "ts": "2026-09-30T21:00:00",
+   "question": "What's the least I weighed this year?",
+   "path": "deterministic",
+   "answer": "73.6 — 2026-07-28 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 73.6, \"unit\": \"kg\", \"date\": \"2026-07-28\"}",
+   "plan": {
+    "table": "body_measurements",
+    "op": "min",
+    "column": "value",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "weight"
+    },
+    "period": "year:2026",
+    "text": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight', in 2026 (129 matching rows)"
+   },
+   "verified": 0.9,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.072,
+   "det_answer": "73.6 — 2026-07-28 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 73.6, \"unit\": \"kg\", \"date\": \"2026-07-28\"}",
+   "template": "min_weight",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p061",
+   "ts": "2026-09-30T21:00:00",
+   "question": "What was my lowest weight in March 2026?",
+   "path": "deterministic",
+   "answer": "74.6 — 2026-03-30 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 74.6, \"unit\": \"kg\", \"date\": \"2026-03-30\"}",
+   "plan": {
+    "table": "body_measurements",
+    "op": "min",
+    "column": "value",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "weight",
+     "unit": "kg"
+    },
+    "period": "in:2026-03",
+    "text": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight' and unit = 'kg', in 2026-03 (16 matching rows)"
+   },
+   "verified": 0.93,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.074,
+   "det_answer": "74.6 — 2026-03-30 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 74.6, \"unit\": \"kg\", \"date\": \"2026-03-30\"}",
+   "template": "min_weight",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p062",
+   "ts": "2026-09-30T21:00:00",
+   "question": "What's the least I weighed in September 2025?",
+   "path": "deterministic",
+   "answer": "75.0 — 2025-09-28 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 75.0, \"unit\": \"kg\", \"date\": \"2025-09-28\"}",
+   "plan": {
+    "table": "body_measurements",
+    "op": "min",
+    "column": "value",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "weight",
+     "unit": "kg"
+    },
+    "period": "in:2025-09",
+    "text": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight' and unit = 'kg', in 2025-09 (14 matching rows)"
+   },
+   "verified": 0.91,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.073,
+   "det_answer": "75.0 — 2025-09-28 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 75.0, \"unit\": \"kg\", \"date\": \"2025-09-28\"}",
+   "template": "min_weight",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p063",
+   "ts": "2026-09-30T21:00:00",
+   "question": "What was my lowest weight in June 2025?",
+   "path": "deterministic",
+   "answer": "74.5 — 2025-06-30 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 74.5, \"unit\": \"kg\", \"date\": \"2025-06-30\"}",
+   "plan": {
+    "table": "body_measurements",
+    "op": "min",
+    "column": "value",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "weight",
+     "unit": "kg"
+    },
+    "period": "in:2025-06",
+    "text": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight' and unit = 'kg', in 2025-06 (14 matching rows)"
+   },
+   "verified": 0.93,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.073,
+   "det_answer": "74.5 — 2025-06-30 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 74.5, \"unit\": \"kg\", \"date\": \"2025-06-30\"}",
+   "template": "min_weight",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p064",
+   "ts": "2026-09-30T21:00:00",
+   "question": "What's the least I weighed last month?",
+   "path": "deterministic",
+   "answer": "73.9 — 2026-08-04 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 73.9, \"unit\": \"kg\", \"date\": \"2026-08-04\"}",
+   "plan": {
+    "table": "body_measurements",
+    "op": "min",
+    "column": "value",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "weight",
+     "unit": "kg"
+    },
+    "period": "in:2026-08",
+    "text": "row with the smallest value from body_measurements where person_id = 'Adam Zvada' and category = 'weight' and unit = 'kg', in 2026-08 (16 matching rows)"
+   },
+   "verified": 0.89,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.076,
+   "det_answer": "73.9 — 2026-08-04 {\"person\": \"Adam Zvada\", \"category\": \"weight\", \"value\": 73.9, \"unit\": \"kg\", \"date\": \"2026-08-04\"}",
+   "template": "min_weight",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p065",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How many runs did I do in July 2025?",
+   "path": "deterministic",
+   "answer": "4",
+   "plan": {
+    "table": "workouts",
+    "op": "count",
+    "column": "distance",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "run"
+    },
+    "period": "in:2025-07",
+    "text": "count of rows from workouts where person_id = 'Adam Zvada' and category = 'run', in 2025-07 (4 matching rows)"
+   },
+   "verified": 0.89,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.067,
+   "det_answer": "4",
+   "template": "count_runs",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p066",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How many times did I go running this year?",
+   "path": "deterministic",
+   "answer": "43",
+   "plan": {
+    "table": "workouts",
+    "op": "count",
+    "column": "__row__",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "run"
+    },
+    "period": "year:2026",
+    "text": "count of rows from workouts where person_id = 'Adam Zvada' and category = 'run', in 2026 (43 matching rows)"
+   },
+   "verified": 0.83,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.062,
+   "det_answer": "43",
+   "template": "count_runs",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p067",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How many runs did I do?",
+   "path": "deterministic",
+   "answer": "157",
+   "plan": {
+    "table": "workouts",
+    "op": "count",
+    "column": "distance",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "run"
+    },
+    "period": "all",
+    "text": "count of rows from workouts where person_id = 'Adam Zvada' and category = 'run', any time (157 matching rows)"
+   },
+   "verified": 0.87,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.051,
+   "det_answer": "157",
+   "template": "count_runs",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p068",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How many times did I go running in 2024?",
+   "path": "deterministic",
+   "answer": "50",
+   "plan": {
+    "table": "workouts",
+    "op": "count",
+    "column": "__row__",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "run"
+    },
+    "period": "year:2024",
+    "text": "count of rows from workouts where person_id = 'Adam Zvada' and category = 'run', in 2024 (50 matching rows)"
+   },
+   "verified": 0.88,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.042,
+   "det_answer": "50",
+   "template": "count_runs",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p069",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How many runs did I do in November 2024?",
+   "path": "deterministic",
+   "answer": "6",
+   "plan": {
+    "table": "workouts",
+    "op": "count",
+    "column": "__row__",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "run"
+    },
+    "period": "in:2024-11",
+    "text": "count of rows from workouts where person_id = 'Adam Zvada' and category = 'run', in 2024-11 (6 matching rows)"
+   },
+   "verified": 0.91,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.033,
+   "det_answer": "6",
+   "template": "count_runs",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p070",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How many times did I go running in April 2024?",
+   "path": "deterministic",
+   "answer": "8",
+   "plan": {
+    "table": "workouts",
+    "op": "count",
+    "column": "date",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "run"
+    },
+    "period": "in:2024-04",
+    "text": "count of rows from workouts where person_id = 'Adam Zvada' and category = 'run', in 2024-04 (8 matching rows)"
+   },
+   "verified": 0.9,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.027,
+   "det_answer": "8",
+   "template": "count_runs",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p071",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How many runs did I do in May 2026?",
+   "path": "deterministic",
+   "answer": "7",
+   "plan": {
+    "table": "workouts",
+    "op": "count",
+    "column": "distance",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "run"
+    },
+    "period": "in:2026-05",
+    "text": "count of rows from workouts where person_id = 'Adam Zvada' and category = 'run', in 2026-05 (7 matching rows)"
+   },
+   "verified": 0.88,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.026,
+   "det_answer": "7",
+   "template": "count_runs",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p072",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How many times did I go running in June 2024?",
+   "path": "deterministic",
+   "answer": "5",
+   "plan": {
+    "table": "workouts",
+    "op": "count",
+    "column": "date",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "run"
+    },
+    "period": "in:2024-06",
+    "text": "count of rows from workouts where person_id = 'Adam Zvada' and category = 'run', in 2024-06 (5 matching rows)"
+   },
+   "verified": 0.9,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.025,
+   "det_answer": "5",
+   "template": "count_runs",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p073",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How many times did I go climbing in 2024?",
+   "path": "deterministic",
+   "answer": "52",
+   "plan": {
+    "table": "events",
+    "op": "count",
+    "column": "category",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "climbing",
+     "title": "Climbing",
+     "status": "attended"
+    },
+    "period": "year:2024",
+    "text": "count of rows from events where person_id = 'Adam Zvada' and category = 'climbing' and title = 'Climbing' and status = 'attended', in 2024 (52 matching rows)"
+   },
+   "verified": 0.81,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.029,
+   "det_answer": "52",
+   "template": "count_climbs",
+   "score_det": 0.0,
+   "score_path": 0.0
+  },
+  {
+   "qid": "p074",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How many climbing sessions did I have in 2025?",
+   "path": "deterministic",
+   "answer": "82",
+   "plan": {
+    "table": "events",
+    "op": "count",
+    "column": "category",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "climbing",
+     "title": "Climbing"
+    },
+    "period": "year:2025",
+    "text": "count of rows from events where person_id = 'Adam Zvada' and category = 'climbing' and title = 'Climbing', in 2025 (82 matching rows)"
+   },
+   "verified": 0.85,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.032,
+   "det_answer": "82",
+   "template": "count_climbs",
+   "score_det": 0.0,
+   "score_path": 0.0
+  },
+  {
+   "qid": "p075",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How many times did I go climbing in January 2026?",
+   "path": "deterministic",
+   "answer": "7",
+   "plan": {
+    "table": "events",
+    "op": "count",
+    "column": "category",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "climbing",
+     "title": "Climbing"
+    },
+    "period": "in:2026-01",
+    "text": "count of rows from events where person_id = 'Adam Zvada' and category = 'climbing' and title = 'Climbing', in 2026-01 (7 matching rows)"
+   },
+   "verified": 0.86,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.035,
+   "det_answer": "7",
+   "template": "count_climbs",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p076",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How many climbing sessions did I have in January 2025?",
+   "path": "deterministic",
+   "answer": "8",
+   "plan": {
+    "table": "events",
+    "op": "count",
+    "column": "category",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "climbing",
+     "title": "Climbing"
+    },
+    "period": "in:2025-01",
+    "text": "count of rows from events where person_id = 'Adam Zvada' and category = 'climbing' and title = 'Climbing', in 2025-01 (8 matching rows)"
+   },
+   "verified": 0.88,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.032,
+   "det_answer": "8",
+   "template": "count_climbs",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p077",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How many times did I go climbing this year?",
+   "path": "deterministic",
+   "answer": "44",
+   "plan": {
+    "table": "events",
+    "op": "count",
+    "column": "category",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "climbing",
+     "title": "Climbing",
+     "status": "attended"
+    },
+    "period": "year:2026",
+    "text": "count of rows from events where person_id = 'Adam Zvada' and category = 'climbing' and title = 'Climbing' and status = 'attended', in 2026 (44 matching rows)"
+   },
+   "verified": 0.77,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.034,
+   "det_answer": "44",
+   "template": "count_climbs",
+   "score_det": 0.0,
+   "score_path": 0.0
+  },
+  {
+   "qid": "p078",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How many climbing sessions did I have in June 2025?",
+   "path": "deterministic",
+   "answer": "6",
+   "plan": {
+    "table": "events",
+    "op": "count",
+    "column": "category",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "climbing",
+     "title": "Climbing"
+    },
+    "period": "in:2025-06",
+    "text": "count of rows from events where person_id = 'Adam Zvada' and category = 'climbing' and title = 'Climbing', in 2025-06 (6 matching rows)"
+   },
+   "verified": 0.86,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.035,
+   "det_answer": "6",
+   "template": "count_climbs",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p079",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How many times did I go climbing in May 2025?",
+   "path": "deterministic",
+   "answer": "7",
+   "plan": {
+    "table": "events",
+    "op": "count",
+    "column": "category",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "climbing",
+     "title": "Climbing"
+    },
+    "period": "in:2025-05",
+    "text": "count of rows from events where person_id = 'Adam Zvada' and category = 'climbing' and title = 'Climbing', in 2025-05 (7 matching rows)"
+   },
+   "verified": 0.86,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.031,
+   "det_answer": "7",
+   "template": "count_climbs",
+   "score_det": 1.0,
+   "score_path": 1.0
+  },
+  {
+   "qid": "p080",
+   "ts": "2026-09-30T21:00:00",
+   "question": "How many climbing sessions did I have in July 2025?",
+   "path": "deterministic",
+   "answer": "5",
+   "plan": {
+    "table": "events",
+    "op": "count",
+    "column": "category",
+    "filters": {
+     "person_id": "Adam Zvada",
+     "category": "climbing",
+     "title": "Climbing"
+    },
+    "period": "in:2025-07",
+    "text": "count of rows from events where person_id = 'Adam Zvada' and category = 'climbing' and title = 'Climbing', in 2025-07 (5 matching rows)"
+   },
+   "verified": 0.87,
+   "signals": [],
+   "agent_answer": null,
+   "latency_s": 0.028,
+   "det_answer": "5",
+   "template": "count_climbs",
+   "score_det": 1.0,
+   "score_path": 1.0
+  }
+ ]
+}

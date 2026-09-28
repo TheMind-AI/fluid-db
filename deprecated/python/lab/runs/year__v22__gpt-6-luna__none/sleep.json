@@ -1,0 +1,39 @@
+{
+ "dropped_before": 26,
+ "replanned_with_ops": 11,
+ "dropped_after": 15,
+ "migrations": [
+  {
+   "reason": "Dated climbing sessions are exercise sessions, like the sessions stored in workouts.",
+   "source_table": "events",
+   "where": "date <= '2026-09-24' AND (description = 'Climbing' OR description LIKE 'Climbing; %')",
+   "target_table": "workouts",
+   "mapping": [
+    {
+     "target_column": "person_id",
+     "source_column": "COALESCE(person_id, 1)",
+     "constant": null
+    },
+    {
+     "target_column": "activity",
+     "source_column": null,
+     "constant": "climbing"
+    },
+    {
+     "target_column": "date",
+     "source_column": "date",
+     "constant": null
+    },
+    {
+     "target_column": "note",
+     "source_column": "description || CASE WHEN place IS NOT NULL THEN ' at ' || place ELSE '' END || CASE WHEN attendees IS NOT NULL THEN ' with ' || attendees ELSE '' END || CASE WHEN time IS NOT NULL THEN ' at ' || time ELSE '' END",
+     "constant": null
+    }
+   ],
+   "applied": 56
+  }
+ ],
+ "candidate_pairs": 2,
+ "merges": [],
+ "cost": 0.031
+}

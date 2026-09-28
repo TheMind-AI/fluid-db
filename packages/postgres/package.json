@@ -1,0 +1,25 @@
+{
+  "name": "@fluiddb/postgres",
+  "version": "1.0.0-next.4",
+  "description": "FluidDB postgres storage adapter",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p .",
+    "test": "node --import tsx --test test/conformance.node.ts"
+  },
+  "dependencies": {
+    "@fluiddb/core": "workspace:*",
+    "@fluiddb/schema": "workspace:*",
+    "pg": "8.23.0",
+    "@types/pg": "8.23.1"
+  },
+  "devDependencies": {
+    "@types/bun": "catalog:",
+    "typescript": "catalog:"
+  },
+  "private": true,
+  "license": "Apache-2.0"
+}

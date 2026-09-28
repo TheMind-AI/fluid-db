@@ -1,0 +1,181 @@
+{
+ "aspects": {
+  "n_messages": 312,
+  "jev": {
+   "calls": {
+    "requests": 20,
+    "cost": 0.00405,
+    "new_spend": 0,
+    "input_tokens": 96371,
+    "output_tokens": 0,
+    "latency_median_s": 0.373
+   },
+   "intention": {
+    "n": 300,
+    "positives": 32,
+    "auroc": 0.9988,
+    "accuracy": 0.9667,
+    "recall": 0.6875,
+    "precision": 1.0
+   },
+   "done": {
+    "n": 302,
+    "positives": 7,
+    "auroc": 0.9995,
+    "accuracy": 0.9967,
+    "recall": 1.0,
+    "precision": 0.875
+   },
+   "cancel": {
+    "n": 309,
+    "positives": 3,
+    "auroc": 1.0,
+    "accuracy": 0.9968,
+    "recall": 1.0,
+    "precision": 0.75
+   },
+   "preference": {
+    "n": 301,
+    "positives": 43,
+    "auroc": 1.0,
+    "accuracy": 0.9967,
+    "recall": 1.0,
+    "precision": 0.9773
+   },
+   "milestone": {
+    "n": 295,
+    "positives": 16,
+    "auroc": 0.9968,
+    "accuracy": 0.9864,
+    "recall": 1.0,
+    "precision": 0.8
+   }
+  },
+  "llm": {
+   "calls": {
+    "requests": 20,
+    "cost": 0.02366,
+    "new_spend": 0,
+    "input_tokens": 83999,
+    "output_tokens": 30523,
+    "latency_median_s": 12.37
+   },
+   "intention": {
+    "n": 300,
+    "positives": 32,
+    "auroc": 0.9901,
+    "accuracy": 0.9933,
+    "recall": 0.9375,
+    "precision": 1.0
+   },
+   "done": {
+    "n": 302,
+    "positives": 7,
+    "auroc": 1.0,
+    "accuracy": 0.9967,
+    "recall": 1.0,
+    "precision": 0.875
+   },
+   "cancel": {
+    "n": 309,
+    "positives": 3,
+    "auroc": 0.9984,
+    "accuracy": 0.9968,
+    "recall": 1.0,
+    "precision": 0.75
+   },
+   "preference": {
+    "n": 301,
+    "positives": 43,
+    "auroc": 0.9999,
+    "accuracy": 0.9967,
+    "recall": 1.0,
+    "precision": 0.9773
+   },
+   "milestone": {
+    "n": 295,
+    "positives": 16,
+    "auroc": 1.0,
+    "accuracy": 0.9966,
+    "recall": 1.0,
+    "precision": 0.9412
+   }
+  }
+ },
+ "rows": {
+  "jev": {
+   "calls": {
+    "requests": 63,
+    "cost": 0.00549,
+    "new_spend": 0,
+    "input_tokens": 130612,
+    "output_tokens": 0,
+    "latency_median_s": 0.3
+   },
+   "n": 500,
+   "wrong": 163,
+   "auroc": 0.6758,
+   "wrong_in_top_10pct": 42,
+   "top_10pct": 50
+  },
+  "llm": {
+   "calls": {
+    "requests": 63,
+    "cost": 0.03281,
+    "new_spend": 0,
+    "input_tokens": 106317,
+    "output_tokens": 44353,
+    "latency_median_s": 7.468
+   },
+   "n": 500,
+   "wrong": 163,
+   "auroc": 0.8133,
+   "wrong_in_top_10pct": 46,
+   "top_10pct": 50
+  }
+ },
+ "verifier": {
+  "jev": {
+   "calls": {
+    "requests": 69,
+    "cost": 0.00129,
+    "new_spend": 0,
+    "input_tokens": 30630,
+    "output_tokens": 0,
+    "latency_median_s": 0.274
+   },
+   "n": 69,
+   "right": 34,
+   "auroc": 0.9521,
+   "accuracy": 0.8841
+  },
+  "llm": {
+   "calls": {
+    "requests": 69,
+    "cost": 0.00521,
+    "new_spend": 0,
+    "input_tokens": 18251,
+    "output_tokens": 6762,
+    "latency_median_s": 1.865
+   },
+   "n": 69,
+   "right": 34,
+   "auroc": 0.9319,
+   "accuracy": 0.8841
+  }
+ },
+ "routing": {
+  "jev": {
+   "accuracy_of_config": 91.0,
+   "auroc_vs_oracle_stores": 0.8865,
+   "accuracy_at_0.5": 0.804,
+   "route_latency_median_s": 0.2815828323364258
+  },
+  "llm": {
+   "accuracy_of_config": 89.4,
+   "auroc_vs_oracle_stores": 0.9212,
+   "accuracy_at_0.5": 0.8176,
+   "route_latency_median_s": 3.1391897201538086
+  }
+ }
+}

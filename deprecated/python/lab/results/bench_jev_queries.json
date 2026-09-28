@@ -1,0 +1,1522 @@
+{
+ "templates": [
+  {
+   "id": "person_profile",
+   "description": "Get all core facts about a person: name, birthday, contact methods, allergies, interests, residence, and relationships.",
+   "sql": "SELECT p.id, p.name, p.birthday FROM people p WHERE (:person IS NULL OR p.id = :person)",
+   "params": [
+    {
+     "name": "person",
+     "kind": "entity:people"
+    }
+   ]
+  },
+  {
+   "id": "person_contact_methods",
+   "description": "List a person's contact methods (phone, email, etc).",
+   "sql": "SELECT p.name AS person_name, cm.type, cm.value, cm.context FROM contact_methods cm JOIN people p ON p.id = cm.person_id WHERE (:person IS NULL OR cm.person_id = :person)",
+   "params": [
+    {
+     "name": "person",
+     "kind": "entity:people"
+    }
+   ]
+  },
+  {
+   "id": "person_relationships",
+   "description": "List a person's relationships (family, friends, colleagues) and who they are related to.",
+   "sql": "SELECT p.name AS person_name, r.relationship, rp.name AS related_person_name FROM relationships r JOIN people p ON p.id = r.person_id JOIN people rp ON rp.id = r.related_person_id WHERE (:person IS NULL OR r.person_id = :person)",
+   "params": [
+    {
+     "name": "person",
+     "kind": "entity:people"
+    }
+   ]
+  },
+  {
+   "id": "person_allergies",
+   "description": "List a person's allergies.",
+   "sql": "SELECT p.name AS person_name, a.allergen FROM allergies a JOIN people p ON p.id = a.person_id WHERE (:person IS NULL OR a.person_id = :person)",
+   "params": [
+    {
+     "name": "person",
+     "kind": "entity:people"
+    }
+   ]
+  },
+  {
+   "id": "person_interests",
+   "description": "List a person's interests/hobbies and notes about them.",
+   "sql": "SELECT p.name AS person_name, i.interest, i.notes FROM interests i JOIN people p ON p.id = i.person_id WHERE (:person IS NULL OR i.person_id = :person)",
+   "params": [
+    {
+     "name": "person",
+     "kind": "entity:people"
+    }
+   ]
+  },
+  {
+   "id": "person_gift_ideas",
+   "description": "List gift ideas for a person, including occasion and current status.",
+   "sql": "SELECT p.name AS person_name, g.gift_idea, g.occasion, g.occasion_date, g.status FROM gift_ideas g JOIN people p ON p.id = g.person_id WHERE (:person IS NULL OR g.person_id = :person)",
+   "params": [
+    {
+     "name": "person",
+     "kind": "entity:people"
+    }
+   ]
+  },
+  {
+   "id": "person_residence",
+   "description": "Find where a person lives (current and past residences with move-in date).",
+   "sql": "SELECT p.name AS person_name, pl.name AS place_name, pl.address, pl.city, r.move_in_date FROM residences r JOIN people p ON p.id = r.person_id JOIN places pl ON pl.id = r.place_id WHERE (:person IS NULL OR r.person_id = :person)",
+   "params": [
+    {
+     "name": "person",
+     "kind": "entity:people"
+    }
+   ]
+  },
+  {
+   "id": "events_in_period",
+   "description": "List events/meetings scheduled or organized in a given date range, including status (scheduled/cancelled).",
+   "sql": "SELECT e.title, e.start_datetime, e.end_datetime, e.status, loc.name AS location_name, org.name AS organization_name, organizer.name AS organizer_name, invitee.name AS invitee_name, e.details FROM events e LEFT JOIN places loc ON loc.id = e.location_id LEFT JOIN organizations org ON org.id = e.organization_id LEFT JOIN people organizer ON organizer.id = e.organizer_person_id LEFT JOIN people invitee ON invitee.id = e.invitee_person_id WHERE e.start_datetime >= :start AND e.start_datetime <= :end ORDER BY e.start_datetime",
+   "params": [
+    {
+     "name": "period",
+     "kind": "period"
+    }
+   ]
+  },
+  {
+   "id": "person_events",
+   "description": "List all events involving a specific person (as organizer or invitee), including status.",
+   "sql": "SELECT e.title, e.start_datetime, e.end_datetime, e.status, loc.name AS location_name, org.name AS organization_name, organizer.name AS organizer_name, invitee.name AS invitee_name FROM events e LEFT JOIN places loc ON loc.id = e.location_id LEFT JOIN organizations org ON org.id = e.organization_id LEFT JOIN people organizer ON organizer.id = e.organizer_person_id LEFT JOIN people invitee ON invitee.id = e.invitee_person_id WHERE (:person IS NULL OR e.organizer_person_id = :person OR e.invitee_person_id = :person) ORDER BY e.start_datetime",
+   "params": [
+    {
+     "name": "person",
+     "kind": "entity:people"
+    }
+   ]
+  },
+  {
+   "id": "event_by_title",
+   "description": "Find details about a specific event by its title, including status, location, and participants.",
+   "sql": "SELECT e.title, e.start_datetime, e.end_datetime, e.status, loc.name AS location_name, org.name AS organization_name, organizer.name AS organizer_name, invitee.name AS invitee_name, e.details FROM events e LEFT JOIN places loc ON loc.id = e.location_id LEFT JOIN organizations org ON org.id = e.organization_id LEFT JOIN people organizer ON organizer.id = e.organizer_person_id LEFT JOIN people invitee ON invitee.id = e.invitee_person_id WHERE (:event IS NULL OR e.id = :event)",
+   "params": [
+    {
+     "name": "event",
+     "kind": "entity:events"
+    }
+   ]
+  },
+  {
+   "id": "expenses_total_in_period",
+   "description": "Total amount spent in a date range, grouped by currency.",
+   "sql": "SELECT ex.currency, SUM(ex.amount) AS total_amount, COUNT(*) AS num_expenses FROM expenses ex WHERE ex.date >= :start AND ex.date <= :end GROUP BY ex.currency",
+   "params": [
+    {
+     "name": "period",
+     "kind": "period"
+    }
+   ]
+  },
+  {
+   "id": "expenses_by_merchant_in_period",
+   "description": "Spending on a specific merchant within a date range, with total and individual expenses.",
+   "sql": "SELECT ex.merchant, ex.description, ex.amount, ex.currency, ex.date, r.name AS restaurant_name, comp.name AS companion_name, ex.notes FROM expenses ex LEFT JOIN restaurants r ON r.id = ex.restaurant_id LEFT JOIN people comp ON comp.id = ex.companion_person_id WHERE (:merchant IS NULL OR ex.merchant = :merchant) AND ex.date >= :start AND ex.date <= :end ORDER BY ex.date",
+   "params": [
+    {
+     "name": "merchant",
+     "kind": "enum:expenses.merchant"
+    },
+    {
+     "name": "period",
+     "kind": "period"
+    }
+   ]
+  },
+  {
+   "id": "expenses_by_merchant_total",
+   "description": "Total amount spent per merchant, grouped by currency, across all time.",
+   "sql": "SELECT ex.merchant, ex.currency, SUM(ex.amount) AS total_amount, COUNT(*) AS num_expenses FROM expenses ex GROUP BY ex.merchant, ex.currency ORDER BY total_amount DESC",
+   "params": []
+  },
+  {
+   "id": "expenses_in_period_detail",
+   "description": "List all individual expenses in a date range with details (description, merchant, restaurant, companion).",
+   "sql": "SELECT ex.date, ex.description, ex.merchant, r.name AS restaurant_name, ex.amount, ex.currency, comp.name AS companion_name, ex.notes FROM expenses ex LEFT JOIN restaurants r ON r.id = ex.restaurant_id LEFT JOIN people comp ON comp.id = ex.companion_person_id WHERE ex.date >= :start AND ex.date <= :end ORDER BY ex.date",
+   "params": [
+    {
+     "name": "period",
+     "kind": "period"
+    }
+   ]
+  },
+  {
+   "id": "activities_in_period",
+   "description": "List activities (climbing, running, etc) a person did in a date range, with place and companion.",
+   "sql": "SELECT p.name AS person_name, a.activity_type, a.date, pl.name AS place_name, comp.name AS companion_name, a.achievement, a.distance_km, a.duration FROM activities a JOIN people p ON p.id = a.person_id LEFT JOIN places pl ON pl.id = a.place_id LEFT JOIN people comp ON comp.id = a.companion_person_id WHERE (:person IS NULL OR a.person_id = :person) AND a.date >= :start AND a.date <= :end ORDER BY a.date",
+   "params": [
+    {
+     "name": "person",
+     "kind": "entity:people"
+    },
+    {
+     "name": "period",
+     "kind": "period"
+    }
+   ]
+  },
+  {
+   "id": "activities_count_by_type",
+   "description": "Count of activities by type for a person, optionally within a date range (e.g. how many times did I go climbing).",
+   "sql": "SELECT a.activity_type, COUNT(*) AS num_activities FROM activities a WHERE (:person IS NULL OR a.person_id = :person) AND (:start IS NULL OR a.date >= :start) AND (:end IS NULL OR a.date <= :end) GROUP BY a.activity_type",
+   "params": [
+    {
+     "name": "person",
+     "kind": "entity:people"
+    },
+    {
+     "name": "period",
+     "kind": "period"
+    }
+   ]
+  },
+  {
+   "id": "activities_best_distance",
+   "description": "Find the longest-distance activity (e.g. longest run) for a person, optionally of a specific type.",
+   "sql": "SELECT p.name AS person_name, a.activity_type, a.date, a.distance_km, a.duration, pl.name AS place_name FROM activities a JOIN people p ON p.id = a.person_id LEFT JOIN places pl ON pl.id = a.place_id WHERE (:person IS NULL OR a.person_id = :person) AND (:activity_type IS NULL OR a.activity_type = :activity_type) ORDER BY a.distance_km DESC LIMIT 1",
+   "params": [
+    {
+     "name": "person",
+     "kind": "entity:people"
+    },
+    {
+     "name": "activity_type",
+     "kind": "enum:activities.activity_type"
+    }
+   ]
+  },
+  {
+   "id": "activities_latest",
+   "description": "Find the most recent activity of a person, optionally filtered by activity type.",
+   "sql": "SELECT p.name AS person_name, a.activity_type, a.date, pl.name AS place_name, comp.name AS companion_name, a.achievement, a.distance_km, a.duration FROM activities a JOIN people p ON p.id = a.person_id LEFT JOIN places pl ON pl.id = a.place_id LEFT JOIN people comp ON comp.id = a.companion_person_id WHERE (:person IS NULL OR a.person_id = :person) AND (:activity_type IS NULL OR a.activity_type = :activity_type) ORDER BY a.date DESC LIMIT 1",
+   "params": [
+    {
+     "name": "person",
+     "kind": "entity:people"
+    },
+    {
+     "name": "activity_type",
+     "kind": "enum:activities.activity_type"
+    }
+   ]
+  },
+  {
+   "id": "books_for_person",
+   "description": "List a person's books, reading status, ratings, and notes.",
+   "sql": "SELECT p.name AS person_name, b.title, b.author, b.status, b.rating, b.notes FROM books b JOIN people p ON p.id = b.person_id WHERE (:person IS NULL OR b.person_id = :person)",
+   "params": [
+    {
+     "name": "person",
+     "kind": "entity:people"
+    }
+   ]
+  },
+  {
+   "id": "vehicles_for_person",
+   "description": "List a person's vehicles, including current status and sale details if sold.",
+   "sql": "SELECT p.name AS person_name, v.make, v.model, v.year, v.license_plate, v.status, v.sold_date, v.sale_amount, v.sale_currency FROM vehicles v JOIN people p ON p.id = v.person_id WHERE (:person IS NULL OR v.person_id = :person)",
+   "params": [
+    {
+     "name": "person",
+     "kind": "entity:people"
+    }
+   ]
+  },
+  {
+   "id": "tasks_for_person",
+   "description": "List a person's tasks/reminders, with due date and status.",
+   "sql": "SELECT p.name AS person_name, t.title, t.due_date, t.status FROM tasks t JOIN people p ON p.id = t.person_id WHERE (:person IS NULL OR t.person_id = :person) ORDER BY t.due_date",
+   "params": [
+    {
+     "name": "person",
+     "kind": "entity:people"
+    }
+   ]
+  },
+  {
+   "id": "tasks_due_in_period",
+   "description": "List tasks due within a date range, with status.",
+   "sql": "SELECT p.name AS person_name, t.title, t.due_date, t.status FROM tasks t JOIN people p ON p.id = t.person_id WHERE t.due_date >= :start AND t.due_date <= :end ORDER BY t.due_date",
+   "params": [
+    {
+     "name": "period",
+     "kind": "period"
+    }
+   ]
+  },
+  {
+   "id": "organization_details",
+   "description": "Get details about an organization, including status, funding stage, latest funding amount, and lead investor.",
+   "sql": "SELECT o.name, o.status, o.funding_stage, o.latest_funding_amount, o.latest_funding_currency, lead.name AS lead_investor_name, pl.name AS office_place_name FROM organizations o LEFT JOIN organizations lead ON lead.id = o.lead_investor_organization_id LEFT JOIN places pl ON pl.id = o.office_place_id WHERE (:organization IS NULL OR o.id = :organization)",
+   "params": [
+    {
+     "name": "organization",
+     "kind": "entity:organizations"
+    }
+   ]
+  },
+  {
+   "id": "organization_memberships_for_person",
+   "description": "List organizations a person belongs to, with their role, membership fee, and start date.",
+   "sql": "SELECT p.name AS person_name, o.name AS organization_name, om.role, om.monthly_fee, om.monthly_fee_currency, om.start_date FROM organization_memberships om JOIN people p ON p.id = om.person_id JOIN organizations o ON o.id = om.organization_id WHERE (:person IS NULL OR om.person_id = :person)",
+   "params": [
+    {
+     "name": "person",
+     "kind": "entity:people"
+    }
+   ]
+  },
+  {
+   "id": "organization_members",
+   "description": "List all people who belong to a specific organization, with their roles.",
+   "sql": "SELECT o.name AS organization_name, p.name AS person_name, om.role, om.start_date FROM organization_memberships om JOIN people p ON p.id = om.person_id JOIN organizations o ON o.id = om.organization_id WHERE (:organization IS NULL OR om.organization_id = :organization)",
+   "params": [
+    {
+     "name": "organization",
+     "kind": "entity:organizations"
+    }
+   ]
+  },
+  {
+   "id": "emails_in_period",
+   "description": "List emails sent or received within a date range, with sender, recipient, and subject.",
+   "sql": "SELECT e.sent_datetime, e.sender_email, sp.name AS sender_name, e.recipient_email, rp.name AS recipient_name, e.subject, e.body FROM emails e LEFT JOIN people sp ON sp.id = e.sender_person_id LEFT JOIN people rp ON rp.id = e.recipient_person_id WHERE e.sent_datetime >= :start AND e.sent_datetime <= :end ORDER BY e.sent_datetime",
+   "params": [
+    {
+     "name": "period",
+     "kind": "period"
+    }
+   ]
+  },
+  {
+   "id": "emails_for_person",
+   "description": "List emails sent or received by a specific person.",
+   "sql": "SELECT e.sent_datetime, e.sender_email, sp.name AS sender_name, e.recipient_email, rp.name AS recipient_name, e.subject, e.body FROM emails e LEFT JOIN people sp ON sp.id = e.sender_person_id LEFT JOIN people rp ON rp.id = e.recipient_person_id WHERE (:person IS NULL OR e.sender_person_id = :person OR e.recipient_person_id = :person) ORDER BY e.sent_datetime",
+   "params": [
+    {
+     "name": "person",
+     "kind": "entity:people"
+    }
+   ]
+  },
+  {
+   "id": "flights_for_person",
+   "description": "List a person's flights, including origin, destination, dates, and cost.",
+   "sql": "SELECT p.name AS person_name, orig.name AS origin_place, dest.name AS destination_place, f.flight_date, f.airline, f.flight_number, f.amount, f.currency, f.booked_datetime FROM flights f JOIN people p ON p.id = f.person_id LEFT JOIN places orig ON orig.id = f.origin_place_id LEFT JOIN places dest ON dest.id = f.destination_place_id WHERE (:person IS NULL OR f.person_id = :person) ORDER BY f.flight_date",
+   "params": [
+    {
+     "name": "person",
+     "kind": "entity:people"
+    }
+   ]
+  },
+  {
+   "id": "restaurant_preferences_for_person",
+   "description": "List a person's restaurant preferences (favorites etc), with restaurant location.",
+   "sql": "SELECT p.name AS person_name, r.name AS restaurant_name, pl.city, pl.address, rp.preference FROM restaurant_preferences rp JOIN people p ON p.id = rp.person_id JOIN restaurants r ON r.id = rp.restaurant_id LEFT JOIN places pl ON pl.id = r.place_id WHERE (:person IS NULL OR rp.person_id = :person)",
+   "params": [
+    {
+     "name": "person",
+     "kind": "entity:people"
+    }
+   ]
+  },
+  {
+   "id": "person_by_birthday_month",
+   "description": "Find people whose birthday falls in a specific month/day text (e.g. lookup birthdays).",
+   "sql": "SELECT p.name, p.birthday FROM people p WHERE (:person IS NULL OR p.id = :person) AND p.birthday IS NOT NULL",
+   "params": [
+    {
+     "name": "person",
+     "kind": "entity:people"
+    }
+   ]
+  },
+  {
+   "id": "membership_fees_total",
+   "description": "Total recurring monthly membership fees a person pays, grouped by currency.",
+   "sql": "SELECT p.name AS person_name, om.monthly_fee_currency, SUM(om.monthly_fee) AS total_monthly_fee FROM organization_memberships om JOIN people p ON p.id = om.person_id WHERE (:person IS NULL OR om.person_id = :person) AND om.monthly_fee IS NOT NULL GROUP BY p.name, om.monthly_fee_currency",
+   "params": [
+    {
+     "name": "person",
+     "kind": "entity:people"
+    }
+   ]
+  }
+ ],
+ "compile_s": 0.0,
+ "compile_cost": 0.0786,
+ "coverage": 0.9,
+ "covered_score": 0.764,
+ "p50_s": 0.297,
+ "p90_s": 0.427,
+ "cost_per_question": 0.00011,
+ "jev_input_tokens": 2618,
+ "items": [
+  {
+   "qid": "q01",
+   "question": "What is my phone number?",
+   "gold": "+1 415 555 0199 (switched from the Czech +420 722 238 738 on Sep 20)",
+   "template": "person_contact_methods",
+   "confidence": 0.95,
+   "args": {
+    "person": null
+   },
+   "sql": "SELECT p.name AS person_name, cm.type, cm.value, cm.context FROM contact_methods cm JOIN people p ON p.id = cm.person_id WHERE (:person IS NULL OR cm.person_id = :person)",
+   "rows": [
+    {
+     "person_name": "Adam Zvada",
+     "type": "phone",
+     "value": "+1 415 555 0199",
+     "context": null
+    },
+    {
+     "person_name": "David Mokos",
+     "type": "phone",
+     "value": "733544390",
+     "context": null
+    },
+    {
+     "person_name": "Tom Novak",
+     "type": "phone",
+     "value": "+420 777 999 000",
+     "context": null
+    },
+    {
+     "person_name": "Sarah Kim",
+     "type": "email",
+     "value": "sarah@northwind.vc",
+     "context": null
+    },
+    {
+     "person_name": "David Mokos",
+     "type": "phone",
+     "value": "+1 628 688 4995",
+     "context": null
+    },
+    {
+     "person_name": "Priya Patel",
+     "type": "email",
+     "value": "priya@stripe.com",
+     "context": "Met at YC founder mixer"
+    },
+    {
+     "person_name": "Priya Patel",
+     "type": "phone",
+     "value": "+1 415 555 0142",
+     "context": "Met at YC founder mixer"
+    }
+   ],
+   "wall": 0.42739120800979435,
+   "verdict": "correct",
+   "why": "The rows list +1 415 555 0199 as a phone number for Adam Zvada, who is presumably the user. That matches the gold answer's current number. The old Czech number is only extra context, not a key fact."
+  },
+  {
+   "qid": "q02",
+   "question": "What is David's phone number?",
+   "gold": "Czech: +420 733 544 390; US: +1 628 688 4995 (corrected from ...4994)",
+   "template": "person_contact_methods",
+   "confidence": 0.94,
+   "args": {
+    "person": 2
+   },
+   "sql": "SELECT p.name AS person_name, cm.type, cm.value, cm.context FROM contact_methods cm JOIN people p ON p.id = cm.person_id WHERE (:person IS NULL OR cm.person_id = :person)",
+   "rows": [
+    {
+     "person_name": "David Mokos",
+     "type": "phone",
+     "value": "733544390",
+     "context": null
+    },
+    {
+     "person_name": "David Mokos",
+     "type": "phone",
+     "value": "+1 628 688 4995",
+     "context": null
+    }
+   ],
+   "wall": 0.44635379199462477,
+   "verdict": "correct",
+   "why": "The rows give both numbers. The Czech number appears as 733544390, which matches +420 733 544 390 without the country code. The US number is the corrected +1 628 688 4995."
+  },
+  {
+   "qid": "q03",
+   "question": "What is Tom's phone number?",
+   "gold": "+420 777 999 000 (his new number; the old one was +420 777 123 456)",
+   "template": "person_contact_methods",
+   "confidence": 0.95,
+   "args": {
+    "person": 3
+   },
+   "sql": "SELECT p.name AS person_name, cm.type, cm.value, cm.context FROM contact_methods cm JOIN people p ON p.id = cm.person_id WHERE (:person IS NULL OR cm.person_id = :person)",
+   "rows": [
+    {
+     "person_name": "Tom Novak",
+     "type": "phone",
+     "value": "+420 777 999 000",
+     "context": null
+    }
+   ],
+   "wall": 0.2980232920090202,
+   "verdict": "correct",
+   "why": "The rows give Tom's current phone number, +420 777 999 000, which matches the gold answer."
+  },
+  {
+   "qid": "q04",
+   "question": "Where do I live now?",
+   "gold": "San Francisco, at 1450 Valencia St.",
+   "template": "person_residence",
+   "confidence": 0.99,
+   "args": {
+    "person": null
+   },
+   "sql": "SELECT p.name AS person_name, pl.name AS place_name, pl.address, pl.city, r.move_in_date FROM residences r JOIN people p ON p.id = r.person_id JOIN places pl ON pl.id = r.place_id WHERE (:person IS NULL OR r.person_id = :person)",
+   "rows": [
+    {
+     "person_name": "Adam Zvada",
+     "place_name": "Apartment",
+     "address": "1450 Valencia St",
+     "city": "San Francisco",
+     "move_in_date": "2026-09-01"
+    }
+   ],
+   "wall": 0.3061335410020547,
+   "verdict": "correct",
+   "why": "The rows give the address 1450 Valencia St and the city San Francisco, which together match every key fact of the gold answer."
+  },
+  {
+   "qid": "q05",
+   "question": "When is David's birthday?",
+   "gold": "September 2",
+   "template": "person_profile",
+   "confidence": 0.98,
+   "args": {
+    "person": 2
+   },
+   "sql": "SELECT p.id, p.name, p.birthday FROM people p WHERE (:person IS NULL OR p.id = :person)",
+   "rows": [
+    {
+     "id": 2,
+     "name": "David Mokos",
+     "birthday": "September 2"
+    }
+   ],
+   "wall": 0.287873541994486,
+   "verdict": "correct",
+   "why": "The row lists David's birthday as September 2, which matches the gold answer."
+  },
+  {
+   "qid": "q06",
+   "question": "Whose birthdays do I know about, and when are they?",
+   "gold": "David: Sep 2; Eva: Sep 28; Mom: Oct 3",
+   "template": "person_by_birthday_month",
+   "confidence": 0.32,
+   "args": {
+    "person": null
+   },
+   "sql": "SELECT p.name, p.birthday FROM people p WHERE (:person IS NULL OR p.id = :person) AND p.birthday IS NOT NULL",
+   "rows": [
+    {
+     "name": "David Mokos",
+     "birthday": "September 2"
+    },
+    {
+     "name": "Eva",
+     "birthday": "September 28"
+    },
+    {
+     "name": "Mom",
+     "birthday": "October 3"
+    }
+   ],
+   "wall": 0.2829066249978496,
+   "verdict": "correct",
+   "why": "The rows list all three people with birthdays that match the gold answer: David on Sep 2, Eva on Sep 28, and Mom on Oct 3."
+  },
+  {
+   "qid": "q07",
+   "question": "What's the email of the investor I met at the Founders Dinner?",
+   "gold": "sarah@northwind.vc (Sarah Kim, Northwind Ventures)",
+   "template": "event_by_title",
+   "confidence": 0.47,
+   "args": {
+    "event": 1
+   },
+   "sql": "SELECT e.title, e.start_datetime, e.end_datetime, e.status, loc.name AS location_name, org.name AS organization_name, organizer.name AS organizer_name, invitee.name AS invitee_name, e.details FROM events e LEFT JOIN places loc ON loc.id = e.location_id LEFT JOIN organizations org ON org.id = e.organization_id LEFT JOIN people organizer ON organizer.id = e.organizer_person_id LEFT JOIN people invitee ON invitee.id = e.invitee_person_id WHERE (:event IS NULL OR e.id = :event)",
+   "rows": [
+    {
+     "title": "Founders Dinner",
+     "start_datetime": "2026-08-14T19:00",
+     "end_datetime": null,
+     "status": null,
+     "location_name": "Hotel Josef rooftop",
+     "organization_name": "Northwind Ventures",
+     "organizer_name": "Sarah Kim",
+     "invitee_name": "Adam Zvada",
+     "details": "Invitation from Sarah Kim, Partner at Northwind Ventures."
+    }
+   ],
+   "wall": 0.25275779199728277,
+   "verdict": "partial",
+   "why": "The rows identify the investor as Sarah Kim of Northwind Ventures, but her email address (sarah@northwind.vc), the key fact asked for, is not in the rows."
+  },
+  {
+   "qid": "q08",
+   "question": "When and where is my meeting with Sarah Kim?",
+   "gold": "Sep 24, 2026 at 14:00 at the Northwind office, 2 Embarcadero Center, SF (moved from Sep 23 10:00)",
+   "template": "person_events",
+   "confidence": 0.88,
+   "args": {
+    "person": 5
+   },
+   "sql": "SELECT e.title, e.start_datetime, e.end_datetime, e.status, loc.name AS location_name, org.name AS organization_name, organizer.name AS organizer_name, invitee.name AS invitee_name FROM events e LEFT JOIN places loc ON loc.id = e.location_id LEFT JOIN organizations org ON org.id = e.organization_id LEFT JOIN people organizer ON organizer.id = e.organizer_person_id LEFT JOIN people invitee ON invitee.id = e.invitee_person_id WHERE (:person IS NULL OR e.organizer_person_id = :person OR e.invitee_person_id = :person) ORDER BY e.start_datetime",
+   "rows": [
+    {
+     "title": "Founders Dinner",
+     "start_datetime": "2026-08-14T19:00",
+     "end_datetime": null,
+     "status": null,
+     "location_name": "Hotel Josef rooftop",
+     "organization_name": "Northwind Ventures",
+     "organizer_name": "Sarah Kim",
+     "invitee_name": "Adam Zvada"
+    }
+   ],
+   "wall": 0.32843879199936055,
+   "verdict": "incorrect",
+   "why": "The rows only show a Founders Dinner on Aug 14 at the Hotel Josef rooftop. They do not include the Sep 24 14:00 meeting at the Northwind office."
+  },
+  {
+   "qid": "q09",
+   "question": "Do I have a dentist appointment coming up?",
+   "gold": "No. The Aug 20 appointment with Dr. Horák was cancelled.",
+   "template": "events_in_period",
+   "confidence": 0.82,
+   "args": {
+    "start": "2026-09-21",
+    "end": "2100-01-01"
+   },
+   "sql": "SELECT e.title, e.start_datetime, e.end_datetime, e.status, loc.name AS location_name, org.name AS organization_name, organizer.name AS organizer_name, invitee.name AS invitee_name, e.details FROM events e LEFT JOIN places loc ON loc.id = e.location_id LEFT JOIN organizations org ON org.id = e.organization_id LEFT JOIN people organizer ON organizer.id = e.organizer_person_id LEFT JOIN people invitee ON invitee.id = e.invitee_person_id WHERE e.start_datetime >= :start AND e.start_datetime <= :end ORDER BY e.start_datetime",
+   "rows": [
+    {
+     "title": "Pitch meeting",
+     "start_datetime": "2026-09-24T14:00",
+     "end_datetime": null,
+     "status": null,
+     "location_name": "Northwind office",
+     "organization_name": "Northwind Ventures",
+     "organizer_name": null,
+     "invitee_name": null,
+     "details": "Meeting with Sarah Kim at the Northwind office, 2 Embarcadero Center, San Francisco."
+    },
+    {
+     "title": "Nebula board meeting",
+     "start_datetime": "2026-09-25T16:00",
+     "end_datetime": "2026-09-25T17:30",
+     "status": "scheduled",
+     "location_name": "1 Mission St",
+     "organization_name": "Nebula",
+     "organizer_name": "David Mokos",
+     "invitee_name": null,
+     "details": "Organizer email: david@nebula.ai"
+    },
+    {
+     "title": "Eva visiting San Francisco",
+     "start_datetime": "2026-10-10T00:00",
+     "end_datetime": "2026-10-20T00:00",
+     "status": null,
+     "location_name": "San Francisco",
+     "organization_name": null,
+     "organizer_name": null,
+     "invitee_name": "Eva",
+     "details": "Eva is visiting San Francisco from October 10 through October 20, 2026."
+    }
+   ],
+   "wall": 0.3172861670027487,
+   "verdict": "incorrect",
+   "why": "The rows list upcoming events, but none of them is a dentist appointment. They say nothing about the Aug 20 appointment with Dr. Horák or its cancellation, which is the key fact in the gold answer."
+  },
+  {
+   "qid": "q10",
+   "question": "How much did I spend eating out (restaurants and cafés) in August?",
+   "gold": "2,854 CZK (Café Savoy 385 + Sasazu 2,140 + Lokál 329)",
+   "template": "expenses_in_period_detail",
+   "confidence": 0.5,
+   "args": {
+    "start": "2026-08-01",
+    "end": "2026-08-31"
+   },
+   "sql": "SELECT ex.date, ex.description, ex.merchant, r.name AS restaurant_name, ex.amount, ex.currency, comp.name AS companion_name, ex.notes FROM expenses ex LEFT JOIN restaurants r ON r.id = ex.restaurant_id LEFT JOIN people comp ON comp.id = ex.companion_person_id WHERE ex.date >= :start AND ex.date <= :end ORDER BY ex.date",
+   "rows": [
+    {
+     "date": "2026-08-05",
+     "description": "Breakfast",
+     "merchant": null,
+     "restaurant_name": "Café Savoy",
+     "amount": 385.0,
+     "currency": "CZK",
+     "companion_name": null,
+     "notes": null
+    },
+    {
+     "date": "2026-08-12",
+     "description": "Sushi dinner",
+     "merchant": null,
+     "restaurant_name": "Sasazu",
+     "amount": 2140.0,
+     "currency": "CZK",
+     "companion_name": "Eva",
+     "notes": "So good"
+    },
+    {
+     "date": "2026-08-18",
+     "description": "Groceries",
+     "merchant": "Albert",
+     "restaurant_name": null,
+     "amount": 1262.0,
+     "currency": "CZK",
+     "companion_name": null,
+     "notes": null
+    },
+    {
+     "date": "2026-08-22",
+     "description": "Lunch",
+     "merchant": null,
+     "restaurant_name": "Lokál",
+     "amount": 329.0,
+     "currency": "CZK",
+     "companion_name": null,
+     "notes": null
+    }
+   ],
+   "wall": 0.31204316699586343,
+   "verdict": "correct",
+   "why": "The rows include all three restaurant and café entries: Café Savoy 385, Sasazu 2140 and Lokál 329, which sum to 2854 CZK. The groceries row from Albert is not eating out, so it can be told apart and left out."
+  },
+  {
+   "qid": "q11",
+   "question": "What's my best 10k running time?",
+   "gold": "49:58 (Sep 6, 2026)",
+   "template": null,
+   "confidence": 0.68,
+   "rows": null,
+   "wall": 0.39755216700723395
+  },
+  {
+   "qid": "q12",
+   "question": "Which books have I finished, and how did I rate them?",
+   "gold": "Thinking, Fast and Slow, rated 5/5",
+   "template": "books_for_person",
+   "confidence": 1,
+   "args": {
+    "person": null
+   },
+   "sql": "SELECT p.name AS person_name, b.title, b.author, b.status, b.rating, b.notes FROM books b JOIN people p ON p.id = b.person_id WHERE (:person IS NULL OR b.person_id = :person)",
+   "rows": [
+    {
+     "person_name": "Adam Zvada",
+     "title": "Thinking, Fast and Slow",
+     "author": "Daniel Kahneman",
+     "status": "Finished",
+     "rating": 5,
+     "notes": "The System 1 vs System 2 material is gold."
+    },
+    {
+     "person_name": "Adam Zvada",
+     "title": "The Pragmatic Programmer",
+     "author": null,
+     "status": "Currently reading",
+     "rating": null,
+     "notes": null
+    }
+   ],
+   "wall": 0.5459804169950075,
+   "verdict": "correct",
+   "why": "The rows show 'Thinking, Fast and Slow' with status Finished and a rating of 5. The other book listed is still being read, so it does not count as finished."
+  },
+  {
+   "qid": "q13",
+   "question": "What book am I reading right now?",
+   "gold": "The Pragmatic Programmer",
+   "template": "books_for_person",
+   "confidence": 0.82,
+   "args": {
+    "person": null
+   },
+   "sql": "SELECT p.name AS person_name, b.title, b.author, b.status, b.rating, b.notes FROM books b JOIN people p ON p.id = b.person_id WHERE (:person IS NULL OR b.person_id = :person)",
+   "rows": [
+    {
+     "person_name": "Adam Zvada",
+     "title": "Thinking, Fast and Slow",
+     "author": "Daniel Kahneman",
+     "status": "Finished",
+     "rating": 5,
+     "notes": "The System 1 vs System 2 material is gold."
+    },
+    {
+     "person_name": "Adam Zvada",
+     "title": "The Pragmatic Programmer",
+     "author": null,
+     "status": "Currently reading",
+     "rating": null,
+     "notes": null
+    }
+   ],
+   "wall": 0.2663890419935342,
+   "verdict": "correct",
+   "why": "The rows include 'The Pragmatic Programmer' with status 'Currently reading', which matches the gold answer."
+  },
+  {
+   "qid": "q14",
+   "question": "What is Eva allergic to?",
+   "gold": "Peanuts",
+   "template": "person_allergies",
+   "confidence": 0.98,
+   "args": {
+    "person": 4
+   },
+   "sql": "SELECT p.name AS person_name, a.allergen FROM allergies a JOIN people p ON p.id = a.person_id WHERE (:person IS NULL OR a.person_id = :person)",
+   "rows": [
+    {
+     "person_name": "Eva",
+     "allergen": "peanuts"
+    }
+   ],
+   "wall": 0.3484539999917615,
+   "verdict": "correct",
+   "why": "The rows list Eva's allergen as peanuts, which matches the gold answer."
+  },
+  {
+   "qid": "q15",
+   "question": "Do I own a car?",
+   "gold": "No, the 2019 Skoda Octavia was sold on Aug 28",
+   "template": "vehicles_for_person",
+   "confidence": 1,
+   "args": {
+    "person": null
+   },
+   "sql": "SELECT p.name AS person_name, v.make, v.model, v.year, v.license_plate, v.status, v.sold_date, v.sale_amount, v.sale_currency FROM vehicles v JOIN people p ON p.id = v.person_id WHERE (:person IS NULL OR v.person_id = :person)",
+   "rows": [
+    {
+     "person_name": "Adam Zvada",
+     "make": "Skoda",
+     "model": "Octavia",
+     "year": 2019,
+     "license_plate": "5A1 2345",
+     "status": "sold",
+     "sold_date": "2026-08-28",
+     "sale_amount": 310000.0,
+     "sale_currency": "CZK"
+    }
+   ],
+   "wall": 0.31156712499796413,
+   "verdict": "correct",
+   "why": "The rows show a 2019 Skoda Octavia with status sold and sold_date 2026-08-28. That matches both key facts of the gold answer: the user no longer owns the car, and it was sold on Aug 28."
+  },
+  {
+   "qid": "q16",
+   "question": "Have I renewed my passport yet?",
+   "gold": "Yes, it was renewed (Aug 27)",
+   "template": "tasks_for_person",
+   "confidence": 0.6,
+   "args": {
+    "person": null
+   },
+   "sql": "SELECT p.name AS person_name, t.title, t.due_date, t.status FROM tasks t JOIN people p ON p.id = t.person_id WHERE (:person IS NULL OR t.person_id = :person) ORDER BY t.due_date",
+   "rows": [
+    {
+     "person_name": "Adam Zvada",
+     "title": "Renew passport",
+     "due_date": "2026-09-30",
+     "status": "done"
+    }
+   ],
+   "wall": 0.31789933299296536,
+   "verdict": "correct",
+   "why": "The rows show the task 'Renew passport' with status done, which answers yes. The Aug 27 date is secondary detail and does not appear in the rows, but the key fact that the passport was renewed is present."
+  },
+  {
+   "qid": "q17",
+   "question": "When and where is the Nebula board meeting?",
+   "gold": "Sep 25, 2026, 16:00-17:30, at 1 Mission St, San Francisco",
+   "template": "event_by_title",
+   "confidence": 0.95,
+   "args": {
+    "event": 4
+   },
+   "sql": "SELECT e.title, e.start_datetime, e.end_datetime, e.status, loc.name AS location_name, org.name AS organization_name, organizer.name AS organizer_name, invitee.name AS invitee_name, e.details FROM events e LEFT JOIN places loc ON loc.id = e.location_id LEFT JOIN organizations org ON org.id = e.organization_id LEFT JOIN people organizer ON organizer.id = e.organizer_person_id LEFT JOIN people invitee ON invitee.id = e.invitee_person_id WHERE (:event IS NULL OR e.id = :event)",
+   "rows": [
+    {
+     "title": "Nebula board meeting",
+     "start_datetime": "2026-09-25T16:00",
+     "end_datetime": "2026-09-25T17:30",
+     "status": "scheduled",
+     "location_name": "1 Mission St",
+     "organization_name": "Nebula",
+     "organizer_name": "David Mokos",
+     "invitee_name": null,
+     "details": "Organizer email: david@nebula.ai"
+    }
+   ],
+   "wall": 0.2585695419984404,
+   "verdict": "correct",
+   "why": "The rows give the date (2026-09-25), the time (16:00-17:30) and the location (1 Mission St). 'San Francisco' is not in the rows, but it is a minor addition to an address that is already identified."
+  },
+  {
+   "qid": "q18",
+   "question": "What were the terms in the term sheet draft?",
+   "gold": "$3M seed round at a $15M post-money valuation",
+   "template": null,
+   "confidence": 0.92,
+   "rows": null,
+   "wall": 0.27421154201147147
+  },
+  {
+   "qid": "q19",
+   "question": "What is my cofounder's email address?",
+   "gold": "david@nebula.ai",
+   "template": "person_contact_methods",
+   "confidence": 0.65,
+   "args": {
+    "person": null
+   },
+   "sql": "SELECT p.name AS person_name, cm.type, cm.value, cm.context FROM contact_methods cm JOIN people p ON p.id = cm.person_id WHERE (:person IS NULL OR cm.person_id = :person)",
+   "rows": [
+    {
+     "person_name": "Adam Zvada",
+     "type": "phone",
+     "value": "+1 415 555 0199",
+     "context": null
+    },
+    {
+     "person_name": "David Mokos",
+     "type": "phone",
+     "value": "733544390",
+     "context": null
+    },
+    {
+     "person_name": "Tom Novak",
+     "type": "phone",
+     "value": "+420 777 999 000",
+     "context": null
+    },
+    {
+     "person_name": "Sarah Kim",
+     "type": "email",
+     "value": "sarah@northwind.vc",
+     "context": null
+    },
+    {
+     "person_name": "David Mokos",
+     "type": "phone",
+     "value": "+1 628 688 4995",
+     "context": null
+    },
+    {
+     "person_name": "Priya Patel",
+     "type": "email",
+     "value": "priya@stripe.com",
+     "context": "Met at YC founder mixer"
+    },
+    {
+     "person_name": "Priya Patel",
+     "type": "phone",
+     "value": "+1 415 555 0142",
+     "context": "Met at YC founder mixer"
+    }
+   ],
+   "wall": 0.2639930409932276,
+   "verdict": "incorrect",
+   "why": "The rows contain no email address for David Mokos (the likely cofounder). His only entries are phone numbers, so david@nebula.ai cannot be read from the rows."
+  },
+  {
+   "qid": "q20",
+   "question": "How many times did I go climbing in August?",
+   "gold": "3 times (Aug 3, Aug 10, Aug 17)",
+   "template": "activities_count_by_type",
+   "confidence": 0.99,
+   "args": {
+    "person": null,
+    "start": "2026-08-01",
+    "end": "2026-08-31"
+   },
+   "sql": "SELECT a.activity_type, COUNT(*) AS num_activities FROM activities a WHERE (:person IS NULL OR a.person_id = :person) AND (:start IS NULL OR a.date >= :start) AND (:end IS NULL OR a.date <= :end) GROUP BY a.activity_type",
+   "rows": [
+    {
+     "activity_type": "Founders Dinner",
+     "num_activities": 1
+    },
+    {
+     "activity_type": "climbing",
+     "num_activities": 3
+    },
+    {
+     "activity_type": "running",
+     "num_activities": 1
+    }
+   ],
+   "wall": 0.29301012500945944,
+   "verdict": "correct",
+   "why": "The rows show 3 climbing activities, which matches the gold count of 3. The specific dates are supporting detail rather than the key fact."
+  },
+  {
+   "qid": "q21",
+   "question": "What's the hardest climbing grade I've sent?",
+   "gold": "6c+ (sent on Sep 18 at Mission Cliffs)",
+   "template": null,
+   "confidence": 0.68,
+   "rows": null,
+   "wall": 0.5546326249896083
+  },
+  {
+   "qid": "q22",
+   "question": "What gift ideas do I have for Mom and for Eva?",
+   "gold": "Mom: orchids; Eva: a sushi-making class",
+   "template": "person_gift_ideas",
+   "confidence": 1,
+   "args": {
+    "person": 8
+   },
+   "sql": "SELECT p.name AS person_name, g.gift_idea, g.occasion, g.occasion_date, g.status FROM gift_ideas g JOIN people p ON p.id = g.person_id WHERE (:person IS NULL OR g.person_id = :person)",
+   "rows": [],
+   "wall": 0.2503947090008296,
+   "verdict": "incorrect",
+   "why": "The query returned no rows, so neither gift idea (orchids for Mom, a sushi-making class for Eva) can be read from the result."
+  },
+  {
+   "qid": "q23",
+   "question": "How much did the flight to San Francisco cost?",
+   "gold": "18,450 CZK (United UA 8843)",
+   "template": "flights_for_person",
+   "confidence": 0.99,
+   "args": {
+    "person": null
+   },
+   "sql": "SELECT p.name AS person_name, orig.name AS origin_place, dest.name AS destination_place, f.flight_date, f.airline, f.flight_number, f.amount, f.currency, f.booked_datetime FROM flights f JOIN people p ON p.id = f.person_id LEFT JOIN places orig ON orig.id = f.origin_place_id LEFT JOIN places dest ON dest.id = f.destination_place_id WHERE (:person IS NULL OR f.person_id = :person) ORDER BY f.flight_date",
+   "rows": [
+    {
+     "person_name": "Adam Zvada",
+     "origin_place": "Prague",
+     "destination_place": "San Francisco",
+     "flight_date": "2026-09-01",
+     "airline": "United",
+     "flight_number": "UA 8843",
+     "amount": 18450.0,
+     "currency": "CZK",
+     "booked_datetime": "2026-08-26T15:00"
+    }
+   ],
+   "wall": 0.45556879199284595,
+   "verdict": "correct",
+   "why": "The rows show the Prague to San Francisco flight on United UA 8843 with an amount of 18450.0 CZK, which matches the gold answer."
+  },
+  {
+   "qid": "q24",
+   "question": "Who is Priya Patel?",
+   "gold": "Engineering Manager at Stripe, met at a YC founder mixer (priya@stripe.com, +1 415 555 0142)",
+   "template": "person_profile",
+   "confidence": 0.92,
+   "args": {
+    "person": 9
+   },
+   "sql": "SELECT p.id, p.name, p.birthday FROM people p WHERE (:person IS NULL OR p.id = :person)",
+   "rows": [
+    {
+     "id": 9,
+     "name": "Priya Patel",
+     "birthday": null
+    }
+   ],
+   "wall": 0.4007708330027526,
+   "verdict": "incorrect",
+   "why": "The rows give only a name and a null birthday. They lack the role, company, how they met, email, and phone."
+  },
+  {
+   "qid": "q25",
+   "question": "Who runs partnerships at Stripe?",
+   "gold": "Mark Chen, Priya's colleague",
+   "template": "organization_members",
+   "confidence": 0.89,
+   "args": {
+    "organization": 5
+   },
+   "sql": "SELECT o.name AS organization_name, p.name AS person_name, om.role, om.start_date FROM organization_memberships om JOIN people p ON p.id = om.person_id JOIN organizations o ON o.id = om.organization_id WHERE (:organization IS NULL OR om.organization_id = :organization)",
+   "rows": [
+    {
+     "organization_name": "Stripe",
+     "person_name": "Priya Patel",
+     "role": "Engineering Manager",
+     "start_date": null
+    },
+    {
+     "organization_name": "Stripe",
+     "person_name": "Mark Chen",
+     "role": "Runs partnerships",
+     "start_date": null
+    }
+   ],
+   "wall": 0.2897978749970207,
+   "verdict": "correct",
+   "why": "The rows list Mark Chen at Stripe with the role 'Runs partnerships'. They also list Priya Patel at the same organization, which supports calling him her colleague."
+  },
+  {
+   "qid": "q26",
+   "question": "How much did Nebula raise, and who led the round?",
+   "gold": "$3M seed, led by Northwind Ventures",
+   "template": "organization_details",
+   "confidence": 0.99,
+   "args": {
+    "organization": 1
+   },
+   "sql": "SELECT o.name, o.status, o.funding_stage, o.latest_funding_amount, o.latest_funding_currency, lead.name AS lead_investor_name, pl.name AS office_place_name FROM organizations o LEFT JOIN organizations lead ON lead.id = o.lead_investor_organization_id LEFT JOIN places pl ON pl.id = o.office_place_id WHERE (:organization IS NULL OR o.id = :organization)",
+   "rows": [
+    {
+     "name": "Nebula",
+     "status": "being built",
+     "funding_stage": "seed round closed",
+     "latest_funding_amount": 3000000.0,
+     "latest_funding_currency": "USD",
+     "lead_investor_name": "Northwind Ventures",
+     "office_place_name": "1 Mission St"
+    }
+   ],
+   "wall": 0.32142520901106764,
+   "verdict": "correct",
+   "why": "The rows give the amount (3,000,000 USD, seed round) and the lead investor (Northwind Ventures), which covers every fact in the gold answer."
+  },
+  {
+   "qid": "q27",
+   "question": "When is Eva visiting SF?",
+   "gold": "Oct 10 to Oct 20",
+   "template": "flights_for_person",
+   "confidence": 0.52,
+   "args": {
+    "person": 4
+   },
+   "sql": "SELECT p.name AS person_name, orig.name AS origin_place, dest.name AS destination_place, f.flight_date, f.airline, f.flight_number, f.amount, f.currency, f.booked_datetime FROM flights f JOIN people p ON p.id = f.person_id LEFT JOIN places orig ON orig.id = f.origin_place_id LEFT JOIN places dest ON dest.id = f.destination_place_id WHERE (:person IS NULL OR f.person_id = :person) ORDER BY f.flight_date",
+   "rows": [],
+   "wall": 0.2808786659879843,
+   "verdict": "incorrect",
+   "why": "The query returned no rows, so the visit dates (Oct 10 to Oct 20) cannot be found."
+  },
+  {
+   "qid": "q28",
+   "question": "Which climbing gym did I join, and what does it cost?",
+   "gold": "Mission Cliffs, $110/month",
+   "template": "organization_memberships_for_person",
+   "confidence": 0.87,
+   "args": {
+    "person": null
+   },
+   "sql": "SELECT p.name AS person_name, o.name AS organization_name, om.role, om.monthly_fee, om.monthly_fee_currency, om.start_date FROM organization_memberships om JOIN people p ON p.id = om.person_id JOIN organizations o ON o.id = om.organization_id WHERE (:person IS NULL OR om.person_id = :person)",
+   "rows": [
+    {
+     "person_name": "Adam Zvada",
+     "organization_name": "Nebula",
+     "role": "cofounder",
+     "monthly_fee": null,
+     "monthly_fee_currency": null,
+     "start_date": null
+    },
+    {
+     "person_name": "David Mokos",
+     "organization_name": "Nebula",
+     "role": "cofounder",
+     "monthly_fee": null,
+     "monthly_fee_currency": null,
+     "start_date": null
+    },
+    {
+     "person_name": "Sarah Kim",
+     "organization_name": "Northwind Ventures",
+     "role": "Partner",
+     "monthly_fee": null,
+     "monthly_fee_currency": null,
+     "start_date": null
+    },
+    {
+     "person_name": "Adam Zvada",
+     "organization_name": "Mission Cliffs",
+     "role": "Member",
+     "monthly_fee": 110.0,
+     "monthly_fee_currency": null,
+     "start_date": "2026-09-07"
+    },
+    {
+     "person_name": "Priya Patel",
+     "organization_name": "Stripe",
+     "role": "Engineering Manager",
+     "monthly_fee": null,
+     "monthly_fee_currency": null,
+     "start_date": null
+    },
+    {
+     "person_name": "Mark Chen",
+     "organization_name": "Stripe",
+     "role": "Runs partnerships",
+     "monthly_fee": null,
+     "monthly_fee_currency": null,
+     "start_date": null
+    }
+   ],
+   "wall": 0.23649816699617077,
+   "verdict": "correct",
+   "why": "One row shows Adam Zvada as a Member of Mission Cliffs with a monthly_fee of 110.0, which gives both the gym and its $110/month cost."
+  },
+  {
+   "qid": "q29",
+   "question": "How much did I spend on food and coffee in September?",
+   "gold": "$107.05 (Blue Bottle $10.25 + Tartine $96.80)",
+   "template": "expenses_in_period_detail",
+   "confidence": 0.55,
+   "args": {
+    "start": "2026-09-01",
+    "end": "2026-09-30"
+   },
+   "sql": "SELECT ex.date, ex.description, ex.merchant, r.name AS restaurant_name, ex.amount, ex.currency, comp.name AS companion_name, ex.notes FROM expenses ex LEFT JOIN restaurants r ON r.id = ex.restaurant_id LEFT JOIN people comp ON comp.id = ex.companion_person_id WHERE ex.date >= :start AND ex.date <= :end ORDER BY ex.date",
+   "rows": [
+    {
+     "date": "2026-09-03",
+     "description": "1 oat latte; 1 almond croissant",
+     "merchant": "Blue Bottle Coffee",
+     "restaurant_name": "Blue Bottle Coffee",
+     "amount": 10.25,
+     "currency": "USD",
+     "companion_name": null,
+     "notes": "Mint Plaza, San Francisco. Paid with Visa ending 4421."
+    },
+    {
+     "date": "2026-09-05",
+     "description": "Uber ride home from the Mission",
+     "merchant": "Uber",
+     "restaurant_name": null,
+     "amount": 23.4,
+     "currency": "USD",
+     "companion_name": null,
+     "notes": null
+    },
+    {
+     "date": "2026-09-10",
+     "description": "Dinner; celebrated the term sheet",
+     "merchant": null,
+     "restaurant_name": "Tartine",
+     "amount": 96.8,
+     "currency": "USD",
+     "companion_name": "David Mokos",
+     "notes": null
+    }
+   ],
+   "wall": 0.2939411669940455,
+   "verdict": "correct",
+   "why": "The rows include the Blue Bottle charge ($10.25) and the Tartine charge ($96.80), which sum to $107.05. The Uber row is not food or coffee and can be left out."
+  },
+  {
+   "qid": "q30",
+   "question": "What's my favorite restaurant in Prague?",
+   "gold": "Sasazu",
+   "template": "restaurant_preferences_for_person",
+   "confidence": 1,
+   "args": {
+    "person": null
+   },
+   "sql": "SELECT p.name AS person_name, r.name AS restaurant_name, pl.city, pl.address, rp.preference FROM restaurant_preferences rp JOIN people p ON p.id = rp.person_id JOIN restaurants r ON r.id = rp.restaurant_id LEFT JOIN places pl ON pl.id = r.place_id WHERE (:person IS NULL OR rp.person_id = :person)",
+   "rows": [
+    {
+     "person_name": "Adam Zvada",
+     "restaurant_name": "Sasazu",
+     "city": null,
+     "address": null,
+     "preference": "favorite"
+    }
+   ],
+   "wall": 0.30408995899779256,
+   "verdict": "correct",
+   "why": "The rows list Sasazu as the favorite restaurant, which matches the gold answer. The city field is null, but the restaurant itself is identified."
+  },
+  {
+   "qid": "q31",
+   "question": "What do I like to think about?",
+   "gold": "The Roman Empire",
+   "template": "person_interests",
+   "confidence": 0.88,
+   "args": {
+    "person": null
+   },
+   "sql": "SELECT p.name AS person_name, i.interest, i.notes FROM interests i JOIN people p ON p.id = i.person_id WHERE (:person IS NULL OR i.person_id = :person)",
+   "rows": [
+    {
+     "person_name": "Adam Zvada",
+     "interest": "Roman Empire",
+     "notes": "Likes thinking about it way too much"
+    },
+    {
+     "person_name": "Eva",
+     "interest": "sushi",
+     "notes": "loves sushi"
+    },
+    {
+     "person_name": "Mom",
+     "interest": "orchids",
+     "notes": null
+    },
+    {
+     "person_name": "Adam Zvada",
+     "interest": "riding big black horses",
+     "notes": null
+    }
+   ],
+   "wall": 0.2675298329995712,
+   "verdict": "correct",
+   "why": "The rows show that Adam Zvada, presumably the user, has the interest 'Roman Empire' with the note 'Likes thinking about it way too much'. This matches the gold answer."
+  },
+  {
+   "qid": "q32",
+   "question": "What do I like riding?",
+   "gold": "Big black horses",
+   "template": "person_interests",
+   "confidence": 0.9,
+   "args": {
+    "person": null
+   },
+   "sql": "SELECT p.name AS person_name, i.interest, i.notes FROM interests i JOIN people p ON p.id = i.person_id WHERE (:person IS NULL OR i.person_id = :person)",
+   "rows": [
+    {
+     "person_name": "Adam Zvada",
+     "interest": "Roman Empire",
+     "notes": "Likes thinking about it way too much"
+    },
+    {
+     "person_name": "Eva",
+     "interest": "sushi",
+     "notes": "loves sushi"
+    },
+    {
+     "person_name": "Mom",
+     "interest": "orchids",
+     "notes": null
+    },
+    {
+     "person_name": "Adam Zvada",
+     "interest": "riding big black horses",
+     "notes": null
+    }
+   ],
+   "wall": 0.24535629199817777,
+   "verdict": "correct",
+   "why": "One row lists Adam Zvada's interest as 'riding big black horses', which matches the gold answer."
+  },
+  {
+   "qid": "q33",
+   "question": "What meetings do I have this coming week?",
+   "gold": "Thu Sep 24 14:00: pitch meeting with Sarah Kim at the Northwind office (2 Embarcadero Center); Fri Sep 25 16:00: Nebula board meeting at 1 Mission St",
+   "template": "events_in_period",
+   "confidence": 0.99,
+   "args": {
+    "start": "2026-09-28",
+    "end": "2026-10-04"
+   },
+   "sql": "SELECT e.title, e.start_datetime, e.end_datetime, e.status, loc.name AS location_name, org.name AS organization_name, organizer.name AS organizer_name, invitee.name AS invitee_name, e.details FROM events e LEFT JOIN places loc ON loc.id = e.location_id LEFT JOIN organizations org ON org.id = e.organization_id LEFT JOIN people organizer ON organizer.id = e.organizer_person_id LEFT JOIN people invitee ON invitee.id = e.invitee_person_id WHERE e.start_datetime >= :start AND e.start_datetime <= :end ORDER BY e.start_datetime",
+   "rows": [],
+   "wall": 0.320033665993833,
+   "verdict": "incorrect",
+   "why": "The query returned no rows, so none of the meetings in the gold answer can be read from the result."
+  },
+  {
+   "qid": "q34",
+   "question": "How much did I sell my car for?",
+   "gold": "310,000 CZK",
+   "template": "vehicles_for_person",
+   "confidence": 1,
+   "args": {
+    "person": null
+   },
+   "sql": "SELECT p.name AS person_name, v.make, v.model, v.year, v.license_plate, v.status, v.sold_date, v.sale_amount, v.sale_currency FROM vehicles v JOIN people p ON p.id = v.person_id WHERE (:person IS NULL OR v.person_id = :person)",
+   "rows": [
+    {
+     "person_name": "Adam Zvada",
+     "make": "Skoda",
+     "model": "Octavia",
+     "year": 2019,
+     "license_plate": "5A1 2345",
+     "status": "sold",
+     "sold_date": "2026-08-28",
+     "sale_amount": 310000.0,
+     "sale_currency": "CZK"
+    }
+   ],
+   "wall": 0.35172995801258367,
+   "verdict": "correct",
+   "why": "The rows show the car as sold with a sale_amount of 310000 and a sale_currency of CZK, which matches the gold answer of 310,000 CZK."
+  },
+  {
+   "qid": "q35",
+   "question": "Where did I live before San Francisco?",
+   "gold": "Prague",
+   "template": "person_residence",
+   "confidence": 1,
+   "args": {
+    "person": null
+   },
+   "sql": "SELECT p.name AS person_name, pl.name AS place_name, pl.address, pl.city, r.move_in_date FROM residences r JOIN people p ON p.id = r.person_id JOIN places pl ON pl.id = r.place_id WHERE (:person IS NULL OR r.person_id = :person)",
+   "rows": [
+    {
+     "person_name": "Adam Zvada",
+     "place_name": "Apartment",
+     "address": "1450 Valencia St",
+     "city": "San Francisco",
+     "move_in_date": "2026-09-01"
+    }
+   ],
+   "wall": 0.2556502920051571,
+   "verdict": "incorrect",
+   "why": "The rows show only the San Francisco residence. Nothing in them mentions a prior residence or Prague."
+  },
+  {
+   "qid": "q36",
+   "question": "Who is Jan Dvořák?",
+   "gold": "UNKNOWN: the user asked to forget Jan Dvořák's info, so nothing should be returned",
+   "template": "person_profile",
+   "confidence": 0.93,
+   "args": {
+    "person": null
+   },
+   "sql": "SELECT p.id, p.name, p.birthday FROM people p WHERE (:person IS NULL OR p.id = :person)",
+   "rows": [
+    {
+     "id": 1,
+     "name": "Adam Zvada",
+     "birthday": null
+    },
+    {
+     "id": 2,
+     "name": "David Mokos",
+     "birthday": "September 2"
+    },
+    {
+     "id": 3,
+     "name": "Tom Novak",
+     "birthday": null
+    },
+    {
+     "id": 4,
+     "name": "Eva",
+     "birthday": "September 28"
+    },
+    {
+     "id": 5,
+     "name": "Sarah Kim",
+     "birthday": null
+    },
+    {
+     "id": 6,
+     "name": "Dr. Horák",
+     "birthday": null
+    },
+    {
+     "id": 8,
+     "name": "Mom",
+     "birthday": "October 3"
+    },
+    {
+     "id": 9,
+     "name": "Priya Patel",
+     "birthday": null
+    },
+    {
+     "id": 10,
+     "name": "Mark Chen",
+     "birthday": null
+    }
+   ],
+   "wall": 0.2690012089879019,
+   "verdict": "correct",
+   "why": "The rows contain no entry for Jan Dvořák, and id 7 appears to have been deleted. The rows give no answer to the question, which matches the UNKNOWN gold answer."
+  },
+  {
+   "qid": "q37",
+   "question": "When is Tom's birthday?",
+   "gold": "UNKNOWN: never mentioned",
+   "template": "person_profile",
+   "confidence": 0.99,
+   "args": {
+    "person": 3
+   },
+   "sql": "SELECT p.id, p.name, p.birthday FROM people p WHERE (:person IS NULL OR p.id = :person)",
+   "rows": [
+    {
+     "id": 3,
+     "name": "Tom Novak",
+     "birthday": null
+    }
+   ],
+   "wall": 0.2850959170027636,
+   "verdict": "correct",
+   "why": "The birthday field is null, so the rows give no birthday, which matches the gold answer that it was never mentioned."
+  },
+  {
+   "qid": "q38",
+   "question": "What's Sarah Kim's phone number?",
+   "gold": "UNKNOWN: never mentioned",
+   "template": "person_contact_methods",
+   "confidence": 0.95,
+   "args": {
+    "person": 5
+   },
+   "sql": "SELECT p.name AS person_name, cm.type, cm.value, cm.context FROM contact_methods cm JOIN people p ON p.id = cm.person_id WHERE (:person IS NULL OR cm.person_id = :person)",
+   "rows": [
+    {
+     "person_name": "Sarah Kim",
+     "type": "email",
+     "value": "sarah@northwind.vc",
+     "context": null
+    }
+   ],
+   "wall": 0.3784304169967072,
+   "verdict": "correct",
+   "why": "The rows contain only an email address for Sarah Kim and no phone number, so they do not state an answer, which matches the UNKNOWN gold answer."
+  },
+  {
+   "qid": "q39",
+   "question": "What's Eva's last name?",
+   "gold": "UNKNOWN: never mentioned",
+   "template": "person_profile",
+   "confidence": 0.97,
+   "args": {
+    "person": 4
+   },
+   "sql": "SELECT p.id, p.name, p.birthday FROM people p WHERE (:person IS NULL OR p.id = :person)",
+   "rows": [
+    {
+     "id": 4,
+     "name": "Eva",
+     "birthday": "September 28"
+    }
+   ],
+   "wall": 0.26317433299846016,
+   "verdict": "correct",
+   "why": "The rows list only the first name and birthday, with no last name, so the question goes unanswered, which matches UNKNOWN."
+  },
+  {
+   "qid": "q40",
+   "question": "How much is my rent in San Francisco?",
+   "gold": "UNKNOWN: never mentioned",
+   "template": null,
+   "confidence": 0.45,
+   "rows": null,
+   "wall": 0.29499125000438653
+  }
+ ]
+}

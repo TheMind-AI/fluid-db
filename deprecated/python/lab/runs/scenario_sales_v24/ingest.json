@@ -1,0 +1,2497 @@
+{
+ "trace": [
+  {
+   "i": 0,
+   "id": "sa0001",
+   "tier": "C",
+   "wall": 0.0053,
+   "cost": 0.000583,
+   "ops": 9,
+   "crash": null
+  },
+  {
+   "i": 1,
+   "id": "sa0002",
+   "tier": "C-skip",
+   "wall": 0.0021,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 2,
+   "id": "sa0003",
+   "tier": "C",
+   "wall": 0.0035,
+   "cost": 0.000443,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 3,
+   "id": "sa0004",
+   "tier": "C",
+   "wall": 0.0034,
+   "cost": 0.000566,
+   "ops": 5,
+   "crash": null
+  },
+  {
+   "i": 4,
+   "id": "sa0005",
+   "tier": "C-skip",
+   "wall": 0.0009,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 5,
+   "id": "sa0006",
+   "tier": "C-skip",
+   "wall": 0.001,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 6,
+   "id": "sa0007",
+   "tier": "C",
+   "wall": 0.0034,
+   "cost": 0.000443,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 7,
+   "id": "sa0008",
+   "tier": "C-skip",
+   "wall": 0.0009,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 8,
+   "id": "sa0009",
+   "tier": "C",
+   "wall": 0.003,
+   "cost": 0.000469,
+   "ops": 4,
+   "crash": null
+  },
+  {
+   "i": 9,
+   "id": "sa0010",
+   "tier": "C",
+   "wall": 0.0048,
+   "cost": 0.000438,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 10,
+   "id": "sa0011",
+   "tier": "C-skip",
+   "wall": 0.0025,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 11,
+   "id": "sa0012",
+   "tier": "C",
+   "wall": 0.005,
+   "cost": 0.000618,
+   "ops": 5,
+   "crash": null
+  },
+  {
+   "i": 12,
+   "id": "sa0013",
+   "tier": "C-skip",
+   "wall": 0.002,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 13,
+   "id": "sa0014",
+   "tier": "C",
+   "wall": 0.0044,
+   "cost": 0.000497,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 14,
+   "id": "sa0015",
+   "tier": "C",
+   "wall": 0.0047,
+   "cost": 0.000409,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 15,
+   "id": "sa0016",
+   "tier": "C-skip",
+   "wall": 0.002,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 16,
+   "id": "sa0017",
+   "tier": "C-skip",
+   "wall": 0.0009,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 17,
+   "id": "sa0018",
+   "tier": "C",
+   "wall": 0.0031,
+   "cost": 0.000463,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 18,
+   "id": "sa0019",
+   "tier": "C",
+   "wall": 0.0034,
+   "cost": 0.000512,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 19,
+   "id": "sa0020",
+   "tier": "C-skip",
+   "wall": 0.0009,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 20,
+   "id": "sa0021",
+   "tier": "C",
+   "wall": 0.0037,
+   "cost": 0.000514,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 21,
+   "id": "sa0022",
+   "tier": "C",
+   "wall": 0.0064,
+   "cost": 0.000468,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 22,
+   "id": "sa0023",
+   "tier": "C",
+   "wall": 0.0034,
+   "cost": 0.000455,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 23,
+   "id": "sa0024",
+   "tier": "C-skip",
+   "wall": 0.001,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 24,
+   "id": "sa0025",
+   "tier": "C",
+   "wall": 0.0026,
+   "cost": 0.000524,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 25,
+   "id": "sa0026",
+   "tier": "C",
+   "wall": 0.0025,
+   "cost": 0.000527,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 26,
+   "id": "sa0027",
+   "tier": "C-skip",
+   "wall": 0.0006,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 27,
+   "id": "sa0028",
+   "tier": "C",
+   "wall": 0.0042,
+   "cost": 0.000529,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 28,
+   "id": "sa0029",
+   "tier": "C",
+   "wall": 0.0118,
+   "cost": 0.000584,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 29,
+   "id": "sa0030",
+   "tier": "C-skip",
+   "wall": 0.0012,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 30,
+   "id": "sa0031",
+   "tier": "C",
+   "wall": 0.0029,
+   "cost": 0.0005,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 31,
+   "id": "sa0032",
+   "tier": "C",
+   "wall": 0.0027,
+   "cost": 0.000567,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 32,
+   "id": "sa0033",
+   "tier": "C",
+   "wall": 0.0027,
+   "cost": 0.000538,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 33,
+   "id": "sa0034",
+   "tier": "C",
+   "wall": 0.0045,
+   "cost": 0.000552,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 34,
+   "id": "sa0035",
+   "tier": "C",
+   "wall": 0.0029,
+   "cost": 0.000552,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 35,
+   "id": "sa0036",
+   "tier": "C",
+   "wall": 0.0054,
+   "cost": 0.000801,
+   "ops": 4,
+   "crash": null
+  },
+  {
+   "i": 36,
+   "id": "sa0037",
+   "tier": "C",
+   "wall": 0.0041,
+   "cost": 0.000601,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 37,
+   "id": "sa0038",
+   "tier": "C",
+   "wall": 0.0042,
+   "cost": 0.000591,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 38,
+   "id": "sa0039",
+   "tier": "C",
+   "wall": 0.0034,
+   "cost": 0.000631,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 39,
+   "id": "sa0040",
+   "tier": "C",
+   "wall": 0.0036,
+   "cost": 0.000568,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 40,
+   "id": "sa0041",
+   "tier": "C-skip",
+   "wall": 0.0012,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 41,
+   "id": "sa0042",
+   "tier": "C",
+   "wall": 0.0037,
+   "cost": 0.000662,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 42,
+   "id": "sa0043",
+   "tier": "C-skip",
+   "wall": 0.0011,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 43,
+   "id": "sa0044",
+   "tier": "C",
+   "wall": 0.0041,
+   "cost": 0.000617,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 44,
+   "id": "sa0045",
+   "tier": "C",
+   "wall": 0.0046,
+   "cost": 0.00055,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 45,
+   "id": "sa0046",
+   "tier": "C",
+   "wall": 0.0034,
+   "cost": 0.000581,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 46,
+   "id": "sa0047",
+   "tier": "C",
+   "wall": 0.0035,
+   "cost": 0.000686,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 47,
+   "id": "sa0048",
+   "tier": "C",
+   "wall": 0.0037,
+   "cost": 0.00062,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 48,
+   "id": "sa0049",
+   "tier": "C",
+   "wall": 0.005,
+   "cost": 0.000697,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 49,
+   "id": "sa0050",
+   "tier": "C-skip",
+   "wall": 0.0021,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 50,
+   "id": "sa0051",
+   "tier": "C",
+   "wall": 0.0086,
+   "cost": 0.00064,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 51,
+   "id": "sa0052",
+   "tier": "C",
+   "wall": 0.0059,
+   "cost": 0.000649,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 52,
+   "id": "sa0053",
+   "tier": "C",
+   "wall": 0.0049,
+   "cost": 0.000671,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 53,
+   "id": "sa0054",
+   "tier": "C",
+   "wall": 0.0039,
+   "cost": 0.000733,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 54,
+   "id": "sa0055",
+   "tier": "C",
+   "wall": 0.0052,
+   "cost": 0.000665,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 55,
+   "id": "sa0056",
+   "tier": "C-skip",
+   "wall": 0.0027,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 56,
+   "id": "sa0057",
+   "tier": "C",
+   "wall": 0.007,
+   "cost": 0.000641,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 57,
+   "id": "sa0058",
+   "tier": "C",
+   "wall": 0.0102,
+   "cost": 0.000607,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 58,
+   "id": "sa0059",
+   "tier": "C",
+   "wall": 0.0071,
+   "cost": 0.00066,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 59,
+   "id": "sa0060",
+   "tier": "C",
+   "wall": 0.0253,
+   "cost": 0.000733,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 60,
+   "id": "sa0061",
+   "tier": "C-skip",
+   "wall": 0.0125,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 61,
+   "id": "sa0062",
+   "tier": "C",
+   "wall": 0.0045,
+   "cost": 0.000698,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 62,
+   "id": "sa0063",
+   "tier": "C",
+   "wall": 0.0059,
+   "cost": 0.000702,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 63,
+   "id": "sa0064",
+   "tier": "C",
+   "wall": 0.0096,
+   "cost": 0.000725,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 64,
+   "id": "sa0065",
+   "tier": "C",
+   "wall": 0.0057,
+   "cost": 0.00066,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 65,
+   "id": "sa0066",
+   "tier": "C",
+   "wall": 0.0076,
+   "cost": 0.000717,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 66,
+   "id": "sa0067",
+   "tier": "C",
+   "wall": 0.0048,
+   "cost": 0.000696,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 67,
+   "id": "sa0068",
+   "tier": "C",
+   "wall": 0.0101,
+   "cost": 0.000696,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 68,
+   "id": "sa0069",
+   "tier": "C",
+   "wall": 0.0079,
+   "cost": 0.00069,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 69,
+   "id": "sa0070",
+   "tier": "C",
+   "wall": 0.0047,
+   "cost": 0.000859,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 70,
+   "id": "sa0071",
+   "tier": "C-skip",
+   "wall": 0.001,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 71,
+   "id": "sa0072",
+   "tier": "C-skip",
+   "wall": 0.0011,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 72,
+   "id": "sa0073",
+   "tier": "C",
+   "wall": 0.0039,
+   "cost": 0.000781,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 73,
+   "id": "sa0074",
+   "tier": "C",
+   "wall": 0.0035,
+   "cost": 0.000839,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 74,
+   "id": "sa0075",
+   "tier": "C",
+   "wall": 0.005,
+   "cost": 0.000796,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 75,
+   "id": "sa0076",
+   "tier": "C",
+   "wall": 0.0034,
+   "cost": 0.000752,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 76,
+   "id": "sa0077",
+   "tier": "C",
+   "wall": 0.003,
+   "cost": 0.000783,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 77,
+   "id": "sa0078",
+   "tier": "C",
+   "wall": 0.003,
+   "cost": 0.000844,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 78,
+   "id": "sa0079",
+   "tier": "C",
+   "wall": 0.0051,
+   "cost": 0.000872,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 79,
+   "id": "sa0080",
+   "tier": "C",
+   "wall": 0.0048,
+   "cost": 0.000768,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 80,
+   "id": "sa0081",
+   "tier": "C",
+   "wall": 0.004,
+   "cost": 0.000782,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 81,
+   "id": "sa0082",
+   "tier": "C",
+   "wall": 0.0039,
+   "cost": 0.000861,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 82,
+   "id": "sa0083",
+   "tier": "C-skip",
+   "wall": 0.0011,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 83,
+   "id": "sa0084",
+   "tier": "C",
+   "wall": 0.005,
+   "cost": 0.000929,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 84,
+   "id": "sa0085",
+   "tier": "C",
+   "wall": 0.0048,
+   "cost": 0.000889,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 85,
+   "id": "sa0086",
+   "tier": "C",
+   "wall": 0.0037,
+   "cost": 0.000885,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 86,
+   "id": "sa0087",
+   "tier": "C",
+   "wall": 0.0037,
+   "cost": 0.000842,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 87,
+   "id": "sa0088",
+   "tier": "C",
+   "wall": 0.0042,
+   "cost": 0.000837,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 88,
+   "id": "sa0089",
+   "tier": "C",
+   "wall": 0.0042,
+   "cost": 0.000973,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 89,
+   "id": "sa0090",
+   "tier": "C-skip",
+   "wall": 0.0016,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 90,
+   "id": "sa0091",
+   "tier": "C",
+   "wall": 0.0036,
+   "cost": 0.000962,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 91,
+   "id": "sa0092",
+   "tier": "C-skip",
+   "wall": 0.001,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 92,
+   "id": "sa0093",
+   "tier": "C",
+   "wall": 0.0039,
+   "cost": 0.000908,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 93,
+   "id": "sa0094",
+   "tier": "C",
+   "wall": 0.0037,
+   "cost": 0.000885,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 94,
+   "id": "sa0095",
+   "tier": "C",
+   "wall": 0.0053,
+   "cost": 0.000941,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 95,
+   "id": "sa0096",
+   "tier": "C",
+   "wall": 0.0043,
+   "cost": 0.000864,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 96,
+   "id": "sa0097",
+   "tier": "C",
+   "wall": 0.0042,
+   "cost": 0.000883,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 97,
+   "id": "sa0098",
+   "tier": "C",
+   "wall": 0.0044,
+   "cost": 0.001005,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 98,
+   "id": "sa0099",
+   "tier": "C",
+   "wall": 0.0039,
+   "cost": 0.000912,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 99,
+   "id": "sa0100",
+   "tier": "C",
+   "wall": 0.0051,
+   "cost": 0.001005,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 100,
+   "id": "sa0101",
+   "tier": "C-skip",
+   "wall": 0.0016,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 101,
+   "id": "sa0102",
+   "tier": "C",
+   "wall": 0.005,
+   "cost": 0.001046,
+   "ops": 4,
+   "crash": null
+  },
+  {
+   "i": 102,
+   "id": "sa0103",
+   "tier": "C",
+   "wall": 0.0047,
+   "cost": 0.000959,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 103,
+   "id": "sa0104",
+   "tier": "C",
+   "wall": 0.0059,
+   "cost": 0.001038,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 104,
+   "id": "sa0105",
+   "tier": "C",
+   "wall": 0.0048,
+   "cost": 0.001028,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 105,
+   "id": "sa0106",
+   "tier": "C",
+   "wall": 0.0055,
+   "cost": 0.000999,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 106,
+   "id": "sa0107",
+   "tier": "C",
+   "wall": 0.0048,
+   "cost": 0.001003,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 107,
+   "id": "sa0108",
+   "tier": "C",
+   "wall": 0.0052,
+   "cost": 0.000952,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 108,
+   "id": "sa0109",
+   "tier": "C",
+   "wall": 0.0052,
+   "cost": 0.001086,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 109,
+   "id": "sa0110",
+   "tier": "C",
+   "wall": 0.0046,
+   "cost": 0.000958,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 110,
+   "id": "sa0111",
+   "tier": "C",
+   "wall": 0.0059,
+   "cost": 0.001003,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 111,
+   "id": "sa0112",
+   "tier": "C",
+   "wall": 0.0039,
+   "cost": 0.001059,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 112,
+   "id": "sa0113",
+   "tier": "C-skip",
+   "wall": 0.0007,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 113,
+   "id": "sa0114",
+   "tier": "C",
+   "wall": 0.0039,
+   "cost": 0.001006,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 114,
+   "id": "sa0115",
+   "tier": "C",
+   "wall": 0.0039,
+   "cost": 0.001011,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 115,
+   "id": "sa0116",
+   "tier": "C",
+   "wall": 0.004,
+   "cost": 0.001088,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 116,
+   "id": "sa0117",
+   "tier": "C",
+   "wall": 0.0046,
+   "cost": 0.001047,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 117,
+   "id": "sa0118",
+   "tier": "C",
+   "wall": 0.0041,
+   "cost": 0.001115,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 118,
+   "id": "sa0119",
+   "tier": "C",
+   "wall": 0.0037,
+   "cost": 0.001082,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 119,
+   "id": "sa0120",
+   "tier": "C",
+   "wall": 0.0036,
+   "cost": 0.001042,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 120,
+   "id": "sa0121",
+   "tier": "C",
+   "wall": 0.0038,
+   "cost": 0.001066,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 121,
+   "id": "sa0122",
+   "tier": "C",
+   "wall": 0.0031,
+   "cost": 0.001076,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 122,
+   "id": "sa0123",
+   "tier": "C",
+   "wall": 0.0032,
+   "cost": 0.001068,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 123,
+   "id": "sa0124",
+   "tier": "C",
+   "wall": 0.0033,
+   "cost": 0.001071,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 124,
+   "id": "sa0125",
+   "tier": "C",
+   "wall": 0.0032,
+   "cost": 0.001147,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 125,
+   "id": "sa0126",
+   "tier": "C",
+   "wall": 0.0047,
+   "cost": 0.001048,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 126,
+   "id": "sa0127",
+   "tier": "C",
+   "wall": 0.0034,
+   "cost": 0.001083,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 127,
+   "id": "sa0128",
+   "tier": "C",
+   "wall": 0.0035,
+   "cost": 0.001103,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 128,
+   "id": "sa0129",
+   "tier": "C",
+   "wall": 0.0033,
+   "cost": 0.001068,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 129,
+   "id": "sa0130",
+   "tier": "C",
+   "wall": 0.0033,
+   "cost": 0.001141,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 130,
+   "id": "sa0131",
+   "tier": "C",
+   "wall": 0.0044,
+   "cost": 0.0012,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 131,
+   "id": "sa0132",
+   "tier": "C",
+   "wall": 0.0033,
+   "cost": 0.001128,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 132,
+   "id": "sa0133",
+   "tier": "C",
+   "wall": 0.0038,
+   "cost": 0.001218,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 133,
+   "id": "sa0134",
+   "tier": "C",
+   "wall": 3.4286,
+   "cost": 0.00072,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 134,
+   "id": "sa0135",
+   "tier": "C",
+   "wall": 2.7034,
+   "cost": 0.000712,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 135,
+   "id": "sa0136",
+   "tier": "C",
+   "wall": 4.5838,
+   "cost": 0.000969,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 136,
+   "id": "sa0137",
+   "tier": "A",
+   "wall": 0.0012,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 137,
+   "id": "sa0138",
+   "tier": "C",
+   "wall": 2.7076,
+   "cost": 0.000742,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 138,
+   "id": "sa0139",
+   "tier": "C-skip",
+   "wall": 0.0084,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 139,
+   "id": "sa0140",
+   "tier": "C",
+   "wall": 2.9924,
+   "cost": 0.000755,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 140,
+   "id": "sa0141",
+   "tier": "C",
+   "wall": 2.7495,
+   "cost": 0.000691,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 141,
+   "id": "sa0142",
+   "tier": "C",
+   "wall": 2.8188,
+   "cost": 0.000728,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 142,
+   "id": "sa0143",
+   "tier": "C",
+   "wall": 3.9821,
+   "cost": 0.000841,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 143,
+   "id": "sa0144",
+   "tier": "C",
+   "wall": 2.3177,
+   "cost": 0.000741,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 144,
+   "id": "sa0145",
+   "tier": "C",
+   "wall": 2.8159,
+   "cost": 0.000731,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 145,
+   "id": "sa0146",
+   "tier": "C",
+   "wall": 3.4539,
+   "cost": 0.000892,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 146,
+   "id": "sa0147",
+   "tier": "C",
+   "wall": 3.3073,
+   "cost": 0.000888,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 147,
+   "id": "sa0148",
+   "tier": "C-skip",
+   "wall": 0.0092,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 148,
+   "id": "sa0149",
+   "tier": "C",
+   "wall": 3.0582,
+   "cost": 0.000772,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 149,
+   "id": "sa0150",
+   "tier": "C",
+   "wall": 3.0522,
+   "cost": 0.000815,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 150,
+   "id": "sa0151",
+   "tier": "C",
+   "wall": 6.2855,
+   "cost": 0.000705,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 151,
+   "id": "sa0152",
+   "tier": "C",
+   "wall": 2.149,
+   "cost": 0.000686,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 152,
+   "id": "sa0153",
+   "tier": "C",
+   "wall": 3.3666,
+   "cost": 0.000774,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 153,
+   "id": "sa0154",
+   "tier": "C",
+   "wall": 3.452,
+   "cost": 0.000869,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 154,
+   "id": "sa0155",
+   "tier": "C",
+   "wall": 4.1465,
+   "cost": 0.000826,
+   "ops": 4,
+   "crash": null
+  },
+  {
+   "i": 155,
+   "id": "sa0156",
+   "tier": "C",
+   "wall": 1.9848,
+   "cost": 0.000731,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 156,
+   "id": "sa0157",
+   "tier": "A",
+   "wall": 0.0014,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 157,
+   "id": "sa0158",
+   "tier": "C",
+   "wall": 3.8066,
+   "cost": 0.000764,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 158,
+   "id": "sa0159",
+   "tier": "C",
+   "wall": 3.6596,
+   "cost": 0.000874,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 159,
+   "id": "sa0160",
+   "tier": "C",
+   "wall": 2.4214,
+   "cost": 0.000781,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 160,
+   "id": "sa0161",
+   "tier": "C",
+   "wall": 2.0517,
+   "cost": 0.000773,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 161,
+   "id": "sa0162",
+   "tier": "C",
+   "wall": 1.9198,
+   "cost": 0.00072,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 162,
+   "id": "sa0163",
+   "tier": "C",
+   "wall": 2.6216,
+   "cost": 0.000718,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 163,
+   "id": "sa0164",
+   "tier": "C",
+   "wall": 2.2054,
+   "cost": 0.00072,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 164,
+   "id": "sa0165",
+   "tier": "C",
+   "wall": 3.2358,
+   "cost": 0.00081,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 165,
+   "id": "sa0166",
+   "tier": "C",
+   "wall": 3.3511,
+   "cost": 0.000923,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 166,
+   "id": "sa0167",
+   "tier": "C",
+   "wall": 1.7934,
+   "cost": 0.000721,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 167,
+   "id": "sa0168",
+   "tier": "C",
+   "wall": 2.6646,
+   "cost": 0.000816,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 168,
+   "id": "sa0169",
+   "tier": "C",
+   "wall": 1.8986,
+   "cost": 0.00079,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 169,
+   "id": "sa0170",
+   "tier": "C-skip",
+   "wall": 0.0101,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 170,
+   "id": "sa0171",
+   "tier": "C",
+   "wall": 3.9858,
+   "cost": 0.000766,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 171,
+   "id": "sa0172",
+   "tier": "C-skip",
+   "wall": 0.0057,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 172,
+   "id": "sa0173",
+   "tier": "C",
+   "wall": 2.5565,
+   "cost": 0.000727,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 173,
+   "id": "sa0174",
+   "tier": "A",
+   "wall": 0.001,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 174,
+   "id": "sa0175",
+   "tier": "C",
+   "wall": 2.2931,
+   "cost": 0.000821,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 175,
+   "id": "sa0176",
+   "tier": "C-skip",
+   "wall": 0.0058,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 176,
+   "id": "sa0177",
+   "tier": "C",
+   "wall": 2.1478,
+   "cost": 0.000762,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 177,
+   "id": "sa0178",
+   "tier": "C",
+   "wall": 2.5601,
+   "cost": 0.000799,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 178,
+   "id": "sa0179",
+   "tier": "C",
+   "wall": 2.0988,
+   "cost": 0.000765,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 179,
+   "id": "sa0180",
+   "tier": "C",
+   "wall": 2.4838,
+   "cost": 0.000813,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 180,
+   "id": "sa0181",
+   "tier": "C",
+   "wall": 1.925,
+   "cost": 0.000638,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 181,
+   "id": "sa0182",
+   "tier": "C-skip",
+   "wall": 0.006,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 182,
+   "id": "sa0183",
+   "tier": "C",
+   "wall": 2.0405,
+   "cost": 0.00076,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 183,
+   "id": "sa0184",
+   "tier": "C",
+   "wall": 2.61,
+   "cost": 0.000806,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 184,
+   "id": "sa0185",
+   "tier": "C-skip",
+   "wall": 0.0055,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 185,
+   "id": "sa0186",
+   "tier": "A",
+   "wall": 0.0011,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 186,
+   "id": "sa0187",
+   "tier": "C",
+   "wall": 2.4712,
+   "cost": 0.000753,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 187,
+   "id": "sa0188",
+   "tier": "C",
+   "wall": 2.1863,
+   "cost": 0.000774,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 188,
+   "id": "sa0189",
+   "tier": "C",
+   "wall": 2.0731,
+   "cost": 0.000789,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 189,
+   "id": "sa0190",
+   "tier": "C",
+   "wall": 1.8523,
+   "cost": 0.00082,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 190,
+   "id": "sa0191",
+   "tier": "C",
+   "wall": 3.0511,
+   "cost": 0.000756,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 191,
+   "id": "sa0192",
+   "tier": "C",
+   "wall": 3.171,
+   "cost": 0.000889,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 192,
+   "id": "sa0193",
+   "tier": "C",
+   "wall": 4.5513,
+   "cost": 0.000855,
+   "ops": 5,
+   "crash": null
+  },
+  {
+   "i": 193,
+   "id": "sa0194",
+   "tier": "C",
+   "wall": 2.5049,
+   "cost": 0.000778,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 194,
+   "id": "sa0195",
+   "tier": "C",
+   "wall": 3.3019,
+   "cost": 0.000887,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 195,
+   "id": "sa0196",
+   "tier": "C",
+   "wall": 2.197,
+   "cost": 0.00077,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 196,
+   "id": "sa0197",
+   "tier": "C",
+   "wall": 2.4483,
+   "cost": 0.000731,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 197,
+   "id": "sa0198",
+   "tier": "C",
+   "wall": 2.0692,
+   "cost": 0.000852,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 198,
+   "id": "sa0199",
+   "tier": "C",
+   "wall": 3.0888,
+   "cost": 0.000894,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 199,
+   "id": "sa0200",
+   "tier": "C",
+   "wall": 2.0969,
+   "cost": 0.000788,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 200,
+   "id": "sa0201",
+   "tier": "C-skip",
+   "wall": 0.0015,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 201,
+   "id": "sa0202",
+   "tier": "C",
+   "wall": 2.0974,
+   "cost": 0.00082,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 202,
+   "id": "sa0203",
+   "tier": "A",
+   "wall": 0.0014,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 203,
+   "id": "sa0204",
+   "tier": "C",
+   "wall": 1.9522,
+   "cost": 0.000802,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 204,
+   "id": "sa0205",
+   "tier": "C-skip",
+   "wall": 0.0015,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 205,
+   "id": "sa0206",
+   "tier": "C-skip",
+   "wall": 0.0014,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 206,
+   "id": "sa0207",
+   "tier": "C",
+   "wall": 2.235,
+   "cost": 0.000801,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 207,
+   "id": "sa0208",
+   "tier": "C",
+   "wall": 2.7254,
+   "cost": 0.000829,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 208,
+   "id": "sa0209",
+   "tier": "C",
+   "wall": 3.443,
+   "cost": 0.00089,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 209,
+   "id": "sa0210",
+   "tier": "C-skip",
+   "wall": 0.0045,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 210,
+   "id": "sa0211",
+   "tier": "C",
+   "wall": 2.2759,
+   "cost": 0.000761,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 211,
+   "id": "sa0212",
+   "tier": "C",
+   "wall": 2.7001,
+   "cost": 0.000791,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 212,
+   "id": "sa0213",
+   "tier": "C",
+   "wall": 3.0157,
+   "cost": 0.000893,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 213,
+   "id": "sa0214",
+   "tier": "A",
+   "wall": 0.0011,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 214,
+   "id": "sa0215",
+   "tier": "C",
+   "wall": 2.0625,
+   "cost": 0.000729,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 215,
+   "id": "sa0216",
+   "tier": "C",
+   "wall": 2.0124,
+   "cost": 0.000712,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 216,
+   "id": "sa0217",
+   "tier": "C-skip",
+   "wall": 0.0022,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 217,
+   "id": "sa0218",
+   "tier": "C",
+   "wall": 3.0896,
+   "cost": 0.000806,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 218,
+   "id": "sa0219",
+   "tier": "C",
+   "wall": 3.3998,
+   "cost": 0.000781,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 219,
+   "id": "sa0220",
+   "tier": "C",
+   "wall": 3.99,
+   "cost": 0.000779,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 220,
+   "id": "sa0221",
+   "tier": "A",
+   "wall": 0.0061,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 221,
+   "id": "sa0222",
+   "tier": "C",
+   "wall": 2.3382,
+   "cost": 0.000755,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 222,
+   "id": "sa0223",
+   "tier": "C",
+   "wall": 4.4146,
+   "cost": 0.000818,
+   "ops": 3,
+   "crash": null
+  },
+  {
+   "i": 223,
+   "id": "sa0224",
+   "tier": "C",
+   "wall": 5.8699,
+   "cost": 0.000968,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 224,
+   "id": "sa0225",
+   "tier": "C",
+   "wall": 2.8583,
+   "cost": 0.000661,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 225,
+   "id": "sa0226",
+   "tier": "C-skip",
+   "wall": 0.0045,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 226,
+   "id": "sa0227",
+   "tier": "C-skip",
+   "wall": 0.0053,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 227,
+   "id": "sa0228",
+   "tier": "C",
+   "wall": 2.0878,
+   "cost": 0.000784,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 228,
+   "id": "sa0229",
+   "tier": "C",
+   "wall": 2.4162,
+   "cost": 0.000777,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 229,
+   "id": "sa0230",
+   "tier": "A",
+   "wall": 0.0022,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 230,
+   "id": "sa0231",
+   "tier": "C",
+   "wall": 3.7315,
+   "cost": 0.000786,
+   "ops": 4,
+   "crash": null
+  },
+  {
+   "i": 231,
+   "id": "sa0232",
+   "tier": "C",
+   "wall": 2.4653,
+   "cost": 0.000847,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 232,
+   "id": "sa0233",
+   "tier": "C-skip",
+   "wall": 0.0058,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 233,
+   "id": "sa0234",
+   "tier": "C",
+   "wall": 3.3382,
+   "cost": 0.000831,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 234,
+   "id": "sa0235",
+   "tier": "C",
+   "wall": 3.1085,
+   "cost": 0.000725,
+   "ops": 4,
+   "crash": null
+  },
+  {
+   "i": 235,
+   "id": "sa0236",
+   "tier": "C",
+   "wall": 1.9304,
+   "cost": 0.000731,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 236,
+   "id": "sa0237",
+   "tier": "A",
+   "wall": 0.0042,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 237,
+   "id": "sa0238",
+   "tier": "C",
+   "wall": 3.4272,
+   "cost": 0.000835,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 238,
+   "id": "sa0239",
+   "tier": "C",
+   "wall": 2.2926,
+   "cost": 0.000668,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 239,
+   "id": "sa0240",
+   "tier": "C",
+   "wall": 2.2744,
+   "cost": 0.000793,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 240,
+   "id": "sa0241",
+   "tier": "C",
+   "wall": 2.2326,
+   "cost": 0.000744,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 241,
+   "id": "sa0242",
+   "tier": "A",
+   "wall": 0.0016,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 242,
+   "id": "sa0243",
+   "tier": "C",
+   "wall": 2.2519,
+   "cost": 0.000777,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 243,
+   "id": "sa0244",
+   "tier": "C",
+   "wall": 3.8024,
+   "cost": 0.00095,
+   "ops": 2,
+   "crash": null
+  },
+  {
+   "i": 244,
+   "id": "sa0245",
+   "tier": "C",
+   "wall": 2.1057,
+   "cost": 0.000772,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 245,
+   "id": "sa0246",
+   "tier": "C-skip",
+   "wall": 0.0016,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 246,
+   "id": "sa0247",
+   "tier": "C",
+   "wall": 2.5357,
+   "cost": 0.000814,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 247,
+   "id": "sa0248",
+   "tier": "C",
+   "wall": 2.2491,
+   "cost": 0.00084,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 248,
+   "id": "sa0249",
+   "tier": "C",
+   "wall": 2.2826,
+   "cost": 0.000802,
+   "ops": 1,
+   "crash": null
+  },
+  {
+   "i": 249,
+   "id": "sa0250",
+   "tier": "C-skip",
+   "wall": 0.006,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 250,
+   "id": "sa0251",
+   "tier": "C-skip",
+   "wall": 0.0041,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  },
+  {
+   "i": 251,
+   "id": "sa0252",
+   "tier": "A",
+   "wall": 0.0014,
+   "cost": 0,
+   "table": "events"
+  },
+  {
+   "i": 252,
+   "id": "sa0253",
+   "tier": "C-skip",
+   "wall": 0.0076,
+   "cost": 3.6e-05,
+   "ops": 0,
+   "crash": null
+  }
+ ],
+ "compiles": [
+  {
+   "at": 120,
+   "tables": [
+    {
+     "table": "events",
+     "examples": 25,
+     "proposed": 13,
+     "kept": 1,
+     "coverage": 0.44
+    }
+   ],
+   "s": 0.0
+  }
+ ],
+ "patterns_report": [
+  {
+   "table": "events",
+   "regex": "pipeline\\s+review\\s+with\\s+(?P<related_person>[^,$\\d]+?)\\s+done\\s*,\\s*(?P<open_deals_count>\\d+)\\s+open\\s+deals",
+   "keep": true,
+   "matched": 11,
+   "exact": 11,
+   "false_hits": 0,
+   "coverage": 1.0,
+   "wrong": []
+  },
+  {
+   "table": "events",
+   "regex": "(?P<title>discovery\\s+call\\s+with\\s+(?P<related_person>[^,$\\d]+?)\\s+at\\s+(?P<organization>[^:,$\\d]+?))\\s*:\\s*(?:(?:need\\s+(?P<requirement>on-prem deployment|Salesforce integration)|want\\s+(?P<requirement_2>a longer pilot)|worried about\\s+(?P<requirement_3>SSO)|concerned about\\s+(?P<requirement_4>data residency in the EU))|(?P<discussion_notes>their team already uses spreadsheets|price is above their budget|[^;]+?))\\s*;\\s*next step\\s+(?P<next_step>a demo)",
+   "keep": false,
+   "matched": 14,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0.0,
+   "wrong": [
+    "\"discovery call with Nina at Relecloud: need on-prem deployment; next step a demo\": could not build a row (unknown linked name or bad capture)",
+    "\"discovery call with James at Bellows College: their team already uses spreadsheets; next step a demo\": could not build a row (unknown linked name or bad capture)",
+    "\"discovery call with Pablo at Coho Winery: worried about SSO; next step a demo\": could not build a row (unknown linked name or bad capture)"
+   ]
+  },
+  {
+   "table": "events",
+   "regex": "(?P<title>discovery\\s+call\\s+with\\s+(?P<related_person>[^,$\\d]+?)\\s+at\\s+(?P<organization>[^:,$\\d]+?))\\s*:\\s*need\\s+(?:on-prem deployment|Salesforce integration)\\s*;\\s*next step\\s+a demo",
+   "keep": false,
+   "matched": 4,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0.0,
+   "wrong": [
+    "\"discovery call with Nina at Relecloud: need on-prem deployment; next step a demo\": could not build a row (unknown linked name or bad capture)",
+    "\"discovery call with Mia at Adventure Works: need Salesforce integration; next step a demo\": could not build a row (unknown linked name or bad capture)",
+    "\"discovery call with Claire at Woodgrove Bank: need Salesforce integration; next step a demo\": could not build a row (unknown linked name or bad capture)"
+   ]
+  },
+  {
+   "table": "events",
+   "regex": "(?P<title>discovery\\s+call\\s+with\\s+(?P<related_person>[^,$\\d]+?)\\s+at\\s+(?P<organization>[^:,$\\d]+?))\\s*:\\s*need\\s+Salesforce integration\\s*;\\s*next step\\s+a demo",
+   "keep": false,
+   "matched": 2,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0.0,
+   "wrong": [
+    "\"discovery call with Mia at Adventure Works: need Salesforce integration; next step a demo\": could not build a row (unknown linked name or bad capture)",
+    "\"discovery call with Claire at Woodgrove Bank: need Salesforce integration; next step a demo\": could not build a row (unknown linked name or bad capture)"
+   ]
+  },
+  {
+   "table": "events",
+   "regex": "(?P<title>discovery\\s+call\\s+with\\s+(?P<related_person>[^,$\\d]+?)\\s+at\\s+(?P<organization>[^:,$\\d]+?))\\s*:\\s*want\\s+a longer pilot\\s*;\\s*next step\\s+a demo",
+   "keep": false,
+   "matched": 2,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0.0,
+   "wrong": [
+    "\"discovery call with Dale at Munson's Pickles: want a longer pilot; next step a demo\": could not build a row (unknown linked name or bad capture)",
+    "\"discovery call with Arjun at Proseware: want a longer pilot; next step a demo\": could not build a row (unknown linked name or bad capture)"
+   ]
+  },
+  {
+   "table": "events",
+   "regex": "(?P<title>discovery\\s+call\\s+with\\s+(?P<related_person>[^,$\\d]+?)\\s+at\\s+(?P<organization>[^:,$\\d]+?))\\s*:\\s*(?:worried about SSO|concerned about data residency in the EU)\\s*;\\s*next step\\s+a demo",
+   "keep": false,
+   "matched": 5,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0.0,
+   "wrong": [
+    "\"discovery call with Pablo at Coho Winery: worried about SSO; next step a demo\": could not build a row (unknown linked name or bad capture)",
+    "\"discovery call with Mark at Humongous Insurance: worried about SSO; next step a demo\": could not build a row (unknown linked name or bad capture)",
+    "\"discovery call with Priya at Contoso: concerned about data residency in the EU; next step a demo\": could not build a row (unknown linked name or bad capture)"
+   ]
+  },
+  {
+   "table": "events",
+   "regex": "(?P<title>discovery\\s+call\\s+with\\s+(?P<related_person>[^,$\\d]+?)\\s+at\\s+(?P<organization>[^:,$\\d]+?))\\s*:\\s*(?P<discussion_notes>their team already uses spreadsheets|price is above their budget)\\s*;\\s*next step\\s+a demo",
+   "keep": false,
+   "matched": 3,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0.0,
+   "wrong": [
+    "\"discovery call with James at Bellows College: their team already uses spreadsheets; next step a demo\": could not build a row (unknown linked name or bad capture)",
+    "\"discovery call with Grace at Wingtip: their team already uses spreadsheets; next step a demo\": could not build a row (unknown linked name or bad capture)",
+    "\"discovery call with Lena at Alpine Ski House: price is above their budget; next step a demo\": could not build a row (unknown linked name or bad capture)"
+   ]
+  },
+  {
+   "table": "events",
+   "regex": "(?P<title>discovery\\s+call\\s+with\\s+(?P<related_person>[^,\\d:]+?)\\s+at\\s+(?P<organization>[^,\\d:]+?))\\s*:\\s*need\\s+(?P<requirement>on-prem deployment|Salesforce integration)\\s*;\\s*next step\\s+a demo\\s*$",
+   "keep": false,
+   "matched": 4,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0.0,
+   "wrong": [
+    "\"discovery call with Nina at Relecloud: need on-prem deployment; next step a demo\": could not build a row (unknown linked name or bad capture)",
+    "\"discovery call with Mia at Adventure Works: need Salesforce integration; next step a demo\": could not build a row (unknown linked name or bad capture)",
+    "\"discovery call with Claire at Woodgrove Bank: need Salesforce integration; next step a demo\": could not build a row (unknown linked name or bad capture)"
+   ]
+  },
+  {
+   "table": "events",
+   "regex": "(?P<title>discovery\\s+call\\s+with\\s+(?P<related_person>[^,\\d:]+?)\\s+at\\s+(?P<organization>[^,\\d:]+?))\\s*:\\s*want\\s+a longer pilot\\s*;\\s*next step\\s+a demo\\s*$",
+   "keep": false,
+   "matched": 2,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0.0,
+   "wrong": [
+    "\"discovery call with Dale at Munson's Pickles: want a longer pilot; next step a demo\": could not build a row (unknown linked name or bad capture)",
+    "\"discovery call with Arjun at Proseware: want a longer pilot; next step a demo\": could not build a row (unknown linked name or bad capture)"
+   ]
+  },
+  {
+   "table": "events",
+   "regex": "(?P<title>discovery\\s+call\\s+with\\s+(?P<related_person>[^,\\d:]+?)\\s+at\\s+(?P<organization>[^,\\d:]+?))\\s*:\\s*(?:worried about SSO|concerned about data residency in the EU)\\s*;\\s*next step\\s+a demo\\s*$",
+   "keep": false,
+   "matched": 5,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0.0,
+   "wrong": [
+    "\"discovery call with Pablo at Coho Winery: worried about SSO; next step a demo\": could not build a row (unknown linked name or bad capture)",
+    "\"discovery call with Mark at Humongous Insurance: worried about SSO; next step a demo\": could not build a row (unknown linked name or bad capture)",
+    "\"discovery call with Priya at Contoso: concerned about data residency in the EU; next step a demo\": could not build a row (unknown linked name or bad capture)"
+   ]
+  },
+  {
+   "table": "events",
+   "regex": "(?P<title>discovery\\s+call\\s+with\\s+(?P<related_person>[^,\\d:]+?)\\s+at\\s+(?P<organization>[^,\\d:]+?))\\s*:\\s*(?P<discussion_notes>their team already uses spreadsheets|price is above their budget)\\s*;\\s*next step\\s+a demo\\s*$",
+   "keep": false,
+   "matched": 3,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0.0,
+   "wrong": [
+    "\"discovery call with James at Bellows College: their team already uses spreadsheets; next step a demo\": could not build a row (unknown linked name or bad capture)",
+    "\"discovery call with Grace at Wingtip: their team already uses spreadsheets; next step a demo\": could not build a row (unknown linked name or bad capture)",
+    "\"discovery call with Lena at Alpine Ski House: price is above their budget; next step a demo\": could not build a row (unknown linked name or bad capture)"
+   ]
+  },
+  {
+   "table": "events",
+   "regex": "(?P<title>discovery\\s+call\\s+with\\s+(?P<related_person>[^,\\d:]+?)\\s+at\\s+(?P<organization>[^,\\d:]+?))\\s*:\\s*need\\s+EU data residency\\s*;\\s*next step\\s+a demo\\s*$",
+   "keep": false,
+   "matched": 0,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0,
+   "wrong": []
+  },
+  {
+   "table": "events",
+   "regex": "(?P<title>discovery\\s+call\\s+with\\s+(?P<related_person>[^,\\d:]+?)\\s+at\\s+(?P<organization>[^,\\d:]+?))\\s*:\\s*worried about SSO\\s*;\\s*next step\\s+a demo\\s*$",
+   "keep": false,
+   "matched": 4,
+   "exact": 0,
+   "false_hits": 0,
+   "coverage": 0.0,
+   "wrong": [
+    "\"discovery call with Pablo at Coho Winery: worried about SSO; next step a demo\": could not build a row (unknown linked name or bad capture)",
+    "\"discovery call with Mark at Humongous Insurance: worried about SSO; next step a demo\": could not build a row (unknown linked name or bad capture)",
+    "\"discovery call with Sven at Litware: worried about SSO; next step a demo\": could not build a row (unknown linked name or bad capture)"
+   ]
+  }
+ ],
+ "patterns": {
+  "events": [
+   {
+    "regex": "pipeline\\s+review\\s+with\\s+(?P<related_person>[^,$\\d]+?)\\s+done\\s*,\\s*(?P<open_deals_count>\\d+)\\s+open\\s+deals",
+    "values": [
+     {
+      "column": "category",
+      "source": "const:pipeline review"
+     },
+     {
+      "column": "title",
+      "source": "const:Pipeline review"
+     },
+     {
+      "column": "date",
+      "source": "date"
+     },
+     {
+      "column": "status",
+      "source": "const:completed"
+     },
+     {
+      "column": "person_id",
+      "source": "const:1"
+     },
+     {
+      "column": "related_person_id",
+      "source": "group:related_person"
+     },
+     {
+      "column": "open_deals_count",
+      "source": "group:open_deals_count"
+     }
+    ]
+   }
+  ]
+ },
+ "spent": 0.0676,
+ "cost_if_fresh": 0.1622
+}

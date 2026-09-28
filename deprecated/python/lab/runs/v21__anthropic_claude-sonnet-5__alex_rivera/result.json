@@ -1,0 +1,4837 @@
+{
+ "run": "v21__anthropic_claude-sonnet-5__alex_rivera",
+ "system": "v21",
+ "model": "anthropic:claude-sonnet-5",
+ "dataset": "alex_rivera",
+ "opts": {},
+ "accuracy": 0.9222,
+ "by_category": {
+  "aggregation": 0.75,
+  "list": 0.875,
+  "multi_hop": 1.0,
+  "single": 0.931,
+  "temporal": 1.0,
+  "unanswerable": 1.0
+ },
+ "ingest": {
+  "messages": 45,
+  "crashes": 0,
+  "sql_errors": 0,
+  "cost": 0.4477,
+  "llm_latency_mean": 3.475,
+  "wall_mean": 3.478,
+  "llm_calls": 45,
+  "jev_calls": 0
+ },
+ "qa_cost": 0.636,
+ "qa_wall_mean": 5.303,
+ "ledger": {
+  "calls": 222,
+  "input_tokens": 478172,
+  "output_tokens": 21003,
+  "cost": 1.249,
+  "latency": 480.908
+ },
+ "ingest_trace": [
+  {
+   "id": "a01",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 0,
+    "notes": "Stores Alex Rivera's personal profile and educational history.",
+    "ops": [
+     {
+      "op": "create_table",
+      "table": "people",
+      "description": "People known to Alex Rivera, including Alex themself",
+      "columns": [
+       {
+        "name": "name",
+        "type": "TEXT",
+        "description": "Full name"
+       },
+       {
+        "name": "age",
+        "type": "INTEGER",
+        "description": "Age in years"
+       },
+       {
+        "name": "nationality",
+        "type": "TEXT",
+        "description": "Nationality"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "insert",
+      "table": "people",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": "alex",
+      "values": [
+       {
+        "column": "name",
+        "value": "Alex Rivera"
+       },
+       {
+        "column": "age",
+        "value": 35
+       },
+       {
+        "column": "nationality",
+        "value": "Canadian"
+       }
+      ]
+     },
+     {
+      "op": "create_table",
+      "table": "education",
+      "description": "Educational history of a person, one row per degree earned",
+      "columns": [
+       {
+        "name": "person_id",
+        "type": "INTEGER",
+        "description": "Reference to people table"
+       },
+       {
+        "name": "degree",
+        "type": "TEXT",
+        "description": "Degree earned"
+       },
+       {
+        "name": "field",
+        "type": "TEXT",
+        "description": "Field of study"
+       },
+       {
+        "name": "institution",
+        "type": "TEXT",
+        "description": "Institution attended"
+       },
+       {
+        "name": "year",
+        "type": "INTEGER",
+        "description": "Year degree was earned"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "insert",
+      "table": "education",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": "@alex"
+       },
+       {
+        "column": "degree",
+        "value": "B.Sc."
+       },
+       {
+        "column": "field",
+        "value": "Computer Science"
+       },
+       {
+        "column": "institution",
+        "value": "University of Toronto"
+       },
+       {
+        "column": "year",
+        "value": 2010
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 6.999,
+   "llm_latency": 6.993,
+   "cost": 0.010124,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a02",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 2,
+    "notes": "Adds a specific course Alex completed during his B.Sc., linked to his education record.",
+    "ops": [
+     {
+      "op": "create_table",
+      "table": "courses",
+      "description": "Courses completed by a person as part of their education",
+      "columns": [
+       {
+        "name": "education_id",
+        "type": "INTEGER",
+        "description": "Reference to education table"
+       },
+       {
+        "name": "name",
+        "type": "TEXT",
+        "description": "Course name"
+       },
+       {
+        "name": "completion_date",
+        "type": "DATE",
+        "description": "Date the course was completed"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "insert",
+      "table": "courses",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "education_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "Advanced Algorithms"
+       },
+       {
+        "column": "completion_date",
+        "value": "2009-05-01"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 4.475,
+   "llm_latency": 4.473,
+   "cost": 0.008116,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a03",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 3,
+    "notes": "Adds another completed course under Alex's existing education record.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "courses",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "education_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "System Design"
+       },
+       {
+        "column": "completion_date",
+        "value": "2009-12-01"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 2.613,
+   "llm_latency": 2.611,
+   "cost": 0.006124,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a04",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 4,
+    "notes": "Input lists Alex's skills gained from his courses; storing each as a row in a new skills table linked to people.",
+    "ops": [
+     {
+      "op": "create_table",
+      "table": "skills",
+      "description": "Skills a person has, one row per skill",
+      "columns": [
+       {
+        "name": "person_id",
+        "type": "INTEGER",
+        "description": "Reference to people table"
+       },
+       {
+        "name": "name",
+        "type": "TEXT",
+        "description": "Name of the skill"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "insert",
+      "table": "skills",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "Problem solving"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "skills",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "Team leadership"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "skills",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "Project management"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "skills",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "Agile methodologies"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 4.787,
+   "llm_latency": 4.781,
+   "cost": 0.010022,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a05",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 8,
+    "notes": "Alex started professional career at Innovatech as Software Engineer after graduation; create a work_experiences table and insert this job entry.",
+    "ops": [
+     {
+      "op": "create_table",
+      "table": "work_experiences",
+      "description": "Work history entries for a person, one row per job held",
+      "columns": [
+       {
+        "name": "person_id",
+        "type": "INTEGER",
+        "description": "Reference to people table"
+       },
+       {
+        "name": "company",
+        "type": "TEXT",
+        "description": "Name of employer"
+       },
+       {
+        "name": "title",
+        "type": "TEXT",
+        "description": "Job title held"
+       },
+       {
+        "name": "start_date",
+        "type": "DATE",
+        "description": "Date the job started"
+       },
+       {
+        "name": "end_date",
+        "type": "DATE",
+        "description": "Date the job ended, if applicable"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "insert",
+      "table": "work_experiences",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "company",
+        "value": "Innovatech"
+       },
+       {
+        "column": "title",
+        "value": "Software Engineer"
+       },
+       {
+        "column": "start_date",
+        "value": "2010-01-01"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 4.464,
+   "llm_latency": 4.458,
+   "cost": 0.009334,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a06",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 9,
+    "notes": "Confirms Innovatech dates for Alex Rivera's work experience row; updating start_date and adding end_date.",
+    "ops": [
+     {
+      "op": "update",
+      "table": "work_experiences",
+      "description": null,
+      "columns": [],
+      "row_id": 1,
+      "ref": null,
+      "values": [
+       {
+        "column": "start_date",
+        "value": "2010-08-01"
+       },
+       {
+        "column": "end_date",
+        "value": "2013-07-01"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 2.741,
+   "llm_latency": 2.74,
+   "cost": 0.007104,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a07",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 9,
+    "notes": "Adds descriptive detail about Alex's role at Innovatech; update the work experience row with responsibilities.",
+    "ops": [
+     {
+      "op": "add_columns",
+      "table": "work_experiences",
+      "description": null,
+      "columns": [
+       {
+        "name": "responsibilities",
+        "type": "TEXT",
+        "description": "Description of duties and responsibilities during the job"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 2.755,
+   "llm_latency": 2.754,
+   "cost": 0.007132,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a08",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 9,
+    "notes": "Adds a responsibilities detail to Alex's existing Innovatech job entry.",
+    "ops": [
+     {
+      "op": "update",
+      "table": "work_experiences",
+      "description": null,
+      "columns": [],
+      "row_id": 1,
+      "ref": null,
+      "values": [
+       {
+        "column": "responsibilities",
+        "value": "Worked collaboratively with cross-functional teams."
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 2.368,
+   "llm_latency": 2.364,
+   "cost": 0.007198,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a09",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 9,
+    "notes": "Alex received 'Employee of the Year' award in December 2012; storing as a new awards entity linked to people.",
+    "ops": [
+     {
+      "op": "create_table",
+      "table": "awards",
+      "description": "Awards or recognitions received by a person",
+      "columns": [
+       {
+        "name": "person_id",
+        "type": "INTEGER",
+        "description": "Reference to people table"
+       },
+       {
+        "name": "name",
+        "type": "TEXT",
+        "description": "Name of the award"
+       },
+       {
+        "name": "date",
+        "type": "DATE",
+        "description": "Date the award was received"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "insert",
+      "table": "awards",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "Employee of the Year"
+       },
+       {
+        "column": "date",
+        "value": "2012-12-01"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 3.957,
+   "llm_latency": 3.951,
+   "cost": 0.008754,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a10",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 10,
+    "notes": "Adds detail about Alex's achievement leading an internal tool in Nov 2012, linked to his Innovatech job; appended to responsibilities.",
+    "ops": [
+     {
+      "op": "update",
+      "table": "work_experiences",
+      "description": null,
+      "columns": [],
+      "row_id": 1,
+      "ref": null,
+      "values": [
+       {
+        "column": "responsibilities",
+        "value": "Worked collaboratively with cross-functional teams. Led development of a key internal tool, a significant achievement (November 2012)."
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 4.175,
+   "llm_latency": 4.169,
+   "cost": 0.008888,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a11",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 10,
+    "notes": "New job at TechPioneers starting September 2013; added as new work experience row.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "work_experiences",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "company",
+        "value": "TechPioneers"
+       },
+       {
+        "column": "title",
+        "value": "Senior Software Engineer"
+       },
+       {
+        "column": "start_date",
+        "value": "2013-09-01"
+       },
+       {
+        "column": "end_date",
+        "value": null
+       },
+       {
+        "column": "responsibilities",
+        "value": null
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 3.506,
+   "llm_latency": 3.498,
+   "cost": 0.008686,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a12",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 11,
+    "notes": "Update Alex's TechPioneers job with an end date of June 2016.",
+    "ops": [
+     {
+      "op": "update",
+      "table": "work_experiences",
+      "description": null,
+      "columns": [],
+      "row_id": 2,
+      "ref": null,
+      "values": [
+       {
+        "column": "end_date",
+        "value": "2016-06-01"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 2.515,
+   "llm_latency": 2.511,
+   "cost": 0.007312,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a13",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 11,
+    "notes": "Adds missing responsibilities detail for Alex's TechPioneers role (designed scalable microservices architecture).",
+    "ops": [
+     {
+      "op": "update",
+      "table": "work_experiences",
+      "description": null,
+      "columns": [],
+      "row_id": 2,
+      "ref": null,
+      "values": [
+       {
+        "column": "responsibilities",
+        "value": "Designed scalable microservices architecture."
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 2.486,
+   "llm_latency": 2.483,
+   "cost": 0.007934,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a14",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 11,
+    "notes": "Adds detail to Alex's TechPioneers work experience responsibilities (mentoring and code reviews).",
+    "ops": [
+     {
+      "op": "update",
+      "table": "work_experiences",
+      "description": null,
+      "columns": [],
+      "row_id": 2,
+      "ref": null,
+      "values": [
+       {
+        "column": "responsibilities",
+        "value": "Designed scalable microservices architecture. Mentored junior engineers and conducted code reviews."
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 4.451,
+   "llm_latency": 4.447,
+   "cost": 0.008316,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a15",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 11,
+    "notes": "Adds detail about Alex's achievement at TechPioneers (work_experiences#2) in April 2015; appending to existing responsibilities.",
+    "ops": [
+     {
+      "op": "update",
+      "table": "work_experiences",
+      "description": null,
+      "columns": [],
+      "row_id": 2,
+      "ref": null,
+      "values": [
+       {
+        "column": "responsibilities",
+        "value": "Designed scalable microservices architecture. Mentored junior engineers and conducted code reviews. Spearheaded a major performance optimization project (April 2015)."
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 3.069,
+   "llm_latency": 3.063,
+   "cost": 0.008392,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a16",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 11,
+    "notes": "New durable fact: Alex published research on cloud computing efficiency in Feb 2016. No existing publications table, so create one and insert a row linked to Alex.",
+    "ops": [
+     {
+      "op": "create_table",
+      "table": "publications",
+      "description": "Research or written works published by a person",
+      "columns": [
+       {
+        "name": "person_id",
+        "type": "INTEGER",
+        "description": "Reference to people table"
+       },
+       {
+        "name": "title",
+        "type": "TEXT",
+        "description": "Title or topic of the publication"
+       },
+       {
+        "name": "date",
+        "type": "DATE",
+        "description": "Date of publication"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "insert",
+      "table": "publications",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "title",
+        "value": "Research on cloud computing efficiency"
+       },
+       {
+        "column": "date",
+        "value": "2016-02-01"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 3.875,
+   "llm_latency": 3.872,
+   "cost": 0.009516,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a17",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 12,
+    "notes": "Adds a new work experience entry for Alex Rivera co-founding EcoSolutions as CTO; no dates provided.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "work_experiences",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "company",
+        "value": "EcoSolutions"
+       },
+       {
+        "column": "title",
+        "value": "CTO (Co-founder)"
+       },
+       {
+        "column": "responsibilities",
+        "value": "Co-founded the company and served as Chief Technology Officer."
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 2.559,
+   "llm_latency": 2.555,
+   "cost": 0.008814,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a18",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 13,
+    "notes": "Adds detail about EcoSolutions' focus to Alex's existing CTO work experience entry.",
+    "ops": [
+     {
+      "op": "update",
+      "table": "work_experiences",
+      "description": null,
+      "columns": [],
+      "row_id": 3,
+      "ref": null,
+      "values": [
+       {
+        "column": "responsibilities",
+        "value": "Co-founded the company and served as Chief Technology Officer. The startup focused on developing eco-friendly tech solutions."
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 2.653,
+   "llm_latency": 2.649,
+   "cost": 0.00857,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a19",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 13,
+    "notes": "Adds revenue growth detail for EcoSolutions to Alex's CTO role.",
+    "ops": [
+     {
+      "op": "update",
+      "table": "work_experiences",
+      "description": null,
+      "columns": [],
+      "row_id": 3,
+      "ref": null,
+      "values": [
+       {
+        "column": "responsibilities",
+        "value": "Co-founded the company and served as Chief Technology Officer. The startup focused on developing eco-friendly tech solutions. The company saw a 200% revenue growth in its first year."
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 2.924,
+   "llm_latency": 2.922,
+   "cost": 0.008766,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a20",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 13,
+    "notes": "Update EcoSolutions work experience with new growth metric (user base grew to 10,000 in six months).",
+    "ops": [
+     {
+      "op": "update",
+      "table": "work_experiences",
+      "description": null,
+      "columns": [],
+      "row_id": 3,
+      "ref": null,
+      "values": [
+       {
+        "column": "responsibilities",
+        "value": "Co-founded the company and served as Chief Technology Officer. The startup focused on developing eco-friendly tech solutions. The company saw a 200% revenue growth in its first year. User base grew to 10,000 in just six months."
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 3.861,
+   "llm_latency": 3.858,
+   "cost": 0.009072,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a21",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 13,
+    "notes": "Alex has programming language proficiencies; adding each as a new skill row linked to person_id 1.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "skills",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "Python"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "skills",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "Java"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "skills",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "JavaScript"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "skills",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "C#"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 3.758,
+   "llm_latency": 3.753,
+   "cost": 0.010558,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a22",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 17,
+    "notes": "Adds four new skills for Alex Rivera (person_id 1): React, Node.js, .NET, Django.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "skills",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "React"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "skills",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "Node.js"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "skills",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": ".NET"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "skills",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "Django"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 3.76,
+   "llm_latency": 3.759,
+   "cost": 0.010544,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a23",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 21,
+    "notes": "Adding three new database skills for Alex Rivera to the skills table.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "skills",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "MySQL"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "skills",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "MongoDB"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "skills",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "PostgreSQL"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 3.082,
+   "llm_latency": 3.068,
+   "cost": 0.010036,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a24",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 24,
+    "notes": "Adds two new skills (AWS, Azure) for Alex Rivera.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "skills",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "AWS"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "skills",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "Azure"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 2.934,
+   "llm_latency": 2.931,
+   "cost": 0.00967,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a25",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 26,
+    "notes": "Alex has additional skills in DevOps, Docker, Kubernetes, and CI/CD pipelines; adding each as a separate skill row.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "skills",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "DevOps"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "skills",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "Docker"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "skills",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "Kubernetes"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "skills",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "CI/CD pipelines"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 3.96,
+   "llm_latency": 3.958,
+   "cost": 0.01176,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a26",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 30,
+    "notes": "Alex developed a SmartHome System IoT project; storing as a new project entry linked to Alex Rivera.",
+    "ops": [
+     {
+      "op": "create_table",
+      "table": "projects",
+      "description": "Projects developed or worked on by a person",
+      "columns": [
+       {
+        "name": "person_id",
+        "type": "INTEGER",
+        "description": "Reference to people table"
+       },
+       {
+        "name": "name",
+        "type": "TEXT",
+        "description": "Name of the project"
+       },
+       {
+        "name": "description",
+        "type": "TEXT",
+        "description": "Description of the project"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "insert",
+      "table": "projects",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "SmartHome System"
+       },
+       {
+        "column": "description",
+        "value": "An IoT project for automating home environments."
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 3.866,
+   "llm_latency": 3.864,
+   "cost": 0.01103,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a27",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 31,
+    "notes": "Update to existing SmartHome System project noting deployment milestone; appending detail to description.",
+    "ops": [
+     {
+      "op": "update",
+      "table": "projects",
+      "description": null,
+      "columns": [],
+      "row_id": 1,
+      "ref": null,
+      "values": [
+       {
+        "column": "description",
+        "value": "An IoT project for automating home environments. Successfully deployed in over 100 homes by June 2018."
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 2.345,
+   "llm_latency": 2.343,
+   "cost": 0.00957,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a28",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 31,
+    "notes": "Adds a new project for Alex Rivera: Health Tracker App.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "projects",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "Health Tracker App"
+       },
+       {
+        "column": "description",
+        "value": "Managed the development of a Health Tracker App."
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 2.535,
+   "llm_latency": 2.531,
+   "cost": 0.009698,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a29",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 32,
+    "notes": "Adds a fuller description to the existing Health Tracker App project row.",
+    "ops": [
+     {
+      "op": "update",
+      "table": "projects",
+      "description": null,
+      "columns": [],
+      "row_id": 2,
+      "ref": null,
+      "values": [
+       {
+        "column": "description",
+        "value": "A mobile application for tracking health metrics. Managed the development of a Health Tracker App."
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 2.603,
+   "llm_latency": 2.601,
+   "cost": 0.009748,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a30",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 32,
+    "notes": "Update Health Tracker App project with new milestone about downloads.",
+    "ops": [
+     {
+      "op": "update",
+      "table": "projects",
+      "description": null,
+      "columns": [],
+      "row_id": 2,
+      "ref": null,
+      "values": [
+       {
+        "column": "description",
+        "value": "A mobile application for tracking health metrics. Managed the development of a Health Tracker App. Reached 50,000 downloads within its first year of launch (January 2019)."
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 3.376,
+   "llm_latency": 3.375,
+   "cost": 0.01008,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a31",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 32,
+    "notes": "Alex completed a new course, Advanced Machine Learning, in March 2020, linked to their existing B.Sc. education record.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "courses",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "education_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "Advanced Machine Learning"
+       },
+       {
+        "column": "completion_date",
+        "value": "2020-03-01"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 3.153,
+   "llm_latency": 3.151,
+   "cost": 0.010288,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a32",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 33,
+    "notes": "Alex completed a Cloud Computing Specialization course in November 2020; added as a course linked to their existing education record.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "courses",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "education_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "Cloud Computing Specialization"
+       },
+       {
+        "column": "completion_date",
+        "value": "2020-11-01"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 3.076,
+   "llm_latency": 3.073,
+   "cost": 0.010346,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a33",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 34,
+    "notes": "Alex holds two certifications, stored as awards since no certifications table exists.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "awards",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "AWS Certified Solutions Architect"
+       },
+       {
+        "column": "date",
+        "value": null
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "awards",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "Certified Scrum Master"
+       },
+       {
+        "column": "date",
+        "value": null
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 3.173,
+   "llm_latency": 3.17,
+   "cost": 0.011172,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a34",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 36,
+    "notes": "Alex attended TechCrunch Disrupt conference in September 2019; storing as a new event attended by Alex.",
+    "ops": [
+     {
+      "op": "create_table",
+      "table": "events_attended",
+      "description": "Events or conferences attended by a person",
+      "columns": [
+       {
+        "name": "person_id",
+        "type": "INTEGER",
+        "description": "Reference to people table"
+       },
+       {
+        "name": "name",
+        "type": "TEXT",
+        "description": "Name of the event"
+       },
+       {
+        "name": "date",
+        "type": "DATE",
+        "description": "Date the event was attended"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "insert",
+      "table": "events_attended",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "TechCrunch Disrupt"
+       },
+       {
+        "column": "date",
+        "value": "2019-09-01"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 4.324,
+   "llm_latency": 4.321,
+   "cost": 0.012348,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a35",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 37,
+    "notes": "New durable fact: Alex attended Google I/O in May 2020, added to events_attended.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "events_attended",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "Google I/O"
+       },
+       {
+        "column": "date",
+        "value": "2020-05-01"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 2.508,
+   "llm_latency": 2.506,
+   "cost": 0.010488,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a36",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 38,
+    "notes": "Alex was a keynote speaker on Cloud Innovation at CloudExpo, October 2018; storing as an attended event with speaking role noted.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "events_attended",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "CloudExpo (Keynote Speaker: Cloud Innovation)"
+       },
+       {
+        "column": "date",
+        "value": "2018-10-01"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 2.957,
+   "llm_latency": 2.956,
+   "cost": 0.01111,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a37",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 39,
+    "notes": "Adds a new event attended by Alex Rivera: panelist at DevOps Days in April 2019.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "events_attended",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "name",
+        "value": "DevOps Days (Panelist)"
+       },
+       {
+        "column": "date",
+        "value": "2019-04-01"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 2.707,
+   "llm_latency": 2.705,
+   "cost": 0.010826,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a38",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 40,
+    "notes": "Adds Sarah Chen as a new person (friend, Data Scientist, met in college) linked to Alex Rivera.",
+    "ops": [
+     {
+      "op": "add_columns",
+      "table": "people",
+      "description": null,
+      "columns": [
+       {
+        "name": "occupation",
+        "type": "TEXT",
+        "description": "Person's occupation or job title"
+       },
+       {
+        "name": "relationship_to_alex",
+        "type": "TEXT",
+        "description": "How this person relates to Alex Rivera"
+       },
+       {
+        "name": "met_context",
+        "type": "TEXT",
+        "description": "Context in which Alex met this person"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "insert",
+      "table": "people",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": "sarah",
+      "values": [
+       {
+        "column": "name",
+        "value": "Sarah Chen"
+       },
+       {
+        "column": "occupation",
+        "value": "Data Scientist"
+       },
+       {
+        "column": "relationship_to_alex",
+        "value": "friend"
+       },
+       {
+        "column": "met_context",
+        "value": "college"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 4.973,
+   "llm_latency": 4.969,
+   "cost": 0.013548,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a39",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 41,
+    "notes": "New contact: Michael Johnson, a Product Manager and former co-worker of Alex, added to people table.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "people",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "name",
+        "value": "Michael Johnson"
+       },
+       {
+        "column": "occupation",
+        "value": "Product Manager"
+       },
+       {
+        "column": "relationship_to_alex",
+        "value": "former co-worker"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 3.106,
+   "llm_latency": 3.104,
+   "cost": 0.011672,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a40",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 42,
+    "notes": "Adds a new contact, Emily Davis, a Marketing Specialist at Alex's startup (EcoSolutions), as a colleague.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "people",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "name",
+        "value": "Emily Davis"
+       },
+       {
+        "column": "occupation",
+        "value": "Marketing Specialist"
+       },
+       {
+        "column": "relationship_to_alex",
+        "value": "colleague at startup"
+       },
+       {
+        "column": "met_context",
+        "value": "Works together at Alex's startup"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 4.196,
+   "llm_latency": 4.194,
+   "cost": 0.012074,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a41",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 43,
+    "notes": "Two new friends of Alex mentioned: Laura Smith (Fitness Trainer, friend) and Daniel Martinez (Graphic Designer, neighbor/friend). Inserted as new people rows.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "people",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "name",
+        "value": "Laura Smith"
+       },
+       {
+        "column": "occupation",
+        "value": "Fitness Trainer"
+       },
+       {
+        "column": "relationship_to_alex",
+        "value": "friend"
+       }
+      ]
+     },
+     {
+      "op": "insert",
+      "table": "people",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "name",
+        "value": "Daniel Martinez"
+       },
+       {
+        "column": "occupation",
+        "value": "Graphic Designer"
+       },
+       {
+        "column": "relationship_to_alex",
+        "value": "friend and neighbor"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 4.845,
+   "llm_latency": 4.836,
+   "cost": 0.013484,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a42",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 45,
+    "notes": "Input is generic narrative fluff about Alex's dedication/passion with no new concrete facts, dates, or entities to store.",
+    "ops": []
+   },
+   "crashed": null,
+   "wall": 2.614,
+   "llm_latency": 2.613,
+   "cost": 0.011,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a43",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 45,
+    "notes": "Stores Alex's aspiration for EcoSolutions by appending it to his existing CTO work experience entry.",
+    "ops": [
+     {
+      "op": "update",
+      "table": "work_experiences",
+      "description": null,
+      "columns": [],
+      "row_id": 3,
+      "ref": null,
+      "values": [
+       {
+        "column": "responsibilities",
+        "value": "Co-founded the company and served as Chief Technology Officer. The startup focused on developing eco-friendly tech solutions. The company saw a 200% revenue growth in its first year. User base grew to 10,000 in just six months. Aspires to grow EcoSolutions to a global scale."
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 3.603,
+   "llm_latency": 3.602,
+   "cost": 0.012862,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a44",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 45,
+    "notes": "Alex's aspiration to become a thought leader in sustainable technology; stored in a new aspirations table linked to people.",
+    "ops": [
+     {
+      "op": "create_table",
+      "table": "aspirations",
+      "description": "Personal or professional goals/aspirations a person holds",
+      "columns": [
+       {
+        "name": "person_id",
+        "type": "INTEGER",
+        "description": "Reference to people table"
+       },
+       {
+        "name": "description",
+        "type": "TEXT",
+        "description": "Description of the aspiration or goal"
+       }
+      ],
+      "row_id": null,
+      "ref": null,
+      "values": []
+     },
+     {
+      "op": "insert",
+      "table": "aspirations",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "description",
+        "value": "Become a thought leader in sustainable technology"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 4.98,
+   "llm_latency": 4.977,
+   "cost": 0.013298,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  },
+  {
+   "id": "a45",
+   "kind": "store",
+   "trace": {
+    "errors": [],
+    "context_rows": 46,
+    "notes": "Alex has a new stated aspiration to establish a tech incubator for emerging technologies; adding as a new row since it's distinct from the existing aspiration.",
+    "ops": [
+     {
+      "op": "insert",
+      "table": "aspirations",
+      "description": null,
+      "columns": [],
+      "row_id": null,
+      "ref": null,
+      "values": [
+       {
+        "column": "person_id",
+        "value": 1
+       },
+       {
+        "column": "description",
+        "value": "Establish a tech incubator for emerging technologies"
+       }
+      ]
+     }
+    ]
+   },
+   "crashed": null,
+   "wall": 2.864,
+   "llm_latency": 2.862,
+   "cost": 0.01233,
+   "calls": [
+    "claude-sonnet-5"
+   ]
+  }
+ ],
+ "qa": [
+  {
+   "id": "q01",
+   "category": "single",
+   "question": "How old is Alex Rivera?",
+   "answer": "35",
+   "evidence": [
+    "a01"
+   ],
+   "system_answer": "Alex Rivera is 35 years old.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer gives 35, which matches the gold answer.",
+   "wall": 4.381,
+   "context": [
+    {
+     "sql": "SELECT age FROM people WHERE name LIKE '%Alex Rivera%'",
+     "rows": [
+      {
+       "age": 35
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q02",
+   "category": "single",
+   "question": "What is Alex's nationality?",
+   "answer": "Canadian",
+   "evidence": [
+    "a01"
+   ],
+   "system_answer": "Alex Rivera's nationality is Canadian.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer states Canadian, which matches the gold answer.",
+   "wall": 5.428,
+   "context": [
+    {
+     "sql": "SELECT nationality FROM people WHERE name='Alex Rivera'",
+     "rows": [
+      {
+       "nationality": "Canadian"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q03",
+   "category": "single",
+   "question": "Which university did Alex graduate from, with what degree, and when?",
+   "answer": "University of Toronto, B.Sc. in computer science, 2010",
+   "evidence": [
+    "a01"
+   ],
+   "system_answer": "Alex graduated from the University of Toronto with a B.Sc. in Computer Science in 2010.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "All three facts match: University of Toronto, B.Sc. in Computer Science, and 2010.",
+   "wall": 6.663,
+   "context": [
+    {
+     "sql": "SELECT * FROM education WHERE person_id = 1",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "degree": "B.Sc.",
+       "field": "Computer Science",
+       "institution": "University of Toronto",
+       "year": 2010
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q04",
+   "category": "single",
+   "question": "When did Alex complete the Advanced Algorithms course?",
+   "answer": "May 2009",
+   "evidence": [
+    "a02"
+   ],
+   "system_answer": "Alex completed the Advanced Algorithms course on 2009-05-01.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer's date, 2009-05-01, falls in May 2009, which matches the gold answer. The added specific day does not contradict it.",
+   "wall": 5.358,
+   "context": [
+    {
+     "sql": "SELECT * FROM courses WHERE name LIKE '%Advanced Algorithms%'",
+     "rows": [
+      {
+       "id": 1,
+       "education_id": 1,
+       "name": "Advanced Algorithms",
+       "completion_date": "2009-05-01"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q05",
+   "category": "single",
+   "question": "When did Alex complete the System Design course?",
+   "answer": "December 2009",
+   "evidence": [
+    "a03"
+   ],
+   "system_answer": "Alex completed the System Design course on 2009-12-01.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer gives 2009-12-01, which falls in December 2009 and matches the gold. The specific day is extra detail that does not contradict it.",
+   "wall": 4.721,
+   "context": [
+    {
+     "sql": "SELECT * FROM courses WHERE name LIKE '%System Design%'",
+     "rows": [
+      {
+       "id": 2,
+       "education_id": 1,
+       "name": "System Design",
+       "completion_date": "2009-12-01"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q06",
+   "category": "single",
+   "question": "What skills did Alex's university courses lay the foundation for?",
+   "answer": "Problem solving, team leadership, project management, and agile methodologies",
+   "evidence": [
+    "a04"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "The gold answer states a real fact, but the response says 'I don't know', so it gives none of the listed skills.",
+   "wall": 5.944,
+   "context": [
+    {
+     "sql": "SELECT * FROM courses",
+     "rows": [
+      {
+       "id": 1,
+       "education_id": 1,
+       "name": "Advanced Algorithms",
+       "completion_date": "2009-05-01"
+      },
+      {
+       "id": 2,
+       "education_id": 1,
+       "name": "System Design",
+       "completion_date": "2009-12-01"
+      },
+      {
+       "id": 3,
+       "education_id": 1,
+       "name": "Advanced Machine Learning",
+       "completion_date": "2020-03-01"
+      },
+      {
+       "id": 4,
+       "education_id": 1,
+       "name": "Cloud Computing Specialization",
+       "completion_date": "2020-11-01"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM skills WHERE person_id=1",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "name": "Problem solving"
+      },
+      {
+       "id": 2,
+       "person_id": 1,
+       "name": "Team leadership"
+      },
+      {
+       "id": 3,
+       "person_id": 1,
+       "name": "Project management"
+      },
+      {
+       "id": 4,
+       "person_id": 1,
+       "name": "Agile methodologies"
+      },
+      {
+       "id": 5,
+       "person_id": 1,
+       "name": "Python"
+      },
+      {
+       "id": 6,
+       "person_id": 1,
+       "name": "Java"
+      },
+      {
+       "id": 7,
+       "person_id": 1,
+       "name": "JavaScript"
+      },
+      {
+       "id": 8,
+       "person_id": 1,
+       "name": "C#"
+      },
+      {
+       "id": 9,
+       "person_id": 1,
+       "name": "React"
+      },
+      {
+       "id": 10,
+       "person_id": 1,
+       "name": "Node.js"
+      },
+      {
+       "id": 11,
+       "person_id": 1,
+       "name": ".NET"
+      },
+      {
+       "id": 12,
+       "person_id": 1,
+       "name": "Django"
+      },
+      {
+       "id": 13,
+       "person_id": 1,
+       "name": "MySQL"
+      },
+      {
+       "id": 14,
+       "person_id": 1,
+       "name": "MongoDB"
+      },
+      {
+       "id": 15,
+       "person_id": 1,
+       "name": "PostgreSQL"
+      },
+      {
+       "id": 16,
+       "person_id": 1,
+       "name": "AWS"
+      },
+      {
+       "id": 17,
+       "person_id": 1,
+       "name": "Azure"
+      },
+      {
+       "id": 18,
+       "person_id": 1,
+       "name": "DevOps"
+      },
+      {
+       "id": 19,
+       "person_id": 1,
+       "name": "Docker"
+      },
+      {
+       "id": 20,
+       "person_id": 1,
+       "name": "Kubernetes"
+      },
+      {
+       "id": 21,
+       "person_id": 1,
+       "name": "CI/CD pipelines"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM education WHERE person_id=1",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "degree": "B.Sc.",
+       "field": "Computer Science",
+       "institution": "University of Toronto",
+       "year": 2010
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q07",
+   "category": "single",
+   "question": "What was Alex's role at Innovatech?",
+   "answer": "Software Engineer",
+   "evidence": [
+    "a05"
+   ],
+   "system_answer": "Alex was a Software Engineer at Innovatech (August 2010 – July 2013).",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer states Alex was a Software Engineer at Innovatech, which matches the gold answer. The added dates are extra detail and don't contradict anything.",
+   "wall": 4.307,
+   "context": [
+    {
+     "sql": "SELECT * FROM work_experiences WHERE company LIKE '%Innovatech%'",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "company": "Innovatech",
+       "title": "Software Engineer",
+       "start_date": "2010-08-01",
+       "end_date": "2013-07-01",
+       "responsibilities": "Worked collaboratively with cross-functional teams. Led development of a key internal tool, a significant achievement (November 2012)."
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q08",
+   "category": "single",
+   "question": "When did Alex work at Innovatech?",
+   "answer": "August 2010 to July 2013",
+   "evidence": [
+    "a06"
+   ],
+   "system_answer": "Alex worked at Innovatech as a Software Engineer from August 1, 2010 to July 1, 2013.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer gives August 2010 to July 2013, which matches the gold answer. The specific days and the job title are extra details that don't contradict it.",
+   "wall": 5.006,
+   "context": [
+    {
+     "sql": "SELECT * FROM work_experiences WHERE company LIKE '%Innovatech%'",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "company": "Innovatech",
+       "title": "Software Engineer",
+       "start_date": "2010-08-01",
+       "end_date": "2013-07-01",
+       "responsibilities": "Worked collaboratively with cross-functional teams. Led development of a key internal tool, a significant achievement (November 2012)."
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q09",
+   "category": "single",
+   "question": "What award did Alex receive, and when?",
+   "answer": "Employee of the Year, December 2012",
+   "evidence": [
+    "a09"
+   ],
+   "system_answer": "Alex Rivera received the \"Employee of the Year\" award on 2012-12-01. Alex also holds \"AWS Certified Solutions Architect\" and \"Certified Scrum Master\" certifications, though no dates are recorded for these.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer names the correct award, Employee of the Year, and dates it 2012-12-01, which is consistent with December 2012. The added certifications are extra detail and do not contradict the gold answer.",
+   "wall": 5.703,
+   "context": [
+    {
+     "sql": "SELECT a.* FROM awards a JOIN people p ON a.person_id=p.id WHERE p.name LIKE '%Alex Rivera%'",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "name": "Employee of the Year",
+       "date": "2012-12-01"
+      },
+      {
+       "id": 2,
+       "person_id": 1,
+       "name": "AWS Certified Solutions Architect",
+       "date": null
+      },
+      {
+       "id": 3,
+       "person_id": 1,
+       "name": "Certified Scrum Master",
+       "date": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q10",
+   "category": "single",
+   "question": "When did Alex join TechPioneers, and in what role?",
+   "answer": "September 2013, as a Senior Software Engineer",
+   "evidence": [
+    "a11"
+   ],
+   "system_answer": "Alex joined TechPioneers on 2013-09-01 as Senior Software Engineer.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer matches the gold on both points: September 2013 and the Senior Software Engineer role. The specific day given is consistent with September 2013 and does not contradict the gold.",
+   "wall": 5.161,
+   "context": [
+    {
+     "sql": "SELECT * FROM work_experiences WHERE company LIKE '%TechPioneers%'",
+     "rows": [
+      {
+       "id": 2,
+       "person_id": 1,
+       "company": "TechPioneers",
+       "title": "Senior Software Engineer",
+       "start_date": "2013-09-01",
+       "end_date": "2016-06-01",
+       "responsibilities": "Designed scalable microservices architecture. Mentored junior engineers and conducted code reviews. Spearheaded a major performance optimization project (April 2015)."
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q11",
+   "category": "single",
+   "question": "Until when did Alex work at TechPioneers?",
+   "answer": "June 2016",
+   "evidence": [
+    "a12"
+   ],
+   "system_answer": "Alex worked at TechPioneers until 2016-06-01.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer says 2016-06-01, which falls in June 2016 and matches the gold answer; the specific day is a formatting difference, not a contradiction.",
+   "wall": 5.002,
+   "context": [
+    {
+     "sql": "SELECT * FROM work_experiences WHERE company LIKE '%TechPioneers%'",
+     "rows": [
+      {
+       "id": 2,
+       "person_id": 1,
+       "company": "TechPioneers",
+       "title": "Senior Software Engineer",
+       "start_date": "2013-09-01",
+       "end_date": "2016-06-01",
+       "responsibilities": "Designed scalable microservices architecture. Mentored junior engineers and conducted code reviews. Spearheaded a major performance optimization project (April 2015)."
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q12",
+   "category": "single",
+   "question": "What did Alex spearhead in April 2015?",
+   "answer": "A major performance optimization project",
+   "evidence": [
+    "a15"
+   ],
+   "system_answer": "Alex spearheaded a major performance optimization project (April 2015) while Senior Software Engineer at TechPioneers.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer names the major performance optimization project, which is the key fact in the gold answer. The added role detail does not contradict it.",
+   "wall": 7.051,
+   "context": [
+    {
+     "sql": "SELECT * FROM work_experiences WHERE responsibilities LIKE '%April 2015%'",
+     "rows": [
+      {
+       "id": 2,
+       "person_id": 1,
+       "company": "TechPioneers",
+       "title": "Senior Software Engineer",
+       "start_date": "2013-09-01",
+       "end_date": "2016-06-01",
+       "responsibilities": "Designed scalable microservices architecture. Mentored junior engineers and conducted code reviews. Spearheaded a major performance optimization project (April 2015)."
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q13",
+   "category": "single",
+   "question": "What topic did Alex publish research on, and when?",
+   "answer": "Cloud computing efficiency, February 2016",
+   "evidence": [
+    "a16"
+   ],
+   "system_answer": "Alex Rivera published research on \"cloud computing efficiency\" on 2016-02-01.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer names the same topic, cloud computing efficiency, and a date of 2016-02-01, which falls within February 2016. Both key facts match the gold answer.",
+   "wall": 6.701,
+   "context": [
+    {
+     "sql": "SELECT * FROM publications WHERE person_id = 1",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "title": "Research on cloud computing efficiency",
+       "date": "2016-02-01"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q14",
+   "category": "single",
+   "question": "What is Alex's role at EcoSolutions?",
+   "answer": "Co-founder and CTO",
+   "evidence": [
+    "a17"
+   ],
+   "system_answer": "Alex is CTO (Co-founder) at EcoSolutions.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer gives both key facts, CTO and co-founder, which match the gold answer.",
+   "wall": 4.521,
+   "context": [
+    {
+     "sql": "SELECT * FROM work_experiences WHERE company LIKE '%EcoSolutions%'",
+     "rows": [
+      {
+       "id": 3,
+       "person_id": 1,
+       "company": "EcoSolutions",
+       "title": "CTO (Co-founder)",
+       "start_date": null,
+       "end_date": null,
+       "responsibilities": "Co-founded the company and served as Chief Technology Officer. The startup focused on developing eco-friendly tech solutions. The company saw a 200% revenue growth in its first year. User base grew to 10,000 in just six months. Aspires to grow EcoSolutions to a global scale."
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q15",
+   "category": "single",
+   "question": "What does EcoSolutions focus on?",
+   "answer": "Developing eco-friendly tech solutions",
+   "evidence": [
+    "a18"
+   ],
+   "system_answer": "Alex co-founded EcoSolutions, focused on developing eco-friendly tech solutions.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer says EcoSolutions focuses on developing eco-friendly tech solutions, which matches the gold answer. The added co-founder detail does not contradict it.",
+   "wall": 6.905,
+   "context": [
+    {
+     "sql": "SELECT * FROM work_experiences WHERE company LIKE '%EcoSolutions%'",
+     "rows": [
+      {
+       "id": 3,
+       "person_id": 1,
+       "company": "EcoSolutions",
+       "title": "CTO (Co-founder)",
+       "start_date": null,
+       "end_date": null,
+       "responsibilities": "Co-founded the company and served as Chief Technology Officer. The startup focused on developing eco-friendly tech solutions. The company saw a 200% revenue growth in its first year. User base grew to 10,000 in just six months. Aspires to grow EcoSolutions to a global scale."
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q16",
+   "category": "single",
+   "question": "How much did EcoSolutions' revenue grow in its first year?",
+   "answer": "200%",
+   "evidence": [
+    "a19"
+   ],
+   "system_answer": "I don't know.",
+   "verdict": "incorrect",
+   "score": 0.0,
+   "judge_reason": "Gold answer is 200%; the answer says 'I don't know' and gives no value.",
+   "wall": 2.026,
+   "context": [],
+   "extra": {}
+  },
+  {
+   "id": "q17",
+   "category": "single",
+   "question": "How fast did EcoSolutions' user base grow?",
+   "answer": "To 10,000 users in six months",
+   "evidence": [
+    "a20"
+   ],
+   "system_answer": "Alex's EcoSolutions user base grew to 10,000 users in just six months.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer states growth to 10,000 users in six months, matching the gold answer.",
+   "wall": 5.246,
+   "context": [
+    {
+     "sql": "SELECT * FROM work_experiences WHERE company LIKE '%EcoSolutions%'",
+     "rows": [
+      {
+       "id": 3,
+       "person_id": 1,
+       "company": "EcoSolutions",
+       "title": "CTO (Co-founder)",
+       "start_date": null,
+       "end_date": null,
+       "responsibilities": "Co-founded the company and served as Chief Technology Officer. The startup focused on developing eco-friendly tech solutions. The company saw a 200% revenue growth in its first year. User base grew to 10,000 in just six months. Aspires to grow EcoSolutions to a global scale."
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q18",
+   "category": "list",
+   "question": "Which programming languages is Alex proficient in?",
+   "answer": "Python, Java, JavaScript, and C#",
+   "evidence": [
+    "a21"
+   ],
+   "system_answer": "Alex is proficient in: Python, Java, JavaScript, and C#.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer lists all four languages from the gold answer (Python, Java, JavaScript, C#) and contradicts nothing.",
+   "wall": 4.359,
+   "context": [
+    {
+     "sql": "SELECT * FROM skills WHERE person_id=1",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "name": "Problem solving"
+      },
+      {
+       "id": 2,
+       "person_id": 1,
+       "name": "Team leadership"
+      },
+      {
+       "id": 3,
+       "person_id": 1,
+       "name": "Project management"
+      },
+      {
+       "id": 4,
+       "person_id": 1,
+       "name": "Agile methodologies"
+      },
+      {
+       "id": 5,
+       "person_id": 1,
+       "name": "Python"
+      },
+      {
+       "id": 6,
+       "person_id": 1,
+       "name": "Java"
+      },
+      {
+       "id": 7,
+       "person_id": 1,
+       "name": "JavaScript"
+      },
+      {
+       "id": 8,
+       "person_id": 1,
+       "name": "C#"
+      },
+      {
+       "id": 9,
+       "person_id": 1,
+       "name": "React"
+      },
+      {
+       "id": 10,
+       "person_id": 1,
+       "name": "Node.js"
+      },
+      {
+       "id": 11,
+       "person_id": 1,
+       "name": ".NET"
+      },
+      {
+       "id": 12,
+       "person_id": 1,
+       "name": "Django"
+      },
+      {
+       "id": 13,
+       "person_id": 1,
+       "name": "MySQL"
+      },
+      {
+       "id": 14,
+       "person_id": 1,
+       "name": "MongoDB"
+      },
+      {
+       "id": 15,
+       "person_id": 1,
+       "name": "PostgreSQL"
+      },
+      {
+       "id": 16,
+       "person_id": 1,
+       "name": "AWS"
+      },
+      {
+       "id": 17,
+       "person_id": 1,
+       "name": "Azure"
+      },
+      {
+       "id": 18,
+       "person_id": 1,
+       "name": "DevOps"
+      },
+      {
+       "id": 19,
+       "person_id": 1,
+       "name": "Docker"
+      },
+      {
+       "id": 20,
+       "person_id": 1,
+       "name": "Kubernetes"
+      },
+      {
+       "id": 21,
+       "person_id": 1,
+       "name": "CI/CD pipelines"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q19",
+   "category": "list",
+   "question": "Which frameworks and tools is Alex skilled in?",
+   "answer": "React, Node.js, .NET, and Django",
+   "evidence": [
+    "a22"
+   ],
+   "system_answer": "Alex Rivera's skills include the frameworks and tools: React, Node.js, .NET, Django, Docker, Kubernetes, and CI/CD pipelines.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer names all four gold items (React, Node.js, .NET, Django). The extra tools it lists do not contradict the gold answer.",
+   "wall": 6.829,
+   "context": [
+    {
+     "sql": "SELECT s.* FROM skills s JOIN people p ON s.person_id=p.id WHERE p.name='Alex Rivera'",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "name": "Problem solving"
+      },
+      {
+       "id": 2,
+       "person_id": 1,
+       "name": "Team leadership"
+      },
+      {
+       "id": 3,
+       "person_id": 1,
+       "name": "Project management"
+      },
+      {
+       "id": 4,
+       "person_id": 1,
+       "name": "Agile methodologies"
+      },
+      {
+       "id": 5,
+       "person_id": 1,
+       "name": "Python"
+      },
+      {
+       "id": 6,
+       "person_id": 1,
+       "name": "Java"
+      },
+      {
+       "id": 7,
+       "person_id": 1,
+       "name": "JavaScript"
+      },
+      {
+       "id": 8,
+       "person_id": 1,
+       "name": "C#"
+      },
+      {
+       "id": 9,
+       "person_id": 1,
+       "name": "React"
+      },
+      {
+       "id": 10,
+       "person_id": 1,
+       "name": "Node.js"
+      },
+      {
+       "id": 11,
+       "person_id": 1,
+       "name": ".NET"
+      },
+      {
+       "id": 12,
+       "person_id": 1,
+       "name": "Django"
+      },
+      {
+       "id": 13,
+       "person_id": 1,
+       "name": "MySQL"
+      },
+      {
+       "id": 14,
+       "person_id": 1,
+       "name": "MongoDB"
+      },
+      {
+       "id": 15,
+       "person_id": 1,
+       "name": "PostgreSQL"
+      },
+      {
+       "id": 16,
+       "person_id": 1,
+       "name": "AWS"
+      },
+      {
+       "id": 17,
+       "person_id": 1,
+       "name": "Azure"
+      },
+      {
+       "id": 18,
+       "person_id": 1,
+       "name": "DevOps"
+      },
+      {
+       "id": 19,
+       "person_id": 1,
+       "name": "Docker"
+      },
+      {
+       "id": 20,
+       "person_id": 1,
+       "name": "Kubernetes"
+      },
+      {
+       "id": 21,
+       "person_id": 1,
+       "name": "CI/CD pipelines"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q20",
+   "category": "list",
+   "question": "Which databases does Alex know?",
+   "answer": "MySQL, MongoDB, and PostgreSQL",
+   "evidence": [
+    "a23"
+   ],
+   "system_answer": "Alex knows MySQL, MongoDB, and PostgreSQL.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer names the same three databases as the gold answer: MySQL, MongoDB and PostgreSQL.",
+   "wall": 5.462,
+   "context": [
+    {
+     "sql": "SELECT * FROM skills WHERE person_id=1 AND (name LIKE '%SQL%' OR name LIKE '%database%' OR name LIKE '%Postgres%' OR name LIKE '%Mongo%' OR name LIKE '%Oracle%' OR name LIKE '%MySQL%')",
+     "rows": [
+      {
+       "id": 13,
+       "person_id": 1,
+       "name": "MySQL"
+      },
+      {
+       "id": 14,
+       "person_id": 1,
+       "name": "MongoDB"
+      },
+      {
+       "id": 15,
+       "person_id": 1,
+       "name": "PostgreSQL"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q21",
+   "category": "list",
+   "question": "Which cloud platforms is Alex proficient in?",
+   "answer": "AWS and Azure",
+   "evidence": [
+    "a24"
+   ],
+   "system_answer": "Alex Rivera is proficient in AWS and Azure.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer names both AWS and Azure, which matches the gold answer, and adds nothing that contradicts it.",
+   "wall": 5.653,
+   "context": [
+    {
+     "sql": "SELECT * FROM skills WHERE person_id=1 AND (name LIKE '%cloud%' OR name LIKE '%AWS%' OR name LIKE '%Azure%' OR name LIKE '%GCP%' OR name LIKE '%Google Cloud%')",
+     "rows": [
+      {
+       "id": 16,
+       "person_id": 1,
+       "name": "AWS"
+      },
+      {
+       "id": 17,
+       "person_id": 1,
+       "name": "Azure"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM awards WHERE person_id=1",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "name": "Employee of the Year",
+       "date": "2012-12-01"
+      },
+      {
+       "id": 2,
+       "person_id": 1,
+       "name": "AWS Certified Solutions Architect",
+       "date": null
+      },
+      {
+       "id": 3,
+       "person_id": 1,
+       "name": "Certified Scrum Master",
+       "date": null
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM publications WHERE person_id=1 AND title LIKE '%cloud%'",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "title": "Research on cloud computing efficiency",
+       "date": "2016-02-01"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q22",
+   "category": "list",
+   "question": "Which DevOps technologies is Alex skilled in?",
+   "answer": "Docker, Kubernetes, and CI/CD pipelines",
+   "evidence": [
+    "a25"
+   ],
+   "system_answer": "Alex is skilled in: AWS, DevOps, Docker, Kubernetes, and CI/CD pipelines.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer names Docker, Kubernetes, and CI/CD pipelines, which are the three items in the gold answer. The extra mentions of AWS and DevOps don't contradict anything.",
+   "wall": 6.887,
+   "context": [
+    {
+     "sql": "SELECT * FROM skills WHERE person_id=1 AND (name LIKE '%devops%' OR name LIKE '%docker%' OR name LIKE '%kubernetes%' OR name LIKE '%ci/cd%' OR name LIKE '%aws%' OR name LIKE '%cloud%' OR name LIKE '%jenkins%' OR name LIKE '%terraform%' OR name LIKE '%ansible%')",
+     "rows": [
+      {
+       "id": 16,
+       "person_id": 1,
+       "name": "AWS"
+      },
+      {
+       "id": 18,
+       "person_id": 1,
+       "name": "DevOps"
+      },
+      {
+       "id": 19,
+       "person_id": 1,
+       "name": "Docker"
+      },
+      {
+       "id": 20,
+       "person_id": 1,
+       "name": "Kubernetes"
+      },
+      {
+       "id": 21,
+       "person_id": 1,
+       "name": "CI/CD pipelines"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM skills WHERE person_id=1",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "name": "Problem solving"
+      },
+      {
+       "id": 2,
+       "person_id": 1,
+       "name": "Team leadership"
+      },
+      {
+       "id": 3,
+       "person_id": 1,
+       "name": "Project management"
+      },
+      {
+       "id": 4,
+       "person_id": 1,
+       "name": "Agile methodologies"
+      },
+      {
+       "id": 5,
+       "person_id": 1,
+       "name": "Python"
+      },
+      {
+       "id": 6,
+       "person_id": 1,
+       "name": "Java"
+      },
+      {
+       "id": 7,
+       "person_id": 1,
+       "name": "JavaScript"
+      },
+      {
+       "id": 8,
+       "person_id": 1,
+       "name": "C#"
+      },
+      {
+       "id": 9,
+       "person_id": 1,
+       "name": "React"
+      },
+      {
+       "id": 10,
+       "person_id": 1,
+       "name": "Node.js"
+      },
+      {
+       "id": 11,
+       "person_id": 1,
+       "name": ".NET"
+      },
+      {
+       "id": 12,
+       "person_id": 1,
+       "name": "Django"
+      },
+      {
+       "id": 13,
+       "person_id": 1,
+       "name": "MySQL"
+      },
+      {
+       "id": 14,
+       "person_id": 1,
+       "name": "MongoDB"
+      },
+      {
+       "id": 15,
+       "person_id": 1,
+       "name": "PostgreSQL"
+      },
+      {
+       "id": 16,
+       "person_id": 1,
+       "name": "AWS"
+      },
+      {
+       "id": 17,
+       "person_id": 1,
+       "name": "Azure"
+      },
+      {
+       "id": 18,
+       "person_id": 1,
+       "name": "DevOps"
+      },
+      {
+       "id": 19,
+       "person_id": 1,
+       "name": "Docker"
+      },
+      {
+       "id": 20,
+       "person_id": 1,
+       "name": "Kubernetes"
+      },
+      {
+       "id": 21,
+       "person_id": 1,
+       "name": "CI/CD pipelines"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q23",
+   "category": "single",
+   "question": "What is the SmartHome System and how widely was it deployed?",
+   "answer": "An IoT project for automating home environments, deployed in over 100 homes by June 2018",
+   "evidence": [
+    "a26",
+    "a27"
+   ],
+   "system_answer": "The SmartHome System is an IoT project for automating home environments; it was successfully deployed in over 100 homes by June 2018.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "Matches gold: IoT home automation project, deployed in over 100 homes by June 2018.",
+   "wall": 5.029,
+   "context": [
+    {
+     "sql": "SELECT * FROM projects WHERE name LIKE '%SmartHome%'",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "name": "SmartHome System",
+       "description": "An IoT project for automating home environments. Successfully deployed in over 100 homes by June 2018."
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q24",
+   "category": "single",
+   "question": "What was Alex's role in the Health Tracker App?",
+   "answer": "He managed its development (project manager)",
+   "evidence": [
+    "a28"
+   ],
+   "system_answer": "Alex managed the development of the Health Tracker App, which reached 50,000 downloads within its first year of launch (January 2019).",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer says Alex managed the app's development, which matches the gold answer. The extra details about downloads do not contradict it.",
+   "wall": 5.198,
+   "context": [
+    {
+     "sql": "SELECT * FROM projects WHERE name LIKE '%Health Tracker%'",
+     "rows": [
+      {
+       "id": 2,
+       "person_id": 1,
+       "name": "Health Tracker App",
+       "description": "A mobile application for tracking health metrics. Managed the development of a Health Tracker App. Reached 50,000 downloads within its first year of launch (January 2019)."
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q25",
+   "category": "single",
+   "question": "When did the Health Tracker App launch, and how many downloads did it reach?",
+   "answer": "Launched January 2019, reached 50,000 downloads within its first year",
+   "evidence": [
+    "a30"
+   ],
+   "system_answer": "The Health Tracker App launched in January 2019 and reached 50,000 downloads within its first year.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "Both the January 2019 launch date and the 50,000 downloads within the first year match the gold answer.",
+   "wall": 4.557,
+   "context": [
+    {
+     "sql": "SELECT * FROM projects WHERE name LIKE '%Health Tracker%'",
+     "rows": [
+      {
+       "id": 2,
+       "person_id": 1,
+       "name": "Health Tracker App",
+       "description": "A mobile application for tracking health metrics. Managed the development of a Health Tracker App. Reached 50,000 downloads within its first year of launch (January 2019)."
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q26",
+   "category": "single",
+   "question": "When did Alex complete the Cloud Computing Specialization?",
+   "answer": "November 2020",
+   "evidence": [
+    "a32"
+   ],
+   "system_answer": "Alex completed the Cloud Computing Specialization on 2020-11-01.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer says 2020-11-01, which falls in November 2020 and matches the gold answer. The specific day is extra detail that does not contradict the gold.",
+   "wall": 6.774,
+   "context": [
+    {
+     "sql": "SELECT * FROM courses WHERE name LIKE '%Cloud Computing%'",
+     "rows": [
+      {
+       "id": 4,
+       "education_id": 1,
+       "name": "Cloud Computing Specialization",
+       "completion_date": "2020-11-01"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM publications WHERE title LIKE '%Cloud Computing%'",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "title": "Research on cloud computing efficiency",
+       "date": "2016-02-01"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM events_attended WHERE name LIKE '%Cloud%'",
+     "rows": [
+      {
+       "id": 3,
+       "person_id": 1,
+       "name": "CloudExpo (Keynote Speaker: Cloud Innovation)",
+       "date": "2018-10-01"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM awards WHERE name LIKE '%Cloud%'",
+     "rows": []
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q27",
+   "category": "single",
+   "question": "When did Alex complete the Advanced Machine Learning course?",
+   "answer": "March 2020",
+   "evidence": [
+    "a31"
+   ],
+   "system_answer": "Alex completed the Advanced Machine Learning course on 2020-03-01.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer's 2020-03-01 falls within March 2020, matching the gold answer. The added specific day does not contradict it.",
+   "wall": 4.708,
+   "context": [
+    {
+     "sql": "SELECT * FROM courses WHERE name LIKE '%Advanced Machine Learning%'",
+     "rows": [
+      {
+       "id": 3,
+       "education_id": 1,
+       "name": "Advanced Machine Learning",
+       "completion_date": "2020-03-01"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q28",
+   "category": "list",
+   "question": "Which certifications does Alex hold?",
+   "answer": "AWS Certified Solutions Architect and Certified Scrum Master",
+   "evidence": [
+    "a33"
+   ],
+   "system_answer": "Alex holds two certifications: AWS Certified Solutions Architect and Certified Scrum Master.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer names both certifications in the gold answer, AWS Certified Solutions Architect and Certified Scrum Master, and adds nothing that contradicts it.",
+   "wall": 6.222,
+   "context": [
+    {
+     "sql": "SELECT * FROM awards WHERE person_id=1 AND (name LIKE '%Certified%' OR name LIKE '%Certificate%' OR name LIKE '%Certification%')",
+     "rows": [
+      {
+       "id": 2,
+       "person_id": 1,
+       "name": "AWS Certified Solutions Architect",
+       "date": null
+      },
+      {
+       "id": 3,
+       "person_id": 1,
+       "name": "Certified Scrum Master",
+       "date": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q29",
+   "category": "list",
+   "question": "Which conferences did Alex attend, and when?",
+   "answer": "TechCrunch Disrupt (September 2019) and Google I/O (May 2020)",
+   "evidence": [
+    "a34",
+    "a35"
+   ],
+   "system_answer": "Alex Rivera attended:\n- CloudExpo (Keynote Speaker: Cloud Innovation) – 2018-10-01\n- DevOps Days (Panelist) – 2019-04-01\n- TechCrunch Disrupt – 2019-09-01\n- Google I/O – 2020-05-01",
+   "verdict": "partial",
+   "score": 0.5,
+   "judge_reason": "The answer includes both gold conferences with the correct dates (TechCrunch Disrupt Sep 2019, Google I/O May 2020). It also adds CloudExpo and DevOps Days, which are not in the gold answer. Because the gold lists exactly two conferences, these extra claims likely contradict it, so this isn't fully correct.",
+   "wall": 6.995,
+   "context": [
+    {
+     "sql": "SELECT ea.* FROM events_attended ea JOIN people p ON ea.person_id = p.id WHERE p.name = 'Alex Rivera'",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "name": "TechCrunch Disrupt",
+       "date": "2019-09-01"
+      },
+      {
+       "id": 2,
+       "person_id": 1,
+       "name": "Google I/O",
+       "date": "2020-05-01"
+      },
+      {
+       "id": 3,
+       "person_id": 1,
+       "name": "CloudExpo (Keynote Speaker: Cloud Innovation)",
+       "date": "2018-10-01"
+      },
+      {
+       "id": 4,
+       "person_id": 1,
+       "name": "DevOps Days (Panelist)",
+       "date": "2019-04-01"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q30",
+   "category": "single",
+   "question": "Where did Alex give a keynote, on what topic, and when?",
+   "answer": "CloudExpo, on Cloud Innovation, October 2018",
+   "evidence": [
+    "a36"
+   ],
+   "system_answer": "Alex gave a keynote at CloudExpo on the topic \"Cloud Innovation\" on 2018-10-01.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer matches the venue (CloudExpo), the topic (Cloud Innovation), and the month (October 2018). The specific day of Oct 1 does not contradict the gold answer.",
+   "wall": 5.28,
+   "context": [
+    {
+     "sql": "SELECT * FROM events_attended WHERE name LIKE '%keynote%' OR name LIKE '%Keynote%'",
+     "rows": [
+      {
+       "id": 3,
+       "person_id": 1,
+       "name": "CloudExpo (Keynote Speaker: Cloud Innovation)",
+       "date": "2018-10-01"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q31",
+   "category": "single",
+   "question": "What was Alex's role at DevOps Days?",
+   "answer": "Panelist (April 2019)",
+   "evidence": [
+    "a37"
+   ],
+   "system_answer": "Alex Rivera was a Panelist at DevOps Days (2019-04-01).",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer gives the role as Panelist in April 2019, which matches the gold answer. The specific day adds detail without contradicting it.",
+   "wall": 5.266,
+   "context": [
+    {
+     "sql": "SELECT * FROM events_attended WHERE name LIKE '%DevOps%'",
+     "rows": [
+      {
+       "id": 4,
+       "person_id": 1,
+       "name": "DevOps Days (Panelist)",
+       "date": "2019-04-01"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q32",
+   "category": "single",
+   "question": "Who is Sarah Chen?",
+   "answer": "A Data Scientist Alex met in college",
+   "evidence": [
+    "a38"
+   ],
+   "system_answer": "Sarah Chen is Alex's friend from college, and she works as a Data Scientist.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "Answer states both key facts, Data Scientist and met in college, with no contradiction.",
+   "wall": 4.195,
+   "context": [
+    {
+     "sql": "SELECT * FROM people WHERE name LIKE '%Sarah Chen%'",
+     "rows": [
+      {
+       "id": 2,
+       "name": "Sarah Chen",
+       "age": null,
+       "nationality": null,
+       "occupation": "Data Scientist",
+       "relationship_to_alex": "friend",
+       "met_context": "college"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q33",
+   "category": "single",
+   "question": "What does Michael Johnson do, and how does Alex know him?",
+   "answer": "Product Manager, a former co-worker",
+   "evidence": [
+    "a39"
+   ],
+   "system_answer": "Michael Johnson is a Product Manager, and he is Alex's former co-worker.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer gives both key facts: Michael Johnson is a Product Manager and a former co-worker of Alex.",
+   "wall": 5.287,
+   "context": [
+    {
+     "sql": "SELECT * FROM people WHERE name LIKE '%Michael Johnson%'",
+     "rows": [
+      {
+       "id": 3,
+       "name": "Michael Johnson",
+       "age": null,
+       "nationality": null,
+       "occupation": "Product Manager",
+       "relationship_to_alex": "former co-worker",
+       "met_context": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q34",
+   "category": "single",
+   "question": "Who is Emily Davis?",
+   "answer": "A Marketing Specialist Alex collaborates with at his startup",
+   "evidence": [
+    "a40"
+   ],
+   "system_answer": "Emily Davis is a Marketing Specialist and Alex's colleague at his startup — they work together there.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer names her as a Marketing Specialist working with Alex at his startup, which matches the gold answer.",
+   "wall": 5.345,
+   "context": [
+    {
+     "sql": "SELECT * FROM people WHERE name LIKE '%Emily%Davis%'",
+     "rows": [
+      {
+       "id": 4,
+       "name": "Emily Davis",
+       "age": null,
+       "nationality": null,
+       "occupation": "Marketing Specialist",
+       "relationship_to_alex": "colleague at startup",
+       "met_context": "Works together at Alex's startup"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q35",
+   "category": "single",
+   "question": "Which of Alex's friends is a graphic designer?",
+   "answer": "Daniel Martinez, his neighbor",
+   "evidence": [
+    "a41"
+   ],
+   "system_answer": "Daniel Martinez, Alex's friend and neighbor, is a Graphic Designer.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer names Daniel Martinez and describes him as Alex's neighbor, which matches the gold answer.",
+   "wall": 5.989,
+   "context": [
+    {
+     "sql": "SELECT * FROM people WHERE relationship_to_alex LIKE '%friend%' AND occupation LIKE '%graphic%'",
+     "rows": [
+      {
+       "id": 6,
+       "name": "Daniel Martinez",
+       "age": null,
+       "nationality": null,
+       "occupation": "Graphic Designer",
+       "relationship_to_alex": "friend and neighbor",
+       "met_context": null
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM people WHERE occupation LIKE '%designer%'",
+     "rows": [
+      {
+       "id": 6,
+       "name": "Daniel Martinez",
+       "age": null,
+       "nationality": null,
+       "occupation": "Graphic Designer",
+       "relationship_to_alex": "friend and neighbor",
+       "met_context": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q36",
+   "category": "single",
+   "question": "What does Laura Smith do?",
+   "answer": "She is a Fitness Trainer",
+   "evidence": [
+    "a41"
+   ],
+   "system_answer": "Laura Smith is a Fitness Trainer.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer states Laura Smith is a Fitness Trainer, which matches the gold answer exactly.",
+   "wall": 5.228,
+   "context": [
+    {
+     "sql": "SELECT * FROM people WHERE name LIKE '%Laura%Smith%'",
+     "rows": [
+      {
+       "id": 5,
+       "name": "Laura Smith",
+       "age": null,
+       "nationality": null,
+       "occupation": "Fitness Trainer",
+       "relationship_to_alex": "friend",
+       "met_context": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q37",
+   "category": "list",
+   "question": "What are Alex's goals and aspirations?",
+   "answer": "Grow EcoSolutions to a global scale, become a thought leader in sustainable technology, and establish a tech incubator for emerging technologies",
+   "evidence": [
+    "a43",
+    "a44",
+    "a45"
+   ],
+   "system_answer": "Alex Rivera's aspirations are:\n1. Become a thought leader in sustainable technology\n2. Establish a tech incubator for emerging technologies",
+   "verdict": "partial",
+   "score": 0.5,
+   "judge_reason": "The answer correctly gives 2 of the 3 goals: thought leadership in sustainable technology and a tech incubator. It omits growing EcoSolutions to a global scale.",
+   "wall": 4.344,
+   "context": [
+    {
+     "sql": "SELECT * FROM aspirations WHERE person_id = 1",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "description": "Become a thought leader in sustainable technology"
+      },
+      {
+       "id": 2,
+       "person_id": 1,
+       "description": "Establish a tech incubator for emerging technologies"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q38",
+   "category": "aggregation",
+   "question": "How many companies did Alex work at as an employee before co-founding EcoSolutions?",
+   "answer": "Two: Innovatech and TechPioneers",
+   "evidence": [
+    "a05",
+    "a11",
+    "a17"
+   ],
+   "system_answer": "Alex worked at 2 companies as an employee before co-founding EcoSolutions: Innovatech and TechPioneers.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer gives the same count (two) and names the same companies, Innovatech and TechPioneers, as the gold answer.",
+   "wall": 6.198,
+   "context": [
+    {
+     "sql": "SELECT * FROM work_experiences WHERE person_id=1",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "company": "Innovatech",
+       "title": "Software Engineer",
+       "start_date": "2010-08-01",
+       "end_date": "2013-07-01",
+       "responsibilities": "Worked collaboratively with cross-functional teams. Led development of a key internal tool, a significant achievement (November 2012)."
+      },
+      {
+       "id": 2,
+       "person_id": 1,
+       "company": "TechPioneers",
+       "title": "Senior Software Engineer",
+       "start_date": "2013-09-01",
+       "end_date": "2016-06-01",
+       "responsibilities": "Designed scalable microservices architecture. Mentored junior engineers and conducted code reviews. Spearheaded a major performance optimization project (April 2015)."
+      },
+      {
+       "id": 3,
+       "person_id": 1,
+       "company": "EcoSolutions",
+       "title": "CTO (Co-founder)",
+       "start_date": null,
+       "end_date": null,
+       "responsibilities": "Co-founded the company and served as Chief Technology Officer. The startup focused on developing eco-friendly tech solutions. The company saw a 200% revenue growth in its first year. User base grew to 10,000 in just six months. Aspires to grow EcoSolutions to a global scale."
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q39",
+   "category": "multi_hop",
+   "question": "What was Alex's job title at the company where he won Employee of the Year?",
+   "answer": "Software Engineer (at Innovatech)",
+   "evidence": [
+    "a05",
+    "a09"
+   ],
+   "system_answer": "Alex was a Software Engineer at Innovatech when he won Employee of the Year (December 2012).",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer gives the job title as Software Engineer at Innovatech, which matches the gold answer. The added date doesn't contradict anything.",
+   "wall": 6.546,
+   "context": [
+    {
+     "sql": "SELECT * FROM awards WHERE name LIKE '%Employee of the Year%'",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "name": "Employee of the Year",
+       "date": "2012-12-01"
+      }
+     ]
+    },
+    {
+     "sql": "SELECT * FROM work_experiences WHERE person_id=1",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "company": "Innovatech",
+       "title": "Software Engineer",
+       "start_date": "2010-08-01",
+       "end_date": "2013-07-01",
+       "responsibilities": "Worked collaboratively with cross-functional teams. Led development of a key internal tool, a significant achievement (November 2012)."
+      },
+      {
+       "id": 2,
+       "person_id": 1,
+       "company": "TechPioneers",
+       "title": "Senior Software Engineer",
+       "start_date": "2013-09-01",
+       "end_date": "2016-06-01",
+       "responsibilities": "Designed scalable microservices architecture. Mentored junior engineers and conducted code reviews. Spearheaded a major performance optimization project (April 2015)."
+      },
+      {
+       "id": 3,
+       "person_id": 1,
+       "company": "EcoSolutions",
+       "title": "CTO (Co-founder)",
+       "start_date": null,
+       "end_date": null,
+       "responsibilities": "Co-founded the company and served as Chief Technology Officer. The startup focused on developing eco-friendly tech solutions. The company saw a 200% revenue growth in its first year. User base grew to 10,000 in just six months. Aspires to grow EcoSolutions to a global scale."
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q40",
+   "category": "temporal",
+   "question": "Where was Alex working in 2014, and in what role?",
+   "answer": "TechPioneers, as a Senior Software Engineer",
+   "evidence": [
+    "a11",
+    "a12"
+   ],
+   "system_answer": "Alex was working at TechPioneers as a Senior Software Engineer in 2014.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The answer gives both the employer (TechPioneers) and the role (Senior Software Engineer), matching the gold answer.",
+   "wall": 5.119,
+   "context": [
+    {
+     "sql": "SELECT * FROM work_experiences WHERE person_id=1 AND start_date<='2014-12-31' AND (end_date>='2014-01-01' OR end_date IS NULL)",
+     "rows": [
+      {
+       "id": 2,
+       "person_id": 1,
+       "company": "TechPioneers",
+       "title": "Senior Software Engineer",
+       "start_date": "2013-09-01",
+       "end_date": "2016-06-01",
+       "responsibilities": "Designed scalable microservices architecture. Mentored junior engineers and conducted code reviews. Spearheaded a major performance optimization project (April 2015)."
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q41",
+   "category": "temporal",
+   "question": "Which events did Alex attend or speak at in 2019?",
+   "answer": "DevOps Days (panelist, April 2019) and TechCrunch Disrupt (attended, September 2019)",
+   "evidence": [
+    "a34",
+    "a37"
+   ],
+   "system_answer": "Alex Rivera attended TechCrunch Disrupt (2019-09-01) and spoke as a panelist at DevOps Days (2019-04-01).",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "Both events with correct roles and months are listed.",
+   "wall": 5.752,
+   "context": [
+    {
+     "sql": "SELECT ea.* FROM events_attended ea JOIN people p ON ea.person_id=p.id WHERE p.name='Alex Rivera' AND ea.date LIKE '2019%'",
+     "rows": [
+      {
+       "id": 1,
+       "person_id": 1,
+       "name": "TechCrunch Disrupt",
+       "date": "2019-09-01"
+      },
+      {
+       "id": 4,
+       "person_id": 1,
+       "name": "DevOps Days (Panelist)",
+       "date": "2019-04-01"
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q42",
+   "category": "aggregation",
+   "question": "How many of Alex's friends are mentioned, and who are they?",
+   "answer": "Five: Sarah Chen, Michael Johnson, Emily Davis, Laura Smith, and Daniel Martinez",
+   "evidence": [
+    "a38",
+    "a39",
+    "a40",
+    "a41"
+   ],
+   "system_answer": "Three friends are mentioned: Sarah Chen (Data Scientist), Laura Smith (Fitness Trainer), and Daniel Martinez (Graphic Designer, friend and neighbor).",
+   "verdict": "partial",
+   "score": 0.5,
+   "judge_reason": "The answer names three friends and all three are correct: Sarah Chen, Laura Smith and Daniel Martinez. It misses Michael Johnson and Emily Davis, and gives the count as three instead of five.",
+   "wall": 5.374,
+   "context": [
+    {
+     "sql": "SELECT * FROM people WHERE relationship_to_alex LIKE '%friend%'",
+     "rows": [
+      {
+       "id": 2,
+       "name": "Sarah Chen",
+       "age": null,
+       "nationality": null,
+       "occupation": "Data Scientist",
+       "relationship_to_alex": "friend",
+       "met_context": "college"
+      },
+      {
+       "id": 5,
+       "name": "Laura Smith",
+       "age": null,
+       "nationality": null,
+       "occupation": "Fitness Trainer",
+       "relationship_to_alex": "friend",
+       "met_context": null
+      },
+      {
+       "id": 6,
+       "name": "Daniel Martinez",
+       "age": null,
+       "nationality": null,
+       "occupation": "Graphic Designer",
+       "relationship_to_alex": "friend and neighbor",
+       "met_context": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  },
+  {
+   "id": "q43",
+   "category": "unanswerable",
+   "question": "What is Alex's favorite food?",
+   "answer": "UNKNOWN: never mentioned",
+   "evidence": [],
+   "system_answer": "I don't know.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The gold answer is UNKNOWN, and the response correctly says it doesn't know rather than claiming a concrete value.",
+   "wall": 2.182,
+   "context": [],
+   "extra": {}
+  },
+  {
+   "id": "q44",
+   "category": "unanswerable",
+   "question": "What is Sarah Chen's phone number?",
+   "answer": "UNKNOWN: never mentioned",
+   "evidence": [],
+   "system_answer": "I don't know.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "Gold is UNKNOWN and the answer says it doesn't know.",
+   "wall": 1.727,
+   "context": [],
+   "extra": {}
+  },
+  {
+   "id": "q45",
+   "category": "unanswerable",
+   "question": "In which city does Alex live?",
+   "answer": "UNKNOWN: never mentioned",
+   "evidence": [],
+   "system_answer": "I don't know.",
+   "verdict": "correct",
+   "score": 1.0,
+   "judge_reason": "The gold answer is UNKNOWN, and the response correctly says it doesn't know.",
+   "wall": 6.004,
+   "context": [
+    {
+     "sql": "SELECT * FROM people;",
+     "rows": [
+      {
+       "id": 1,
+       "name": "Alex Rivera",
+       "age": 35,
+       "nationality": "Canadian",
+       "occupation": null,
+       "relationship_to_alex": null,
+       "met_context": null
+      },
+      {
+       "id": 2,
+       "name": "Sarah Chen",
+       "age": null,
+       "nationality": null,
+       "occupation": "Data Scientist",
+       "relationship_to_alex": "friend",
+       "met_context": "college"
+      },
+      {
+       "id": 3,
+       "name": "Michael Johnson",
+       "age": null,
+       "nationality": null,
+       "occupation": "Product Manager",
+       "relationship_to_alex": "former co-worker",
+       "met_context": null
+      },
+      {
+       "id": 4,
+       "name": "Emily Davis",
+       "age": null,
+       "nationality": null,
+       "occupation": "Marketing Specialist",
+       "relationship_to_alex": "colleague at startup",
+       "met_context": "Works together at Alex's startup"
+      },
+      {
+       "id": 5,
+       "name": "Laura Smith",
+       "age": null,
+       "nationality": null,
+       "occupation": "Fitness Trainer",
+       "relationship_to_alex": "friend",
+       "met_context": null
+      },
+      {
+       "id": 6,
+       "name": "Daniel Martinez",
+       "age": null,
+       "nationality": null,
+       "occupation": "Graphic Designer",
+       "relationship_to_alex": "friend and neighbor",
+       "met_context": null
+      }
+     ]
+    }
+   ],
+   "extra": {}
+  }
+ ],
+ "db": {
+  "aspirations": {
+   "description": "Personal or professional goals/aspirations a person holds",
+   "columns": [
+    {
+     "name": "person_id",
+     "type": "INTEGER",
+     "description": "Reference to people table"
+    },
+    {
+     "name": "description",
+     "type": "TEXT",
+     "description": "Description of the aspiration or goal"
+    }
+   ],
+   "rows": [
+    {
+     "id": 1,
+     "person_id": 1,
+     "description": "Become a thought leader in sustainable technology"
+    },
+    {
+     "id": 2,
+     "person_id": 1,
+     "description": "Establish a tech incubator for emerging technologies"
+    }
+   ]
+  },
+  "awards": {
+   "description": "Awards or recognitions received by a person",
+   "columns": [
+    {
+     "name": "person_id",
+     "type": "INTEGER",
+     "description": "Reference to people table"
+    },
+    {
+     "name": "name",
+     "type": "TEXT",
+     "description": "Name of the award"
+    },
+    {
+     "name": "date",
+     "type": "DATE",
+     "description": "Date the award was received"
+    }
+   ],
+   "rows": [
+    {
+     "id": 1,
+     "person_id": 1,
+     "name": "Employee of the Year",
+     "date": "2012-12-01"
+    },
+    {
+     "id": 2,
+     "person_id": 1,
+     "name": "AWS Certified Solutions Architect"
+    },
+    {
+     "id": 3,
+     "person_id": 1,
+     "name": "Certified Scrum Master"
+    }
+   ]
+  },
+  "courses": {
+   "description": "Courses completed by a person as part of their education",
+   "columns": [
+    {
+     "name": "education_id",
+     "type": "INTEGER",
+     "description": "Reference to education table"
+    },
+    {
+     "name": "name",
+     "type": "TEXT",
+     "description": "Course name"
+    },
+    {
+     "name": "completion_date",
+     "type": "DATE",
+     "description": "Date the course was completed"
+    }
+   ],
+   "rows": [
+    {
+     "id": 1,
+     "education_id": 1,
+     "name": "Advanced Algorithms",
+     "completion_date": "2009-05-01"
+    },
+    {
+     "id": 2,
+     "education_id": 1,
+     "name": "System Design",
+     "completion_date": "2009-12-01"
+    },
+    {
+     "id": 3,
+     "education_id": 1,
+     "name": "Advanced Machine Learning",
+     "completion_date": "2020-03-01"
+    },
+    {
+     "id": 4,
+     "education_id": 1,
+     "name": "Cloud Computing Specialization",
+     "completion_date": "2020-11-01"
+    }
+   ]
+  },
+  "education": {
+   "description": "Educational history of a person, one row per degree earned",
+   "columns": [
+    {
+     "name": "person_id",
+     "type": "INTEGER",
+     "description": "Reference to people table"
+    },
+    {
+     "name": "degree",
+     "type": "TEXT",
+     "description": "Degree earned"
+    },
+    {
+     "name": "field",
+     "type": "TEXT",
+     "description": "Field of study"
+    },
+    {
+     "name": "institution",
+     "type": "TEXT",
+     "description": "Institution attended"
+    },
+    {
+     "name": "year",
+     "type": "INTEGER",
+     "description": "Year degree was earned"
+    }
+   ],
+   "rows": [
+    {
+     "id": 1,
+     "person_id": 1,
+     "degree": "B.Sc.",
+     "field": "Computer Science",
+     "institution": "University of Toronto",
+     "year": 2010
+    }
+   ]
+  },
+  "events_attended": {
+   "description": "Events or conferences attended by a person",
+   "columns": [
+    {
+     "name": "person_id",
+     "type": "INTEGER",
+     "description": "Reference to people table"
+    },
+    {
+     "name": "name",
+     "type": "TEXT",
+     "description": "Name of the event"
+    },
+    {
+     "name": "date",
+     "type": "DATE",
+     "description": "Date the event was attended"
+    }
+   ],
+   "rows": [
+    {
+     "id": 1,
+     "person_id": 1,
+     "name": "TechCrunch Disrupt",
+     "date": "2019-09-01"
+    },
+    {
+     "id": 2,
+     "person_id": 1,
+     "name": "Google I/O",
+     "date": "2020-05-01"
+    },
+    {
+     "id": 3,
+     "person_id": 1,
+     "name": "CloudExpo (Keynote Speaker: Cloud Innovation)",
+     "date": "2018-10-01"
+    },
+    {
+     "id": 4,
+     "person_id": 1,
+     "name": "DevOps Days (Panelist)",
+     "date": "2019-04-01"
+    }
+   ]
+  },
+  "people": {
+   "description": "People known to Alex Rivera, including Alex themself",
+   "columns": [
+    {
+     "name": "name",
+     "type": "TEXT",
+     "description": "Full name"
+    },
+    {
+     "name": "age",
+     "type": "INTEGER",
+     "description": "Age in years"
+    },
+    {
+     "name": "nationality",
+     "type": "TEXT",
+     "description": "Nationality"
+    },
+    {
+     "name": "occupation",
+     "type": "TEXT",
+     "description": "Person's occupation or job title"
+    },
+    {
+     "name": "relationship_to_alex",
+     "type": "TEXT",
+     "description": "How this person relates to Alex Rivera"
+    },
+    {
+     "name": "met_context",
+     "type": "TEXT",
+     "description": "Context in which Alex met this person"
+    }
+   ],
+   "rows": [
+    {
+     "id": 1,
+     "name": "Alex Rivera",
+     "age": 35,
+     "nationality": "Canadian"
+    },
+    {
+     "id": 2,
+     "name": "Sarah Chen",
+     "occupation": "Data Scientist",
+     "relationship_to_alex": "friend",
+     "met_context": "college"
+    },
+    {
+     "id": 3,
+     "name": "Michael Johnson",
+     "occupation": "Product Manager",
+     "relationship_to_alex": "former co-worker"
+    },
+    {
+     "id": 4,
+     "name": "Emily Davis",
+     "occupation": "Marketing Specialist",
+     "relationship_to_alex": "colleague at startup",
+     "met_context": "Works together at Alex's startup"
+    },
+    {
+     "id": 5,
+     "name": "Laura Smith",
+     "occupation": "Fitness Trainer",
+     "relationship_to_alex": "friend"
+    },
+    {
+     "id": 6,
+     "name": "Daniel Martinez",
+     "occupation": "Graphic Designer",
+     "relationship_to_alex": "friend and neighbor"
+    }
+   ]
+  },
+  "projects": {
+   "description": "Projects developed or worked on by a person",
+   "columns": [
+    {
+     "name": "person_id",
+     "type": "INTEGER",
+     "description": "Reference to people table"
+    },
+    {
+     "name": "name",
+     "type": "TEXT",
+     "description": "Name of the project"
+    },
+    {
+     "name": "description",
+     "type": "TEXT",
+     "description": "Description of the project"
+    }
+   ],
+   "rows": [
+    {
+     "id": 1,
+     "person_id": 1,
+     "name": "SmartHome System",
+     "description": "An IoT project for automating home environments. Successfully deployed in over 100 homes by June 2018."
+    },
+    {
+     "id": 2,
+     "person_id": 1,
+     "name": "Health Tracker App",
+     "description": "A mobile application for tracking health metrics. Managed the development of a Health Tracker App. Reached 50,000 downloads within its first year of launch (January 2019)."
+    }
+   ]
+  },
+  "publications": {
+   "description": "Research or written works published by a person",
+   "columns": [
+    {
+     "name": "person_id",
+     "type": "INTEGER",
+     "description": "Reference to people table"
+    },
+    {
+     "name": "title",
+     "type": "TEXT",
+     "description": "Title or topic of the publication"
+    },
+    {
+     "name": "date",
+     "type": "DATE",
+     "description": "Date of publication"
+    }
+   ],
+   "rows": [
+    {
+     "id": 1,
+     "person_id": 1,
+     "title": "Research on cloud computing efficiency",
+     "date": "2016-02-01"
+    }
+   ]
+  },
+  "skills": {
+   "description": "Skills a person has, one row per skill",
+   "columns": [
+    {
+     "name": "person_id",
+     "type": "INTEGER",
+     "description": "Reference to people table"
+    },
+    {
+     "name": "name",
+     "type": "TEXT",
+     "description": "Name of the skill"
+    }
+   ],
+   "rows": [
+    {
+     "id": 1,
+     "person_id": 1,
+     "name": "Problem solving"
+    },
+    {
+     "id": 2,
+     "person_id": 1,
+     "name": "Team leadership"
+    },
+    {
+     "id": 3,
+     "person_id": 1,
+     "name": "Project management"
+    },
+    {
+     "id": 4,
+     "person_id": 1,
+     "name": "Agile methodologies"
+    },
+    {
+     "id": 5,
+     "person_id": 1,
+     "name": "Python"
+    },
+    {
+     "id": 6,
+     "person_id": 1,
+     "name": "Java"
+    },
+    {
+     "id": 7,
+     "person_id": 1,
+     "name": "JavaScript"
+    },
+    {
+     "id": 8,
+     "person_id": 1,
+     "name": "C#"
+    },
+    {
+     "id": 9,
+     "person_id": 1,
+     "name": "React"
+    },
+    {
+     "id": 10,
+     "person_id": 1,
+     "name": "Node.js"
+    },
+    {
+     "id": 11,
+     "person_id": 1,
+     "name": ".NET"
+    },
+    {
+     "id": 12,
+     "person_id": 1,
+     "name": "Django"
+    },
+    {
+     "id": 13,
+     "person_id": 1,
+     "name": "MySQL"
+    },
+    {
+     "id": 14,
+     "person_id": 1,
+     "name": "MongoDB"
+    },
+    {
+     "id": 15,
+     "person_id": 1,
+     "name": "PostgreSQL"
+    },
+    {
+     "id": 16,
+     "person_id": 1,
+     "name": "AWS"
+    },
+    {
+     "id": 17,
+     "person_id": 1,
+     "name": "Azure"
+    },
+    {
+     "id": 18,
+     "person_id": 1,
+     "name": "DevOps"
+    },
+    {
+     "id": 19,
+     "person_id": 1,
+     "name": "Docker"
+    },
+    {
+     "id": 20,
+     "person_id": 1,
+     "name": "Kubernetes"
+    },
+    {
+     "id": 21,
+     "person_id": 1,
+     "name": "CI/CD pipelines"
+    }
+   ]
+  },
+  "work_experiences": {
+   "description": "Work history entries for a person, one row per job held",
+   "columns": [
+    {
+     "name": "person_id",
+     "type": "INTEGER",
+     "description": "Reference to people table"
+    },
+    {
+     "name": "company",
+     "type": "TEXT",
+     "description": "Name of employer"
+    },
+    {
+     "name": "title",
+     "type": "TEXT",
+     "description": "Job title held"
+    },
+    {
+     "name": "start_date",
+     "type": "DATE",
+     "description": "Date the job started"
+    },
+    {
+     "name": "end_date",
+     "type": "DATE",
+     "description": "Date the job ended, if applicable"
+    },
+    {
+     "name": "responsibilities",
+     "type": "TEXT",
+     "description": "Description of duties and responsibilities during the job"
+    }
+   ],
+   "rows": [
+    {
+     "id": 1,
+     "person_id": 1,
+     "company": "Innovatech",
+     "title": "Software Engineer",
+     "start_date": "2010-08-01",
+     "end_date": "2013-07-01",
+     "responsibilities": "Worked collaboratively with cross-functional teams. Led development of a key internal tool, a significant achievement (November 2012)."
+    },
+    {
+     "id": 2,
+     "person_id": 1,
+     "company": "TechPioneers",
+     "title": "Senior Software Engineer",
+     "start_date": "2013-09-01",
+     "end_date": "2016-06-01",
+     "responsibilities": "Designed scalable microservices architecture. Mentored junior engineers and conducted code reviews. Spearheaded a major performance optimization project (April 2015)."
+    },
+    {
+     "id": 3,
+     "person_id": 1,
+     "company": "EcoSolutions",
+     "title": "CTO (Co-founder)",
+     "responsibilities": "Co-founded the company and served as Chief Technology Officer. The startup focused on developing eco-friendly tech solutions. The company saw a 200% revenue growth in its first year. User base grew to 10,000 in just six months. Aspires to grow EcoSolutions to a global scale."
+    }
+   ]
+  }
+ }
+}

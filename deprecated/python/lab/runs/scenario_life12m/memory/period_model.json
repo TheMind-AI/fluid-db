@@ -1,0 +1,74 @@
+{
+ "periods": [
+  {
+   "start": "2025-10-01",
+   "end": "2026-03-31",
+   "label": "Living in Prague"
+  },
+  {
+   "start": "2026-04-01",
+   "end": "2026-09-30",
+   "label": "Living in San Francisco"
+  },
+  {
+   "start": "2026-01-12",
+   "end": "2026-08-15",
+   "label": "Oscar Lind was Nebula's product manager"
+  },
+  {
+   "start": "2026-03-01",
+   "end": "2026-09-30",
+   "label": "Nina Rossi was Nebula's first engineer"
+  },
+  {
+   "start": "2026-03-16",
+   "end": "2026-09-30",
+   "label": "Eva Green was Nebula's designer"
+  },
+  {
+   "start": "2026-02-01",
+   "end": "2026-02-19",
+   "label": "Nebula had a draft seed term sheet for $3M at a $15M post-money valuation"
+  },
+  {
+   "start": "2026-02-20",
+   "end": "2026-09-30",
+   "label": "Nebula's $3M seed round, led by Northwind Ventures, was closed"
+  },
+  {
+   "start": "2026-04-01",
+   "end": "2026-09-30",
+   "label": "1450 Valencia St lease; $3,200 monthly rent due on the 1st"
+  },
+  {
+   "start": "2026-04-03",
+   "end": "2026-09-30",
+   "label": "Mission Cliffs membership at $110/month"
+  },
+  {
+   "start": "2026-05-20",
+   "end": "2026-09-30",
+   "label": "Eva was moving to San Francisco for her job at Gensler"
+  },
+  {
+   "start": "2026-05-22",
+   "end": "2026-05-26",
+   "label": "Lisbon trip with Eva"
+  },
+  {
+   "start": "2026-07-12",
+   "end": "2026-09-30",
+   "label": "Adam and Eva were engaged"
+  }
+ ],
+ "breaks": [
+  {
+   "date": "2026-04-01",
+   "why": "Adam moved from Prague to San Francisco and into his new place."
+  },
+  {
+   "date": "2026-05-20",
+   "why": "Eva moved to San Francisco for her new job at Gensler."
+  }
+ ]
+}

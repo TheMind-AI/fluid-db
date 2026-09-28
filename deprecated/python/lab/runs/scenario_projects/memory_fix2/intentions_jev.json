@@ -1,0 +1,690 @@
+[
+ {
+  "id": 2,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 6,
+  "kind": "commitment",
+  "title": "Pair with Raj",
+  "owner": "Aisha",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 6,
+  "kind": "commitment",
+  "title": "Fix flaky tests",
+  "owner": "Raj",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 14,
+  "kind": "done",
+  "title": "Spike",
+  "owner": "Raj",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 15,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 16,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 19,
+  "kind": "commitment",
+  "title": "Be on call",
+  "owner": "Tom",
+  "when": "2026-01-23",
+  "where": ""
+ },
+ {
+  "id": 19,
+  "kind": "commitment",
+  "title": "Be on call",
+  "owner": "Mei",
+  "when": "2026-01-23",
+  "where": ""
+ },
+ {
+  "id": 20,
+  "kind": "done",
+  "title": "Spike",
+  "owner": "Aisha",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 23,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 27,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 28,
+  "kind": "reminder",
+  "title": "Recall what we said about this",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 31,
+  "kind": "reminder",
+  "title": "Recall what we said about this",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 34,
+  "kind": "plan",
+  "title": "Migrate Atlas using Postgres logical replication, not dual writes",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 40,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 44,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 45,
+  "kind": "commitment",
+  "title": "Document the incident process",
+  "owner": "Aisha",
+  "when": "2026-03-06",
+  "where": ""
+ },
+ {
+  "id": 46,
+  "kind": "commitment",
+  "title": "Draft the Atlas cutover plan",
+  "owner": "Raj",
+  "when": "2026-03-13",
+  "where": ""
+ },
+ {
+  "id": 53,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 55,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 59,
+  "kind": "done",
+  "title": "Document the incident process",
+  "owner": "Aisha",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 62,
+  "kind": "commitment",
+  "title": "Write the Comet invoice spec",
+  "owner": "Tom",
+  "when": "2026-03-27",
+  "where": ""
+ },
+ {
+  "id": 63,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 64,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 65,
+  "kind": "appointment",
+  "title": "1:1 with Raj",
+  "owner": "",
+  "when": "2026-03-10T11:09",
+  "where": ""
+ },
+ {
+  "id": 69,
+  "kind": "done",
+  "title": "Draft the Atlas cutover plan",
+  "owner": "Raj",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 71,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 72,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 78,
+  "kind": "appointment",
+  "title": "1:1 with Tom about the Stripe Billing migration plan",
+  "owner": "",
+  "when": "2026-03-23",
+  "where": ""
+ },
+ {
+  "id": 80,
+  "kind": "plan",
+  "title": "Switch to dual writes after the load test",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 83,
+  "kind": "commitment",
+  "title": "Load-test the dual-write path",
+  "owner": "Raj",
+  "when": "2026-04-10",
+  "where": ""
+ },
+ {
+  "id": 87,
+  "kind": "done",
+  "title": "Write the Comet invoice spec",
+  "owner": "Tom",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 89,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 90,
+  "kind": "commitment",
+  "title": "Fix push notifications before the beta",
+  "owner": "Mei",
+  "when": "2026-04-17",
+  "where": ""
+ },
+ {
+  "id": 95,
+  "kind": "commitment",
+  "title": "Write the Beacon beta release notes",
+  "owner": "Mei",
+  "when": "2026-04-18",
+  "where": ""
+ },
+ {
+  "id": 96,
+  "kind": "appointment",
+  "title": "1:1 with Tom about the Comet invoice model",
+  "owner": "",
+  "when": "2026-04-06",
+  "where": ""
+ },
+ {
+  "id": 102,
+  "kind": "done",
+  "title": "Load-test the dual-write path",
+  "owner": "Raj",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 108,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 110,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 111,
+  "kind": "done",
+  "title": "Fix push notifications before the beta",
+  "owner": "Mei",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 113,
+  "kind": "done",
+  "title": "Write the Beacon beta release notes",
+  "owner": "Mei",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 114,
+  "kind": "commitment",
+  "title": "Add database alerts",
+  "owner": "Aisha",
+  "when": "2026-05-08",
+  "where": ""
+ },
+ {
+  "id": 115,
+  "kind": "appointment",
+  "title": "1:1 with Tom: Stripe Billing migration plan",
+  "owner": "",
+  "when": "2026-04-20",
+  "where": ""
+ },
+ {
+  "id": 116,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 118,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 120,
+  "kind": "appointment",
+  "title": "1:1 with Aisha: alerting gaps after the outage",
+  "owner": "",
+  "when": "2026-04-22",
+  "where": ""
+ },
+ {
+  "id": 122,
+  "kind": "appointment",
+  "title": "1:1 with Mei: Beacon beta scope",
+  "owner": "",
+  "when": "2026-04-23",
+  "where": ""
+ },
+ {
+  "id": 123,
+  "kind": "appointment",
+  "title": "1:1 with Jonas: taking over Comet",
+  "owner": "",
+  "when": "2026-04-24",
+  "where": ""
+ },
+ {
+  "id": 125,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 126,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 128,
+  "kind": "appointment",
+  "title": "1:1 with Tom about Comet invoice model",
+  "owner": "",
+  "when": "2026-05-04",
+  "where": ""
+ },
+ {
+  "id": 132,
+  "kind": "appointment",
+  "title": "1:1 with Aisha about DB failover drills",
+  "owner": "",
+  "when": "2026-05-06",
+  "where": ""
+ },
+ {
+  "id": 133,
+  "kind": "commitment",
+  "title": "Add database alerts",
+  "owner": "Aisha",
+  "when": "2026-05-15",
+  "where": ""
+ },
+ {
+  "id": 134,
+  "kind": "appointment",
+  "title": "1:1 with Mei about mobile hire",
+  "owner": "",
+  "when": "2026-05-07",
+  "where": ""
+ },
+ {
+  "id": 136,
+  "kind": "reminder",
+  "title": "Add database alerting",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 136,
+  "kind": "reminder",
+  "title": "Add a runbook",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 138,
+  "kind": "done",
+  "title": "Sprint planning",
+  "owner": "",
+  "when": "2026-05-11",
+  "where": ""
+ },
+ {
+  "id": 139,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 140,
+  "kind": "commitment",
+  "title": "Take over Comet while Tom is out",
+  "owner": "Jonas",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 142,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 144,
+  "kind": "done",
+  "title": "Add database alerts",
+  "owner": "Aisha",
+  "when": "2026-05-18",
+  "where": ""
+ },
+ {
+  "id": 146,
+  "kind": "commitment",
+  "title": "Run a DB failover drill",
+  "owner": "Aisha",
+  "when": "2026-06-05",
+  "where": ""
+ },
+ {
+  "id": 147,
+  "kind": "commitment",
+  "title": "Migrate test invoices to Stripe",
+  "owner": "Jonas",
+  "when": "2026-06-19",
+  "where": ""
+ },
+ {
+  "id": 150,
+  "kind": "plan",
+  "title": "Split the group into Platform and Apps; move Atlas to Aisha",
+  "owner": "",
+  "when": "2026-06-01",
+  "where": ""
+ },
+ {
+  "id": 151,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 156,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 157,
+  "kind": "commitment",
+  "title": "Ship the Beacon GA checklist",
+  "owner": "Mei",
+  "when": "2026-06-12",
+  "where": ""
+ },
+ {
+  "id": 160,
+  "kind": "done",
+  "title": "Reorganize the group into Platform and Apps; move Atlas to Aisha",
+  "owner": "",
+  "when": "2026-06-01",
+  "where": ""
+ },
+ {
+  "id": 168,
+  "kind": "done",
+  "title": "Run a DB failover drill",
+  "owner": "Aisha",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 170,
+  "kind": "reminder",
+  "title": "Add alerting",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 170,
+  "kind": "reminder",
+  "title": "Add a runbook",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 172,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 174,
+  "kind": "commitment",
+  "title": "Review the on-call rotation",
+  "owner": "Raj",
+  "when": "2026-06-26",
+  "where": ""
+ },
+ {
+  "id": 175,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 176,
+  "kind": "done",
+  "title": "Ship the Beacon GA checklist",
+  "owner": "Mei",
+  "when": "2026-06-11",
+  "where": ""
+ },
+ {
+  "id": 178,
+  "kind": "done",
+  "title": "Ship Beacon GA",
+  "owner": "",
+  "when": "2026-06-15",
+  "where": ""
+ },
+ {
+  "id": 179,
+  "kind": "commitment",
+  "title": "Write the Comet runbook",
+  "owner": "Jonas",
+  "when": "2026-07-10",
+  "where": ""
+ },
+ {
+  "id": 182,
+  "kind": "appointment",
+  "title": "1:1 with Aisha: DB failover drills",
+  "owner": "",
+  "when": "2026-06-17T12:04",
+  "where": ""
+ },
+ {
+  "id": 183,
+  "kind": "commitment",
+  "title": "Migrate test invoices to Stripe",
+  "owner": "Jonas",
+  "when": "2026-07-03",
+  "where": ""
+ },
+ {
+  "id": 184,
+  "kind": "appointment",
+  "title": "1:1 with Mei: mobile hire",
+  "owner": "",
+  "when": "2026-06-18T15:00",
+  "where": ""
+ },
+ {
+  "id": 185,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 186,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 189,
+  "kind": "done",
+  "title": "Sprint planning",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 190,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 193,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ },
+ {
+  "id": 195,
+  "kind": "none",
+  "title": "",
+  "owner": "",
+  "when": "",
+  "where": ""
+ }
+]

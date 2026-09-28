@@ -1,0 +1,34 @@
+[
+ {
+  "column": "distance_km",
+  "description": "Distance in kilometers for a workout.",
+  "regex": "(?i)\\b(?P<v>\\d+(?:\\.\\d+)?)\\s*km\\b",
+  "transform": "number",
+  "ordinal_values": [],
+  "table": "workouts",
+  "source": "activity"
+ },
+ {
+  "column": "duration_s",
+  "description": "Workout duration converted from a clock time to seconds.",
+  "regex": "\\bin\\s+(?P<v>\\d{1,2}:\\d{2}(?::\\d{2})?)\\b",
+  "transform": "clock_to_seconds",
+  "ordinal_values": [],
+  "table": "workouts",
+  "source": "activity"
+ },
+ {
+  "column": "climbing_level_rank",
+  "description": "Rank of a sent climbing route grade on the observed ordered grade scale.",
+  "regex": "\\b(?P<v>6b\\+|6c\\+|6c|7a)\\b",
+  "transform": "ordinal",
+  "ordinal_values": [
+   "6b+",
+   "6c",
+   "6c+",
+   "7a"
+  ],
+  "table": "workouts",
+  "source": "activity"
+ }
+]

@@ -1,0 +1,5486 @@
+{
+ "name": "life_year",
+ "user": "Adam Zvada",
+ "description": "A simulated year (Oct 2025 - Sep 2026) of one person's messages with exact ground truth.",
+ "checkpoints": {
+  "m6": "2026-03-30T21:00:00",
+  "m12": "2026-09-30T21:00:00"
+ },
+ "now": "2026-09-30T21:00:00",
+ "messages": [
+  {
+   "id": "y0001",
+   "ts": "2025-10-01T09:03:00",
+   "kind": "store",
+   "text": "hi! I'm Adam Zvada, I live in Prague and I'm building a startup called Nebula with my cofounder David Mokos"
+  },
+  {
+   "id": "y0002",
+   "ts": "2025-10-01T09:12:00",
+   "kind": "store",
+   "text": "Fyi Kavárna Místo coffee 125 Kč lol"
+  },
+  {
+   "id": "y0003",
+   "ts": "2025-10-01T09:47:00",
+   "kind": "store",
+   "text": "my number is +420 722 238 738"
+  },
+  {
+   "id": "y0004",
+   "ts": "2025-10-01T10:05:00",
+   "kind": "store",
+   "text": "Spotify renewed 169 Kč"
+  },
+  {
+   "id": "y0005",
+   "ts": "2025-10-01T17:59:00",
+   "kind": "question",
+   "text": "how much did I spend this week?"
+  },
+  {
+   "id": "y0006",
+   "ts": "2025-10-02T08:07:00",
+   "kind": "store",
+   "text": "Ok so dinner with Tom at La Degustation, 2140 Kč yesterday lol"
+  },
+  {
+   "id": "y0007",
+   "ts": "2025-10-02T11:19:00",
+   "kind": "store",
+   "text": "David's number is 733 544 390 and his email is david@nebula.ai"
+  },
+  {
+   "id": "y0008",
+   "ts": "2025-10-03T12:51:00",
+   "kind": "chitchat",
+   "text": "nvm"
+  },
+  {
+   "id": "y0009",
+   "ts": "2025-10-03T18:37:00",
+   "kind": "store",
+   "text": "Mom's birthday today (Oct 3), called her. She loves orchids"
+  },
+  {
+   "id": "y0010",
+   "ts": "2025-10-03T21:03:00",
+   "kind": "store",
+   "text": "Fyi climbing at Smíchoff with Tom tonight!"
+  },
+  {
+   "id": "y0011",
+   "ts": "2025-10-03T22:27:00",
+   "kind": "store",
+   "text": "Note: Bolt home 140 Kč today lol"
+  },
+  {
+   "id": "y0012",
+   "ts": "2025-10-04T10:50:00",
+   "kind": "store",
+   "text": "Ok so Kavárna Místo coffee 125 CZK today"
+  },
+  {
+   "id": "y0013",
+   "ts": "2025-10-04T11:31:00",
+   "kind": "store",
+   "text": "Note: groceries at Albert 690 Kč this morning lol"
+  },
+  {
+   "id": "y0014",
+   "ts": "2025-10-04T22:00:00",
+   "kind": "store",
+   "text": "Fyi started reading Thinking, Fast and Slow by Daniel Kahneman!"
+  },
+  {
+   "id": "y0015",
+   "ts": "2025-10-04T22:23:00",
+   "kind": "store",
+   "text": "ok so Eska with Kuba, 2480 Kč tonight"
+  },
+  {
+   "id": "y0016",
+   "ts": "2025-10-05T22:43:00",
+   "kind": "question",
+   "text": "what's on my calendar tomorrow?"
+  },
+  {
+   "id": "y0017",
+   "ts": "2025-10-06T00:18:00",
+   "kind": "store",
+   "text": "Note: took a Bolt, 310 CZK tonight 🙂"
+  },
+  {
+   "id": "y0018",
+   "ts": "2025-10-06T10:01:00",
+   "kind": "store",
+   "text": "ok so EMA Espresso Bar coffee 125 CZK today!"
+  },
+  {
+   "id": "y0019",
+   "ts": "2025-10-06T20:12:00",
+   "kind": "store",
+   "text": "my girlfriend Eva works as an architect at Studio Kvadrat. she's allergic to peanuts"
+  },
+  {
+   "id": "y0020",
+   "ts": "2025-10-07T13:43:00",
+   "kind": "store",
+   "text": "note: lunch at Bistro Monk, 310 Kč today 🙂"
+  },
+  {
+   "id": "y0021",
+   "ts": "2025-10-07T21:12:00",
+   "kind": "store",
+   "text": "Eva's birthday is September 28"
+  },
+  {
+   "id": "y0022",
+   "ts": "2025-10-07T22:56:00",
+   "kind": "question",
+   "text": "summarize this article for me"
+  },
+  {
+   "id": "y0023",
+   "ts": "2025-10-08T09:00:00",
+   "kind": "store",
+   "text": "note: ☕ EMA Espresso Bar, 125 CZK lol"
+  },
+  {
+   "id": "y0024",
+   "ts": "2025-10-08T10:17:00",
+   "kind": "chitchat",
+   "text": "ok"
+  },
+  {
+   "id": "y0025",
+   "ts": "2025-10-08T21:39:00",
+   "kind": "store",
+   "text": "note: had dinner at La Degustation with Lucie (2 480 CZK)!"
+  },
+  {
+   "id": "y0026",
+   "ts": "2025-10-09T08:35:00",
+   "kind": "store",
+   "text": "fyi ran 5k in 27:15 🙂"
+  },
+  {
+   "id": "y0027",
+   "ts": "2025-10-09T13:53:00",
+   "kind": "store",
+   "text": "Btw lunch at Lokál, 229 Kč today"
+  },
+  {
+   "id": "y0028",
+   "ts": "2025-10-10T09:19:00",
+   "kind": "store",
+   "text": "btw ☕ EMA Espresso Bar, 65 Kč!"
+  },
+  {
+   "id": "y0029",
+   "ts": "2025-10-10T22:55:00",
+   "kind": "store",
+   "text": "btw Bolt home 290 CZK lol"
+  },
+  {
+   "id": "y0030",
+   "ts": "2025-10-11T10:13:00",
+   "kind": "store",
+   "text": "fyi climbing at Smíchoff with Tom yesterday"
+  },
+  {
+   "id": "y0031",
+   "ts": "2025-10-11T11:25:00",
+   "kind": "store",
+   "text": "Btw Billa shopping, 1 040 CZK this morning 🙂"
+  },
+  {
+   "id": "y0032",
+   "ts": "2025-10-12T19:13:00",
+   "kind": "store",
+   "text": "Tom Novak is my climbing buddy, his number is +420 777 123 456"
+  },
+  {
+   "id": "y0033",
+   "ts": "2025-10-12T20:10:00",
+   "kind": "question",
+   "text": "translate 'thank you' to Czech"
+  },
+  {
+   "id": "y0034",
+   "ts": "2025-10-13T00:08:00",
+   "kind": "store",
+   "text": "Ok so took a Bolt, 170 CZK tonight"
+  },
+  {
+   "id": "y0035",
+   "ts": "2025-10-13T09:29:00",
+   "kind": "store",
+   "text": "I have a monthly membership at Smíchoff climbing gym, 1190 CZK a month"
+  },
+  {
+   "id": "y0036",
+   "ts": "2025-10-14T12:10:00",
+   "kind": "chitchat",
+   "text": "hmm"
+  },
+  {
+   "id": "y0037",
+   "ts": "2025-10-14T13:21:00",
+   "kind": "store",
+   "text": "Fyi Bistro Monk lunch 385 CZK lol"
+  },
+  {
+   "id": "y0038",
+   "ts": "2025-10-14T21:27:00",
+   "kind": "store",
+   "text": "note: climbing at Smíchoff with Tom, finally sent a 6b+!"
+  },
+  {
+   "id": "y0039",
+   "ts": "2025-10-16T08:34:00",
+   "kind": "store",
+   "text": "Fyi 5k run, 26:59 (new PB!) today lol"
+  },
+  {
+   "id": "y0040",
+   "ts": "2025-10-16T08:48:00",
+   "kind": "store",
+   "text": "fyi coffee at Café Savoy 110 CZK yesterday"
+  },
+  {
+   "id": "y0041",
+   "ts": "2025-10-16T11:22:00",
+   "kind": "chitchat",
+   "text": "👍"
+  },
+  {
+   "id": "y0042",
+   "ts": "2025-10-16T12:51:00",
+   "kind": "store",
+   "text": "bistro Monk lunch 229 Kč"
+  },
+  {
+   "id": "y0043",
+   "ts": "2025-10-17T10:41:00",
+   "kind": "store",
+   "text": "note: EMA Espresso Bar coffee 95 Kč this morning"
+  },
+  {
+   "id": "y0044",
+   "ts": "2025-10-17T11:33:00",
+   "kind": "question",
+   "text": "how much did I spend this week?"
+  },
+  {
+   "id": "y0045",
+   "ts": "2025-10-17T19:11:00",
+   "kind": "store",
+   "text": "Climbing at Smíchoff with Tom today lol"
+  },
+  {
+   "id": "y0046",
+   "ts": "2025-10-18T11:10:00",
+   "kind": "store",
+   "text": "ALBERT\nPraha\n18.10.2025 08:46\nGroceries               1040 Kč\nCELKEM                  1040 Kč\nKarta ****4421"
+  },
+  {
+   "id": "y0047",
+   "ts": "2025-10-18T22:28:00",
+   "kind": "question",
+   "text": "remind me what Tom's number is?"
+  },
+  {
+   "id": "y0048",
+   "ts": "2025-10-19T20:13:00",
+   "kind": "question",
+   "text": "what's on my calendar tomorrow?"
+  },
+  {
+   "id": "y0049",
+   "ts": "2025-10-20T08:33:00",
+   "kind": "store",
+   "text": "Took a Bolt, 150 CZK yesterday 🙂"
+  },
+  {
+   "id": "y0050",
+   "ts": "2025-10-20T09:19:00",
+   "kind": "store",
+   "text": "Fyi Café Savoy coffee 110 CZK 🙂"
+  },
+  {
+   "id": "y0051",
+   "ts": "2025-10-20T20:39:00",
+   "kind": "store",
+   "text": "met Jan Dvořák, CTO at Rohlik, at a meetup. his number is +420 602 555 777"
+  },
+  {
+   "id": "y0052",
+   "ts": "2025-10-21T14:16:00",
+   "kind": "chitchat",
+   "text": "brb"
+  },
+  {
+   "id": "y0053",
+   "ts": "2025-10-21T14:21:00",
+   "kind": "store",
+   "text": "Ok so lunch at Lokál, 265 Kč today"
+  },
+  {
+   "id": "y0054",
+   "ts": "2025-10-21T20:12:00",
+   "kind": "store",
+   "text": "ok so climbing at Smíchoff with Tom today lol"
+  },
+  {
+   "id": "y0055",
+   "ts": "2025-10-22T23:02:00",
+   "kind": "store",
+   "text": "Dinner with Tom at Sasazu, 1560 CZK tonight lol"
+  },
+  {
+   "id": "y0056",
+   "ts": "2025-10-23T08:43:00",
+   "kind": "store",
+   "text": "Café Savoy coffee 85 Kč yesterday"
+  },
+  {
+   "id": "y0057",
+   "ts": "2025-10-23T14:48:00",
+   "kind": "store",
+   "text": "lunch at Lokál, 265 CZK today"
+  },
+  {
+   "id": "y0058",
+   "ts": "2025-10-23T16:45:00",
+   "kind": "chitchat",
+   "text": "nvm"
+  },
+  {
+   "id": "y0059",
+   "ts": "2025-10-24T09:24:00",
+   "kind": "store",
+   "text": "Note: Kavárna Místo coffee 65 CZK"
+  },
+  {
+   "id": "y0060",
+   "ts": "2025-10-24T19:07:00",
+   "kind": "store",
+   "text": "climbing at Smíchoff tonight!"
+  },
+  {
+   "id": "y0061",
+   "ts": "2025-10-24T22:30:00",
+   "kind": "update",
+   "text": "Done with Thinking, Fast and Slow. 5/5"
+  },
+  {
+   "id": "y0062",
+   "ts": "2025-10-24T23:30:00",
+   "kind": "store",
+   "text": "bolt home 160 Kč today"
+  },
+  {
+   "id": "y0063",
+   "ts": "2025-10-26T08:56:00",
+   "kind": "store",
+   "text": "ALBERT\nPraha\n25.10.2025 18:56\nGroceries               1190 Kč\nCELKEM                  1190 Kč\nKarta ****4421"
+  },
+  {
+   "id": "y0064",
+   "ts": "2025-10-27T08:22:00",
+   "kind": "store",
+   "text": "btw 10k run, 54:48 🙂"
+  },
+  {
+   "id": "y0065",
+   "ts": "2025-10-27T09:12:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Nebula board meeting\nDTSTART:20251106T160000\nDTEND:20251106T173000\nLOCATION:Nebula office, Karlín, Prague\nORGANIZER;CN=David Mokos:mailto:david@nebula.ai\nEND:VEVENT"
+  },
+  {
+   "id": "y0066",
+   "ts": "2025-10-27T17:45:00",
+   "kind": "question",
+   "text": "how much did I spend this week?"
+  },
+  {
+   "id": "y0067",
+   "ts": "2025-10-28T10:15:00",
+   "kind": "store",
+   "text": "EMA ESPRESSO BAR\nPraha\n27.10.2025 13:31\nFlat white                85 Kč\nCELKEM                    85 Kč\nKarta ****4421"
+  },
+  {
+   "id": "y0068",
+   "ts": "2025-10-28T14:03:00",
+   "kind": "store",
+   "text": "ok so Bistro Monk lunch 310 CZK"
+  },
+  {
+   "id": "y0069",
+   "ts": "2025-10-28T21:28:00",
+   "kind": "store",
+   "text": "Note: climbing at Smíchoff with Tom today lol"
+  },
+  {
+   "id": "y0070",
+   "ts": "2025-10-29T10:03:00",
+   "kind": "store",
+   "text": "Btw coffee at Café Savoy 85 CZK today lol"
+  },
+  {
+   "id": "y0071",
+   "ts": "2025-10-29T22:00:00",
+   "kind": "store",
+   "text": "New book: The Pragmatic Programmer (Andrew Hunt) 🙂"
+  },
+  {
+   "id": "y0072",
+   "ts": "2025-10-29T22:30:00",
+   "kind": "chitchat",
+   "text": "👍"
+  },
+  {
+   "id": "y0073",
+   "ts": "2025-10-30T09:02:00",
+   "kind": "store",
+   "text": "5k run, 27:27 this morning!"
+  },
+  {
+   "id": "y0074",
+   "ts": "2025-10-30T14:28:00",
+   "kind": "store",
+   "text": "Bistro Monk lunch 189 CZK today"
+  },
+  {
+   "id": "y0075",
+   "ts": "2025-10-30T17:30:00",
+   "kind": "question",
+   "text": "any ideas for dinner tonight?"
+  },
+  {
+   "id": "y0076",
+   "ts": "2025-10-31T10:54:00",
+   "kind": "store",
+   "text": "note: ☕ EMA Espresso Bar, 65 Kč"
+  },
+  {
+   "id": "y0077",
+   "ts": "2025-11-01T09:20:00",
+   "kind": "store",
+   "text": "Climbing at Smíchoff with Tom yesterday 🙂"
+  },
+  {
+   "id": "y0078",
+   "ts": "2025-11-01T09:30:00",
+   "kind": "store",
+   "text": "Remind me to renew passport by Dec 15 🙂"
+  },
+  {
+   "id": "y0079",
+   "ts": "2025-11-01T10:41:00",
+   "kind": "store",
+   "text": "ok so took a Bolt, 200 Kč yesterday 🙂"
+  },
+  {
+   "id": "y0080",
+   "ts": "2025-11-01T13:22:00",
+   "kind": "store",
+   "text": "Btw groceries at Billa 790 CZK"
+  },
+  {
+   "id": "y0081",
+   "ts": "2025-11-01T14:33:00",
+   "kind": "chitchat",
+   "text": "haha nice"
+  },
+  {
+   "id": "y0082",
+   "ts": "2025-11-01T23:28:00",
+   "kind": "store",
+   "text": "Sasazu with Dave, 2 480 CZK"
+  },
+  {
+   "id": "y0083",
+   "ts": "2025-11-02T17:01:00",
+   "kind": "store",
+   "text": "Ondra (Ondřej Král, college friend) has a new job at Productboard. his number: +420 606 111 222"
+  },
+  {
+   "id": "y0084",
+   "ts": "2025-11-02T18:26:00",
+   "kind": "chitchat",
+   "text": "hmm"
+  },
+  {
+   "id": "y0085",
+   "ts": "2025-11-02T23:32:00",
+   "kind": "store",
+   "text": "Took a Bolt, 270 Kč today 🙂"
+  },
+  {
+   "id": "y0086",
+   "ts": "2025-11-03T09:15:00",
+   "kind": "store",
+   "text": "Fyi 5k run, 28:04 today"
+  },
+  {
+   "id": "y0087",
+   "ts": "2025-11-03T09:39:00",
+   "kind": "store",
+   "text": "fyi ☕ EMA Espresso Bar, 85 CZK today lol"
+  },
+  {
+   "id": "y0088",
+   "ts": "2025-11-03T10:00:00",
+   "kind": "store",
+   "text": "dentist appointment with Dr. Horák on Nov 12 at 9:00"
+  },
+  {
+   "id": "y0089",
+   "ts": "2025-11-03T18:44:00",
+   "kind": "question",
+   "text": "what's the weather like today?"
+  },
+  {
+   "id": "y0090",
+   "ts": "2025-11-04T14:47:00",
+   "kind": "chitchat",
+   "text": "thanks!"
+  },
+  {
+   "id": "y0091",
+   "ts": "2025-11-04T20:37:00",
+   "kind": "store",
+   "text": "Fyi climbing at Smíchoff with Tom"
+  },
+  {
+   "id": "y0092",
+   "ts": "2025-11-05T18:26:00",
+   "kind": "store",
+   "text": "met Lucas Meyer from Sequoia at Web Summit, lucas@sequoia.com. wants to follow up in Jan"
+  },
+  {
+   "id": "y0093",
+   "ts": "2025-11-05T22:06:00",
+   "kind": "chitchat",
+   "text": "ok cool"
+  },
+  {
+   "id": "y0094",
+   "ts": "2025-11-06T09:10:00",
+   "kind": "store",
+   "text": "5k run, 27:28 lol"
+  },
+  {
+   "id": "y0095",
+   "ts": "2025-11-06T13:29:00",
+   "kind": "store",
+   "text": "Btw lunch at Bistro Monk, 189 Kč!"
+  },
+  {
+   "id": "y0096",
+   "ts": "2025-11-07T08:53:00",
+   "kind": "store",
+   "text": "KAVÁRNA MÍSTO\nPraha\n07.11.2025 20:42\nFlat white                85 Kč\nCELKEM                    85 Kč\nKarta ****4421"
+  },
+  {
+   "id": "y0097",
+   "ts": "2025-11-07T19:52:00",
+   "kind": "store",
+   "text": "Fyi climbing at Smíchoff with Tom 🙂"
+  },
+  {
+   "id": "y0098",
+   "ts": "2025-11-07T22:13:00",
+   "kind": "store",
+   "text": "Bolt home 370 Kč today!"
+  },
+  {
+   "id": "y0099",
+   "ts": "2025-11-08T12:27:00",
+   "kind": "chitchat",
+   "text": "ok"
+  },
+  {
+   "id": "y0100",
+   "ts": "2025-11-08T13:23:00",
+   "kind": "store",
+   "text": "Groceries at Billa 990 CZK"
+  },
+  {
+   "id": "y0101",
+   "ts": "2025-11-08T22:10:00",
+   "kind": "store",
+   "text": "Ok so dinner with Eva at Sasazu, 890 CZK today"
+  },
+  {
+   "id": "y0102",
+   "ts": "2025-11-09T15:05:00",
+   "kind": "question",
+   "text": "translate 'thank you' to Czech"
+  },
+  {
+   "id": "y0103",
+   "ts": "2025-11-09T23:06:00",
+   "kind": "store",
+   "text": "Bolt home 380 CZK"
+  },
+  {
+   "id": "y0104",
+   "ts": "2025-11-10T10:09:00",
+   "kind": "store",
+   "text": "coffee at EMA Espresso Bar 95 CZK this morning lol"
+  },
+  {
+   "id": "y0105",
+   "ts": "2025-11-11T13:04:00",
+   "kind": "store",
+   "text": "pho Vietnam lunch 385 CZK 🙂"
+  },
+  {
+   "id": "y0106",
+   "ts": "2025-11-12T10:04:00",
+   "kind": "store",
+   "text": "☕ Kavárna Místo, 95 Kč"
+  },
+  {
+   "id": "y0107",
+   "ts": "2025-11-12T22:18:00",
+   "kind": "question",
+   "text": "summarize this article for me"
+  },
+  {
+   "id": "y0108",
+   "ts": "2025-11-14T10:42:00",
+   "kind": "store",
+   "text": "Ok so 10k run, 56:39 yesterday"
+  },
+  {
+   "id": "y0109",
+   "ts": "2025-11-14T10:53:00",
+   "kind": "store",
+   "text": "EMA Espresso Bar coffee 95 CZK"
+  },
+  {
+   "id": "y0110",
+   "ts": "2025-11-14T19:09:00",
+   "kind": "store",
+   "text": "Climbing at Smíchoff with Tom!"
+  },
+  {
+   "id": "y0111",
+   "ts": "2025-11-15T00:01:00",
+   "kind": "store",
+   "text": "bolt home 150 CZK tonight"
+  },
+  {
+   "id": "y0112",
+   "ts": "2025-11-15T13:05:00",
+   "kind": "store",
+   "text": "Btw groceries at Billa 1700 Kč"
+  },
+  {
+   "id": "y0113",
+   "ts": "2025-11-16T19:13:00",
+   "kind": "store",
+   "text": "Climbing at Smíchoff with Tom tonight"
+  },
+  {
+   "id": "y0114",
+   "ts": "2025-11-16T22:52:00",
+   "kind": "store",
+   "text": "Fyi took a Bolt, 270 CZK tonight 🙂"
+  },
+  {
+   "id": "y0115",
+   "ts": "2025-11-17T08:51:00",
+   "kind": "store",
+   "text": "ran 5k in 26:46 (new PB!) this morning"
+  },
+  {
+   "id": "y0116",
+   "ts": "2025-11-17T10:19:00",
+   "kind": "store",
+   "text": "Fyi coffee at EMA Espresso Bar 125 CZK"
+  },
+  {
+   "id": "y0117",
+   "ts": "2025-11-18T12:49:00",
+   "kind": "chitchat",
+   "text": "haha nice"
+  },
+  {
+   "id": "y0118",
+   "ts": "2025-11-18T14:10:00",
+   "kind": "store",
+   "text": "Lunch at Lokál, 385 Kč lol"
+  },
+  {
+   "id": "y0119",
+   "ts": "2025-11-19T22:18:00",
+   "kind": "store",
+   "text": "note: had dinner at Sasazu with Eva (890 CZK)!"
+  },
+  {
+   "id": "y0120",
+   "ts": "2025-11-20T10:29:00",
+   "kind": "store",
+   "text": "Note: coffee at EMA Espresso Bar 125 CZK yesterday lol"
+  },
+  {
+   "id": "y0121",
+   "ts": "2025-11-20T12:48:00",
+   "kind": "store",
+   "text": "btw Pho Vietnam lunch 385 CZK today"
+  },
+  {
+   "id": "y0122",
+   "ts": "2025-11-21T09:05:00",
+   "kind": "store",
+   "text": "EMA ESPRESSO BAR\nPraha\n21.11.2025 13:04\nFlat white               110 Kč\nCELKEM                   110 Kč\nKarta ****4421"
+  },
+  {
+   "id": "y0123",
+   "ts": "2025-11-21T10:39:00",
+   "kind": "store",
+   "text": "ran 10k in 56:30 yesterday"
+  },
+  {
+   "id": "y0124",
+   "ts": "2025-11-21T12:43:00",
+   "kind": "question",
+   "text": "how much did I spend this week?"
+  },
+  {
+   "id": "y0125",
+   "ts": "2025-11-21T19:27:00",
+   "kind": "store",
+   "text": "note: climbing at Smíchoff with Tom tonight!"
+  },
+  {
+   "id": "y0126",
+   "ts": "2025-11-22T00:30:00",
+   "kind": "store",
+   "text": "note: Bolt home 160 Kč"
+  },
+  {
+   "id": "y0127",
+   "ts": "2025-11-22T12:09:00",
+   "kind": "store",
+   "text": "ALBERT\nPraha\n22.11.2025 11:19\nGroceries               1790 Kč\nCELKEM                  1790 Kč\nKarta ****4421"
+  },
+  {
+   "id": "y0128",
+   "ts": "2025-11-23T12:05:00",
+   "kind": "question",
+   "text": "summarize this article for me"
+  },
+  {
+   "id": "y0129",
+   "ts": "2025-11-24T07:10:00",
+   "kind": "store",
+   "text": "5k run, 27:50 this morning 🙂"
+  },
+  {
+   "id": "y0130",
+   "ts": "2025-11-24T09:12:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Nebula board meeting\nDTSTART:20251204T160000\nDTEND:20251204T173000\nLOCATION:Nebula office, Karlín, Prague\nORGANIZER;CN=David Mokos:mailto:david@nebula.ai\nEND:VEVENT"
+  },
+  {
+   "id": "y0131",
+   "ts": "2025-11-24T10:34:00",
+   "kind": "store",
+   "text": "Note: took a Bolt, 300 CZK yesterday"
+  },
+  {
+   "id": "y0132",
+   "ts": "2025-11-24T10:45:00",
+   "kind": "store",
+   "text": "EMA ESPRESSO BAR\nPraha\n24.11.2025 08:39\nFlat white                85 Kč\nCELKEM                    85 Kč\nKarta ****4421"
+  },
+  {
+   "id": "y0133",
+   "ts": "2025-11-25T18:24:00",
+   "kind": "store",
+   "text": "flu shot done ✅"
+  },
+  {
+   "id": "y0134",
+   "ts": "2025-11-25T22:30:00",
+   "kind": "update",
+   "text": "Ok so finished The Pragmatic Programmer, 4/5"
+  },
+  {
+   "id": "y0135",
+   "ts": "2025-11-26T09:28:00",
+   "kind": "store",
+   "text": "Btw Pho Vietnam lunch 189 Kč yesterday 🙂"
+  },
+  {
+   "id": "y0136",
+   "ts": "2025-11-26T09:51:00",
+   "kind": "store",
+   "text": "KAVÁRNA MÍSTO\nPraha\n26.11.2025 16:01\nFlat white               125 Kč\nCELKEM                   125 Kč\nKarta ****4421"
+  },
+  {
+   "id": "y0137",
+   "ts": "2025-11-26T22:28:00",
+   "kind": "store",
+   "text": "Fyi dinner with Lucie at Eska, 2 140 CZK"
+  },
+  {
+   "id": "y0138",
+   "ts": "2025-11-27T08:21:00",
+   "kind": "store",
+   "text": "note: 5k run, 28:45!"
+  },
+  {
+   "id": "y0139",
+   "ts": "2025-11-27T14:53:00",
+   "kind": "store",
+   "text": "ok so Pho Vietnam lunch 385 Kč today 🙂"
+  },
+  {
+   "id": "y0140",
+   "ts": "2025-11-27T19:17:00",
+   "kind": "chitchat",
+   "text": "nvm"
+  },
+  {
+   "id": "y0141",
+   "ts": "2025-11-28T10:00:00",
+   "kind": "chitchat",
+   "text": "haha nice"
+  },
+  {
+   "id": "y0142",
+   "ts": "2025-11-28T21:15:00",
+   "kind": "store",
+   "text": "Ok so climbing at Smíchoff today!"
+  },
+  {
+   "id": "y0143",
+   "ts": "2025-11-28T22:00:00",
+   "kind": "store",
+   "text": "btw started reading Project Hail Mary by Andy Weir lol"
+  },
+  {
+   "id": "y0144",
+   "ts": "2025-11-29T09:47:00",
+   "kind": "store",
+   "text": "Fyi took a Bolt, 330 CZK yesterday"
+  },
+  {
+   "id": "y0145",
+   "ts": "2025-11-29T11:08:00",
+   "kind": "store",
+   "text": "Ok so Billa shopping, 1840 CZK this morning"
+  },
+  {
+   "id": "y0146",
+   "ts": "2025-11-29T21:49:00",
+   "kind": "store",
+   "text": "btw dinner with Tom at La Degustation, 890 CZK tonight!"
+  },
+  {
+   "id": "y0147",
+   "ts": "2025-11-30T21:56:00",
+   "kind": "chitchat",
+   "text": "you're the best"
+  },
+  {
+   "id": "y0148",
+   "ts": "2025-11-30T22:34:00",
+   "kind": "store",
+   "text": "Fyi took a Bolt, 140 CZK"
+  },
+  {
+   "id": "y0149",
+   "ts": "2025-12-01T08:25:00",
+   "kind": "store",
+   "text": "note: ☕ EMA Espresso Bar, 85 CZK 🙂"
+  },
+  {
+   "id": "y0150",
+   "ts": "2025-12-01T08:32:00",
+   "kind": "store",
+   "text": "ran 5k in 28:27"
+  },
+  {
+   "id": "y0151",
+   "ts": "2025-12-01T10:05:00",
+   "kind": "store",
+   "text": "Fyi Spotify renewed 169 CZK 🙂"
+  },
+  {
+   "id": "y0152",
+   "ts": "2025-12-01T18:29:00",
+   "kind": "question",
+   "text": "can you draft an email to Sarah?"
+  },
+  {
+   "id": "y0153",
+   "ts": "2025-12-02T12:26:00",
+   "kind": "store",
+   "text": "my sister Klára's birthday today! she lives in Berlin"
+  },
+  {
+   "id": "y0154",
+   "ts": "2025-12-02T12:51:00",
+   "kind": "store",
+   "text": "Btw Lokál lunch 310 CZK today"
+  },
+  {
+   "id": "y0155",
+   "ts": "2025-12-03T10:35:00",
+   "kind": "store",
+   "text": "Fyi coffee at EMA Espresso Bar 65 Kč!"
+  },
+  {
+   "id": "y0156",
+   "ts": "2025-12-03T18:00:00",
+   "kind": "update",
+   "text": "fyi renew passport — done"
+  },
+  {
+   "id": "y0157",
+   "ts": "2025-12-03T21:24:00",
+   "kind": "store",
+   "text": "Had dinner at Eska with Tom (890 CZK) tonight"
+  },
+  {
+   "id": "y0158",
+   "ts": "2025-12-04T08:11:00",
+   "kind": "store",
+   "text": "10k run, 55:53"
+  },
+  {
+   "id": "y0159",
+   "ts": "2025-12-04T14:49:00",
+   "kind": "store",
+   "text": "Pho Vietnam lunch 265 Kč!"
+  },
+  {
+   "id": "y0160",
+   "ts": "2025-12-05T09:15:00",
+   "kind": "store",
+   "text": "EMA Espresso Bar coffee 95 Kč lol"
+  },
+  {
+   "id": "y0161",
+   "ts": "2025-12-05T19:08:00",
+   "kind": "store",
+   "text": "Climbing at Smíchoff with Tom today"
+  },
+  {
+   "id": "y0162",
+   "ts": "2025-12-05T23:53:00",
+   "kind": "store",
+   "text": "Bolt home 330 CZK tonight 🙂"
+  },
+  {
+   "id": "y0163",
+   "ts": "2025-12-06T09:22:00",
+   "kind": "store",
+   "text": "EMA ESPRESSO BAR\nPraha\n06.12.2025 13:27\nFlat white               110 Kč\nCELKEM                   110 Kč\nKarta ****4421"
+  },
+  {
+   "id": "y0164",
+   "ts": "2025-12-06T12:10:00",
+   "kind": "store",
+   "text": "BILLA\nPraha\n06.12.2025 08:04\nGroceries               1240 Kč\nCELKEM                  1240 Kč\nKarta ****4421"
+  },
+  {
+   "id": "y0165",
+   "ts": "2025-12-07T10:34:00",
+   "kind": "store",
+   "text": "dinner with Eva at La Degustation, 1560 CZK yesterday"
+  },
+  {
+   "id": "y0166",
+   "ts": "2025-12-07T22:22:00",
+   "kind": "store",
+   "text": "Took a Bolt, 150 CZK"
+  },
+  {
+   "id": "y0167",
+   "ts": "2025-12-08T08:50:00",
+   "kind": "store",
+   "text": "note: 5k run, 26:23 (new PB!) this morning lol"
+  },
+  {
+   "id": "y0168",
+   "ts": "2025-12-08T10:20:00",
+   "kind": "store",
+   "text": "note: ☕ EMA Espresso Bar, 110 Kč!"
+  },
+  {
+   "id": "y0169",
+   "ts": "2025-12-09T13:44:00",
+   "kind": "store",
+   "text": "lunch at Lokál, 229 CZK today"
+  },
+  {
+   "id": "y0170",
+   "ts": "2025-12-09T19:26:00",
+   "kind": "chitchat",
+   "text": "haha nice"
+  },
+  {
+   "id": "y0171",
+   "ts": "2025-12-10T10:06:00",
+   "kind": "store",
+   "text": "Café Savoy coffee 85 CZK this morning"
+  },
+  {
+   "id": "y0172",
+   "ts": "2025-12-10T10:42:00",
+   "kind": "chitchat",
+   "text": "lol ok"
+  },
+  {
+   "id": "y0173",
+   "ts": "2025-12-10T21:23:00",
+   "kind": "store",
+   "text": "dinner with David at Sasazu, 1560 Kč"
+  },
+  {
+   "id": "y0174",
+   "ts": "2025-12-11T14:35:00",
+   "kind": "store",
+   "text": "lunch at Lokál, 310 CZK today 🙂"
+  },
+  {
+   "id": "y0175",
+   "ts": "2025-12-12T09:36:00",
+   "kind": "store",
+   "text": "☕ EMA Espresso Bar, 125 CZK"
+  },
+  {
+   "id": "y0176",
+   "ts": "2025-12-13T12:51:00",
+   "kind": "store",
+   "text": "Note: groceries at Albert 1000 Kč"
+  },
+  {
+   "id": "y0177",
+   "ts": "2025-12-13T21:07:00",
+   "kind": "store",
+   "text": "ok so had dinner at Sasazu with Ondra (1 240 CZK)"
+  },
+  {
+   "id": "y0178",
+   "ts": "2025-12-14T17:11:00",
+   "kind": "chitchat",
+   "text": "ok"
+  },
+  {
+   "id": "y0179",
+   "ts": "2025-12-14T19:56:00",
+   "kind": "store",
+   "text": "Fyi climbing at Smíchoff with Tom today"
+  },
+  {
+   "id": "y0180",
+   "ts": "2025-12-14T23:30:00",
+   "kind": "store",
+   "text": "Note: took a Bolt, 280 Kč 🙂"
+  },
+  {
+   "id": "y0181",
+   "ts": "2025-12-15T08:45:00",
+   "kind": "store",
+   "text": "Note: coffee at Café Savoy 65 CZK lol"
+  },
+  {
+   "id": "y0182",
+   "ts": "2025-12-16T13:28:00",
+   "kind": "store",
+   "text": "Lunch at Lokál, 310 CZK today"
+  },
+  {
+   "id": "y0183",
+   "ts": "2025-12-16T19:38:00",
+   "kind": "store",
+   "text": "climbing at Smíchoff with Tom"
+  },
+  {
+   "id": "y0184",
+   "ts": "2025-12-17T09:02:00",
+   "kind": "store",
+   "text": "Note: EMA Espresso Bar coffee 110 CZK this morning!"
+  },
+  {
+   "id": "y0185",
+   "ts": "2025-12-18T09:04:00",
+   "kind": "store",
+   "text": "Ran 5k in 27:02 this morning lol"
+  },
+  {
+   "id": "y0186",
+   "ts": "2025-12-18T09:56:00",
+   "kind": "question",
+   "text": "remind me what Tom's number is?"
+  },
+  {
+   "id": "y0187",
+   "ts": "2025-12-18T13:59:00",
+   "kind": "store",
+   "text": "Bistro Monk lunch 229 CZK"
+  },
+  {
+   "id": "y0188",
+   "ts": "2025-12-19T10:20:00",
+   "kind": "store",
+   "text": "btw Café Savoy coffee 65 CZK today lol"
+  },
+  {
+   "id": "y0189",
+   "ts": "2025-12-19T12:43:00",
+   "kind": "chitchat",
+   "text": "haha nice"
+  },
+  {
+   "id": "y0190",
+   "ts": "2025-12-19T22:35:00",
+   "kind": "store",
+   "text": "Bolt home 340 CZK!"
+  },
+  {
+   "id": "y0191",
+   "ts": "2025-12-20T09:49:00",
+   "kind": "store",
+   "text": "taking the train to Brno for Christmas with my parents, back on Jan 2"
+  },
+  {
+   "id": "y0192",
+   "ts": "2025-12-20T18:37:00",
+   "kind": "chitchat",
+   "text": "hmm"
+  },
+  {
+   "id": "y0193",
+   "ts": "2025-12-20T22:30:00",
+   "kind": "update",
+   "text": "fyi done with Project Hail Mary. 5/5!"
+  },
+  {
+   "id": "y0194",
+   "ts": "2025-12-21T21:18:00",
+   "kind": "question",
+   "text": "how much did I spend this week?"
+  },
+  {
+   "id": "y0195",
+   "ts": "2025-12-22T09:12:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Nebula board meeting\nDTSTART:20260101T160000\nDTEND:20260101T173000\nLOCATION:Nebula office, Karlín, Prague\nORGANIZER;CN=David Mokos:mailto:david@nebula.ai\nEND:VEVENT"
+  },
+  {
+   "id": "y0196",
+   "ts": "2025-12-22T10:41:00",
+   "kind": "chitchat",
+   "text": "good morning"
+  },
+  {
+   "id": "y0197",
+   "ts": "2025-12-23T16:33:00",
+   "kind": "question",
+   "text": "what's the weather like today?"
+  },
+  {
+   "id": "y0198",
+   "ts": "2025-12-25T16:58:00",
+   "kind": "chitchat",
+   "text": "👍"
+  },
+  {
+   "id": "y0199",
+   "ts": "2025-12-26T19:57:00",
+   "kind": "chitchat",
+   "text": "haha nice"
+  },
+  {
+   "id": "y0200",
+   "ts": "2025-12-26T22:00:00",
+   "kind": "store",
+   "text": "btw started reading The Mom Test by Rob Fitzpatrick"
+  },
+  {
+   "id": "y0201",
+   "ts": "2026-01-01T10:05:00",
+   "kind": "store",
+   "text": "Spotify renewed 169 CZK"
+  },
+  {
+   "id": "y0202",
+   "ts": "2026-01-01T19:14:00",
+   "kind": "question",
+   "text": "remind me what Tom's number is?"
+  },
+  {
+   "id": "y0203",
+   "ts": "2026-01-03T13:17:00",
+   "kind": "store",
+   "text": "btw Billa shopping, 1840 Kč"
+  },
+  {
+   "id": "y0204",
+   "ts": "2026-01-04T14:07:00",
+   "kind": "question",
+   "text": "what's on my calendar tomorrow?"
+  },
+  {
+   "id": "y0205",
+   "ts": "2026-01-04T22:06:00",
+   "kind": "store",
+   "text": "Note: Bolt home 240 CZK"
+  },
+  {
+   "id": "y0206",
+   "ts": "2026-01-05T09:13:00",
+   "kind": "store",
+   "text": "Note: 5k run, 25:59 (new PB!) this morning!"
+  },
+  {
+   "id": "y0207",
+   "ts": "2026-01-05T19:37:00",
+   "kind": "chitchat",
+   "text": "brb"
+  },
+  {
+   "id": "y0208",
+   "ts": "2026-01-06T08:28:00",
+   "kind": "store",
+   "text": "☕ EMA Espresso Bar, 65 CZK yesterday"
+  },
+  {
+   "id": "y0209",
+   "ts": "2026-01-06T11:00:00",
+   "kind": "store",
+   "text": "set up a call with Lucas Meyer from Sequoia on Wed Jan 14 at 10:00"
+  },
+  {
+   "id": "y0210",
+   "ts": "2026-01-06T11:14:00",
+   "kind": "chitchat",
+   "text": "good morning"
+  },
+  {
+   "id": "y0211",
+   "ts": "2026-01-06T13:01:00",
+   "kind": "store",
+   "text": "bistro Monk lunch 310 CZK today"
+  },
+  {
+   "id": "y0212",
+   "ts": "2026-01-06T19:17:00",
+   "kind": "store",
+   "text": "Climbing at Smíchoff with Tom today"
+  },
+  {
+   "id": "y0213",
+   "ts": "2026-01-07T09:15:00",
+   "kind": "store",
+   "text": "eMA Espresso Bar coffee 85 CZK this morning"
+  },
+  {
+   "id": "y0214",
+   "ts": "2026-01-08T10:01:00",
+   "kind": "delete",
+   "text": "please forget everything about Jan Dvořák, not relevant anymore"
+  },
+  {
+   "id": "y0215",
+   "ts": "2026-01-08T13:13:00",
+   "kind": "store",
+   "text": "Ok so Lokál lunch 385 CZK today 🙂"
+  },
+  {
+   "id": "y0216",
+   "ts": "2026-01-09T10:54:00",
+   "kind": "store",
+   "text": "note: ran 10k in 56:46 yesterday"
+  },
+  {
+   "id": "y0217",
+   "ts": "2026-01-09T10:59:00",
+   "kind": "store",
+   "text": "CAFÉ SAVOY\nPraha\n09.01.2026 16:55\nFlat white               110 Kč\nCELKEM                   110 Kč\nKarta ****4421"
+  },
+  {
+   "id": "y0218",
+   "ts": "2026-01-09T12:37:00",
+   "kind": "chitchat",
+   "text": "you're the best"
+  },
+  {
+   "id": "y0219",
+   "ts": "2026-01-09T20:03:00",
+   "kind": "store",
+   "text": "Btw climbing at Smíchoff with Tom today 🙂"
+  },
+  {
+   "id": "y0220",
+   "ts": "2026-01-09T22:32:00",
+   "kind": "store",
+   "text": "btw took a Bolt, 380 CZK today"
+  },
+  {
+   "id": "y0221",
+   "ts": "2026-01-10T13:25:00",
+   "kind": "store",
+   "text": "BILLA\nPraha\n10.01.2026 09:29\nGroceries               1540 Kč\nCELKEM                  1540 Kč\nKarta ****4421"
+  },
+  {
+   "id": "y0222",
+   "ts": "2026-01-12T08:24:00",
+   "kind": "store",
+   "text": "ran 10k in 54:42 (new PB!) lol"
+  },
+  {
+   "id": "y0223",
+   "ts": "2026-01-12T09:20:00",
+   "kind": "update",
+   "text": "Lucas moved our call to Wed Jan 21 at 14:00"
+  },
+  {
+   "id": "y0224",
+   "ts": "2026-01-12T10:03:00",
+   "kind": "store",
+   "text": "Note: coffee at EMA Espresso Bar 95 CZK this morning!"
+  },
+  {
+   "id": "y0225",
+   "ts": "2026-01-12T10:27:00",
+   "kind": "store",
+   "text": "Oscar Lind started today as Nebula's product manager, oscar@nebula.ai"
+  },
+  {
+   "id": "y0226",
+   "ts": "2026-01-12T19:22:00",
+   "kind": "question",
+   "text": "can you draft an email to Sarah?"
+  },
+  {
+   "id": "y0227",
+   "ts": "2026-01-13T12:41:00",
+   "kind": "store",
+   "text": "Note: lunch at Pho Vietnam, 229 CZK today"
+  },
+  {
+   "id": "y0228",
+   "ts": "2026-01-13T17:22:00",
+   "kind": "chitchat",
+   "text": "lol ok"
+  },
+  {
+   "id": "y0229",
+   "ts": "2026-01-13T20:21:00",
+   "kind": "store",
+   "text": "btw climbing at Smíchoff with Tom!"
+  },
+  {
+   "id": "y0230",
+   "ts": "2026-01-14T10:04:00",
+   "kind": "store",
+   "text": "Btw Café Savoy coffee 85 CZK today!"
+  },
+  {
+   "id": "y0231",
+   "ts": "2026-01-14T16:41:00",
+   "kind": "question",
+   "text": "what's the weather like today?"
+  },
+  {
+   "id": "y0232",
+   "ts": "2026-01-15T09:30:00",
+   "kind": "store",
+   "text": "Ok so remind me to renew Czech ID card by Mar 01"
+  },
+  {
+   "id": "y0233",
+   "ts": "2026-01-15T15:58:00",
+   "kind": "chitchat",
+   "text": "lol ok"
+  },
+  {
+   "id": "y0234",
+   "ts": "2026-01-16T08:13:00",
+   "kind": "store",
+   "text": "EMA ESPRESSO BAR\nPraha\n16.01.2026 16:25\nFlat white               110 Kč\nCELKEM                   110 Kč\nKarta ****4421"
+  },
+  {
+   "id": "y0235",
+   "ts": "2026-01-16T10:54:00",
+   "kind": "store",
+   "text": "note: 5k run, 27:29 yesterday"
+  },
+  {
+   "id": "y0236",
+   "ts": "2026-01-16T12:10:00",
+   "kind": "chitchat",
+   "text": "you're the best"
+  },
+  {
+   "id": "y0237",
+   "ts": "2026-01-16T19:57:00",
+   "kind": "store",
+   "text": "Btw climbing at Smíchoff with Tom today"
+  },
+  {
+   "id": "y0238",
+   "ts": "2026-01-17T12:37:00",
+   "kind": "store",
+   "text": "BILLA\nPraha\n17.01.2026 19:51\nGroceries                600 Kč\nCELKEM                   600 Kč\nKarta ****4421"
+  },
+  {
+   "id": "y0239",
+   "ts": "2026-01-17T23:06:00",
+   "kind": "store",
+   "text": "La Degustation with Eva, 2 140 CZK"
+  },
+  {
+   "id": "y0240",
+   "ts": "2026-01-18T22:14:00",
+   "kind": "store",
+   "text": "bolt home 220 CZK tonight"
+  },
+  {
+   "id": "y0241",
+   "ts": "2026-01-20T08:10:00",
+   "kind": "store",
+   "text": "KAVÁRNA MÍSTO\nPraha\n19.01.2026 10:00\nFlat white                65 Kč\nCELKEM                    65 Kč\nKarta ****4421"
+  },
+  {
+   "id": "y0242",
+   "ts": "2026-01-20T09:19:00",
+   "kind": "store",
+   "text": "Marco (my barber) number is +420 731 000 444"
+  },
+  {
+   "id": "y0243",
+   "ts": "2026-01-20T10:57:00",
+   "kind": "store",
+   "text": "fyi ran 10k in 54:32 (new PB!) yesterday lol"
+  },
+  {
+   "id": "y0244",
+   "ts": "2026-01-20T15:00:00",
+   "kind": "store",
+   "text": "Fyi lunch at Pho Vietnam, 229 CZK 🙂"
+  },
+  {
+   "id": "y0245",
+   "ts": "2026-01-20T19:34:00",
+   "kind": "store",
+   "text": "Climbing at Smíchoff with Tom lol"
+  },
+  {
+   "id": "y0246",
+   "ts": "2026-01-21T10:34:00",
+   "kind": "store",
+   "text": "Coffee at Kavárna Místo 110 CZK this morning"
+  },
+  {
+   "id": "y0247",
+   "ts": "2026-01-21T22:10:00",
+   "kind": "store",
+   "text": "note: dinner with Ondra at La Degustation, 1560 Kč lol"
+  },
+  {
+   "id": "y0248",
+   "ts": "2026-01-21T22:30:00",
+   "kind": "update",
+   "text": "Ok so done with The Mom Test. 4/5"
+  },
+  {
+   "id": "y0249",
+   "ts": "2026-01-22T08:37:00",
+   "kind": "store",
+   "text": "ran 5k in 26:59 today!"
+  },
+  {
+   "id": "y0250",
+   "ts": "2026-01-22T14:28:00",
+   "kind": "store",
+   "text": "Ok so Pho Vietnam lunch 310 CZK today lol"
+  },
+  {
+   "id": "y0251",
+   "ts": "2026-01-23T09:23:00",
+   "kind": "chitchat",
+   "text": "thanks!"
+  },
+  {
+   "id": "y0252",
+   "ts": "2026-01-24T09:16:00",
+   "kind": "store",
+   "text": "Bolt home 250 CZK yesterday!"
+  },
+  {
+   "id": "y0253",
+   "ts": "2026-01-24T09:21:00",
+   "kind": "chitchat",
+   "text": "👍"
+  },
+  {
+   "id": "y0254",
+   "ts": "2026-01-24T13:03:00",
+   "kind": "store",
+   "text": "ALBERT\nPraha\n24.01.2026 20:59\nGroceries               1290 Kč\nCELKEM                  1290 Kč\nKarta ****4421"
+  },
+  {
+   "id": "y0255",
+   "ts": "2026-01-25T23:23:00",
+   "kind": "store",
+   "text": "Bolt home 210 CZK"
+  },
+  {
+   "id": "y0256",
+   "ts": "2026-01-26T07:16:00",
+   "kind": "store",
+   "text": "10k run, 56:15"
+  },
+  {
+   "id": "y0257",
+   "ts": "2026-01-26T08:30:00",
+   "kind": "store",
+   "text": "☕ Café Savoy, 110 CZK this morning 🙂"
+  },
+  {
+   "id": "y0258",
+   "ts": "2026-01-26T09:12:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Nebula board meeting\nDTSTART:20260205T160000\nDTEND:20260205T173000\nLOCATION:Nebula office, Karlín, Prague\nORGANIZER;CN=David Mokos:mailto:david@nebula.ai\nEND:VEVENT"
+  },
+  {
+   "id": "y0259",
+   "ts": "2026-01-26T21:53:00",
+   "kind": "chitchat",
+   "text": "hmm"
+  },
+  {
+   "id": "y0260",
+   "ts": "2026-01-27T13:38:00",
+   "kind": "store",
+   "text": "Lunch at Bistro Monk, 310 CZK today!"
+  },
+  {
+   "id": "y0261",
+   "ts": "2026-01-27T22:00:00",
+   "kind": "store",
+   "text": "New book: Sapiens (Yuval Noah Harari)"
+  },
+  {
+   "id": "y0262",
+   "ts": "2026-01-28T08:48:00",
+   "kind": "store",
+   "text": "Ok so Café Savoy coffee 65 CZK 🙂"
+  },
+  {
+   "id": "y0263",
+   "ts": "2026-01-28T23:12:00",
+   "kind": "store",
+   "text": "ok so had dinner at La Degustation with Kuba (1560 Kč)"
+  },
+  {
+   "id": "y0264",
+   "ts": "2026-01-29T07:45:00",
+   "kind": "store",
+   "text": "10k run, 55:44 lol"
+  },
+  {
+   "id": "y0265",
+   "ts": "2026-01-29T13:44:00",
+   "kind": "store",
+   "text": "lunch at Lokál, 310 Kč today lol"
+  },
+  {
+   "id": "y0266",
+   "ts": "2026-01-31T09:21:00",
+   "kind": "store",
+   "text": "eMA Espresso Bar coffee 125 CZK today"
+  },
+  {
+   "id": "y0267",
+   "ts": "2026-01-31T12:46:00",
+   "kind": "store",
+   "text": "ok so Albert shopping, 890 CZK this morning"
+  },
+  {
+   "id": "y0268",
+   "ts": "2026-01-31T23:10:00",
+   "kind": "store",
+   "text": "Had dinner at Sasazu with Tom (1 240 CZK) lol"
+  },
+  {
+   "id": "y0269",
+   "ts": "2026-02-01T08:41:00",
+   "kind": "store",
+   "text": {
+    "type": "email",
+    "from": "sarah@northwind.vc",
+    "to": "adam@nebula.ai",
+    "subject": "Term sheet draft",
+    "date": "2026-02-01T08:41:00",
+    "body": "Adam, attached is the draft term sheet for Nebula's seed: $3M at a $15M post-money valuation, 1x non-participating preference. — Sarah Kim, Partner, Northwind Ventures"
+   }
+  },
+  {
+   "id": "y0270",
+   "ts": "2026-02-01T09:30:00",
+   "kind": "store",
+   "text": "Remind me to file Czech tax return by Mar 31"
+  },
+  {
+   "id": "y0271",
+   "ts": "2026-02-01T10:05:00",
+   "kind": "store",
+   "text": "note: Spotify renewed 169 Kč 🙂"
+  },
+  {
+   "id": "y0272",
+   "ts": "2026-02-01T22:19:00",
+   "kind": "store",
+   "text": "Btw took a Bolt, 160 CZK tonight"
+  },
+  {
+   "id": "y0273",
+   "ts": "2026-02-02T08:55:00",
+   "kind": "store",
+   "text": "10k run, 55:05 today lol"
+  },
+  {
+   "id": "y0274",
+   "ts": "2026-02-02T09:56:00",
+   "kind": "store",
+   "text": "EMA ESPRESSO BAR\nPraha\n02.02.2026 09:04\nFlat white                65 Kč\nCELKEM                    65 Kč\nKarta ****4421"
+  },
+  {
+   "id": "y0275",
+   "ts": "2026-02-02T20:04:00",
+   "kind": "chitchat",
+   "text": "nvm"
+  },
+  {
+   "id": "y0276",
+   "ts": "2026-02-03T13:57:00",
+   "kind": "store",
+   "text": "lunch at Bistro Monk, 265 Kč"
+  },
+  {
+   "id": "y0277",
+   "ts": "2026-02-03T19:15:00",
+   "kind": "store",
+   "text": "Climbing at Smíchoff with Tom today!"
+  },
+  {
+   "id": "y0278",
+   "ts": "2026-02-04T10:15:00",
+   "kind": "store",
+   "text": "EMA ESPRESSO BAR\nPraha\n04.02.2026 08:04\nFlat white               125 Kč\nCELKEM                   125 Kč\nKarta ****4421"
+  },
+  {
+   "id": "y0279",
+   "ts": "2026-02-04T22:24:00",
+   "kind": "store",
+   "text": "Btw La Degustation with Kuba, 1560 Kč tonight"
+  },
+  {
+   "id": "y0280",
+   "ts": "2026-02-05T12:47:00",
+   "kind": "store",
+   "text": "Ok so lunch at Pho Vietnam, 229 Kč lol"
+  },
+  {
+   "id": "y0281",
+   "ts": "2026-02-06T19:20:00",
+   "kind": "store",
+   "text": "Climbing at Smíchoff with Tom today"
+  },
+  {
+   "id": "y0282",
+   "ts": "2026-02-07T12:00:00",
+   "kind": "store",
+   "text": "Ok so Albert shopping, 940 CZK this morning"
+  },
+  {
+   "id": "y0283",
+   "ts": "2026-02-07T17:22:00",
+   "kind": "chitchat",
+   "text": "👍"
+  },
+  {
+   "id": "y0284",
+   "ts": "2026-02-07T23:15:00",
+   "kind": "store",
+   "text": "Fyi had dinner at Sasazu with Dave (1560 Kč)"
+  },
+  {
+   "id": "y0285",
+   "ts": "2026-02-08T13:38:00",
+   "kind": "chitchat",
+   "text": "👍"
+  },
+  {
+   "id": "y0286",
+   "ts": "2026-02-08T23:56:00",
+   "kind": "store",
+   "text": "took a Bolt, 280 CZK 🙂"
+  },
+  {
+   "id": "y0287",
+   "ts": "2026-02-09T10:00:00",
+   "kind": "store",
+   "text": "booked the dentist (Dr. Horák) again for Feb 18 at 8:30"
+  },
+  {
+   "id": "y0288",
+   "ts": "2026-02-09T18:03:00",
+   "kind": "chitchat",
+   "text": "thanks!"
+  },
+  {
+   "id": "y0289",
+   "ts": "2026-02-10T13:30:00",
+   "kind": "store",
+   "text": "Btw lunch at Pho Vietnam, 265 Kč today!"
+  },
+  {
+   "id": "y0290",
+   "ts": "2026-02-10T19:00:00",
+   "kind": "update",
+   "text": "Tom changed his number, new one is +420 777 999 000"
+  },
+  {
+   "id": "y0291",
+   "ts": "2026-02-10T19:46:00",
+   "kind": "chitchat",
+   "text": "👍"
+  },
+  {
+   "id": "y0292",
+   "ts": "2026-02-10T21:23:00",
+   "kind": "store",
+   "text": "note: climbing at Smíchoff with Tom"
+  },
+  {
+   "id": "y0293",
+   "ts": "2026-02-11T10:24:00",
+   "kind": "store",
+   "text": "Ok so Café Savoy coffee 95 CZK today!"
+  },
+  {
+   "id": "y0294",
+   "ts": "2026-02-11T22:14:00",
+   "kind": "store",
+   "text": "note: dinner with Kuba at Sasazu, 2480 CZK lol"
+  },
+  {
+   "id": "y0295",
+   "ts": "2026-02-12T10:34:00",
+   "kind": "chitchat",
+   "text": "good morning"
+  },
+  {
+   "id": "y0296",
+   "ts": "2026-02-13T19:08:00",
+   "kind": "store",
+   "text": "climbing at Smíchoff with Tom!"
+  },
+  {
+   "id": "y0297",
+   "ts": "2026-02-13T22:35:00",
+   "kind": "question",
+   "text": "can you draft an email to Sarah?"
+  },
+  {
+   "id": "y0298",
+   "ts": "2026-02-13T23:57:00",
+   "kind": "store",
+   "text": "note: took a Bolt, 360 CZK 🙂"
+  },
+  {
+   "id": "y0299",
+   "ts": "2026-02-14T09:12:00",
+   "kind": "store",
+   "text": "Btw EMA Espresso Bar coffee 110 Kč yesterday"
+  },
+  {
+   "id": "y0300",
+   "ts": "2026-02-14T12:39:00",
+   "kind": "store",
+   "text": "ok so groceries at Billa 1400 CZK this morning 🙂"
+  },
+  {
+   "id": "y0301",
+   "ts": "2026-02-15T21:03:00",
+   "kind": "chitchat",
+   "text": "good morning"
+  },
+  {
+   "id": "y0302",
+   "ts": "2026-02-15T23:48:00",
+   "kind": "store",
+   "text": "fyi took a Bolt, 300 CZK lol"
+  },
+  {
+   "id": "y0303",
+   "ts": "2026-02-16T09:11:00",
+   "kind": "store",
+   "text": "Ran 5k in 27:37 today 🙂"
+  },
+  {
+   "id": "y0304",
+   "ts": "2026-02-16T09:42:00",
+   "kind": "store",
+   "text": "Note: Café Savoy coffee 95 CZK lol"
+  },
+  {
+   "id": "y0305",
+   "ts": "2026-02-16T15:23:00",
+   "kind": "chitchat",
+   "text": "nvm"
+  },
+  {
+   "id": "y0306",
+   "ts": "2026-02-16T18:00:00",
+   "kind": "delete",
+   "text": "cancelled the Feb 18 dentist appointment, will do it in SF"
+  },
+  {
+   "id": "y0307",
+   "ts": "2026-02-17T14:40:00",
+   "kind": "store",
+   "text": "btw lunch at Bistro Monk, 385 Kč today lol"
+  },
+  {
+   "id": "y0308",
+   "ts": "2026-02-18T08:45:00",
+   "kind": "store",
+   "text": "coffee at Café Savoy 125 Kč!"
+  },
+  {
+   "id": "y0309",
+   "ts": "2026-02-19T12:57:00",
+   "kind": "store",
+   "text": "Fyi lunch at Bistro Monk, 265 CZK"
+  },
+  {
+   "id": "y0310",
+   "ts": "2026-02-19T19:31:00",
+   "kind": "question",
+   "text": "translate 'thank you' to Czech"
+  },
+  {
+   "id": "y0311",
+   "ts": "2026-02-20T09:46:00",
+   "kind": "store",
+   "text": "ok so ☕ EMA Espresso Bar, 65 Kč today"
+  },
+  {
+   "id": "y0312",
+   "ts": "2026-02-20T17:21:00",
+   "kind": "store",
+   "text": "WE CLOSED THE SEED 🎉 $3M led by Northwind Ventures (Sarah Kim)"
+  },
+  {
+   "id": "y0313",
+   "ts": "2026-02-20T19:40:00",
+   "kind": "store",
+   "text": "ok so climbing at Smíchoff with Tom"
+  },
+  {
+   "id": "y0314",
+   "ts": "2026-02-21T00:00:00",
+   "kind": "store",
+   "text": "Ok so took a Bolt, 270 Kč lol"
+  },
+  {
+   "id": "y0315",
+   "ts": "2026-02-21T12:59:00",
+   "kind": "store",
+   "text": "BILLA\nPraha\n21.02.2026 20:00\nGroceries               1300 Kč\nCELKEM                  1300 Kč\nKarta ****4421"
+  },
+  {
+   "id": "y0316",
+   "ts": "2026-02-21T22:20:00",
+   "kind": "chitchat",
+   "text": "nvm"
+  },
+  {
+   "id": "y0317",
+   "ts": "2026-02-21T23:18:00",
+   "kind": "store",
+   "text": "ok so Sasazu with Tom, 2 480 CZK"
+  },
+  {
+   "id": "y0318",
+   "ts": "2026-02-22T22:36:00",
+   "kind": "question",
+   "text": "what's the weather like today?"
+  },
+  {
+   "id": "y0319",
+   "ts": "2026-02-22T22:57:00",
+   "kind": "store",
+   "text": "ok so took a Bolt, 370 Kč 🙂"
+  },
+  {
+   "id": "y0320",
+   "ts": "2026-02-23T09:12:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Nebula board meeting\nDTSTART:20260305T160000\nDTEND:20260305T173000\nLOCATION:Nebula office, Karlín, Prague\nORGANIZER;CN=David Mokos:mailto:david@nebula.ai\nEND:VEVENT"
+  },
+  {
+   "id": "y0321",
+   "ts": "2026-02-23T10:29:00",
+   "kind": "store",
+   "text": "Ok so coffee at EMA Espresso Bar 125 Kč lol"
+  },
+  {
+   "id": "y0322",
+   "ts": "2026-02-23T12:16:00",
+   "kind": "question",
+   "text": "remind me what Tom's number is?"
+  },
+  {
+   "id": "y0323",
+   "ts": "2026-02-24T14:14:00",
+   "kind": "store",
+   "text": "fyi Lokál lunch 189 CZK"
+  },
+  {
+   "id": "y0324",
+   "ts": "2026-02-24T19:45:00",
+   "kind": "chitchat",
+   "text": "ok"
+  },
+  {
+   "id": "y0325",
+   "ts": "2026-02-25T08:47:00",
+   "kind": "store",
+   "text": "CAFÉ SAVOY\nPraha\n25.02.2026 20:25\nFlat white                85 Kč\nCELKEM                    85 Kč\nKarta ****4421"
+  },
+  {
+   "id": "y0326",
+   "ts": "2026-02-25T18:00:00",
+   "kind": "delete",
+   "text": "Never mind the 'renew Czech ID card' reminder, not needed anymore"
+  },
+  {
+   "id": "y0327",
+   "ts": "2026-02-25T20:25:00",
+   "kind": "chitchat",
+   "text": "lol ok"
+  },
+  {
+   "id": "y0328",
+   "ts": "2026-02-25T21:28:00",
+   "kind": "store",
+   "text": "btw dinner with Kuba at Eska, 2 140 CZK"
+  },
+  {
+   "id": "y0329",
+   "ts": "2026-02-25T22:30:00",
+   "kind": "update",
+   "text": "Done with Sapiens. 3/5 lol"
+  },
+  {
+   "id": "y0330",
+   "ts": "2026-02-26T13:20:00",
+   "kind": "store",
+   "text": "lunch at Bistro Monk, 265 CZK"
+  },
+  {
+   "id": "y0331",
+   "ts": "2026-02-27T09:15:00",
+   "kind": "question",
+   "text": "summarize this article for me"
+  },
+  {
+   "id": "y0332",
+   "ts": "2026-02-27T09:38:00",
+   "kind": "store",
+   "text": "Ok so ☕ Café Savoy, 125 CZK!"
+  },
+  {
+   "id": "y0333",
+   "ts": "2026-02-27T20:17:00",
+   "kind": "store",
+   "text": "note: climbing at Smíchoff with Tom tonight"
+  },
+  {
+   "id": "y0334",
+   "ts": "2026-02-28T10:08:00",
+   "kind": "store",
+   "text": "Took a Bolt, 250 Kč yesterday"
+  },
+  {
+   "id": "y0335",
+   "ts": "2026-02-28T11:53:00",
+   "kind": "store",
+   "text": "billa shopping, 1 890 CZK lol"
+  },
+  {
+   "id": "y0336",
+   "ts": "2026-02-28T22:08:00",
+   "kind": "store",
+   "text": "Had dinner at Sasazu with Lucie (2480 Kč) tonight"
+  },
+  {
+   "id": "y0337",
+   "ts": "2026-03-01T10:05:00",
+   "kind": "store",
+   "text": "spotify renewed 169 CZK"
+  },
+  {
+   "id": "y0338",
+   "ts": "2026-03-02T09:22:00",
+   "kind": "store",
+   "text": "btw ran 10k in 53:54 (new PB!) this morning 🙂"
+  },
+  {
+   "id": "y0339",
+   "ts": "2026-03-02T09:26:00",
+   "kind": "store",
+   "text": "KAVÁRNA MÍSTO\nPraha\n02.03.2026 19:30\nFlat white                85 Kč\nCELKEM                    85 Kč\nKarta ****4421"
+  },
+  {
+   "id": "y0340",
+   "ts": "2026-03-02T10:25:00",
+   "kind": "store",
+   "text": "we hired Nina Rossi as our first engineer at Nebula, starts Mar 1. email nina@nebula.ai. she climbs too!"
+  },
+  {
+   "id": "y0341",
+   "ts": "2026-03-02T10:51:00",
+   "kind": "store",
+   "text": "Climbing at Smíchoff with Tom yesterday lol"
+  },
+  {
+   "id": "y0342",
+   "ts": "2026-03-03T20:48:00",
+   "kind": "store",
+   "text": "note: climbing at Smíchoff with Tom"
+  },
+  {
+   "id": "y0343",
+   "ts": "2026-03-03T22:00:00",
+   "kind": "store",
+   "text": "new book: Shoe Dog (Phil Knight)"
+  },
+  {
+   "id": "y0344",
+   "ts": "2026-03-04T09:14:00",
+   "kind": "store",
+   "text": "lunch at Bistro Monk, 265 Kč yesterday"
+  },
+  {
+   "id": "y0345",
+   "ts": "2026-03-04T22:31:00",
+   "kind": "store",
+   "text": "Note: Sasazu with Dave, 890 Kč tonight"
+  },
+  {
+   "id": "y0346",
+   "ts": "2026-03-05T08:59:00",
+   "kind": "store",
+   "text": "fyi ran 10k in 53:21 (new PB!) this morning"
+  },
+  {
+   "id": "y0347",
+   "ts": "2026-03-05T14:45:00",
+   "kind": "store",
+   "text": "Fyi lunch at Pho Vietnam, 189 CZK today"
+  },
+  {
+   "id": "y0348",
+   "ts": "2026-03-05T16:06:00",
+   "kind": "chitchat",
+   "text": "thanks!"
+  },
+  {
+   "id": "y0349",
+   "ts": "2026-03-06T09:45:00",
+   "kind": "store",
+   "text": "EMA ESPRESSO BAR\nPraha\n06.03.2026 17:24\nFlat white               110 Kč\nCELKEM                   110 Kč\nKarta ****4421"
+  },
+  {
+   "id": "y0350",
+   "ts": "2026-03-06T13:06:00",
+   "kind": "chitchat",
+   "text": "ok cool"
+  },
+  {
+   "id": "y0351",
+   "ts": "2026-03-07T13:15:00",
+   "kind": "store",
+   "text": "Btw groceries at Billa 1390 CZK lol"
+  },
+  {
+   "id": "y0352",
+   "ts": "2026-03-07T20:01:00",
+   "kind": "question",
+   "text": "any ideas for dinner tonight?"
+  },
+  {
+   "id": "y0353",
+   "ts": "2026-03-07T22:25:00",
+   "kind": "store",
+   "text": "Btw dinner with Eva at Sasazu, 1560 CZK tonight lol"
+  },
+  {
+   "id": "y0354",
+   "ts": "2026-03-09T07:53:00",
+   "kind": "store",
+   "text": "10k run, 54:20 🙂"
+  },
+  {
+   "id": "y0355",
+   "ts": "2026-03-09T10:32:00",
+   "kind": "store",
+   "text": "☕ EMA Espresso Bar, 65 CZK this morning lol"
+  },
+  {
+   "id": "y0356",
+   "ts": "2026-03-10T11:06:00",
+   "kind": "question",
+   "text": "can you draft an email to Sarah?"
+  },
+  {
+   "id": "y0357",
+   "ts": "2026-03-10T14:03:00",
+   "kind": "store",
+   "text": {
+    "type": "email",
+    "from": "no-reply@united.com",
+    "to": "adam@nebula.ai",
+    "subject": "Your trip confirmation K7QX2P",
+    "date": "2026-03-10T14:03:00",
+    "body": "Confirmation K7QX2P. UA 8843 Prague (PRG) to San Francisco (SFO), Tue Mar 31 2026, dep 10:05. Total paid: 18,450 CZK."
+   }
+  },
+  {
+   "id": "y0358",
+   "ts": "2026-03-10T19:59:00",
+   "kind": "store",
+   "text": "climbing at Smíchoff with Tom"
+  },
+  {
+   "id": "y0359",
+   "ts": "2026-03-11T21:56:00",
+   "kind": "store",
+   "text": "La Degustation with Ondra, 1 560 CZK"
+  },
+  {
+   "id": "y0360",
+   "ts": "2026-03-12T08:11:00",
+   "kind": "store",
+   "text": "KAVÁRNA MÍSTO\nPraha\n11.03.2026 18:32\nFlat white                95 Kč\nCELKEM                    95 Kč\nKarta ****4421"
+  },
+  {
+   "id": "y0361",
+   "ts": "2026-03-12T22:01:00",
+   "kind": "chitchat",
+   "text": "ok cool"
+  },
+  {
+   "id": "y0362",
+   "ts": "2026-03-13T10:34:00",
+   "kind": "store",
+   "text": "EMA ESPRESSO BAR\nPraha\n13.03.2026 12:48\nFlat white                95 Kč\nCELKEM                    95 Kč\nKarta ****4421"
+  },
+  {
+   "id": "y0363",
+   "ts": "2026-03-13T22:15:00",
+   "kind": "store",
+   "text": "note: Bolt home 350 CZK"
+  },
+  {
+   "id": "y0364",
+   "ts": "2026-03-14T12:54:00",
+   "kind": "store",
+   "text": "Btw groceries at Billa 940 CZK this morning!"
+  },
+  {
+   "id": "y0365",
+   "ts": "2026-03-15T22:30:00",
+   "kind": "store",
+   "text": "Ok so Bolt home 200 CZK today lol"
+  },
+  {
+   "id": "y0366",
+   "ts": "2026-03-16T09:25:00",
+   "kind": "store",
+   "text": "Coffee at EMA Espresso Bar 95 CZK"
+  },
+  {
+   "id": "y0367",
+   "ts": "2026-03-16T11:39:00",
+   "kind": "store",
+   "text": "Eva Green joined Nebula as our designer, eva.green@nebula.ai (not my Eva lol)"
+  },
+  {
+   "id": "y0368",
+   "ts": "2026-03-16T12:21:00",
+   "kind": "question",
+   "text": "what's the weather like today?"
+  },
+  {
+   "id": "y0369",
+   "ts": "2026-03-17T20:09:00",
+   "kind": "store",
+   "text": "climbing at Smíchoff with Tom today"
+  },
+  {
+   "id": "y0370",
+   "ts": "2026-03-18T10:10:00",
+   "kind": "store",
+   "text": "pho Vietnam lunch 385 CZK yesterday"
+  },
+  {
+   "id": "y0371",
+   "ts": "2026-03-18T10:48:00",
+   "kind": "store",
+   "text": "Café Savoy coffee 110 CZK this morning"
+  },
+  {
+   "id": "y0372",
+   "ts": "2026-03-18T18:00:00",
+   "kind": "update",
+   "text": "Btw file Czech tax return — done 🙂"
+  },
+  {
+   "id": "y0373",
+   "ts": "2026-03-20T09:39:00",
+   "kind": "store",
+   "text": "Note: coffee at Kavárna Místo 85 CZK this morning"
+  },
+  {
+   "id": "y0374",
+   "ts": "2026-03-20T16:12:00",
+   "kind": "store",
+   "text": {
+    "type": "email",
+    "from": "raj.gupta@gmail.com",
+    "to": "adam@nebula.ai",
+    "subject": "Lease for 1450 Valencia St",
+    "date": "2026-03-20T16:12:00",
+    "body": "Hi Adam, lease starts April 1, 2026. Rent $3,200/month due on the 1st, security deposit $4,800. Call me anytime: +1 415 555 0187. — Raj Gupta"
+   }
+  },
+  {
+   "id": "y0375",
+   "ts": "2026-03-20T19:38:00",
+   "kind": "store",
+   "text": "climbing at Smíchoff with Tom today"
+  },
+  {
+   "id": "y0376",
+   "ts": "2026-03-20T22:34:00",
+   "kind": "store",
+   "text": "Fyi took a Bolt, 210 CZK tonight!"
+  },
+  {
+   "id": "y0377",
+   "ts": "2026-03-21T12:28:00",
+   "kind": "store",
+   "text": "ok so Albert shopping, 1640 Kč"
+  },
+  {
+   "id": "y0378",
+   "ts": "2026-03-21T22:48:00",
+   "kind": "store",
+   "text": "Fyi Sasazu with Kuba, 2140 CZK"
+  },
+  {
+   "id": "y0379",
+   "ts": "2026-03-22T14:40:00",
+   "kind": "question",
+   "text": "how much did I spend this week?"
+  },
+  {
+   "id": "y0380",
+   "ts": "2026-03-23T09:10:00",
+   "kind": "store",
+   "text": "Btw 5k run, 26:05 this morning"
+  },
+  {
+   "id": "y0381",
+   "ts": "2026-03-23T09:12:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Nebula board meeting\nDTSTART:20260402T160000\nDTEND:20260402T173000\nLOCATION:1 Mission St, San Francisco\nORGANIZER;CN=David Mokos:mailto:david@nebula.ai\nEND:VEVENT"
+  },
+  {
+   "id": "y0382",
+   "ts": "2026-03-23T13:02:00",
+   "kind": "chitchat",
+   "text": "ok cool"
+  },
+  {
+   "id": "y0383",
+   "ts": "2026-03-24T08:58:00",
+   "kind": "store",
+   "text": "btw Café Savoy coffee 95 Kč yesterday"
+  },
+  {
+   "id": "y0384",
+   "ts": "2026-03-24T10:52:00",
+   "kind": "question",
+   "text": "what time is it in Prague?"
+  },
+  {
+   "id": "y0385",
+   "ts": "2026-03-24T12:38:00",
+   "kind": "store",
+   "text": "Lunch at Lokál, 189 CZK"
+  },
+  {
+   "id": "y0386",
+   "ts": "2026-03-25T10:43:00",
+   "kind": "store",
+   "text": "EMA ESPRESSO BAR\nPraha\n25.03.2026 11:31\nFlat white                95 Kč\nCELKEM                    95 Kč\nKarta ****4421"
+  },
+  {
+   "id": "y0387",
+   "ts": "2026-03-25T22:30:00",
+   "kind": "update",
+   "text": "Note: done with Shoe Dog. 5/5"
+  },
+  {
+   "id": "y0388",
+   "ts": "2026-03-26T13:19:00",
+   "kind": "store",
+   "text": "ok so Pho Vietnam lunch 310 Kč"
+  },
+  {
+   "id": "y0389",
+   "ts": "2026-03-26T22:07:00",
+   "kind": "question",
+   "text": "remind me what Tom's number is?"
+  },
+  {
+   "id": "y0390",
+   "ts": "2026-03-27T09:30:00",
+   "kind": "store",
+   "text": "KAVÁRNA MÍSTO\nPraha\n27.03.2026 14:51\nFlat white               125 Kč\nCELKEM                   125 Kč\nKarta ****4421"
+  },
+  {
+   "id": "y0391",
+   "ts": "2026-03-27T15:09:00",
+   "kind": "chitchat",
+   "text": "ok cool"
+  },
+  {
+   "id": "y0392",
+   "ts": "2026-03-28T08:40:00",
+   "kind": "store",
+   "text": "btw climbing at Smíchoff with Tom, finally sent a 6c yesterday 🙂"
+  },
+  {
+   "id": "y0393",
+   "ts": "2026-03-28T12:04:00",
+   "kind": "store",
+   "text": "Note: Billa shopping, 1 190 CZK lol"
+  },
+  {
+   "id": "y0394",
+   "ts": "2026-03-28T22:00:00",
+   "kind": "store",
+   "text": "Note: new book: Deep Work (Cal Newport)!"
+  },
+  {
+   "id": "y0395",
+   "ts": "2026-03-29T09:22:00",
+   "kind": "store",
+   "text": "Had dinner at Eska with Ondra (2140 Kč) yesterday"
+  },
+  {
+   "id": "y0396",
+   "ts": "2026-03-29T14:51:00",
+   "kind": "question",
+   "text": "what's the weather like today?"
+  },
+  {
+   "id": "y0397",
+   "ts": "2026-03-29T20:31:00",
+   "kind": "store",
+   "text": "ended my Smíchoff membership, last month is March"
+  },
+  {
+   "id": "y0398",
+   "ts": "2026-03-29T23:43:00",
+   "kind": "store",
+   "text": "Ok so Bolt home 150 CZK"
+  },
+  {
+   "id": "y0399",
+   "ts": "2026-03-30T07:48:00",
+   "kind": "store",
+   "text": "ran 5k in 25:35 (new PB!) today"
+  },
+  {
+   "id": "y0400",
+   "ts": "2026-03-31T10:52:00",
+   "kind": "store",
+   "text": "CAFÉ SAVOY\nPraha\n30.03.2026 17:08\nFlat white                85 Kč\nCELKEM                    85 Kč\nKarta ****4421"
+  },
+  {
+   "id": "y0401",
+   "ts": "2026-04-01T09:28:00",
+   "kind": "store",
+   "text": "Rent paid for April: $3,200!"
+  },
+  {
+   "id": "y0402",
+   "ts": "2026-04-01T09:33:00",
+   "kind": "store",
+   "text": "Ok so Philz Coffee coffee $5.25 this morning"
+  },
+  {
+   "id": "y0403",
+   "ts": "2026-04-01T10:05:00",
+   "kind": "store",
+   "text": "fyi Spotify renewed $11.99"
+  },
+  {
+   "id": "y0404",
+   "ts": "2026-04-01T21:33:00",
+   "kind": "update",
+   "text": "landed in SF! moved into my new place at 1450 Valencia St. new chapter"
+  },
+  {
+   "id": "y0405",
+   "ts": "2026-04-03T09:06:00",
+   "kind": "store",
+   "text": "btw ☕ Blue Bottle, $4.50 today"
+  },
+  {
+   "id": "y0406",
+   "ts": "2026-04-03T18:12:00",
+   "kind": "store",
+   "text": "joined Mission Cliffs, $110/month"
+  },
+  {
+   "id": "y0407",
+   "ts": "2026-04-03T20:10:00",
+   "kind": "store",
+   "text": "Btw climbing at Mission Cliffs with Nina"
+  },
+  {
+   "id": "y0408",
+   "ts": "2026-04-04T08:43:00",
+   "kind": "store",
+   "text": "btw Uber home $34.59 yesterday!"
+  },
+  {
+   "id": "y0409",
+   "ts": "2026-04-04T09:56:00",
+   "kind": "store",
+   "text": "Ok so coffee at Blue Bottle $6.75 lol"
+  },
+  {
+   "id": "y0410",
+   "ts": "2026-04-04T16:41:00",
+   "kind": "question",
+   "text": "what's the weather like today?"
+  },
+  {
+   "id": "y0411",
+   "ts": "2026-04-05T09:30:00",
+   "kind": "store",
+   "text": "Groceries at Trader Joe's $91.46 yesterday"
+  },
+  {
+   "id": "y0412",
+   "ts": "2026-04-05T09:30:00",
+   "kind": "store",
+   "text": "remind me to get SF driver's license by Jun 30"
+  },
+  {
+   "id": "y0413",
+   "ts": "2026-04-05T10:24:00",
+   "kind": "chitchat",
+   "text": "ok cool"
+  },
+  {
+   "id": "y0414",
+   "ts": "2026-04-06T08:21:00",
+   "kind": "store",
+   "text": "10k run, 53:06 (new PB!) this morning"
+  },
+  {
+   "id": "y0415",
+   "ts": "2026-04-06T10:01:00",
+   "kind": "store",
+   "text": "uber home 28.52 USD yesterday lol"
+  },
+  {
+   "id": "y0416",
+   "ts": "2026-04-06T22:18:00",
+   "kind": "chitchat",
+   "text": "nvm"
+  },
+  {
+   "id": "y0417",
+   "ts": "2026-04-07T08:41:00",
+   "kind": "store",
+   "text": "coffee at Philz Coffee $5.50 yesterday"
+  },
+  {
+   "id": "y0418",
+   "ts": "2026-04-07T09:59:00",
+   "kind": "chitchat",
+   "text": "nvm"
+  },
+  {
+   "id": "y0419",
+   "ts": "2026-04-07T12:50:00",
+   "kind": "store",
+   "text": "fyi lunch at Souvla, $16.00 🙂"
+  },
+  {
+   "id": "y0420",
+   "ts": "2026-04-08T10:50:00",
+   "kind": "store",
+   "text": "note: climbing at Mission Cliffs with Nina yesterday"
+  },
+  {
+   "id": "y0421",
+   "ts": "2026-04-08T17:29:00",
+   "kind": "chitchat",
+   "text": "lol ok"
+  },
+  {
+   "id": "y0422",
+   "ts": "2026-04-09T08:13:00",
+   "kind": "store",
+   "text": "Fyi ran 10k in 53:05 (new PB!) 🙂"
+  },
+  {
+   "id": "y0423",
+   "ts": "2026-04-09T08:57:00",
+   "kind": "store",
+   "text": "Note: ☕ Sightglass, $4.50 yesterday"
+  },
+  {
+   "id": "y0424",
+   "ts": "2026-04-09T15:00:00",
+   "kind": "store",
+   "text": "Lunch at Tartine Manufactory, $18.75"
+  },
+  {
+   "id": "y0425",
+   "ts": "2026-04-10T08:59:00",
+   "kind": "store",
+   "text": "PHILZ COFFEE\nSan Francisco, CA\n04/10/2026 12:38\nOat latte               4.50\nTOTAL               $   4.50\nVISA ****4421"
+  },
+  {
+   "id": "y0426",
+   "ts": "2026-04-10T12:19:00",
+   "kind": "update",
+   "text": "got a US number: +1 415 555 0199, that's my main number now"
+  },
+  {
+   "id": "y0427",
+   "ts": "2026-04-10T19:33:00",
+   "kind": "store",
+   "text": "Btw climbing at Mission Cliffs with Nina"
+  },
+  {
+   "id": "y0428",
+   "ts": "2026-04-10T19:40:00",
+   "kind": "question",
+   "text": "how much did I spend this week?"
+  },
+  {
+   "id": "y0429",
+   "ts": "2026-04-10T23:51:00",
+   "kind": "store",
+   "text": "Note: took a Uber, $30.03 tonight"
+  },
+  {
+   "id": "y0430",
+   "ts": "2026-04-11T11:16:00",
+   "kind": "store",
+   "text": "WHOLE FOODS\nSan Francisco, CA\n04/11/2026 20:35\nGroceries              75.75\nTOTAL               $  75.75\nVISA ****4421"
+  },
+  {
+   "id": "y0431",
+   "ts": "2026-04-11T22:29:00",
+   "kind": "store",
+   "text": "Btw dinner with Dave at Zuni Café, $96.80 🙂"
+  },
+  {
+   "id": "y0432",
+   "ts": "2026-04-12T09:30:00",
+   "kind": "store",
+   "text": "btw remind me to cancel Czech phone plan by May 01 🙂"
+  },
+  {
+   "id": "y0433",
+   "ts": "2026-04-12T22:35:00",
+   "kind": "chitchat",
+   "text": "haha nice"
+  },
+  {
+   "id": "y0434",
+   "ts": "2026-04-13T07:30:00",
+   "kind": "store",
+   "text": "fyi ran 10k in 52:34 (new PB!) lol"
+  },
+  {
+   "id": "y0435",
+   "ts": "2026-04-13T10:35:00",
+   "kind": "store",
+   "text": "philz Coffee coffee $4.50"
+  },
+  {
+   "id": "y0436",
+   "ts": "2026-04-14T13:35:00",
+   "kind": "store",
+   "text": "Souvla lunch 26.50 USD today 🙂"
+  },
+  {
+   "id": "y0437",
+   "ts": "2026-04-14T20:10:00",
+   "kind": "question",
+   "text": "remind me what Tom's number is?"
+  },
+  {
+   "id": "y0438",
+   "ts": "2026-04-14T21:02:00",
+   "kind": "store",
+   "text": "climbing at Mission Cliffs with Nina"
+  },
+  {
+   "id": "y0439",
+   "ts": "2026-04-15T09:57:00",
+   "kind": "store",
+   "text": "note: coffee at Sightglass $4.50 🙂"
+  },
+  {
+   "id": "y0440",
+   "ts": "2026-04-15T10:46:00",
+   "kind": "store",
+   "text": "David's US number is +1 628 688 4994"
+  },
+  {
+   "id": "y0441",
+   "ts": "2026-04-15T22:36:00",
+   "kind": "store",
+   "text": "Had dinner at State Bird Provisions with Nina (135.40 USD)"
+  },
+  {
+   "id": "y0442",
+   "ts": "2026-04-16T13:30:00",
+   "kind": "store",
+   "text": "ok so Souvla lunch 26.50 USD today"
+  },
+  {
+   "id": "y0443",
+   "ts": "2026-04-17T08:40:00",
+   "kind": "store",
+   "text": "btw Philz Coffee coffee $6.75 lol"
+  },
+  {
+   "id": "y0444",
+   "ts": "2026-04-17T19:48:00",
+   "kind": "store",
+   "text": "Climbing at Mission Cliffs with Nina"
+  },
+  {
+   "id": "y0445",
+   "ts": "2026-04-17T19:53:00",
+   "kind": "question",
+   "text": "what time is it in Prague?"
+  },
+  {
+   "id": "y0446",
+   "ts": "2026-04-17T22:24:00",
+   "kind": "store",
+   "text": "Fyi took a Uber, $24.35"
+  },
+  {
+   "id": "y0447",
+   "ts": "2026-04-18T11:41:00",
+   "kind": "question",
+   "text": "can you draft an email to Sarah?"
+  },
+  {
+   "id": "y0448",
+   "ts": "2026-04-18T12:41:00",
+   "kind": "store",
+   "text": "TRADER JOE'S\nSan Francisco, CA\n04/18/2026 17:21\nGroceries             132.75\nTOTAL               $ 132.75\nVISA ****4421"
+  },
+  {
+   "id": "y0449",
+   "ts": "2026-04-18T23:01:00",
+   "kind": "store",
+   "text": "zuni Café with David, $135.40 tonight"
+  },
+  {
+   "id": "y0450",
+   "ts": "2026-04-19T23:00:00",
+   "kind": "store",
+   "text": "Took a Uber, $21.66 today"
+  },
+  {
+   "id": "y0451",
+   "ts": "2026-04-20T08:27:00",
+   "kind": "store",
+   "text": "note: 10k run, 53:05 this morning"
+  },
+  {
+   "id": "y0452",
+   "ts": "2026-04-20T09:24:00",
+   "kind": "chitchat",
+   "text": "ok cool"
+  },
+  {
+   "id": "y0453",
+   "ts": "2026-04-20T09:30:00",
+   "kind": "store",
+   "text": "remind me to plan Lisbon trip by May 10"
+  },
+  {
+   "id": "y0454",
+   "ts": "2026-04-21T17:39:00",
+   "kind": "chitchat",
+   "text": "👍"
+  },
+  {
+   "id": "y0455",
+   "ts": "2026-04-22T10:51:00",
+   "kind": "store",
+   "text": "Note: Nopalito lunch 22.00 USD yesterday 🙂"
+  },
+  {
+   "id": "y0456",
+   "ts": "2026-04-22T16:37:00",
+   "kind": "question",
+   "text": "translate 'thank you' to Czech"
+  },
+  {
+   "id": "y0457",
+   "ts": "2026-04-22T18:26:00",
+   "kind": "store",
+   "text": "met Priya Patel, engineering manager at Stripe, at a YC mixer. priya@stripe.com"
+  },
+  {
+   "id": "y0458",
+   "ts": "2026-04-22T21:17:00",
+   "kind": "store",
+   "text": "Note: dinner with Priya at Zuni Café, 135.40 USD tonight"
+  },
+  {
+   "id": "y0459",
+   "ts": "2026-04-23T09:15:00",
+   "kind": "store",
+   "text": "Ok so ☕ Blue Bottle, $6.00 yesterday!"
+  },
+  {
+   "id": "y0460",
+   "ts": "2026-04-23T14:50:00",
+   "kind": "store",
+   "text": "Lunch at Souvla, $16.00"
+  },
+  {
+   "id": "y0461",
+   "ts": "2026-04-24T09:00:00",
+   "kind": "store",
+   "text": "coffee at Philz Coffee $4.50 🙂"
+  },
+  {
+   "id": "y0462",
+   "ts": "2026-04-24T20:17:00",
+   "kind": "store",
+   "text": "Climbing at Mission Cliffs with Nina, finally sent a 6c+ today 🙂"
+  },
+  {
+   "id": "y0463",
+   "ts": "2026-04-24T22:30:00",
+   "kind": "update",
+   "text": "Btw finished Deep Work, 4/5"
+  },
+  {
+   "id": "y0464",
+   "ts": "2026-04-25T08:01:00",
+   "kind": "store",
+   "text": "uber home $28.76 yesterday"
+  },
+  {
+   "id": "y0465",
+   "ts": "2026-04-25T10:32:00",
+   "kind": "store",
+   "text": "SIGHTGLASS\nSan Francisco, CA\n04/25/2026 12:23\nOat latte               6.00\nTOTAL               $   6.00\nVISA ****4421"
+  },
+  {
+   "id": "y0466",
+   "ts": "2026-04-25T11:29:00",
+   "kind": "store",
+   "text": "trader Joe's shopping, $114.81 today"
+  },
+  {
+   "id": "y0467",
+   "ts": "2026-04-25T15:34:00",
+   "kind": "chitchat",
+   "text": "good morning"
+  },
+  {
+   "id": "y0468",
+   "ts": "2026-04-25T22:15:00",
+   "kind": "store",
+   "text": "Dinner with David at Zuni Café, $96.80 today"
+  },
+  {
+   "id": "y0469",
+   "ts": "2026-04-26T22:08:00",
+   "kind": "store",
+   "text": "Uber home $24.26"
+  },
+  {
+   "id": "y0470",
+   "ts": "2026-04-26T22:13:00",
+   "kind": "chitchat",
+   "text": "haha nice"
+  },
+  {
+   "id": "y0471",
+   "ts": "2026-04-27T09:12:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Nebula board meeting\nDTSTART:20260507T160000\nDTEND:20260507T173000\nLOCATION:1 Mission St, San Francisco\nORGANIZER;CN=David Mokos:mailto:david@nebula.ai\nEND:VEVENT"
+  },
+  {
+   "id": "y0472",
+   "ts": "2026-04-27T09:13:00",
+   "kind": "store",
+   "text": "10k run, 54:21 this morning"
+  },
+  {
+   "id": "y0473",
+   "ts": "2026-04-27T16:23:00",
+   "kind": "chitchat",
+   "text": "ok"
+  },
+  {
+   "id": "y0474",
+   "ts": "2026-04-28T13:41:00",
+   "kind": "store",
+   "text": "Fyi Nopalito lunch 22.00 USD 🙂"
+  },
+  {
+   "id": "y0475",
+   "ts": "2026-04-28T18:00:00",
+   "kind": "update",
+   "text": "Ok so done: cancel Czech phone plan ✅ lol"
+  },
+  {
+   "id": "y0476",
+   "ts": "2026-04-28T20:16:00",
+   "kind": "store",
+   "text": "fyi climbing at Mission Cliffs with Nina"
+  },
+  {
+   "id": "y0477",
+   "ts": "2026-04-29T10:52:00",
+   "kind": "store",
+   "text": "Btw Philz Coffee coffee $5.50 this morning"
+  },
+  {
+   "id": "y0478",
+   "ts": "2026-04-29T23:03:00",
+   "kind": "store",
+   "text": "Fyi dinner with Nina at State Bird Provisions, $68.00 today 🙂"
+  },
+  {
+   "id": "y0479",
+   "ts": "2026-04-30T12:40:00",
+   "kind": "store",
+   "text": "Ok so lunch at Souvla, $26.50 today"
+  },
+  {
+   "id": "y0480",
+   "ts": "2026-04-30T22:00:00",
+   "kind": "store",
+   "text": "new book: Dune (Frank Herbert) lol"
+  },
+  {
+   "id": "y0481",
+   "ts": "2026-05-01T08:38:00",
+   "kind": "store",
+   "text": "Note: Blue Bottle coffee $5.25 today lol"
+  },
+  {
+   "id": "y0482",
+   "ts": "2026-05-01T09:10:00",
+   "kind": "store",
+   "text": "Ok so rent paid for May: $3,200 lol"
+  },
+  {
+   "id": "y0483",
+   "ts": "2026-05-01T09:23:00",
+   "kind": "question",
+   "text": "what's on my calendar tomorrow?"
+  },
+  {
+   "id": "y0484",
+   "ts": "2026-05-01T10:05:00",
+   "kind": "store",
+   "text": "Spotify renewed $11.99 lol"
+  },
+  {
+   "id": "y0485",
+   "ts": "2026-05-01T21:06:00",
+   "kind": "store",
+   "text": "Climbing at Mission Cliffs"
+  },
+  {
+   "id": "y0486",
+   "ts": "2026-05-01T23:49:00",
+   "kind": "store",
+   "text": "Uber home 31.10 USD lol"
+  },
+  {
+   "id": "y0487",
+   "ts": "2026-05-02T09:27:00",
+   "kind": "store",
+   "text": "Sightglass coffee $6.00 today"
+  },
+  {
+   "id": "y0488",
+   "ts": "2026-05-02T09:30:00",
+   "kind": "store",
+   "text": {
+    "type": "email",
+    "from": "reservations@memmo.pt",
+    "to": "adam@nebula.ai",
+    "subject": "Booking confirmed: Memmo Alfama",
+    "date": "2026-05-02T09:30:00",
+    "body": "Memmo Alfama Hotel, Lisbon. Check-in May 22, check-out May 26, 2026. 2 guests. Total $980.00."
+   }
+  },
+  {
+   "id": "y0489",
+   "ts": "2026-05-02T12:04:00",
+   "kind": "store",
+   "text": "TRADER JOE'S\nSan Francisco, CA\n05/02/2026 09:31\nGroceries              99.03\nTOTAL               $  99.03\nVISA ****4421"
+  },
+  {
+   "id": "y0490",
+   "ts": "2026-05-03T11:49:00",
+   "kind": "store",
+   "text": "booked flights SFO→LIS for Eva and me, $1,340 total. Lisbon May 22-26"
+  },
+  {
+   "id": "y0491",
+   "ts": "2026-05-03T18:00:00",
+   "kind": "update",
+   "text": "Fyi done: plan Lisbon trip ✅"
+  },
+  {
+   "id": "y0492",
+   "ts": "2026-05-04T10:25:00",
+   "kind": "store",
+   "text": "Coffee at Philz Coffee $6.00"
+  },
+  {
+   "id": "y0493",
+   "ts": "2026-05-04T11:00:00",
+   "kind": "question",
+   "text": "summarize this article for me"
+  },
+  {
+   "id": "y0494",
+   "ts": "2026-05-04T19:42:00",
+   "kind": "update",
+   "text": "Eva got the job at Gensler in SF!! she's moving here May 20"
+  },
+  {
+   "id": "y0495",
+   "ts": "2026-05-05T13:19:00",
+   "kind": "store",
+   "text": "lunch at Nopalito, $16.00"
+  },
+  {
+   "id": "y0496",
+   "ts": "2026-05-05T19:48:00",
+   "kind": "store",
+   "text": "climbing at Mission Cliffs with Nina today"
+  },
+  {
+   "id": "y0497",
+   "ts": "2026-05-06T22:39:00",
+   "kind": "store",
+   "text": "Had dinner at Zuni Café with Priya ($96.80)"
+  },
+  {
+   "id": "y0498",
+   "ts": "2026-05-07T08:30:00",
+   "kind": "store",
+   "text": "SIGHTGLASS\nSan Francisco, CA\n05/06/2026 09:31\nOat latte               6.00\nTOTAL               $   6.00\nVISA ****4421"
+  },
+  {
+   "id": "y0499",
+   "ts": "2026-05-07T09:57:00",
+   "kind": "question",
+   "text": "what time is it in Prague?"
+  },
+  {
+   "id": "y0500",
+   "ts": "2026-05-07T14:14:00",
+   "kind": "store",
+   "text": "Ok so Nopalito lunch $14.50"
+  },
+  {
+   "id": "y0501",
+   "ts": "2026-05-08T10:26:00",
+   "kind": "store",
+   "text": "Note: coffee at Philz Coffee $5.50"
+  },
+  {
+   "id": "y0502",
+   "ts": "2026-05-08T19:49:00",
+   "kind": "store",
+   "text": "Note: climbing at Mission Cliffs with Nina"
+  },
+  {
+   "id": "y0503",
+   "ts": "2026-05-08T23:14:00",
+   "kind": "store",
+   "text": "uber home 26.85 USD today"
+  },
+  {
+   "id": "y0504",
+   "ts": "2026-05-09T11:46:00",
+   "kind": "store",
+   "text": "trader Joe's shopping, $64.62"
+  },
+  {
+   "id": "y0505",
+   "ts": "2026-05-09T21:03:00",
+   "kind": "chitchat",
+   "text": "ok"
+  },
+  {
+   "id": "y0506",
+   "ts": "2026-05-10T08:49:00",
+   "kind": "store",
+   "text": "ok so coffee at Sightglass 5.50 USD yesterday lol"
+  },
+  {
+   "id": "y0507",
+   "ts": "2026-05-11T00:26:00",
+   "kind": "store",
+   "text": "Uber home 31.88 USD"
+  },
+  {
+   "id": "y0508",
+   "ts": "2026-05-11T09:22:00",
+   "kind": "store",
+   "text": "fyi ran 10k in 52:58"
+  },
+  {
+   "id": "y0509",
+   "ts": "2026-05-11T09:34:00",
+   "kind": "store",
+   "text": "btw ☕ Blue Bottle, 6.75 USD!"
+  },
+  {
+   "id": "y0510",
+   "ts": "2026-05-11T11:58:00",
+   "kind": "chitchat",
+   "text": "lol ok"
+  },
+  {
+   "id": "y0511",
+   "ts": "2026-05-12T13:20:00",
+   "kind": "store",
+   "text": "note: Souvla lunch 14.50 USD"
+  },
+  {
+   "id": "y0512",
+   "ts": "2026-05-12T16:08:00",
+   "kind": "store",
+   "text": "Priya introduced me to her colleague Mark Chen who runs partnerships at Stripe"
+  },
+  {
+   "id": "y0513",
+   "ts": "2026-05-12T20:50:00",
+   "kind": "store",
+   "text": "fyi climbing at Mission Cliffs with Nina"
+  },
+  {
+   "id": "y0514",
+   "ts": "2026-05-12T21:43:00",
+   "kind": "chitchat",
+   "text": "ok cool"
+  },
+  {
+   "id": "y0515",
+   "ts": "2026-05-14T07:29:00",
+   "kind": "store",
+   "text": "fyi 5k run, 25:22 (new PB!) this morning"
+  },
+  {
+   "id": "y0516",
+   "ts": "2026-05-15T08:53:00",
+   "kind": "store",
+   "text": "PHILZ COFFEE\nSan Francisco, CA\n05/15/2026 11:13\nOat latte               4.50\nTOTAL               $   4.50\nVISA ****4421"
+  },
+  {
+   "id": "y0517",
+   "ts": "2026-05-15T09:23:00",
+   "kind": "store",
+   "text": "Fyi Souvla lunch $22.00 yesterday"
+  },
+  {
+   "id": "y0518",
+   "ts": "2026-05-15T21:26:00",
+   "kind": "store",
+   "text": "climbing at Mission Cliffs with Nina tonight"
+  },
+  {
+   "id": "y0519",
+   "ts": "2026-05-15T23:11:00",
+   "kind": "store",
+   "text": "took a Uber, $14.48 today!"
+  },
+  {
+   "id": "y0520",
+   "ts": "2026-05-16T12:05:00",
+   "kind": "store",
+   "text": "WHOLE FOODS\nSan Francisco, CA\n05/16/2026 08:00\nGroceries              69.50\nTOTAL               $  69.50\nVISA ****4421"
+  },
+  {
+   "id": "y0521",
+   "ts": "2026-05-17T15:33:00",
+   "kind": "question",
+   "text": "how much did I spend this week?"
+  },
+  {
+   "id": "y0522",
+   "ts": "2026-05-18T08:13:00",
+   "kind": "store",
+   "text": "uber home $31.50 yesterday"
+  },
+  {
+   "id": "y0523",
+   "ts": "2026-05-18T10:52:00",
+   "kind": "store",
+   "text": "Coffee at Blue Bottle 4.50 USD lol"
+  },
+  {
+   "id": "y0524",
+   "ts": "2026-05-18T20:50:00",
+   "kind": "chitchat",
+   "text": "you're the best"
+  },
+  {
+   "id": "y0525",
+   "ts": "2026-05-19T14:53:00",
+   "kind": "store",
+   "text": "lunch at Souvla, 22.00 USD"
+  },
+  {
+   "id": "y0526",
+   "ts": "2026-05-19T20:12:00",
+   "kind": "store",
+   "text": "Climbing at Mission Cliffs with Nina"
+  },
+  {
+   "id": "y0527",
+   "ts": "2026-05-20T10:21:00",
+   "kind": "store",
+   "text": "fyi Philz Coffee coffee 6.00 USD this morning"
+  },
+  {
+   "id": "y0528",
+   "ts": "2026-05-21T12:54:00",
+   "kind": "store",
+   "text": "tartine Manufactory lunch 18.75 USD today 🙂"
+  },
+  {
+   "id": "y0529",
+   "ts": "2026-05-21T20:55:00",
+   "kind": "chitchat",
+   "text": "ok cool"
+  },
+  {
+   "id": "y0530",
+   "ts": "2026-05-23T09:30:00",
+   "kind": "question",
+   "text": "what's the weather like today?"
+  },
+  {
+   "id": "y0531",
+   "ts": "2026-05-25T09:12:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Nebula board meeting\nDTSTART:20260604T160000\nDTEND:20260604T173000\nLOCATION:1 Mission St, San Francisco\nORGANIZER;CN=David Mokos:mailto:david@nebula.ai\nEND:VEVENT"
+  },
+  {
+   "id": "y0532",
+   "ts": "2026-05-25T10:00:00",
+   "kind": "store",
+   "text": "dentist in SF: Dr. Lee at Castro Dental, June 3 at 9:30"
+  },
+  {
+   "id": "y0533",
+   "ts": "2026-05-25T21:19:00",
+   "kind": "question",
+   "text": "what time is it in Prague?"
+  },
+  {
+   "id": "y0534",
+   "ts": "2026-05-26T15:33:00",
+   "kind": "question",
+   "text": "can you draft an email to Sarah?"
+  },
+  {
+   "id": "y0535",
+   "ts": "2026-05-27T08:30:00",
+   "kind": "store",
+   "text": "BLUE BOTTLE\nSan Francisco, CA\n05/27/2026 17:58\nOat latte               6.75\nTOTAL               $   6.75\nVISA ****4421"
+  },
+  {
+   "id": "y0536",
+   "ts": "2026-05-27T09:50:00",
+   "kind": "store",
+   "text": "back from Lisbon, amazing trip. the pastéis de nata at Manteigaria were unreal"
+  },
+  {
+   "id": "y0537",
+   "ts": "2026-05-27T16:11:00",
+   "kind": "chitchat",
+   "text": "thanks!"
+  },
+  {
+   "id": "y0538",
+   "ts": "2026-05-28T18:20:00",
+   "kind": "chitchat",
+   "text": "nvm"
+  },
+  {
+   "id": "y0539",
+   "ts": "2026-05-29T08:49:00",
+   "kind": "store",
+   "text": "PHILZ COFFEE\nSan Francisco, CA\n05/29/2026 09:41\nOat latte               6.00\nTOTAL               $   6.00\nVISA ****4421"
+  },
+  {
+   "id": "y0540",
+   "ts": "2026-05-29T14:59:00",
+   "kind": "question",
+   "text": "what's the weather like today?"
+  },
+  {
+   "id": "y0541",
+   "ts": "2026-05-29T19:56:00",
+   "kind": "store",
+   "text": "Climbing at Mission Cliffs with Nina 🙂"
+  },
+  {
+   "id": "y0542",
+   "ts": "2026-05-30T09:30:00",
+   "kind": "store",
+   "text": "Fyi remind me to buy an engagement ring by Jul 10"
+  },
+  {
+   "id": "y0543",
+   "ts": "2026-05-30T12:25:00",
+   "kind": "store",
+   "text": "ok so Whole Foods shopping, $84.61 today lol"
+  },
+  {
+   "id": "y0544",
+   "ts": "2026-05-30T22:48:00",
+   "kind": "store",
+   "text": "Btw Zuni Café with Eva, $96.80 🙂"
+  },
+  {
+   "id": "y0545",
+   "ts": "2026-05-31T10:18:00",
+   "kind": "question",
+   "text": "remind me what Tom's number is?"
+  },
+  {
+   "id": "y0546",
+   "ts": "2026-05-31T20:45:00",
+   "kind": "store",
+   "text": "climbing at Mission Cliffs with Nina"
+  },
+  {
+   "id": "y0547",
+   "ts": "2026-06-01T08:09:00",
+   "kind": "store",
+   "text": "5k run, 25:20 (new PB!)!"
+  },
+  {
+   "id": "y0548",
+   "ts": "2026-06-01T09:26:00",
+   "kind": "store",
+   "text": "Rent paid for June: $3,200"
+  },
+  {
+   "id": "y0549",
+   "ts": "2026-06-01T10:05:00",
+   "kind": "store",
+   "text": "Ok so Spotify renewed 11.99 USD"
+  },
+  {
+   "id": "y0550",
+   "ts": "2026-06-01T10:43:00",
+   "kind": "store",
+   "text": "SIGHTGLASS\nSan Francisco, CA\n06/01/2026 16:34\nOat latte               6.75\nTOTAL               $   6.75\nVISA ****4421"
+  },
+  {
+   "id": "y0551",
+   "ts": "2026-06-02T14:36:00",
+   "kind": "store",
+   "text": "Nopalito lunch $18.75 today"
+  },
+  {
+   "id": "y0552",
+   "ts": "2026-06-02T19:25:00",
+   "kind": "store",
+   "text": "climbing at Mission Cliffs lol"
+  },
+  {
+   "id": "y0553",
+   "ts": "2026-06-03T22:30:00",
+   "kind": "update",
+   "text": "fyi done with Dune. 5/5 🙂"
+  },
+  {
+   "id": "y0554",
+   "ts": "2026-06-03T22:51:00",
+   "kind": "store",
+   "text": "btw dinner with Dave at Zuni Café, $96.80"
+  },
+  {
+   "id": "y0555",
+   "ts": "2026-06-04T08:39:00",
+   "kind": "store",
+   "text": "Ok so ☕ Sightglass, $6.00 yesterday"
+  },
+  {
+   "id": "y0556",
+   "ts": "2026-06-04T18:45:00",
+   "kind": "chitchat",
+   "text": "nvm"
+  },
+  {
+   "id": "y0557",
+   "ts": "2026-06-05T08:53:00",
+   "kind": "store",
+   "text": "fyi lunch at Souvla, $14.50 yesterday"
+  },
+  {
+   "id": "y0558",
+   "ts": "2026-06-05T10:14:00",
+   "kind": "store",
+   "text": "Sightglass coffee $5.25 today"
+  },
+  {
+   "id": "y0559",
+   "ts": "2026-06-05T14:12:00",
+   "kind": "question",
+   "text": "what time is it in Prague?"
+  },
+  {
+   "id": "y0560",
+   "ts": "2026-06-05T22:00:00",
+   "kind": "store",
+   "text": "started reading Atomic Habits by James Clear 🙂"
+  },
+  {
+   "id": "y0561",
+   "ts": "2026-06-06T11:53:00",
+   "kind": "store",
+   "text": "groceries at Whole Foods $66.70 this morning!"
+  },
+  {
+   "id": "y0562",
+   "ts": "2026-06-06T21:30:00",
+   "kind": "question",
+   "text": "can you draft an email to Sarah?"
+  },
+  {
+   "id": "y0563",
+   "ts": "2026-06-07T11:17:00",
+   "kind": "chitchat",
+   "text": "ok"
+  },
+  {
+   "id": "y0564",
+   "ts": "2026-06-08T00:27:00",
+   "kind": "store",
+   "text": "fyi took a Uber, 15.54 USD"
+  },
+  {
+   "id": "y0565",
+   "ts": "2026-06-08T10:07:00",
+   "kind": "store",
+   "text": "☕ Blue Bottle, $5.25 this morning"
+  },
+  {
+   "id": "y0566",
+   "ts": "2026-06-09T11:16:00",
+   "kind": "question",
+   "text": "what's the weather like today?"
+  },
+  {
+   "id": "y0567",
+   "ts": "2026-06-10T08:43:00",
+   "kind": "store",
+   "text": "fyi climbing at Mission Cliffs with Nina yesterday 🙂"
+  },
+  {
+   "id": "y0568",
+   "ts": "2026-06-10T09:50:00",
+   "kind": "store",
+   "text": "☕ Blue Bottle, $6.00"
+  },
+  {
+   "id": "y0569",
+   "ts": "2026-06-10T09:56:00",
+   "kind": "store",
+   "text": "fyi Tartine Manufactory lunch 22.00 USD yesterday lol"
+  },
+  {
+   "id": "y0570",
+   "ts": "2026-06-10T20:01:00",
+   "kind": "update",
+   "text": "Klára moved from Berlin to London for her new job"
+  },
+  {
+   "id": "y0571",
+   "ts": "2026-06-10T21:24:00",
+   "kind": "store",
+   "text": "btw dinner with Priya at State Bird Provisions, $68.00 tonight"
+  },
+  {
+   "id": "y0572",
+   "ts": "2026-06-11T14:14:00",
+   "kind": "store",
+   "text": "Btw Tartine Manufactory lunch $16.00 🙂"
+  },
+  {
+   "id": "y0573",
+   "ts": "2026-06-12T10:46:00",
+   "kind": "store",
+   "text": "PHILZ COFFEE\nSan Francisco, CA\n06/12/2026 16:20\nOat latte               5.50\nTOTAL               $   5.50\nVISA ****4421"
+  },
+  {
+   "id": "y0574",
+   "ts": "2026-06-12T19:38:00",
+   "kind": "store",
+   "text": "Ok so climbing at Mission Cliffs with Nina today"
+  },
+  {
+   "id": "y0575",
+   "ts": "2026-06-12T22:57:00",
+   "kind": "store",
+   "text": "Ok so Uber home 15.43 USD"
+  },
+  {
+   "id": "y0576",
+   "ts": "2026-06-13T22:19:00",
+   "kind": "store",
+   "text": "nopa with David, $68.00 today"
+  },
+  {
+   "id": "y0577",
+   "ts": "2026-06-14T09:18:00",
+   "kind": "store",
+   "text": "WHOLE FOODS\nSan Francisco, CA\n06/13/2026 11:28\nGroceries              92.94\nTOTAL               $  92.94\nVISA ****4421"
+  },
+  {
+   "id": "y0578",
+   "ts": "2026-06-14T20:46:00",
+   "kind": "chitchat",
+   "text": "hmm"
+  },
+  {
+   "id": "y0579",
+   "ts": "2026-06-14T21:30:00",
+   "kind": "store",
+   "text": "Climbing at Mission Cliffs"
+  },
+  {
+   "id": "y0580",
+   "ts": "2026-06-15T08:40:00",
+   "kind": "store",
+   "text": "btw Uber home 33.61 USD yesterday lol"
+  },
+  {
+   "id": "y0581",
+   "ts": "2026-06-15T10:31:00",
+   "kind": "store",
+   "text": "PHILZ COFFEE\nSan Francisco, CA\n06/15/2026 16:13\nOat latte               5.25\nTOTAL               $   5.25\nVISA ****4421"
+  },
+  {
+   "id": "y0582",
+   "ts": "2026-06-16T14:26:00",
+   "kind": "store",
+   "text": "Fyi lunch at Nopalito, $26.50 today"
+  },
+  {
+   "id": "y0583",
+   "ts": "2026-06-17T10:57:00",
+   "kind": "store",
+   "text": "ok so coffee at Blue Bottle 6.75 USD today 🙂"
+  },
+  {
+   "id": "y0584",
+   "ts": "2026-06-17T14:28:00",
+   "kind": "chitchat",
+   "text": "ok cool"
+  },
+  {
+   "id": "y0585",
+   "ts": "2026-06-17T23:10:00",
+   "kind": "store",
+   "text": "Btw had dinner at Zuni Café with Eva ($96.80) tonight"
+  },
+  {
+   "id": "y0586",
+   "ts": "2026-06-18T09:30:00",
+   "kind": "store",
+   "text": "Ran 10k in 54:08 lol"
+  },
+  {
+   "id": "y0587",
+   "ts": "2026-06-18T14:03:00",
+   "kind": "store",
+   "text": "Note: Nopalito lunch $22.00"
+  },
+  {
+   "id": "y0588",
+   "ts": "2026-06-19T09:00:00",
+   "kind": "store",
+   "text": "☕ Blue Bottle, $6.75 today lol"
+  },
+  {
+   "id": "y0589",
+   "ts": "2026-06-19T09:50:00",
+   "kind": "chitchat",
+   "text": "ok"
+  },
+  {
+   "id": "y0590",
+   "ts": "2026-06-19T23:03:00",
+   "kind": "store",
+   "text": "note: Uber home $28.26 today"
+  },
+  {
+   "id": "y0591",
+   "ts": "2026-06-20T20:32:00",
+   "kind": "question",
+   "text": "translate 'thank you' to Czech"
+  },
+  {
+   "id": "y0592",
+   "ts": "2026-06-21T09:31:00",
+   "kind": "store",
+   "text": "Btw Trader Joe's shopping, $117.38 yesterday"
+  },
+  {
+   "id": "y0593",
+   "ts": "2026-06-21T22:46:00",
+   "kind": "store",
+   "text": "Took a Uber, $18.76 today"
+  },
+  {
+   "id": "y0594",
+   "ts": "2026-06-22T08:28:00",
+   "kind": "store",
+   "text": "blue Bottle coffee $4.50"
+  },
+  {
+   "id": "y0595",
+   "ts": "2026-06-22T08:43:00",
+   "kind": "store",
+   "text": "Ran 10k in 53:48 today"
+  },
+  {
+   "id": "y0596",
+   "ts": "2026-06-22T09:12:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Nebula board meeting\nDTSTART:20260702T160000\nDTEND:20260702T173000\nLOCATION:1 Mission St, San Francisco\nORGANIZER;CN=David Mokos:mailto:david@nebula.ai\nEND:VEVENT"
+  },
+  {
+   "id": "y0597",
+   "ts": "2026-06-22T17:29:00",
+   "kind": "chitchat",
+   "text": "haha nice"
+  },
+  {
+   "id": "y0598",
+   "ts": "2026-06-23T14:57:00",
+   "kind": "store",
+   "text": "Fyi lunch at Souvla, $22.00"
+  },
+  {
+   "id": "y0599",
+   "ts": "2026-06-23T19:57:00",
+   "kind": "store",
+   "text": "Climbing at Mission Cliffs with Nina"
+  },
+  {
+   "id": "y0600",
+   "ts": "2026-06-24T09:57:00",
+   "kind": "store",
+   "text": "Coffee at Philz Coffee $6.00 today 🙂"
+  },
+  {
+   "id": "y0601",
+   "ts": "2026-06-24T16:10:00",
+   "kind": "chitchat",
+   "text": "nvm"
+  },
+  {
+   "id": "y0602",
+   "ts": "2026-06-25T09:00:00",
+   "kind": "store",
+   "text": "btw ran 10k in 52:06 (new PB!) today"
+  },
+  {
+   "id": "y0603",
+   "ts": "2026-06-25T09:30:00",
+   "kind": "store",
+   "text": "remind me to send Q2 investor update by Jul 05 lol"
+  },
+  {
+   "id": "y0604",
+   "ts": "2026-06-25T13:22:00",
+   "kind": "store",
+   "text": "lunch at Souvla, $18.75 today"
+  },
+  {
+   "id": "y0605",
+   "ts": "2026-06-26T21:12:00",
+   "kind": "store",
+   "text": "Btw climbing at Mission Cliffs with Nina 🙂"
+  },
+  {
+   "id": "y0606",
+   "ts": "2026-06-26T22:24:00",
+   "kind": "store",
+   "text": "Took a Uber, $25.69 🙂"
+  },
+  {
+   "id": "y0607",
+   "ts": "2026-06-26T22:30:00",
+   "kind": "update",
+   "text": "Finished Atomic Habits, 3/5"
+  },
+  {
+   "id": "y0608",
+   "ts": "2026-06-27T10:51:00",
+   "kind": "store",
+   "text": "btw Philz Coffee coffee $5.25 yesterday"
+  },
+  {
+   "id": "y0609",
+   "ts": "2026-06-27T13:21:00",
+   "kind": "store",
+   "text": "btw Whole Foods shopping, 114.41 USD lol"
+  },
+  {
+   "id": "y0610",
+   "ts": "2026-06-28T09:01:00",
+   "kind": "store",
+   "text": "nopa with Priya, 96.80 USD yesterday"
+  },
+  {
+   "id": "y0611",
+   "ts": "2026-06-28T16:52:00",
+   "kind": "chitchat",
+   "text": "ok cool"
+  },
+  {
+   "id": "y0612",
+   "ts": "2026-06-28T23:47:00",
+   "kind": "store",
+   "text": "Btw Uber home 18.69 USD tonight"
+  },
+  {
+   "id": "y0613",
+   "ts": "2026-06-29T08:56:00",
+   "kind": "store",
+   "text": "Btw ran 10k in 53:03 this morning lol"
+  },
+  {
+   "id": "y0614",
+   "ts": "2026-06-29T10:36:00",
+   "kind": "store",
+   "text": "Fyi coffee at Blue Bottle 4.50 USD!"
+  },
+  {
+   "id": "y0615",
+   "ts": "2026-06-30T19:30:00",
+   "kind": "store",
+   "text": "Climbing at Mission Cliffs with Nina"
+  },
+  {
+   "id": "y0616",
+   "ts": "2026-07-01T08:30:00",
+   "kind": "store",
+   "text": "Fyi lunch at Souvla, 16.00 USD yesterday lol"
+  },
+  {
+   "id": "y0617",
+   "ts": "2026-07-01T09:05:00",
+   "kind": "store",
+   "text": "Paid rent, $3,200"
+  },
+  {
+   "id": "y0618",
+   "ts": "2026-07-01T09:27:00",
+   "kind": "store",
+   "text": "BLUE BOTTLE\nSan Francisco, CA\n07/01/2026 08:04\nOat latte               5.50\nTOTAL               $   5.50\nVISA ****4421"
+  },
+  {
+   "id": "y0619",
+   "ts": "2026-07-01T10:05:00",
+   "kind": "store",
+   "text": "spotify renewed 11.99 USD lol"
+  },
+  {
+   "id": "y0620",
+   "ts": "2026-07-01T22:00:00",
+   "kind": "store",
+   "text": "New book: Zero to One (Peter Thiel)"
+  },
+  {
+   "id": "y0621",
+   "ts": "2026-07-02T14:14:00",
+   "kind": "store",
+   "text": "Lunch at Nopalito, $14.50 today"
+  },
+  {
+   "id": "y0622",
+   "ts": "2026-07-02T18:00:00",
+   "kind": "update",
+   "text": "Fyi done: buy an engagement ring ✅!"
+  },
+  {
+   "id": "y0623",
+   "ts": "2026-07-03T09:16:00",
+   "kind": "store",
+   "text": "Sightglass coffee $5.50"
+  },
+  {
+   "id": "y0624",
+   "ts": "2026-07-03T18:00:00",
+   "kind": "update",
+   "text": "done: send Q2 investor update ✅ 🙂"
+  },
+  {
+   "id": "y0625",
+   "ts": "2026-07-03T20:14:00",
+   "kind": "store",
+   "text": "Btw climbing at Mission Cliffs with Nina, finally sent a 7a 🙂"
+  },
+  {
+   "id": "y0626",
+   "ts": "2026-07-03T23:57:00",
+   "kind": "store",
+   "text": "took a Uber, 15.19 USD tonight lol"
+  },
+  {
+   "id": "y0627",
+   "ts": "2026-07-04T12:35:00",
+   "kind": "store",
+   "text": "TRADER JOE'S\nSan Francisco, CA\n07/04/2026 19:24\nGroceries             138.86\nTOTAL               $ 138.86\nVISA ****4421"
+  },
+  {
+   "id": "y0628",
+   "ts": "2026-07-04T16:04:00",
+   "kind": "chitchat",
+   "text": "good morning"
+  },
+  {
+   "id": "y0629",
+   "ts": "2026-07-04T22:04:00",
+   "kind": "store",
+   "text": "had dinner at Zuni Café with Priya (112.00 USD)"
+  },
+  {
+   "id": "y0630",
+   "ts": "2026-07-05T13:40:00",
+   "kind": "chitchat",
+   "text": "lol ok"
+  },
+  {
+   "id": "y0631",
+   "ts": "2026-07-06T09:01:00",
+   "kind": "store",
+   "text": "ran 10k in 52:52 lol"
+  },
+  {
+   "id": "y0632",
+   "ts": "2026-07-06T09:18:00",
+   "kind": "store",
+   "text": "PHILZ COFFEE\nSan Francisco, CA\n07/06/2026 10:02\nOat latte               6.00\nTOTAL               $   6.00\nVISA ****4421"
+  },
+  {
+   "id": "y0633",
+   "ts": "2026-07-06T21:02:00",
+   "kind": "chitchat",
+   "text": "you're the best"
+  },
+  {
+   "id": "y0634",
+   "ts": "2026-07-07T12:36:00",
+   "kind": "store",
+   "text": "souvla lunch $16.00 today"
+  },
+  {
+   "id": "y0635",
+   "ts": "2026-07-07T13:40:00",
+   "kind": "question",
+   "text": "any ideas for dinner tonight?"
+  },
+  {
+   "id": "y0636",
+   "ts": "2026-07-07T19:57:00",
+   "kind": "store",
+   "text": "climbing at Mission Cliffs with Nina"
+  },
+  {
+   "id": "y0637",
+   "ts": "2026-07-08T09:42:00",
+   "kind": "store",
+   "text": "fyi ☕ Philz Coffee, 4.50 USD 🙂"
+  },
+  {
+   "id": "y0638",
+   "ts": "2026-07-08T12:34:00",
+   "kind": "chitchat",
+   "text": "thanks!"
+  },
+  {
+   "id": "y0639",
+   "ts": "2026-07-09T08:56:00",
+   "kind": "store",
+   "text": "10k run, 53:25 this morning"
+  },
+  {
+   "id": "y0640",
+   "ts": "2026-07-09T10:39:00",
+   "kind": "store",
+   "text": "Had dinner at State Bird Provisions with Priya ($96.80) yesterday lol"
+  },
+  {
+   "id": "y0641",
+   "ts": "2026-07-09T14:50:00",
+   "kind": "question",
+   "text": "summarize this article for me"
+  },
+  {
+   "id": "y0642",
+   "ts": "2026-07-10T10:20:00",
+   "kind": "store",
+   "text": "coffee at Blue Bottle 6.00 USD!"
+  },
+  {
+   "id": "y0643",
+   "ts": "2026-07-11T09:09:00",
+   "kind": "store",
+   "text": "ok so took a Uber, 19.81 USD yesterday lol"
+  },
+  {
+   "id": "y0644",
+   "ts": "2026-07-11T11:22:00",
+   "kind": "store",
+   "text": "note: groceries at Trader Joe's $133.13!"
+  },
+  {
+   "id": "y0645",
+   "ts": "2026-07-11T22:55:00",
+   "kind": "store",
+   "text": "Nopa with Nina, $68.00 tonight 🙂"
+  },
+  {
+   "id": "y0646",
+   "ts": "2026-07-12T22:49:00",
+   "kind": "update",
+   "text": "I PROPOSED AND SHE SAID YES 💍 Eva and I are engaged!"
+  },
+  {
+   "id": "y0647",
+   "ts": "2026-07-13T09:43:00",
+   "kind": "store",
+   "text": "note: ☕ Philz Coffee, $4.50!"
+  },
+  {
+   "id": "y0648",
+   "ts": "2026-07-13T16:59:00",
+   "kind": "question",
+   "text": "what's on my calendar tomorrow?"
+  },
+  {
+   "id": "y0649",
+   "ts": "2026-07-14T14:47:00",
+   "kind": "store",
+   "text": "Tartine Manufactory lunch $18.75"
+  },
+  {
+   "id": "y0650",
+   "ts": "2026-07-14T20:39:00",
+   "kind": "store",
+   "text": "note: climbing at Mission Cliffs with Nina"
+  },
+  {
+   "id": "y0651",
+   "ts": "2026-07-15T08:56:00",
+   "kind": "store",
+   "text": "Note: ☕ Philz Coffee, $4.50!"
+  },
+  {
+   "id": "y0652",
+   "ts": "2026-07-15T11:39:00",
+   "kind": "chitchat",
+   "text": "lol ok"
+  },
+  {
+   "id": "y0653",
+   "ts": "2026-07-16T08:11:00",
+   "kind": "store",
+   "text": "5k run, 25:19 (new PB!) today"
+  },
+  {
+   "id": "y0654",
+   "ts": "2026-07-16T11:53:00",
+   "kind": "question",
+   "text": "translate 'thank you' to Czech"
+  },
+  {
+   "id": "y0655",
+   "ts": "2026-07-16T12:45:00",
+   "kind": "store",
+   "text": "Nopalito lunch $18.75 today 🙂"
+  },
+  {
+   "id": "y0656",
+   "ts": "2026-07-17T09:16:00",
+   "kind": "store",
+   "text": "Note: coffee at Blue Bottle $5.50"
+  },
+  {
+   "id": "y0657",
+   "ts": "2026-07-17T14:37:00",
+   "kind": "question",
+   "text": "translate 'thank you' to Czech"
+  },
+  {
+   "id": "y0658",
+   "ts": "2026-07-17T20:59:00",
+   "kind": "store",
+   "text": "btw climbing at Mission Cliffs with Nina today lol"
+  },
+  {
+   "id": "y0659",
+   "ts": "2026-07-18T12:36:00",
+   "kind": "store",
+   "text": "TRADER JOE'S\nSan Francisco, CA\n07/18/2026 08:53\nGroceries              56.11\nTOTAL               $  56.11\nVISA ****4421"
+  },
+  {
+   "id": "y0660",
+   "ts": "2026-07-18T22:12:00",
+   "kind": "chitchat",
+   "text": "hmm"
+  },
+  {
+   "id": "y0661",
+   "ts": "2026-07-20T11:10:00",
+   "kind": "store",
+   "text": "Philz Coffee coffee 5.50 USD"
+  },
+  {
+   "id": "y0662",
+   "ts": "2026-07-20T13:38:00",
+   "kind": "chitchat",
+   "text": "👍"
+  },
+  {
+   "id": "y0663",
+   "ts": "2026-07-21T13:19:00",
+   "kind": "store",
+   "text": "Souvla lunch $22.00"
+  },
+  {
+   "id": "y0664",
+   "ts": "2026-07-21T18:57:00",
+   "kind": "chitchat",
+   "text": "haha nice"
+  },
+  {
+   "id": "y0665",
+   "ts": "2026-07-22T08:35:00",
+   "kind": "store",
+   "text": "climbing at Mission Cliffs with Nina yesterday"
+  },
+  {
+   "id": "y0666",
+   "ts": "2026-07-22T09:49:00",
+   "kind": "store",
+   "text": "BLUE BOTTLE\nSan Francisco, CA\n07/22/2026 14:44\nOat latte               5.50\nTOTAL               $   5.50\nVISA ****4421"
+  },
+  {
+   "id": "y0667",
+   "ts": "2026-07-22T21:52:00",
+   "kind": "store",
+   "text": "had dinner at State Bird Provisions with Nina (68.00 USD) 🙂"
+  },
+  {
+   "id": "y0668",
+   "ts": "2026-07-23T13:40:00",
+   "kind": "store",
+   "text": "Nopalito lunch $22.00 today"
+  },
+  {
+   "id": "y0669",
+   "ts": "2026-07-23T22:30:00",
+   "kind": "update",
+   "text": "fyi done with Zero to One. 4/5"
+  },
+  {
+   "id": "y0670",
+   "ts": "2026-07-24T19:52:00",
+   "kind": "store",
+   "text": "Note: climbing at Mission Cliffs"
+  },
+  {
+   "id": "y0671",
+   "ts": "2026-07-25T08:49:00",
+   "kind": "store",
+   "text": "Coffee at Sightglass $6.75 yesterday lol"
+  },
+  {
+   "id": "y0672",
+   "ts": "2026-07-25T11:18:00",
+   "kind": "store",
+   "text": "TRADER JOE'S\nSan Francisco, CA\n07/25/2026 10:21\nGroceries             106.69\nTOTAL               $ 106.69\nVISA ****4421"
+  },
+  {
+   "id": "y0673",
+   "ts": "2026-07-26T18:51:00",
+   "kind": "question",
+   "text": "what's on my calendar tomorrow?"
+  },
+  {
+   "id": "y0674",
+   "ts": "2026-07-27T09:12:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Nebula board meeting\nDTSTART:20260806T160000\nDTEND:20260806T173000\nLOCATION:1 Mission St, San Francisco\nORGANIZER;CN=David Mokos:mailto:david@nebula.ai\nEND:VEVENT"
+  },
+  {
+   "id": "y0675",
+   "ts": "2026-07-27T10:17:00",
+   "kind": "store",
+   "text": "Note: Blue Bottle coffee 4.50 USD lol"
+  },
+  {
+   "id": "y0676",
+   "ts": "2026-07-27T22:00:00",
+   "kind": "store",
+   "text": "Note: new book: The Three-Body Problem (Liu Cixin) lol"
+  },
+  {
+   "id": "y0677",
+   "ts": "2026-07-28T10:52:00",
+   "kind": "question",
+   "text": "can you draft an email to Sarah?"
+  },
+  {
+   "id": "y0678",
+   "ts": "2026-07-28T20:14:00",
+   "kind": "store",
+   "text": "Note: climbing at Mission Cliffs tonight"
+  },
+  {
+   "id": "y0679",
+   "ts": "2026-07-29T10:04:00",
+   "kind": "store",
+   "text": "Ok so ☕ Philz Coffee, 6.00 USD today!"
+  },
+  {
+   "id": "y0680",
+   "ts": "2026-07-29T21:47:00",
+   "kind": "store",
+   "text": "had dinner at Nopa with Dave (96.80 USD)"
+  },
+  {
+   "id": "y0681",
+   "ts": "2026-07-29T22:27:00",
+   "kind": "question",
+   "text": "remind me what Tom's number is?"
+  },
+  {
+   "id": "y0682",
+   "ts": "2026-07-30T14:25:00",
+   "kind": "store",
+   "text": "Lunch at Nopalito, $26.50 lol"
+  },
+  {
+   "id": "y0683",
+   "ts": "2026-07-31T10:56:00",
+   "kind": "store",
+   "text": "PHILZ COFFEE\nSan Francisco, CA\n07/31/2026 14:36\nOat latte               6.75\nTOTAL               $   6.75\nVISA ****4421"
+  },
+  {
+   "id": "y0684",
+   "ts": "2026-08-01T09:02:00",
+   "kind": "store",
+   "text": "took a Uber, 18.21 USD yesterday"
+  },
+  {
+   "id": "y0685",
+   "ts": "2026-08-01T09:30:00",
+   "kind": "store",
+   "text": "Remind me to book the wedding venue by Oct 31 lol"
+  },
+  {
+   "id": "y0686",
+   "ts": "2026-08-01T09:42:00",
+   "kind": "store",
+   "text": "Coffee at Sightglass $5.50 today"
+  },
+  {
+   "id": "y0687",
+   "ts": "2026-08-01T09:49:00",
+   "kind": "store",
+   "text": "paid rent, $3,200"
+  },
+  {
+   "id": "y0688",
+   "ts": "2026-08-01T12:26:00",
+   "kind": "store",
+   "text": "Trader Joe's shopping, 75.24 USD today 🙂"
+  },
+  {
+   "id": "y0689",
+   "ts": "2026-08-02T16:05:00",
+   "kind": "question",
+   "text": "what's the weather like today?"
+  },
+  {
+   "id": "y0690",
+   "ts": "2026-08-03T07:26:00",
+   "kind": "store",
+   "text": "Ok so 5k run, 25:45"
+  },
+  {
+   "id": "y0691",
+   "ts": "2026-08-03T09:50:00",
+   "kind": "store",
+   "text": "coffee at Blue Bottle $4.50 this morning"
+  },
+  {
+   "id": "y0692",
+   "ts": "2026-08-04T14:49:00",
+   "kind": "store",
+   "text": "Souvla lunch $16.00 today 🙂"
+  },
+  {
+   "id": "y0693",
+   "ts": "2026-08-04T20:04:00",
+   "kind": "store",
+   "text": "note: climbing at Mission Cliffs with Nina lol"
+  },
+  {
+   "id": "y0694",
+   "ts": "2026-08-06T08:16:00",
+   "kind": "store",
+   "text": "Fyi 5k run, 27:03!"
+  },
+  {
+   "id": "y0695",
+   "ts": "2026-08-06T08:35:00",
+   "kind": "store",
+   "text": "PHILZ COFFEE\nSan Francisco, CA\n08/05/2026 10:18\nOat latte               6.75\nTOTAL               $   6.75\nVISA ****4421"
+  },
+  {
+   "id": "y0696",
+   "ts": "2026-08-06T17:49:00",
+   "kind": "question",
+   "text": "what time is it in Prague?"
+  },
+  {
+   "id": "y0697",
+   "ts": "2026-08-07T08:16:00",
+   "kind": "store",
+   "text": "Souvla lunch 18.75 USD yesterday 🙂"
+  },
+  {
+   "id": "y0698",
+   "ts": "2026-08-07T13:39:00",
+   "kind": "chitchat",
+   "text": "brb"
+  },
+  {
+   "id": "y0699",
+   "ts": "2026-08-08T00:00:00",
+   "kind": "store",
+   "text": "Btw Uber home 26.63 USD"
+  },
+  {
+   "id": "y0700",
+   "ts": "2026-08-08T10:06:00",
+   "kind": "store",
+   "text": "BLUE BOTTLE\nSan Francisco, CA\n08/07/2026 20:54\nOat latte               5.25\nTOTAL               $   5.25\nVISA ****4421"
+  },
+  {
+   "id": "y0701",
+   "ts": "2026-08-08T12:57:00",
+   "kind": "store",
+   "text": "TRADER JOE'S\nSan Francisco, CA\n08/08/2026 11:48\nGroceries             115.69\nTOTAL               $ 115.69\nVISA ****4421"
+  },
+  {
+   "id": "y0702",
+   "ts": "2026-08-08T16:11:00",
+   "kind": "chitchat",
+   "text": "👍"
+  },
+  {
+   "id": "y0703",
+   "ts": "2026-08-09T10:02:00",
+   "kind": "store",
+   "text": "Ok so Philz Coffee coffee $6.00 yesterday"
+  },
+  {
+   "id": "y0704",
+   "ts": "2026-08-10T00:05:00",
+   "kind": "store",
+   "text": "Ok so took a Uber, $34.64 today"
+  },
+  {
+   "id": "y0705",
+   "ts": "2026-08-10T08:20:00",
+   "kind": "store",
+   "text": "ok so Blue Bottle coffee 6.00 USD today"
+  },
+  {
+   "id": "y0706",
+   "ts": "2026-08-11T12:58:00",
+   "kind": "store",
+   "text": "btw lunch at Tartine Manufactory, $26.50 today"
+  },
+  {
+   "id": "y0707",
+   "ts": "2026-08-12T08:43:00",
+   "kind": "store",
+   "text": "Note: climbing at Mission Cliffs yesterday"
+  },
+  {
+   "id": "y0708",
+   "ts": "2026-08-12T09:41:00",
+   "kind": "store",
+   "text": "coffee at Philz Coffee $6.75 this morning"
+  },
+  {
+   "id": "y0709",
+   "ts": "2026-08-12T12:11:00",
+   "kind": "chitchat",
+   "text": "thanks!"
+  },
+  {
+   "id": "y0710",
+   "ts": "2026-08-13T10:29:00",
+   "kind": "chitchat",
+   "text": "hmm"
+  },
+  {
+   "id": "y0711",
+   "ts": "2026-08-13T14:13:00",
+   "kind": "store",
+   "text": "note: Tartine Manufactory lunch $26.50 🙂"
+  },
+  {
+   "id": "y0712",
+   "ts": "2026-08-15T09:34:00",
+   "kind": "store",
+   "text": "Fyi took a Uber, $34.25 yesterday lol"
+  },
+  {
+   "id": "y0713",
+   "ts": "2026-08-15T10:06:00",
+   "kind": "store",
+   "text": "Note: ☕ Blue Bottle, $6.75 yesterday lol"
+  },
+  {
+   "id": "y0714",
+   "ts": "2026-08-15T11:35:00",
+   "kind": "update",
+   "text": "Oscar left Nebula today, he's joining Stripe as a PM"
+  },
+  {
+   "id": "y0715",
+   "ts": "2026-08-15T22:35:00",
+   "kind": "store",
+   "text": "ok so dinner with Eva at Zuni Café, $68.00 lol"
+  },
+  {
+   "id": "y0716",
+   "ts": "2026-08-16T09:11:00",
+   "kind": "store",
+   "text": "btw groceries at Trader Joe's 77.15 USD yesterday!"
+  },
+  {
+   "id": "y0717",
+   "ts": "2026-08-16T10:23:00",
+   "kind": "chitchat",
+   "text": "lol ok"
+  },
+  {
+   "id": "y0718",
+   "ts": "2026-08-17T08:47:00",
+   "kind": "store",
+   "text": "5k run, 24:56 (new PB!) lol"
+  },
+  {
+   "id": "y0719",
+   "ts": "2026-08-17T09:21:00",
+   "kind": "question",
+   "text": "what's the weather like today?"
+  },
+  {
+   "id": "y0720",
+   "ts": "2026-08-17T10:03:00",
+   "kind": "store",
+   "text": "Fyi took a Uber, $19.60 yesterday!"
+  },
+  {
+   "id": "y0721",
+   "ts": "2026-08-17T10:12:00",
+   "kind": "store",
+   "text": "Philz Coffee coffee $5.25 today"
+  },
+  {
+   "id": "y0722",
+   "ts": "2026-08-18T14:24:00",
+   "kind": "store",
+   "text": "souvla lunch 16.00 USD today"
+  },
+  {
+   "id": "y0723",
+   "ts": "2026-08-18T19:27:00",
+   "kind": "store",
+   "text": "Climbing at Mission Cliffs with Nina 🙂"
+  },
+  {
+   "id": "y0724",
+   "ts": "2026-08-19T09:45:00",
+   "kind": "store",
+   "text": "SIGHTGLASS\nSan Francisco, CA\n08/19/2026 09:14\nOat latte               5.25\nTOTAL               $   5.25\nVISA ****4421"
+  },
+  {
+   "id": "y0725",
+   "ts": "2026-08-19T11:40:00",
+   "kind": "chitchat",
+   "text": "thanks!"
+  },
+  {
+   "id": "y0726",
+   "ts": "2026-08-20T07:17:00",
+   "kind": "store",
+   "text": "Ran 5k in 26:30"
+  },
+  {
+   "id": "y0727",
+   "ts": "2026-08-20T09:32:00",
+   "kind": "store",
+   "text": "ok so Zuni Café with Nina, $68.00 yesterday"
+  },
+  {
+   "id": "y0728",
+   "ts": "2026-08-20T10:04:00",
+   "kind": "update",
+   "text": "correction: David's US number is +1 628 688 4995, not 4994"
+  },
+  {
+   "id": "y0729",
+   "ts": "2026-08-20T13:47:00",
+   "kind": "store",
+   "text": "Fyi Souvla lunch $14.50 today"
+  },
+  {
+   "id": "y0730",
+   "ts": "2026-08-20T16:52:00",
+   "kind": "question",
+   "text": "what time is it in Prague?"
+  },
+  {
+   "id": "y0731",
+   "ts": "2026-08-22T00:13:00",
+   "kind": "store",
+   "text": "Btw took a Uber, $24.64 today"
+  },
+  {
+   "id": "y0732",
+   "ts": "2026-08-22T08:22:00",
+   "kind": "store",
+   "text": "Fyi climbing at Mission Cliffs with Nina yesterday"
+  },
+  {
+   "id": "y0733",
+   "ts": "2026-08-22T10:05:00",
+   "kind": "store",
+   "text": "PHILZ COFFEE\nSan Francisco, CA\n08/21/2026 13:28\nOat latte               6.75\nTOTAL               $   6.75\nVISA ****4421"
+  },
+  {
+   "id": "y0734",
+   "ts": "2026-08-22T12:02:00",
+   "kind": "store",
+   "text": "Groceries at Trader Joe's 53.64 USD 🙂"
+  },
+  {
+   "id": "y0735",
+   "ts": "2026-08-22T22:01:00",
+   "kind": "store",
+   "text": "Dinner with Eva at State Bird Provisions, $84.50 today lol"
+  },
+  {
+   "id": "y0736",
+   "ts": "2026-08-24T00:04:00",
+   "kind": "store",
+   "text": "ok so took a Uber, $14.59 tonight lol"
+  },
+  {
+   "id": "y0737",
+   "ts": "2026-08-24T08:30:00",
+   "kind": "store",
+   "text": "BLUE BOTTLE\nSan Francisco, CA\n08/24/2026 16:46\nOat latte               5.25\nTOTAL               $   5.25\nVISA ****4421"
+  },
+  {
+   "id": "y0738",
+   "ts": "2026-08-24T09:12:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Nebula board meeting\nDTSTART:20260903T160000\nDTEND:20260903T173000\nLOCATION:1 Mission St, San Francisco\nORGANIZER;CN=David Mokos:mailto:david@nebula.ai\nEND:VEVENT"
+  },
+  {
+   "id": "y0739",
+   "ts": "2026-08-25T12:53:00",
+   "kind": "store",
+   "text": "Lunch at Tartine Manufactory, $22.00 today"
+  },
+  {
+   "id": "y0740",
+   "ts": "2026-08-25T14:24:00",
+   "kind": "chitchat",
+   "text": "👍"
+  },
+  {
+   "id": "y0741",
+   "ts": "2026-08-25T19:53:00",
+   "kind": "store",
+   "text": "fyi climbing at Mission Cliffs with Nina today lol"
+  },
+  {
+   "id": "y0742",
+   "ts": "2026-08-26T09:18:00",
+   "kind": "store",
+   "text": "SIGHTGLASS\nSan Francisco, CA\n08/26/2026 13:03\nOat latte               6.75\nTOTAL               $   6.75\nVISA ****4421"
+  },
+  {
+   "id": "y0743",
+   "ts": "2026-08-26T22:55:00",
+   "kind": "store",
+   "text": "Had dinner at Zuni Café with Eva ($68.00) lol"
+  },
+  {
+   "id": "y0744",
+   "ts": "2026-08-27T14:24:00",
+   "kind": "store",
+   "text": "note: lunch at Tartine Manufactory, 22.00 USD lol"
+  },
+  {
+   "id": "y0745",
+   "ts": "2026-08-28T08:32:00",
+   "kind": "store",
+   "text": "coffee at Blue Bottle $4.50!"
+  },
+  {
+   "id": "y0746",
+   "ts": "2026-08-28T18:34:00",
+   "kind": "question",
+   "text": "what's on my calendar tomorrow?"
+  },
+  {
+   "id": "y0747",
+   "ts": "2026-08-29T00:16:00",
+   "kind": "store",
+   "text": "Btw took a Uber, $20.71 tonight"
+  },
+  {
+   "id": "y0748",
+   "ts": "2026-08-29T09:36:00",
+   "kind": "chitchat",
+   "text": "you're the best"
+  },
+  {
+   "id": "y0749",
+   "ts": "2026-08-29T12:57:00",
+   "kind": "store",
+   "text": "WHOLE FOODS\nSan Francisco, CA\n08/29/2026 19:51\nGroceries             102.58\nTOTAL               $ 102.58\nVISA ****4421"
+  },
+  {
+   "id": "y0750",
+   "ts": "2026-08-29T21:19:00",
+   "kind": "store",
+   "text": "fyi dinner with Priya at Zuni Café, $96.80"
+  },
+  {
+   "id": "y0751",
+   "ts": "2026-08-30T13:00:00",
+   "kind": "chitchat",
+   "text": "haha nice"
+  },
+  {
+   "id": "y0752",
+   "ts": "2026-08-31T09:03:00",
+   "kind": "store",
+   "text": "5k run, 26:37 🙂"
+  },
+  {
+   "id": "y0753",
+   "ts": "2026-08-31T10:41:00",
+   "kind": "store",
+   "text": "SIGHTGLASS\nSan Francisco, CA\n08/31/2026 12:30\nOat latte               5.25\nTOTAL               $   5.25\nVISA ****4421"
+  },
+  {
+   "id": "y0754",
+   "ts": "2026-08-31T13:22:00",
+   "kind": "chitchat",
+   "text": "hmm"
+  },
+  {
+   "id": "y0755",
+   "ts": "2026-09-01T09:20:00",
+   "kind": "store",
+   "text": "Btw paid rent, $3,200 lol"
+  },
+  {
+   "id": "y0756",
+   "ts": "2026-09-01T10:05:00",
+   "kind": "store",
+   "text": "Note: Spotify renewed $11.99 🙂"
+  },
+  {
+   "id": "y0757",
+   "ts": "2026-09-01T13:33:00",
+   "kind": "store",
+   "text": "Btw Nopalito lunch $22.00 today"
+  },
+  {
+   "id": "y0758",
+   "ts": "2026-09-02T09:50:00",
+   "kind": "store",
+   "text": "happy birthday to David today! 🎂 (Sep 2)"
+  },
+  {
+   "id": "y0759",
+   "ts": "2026-09-02T10:43:00",
+   "kind": "store",
+   "text": "Ok so Sightglass coffee 5.50 USD today"
+  },
+  {
+   "id": "y0760",
+   "ts": "2026-09-03T09:10:00",
+   "kind": "store",
+   "text": "10k run, 52:54 today!"
+  },
+  {
+   "id": "y0761",
+   "ts": "2026-09-03T12:47:00",
+   "kind": "store",
+   "text": "note: lunch at Souvla, $18.75 today"
+  },
+  {
+   "id": "y0762",
+   "ts": "2026-09-03T12:48:00",
+   "kind": "question",
+   "text": "what time is it in Prague?"
+  },
+  {
+   "id": "y0763",
+   "ts": "2026-09-04T19:21:00",
+   "kind": "store",
+   "text": "Climbing at Mission Cliffs"
+  },
+  {
+   "id": "y0764",
+   "ts": "2026-09-04T23:18:00",
+   "kind": "store",
+   "text": "Took a Uber, 33.76 USD today lol"
+  },
+  {
+   "id": "y0765",
+   "ts": "2026-09-05T13:07:00",
+   "kind": "store",
+   "text": "trader Joe's shopping, $80.15 this morning lol"
+  },
+  {
+   "id": "y0766",
+   "ts": "2026-09-05T13:34:00",
+   "kind": "question",
+   "text": "what time is it in Prague?"
+  },
+  {
+   "id": "y0767",
+   "ts": "2026-09-06T22:51:00",
+   "kind": "store",
+   "text": "Took a Uber, 34.72 USD 🙂"
+  },
+  {
+   "id": "y0768",
+   "ts": "2026-09-07T07:14:00",
+   "kind": "store",
+   "text": "Fyi ran 5k in 26:19 today lol"
+  },
+  {
+   "id": "y0769",
+   "ts": "2026-09-07T08:53:00",
+   "kind": "store",
+   "text": "☕ Blue Bottle, 5.50 USD lol"
+  },
+  {
+   "id": "y0770",
+   "ts": "2026-09-07T18:13:00",
+   "kind": "chitchat",
+   "text": "thanks!"
+  },
+  {
+   "id": "y0771",
+   "ts": "2026-09-09T10:03:00",
+   "kind": "store",
+   "text": "btw coffee at Philz Coffee $5.25 this morning"
+  },
+  {
+   "id": "y0772",
+   "ts": "2026-09-09T10:43:00",
+   "kind": "chitchat",
+   "text": "good morning"
+  },
+  {
+   "id": "y0773",
+   "ts": "2026-09-10T08:42:00",
+   "kind": "store",
+   "text": "ok so had dinner at State Bird Provisions with Eva (84.50 USD) yesterday lol"
+  },
+  {
+   "id": "y0774",
+   "ts": "2026-09-10T13:18:00",
+   "kind": "store",
+   "text": "Ok so Tartine Manufactory lunch $22.00 today"
+  },
+  {
+   "id": "y0775",
+   "ts": "2026-09-10T13:18:00",
+   "kind": "question",
+   "text": "what time is it in Prague?"
+  },
+  {
+   "id": "y0776",
+   "ts": "2026-09-10T18:43:00",
+   "kind": "delete",
+   "text": "forget Marco's number, I don't go to that barber anymore"
+  },
+  {
+   "id": "y0777",
+   "ts": "2026-09-11T10:02:00",
+   "kind": "store",
+   "text": "fyi Sightglass coffee 6.75 USD"
+  },
+  {
+   "id": "y0778",
+   "ts": "2026-09-11T19:56:00",
+   "kind": "store",
+   "text": "climbing at Mission Cliffs lol"
+  },
+  {
+   "id": "y0779",
+   "ts": "2026-09-12T00:19:00",
+   "kind": "store",
+   "text": "took a Uber, 19.96 USD today"
+  },
+  {
+   "id": "y0780",
+   "ts": "2026-09-12T12:54:00",
+   "kind": "question",
+   "text": "what's the weather like today?"
+  },
+  {
+   "id": "y0781",
+   "ts": "2026-09-13T08:01:00",
+   "kind": "store",
+   "text": "note: groceries at Whole Foods $62.38 yesterday 🙂"
+  },
+  {
+   "id": "y0782",
+   "ts": "2026-09-13T13:32:00",
+   "kind": "question",
+   "text": "what's the weather like today?"
+  },
+  {
+   "id": "y0783",
+   "ts": "2026-09-14T09:28:00",
+   "kind": "store",
+   "text": "Took a Uber, $18.76 yesterday"
+  },
+  {
+   "id": "y0784",
+   "ts": "2026-09-14T11:41:00",
+   "kind": "chitchat",
+   "text": "lol ok"
+  },
+  {
+   "id": "y0785",
+   "ts": "2026-09-15T13:44:00",
+   "kind": "chitchat",
+   "text": "haha nice"
+  },
+  {
+   "id": "y0786",
+   "ts": "2026-09-15T14:49:00",
+   "kind": "store",
+   "text": "lunch at Souvla, $16.00 today"
+  },
+  {
+   "id": "y0787",
+   "ts": "2026-09-15T19:17:00",
+   "kind": "store",
+   "text": "Ok so climbing at Mission Cliffs with Nina 🙂"
+  },
+  {
+   "id": "y0788",
+   "ts": "2026-09-16T13:20:00",
+   "kind": "chitchat",
+   "text": "ok cool"
+  },
+  {
+   "id": "y0789",
+   "ts": "2026-09-17T08:13:00",
+   "kind": "store",
+   "text": "Had dinner at Nopa with Dave ($112.00) yesterday 🙂"
+  },
+  {
+   "id": "y0790",
+   "ts": "2026-09-17T10:16:00",
+   "kind": "store",
+   "text": "SIGHTGLASS\nSan Francisco, CA\n09/16/2026 20:20\nOat latte               6.75\nTOTAL               $   6.75\nVISA ****4421"
+  },
+  {
+   "id": "y0791",
+   "ts": "2026-09-18T10:29:00",
+   "kind": "store",
+   "text": "ok so Sightglass coffee $6.00"
+  },
+  {
+   "id": "y0792",
+   "ts": "2026-09-19T09:37:00",
+   "kind": "chitchat",
+   "text": "👍"
+  },
+  {
+   "id": "y0793",
+   "ts": "2026-09-19T10:10:00",
+   "kind": "store",
+   "text": "BLUE BOTTLE\nSan Francisco, CA\n09/19/2026 18:59\nOat latte               4.50\nTOTAL               $   4.50\nVISA ****4421"
+  },
+  {
+   "id": "y0794",
+   "ts": "2026-09-19T12:34:00",
+   "kind": "store",
+   "text": "TRADER JOE'S\nSan Francisco, CA\n09/19/2026 09:41\nGroceries              55.67\nTOTAL               $  55.67\nVISA ****4421"
+  },
+  {
+   "id": "y0795",
+   "ts": "2026-09-21T09:12:00",
+   "kind": "store",
+   "text": "BEGIN:VEVENT\nSUMMARY:Nebula board meeting\nDTSTART:20261001T160000\nDTEND:20261001T173000\nLOCATION:1 Mission St, San Francisco\nORGANIZER;CN=David Mokos:mailto:david@nebula.ai\nEND:VEVENT"
+  },
+  {
+   "id": "y0796",
+   "ts": "2026-09-21T09:18:00",
+   "kind": "store",
+   "text": "btw Philz Coffee coffee $6.75 lol"
+  },
+  {
+   "id": "y0797",
+   "ts": "2026-09-21T09:25:00",
+   "kind": "store",
+   "text": "Note: ran 10k in 52:56 today 🙂"
+  },
+  {
+   "id": "y0798",
+   "ts": "2026-09-21T15:17:00",
+   "kind": "question",
+   "text": "can you draft an email to Sarah?"
+  },
+  {
+   "id": "y0799",
+   "ts": "2026-09-22T14:48:00",
+   "kind": "store",
+   "text": "souvla lunch $14.50"
+  },
+  {
+   "id": "y0800",
+   "ts": "2026-09-22T21:28:00",
+   "kind": "store",
+   "text": "Btw climbing at Mission Cliffs with Nina today"
+  },
+  {
+   "id": "y0801",
+   "ts": "2026-09-23T10:32:00",
+   "kind": "store",
+   "text": "SIGHTGLASS\nSan Francisco, CA\n09/23/2026 11:23\nOat latte               6.75\nTOTAL               $   6.75\nVISA ****4421"
+  },
+  {
+   "id": "y0802",
+   "ts": "2026-09-24T07:36:00",
+   "kind": "store",
+   "text": "5k run, 26:03 today"
+  },
+  {
+   "id": "y0803",
+   "ts": "2026-09-24T13:44:00",
+   "kind": "store",
+   "text": "fyi lunch at Tartine Manufactory, 26.50 USD today 🙂"
+  },
+  {
+   "id": "y0804",
+   "ts": "2026-09-25T09:16:00",
+   "kind": "store",
+   "text": "note: ☕ Philz Coffee, 6.00 USD this morning lol"
+  },
+  {
+   "id": "y0805",
+   "ts": "2026-09-25T12:46:00",
+   "kind": "chitchat",
+   "text": "thanks!"
+  },
+  {
+   "id": "y0806",
+   "ts": "2026-09-25T19:22:00",
+   "kind": "store",
+   "text": "Climbing at Mission Cliffs with Nina!"
+  },
+  {
+   "id": "y0807",
+   "ts": "2026-09-26T09:14:00",
+   "kind": "store",
+   "text": "Ok so Uber home $18.01 yesterday 🙂"
+  },
+  {
+   "id": "y0808",
+   "ts": "2026-09-26T10:41:00",
+   "kind": "store",
+   "text": "Note: coffee at Sightglass $5.25"
+  },
+  {
+   "id": "y0809",
+   "ts": "2026-09-26T12:05:00",
+   "kind": "store",
+   "text": "TRADER JOE'S\nSan Francisco, CA\n09/26/2026 11:23\nGroceries              88.11\nTOTAL               $  88.11\nVISA ****4421"
+  },
+  {
+   "id": "y0810",
+   "ts": "2026-09-26T22:54:00",
+   "kind": "chitchat",
+   "text": "brb"
+  },
+  {
+   "id": "y0811",
+   "ts": "2026-09-27T10:59:00",
+   "kind": "chitchat",
+   "text": "👍"
+  },
+  {
+   "id": "y0812",
+   "ts": "2026-09-27T23:19:00",
+   "kind": "store",
+   "text": "uber home 22.99 USD"
+  },
+  {
+   "id": "y0813",
+   "ts": "2026-09-28T08:59:00",
+   "kind": "store",
+   "text": "sightglass coffee $6.75 🙂"
+  },
+  {
+   "id": "y0814",
+   "ts": "2026-09-28T10:43:00",
+   "kind": "question",
+   "text": "translate 'thank you' to Czech"
+  },
+  {
+   "id": "y0815",
+   "ts": "2026-09-28T15:00:00",
+   "kind": "store",
+   "text": "Series A kickoff with Sarah Kim on Fri Oct 9 at 10:00 at the Northwind office, 2 Embarcadero Center"
+  },
+  {
+   "id": "y0816",
+   "ts": "2026-09-30T08:32:00",
+   "kind": "store",
+   "text": "Nopalito lunch $16.00 yesterday"
+  },
+  {
+   "id": "y0817",
+   "ts": "2026-09-30T16:42:00",
+   "kind": "chitchat",
+   "text": "good morning"
+  }
+ ],
+ "qa": [
+  {
+   "id": "m12-q01",
+   "category": "current",
+   "question": "What is my phone number?",
+   "answer": "+1 415 555 0199"
+  },
+  {
+   "id": "m12-q02",
+   "category": "current",
+   "question": "What is Tom's phone number?",
+   "answer": "+420 777 999 000"
+  },
+  {
+   "id": "m12-q03",
+   "category": "current",
+   "question": "Where do I live?",
+   "answer": "1450 Valencia St, San Francisco"
+  },
+  {
+   "id": "m12-q04",
+   "category": "current",
+   "question": "Where does Eva (my partner) work?",
+   "answer": "Gensler"
+  },
+  {
+   "id": "m12-q05",
+   "category": "current",
+   "question": "Where does my sister Klára live?",
+   "answer": "London"
+  },
+  {
+   "id": "m12-q06",
+   "category": "current",
+   "question": "Which climbing gym am I a member of, and what does it cost?",
+   "answer": "Mission Cliffs ($110/month)"
+  },
+  {
+   "id": "m12-q07",
+   "category": "current",
+   "question": "What book am I reading right now?",
+   "answer": "The Three-Body Problem"
+  },
+  {
+   "id": "m12-q08",
+   "category": "current",
+   "question": "What is David's US phone number?",
+   "answer": "+1 628 688 4995 (corrected from +1 628 688 4994)"
+  },
+  {
+   "id": "m12-q09",
+   "category": "current",
+   "question": "What is my relationship with Eva now?",
+   "answer": "Engaged: she is my fiancée (since Jul 12, 2026)"
+  },
+  {
+   "id": "m12-q10",
+   "category": "current",
+   "question": "Is Oscar Lind still at Nebula?",
+   "answer": "No, he left on Aug 15, 2026 to join Stripe as a PM"
+  },
+  {
+   "id": "m12-q11",
+   "category": "current",
+   "question": "How much is my rent and who is my landlord?",
+   "answer": "$3,200/month; landlord Raj Gupta (+1 415 555 0187)"
+  },
+  {
+   "id": "m12-q12",
+   "category": "history",
+   "question": "What was my phone number before my current one?",
+   "answer": "+420 722 238 738"
+  },
+  {
+   "id": "m12-q13",
+   "category": "history",
+   "question": "What was Tom's previous phone number?",
+   "answer": "+420 777 123 456"
+  },
+  {
+   "id": "m12-q14",
+   "category": "history",
+   "question": "Where did I live before San Francisco?",
+   "answer": "Prague"
+  },
+  {
+   "id": "m12-q15",
+   "category": "history",
+   "question": "Where did Eva work before her current job?",
+   "answer": "Studio Kvadrat"
+  },
+  {
+   "id": "m12-q16",
+   "category": "history",
+   "question": "Where did Klára live before?",
+   "answer": "Berlin"
+  },
+  {
+   "id": "m12-q17",
+   "category": "history",
+   "question": "When did I move to San Francisco?",
+   "answer": "April 1, 2026 (flew UA 8843 on Mar 31)"
+  },
+  {
+   "id": "m12-q18",
+   "category": "history",
+   "question": "Which gym was I a member of in Prague?",
+   "answer": "Smíchoff (1190 CZK/month, ended March 2026)"
+  },
+  {
+   "id": "m12-q19",
+   "category": "history",
+   "question": "What was my time on the first 10k run I ever logged?",
+   "answer": "54:48 (Oct 27, 2025)"
+  },
+  {
+   "id": "m12-q20",
+   "category": "aggregation",
+   "question": "How much did I spend on coffee in November 2025?",
+   "answer": "1,025 CZK (10 purchases)"
+  },
+  {
+   "id": "m12-q21",
+   "category": "aggregation",
+   "question": "How much did I spend on groceries in May 2026?",
+   "answer": "$317.76 (4 purchases)"
+  },
+  {
+   "id": "m12-q22",
+   "category": "aggregation",
+   "question": "How much did I spend on rides (Uber/Bolt) in June 2026?",
+   "answer": "$155.98 (7 purchases)"
+  },
+  {
+   "id": "m12-q23",
+   "category": "aggregation",
+   "question": "How much did I spend on lunch in August 2026?",
+   "answer": "$162.25 (8 purchases)"
+  },
+  {
+   "id": "m12-q24",
+   "category": "aggregation",
+   "question": "How many times did I go climbing in January 2026?",
+   "answer": "5"
+  },
+  {
+   "id": "m12-q25",
+   "category": "aggregation",
+   "question": "How many times did I go climbing in July 2026?",
+   "answer": "7"
+  },
+  {
+   "id": "m12-q26",
+   "category": "aggregation",
+   "question": "What's my best 10k time?",
+   "answer": "52:06 (Jun 25, 2026)"
+  },
+  {
+   "id": "m12-q27",
+   "category": "aggregation",
+   "question": "What's the hardest climbing grade I've sent?",
+   "answer": "7a (Jul 03, 2026)"
+  },
+  {
+   "id": "m12-q28",
+   "category": "aggregation",
+   "question": "How many books have I finished, and which did I rate 5/5?",
+   "answer": "10 finished; 5/5: Thinking, Fast and Slow, Project Hail Mary, Shoe Dog, Dune"
+  },
+  {
+   "id": "m12-q29",
+   "category": "aggregation",
+   "question": "How many dinners out did I have with Eva in 2026?",
+   "answer": "8"
+  },
+  {
+   "id": "m12-q30",
+   "category": "aggregation",
+   "question": "How much rent have I paid in total?",
+   "answer": "$19,200 (6 months × $3,200)"
+  },
+  {
+   "id": "m12-q31",
+   "category": "aggregation",
+   "question": "How much did the Lisbon trip cost for flights plus hotel?",
+   "answer": "$2,320 ($1,340 flights + $980 hotel)"
+  },
+  {
+   "id": "m12-q32",
+   "category": "aggregation",
+   "question": "How much have I spent at Blue Bottle in total?",
+   "answer": "$148.75 (27 visits)"
+  },
+  {
+   "id": "m12-q33",
+   "category": "aggregation",
+   "question": "How many times have I gone climbing since moving to SF?",
+   "answer": "39"
+  },
+  {
+   "id": "m12-q34",
+   "category": "temporal",
+   "question": "When did I last have dinner with Ondra?",
+   "answer": "Mar 28, 2026 at Eska"
+  },
+  {
+   "id": "m12-q35",
+   "category": "temporal",
+   "question": "When and where is the next Nebula board meeting?",
+   "answer": "Thu Oct 01, 2026 at 16:00, 1 Mission St, San Francisco"
+  },
+  {
+   "id": "m12-q36",
+   "category": "temporal",
+   "question": "When was my last dentist appointment, and with whom?",
+   "answer": "Jun 03, 2026 with Dr. Lee"
+  },
+  {
+   "id": "m12-q37",
+   "category": "temporal",
+   "question": "When did I first meet Lucas Meyer, and where?",
+   "answer": "Nov 5, 2025 at Web Summit"
+  },
+  {
+   "id": "m12-q38",
+   "category": "temporal",
+   "question": "When did I get engaged?",
+   "answer": "July 12, 2026"
+  },
+  {
+   "id": "m12-q39",
+   "category": "temporal",
+   "question": "What's on my calendar for October 2026?",
+   "answer": "Nebula board meeting Thu Oct 1 at 16:00 (1 Mission St) and the Series A kickoff with Sarah Kim Fri Oct 9 at 10:00"
+  },
+  {
+   "id": "m12-q40",
+   "category": "temporal",
+   "question": "When was the call with Lucas Meyer?",
+   "answer": "Wed Jan 21, 2026 at 14:00 (moved from Jan 14 at 10:00)"
+  },
+  {
+   "id": "m12-q41",
+   "category": "relationships",
+   "question": "Who led Nebula's seed round, and how much did we raise?",
+   "answer": "Northwind Ventures (Sarah Kim), $3M"
+  },
+  {
+   "id": "m12-q42",
+   "category": "relationships",
+   "question": "What's Lucas Meyer's email?",
+   "answer": "lucas@sequoia.com"
+  },
+  {
+   "id": "m12-q43",
+   "category": "semi_structured",
+   "question": "What were the terms in Sarah's term sheet draft?",
+   "answer": "$3M at a $15M post-money valuation, 1x non-participating preference"
+  },
+  {
+   "id": "m12-q44",
+   "category": "relationships",
+   "question": "Who is Eva Green?",
+   "answer": "Nebula's designer (joined Mar 15, 2026; eva.green@nebula.ai), not my partner Eva"
+  },
+  {
+   "id": "m12-q45",
+   "category": "relationships",
+   "question": "Who introduced me to Mark Chen?",
+   "answer": "Priya Patel (Stripe)"
+  },
+  {
+   "id": "m12-q46",
+   "category": "relationships",
+   "question": "Who are my climbing partners?",
+   "answer": "Tom Novak (Prague) and Nina Rossi (SF)"
+  },
+  {
+   "id": "m12-q47",
+   "category": "semi_structured",
+   "question": "What's the confirmation code for my flight to San Francisco?",
+   "answer": "K7QX2P (United UA 8843)"
+  },
+  {
+   "id": "m12-q48",
+   "category": "semi_structured",
+   "question": "How big was the security deposit for my apartment?",
+   "answer": "$4,800"
+  },
+  {
+   "id": "m12-q49",
+   "category": "semi_structured",
+   "question": "Which hotel did we stay at in Lisbon?",
+   "answer": "Memmo Alfama (May 22-26, 2026)"
+  },
+  {
+   "id": "m12-q50",
+   "category": "status",
+   "question": "Did I renew my passport?",
+   "answer": "Yes, done on Dec 3, 2025"
+  },
+  {
+   "id": "m12-q51",
+   "category": "status",
+   "question": "What happened to the February dentist appointment?",
+   "answer": "Cancelled (it was Feb 18 with Dr. Horák)"
+  },
+  {
+   "id": "m12-q52",
+   "category": "status",
+   "question": "Do I still have to get my SF driver's license?",
+   "answer": "Yes, still open (was due Jun 30)"
+  },
+  {
+   "id": "m12-q53",
+   "category": "status",
+   "question": "Is the wedding venue booked?",
+   "answer": "No, still open (due Oct 31)"
+  },
+  {
+   "id": "m12-q54",
+   "category": "status",
+   "question": "Did I finish The Three-Body Problem?",
+   "answer": "No, still reading it"
+  },
+  {
+   "id": "m12-q55",
+   "category": "forgotten",
+   "question": "Who is Jan Dvořák?",
+   "answer": "UNKNOWN: the user asked to forget him"
+  },
+  {
+   "id": "m12-q56",
+   "category": "forgotten",
+   "question": "What's Marco's phone number?",
+   "answer": "UNKNOWN: the user asked to forget it"
+  },
+  {
+   "id": "m12-q57",
+   "category": "unanswerable",
+   "question": "What's my blood type?",
+   "answer": "UNKNOWN: never mentioned"
+  },
+  {
+   "id": "m12-q58",
+   "category": "unanswerable",
+   "question": "What's Ondra's email address?",
+   "answer": "UNKNOWN: never mentioned"
+  },
+  {
+   "id": "m12-q59",
+   "category": "unanswerable",
+   "question": "How much does Eva earn?",
+   "answer": "UNKNOWN: never mentioned"
+  },
+  {
+   "id": "m12-q60",
+   "category": "unanswerable",
+   "question": "What's Nina's birthday?",
+   "answer": "UNKNOWN: never mentioned"
+  }
+ ],
+ "qa_m6": [
+  {
+   "id": "m6-q01",
+   "category": "current",
+   "question": "What is my phone number?",
+   "answer": "+420 722 238 738"
+  },
+  {
+   "id": "m6-q02",
+   "category": "current",
+   "question": "What is Tom's phone number?",
+   "answer": "+420 777 999 000"
+  },
+  {
+   "id": "m6-q03",
+   "category": "current",
+   "question": "Where do I live?",
+   "answer": "Prague"
+  },
+  {
+   "id": "m6-q04",
+   "category": "current",
+   "question": "Where does Eva (my partner) work?",
+   "answer": "Studio Kvadrat"
+  },
+  {
+   "id": "m6-q05",
+   "category": "current",
+   "question": "Where does my sister Klára live?",
+   "answer": "Berlin"
+  },
+  {
+   "id": "m6-q06",
+   "category": "current",
+   "question": "Which climbing gym am I a member of, and what does it cost?",
+   "answer": "Smíchoff (1190 CZK/month)"
+  },
+  {
+   "id": "m6-q07",
+   "category": "current",
+   "question": "What book am I reading right now?",
+   "answer": "Deep Work"
+  },
+  {
+   "id": "m6-q08",
+   "category": "history",
+   "question": "What was Tom's previous phone number?",
+   "answer": "+420 777 123 456"
+  },
+  {
+   "id": "m6-q09",
+   "category": "history",
+   "question": "What was my time on the first 10k run I ever logged?",
+   "answer": "54:48 (Oct 27, 2025)"
+  },
+  {
+   "id": "m6-q10",
+   "category": "aggregation",
+   "question": "How much did I spend on coffee in November 2025?",
+   "answer": "1,025 CZK (10 purchases)"
+  },
+  {
+   "id": "m6-q11",
+   "category": "aggregation",
+   "question": "How much did I spend on groceries in January 2026?",
+   "answer": "6,160 CZK (5 purchases)"
+  },
+  {
+   "id": "m6-q12",
+   "category": "aggregation",
+   "question": "How much did I spend on lunch in December 2025?",
+   "answer": "1,653 CZK (6 purchases)"
+  },
+  {
+   "id": "m6-q13",
+   "category": "aggregation",
+   "question": "How many times did I go climbing in January 2026?",
+   "answer": "5"
+  },
+  {
+   "id": "m6-q14",
+   "category": "aggregation",
+   "question": "What's my best 10k time?",
+   "answer": "53:21 (Mar 05, 2026)"
+  },
+  {
+   "id": "m6-q15",
+   "category": "aggregation",
+   "question": "What's the hardest climbing grade I've sent?",
+   "answer": "6c (Mar 27, 2026)"
+  },
+  {
+   "id": "m6-q16",
+   "category": "aggregation",
+   "question": "How many books have I finished, and which did I rate 5/5?",
+   "answer": "6 finished; 5/5: Thinking, Fast and Slow, Project Hail Mary, Shoe Dog"
+  },
+  {
+   "id": "m6-q17",
+   "category": "aggregation",
+   "question": "How many dinners out did I have with Eva in 2026?",
+   "answer": "2"
+  },
+  {
+   "id": "m6-q18",
+   "category": "temporal",
+   "question": "When did I last have dinner with Ondra?",
+   "answer": "Mar 28, 2026 at Eska"
+  },
+  {
+   "id": "m6-q19",
+   "category": "temporal",
+   "question": "When and where is the next Nebula board meeting?",
+   "answer": "Thu Apr 02, 2026 at 16:00, 1 Mission St, San Francisco"
+  },
+  {
+   "id": "m6-q20",
+   "category": "temporal",
+   "question": "When was my last dentist appointment, and with whom?",
+   "answer": "Nov 12, 2025 with Dr. Horák"
+  },
+  {
+   "id": "m6-q21",
+   "category": "temporal",
+   "question": "When did I first meet Lucas Meyer, and where?",
+   "answer": "Nov 5, 2025 at Web Summit"
+  },
+  {
+   "id": "m6-q22",
+   "category": "relationships",
+   "question": "Who led Nebula's seed round, and how much did we raise?",
+   "answer": "Northwind Ventures (Sarah Kim), $3M"
+  },
+  {
+   "id": "m6-q23",
+   "category": "relationships",
+   "question": "What's Lucas Meyer's email?",
+   "answer": "lucas@sequoia.com"
+  },
+  {
+   "id": "m6-q24",
+   "category": "semi_structured",
+   "question": "What were the terms in Sarah's term sheet draft?",
+   "answer": "$3M at a $15M post-money valuation, 1x non-participating preference"
+  },
+  {
+   "id": "m6-q25",
+   "category": "status",
+   "question": "Did I renew my passport?",
+   "answer": "Yes, done on Dec 3, 2025"
+  },
+  {
+   "id": "m6-q26",
+   "category": "status",
+   "question": "What happened to the February dentist appointment?",
+   "answer": "Cancelled (it was Feb 18 with Dr. Horák)"
+  },
+  {
+   "id": "m6-q27",
+   "category": "forgotten",
+   "question": "Who is Jan Dvořák?",
+   "answer": "UNKNOWN: the user asked to forget him"
+  },
+  {
+   "id": "m6-q28",
+   "category": "unanswerable",
+   "question": "What's my blood type?",
+   "answer": "UNKNOWN: never mentioned"
+  },
+  {
+   "id": "m6-q29",
+   "category": "unanswerable",
+   "question": "What's Ondra's email address?",
+   "answer": "UNKNOWN: never mentioned"
+  },
+  {
+   "id": "m6-q30",
+   "category": "unanswerable",
+   "question": "How much does Eva earn?",
+   "answer": "UNKNOWN: never mentioned"
+  }
+ ]
+}

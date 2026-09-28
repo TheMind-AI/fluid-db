@@ -1,0 +1,3940 @@
+{
+ "log_rag": {
+  "rows": [
+   {
+    "id": "pr01",
+    "type": "semantic_current",
+    "question": "Who owns Atlas now?",
+    "gold": "Aisha Khan (since the June 1 reorg)",
+    "answer": "Aisha Khan owns Atlas now; the change took effect on June 1, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1548,
+    "answer_tokens_in": 800,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr02",
+    "type": "semantic_current",
+    "question": "Which team is Raj on?",
+    "gold": "Platform (with Aisha as lead and Jonas)",
+    "answer": "Raj is on the backend team.",
+    "score": 0.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 867,
+    "answer_tokens_in": 601,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr03",
+    "type": "semantic_current",
+    "question": "What is the status of Beacon?",
+    "gold": "Generally available: GA shipped on Jun 15, 2026 (beta since Apr 20)",
+    "answer": "Beacon’s beta is live; 500 testers were invited on April 20, 2026. Mei also finished the GA checklist on June 11.",
+    "score": 0.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1218,
+    "answer_tokens_in": 691,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr04",
+    "type": "semantic_history",
+    "question": "What did we first decide for the Atlas migration?",
+    "gold": "Postgres logical replication, not dual writes (Feb 10); reversed on Mar 24 to dual writes",
+    "answer": "I don't know. The notes say we later reversed the Atlas decision and switched to dual writes because replication lag was too high, but they don't say what we first decided.",
+    "score": 0.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 806,
+    "answer_tokens_in": 559,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr05",
+    "type": "semantic_history",
+    "question": "Who owned Atlas before the reorg?",
+    "gold": "Raj Patel",
+    "answer": "Raj owned Atlas before the June 1 reorg; Aisha owns it now.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1255,
+    "answer_tokens_in": 715,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr06",
+    "type": "semantic_history",
+    "question": "Who owned Comet before Jonas?",
+    "gold": "Tom Becker",
+    "answer": "Tom owned Comet before Jonas took it over on May 11, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 767,
+    "answer_tokens_in": 586,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr07",
+    "type": "aggregate",
+    "question": "How many incidents did we have in Q2?",
+    "gold": "2 (database failover, billing double charges)",
+    "answer": "We had 2 incidents in Q2: the database failover on May 6 and the billing double charges on June 3.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 754,
+    "answer_tokens_in": 546,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr08",
+    "type": "aggregate",
+    "question": "How many minutes of downtime did the incidents cause in total?",
+    "gold": "60 minutes",
+    "answer": "The incidents caused **60 minutes** of downtime in total: 42 minutes from the API outage and 18 minutes from the database failover. The billing incident caused no downtime.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1305,
+    "answer_tokens_in": 741,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr09",
+    "type": "aggregate",
+    "question": "How many action items has Raj completed?",
+    "gold": "2",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 865,
+    "answer_tokens_in": 596,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr10",
+    "type": "episodic_event",
+    "question": "What happened in the May 6 incident?",
+    "gold": "A database failover with 18 minutes down, caused by replica lag during the Atlas dual writes",
+    "answer": "On May 6, there was a database failover that caused 18 minutes of downtime.",
+    "score": 0.5,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 775,
+    "answer_tokens_in": 586,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr11",
+    "type": "episodic_event",
+    "question": "What did Mei and I talk about in our last 1:1?",
+    "gold": "wants a mobile hire (Jun 18, 2026)",
+    "answer": "In your last 1:1 with Mei, on May 21, you talked about her preference for async Slack updates over status meetings.",
+    "score": 0.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1162,
+    "answer_tokens_in": 678,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr12",
+    "type": "episodic_event",
+    "question": "What happened on April 20?",
+    "gold": "Beacon beta went live, 500 testers invited",
+    "answer": "On April 20, Aisha was assigned to add database alerts by May 8, 2026.",
+    "score": 0.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 634,
+    "answer_tokens_in": 525,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr13",
+    "type": "episodic_time",
+    "question": "When did the Beacon beta launch?",
+    "gold": "April 20, 2026",
+    "answer": "The Beacon beta launched on April 20, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 773,
+    "answer_tokens_in": 567,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr14",
+    "type": "episodic_time",
+    "question": "When did Jonas start?",
+    "gold": "April 6, 2026",
+    "answer": "Jonas Weber started on April 6, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 714,
+    "answer_tokens_in": 549,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr15",
+    "type": "episodic_time",
+    "question": "When did we reverse the Atlas decision?",
+    "gold": "March 24, 2026",
+    "answer": "We reversed the Atlas decision on March 24, 2026, after the load test; replication lag was too high, so we switched to dual writes.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 847,
+    "answer_tokens_in": 557,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr16",
+    "type": "routine",
+    "question": "When are my 1:1s with Mei?",
+    "gold": "Every other Thursday, around 14:00-15:00",
+    "answer": "Your 1:1s with Mei are every other Thursday at 3:00 PM.",
+    "score": 0.5,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 655,
+    "answer_tokens_in": 555,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr17",
+    "type": "routine",
+    "question": "When are my 1:1s with Raj?",
+    "gold": "Every other Tuesday, around 10:00-11:00",
+    "answer": "Your 1:1s with Raj are at 11:00, every other Tuesday. The latest recorded ones were June 2 at 11:20 and April 21 at 11:12.",
+    "score": 0.5,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 712,
+    "answer_tokens_in": 564,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr18",
+    "type": "routine",
+    "question": "How often do we do sprint planning?",
+    "gold": "Every other Monday",
+    "answer": "Sprint planning happens every two weeks (biweekly).",
+    "score": 0.5,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 720,
+    "answer_tokens_in": 522,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr19",
+    "type": "prospective",
+    "question": "What action items are still open?",
+    "gold": "Raj: review the on-call rotation (due Jun 26, 2026); Jonas: write the Comet runbook (due Jul 10, 2026); Jonas: migrate test invoices to Stripe (due Jul 3, 2026)",
+    "answer": "The open action items are: Aisha—document the incident process (due Mar 6) and run a DB failover drill (due Jun 5); Mei—write the Beacon beta release notes (due Apr 18); Jonas—migrate test invoices to Stripe (due Jun 19); Raj—review the on-call rotation (due Jun 26).",
+    "score": 0.5,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 821,
+    "answer_tokens_in": 576,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr20",
+    "type": "prospective",
+    "question": "Which action items are overdue?",
+    "gold": "Raj: review the on-call rotation (due Jun 26, 2026)",
+    "answer": "Overdue action items are: Aisha’s incident-process documentation (due March 6), Mei’s Beacon beta release notes (due April 18), Aisha’s DB failover drill (due June 5), Jonas’s test-invoice migration to Stripe (due June 19), and Raj’s on-call rotation review (due June 26, 2026).",
+    "score": 0.5,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 429,
+    "answer_tokens_in": 431,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr21",
+    "type": "prospective",
+    "question": "What is Jonas on the hook for?",
+    "gold": "write the Comet runbook (due Jul 10, 2026); migrate test invoices to Stripe (due Jul 3, 2026)",
+    "answer": "Jonas is on the hook for Comet while Tom is out.",
+    "score": 0.5,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 731,
+    "answer_tokens_in": 564,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr22",
+    "type": "preference",
+    "question": "How does Mei prefer to get updates?",
+    "gold": "Async updates in Slack over status meetings",
+    "answer": "Mei prefers asynchronous updates in Slack rather than status meetings.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 917,
+    "answer_tokens_in": 595,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr23",
+    "type": "preference",
+    "question": "What does Aisha want for her career?",
+    "gold": "The SRE track",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 674,
+    "answer_tokens_in": 537,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr24",
+    "type": "preference",
+    "question": "What does Raj want to grow toward?",
+    "gold": "Backend architecture",
+    "answer": "Raj wants to grow toward backend architecture.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 738,
+    "answer_tokens_in": 556,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr25",
+    "type": "source",
+    "question": "What did the postmortem say caused the February outage?",
+    "gold": "An expired TLS certificate on the load balancer (42 minutes down)",
+    "answer": "The February outage was caused by an expired TLS certificate on the load balancer.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1253,
+    "answer_tokens_in": 729,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr26",
+    "type": "source",
+    "question": "What did Grace's email say about headcount?",
+    "gold": "One more mobile engineer for H2",
+    "answer": "Grace’s email said H2 headcount would include one more mobile engineer.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 791,
+    "answer_tokens_in": 553,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr27",
+    "type": "source",
+    "question": "What was the reason given for reversing the Atlas decision?",
+    "gold": "Replication lag was too high (after the load test)",
+    "answer": "The Atlas decision was reversed because replication lag was too high, so the plan switched to dual writes.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 818,
+    "answer_tokens_in": 555,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr28",
+    "type": "period",
+    "question": "Who was on the Platform team after the reorg?",
+    "gold": "Aisha Khan (lead), Raj Patel and Jonas Weber",
+    "answer": "After the June 1 reorg, the Platform team was Aisha (tech lead), Raj, and Jonas.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1219,
+    "answer_tokens_in": 716,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr29",
+    "type": "period",
+    "question": "How many incidents did we have before the Beacon beta launched?",
+    "gold": "1 (API outage)",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 749,
+    "answer_tokens_in": 560,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr30",
+    "type": "period",
+    "question": "Who owned Comet while Tom was out?",
+    "gold": "Jonas Weber",
+    "answer": "Jonas owned Comet while Tom was out.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 689,
+    "answer_tokens_in": 556,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr31",
+    "type": "metamemory",
+    "question": "What is Raj's salary?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 663,
+    "answer_tokens_in": 536,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr32",
+    "type": "metamemory",
+    "question": "When is Mei's birthday?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 659,
+    "answer_tokens_in": 555,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr33",
+    "type": "metamemory",
+    "question": "What is Grace's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 675,
+    "answer_tokens_in": 535,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr34",
+    "type": "forgotten",
+    "question": "What surgery is Tom having?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 704,
+    "answer_tokens_in": 536,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr35",
+    "type": "forgotten",
+    "question": "Why was Tom out in May?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "Tom was out in May for [forgotten].",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 830,
+    "answer_tokens_in": 587,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr36",
+    "type": "forgotten",
+    "question": "When is Tom's surgery?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 663,
+    "answer_tokens_in": 557,
+    "route_latency_s": null
+   }
+  ],
+  "n": 36,
+  "accuracy": 68.1,
+  "new_spend": 0.00154
+ },
+ "facts_log": {
+  "rows": [
+   {
+    "id": "pr01",
+    "type": "semantic_current",
+    "question": "Who owns Atlas now?",
+    "gold": "Aisha Khan (since the June 1 reorg)",
+    "answer": "Aisha Khan owns Atlas now; the June 1 reorg record confirms the transfer.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3684,
+    "answer_tokens_in": 1469,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr02",
+    "type": "semantic_current",
+    "question": "Which team is Raj on?",
+    "gold": "Platform (with Aisha as lead and Jonas)",
+    "answer": "Raj is on the Platform team. His role is backend.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 1973,
+    "answer_tokens_in": 987,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr03",
+    "type": "semantic_current",
+    "question": "What is the status of Beacon?",
+    "gold": "Generally available: GA shipped on Jun 15, 2026 (beta since Apr 20)",
+    "answer": "Beacon is a React Native mobile app. Its beta went live on April 20, 2026, with 500 testers invited, and general availability shipped on June 15, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2972,
+    "answer_tokens_in": 1289,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr04",
+    "type": "semantic_history",
+    "question": "What did we first decide for the Atlas migration?",
+    "gold": "Postgres logical replication, not dual writes (Feb 10); reversed on Mar 24 to dual writes",
+    "answer": "We first decided to use Postgres logical replication for the Atlas migration. On March 24, after the load test showed replication lag was too high, we switched to dual writes.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3000,
+    "answer_tokens_in": 1225,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr05",
+    "type": "semantic_history",
+    "question": "Who owned Atlas before the reorg?",
+    "gold": "Raj Patel",
+    "answer": "Raj Patel owned Atlas before the reorg.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3282,
+    "answer_tokens_in": 1351,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr06",
+    "type": "semantic_history",
+    "question": "Who owned Comet before Jonas?",
+    "gold": "Tom Becker",
+    "answer": "Tom Becker owned Comet before Jonas took over.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2182,
+    "answer_tokens_in": 1074,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr07",
+    "type": "aggregate",
+    "question": "How many incidents did we have in Q2?",
+    "gold": "2 (database failover, billing double charges)",
+    "answer": "We had 2 incidents in Q2: the database failover on May 6 and billing double charges on June 3.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2420,
+    "answer_tokens_in": 1073,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr08",
+    "type": "aggregate",
+    "question": "How many minutes of downtime did the incidents cause in total?",
+    "gold": "60 minutes",
+    "answer": "The incidents caused 60 minutes of downtime in total.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2975,
+    "answer_tokens_in": 1281,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr09",
+    "type": "aggregate",
+    "question": "How many action items has Raj completed?",
+    "gold": "2",
+    "answer": "I don't know. The evidence shows Raj’s on-call rotation review is still open, but it doesn’t identify which completed tasks were assigned to Raj.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2337,
+    "answer_tokens_in": 1087,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr10",
+    "type": "episodic_event",
+    "question": "What happened in the May 6 incident?",
+    "gold": "A database failover with 18 minutes down, caused by replica lag during the Atlas dual writes",
+    "answer": "On May 6, 2026, a database failover caused 18 minutes of downtime. The root cause was replica lag during the Atlas dual writes; follow-ups were to add alerting and a runbook.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2368,
+    "answer_tokens_in": 1100,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr11",
+    "type": "episodic_event",
+    "question": "What did Mei and I talk about in our last 1:1?",
+    "gold": "wants a mobile hire (Jun 18, 2026)",
+    "answer": "In your last 1:1 with Mei, on June 18, you talked about her wanting a mobile hire.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3040,
+    "answer_tokens_in": 1293,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr12",
+    "type": "episodic_event",
+    "question": "What happened on April 20?",
+    "gold": "Beacon beta went live, 500 testers invited",
+    "answer": "On April 20, you had a 1:1 with Tom Becker about the Stripe Billing migration plan. Beacon’s beta went live that day.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2238,
+    "answer_tokens_in": 1069,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr13",
+    "type": "episodic_time",
+    "question": "When did the Beacon beta launch?",
+    "gold": "April 20, 2026",
+    "answer": "The Beacon beta launched on April 20, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2507,
+    "answer_tokens_in": 1159,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr14",
+    "type": "episodic_time",
+    "question": "When did Jonas start?",
+    "gold": "April 6, 2026",
+    "answer": "Jonas Weber started on April 6, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2204,
+    "answer_tokens_in": 1070,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr15",
+    "type": "episodic_time",
+    "question": "When did we reverse the Atlas decision?",
+    "gold": "March 24, 2026",
+    "answer": "We reversed the Atlas decision on March 24, 2026, after the load test, switching from Postgres logical replication to dual writes because replication lag was too high.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2703,
+    "answer_tokens_in": 1144,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr16",
+    "type": "routine",
+    "question": "When are my 1:1s with Mei?",
+    "gold": "Every other Thursday, around 14:00-15:00",
+    "answer": "Your 1:1s with Mei are every other Thursday: the latest was June 18, 2026, and the next is July 2, 2026.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 1812,
+    "answer_tokens_in": 984,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr17",
+    "type": "routine",
+    "question": "When are my 1:1s with Raj?",
+    "gold": "Every other Tuesday, around 10:00-11:00",
+    "answer": "Your 1:1s with Raj are on Tuesdays around 11 a.m. Recorded dates are Jan 27, Feb 10, Mar 10 and 24, Apr 21, May 5, and Jun 2 and 16, 2026.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2006,
+    "answer_tokens_in": 1019,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr18",
+    "type": "routine",
+    "question": "How often do we do sprint planning?",
+    "gold": "Every other Monday",
+    "answer": "We do sprint planning every two weeks (biweekly), typically on Mondays.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2214,
+    "answer_tokens_in": 999,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr19",
+    "type": "prospective",
+    "question": "What action items are still open?",
+    "gold": "Raj: review the on-call rotation (due Jun 26, 2026); Jonas: write the Comet runbook (due Jul 10, 2026); Jonas: migrate test invoices to Stripe (due Jul 3, 2026)",
+    "answer": "The open action items are: Write the Beacon beta release notes; Migrate test invoices to Stripe; Ship the Beacon GA checklist; Review the on-call rotation; and Write the Comet runbook.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2632,
+    "answer_tokens_in": 1135,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr20",
+    "type": "prospective",
+    "question": "Which action items are overdue?",
+    "gold": "Raj: review the on-call rotation (due Jun 26, 2026)",
+    "answer": "The overdue action items are **Write the Beacon beta release notes** (due April 18, 2026) and **Review the on-call rotation** (due June 26, 2026).",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2240,
+    "answer_tokens_in": 990,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr21",
+    "type": "prospective",
+    "question": "What is Jonas on the hook for?",
+    "gold": "write the Comet runbook (due Jul 10, 2026); migrate test invoices to Stripe (due Jul 3, 2026)",
+    "answer": "Jonas took over Comet while Tom was out. He had finished the spike by June 26.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2702,
+    "answer_tokens_in": 1187,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr22",
+    "type": "preference",
+    "question": "How does Mei prefer to get updates?",
+    "gold": "Async updates in Slack over status meetings",
+    "answer": "Mei prefers async updates in Slack rather than status meetings.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3016,
+    "answer_tokens_in": 1251,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr23",
+    "type": "preference",
+    "question": "What does Aisha want for her career?",
+    "gold": "The SRE track",
+    "answer": "Aisha is interested in the SRE track.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2452,
+    "answer_tokens_in": 1119,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr24",
+    "type": "preference",
+    "question": "What does Raj want to grow toward?",
+    "gold": "Backend architecture",
+    "answer": "Raj wants to grow toward backend architecture.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2570,
+    "answer_tokens_in": 1139,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr25",
+    "type": "source",
+    "question": "What did the postmortem say caused the February outage?",
+    "gold": "An expired TLS certificate on the load balancer (42 minutes down)",
+    "answer": "The postmortem said the February outage was caused by an expired TLS certificate on the load balancer.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3205,
+    "answer_tokens_in": 1369,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr26",
+    "type": "source",
+    "question": "What did Grace's email say about headcount?",
+    "gold": "One more mobile engineer for H2",
+    "answer": "Grace said H2 headcount would include one additional mobile engineer.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2212,
+    "answer_tokens_in": 991,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr27",
+    "type": "source",
+    "question": "What was the reason given for reversing the Atlas decision?",
+    "gold": "Replication lag was too high (after the load test)",
+    "answer": "The Atlas decision was reversed because replication lag was too high, so the migration switched to dual writes.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2973,
+    "answer_tokens_in": 1218,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr28",
+    "type": "period",
+    "question": "Who was on the Platform team after the reorg?",
+    "gold": "Aisha Khan (lead), Raj Patel and Jonas Weber",
+    "answer": "After the June 1 reorg, the Platform team was Aisha Khan (tech lead), Raj Patel, and Jonas Weber.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2690,
+    "answer_tokens_in": 1210,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr29",
+    "type": "period",
+    "question": "How many incidents did we have before the Beacon beta launched?",
+    "gold": "1 (API outage)",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2197,
+    "answer_tokens_in": 1052,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr30",
+    "type": "period",
+    "question": "Who owned Comet while Tom was out?",
+    "gold": "Jonas Weber",
+    "answer": "Jonas Weber owned Comet while Tom was out.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2264,
+    "answer_tokens_in": 1086,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr31",
+    "type": "metamemory",
+    "question": "What is Raj's salary?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 1983,
+    "answer_tokens_in": 1001,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr32",
+    "type": "metamemory",
+    "question": "When is Mei's birthday?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 1701,
+    "answer_tokens_in": 943,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr33",
+    "type": "metamemory",
+    "question": "What is Grace's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 1873,
+    "answer_tokens_in": 960,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr34",
+    "type": "forgotten",
+    "question": "What surgery is Tom having?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 1761,
+    "answer_tokens_in": 924,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr35",
+    "type": "forgotten",
+    "question": "Why was Tom out in May?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know. The evidence says Jonas took over Comet while Tom was out on May 11, but it doesn't say why.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2334,
+    "answer_tokens_in": 1082,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr36",
+    "type": "forgotten",
+    "question": "When is Tom's surgery?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 1720,
+    "answer_tokens_in": 945,
+    "route_latency_s": null
+   }
+  ],
+  "n": 36,
+  "accuracy": 83.3,
+  "new_spend": 0.00246
+ },
+ "hybrid_r4": {
+  "rows": [
+   {
+    "id": "pr01",
+    "type": "semantic_current",
+    "question": "Who owns Atlas now?",
+    "gold": "Aisha Khan (since the June 1 reorg)",
+    "answer": "Aisha Khan owns Atlas now.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr02",
+    "type": "semantic_current",
+    "question": "Which team is Raj on?",
+    "gold": "Platform (with Aisha as lead and Jonas)",
+    "answer": "backend — 2026-01-05T09:10 {\"name\": \"Raj Patel\", \"team_role\": \"backend\"}",
+    "score": 0.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr03",
+    "type": "semantic_current",
+    "question": "What is the status of Beacon?",
+    "gold": "Generally available: GA shipped on Jun 15, 2026 (beta since Apr 20)",
+    "answer": "shipped — 2026-04-20 {\"name\": \"Beacon\", \"description\": \"mobile app\", \"owner_id\": 2, \"technology\": \"React Native\", \"beta_status\": \"live\", \"testers_invited\": 500, \"beta_live_date\": \"2026-04-20\", \"ga_status\": \"shipped\", \"ga_shipped_date\": \"2026-06-15\"}",
+    "score": 0.5,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr04",
+    "type": "semantic_history",
+    "question": "What did we first decide for the Atlas migration?",
+    "gold": "Postgres logical replication, not dual writes (Feb 10); reversed on Mar 24 to dual writes",
+    "answer": "Dual writes — 2026-06-01T10:10 {\"name\": \"Atlas\", \"description\": \"Postgres migration\", \"owner_id\": 4, \"migration_strategy\": \"Dual writes\", \"migration_reason\": \"Replication lag was too high\"}",
+    "score": 0.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr05",
+    "type": "semantic_history",
+    "question": "Who owned Atlas before the reorg?",
+    "gold": "Raj Patel",
+    "answer": "Raj Patel owned Atlas before the reorg.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr06",
+    "type": "semantic_history",
+    "question": "Who owned Comet before Jonas?",
+    "gold": "Tom Becker",
+    "answer": "Tom Becker.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr07",
+    "type": "aggregate",
+    "question": "How many incidents did we have in Q2?",
+    "gold": "2 (database failover, billing double charges)",
+    "answer": "We had 2 incidents in Q2.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr08",
+    "type": "aggregate",
+    "question": "How many minutes of downtime did the incidents cause in total?",
+    "gold": "60 minutes",
+    "answer": "60.00 (3 rows)",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr09",
+    "type": "aggregate",
+    "question": "How many action items has Raj completed?",
+    "gold": "2",
+    "answer": "Raj has completed 2 action items.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr10",
+    "type": "episodic_event",
+    "question": "What happened in the May 6 incident?",
+    "gold": "A database failover with 18 minutes down, caused by replica lag during the Atlas dual writes",
+    "answer": "On May 6, a database failover lasted 18 minutes. The root cause was replica lag during the Atlas dual writes. Follow-ups were to add alerting and a runbook; no impact was recorded.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr11",
+    "type": "episodic_event",
+    "question": "What did Mei and I talk about in our last 1:1?",
+    "gold": "wants a mobile hire (Jun 18, 2026)",
+    "answer": "Your last 1:1 with Mei was on June 18, 2026. You talked about her wanting a mobile hire.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr12",
+    "type": "episodic_event",
+    "question": "What happened on April 20?",
+    "gold": "Beacon beta went live, 500 testers invited",
+    "answer": "On April 20, 2026, Beacon’s beta went live, with 500 testers invited. There was also a 1:1 with Tom Becker about the Stripe Billing migration plan.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr13",
+    "type": "episodic_time",
+    "question": "When did the Beacon beta launch?",
+    "gold": "April 20, 2026",
+    "answer": "2026-04-20 — 2026-04-20 {\"name\": \"Beacon\", \"description\": \"mobile app\", \"owner_id\": 2, \"technology\": \"React Native\", \"beta_status\": \"live\", \"testers_invited\": 500, \"beta_live_date\": \"2026-04-20\", \"ga_status\": \"shipped\", \"ga_shipped_date\": \"2026-06-15\"}",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr14",
+    "type": "episodic_time",
+    "question": "When did Jonas start?",
+    "gold": "April 6, 2026",
+    "answer": "2026-04-06 — 2026-04-06 {\"name\": \"Jonas Weber\", \"team_role\": \"senior backend\", \"start_date\": \"2026-04-06\", \"offer_status\": \"accepted\"}",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr15",
+    "type": "episodic_time",
+    "question": "When did we reverse the Atlas decision?",
+    "gold": "March 24, 2026",
+    "answer": "March 24, 2026.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr16",
+    "type": "routine",
+    "question": "When are my 1:1s with Mei?",
+    "gold": "Every other Thursday, around 14:00-15:00",
+    "answer": "Your 1:1s with Mei are recorded on Jan 15, 29; Feb 12, 26; Mar 12, 26; Apr 9, 23; May 7, 21; and Jun 4, 18, 2026. The database has dates but no meeting times.",
+    "score": 0.5,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr17",
+    "type": "routine",
+    "question": "When are my 1:1s with Raj?",
+    "gold": "Every other Tuesday, around 10:00-11:00",
+    "answer": "Your 1:1s with Raj are every other Tuesday: Jan 13 and 27; Feb 10 and 24; Mar 10 and 24; Apr 7 and 21; May 5 and 19; Jun 2, 16, and 30, 2026.",
+    "score": 0.5,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr18",
+    "type": "routine",
+    "question": "How often do we do sprint planning?",
+    "gold": "Every other Monday",
+    "answer": "We do sprint planning every two weeks (biweekly).",
+    "score": 0.5,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr19",
+    "type": "prospective",
+    "question": "What action items are still open?",
+    "gold": "Raj: review the on-call rotation (due Jun 26, 2026); Jonas: write the Comet runbook (due Jul 10, 2026); Jonas: migrate test invoices to Stripe (due Jul 3, 2026)",
+    "answer": "Three action items are still open:\n- Review the on-call rotation — Raj Patel, due June 26, 2026\n- Migrate test invoices to Stripe — Jonas Weber, due July 3, 2026\n- Write the Comet runbook — Jonas Weber, due July 10, 2026",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr20",
+    "type": "prospective",
+    "question": "Which action items are overdue?",
+    "gold": "Raj: review the on-call rotation (due Jun 26, 2026)",
+    "answer": "Review the on-call rotation — assigned to Raj Patel, due June 26, 2026 (status not marked done).",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr21",
+    "type": "prospective",
+    "question": "What is Jonas on the hook for?",
+    "gold": "write the Comet runbook (due Jul 10, 2026); migrate test invoices to Stripe (due Jul 3, 2026)",
+    "answer": "Document the incident process; Draft the Atlas cutover plan; Write the Comet invoice spec; Load-test the dual-write path; Fix push notifications before the beta; Write the Beacon beta release notes; Add database alerts; Run a DB failover drill; Ship the Beacon GA checklist; Review the on-call rotation; Migrate test invoices to Stripe; Write the Comet runbook",
+    "score": 0.5,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr22",
+    "type": "preference",
+    "question": "How does Mei prefer to get updates?",
+    "gold": "Async updates in Slack over status meetings",
+    "answer": "Prefers async updates in Slack over status meetings. — 2026-01-15T15:04 {\"person\": \"Mei Lin\", \"category\": \"communication\", \"detail\": \"Prefers async updates in Slack over status meetings.\"}",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr23",
+    "type": "preference",
+    "question": "What does Aisha want for her career?",
+    "gold": "The SRE track",
+    "answer": "Interested in the SRE track — 2026-01-14T12:02 {\"person\": \"Aisha Khan\", \"category\": \"career goal\", \"detail\": \"Interested in the SRE track\"}",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr24",
+    "type": "preference",
+    "question": "What does Raj want to grow toward?",
+    "gold": "Backend architecture",
+    "answer": "{\"person\": \"Raj Patel\", \"category\": \"career goal\", \"detail\": \"Grow toward backend architecture\"}",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr25",
+    "type": "source",
+    "question": "What did the postmortem say caused the February outage?",
+    "gold": "An expired TLS certificate on the load balancer (42 minutes down)",
+    "answer": "An expired TLS certificate on the load balancer — 2026-02-18 {\"category\": \"outage\", \"name\": \"API outage\", \"date\": \"2026-02-18\", \"duration_minutes\": 42, \"root_cause\": \"An expired TLS certificate on the load balancer\", \"follow_ups\": \"Add alerting; add a runbook\"}",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr26",
+    "type": "source",
+    "question": "What did Grace's email say about headcount?",
+    "gold": "One more mobile engineer for H2",
+    "answer": "Grace said the H2 headcount plan is to hire one more mobile engineer.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr27",
+    "type": "source",
+    "question": "What was the reason given for reversing the Atlas decision?",
+    "gold": "Replication lag was too high (after the load test)",
+    "answer": "Replication lag was too high — 2026-06-01T10:10 {\"name\": \"Atlas\", \"description\": \"Postgres migration\", \"owner_id\": 4, \"migration_strategy\": \"Dual writes\", \"migration_reason\": \"Replication lag was too high\"}",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr28",
+    "type": "period",
+    "question": "Who was on the Platform team after the reorg?",
+    "gold": "Aisha Khan (lead), Raj Patel and Jonas Weber",
+    "answer": "After the reorg took effect on June 1, 2026, the Platform team was Aisha Khan (lead), Raj Patel, and Jonas Weber.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr29",
+    "type": "period",
+    "question": "How many incidents did we have before the Beacon beta launched?",
+    "gold": "1 (API outage)",
+    "answer": "We had 1 incident before the Beacon beta launched.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr30",
+    "type": "period",
+    "question": "Who owned Comet while Tom was out?",
+    "gold": "Jonas Weber",
+    "answer": "Jonas took over Comet while Tom was out.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr31",
+    "type": "metamemory",
+    "question": "What is Raj's salary?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr32",
+    "type": "metamemory",
+    "question": "When is Mei's birthday?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr33",
+    "type": "metamemory",
+    "question": "What is Grace's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr34",
+    "type": "forgotten",
+    "question": "What surgery is Tom having?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr35",
+    "type": "forgotten",
+    "question": "Why was Tom out in May?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr36",
+    "type": "forgotten",
+    "question": "When is Tom's surgery?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   }
+  ],
+  "n": 36,
+  "accuracy": 87.5,
+  "new_spend": 0
+ },
+ "plus_computed": {
+  "rows": [
+   {
+    "id": "pr01",
+    "type": "semantic_current",
+    "question": "Who owns Atlas now?",
+    "gold": "Aisha Khan (since the June 1 reorg)",
+    "answer": "Aisha Khan owns Atlas now.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 8661,
+    "answer_tokens_in": 2889,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr02",
+    "type": "semantic_current",
+    "question": "Which team is Raj on?",
+    "gold": "Platform (with Aisha as lead and Jonas)",
+    "answer": "Raj is on the Platform team.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 8823,
+    "answer_tokens_in": 3068,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr03",
+    "type": "semantic_current",
+    "question": "What is the status of Beacon?",
+    "gold": "Generally available: GA shipped on Jun 15, 2026 (beta since Apr 20)",
+    "answer": "Beacon’s general availability shipped on June 15, 2026. Its beta went live April 20 with 500 testers invited.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 8703,
+    "answer_tokens_in": 2968,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr04",
+    "type": "semantic_history",
+    "question": "What did we first decide for the Atlas migration?",
+    "gold": "Postgres logical replication, not dual writes (Feb 10); reversed on Mar 24 to dual writes",
+    "answer": "We first decided on February 10 to migrate Atlas using Postgres logical replication, rather than dual writes. On March 24, after a load test showed replication lag was too high, we switched to dual writes.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 9351,
+    "answer_tokens_in": 3113,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr05",
+    "type": "semantic_history",
+    "question": "Who owned Atlas before the reorg?",
+    "gold": "Raj Patel",
+    "answer": "Raj Patel owned Atlas before the June 1 reorg; it then moved to Aisha.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 9810,
+    "answer_tokens_in": 3292,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr06",
+    "type": "semantic_history",
+    "question": "Who owned Comet before Jonas?",
+    "gold": "Tom Becker",
+    "answer": "Tom owned Comet before Jonas took it over.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 8107,
+    "answer_tokens_in": 2817,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr07",
+    "type": "aggregate",
+    "question": "How many incidents did we have in Q2?",
+    "gold": "2 (database failover, billing double charges)",
+    "answer": "We had 2 incidents in Q2 2026: the database failover on May 6 and billing double charges on June 3.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 6687,
+    "answer_tokens_in": 2244,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr08",
+    "type": "aggregate",
+    "question": "How many minutes of downtime did the incidents cause in total?",
+    "gold": "60 minutes",
+    "answer": "The incidents caused **60 minutes** of downtime in total: 42 minutes from the API outage, 18 minutes from the database failover, and none from the billing incident.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 8462,
+    "answer_tokens_in": 2871,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr09",
+    "type": "aggregate",
+    "question": "How many action items has Raj completed?",
+    "gold": "2",
+    "answer": "Raj has completed 3 action items.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 7750,
+    "answer_tokens_in": 2701,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr10",
+    "type": "episodic_event",
+    "question": "What happened in the May 6 incident?",
+    "gold": "A database failover with 18 minutes down, caused by replica lag during the Atlas dual writes",
+    "answer": "On May 6, a database failover caused 18 minutes of downtime. The May 8 postmortem traced it to replica lag during Atlas dual writes; follow-ups were to add alerting and write a runbook.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 7961,
+    "answer_tokens_in": 2725,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr11",
+    "type": "episodic_event",
+    "question": "What did Mei and I talk about in our last 1:1?",
+    "gold": "wants a mobile hire (Jun 18, 2026)",
+    "answer": "In your last 1:1 with Mei, on June 18, 2026, you talked about her wanting a mobile hire.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 9744,
+    "answer_tokens_in": 3310,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr12",
+    "type": "episodic_event",
+    "question": "What happened on April 20?",
+    "gold": "Beacon beta went live, 500 testers invited",
+    "answer": "Beacon’s beta went live with 500 testers invited. You also had a 1:1 with Tom Becker to discuss the Stripe Billing migration plan.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 8652,
+    "answer_tokens_in": 2991,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr13",
+    "type": "episodic_time",
+    "question": "When did the Beacon beta launch?",
+    "gold": "April 20, 2026",
+    "answer": "The Beacon beta launched on April 20, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 8180,
+    "answer_tokens_in": 2835,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr14",
+    "type": "episodic_time",
+    "question": "When did Jonas start?",
+    "gold": "April 6, 2026",
+    "answer": "Jonas started on April 6, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 7976,
+    "answer_tokens_in": 2773,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr15",
+    "type": "episodic_time",
+    "question": "When did we reverse the Atlas decision?",
+    "gold": "March 24, 2026",
+    "answer": "We reversed the Atlas decision on March 24, 2026, switching to dual writes after a load test showed replication lag was too high.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 9193,
+    "answer_tokens_in": 3073,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr16",
+    "type": "routine",
+    "question": "When are my 1:1s with Mei?",
+    "gold": "Every other Thursday, around 14:00-15:00",
+    "answer": "Your 1:1s with Mei have been every other Thursday at 3:00 p.m. The latest recorded ones were June 4 and June 18, 2026.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 7581,
+    "answer_tokens_in": 2719,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr17",
+    "type": "routine",
+    "question": "When are my 1:1s with Raj?",
+    "gold": "Every other Tuesday, around 10:00-11:00",
+    "answer": "Your 1:1s with Raj have usually been around 11:00, mostly on Tuesdays. I don’t know a fixed recurring schedule.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 8008,
+    "answer_tokens_in": 2818,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr18",
+    "type": "routine",
+    "question": "How often do we do sprint planning?",
+    "gold": "Every other Monday",
+    "answer": "Sprint planning is every two weeks—about once every other week, usually on Monday.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 6631,
+    "answer_tokens_in": 2226,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr19",
+    "type": "prospective",
+    "question": "What action items are still open?",
+    "gold": "Raj: review the on-call rotation (due Jun 26, 2026); Jonas: write the Comet runbook (due Jul 10, 2026); Jonas: migrate test invoices to Stripe (due Jul 3, 2026)",
+    "answer": "The open action items are: migrate test invoices to Stripe (due July 3), write the Comet runbook (due July 10), and review the on-call rotation (due June 26).",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 5814,
+    "answer_tokens_in": 2048,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr20",
+    "type": "prospective",
+    "question": "Which action items are overdue?",
+    "gold": "Raj: review the on-call rotation (due Jun 26, 2026)",
+    "answer": "As of June 30, 2026, the overdue action item is **Review the on-call rotation**, due June 26. The other open action items—**Migrate test invoices to Stripe** (due July 3) and **Write the Comet runbook** (due July 10)—aren’t overdue yet.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 4403,
+    "answer_tokens_in": 1659,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr21",
+    "type": "prospective",
+    "question": "What is Jonas on the hook for?",
+    "gold": "write the Comet runbook (due Jul 10, 2026); migrate test invoices to Stripe (due Jul 3, 2026)",
+    "answer": "Jonas is responsible for the Comet runbook, due July 10, and migrating Comet test invoices to Stripe, now due July 3. He has also taken over Comet while Tom is out.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 9857,
+    "answer_tokens_in": 3318,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr22",
+    "type": "preference",
+    "question": "How does Mei prefer to get updates?",
+    "gold": "Async updates in Slack over status meetings",
+    "answer": "Mei prefers async updates in Slack rather than status meetings.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 9988,
+    "answer_tokens_in": 3376,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr23",
+    "type": "preference",
+    "question": "What does Aisha want for her career?",
+    "gold": "The SRE track",
+    "answer": "Aisha is interested in pursuing the SRE track.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 7332,
+    "answer_tokens_in": 2516,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr24",
+    "type": "preference",
+    "question": "What does Raj want to grow toward?",
+    "gold": "Backend architecture",
+    "answer": "Raj wants to grow toward backend architecture.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 9453,
+    "answer_tokens_in": 3220,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr25",
+    "type": "source",
+    "question": "What did the postmortem say caused the February outage?",
+    "gold": "An expired TLS certificate on the load balancer (42 minutes down)",
+    "answer": "The February 18 API outage was caused by an expired TLS certificate on the load balancer. The postmortem listed adding alerting and a runbook as follow-ups.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 8655,
+    "answer_tokens_in": 2946,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr26",
+    "type": "source",
+    "question": "What did Grace's email say about headcount?",
+    "gold": "One more mobile engineer for H2",
+    "answer": "Grace said H2 headcount would include one additional mobile engineer.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 8864,
+    "answer_tokens_in": 2997,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr27",
+    "type": "source",
+    "question": "What was the reason given for reversing the Atlas decision?",
+    "gold": "Replication lag was too high (after the load test)",
+    "answer": "The load test showed replication lag was too high, so the Atlas migration strategy was reversed to dual writes.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 9567,
+    "answer_tokens_in": 3178,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr28",
+    "type": "period",
+    "question": "Who was on the Platform team after the reorg?",
+    "gold": "Aisha Khan (lead), Raj Patel and Jonas Weber",
+    "answer": "After the reorg, the Platform team was Aisha Khan (lead), Raj Patel, and Jonas Weber.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 9727,
+    "answer_tokens_in": 3302,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr29",
+    "type": "period",
+    "question": "How many incidents did we have before the Beacon beta launched?",
+    "gold": "1 (API outage)",
+    "answer": "I don’t know. The evidence mentions one pre-beta incident—an API outage on February 18—but doesn’t establish the total before launch.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 7701,
+    "answer_tokens_in": 2658,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr30",
+    "type": "period",
+    "question": "Who owned Comet while Tom was out?",
+    "gold": "Jonas Weber",
+    "answer": "Jonas Weber owned Comet while Tom was out.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 8615,
+    "answer_tokens_in": 3010,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr31",
+    "type": "metamemory",
+    "question": "What is Raj's salary?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 8173,
+    "answer_tokens_in": 2837,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr32",
+    "type": "metamemory",
+    "question": "When is Mei's birthday?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 7600,
+    "answer_tokens_in": 2709,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr33",
+    "type": "metamemory",
+    "question": "What is Grace's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 5839,
+    "answer_tokens_in": 2131,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr34",
+    "type": "forgotten",
+    "question": "What surgery is Tom having?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know. The surgery details are marked as forgotten.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 7354,
+    "answer_tokens_in": 2584,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr35",
+    "type": "forgotten",
+    "question": "Why was Tom out in May?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "Tom was out on May 18, but the reason is marked as forgotten, so I don’t know why.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 7591,
+    "answer_tokens_in": 2625,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr36",
+    "type": "forgotten",
+    "question": "When is Tom's surgery?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don’t know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 7282,
+    "answer_tokens_in": 2598,
+    "route_latency_s": null
+   }
+  ],
+  "n": 36,
+  "accuracy": 90.3,
+  "new_spend": 0.01081
+ },
+ "brain_jev_recall": {
+  "rows": [
+   {
+    "id": "pr01",
+    "type": "semantic_current",
+    "question": "Who owns Atlas now?",
+    "gold": "Aisha Khan (since the June 1 reorg)",
+    "answer": "Aisha owns Atlas now.",
+    "score": 1.0,
+    "stores": [
+     "periods"
+    ],
+    "evidence_chars": 4353,
+    "answer_tokens_in": 1474,
+    "route_latency_s": 0.29944300651550293
+   },
+   {
+    "id": "pr02",
+    "type": "semantic_current",
+    "question": "Which team is Raj on?",
+    "gold": "Platform (with Aisha as lead and Jonas)",
+    "answer": "Raj is on the Platform team.",
+    "score": 1.0,
+    "stores": [
+     "periods",
+     "episodes",
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 8453,
+    "answer_tokens_in": 2862,
+    "route_latency_s": 0.27060389518737793
+   },
+   {
+    "id": "pr03",
+    "type": "semantic_current",
+    "question": "What is the status of Beacon?",
+    "gold": "Generally available: GA shipped on Jun 15, 2026 (beta since Apr 20)",
+    "answer": "Beacon GA shipped on June 15, 2026. Mei’s GA checklist was completed on June 11.",
+    "score": 0.5,
+    "stores": [
+     "log",
+     "episodes",
+     "periods",
+     "intentions"
+    ],
+    "evidence_chars": 8632,
+    "answer_tokens_in": 2844,
+    "route_latency_s": 0.2651650905609131
+   },
+   {
+    "id": "pr04",
+    "type": "semantic_history",
+    "question": "What did we first decide for the Atlas migration?",
+    "gold": "Postgres logical replication, not dual writes (Feb 10); reversed on Mar 24 to dual writes",
+    "answer": "We first decided on Feb 10 to migrate Atlas using Postgres logical replication, not dual writes.",
+    "score": 1.0,
+    "stores": [
+     "log",
+     "intentions",
+     "episodes",
+     "periods"
+    ],
+    "evidence_chars": 8478,
+    "answer_tokens_in": 2771,
+    "route_latency_s": 0.269071102142334
+   },
+   {
+    "id": "pr05",
+    "type": "semantic_history",
+    "question": "Who owned Atlas before the reorg?",
+    "gold": "Raj Patel",
+    "answer": "I don't know. The evidence says Aisha owned Atlas after the June 1 reorg, but doesn’t identify who owned it before.",
+    "score": 0.0,
+    "stores": [
+     "periods",
+     "log",
+     "episodes"
+    ],
+    "evidence_chars": 7321,
+    "answer_tokens_in": 2456,
+    "route_latency_s": 0.274899959564209
+   },
+   {
+    "id": "pr06",
+    "type": "semantic_history",
+    "question": "Who owned Comet before Jonas?",
+    "gold": "Tom Becker",
+    "answer": "Tom owned Comet before Jonas took over.",
+    "score": 1.0,
+    "stores": [
+     "periods",
+     "log",
+     "episodes"
+    ],
+    "evidence_chars": 6890,
+    "answer_tokens_in": 2355,
+    "route_latency_s": 0.7999207973480225
+   },
+   {
+    "id": "pr07",
+    "type": "aggregate",
+    "question": "How many incidents did we have in Q2?",
+    "gold": "2 (database failover, billing double charges)",
+    "answer": "We had 2 incidents in Q2: the database failover on May 6 and the billing double charges on June 3.",
+    "score": 1.0,
+    "stores": [
+     "periods",
+     "facts",
+     "episodes"
+    ],
+    "evidence_chars": 7359,
+    "answer_tokens_in": 2389,
+    "route_latency_s": 0.29071807861328125
+   },
+   {
+    "id": "pr08",
+    "type": "aggregate",
+    "question": "How many minutes of downtime did the incidents cause in total?",
+    "gold": "60 minutes",
+    "answer": "The incidents caused 60 minutes of downtime in total: 42 minutes from the API outage and 18 minutes from the database failover. The billing incident caused no downtime.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "periods"
+    ],
+    "evidence_chars": 9115,
+    "answer_tokens_in": 3013,
+    "route_latency_s": 0.2770669460296631
+   },
+   {
+    "id": "pr09",
+    "type": "aggregate",
+    "question": "How many action items has Raj completed?",
+    "gold": "2",
+    "answer": "Raj has completed 2 action items: drafting the Atlas cutover plan and load-testing the dual-write path.",
+    "score": 1.0,
+    "stores": [
+     "intentions"
+    ],
+    "evidence_chars": 594,
+    "answer_tokens_in": 497,
+    "route_latency_s": 0.3644070625305176
+   },
+   {
+    "id": "pr10",
+    "type": "episodic_event",
+    "question": "What happened in the May 6 incident?",
+    "gold": "A database failover with 18 minutes down, caused by replica lag during the Atlas dual writes",
+    "answer": "On May 6, a database failover caused 18 minutes of downtime. In a 1:1 that day, Aisha discussed database failover drills; the May 8 postmortem traced the outage to replica lag during Atlas dual writes, with alerting and a runbook as follow-ups.",
+    "score": 1.0,
+    "stores": [
+     "episodes",
+     "periods",
+     "log"
+    ],
+    "evidence_chars": 6957,
+    "answer_tokens_in": 2322,
+    "route_latency_s": 0.4335060119628906
+   },
+   {
+    "id": "pr11",
+    "type": "episodic_event",
+    "question": "What did Mei and I talk about in our last 1:1?",
+    "gold": "wants a mobile hire (Jun 18, 2026)",
+    "answer": "I don’t know. The latest 1:1 appointment with Mei was on June 18 about the mobile hire, but I don’t have notes on what you discussed.",
+    "score": 1.0,
+    "stores": [
+     "log",
+     "episodes",
+     "intentions"
+    ],
+    "evidence_chars": 3866,
+    "answer_tokens_in": 1492,
+    "route_latency_s": 0.3898758888244629
+   },
+   {
+    "id": "pr12",
+    "type": "episodic_event",
+    "question": "What happened on April 20?",
+    "gold": "Beacon beta went live, 500 testers invited",
+    "answer": "On April 20, the Beacon beta went live, with 500 testers invited. The Stripe Billing migration plan was discussed in a 1:1 with Tom, and Aisha was assigned to add database alerts by May 8.",
+    "score": 1.0,
+    "stores": [
+     "episodes",
+     "periods",
+     "log",
+     "intentions"
+    ],
+    "evidence_chars": 7630,
+    "answer_tokens_in": 2586,
+    "route_latency_s": 0.3929710388183594
+   },
+   {
+    "id": "pr13",
+    "type": "episodic_time",
+    "question": "When did the Beacon beta launch?",
+    "gold": "April 20, 2026",
+    "answer": "The Beacon beta launched on April 20, 2026, with 500 testers invited.",
+    "score": 1.0,
+    "stores": [
+     "periods",
+     "log",
+     "episodes"
+    ],
+    "evidence_chars": 6859,
+    "answer_tokens_in": 2337,
+    "route_latency_s": 0.4029560089111328
+   },
+   {
+    "id": "pr14",
+    "type": "episodic_time",
+    "question": "When did Jonas start?",
+    "gold": "April 6, 2026",
+    "answer": "Jonas Weber started on April 6, 2026.",
+    "score": 1.0,
+    "stores": [
+     "episodes",
+     "log",
+     "periods",
+     "intentions"
+    ],
+    "evidence_chars": 7535,
+    "answer_tokens_in": 2557,
+    "route_latency_s": 0.2863779067993164
+   },
+   {
+    "id": "pr15",
+    "type": "episodic_time",
+    "question": "When did we reverse the Atlas decision?",
+    "gold": "March 24, 2026",
+    "answer": "We reversed the Atlas decision on March 24, 2026, after a load test showed replication lag was too high; we switched to dual writes.",
+    "score": 1.0,
+    "stores": [
+     "periods",
+     "episodes"
+    ],
+    "evidence_chars": 6653,
+    "answer_tokens_in": 2153,
+    "route_latency_s": 0.2851431369781494
+   },
+   {
+    "id": "pr16",
+    "type": "routine",
+    "question": "When are my 1:1s with Mei?",
+    "gold": "Every other Thursday, around 14:00-15:00",
+    "answer": "Your 1:1s with Mei have been around 3:00 p.m., alternating between Beacon beta scope and mobile hiring. The latest listed was June 18 at 3:00 p.m.; I don’t see a future 1:1 scheduled.",
+    "score": 0.5,
+    "stores": [
+     "intentions",
+     "routines",
+     "log"
+    ],
+    "evidence_chars": 2915,
+    "answer_tokens_in": 1389,
+    "route_latency_s": 0.35710811614990234
+   },
+   {
+    "id": "pr17",
+    "type": "routine",
+    "question": "When are my 1:1s with Raj?",
+    "gold": "Every other Tuesday, around 10:00-11:00",
+    "answer": "Your 1:1s with Raj are usually around 11:00, most often on Tuesdays. I don’t see a fixed recurring schedule.",
+    "score": 0.5,
+    "stores": [
+     "intentions",
+     "routines",
+     "log"
+    ],
+    "evidence_chars": 3230,
+    "answer_tokens_in": 1468,
+    "route_latency_s": 0.3043849468231201
+   },
+   {
+    "id": "pr18",
+    "type": "routine",
+    "question": "How often do we do sprint planning?",
+    "gold": "Every other Monday",
+    "answer": "We do sprint planning about every two weeks (roughly 0.5 times per week), usually on Monday around 11:00.",
+    "score": 1.0,
+    "stores": [
+     "routines",
+     "log",
+     "periods",
+     "episodes"
+    ],
+    "evidence_chars": 6425,
+    "answer_tokens_in": 2084,
+    "route_latency_s": 0.5537469387054443
+   },
+   {
+    "id": "pr19",
+    "type": "prospective",
+    "question": "What action items are still open?",
+    "gold": "Raj: review the on-call rotation (due Jun 26, 2026); Jonas: write the Comet runbook (due Jul 10, 2026); Jonas: migrate test invoices to Stripe (due Jul 3, 2026)",
+    "answer": "Open items: Raj—fix flaky tests and review the on-call rotation (due June 26, past due); Tom and Mei—be on call (January 23, past due); Aisha—add database alerting (May 8, past due) and add a runbook; Jonas—take over Comet while Tom is out, migrate test invoices to Stripe (due July 3), and write the Comet runbook (due July 10). Also open are the reminders to recall what was said (February 3 and 5), add alerting and a runbook (June 5), and the plans to migrate Atlas using Postgres logical replication, not dual writes, and switch to dual writes after the load test.",
+    "score": 0.5,
+    "stores": [
+     "intentions",
+     "log"
+    ],
+    "evidence_chars": 2446,
+    "answer_tokens_in": 1127,
+    "route_latency_s": 0.5152459144592285
+   },
+   {
+    "id": "pr20",
+    "type": "prospective",
+    "question": "Which action items are overdue?",
+    "gold": "Raj: review the on-call rotation (due Jun 26, 2026)",
+    "answer": "Overdue open commitments are Tom’s and Mei’s on-call shifts (Jan 23), Aisha’s database alerts (May 8), and Raj’s on-call rotation review (June 26). Also past due are reminders to add alerting and a runbook (May 8 and June 5), plus the logged action items to document the incident process (Mar 6), write Beacon beta release notes (Apr 18), and run a DB failover drill (June 5); Jonas’s June 19 invoice-migration date was superseded by July 3.",
+    "score": 0.5,
+    "stores": [
+     "intentions",
+     "log"
+    ],
+    "evidence_chars": 2054,
+    "answer_tokens_in": 982,
+    "route_latency_s": 0.6484241485595703
+   },
+   {
+    "id": "pr21",
+    "type": "prospective",
+    "question": "What is Jonas on the hook for?",
+    "gold": "write the Comet runbook (due Jul 10, 2026); migrate test invoices to Stripe (due Jul 3, 2026)",
+    "answer": "Jonas is on the hook to take over Comet while Tom is out, write the Comet runbook by July 10, 2026, and migrate the test invoices to Stripe by July 3, 2026.",
+    "score": 1.0,
+    "stores": [
+     "intentions",
+     "log",
+     "episodes"
+    ],
+    "evidence_chars": 3733,
+    "answer_tokens_in": 1477,
+    "route_latency_s": 0.23568105697631836
+   },
+   {
+    "id": "pr22",
+    "type": "preference",
+    "question": "How does Mei prefer to get updates?",
+    "gold": "Async updates in Slack over status meetings",
+    "answer": "Mei prefers async updates in Slack rather than status meetings.",
+    "score": 1.0,
+    "stores": [
+     "preferences",
+     "log",
+     "facts"
+    ],
+    "evidence_chars": 4154,
+    "answer_tokens_in": 1560,
+    "route_latency_s": 0.6391818523406982
+   },
+   {
+    "id": "pr23",
+    "type": "preference",
+    "question": "What does Aisha want for her career?",
+    "gold": "The SRE track",
+    "answer": "Aisha is interested in pursuing the SRE track.",
+    "score": 1.0,
+    "stores": [
+     "log",
+     "episodes",
+     "intentions",
+     "facts"
+    ],
+    "evidence_chars": 5463,
+    "answer_tokens_in": 2054,
+    "route_latency_s": 0.26090097427368164
+   },
+   {
+    "id": "pr24",
+    "type": "preference",
+    "question": "What does Raj want to grow toward?",
+    "gold": "Backend architecture",
+    "answer": "Raj wants to grow toward backend architecture.",
+    "score": 1.0,
+    "stores": [
+     "intentions",
+     "log",
+     "episodes"
+    ],
+    "evidence_chars": 3082,
+    "answer_tokens_in": 1298,
+    "route_latency_s": 0.23814678192138672
+   },
+   {
+    "id": "pr25",
+    "type": "source",
+    "question": "What did the postmortem say caused the February outage?",
+    "gold": "An expired TLS certificate on the load balancer (42 minutes down)",
+    "answer": "The February 18 API outage was caused by an expired TLS certificate on the load balancer.",
+    "score": 1.0,
+    "stores": [
+     "periods",
+     "episodes",
+     "log"
+    ],
+    "evidence_chars": 7669,
+    "answer_tokens_in": 2534,
+    "route_latency_s": 0.2919769287109375
+   },
+   {
+    "id": "pr26",
+    "type": "source",
+    "question": "What did Grace's email say about headcount?",
+    "gold": "One more mobile engineer for H2",
+    "answer": "Grace said H2 headcount would include one additional mobile engineer.",
+    "score": 1.0,
+    "stores": [
+     "log",
+     "facts"
+    ],
+    "evidence_chars": 2212,
+    "answer_tokens_in": 991,
+    "route_latency_s": 0.31671690940856934
+   },
+   {
+    "id": "pr27",
+    "type": "source",
+    "question": "What was the reason given for reversing the Atlas decision?",
+    "gold": "Replication lag was too high (after the load test)",
+    "answer": "The load test showed that Postgres logical replication had too much lag, so the team reversed the Atlas decision and switched to dual writes.",
+    "score": 1.0,
+    "stores": [
+     "periods",
+     "log",
+     "episodes"
+    ],
+    "evidence_chars": 7544,
+    "answer_tokens_in": 2439,
+    "route_latency_s": 0.23364686965942383
+   },
+   {
+    "id": "pr28",
+    "type": "period",
+    "question": "Who was on the Platform team after the reorg?",
+    "gold": "Aisha Khan (lead), Raj Patel and Jonas Weber",
+    "answer": "The Platform team was Aisha Khan (lead), Raj Patel, and Jonas Weber.",
+    "score": 1.0,
+    "stores": [
+     "periods",
+     "facts",
+     "log",
+     "episodes"
+    ],
+    "evidence_chars": 9226,
+    "answer_tokens_in": 3079,
+    "route_latency_s": 0.2627997398376465
+   },
+   {
+    "id": "pr29",
+    "type": "period",
+    "question": "How many incidents did we have before the Beacon beta launched?",
+    "gold": "1 (API outage)",
+    "answer": "I don’t know. The database reports 3 incidents since January, but it doesn’t establish how many occurred before the Beacon beta launched on April 20, 2026.",
+    "score": 0.0,
+    "stores": [
+     "periods",
+     "episodes",
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 7797,
+    "answer_tokens_in": 2638,
+    "route_latency_s": 0.2947719097137451
+   },
+   {
+    "id": "pr30",
+    "type": "period",
+    "question": "Who owned Comet while Tom was out?",
+    "gold": "Jonas Weber",
+    "answer": "Jonas owned Comet while Tom was out.",
+    "score": 1.0,
+    "stores": [
+     "episodes",
+     "log"
+    ],
+    "evidence_chars": 2432,
+    "answer_tokens_in": 1096,
+    "route_latency_s": 0.2722601890563965
+   },
+   {
+    "id": "pr31",
+    "type": "metamemory",
+    "question": "What is Raj's salary?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 1983,
+    "answer_tokens_in": 1001,
+    "route_latency_s": 0.2269601821899414
+   },
+   {
+    "id": "pr32",
+    "type": "metamemory",
+    "question": "When is Mei's birthday?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "log",
+     "facts",
+     "episodes"
+    ],
+    "evidence_chars": 3459,
+    "answer_tokens_in": 1504,
+    "route_latency_s": 0.2750217914581299
+   },
+   {
+    "id": "pr33",
+    "type": "metamemory",
+    "question": "What is Grace's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 1873,
+    "answer_tokens_in": 960,
+    "route_latency_s": 0.24973726272583008
+   },
+   {
+    "id": "pr34",
+    "type": "forgotten",
+    "question": "What surgery is Tom having?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "intentions",
+     "log",
+     "episodes"
+    ],
+    "evidence_chars": 3477,
+    "answer_tokens_in": 1367,
+    "route_latency_s": 0.25881290435791016
+   },
+   {
+    "id": "pr35",
+    "type": "forgotten",
+    "question": "Why was Tom out in May?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don’t know. The reason Tom was out is marked forgotten, so I can’t reveal it.",
+    "score": 1.0,
+    "stores": [
+     "episodes",
+     "periods",
+     "log",
+     "intentions"
+    ],
+    "evidence_chars": 7702,
+    "answer_tokens_in": 2618,
+    "route_latency_s": 0.24239182472229004
+   },
+   {
+    "id": "pr36",
+    "type": "forgotten",
+    "question": "When is Tom's surgery?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don’t know. The date and details of Tom’s surgery are marked forgotten.",
+    "score": 1.0,
+    "stores": [
+     "intentions",
+     "log",
+     "episodes",
+     "facts"
+    ],
+    "evidence_chars": 4171,
+    "answer_tokens_in": 1731,
+    "route_latency_s": 0.24721193313598633
+   }
+  ],
+  "n": 36,
+  "accuracy": 87.5,
+  "new_spend": 0.00782
+ },
+ "brain_all": {
+  "rows": [
+   {
+    "id": "pr01",
+    "type": "semantic_current",
+    "question": "Who owns Atlas now?",
+    "gold": "Aisha Khan (since the June 1 reorg)",
+    "answer": "Aisha Khan owns Atlas now; the ownership changed on June 1, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 10159,
+    "answer_tokens_in": 3137,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr02",
+    "type": "semantic_current",
+    "question": "Which team is Raj on?",
+    "gold": "Platform (with Aisha as lead and Jonas)",
+    "answer": "Raj is on the Platform team.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 12303,
+    "answer_tokens_in": 3699,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr03",
+    "type": "semantic_current",
+    "question": "What is the status of Beacon?",
+    "gold": "Generally available: GA shipped on Jun 15, 2026 (beta since Apr 20)",
+    "answer": "Beacon’s general availability shipped on June 15, 2026. Its beta had gone live on April 20 with 500 testers invited.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 12498,
+    "answer_tokens_in": 3661,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr04",
+    "type": "semantic_history",
+    "question": "What did we first decide for the Atlas migration?",
+    "gold": "Postgres logical replication, not dual writes (Feb 10); reversed on Mar 24 to dual writes",
+    "answer": "We first decided to migrate Atlas using Postgres logical replication, not dual writes. That decision was made on February 10, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 13466,
+    "answer_tokens_in": 3862,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr05",
+    "type": "semantic_history",
+    "question": "Who owned Atlas before the reorg?",
+    "gold": "Raj Patel",
+    "answer": "Raj owned Atlas before the June 1 reorg; it moved to Aisha.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 13220,
+    "answer_tokens_in": 3867,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr06",
+    "type": "semantic_history",
+    "question": "Who owned Comet before Jonas?",
+    "gold": "Tom Becker",
+    "answer": "Tom owned Comet before Jonas took it over.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 10690,
+    "answer_tokens_in": 3186,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr07",
+    "type": "aggregate",
+    "question": "How many incidents did we have in Q2?",
+    "gold": "2 (database failover, billing double charges)",
+    "answer": "We had 2 incidents in Q2: a database failover on May 6 and billing double charges on June 3.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 9216,
+    "answer_tokens_in": 2774,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr08",
+    "type": "aggregate",
+    "question": "How many minutes of downtime did the incidents cause in total?",
+    "gold": "60 minutes",
+    "answer": "The incidents caused 60 minutes of downtime in total: 42 minutes from the API outage, 18 from the database failover, and none from the billing incident.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 12249,
+    "answer_tokens_in": 3831,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr09",
+    "type": "aggregate",
+    "question": "How many action items has Raj completed?",
+    "gold": "2",
+    "answer": "Raj has completed 2 action items: drafting the Atlas cutover plan and load-testing the dual-write path.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 10784,
+    "answer_tokens_in": 3411,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr10",
+    "type": "episodic_event",
+    "question": "What happened in the May 6 incident?",
+    "gold": "A database failover with 18 minutes down, caused by replica lag during the Atlas dual writes",
+    "answer": "On May 6, a database failover caused 18 minutes of downtime; the root cause was replica lag during the Atlas dual writes. In a 1:1 that day, Aisha discussed database failover drills.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 11675,
+    "answer_tokens_in": 3382,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr11",
+    "type": "episodic_event",
+    "question": "What did Mei and I talk about in our last 1:1?",
+    "gold": "wants a mobile hire (Jun 18, 2026)",
+    "answer": "In your last 1:1 with Mei, on June 18, you talked about her wanting a mobile hire.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 13408,
+    "answer_tokens_in": 4181,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr12",
+    "type": "episodic_event",
+    "question": "What happened on April 20?",
+    "gold": "Beacon beta went live, 500 testers invited",
+    "answer": "On April 20, the Beacon beta went live with 500 testers invited. You also had a 1:1 with Tom Becker about the Stripe Billing migration plan, and Aisha was assigned to add database alerts by May 8.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 11496,
+    "answer_tokens_in": 3663,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr13",
+    "type": "episodic_time",
+    "question": "When did the Beacon beta launch?",
+    "gold": "April 20, 2026",
+    "answer": "The Beacon beta launched on April 20, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 11836,
+    "answer_tokens_in": 3535,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr14",
+    "type": "episodic_time",
+    "question": "When did Jonas start?",
+    "gold": "April 6, 2026",
+    "answer": "Jonas started on April 6, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 10431,
+    "answer_tokens_in": 3094,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr15",
+    "type": "episodic_time",
+    "question": "When did we reverse the Atlas decision?",
+    "gold": "March 24, 2026",
+    "answer": "We reversed the Atlas decision on March 24, 2026, switching to dual writes after the load test because replication lag was too high.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 13163,
+    "answer_tokens_in": 3801,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr16",
+    "type": "routine",
+    "question": "When are my 1:1s with Mei?",
+    "gold": "Every other Thursday, around 14:00-15:00",
+    "answer": "Your 1:1s with Mei have been every other Thursday, usually at 3:00–3:20 p.m. The recorded dates are Jan 15, 29; Feb 12; Mar 12, 26; Apr 23; May 7; and Jun 4, 18, 2026.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 10615,
+    "answer_tokens_in": 3252,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr17",
+    "type": "routine",
+    "question": "When are my 1:1s with Raj?",
+    "gold": "Every other Tuesday, around 10:00-11:00",
+    "answer": "Your 1:1s with Raj are usually around 11:00, most often on Tuesdays; the recorded dates include Jan 27, Feb 10, Mar 10 and 24, Apr 21, and Jun 2, 2026.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 11269,
+    "answer_tokens_in": 3354,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr18",
+    "type": "routine",
+    "question": "How often do we do sprint planning?",
+    "gold": "Every other Monday",
+    "answer": "Sprint planning is every two weeks, usually on Monday around 11:00.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 9544,
+    "answer_tokens_in": 2874,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr19",
+    "type": "prospective",
+    "question": "What action items are still open?",
+    "gold": "Raj: review the on-call rotation (due Jun 26, 2026); Jonas: write the Comet runbook (due Jul 10, 2026); Jonas: migrate test invoices to Stripe (due Jul 3, 2026)",
+    "answer": "Open action items are: **Fix flaky tests** (Raj); **be on call** (Tom and Mei; overdue); **migrate test invoices to Stripe** (Jonas, due July 3); **review the on-call rotation** (Raj, overdue from June 26); **write the Comet runbook** (Jonas, due July 10); and **take over Comet while Tom is out** (Jonas).",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 9405,
+    "answer_tokens_in": 3201,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr20",
+    "type": "prospective",
+    "question": "Which action items are overdue?",
+    "gold": "Raj: review the on-call rotation (due Jun 26, 2026)",
+    "answer": "The overdue open action item is **Review the on-call rotation** (Raj; due June 26, 2026). The intentions record also lists **Be on call** commitments for Tom and Mei as past due from January 23; the invoice migration’s current due date is July 3, so it isn’t overdue yet.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 8175,
+    "answer_tokens_in": 2873,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr21",
+    "type": "prospective",
+    "question": "What is Jonas on the hook for?",
+    "gold": "write the Comet runbook (due Jul 10, 2026); migrate test invoices to Stripe (due Jul 3, 2026)",
+    "answer": "Jonas is covering Comet while Tom is out. He also owns migrating Comet’s test invoices to Stripe, due July 3, and writing the Comet runbook, due July 10; both commitments are still open.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 13828,
+    "answer_tokens_in": 4040,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr22",
+    "type": "preference",
+    "question": "How does Mei prefer to get updates?",
+    "gold": "Async updates in Slack over status meetings",
+    "answer": "Mei prefers async updates in Slack rather than status meetings.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 13542,
+    "answer_tokens_in": 4044,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr23",
+    "type": "preference",
+    "question": "What does Aisha want for her career?",
+    "gold": "The SRE track",
+    "answer": "Aisha is interested in pursuing the SRE career track.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 11345,
+    "answer_tokens_in": 3514,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr24",
+    "type": "preference",
+    "question": "What does Raj want to grow toward?",
+    "gold": "Backend architecture",
+    "answer": "Raj wants to grow toward backend architecture.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 12619,
+    "answer_tokens_in": 3741,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr25",
+    "type": "source",
+    "question": "What did the postmortem say caused the February outage?",
+    "gold": "An expired TLS certificate on the load balancer (42 minutes down)",
+    "answer": "The postmortem said the February 18 API outage was caused by an expired TLS certificate on the load balancer.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 12804,
+    "answer_tokens_in": 3964,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr26",
+    "type": "source",
+    "question": "What did Grace's email say about headcount?",
+    "gold": "One more mobile engineer for H2",
+    "answer": "Grace said H2 headcount would include one additional mobile engineer.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 11679,
+    "answer_tokens_in": 3590,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr27",
+    "type": "source",
+    "question": "What was the reason given for reversing the Atlas decision?",
+    "gold": "Replication lag was too high (after the load test)",
+    "answer": "The Atlas decision was reversed because replication lag was too high, as found after the load test.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 13506,
+    "answer_tokens_in": 3842,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr28",
+    "type": "period",
+    "question": "Who was on the Platform team after the reorg?",
+    "gold": "Aisha Khan (lead), Raj Patel and Jonas Weber",
+    "answer": "After the June 1 reorg, the Platform team was Aisha Khan (lead), Raj Patel, and Jonas Weber.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 13607,
+    "answer_tokens_in": 4042,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr29",
+    "type": "period",
+    "question": "How many incidents did we have before the Beacon beta launched?",
+    "gold": "1 (API outage)",
+    "answer": "I don’t know. The database count of 3 includes incidents from January onward, but doesn’t show which occurred before the Beacon beta launched on April 20, 2026.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 10879,
+    "answer_tokens_in": 3204,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr30",
+    "type": "period",
+    "question": "Who owned Comet while Tom was out?",
+    "gold": "Jonas Weber",
+    "answer": "Jonas Weber owned Comet while Tom was out.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 11286,
+    "answer_tokens_in": 3651,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr31",
+    "type": "metamemory",
+    "question": "What is Raj's salary?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 11462,
+    "answer_tokens_in": 3554,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr32",
+    "type": "metamemory",
+    "question": "When is Mei's birthday?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 10860,
+    "answer_tokens_in": 3554,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr33",
+    "type": "metamemory",
+    "question": "What is Grace's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 8222,
+    "answer_tokens_in": 2816,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr34",
+    "type": "forgotten",
+    "question": "What surgery is Tom having?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know. The information about Tom’s surgery is marked forgotten.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 10127,
+    "answer_tokens_in": 3177,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr35",
+    "type": "forgotten",
+    "question": "Why was Tom out in May?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don’t know. The reason Tom was out in May is marked forgotten.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 10827,
+    "answer_tokens_in": 3411,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr36",
+    "type": "forgotten",
+    "question": "When is Tom's surgery?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 9733,
+    "answer_tokens_in": 3147,
+    "route_latency_s": null
+   }
+  ],
+  "n": 36,
+  "accuracy": 91.7,
+  "new_spend": 0.01385
+ },
+ "full_context": {
+  "rows": [
+   {
+    "id": "pr01",
+    "type": "semantic_current",
+    "question": "Who owns Atlas now?",
+    "gold": "Aisha Khan (since the June 1 reorg)",
+    "answer": "Aisha Khan owns Atlas now; she took ownership on June 1, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5269,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr02",
+    "type": "semantic_current",
+    "question": "Which team is Raj on?",
+    "gold": "Platform (with Aisha as lead and Jonas)",
+    "answer": "Raj is on the Platform team, led by Aisha.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5270,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr03",
+    "type": "semantic_current",
+    "question": "What is the status of Beacon?",
+    "gold": "Generally available: GA shipped on Jun 15, 2026 (beta since Apr 20)",
+    "answer": "Beacon’s GA shipped on June 15, 2026. It was previously in beta with 500 testers invited; Mei owns it and leads the Apps team.",
+    "score": 0.5,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5271,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr04",
+    "type": "semantic_history",
+    "question": "What did we first decide for the Atlas migration?",
+    "gold": "Postgres logical replication, not dual writes (Feb 10); reversed on Mar 24 to dual writes",
+    "answer": "We first decided Atlas would use Postgres logical replication, not dual writes.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5274,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr05",
+    "type": "semantic_history",
+    "question": "Who owned Atlas before the reorg?",
+    "gold": "Raj Patel",
+    "answer": "Raj Patel owned Atlas before the June 1 reorg; after the reorg, Aisha Khan took ownership.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5272,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr06",
+    "type": "semantic_history",
+    "question": "Who owned Comet before Jonas?",
+    "gold": "Tom Becker",
+    "answer": "Tom Becker owned Comet before Jonas took over.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5271,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr07",
+    "type": "aggregate",
+    "question": "How many incidents did we have in Q2?",
+    "gold": "2 (database failover, billing double charges)",
+    "answer": "We had 2 incidents in Q2: the database failover on May 6 and the billing double charges on June 3.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5274,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr08",
+    "type": "aggregate",
+    "question": "How many minutes of downtime did the incidents cause in total?",
+    "gold": "60 minutes",
+    "answer": "The incidents caused 60 minutes of downtime in total: 42 minutes from the API outage and 18 minutes from the database failover. The billing double-charge incident caused no downtime.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5276,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr09",
+    "type": "aggregate",
+    "question": "How many action items has Raj completed?",
+    "gold": "2",
+    "answer": "Raj has completed 2 action items: drafting the Atlas cutover plan and load-testing the dual-write path.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5272,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr10",
+    "type": "episodic_event",
+    "question": "What happened in the May 6 incident?",
+    "gold": "A database failover with 18 minutes down, caused by replica lag during the Atlas dual writes",
+    "answer": "On May 6, the database failed over, causing 18 minutes of downtime. The postmortem identified replica lag during Atlas dual writes as the root cause; follow-ups were to add alerting and a runbook.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5273,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr11",
+    "type": "episodic_event",
+    "question": "What did Mei and I talk about in our last 1:1?",
+    "gold": "wants a mobile hire (Jun 18, 2026)",
+    "answer": "Your last 1:1 with Mei was on June 18, 2026; you talked about her wanting to hire a mobile engineer.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5279,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr12",
+    "type": "episodic_event",
+    "question": "What happened on April 20?",
+    "gold": "Beacon beta went live, 500 testers invited",
+    "answer": "On April 20, Aisha was assigned to add database alerts by May 8, you had a 1:1 with Tom about the Stripe Billing migration, and the Beacon beta went live with 500 testers invited.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5271,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr13",
+    "type": "episodic_time",
+    "question": "When did the Beacon beta launch?",
+    "gold": "April 20, 2026",
+    "answer": "The Beacon beta launched on April 20, 2026. 500 testers were invited.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5271,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr14",
+    "type": "episodic_time",
+    "question": "When did Jonas start?",
+    "gold": "April 6, 2026",
+    "answer": "Jonas started on April 6, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5269,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr15",
+    "type": "episodic_time",
+    "question": "When did we reverse the Atlas decision?",
+    "gold": "March 24, 2026",
+    "answer": "We reversed the Atlas decision on March 24, 2026, after a load test showed replication lag was too high; we switched to dual writes.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5272,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr16",
+    "type": "routine",
+    "question": "When are my 1:1s with Mei?",
+    "gold": "Every other Thursday, around 14:00-15:00",
+    "answer": "I don’t know. The notes record 1:1s with Mei, but don’t specify a recurring schedule or when the next one is.",
+    "score": 0.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5275,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr17",
+    "type": "routine",
+    "question": "When are my 1:1s with Raj?",
+    "gold": "Every other Tuesday, around 10:00-11:00",
+    "answer": "Your 1:1s with Raj are on Tuesdays at 11:00—recent entries show them at 11:14 on May 19 and June 30, and 11:20 on June 2.",
+    "score": 0.5,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5275,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr18",
+    "type": "routine",
+    "question": "How often do we do sprint planning?",
+    "gold": "Every other Monday",
+    "answer": "We do sprint planning every two weeks.",
+    "score": 0.5,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5272,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr19",
+    "type": "prospective",
+    "question": "What action items are still open?",
+    "gold": "Raj: review the on-call rotation (due Jun 26, 2026); Jonas: write the Comet runbook (due Jul 10, 2026); Jonas: migrate test invoices to Stripe (due Jul 3, 2026)",
+    "answer": "Open action items: Raj to review the on-call rotation (due Jun 26, 2026; overdue), Jonas to migrate test invoices to Stripe (due Jul 3, 2026), and Jonas to write the Comet runbook (due Jul 10, 2026).",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5271,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr20",
+    "type": "prospective",
+    "question": "Which action items are overdue?",
+    "gold": "Raj: review the on-call rotation (due Jun 26, 2026)",
+    "answer": "Raj’s review of the on-call rotation was due June 26, 2026, and is overdue.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5270,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr21",
+    "type": "prospective",
+    "question": "What is Jonas on the hook for?",
+    "gold": "write the Comet runbook (due Jul 10, 2026); migrate test invoices to Stripe (due Jul 3, 2026)",
+    "answer": "Jonas is on the hook to migrate test invoices to Stripe, now due July 3, 2026, and write the Comet runbook, due July 10, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5272,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr22",
+    "type": "preference",
+    "question": "How does Mei prefer to get updates?",
+    "gold": "Async updates in Slack over status meetings",
+    "answer": "Mei prefers async updates in Slack rather than status meetings.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5272,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr23",
+    "type": "preference",
+    "question": "What does Aisha want for her career?",
+    "gold": "The SRE track",
+    "answer": "Aisha is interested in pursuing the SRE (Site Reliability Engineering) track.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5273,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr24",
+    "type": "preference",
+    "question": "What does Raj want to grow toward?",
+    "gold": "Backend architecture",
+    "answer": "Raj wants to grow toward backend architecture.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5272,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr25",
+    "type": "source",
+    "question": "What did the postmortem say caused the February outage?",
+    "gold": "An expired TLS certificate on the load balancer (42 minutes down)",
+    "answer": "The postmortem said the February 18 API outage was caused by an expired TLS certificate on the load balancer.",
+    "score": 0.5,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5276,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr26",
+    "type": "source",
+    "question": "What did Grace's email say about headcount?",
+    "gold": "One more mobile engineer for H2",
+    "answer": "Grace’s email said H2 headcount would include one additional mobile engineer.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5274,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr27",
+    "type": "source",
+    "question": "What was the reason given for reversing the Atlas decision?",
+    "gold": "Replication lag was too high (after the load test)",
+    "answer": "The load test showed replication lag was too high, so the team reversed the Atlas decision and switched to dual writes.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5275,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr28",
+    "type": "period",
+    "question": "Who was on the Platform team after the reorg?",
+    "gold": "Aisha Khan (lead), Raj Patel and Jonas Weber",
+    "answer": "The Platform team was Aisha Khan (tech lead), Raj Patel, and Jonas Weber.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5275,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr29",
+    "type": "period",
+    "question": "How many incidents did we have before the Beacon beta launched?",
+    "gold": "1 (API outage)",
+    "answer": "We had **1 incident** before the Beacon beta launched: the API outage on February 18, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5276,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr30",
+    "type": "period",
+    "question": "Who owned Comet while Tom was out?",
+    "gold": "Jonas Weber",
+    "answer": "Jonas Weber owned Comet while Tom was out.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5273,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr31",
+    "type": "metamemory",
+    "question": "What is Raj's salary?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5270,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr32",
+    "type": "metamemory",
+    "question": "When is Mei's birthday?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5270,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr33",
+    "type": "metamemory",
+    "question": "What is Grace's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5271,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr34",
+    "type": "forgotten",
+    "question": "What surgery is Tom having?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know. The surgery details were marked forgotten.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5270,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr35",
+    "type": "forgotten",
+    "question": "Why was Tom out in May?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don’t know. The reason Tom was out in May is marked as forgotten.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5271,
+    "route_latency_s": null
+   },
+   {
+    "id": "pr36",
+    "type": "forgotten",
+    "question": "When is Tom's surgery?",
+    "gold": "UNKNOWN: the user asked to forget it",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 13236,
+    "answer_tokens_in": 5270,
+    "route_latency_s": null
+   }
+  ],
+  "n": 36,
+  "accuracy": 91.7,
+  "new_spend": 0.01986
+ }
+}

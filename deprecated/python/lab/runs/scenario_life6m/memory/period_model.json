@@ -1,0 +1,59 @@
+{
+ "periods": [
+  {
+   "start": "2026-04-01",
+   "end": "2026-09-30",
+   "label": "Adam lived at 1450 Valencia St in San Francisco"
+  },
+  {
+   "start": "2026-04-03",
+   "end": "2026-09-30",
+   "label": "Adam had a Mission Cliffs membership for $110/month"
+  },
+  {
+   "start": "2026-04-10",
+   "end": "2026-09-30",
+   "label": "Adam's main phone number was +1 415 555 0199"
+  },
+  {
+   "start": "2026-05-20",
+   "end": "2026-09-30",
+   "label": "Eva moved to San Francisco for her job at Gensler"
+  },
+  {
+   "start": "2026-05-22",
+   "end": "2026-05-26",
+   "label": "Adam and Eva were scheduled to be in Lisbon"
+  },
+  {
+   "start": "2026-05-30",
+   "end": "2026-07-02",
+   "label": "Adam had a reminder to buy an engagement ring; he marked it done on July 2"
+  },
+  {
+   "start": "2026-06-10",
+   "end": "2026-09-30",
+   "label": "Klára lived in London after moving from Berlin for a new job"
+  },
+  {
+   "start": "2026-07-12",
+   "end": "2026-09-30",
+   "label": "Adam and Eva were engaged"
+  },
+  {
+   "start": "2026-08-15",
+   "end": "2026-09-30",
+   "label": "Oscar had left Nebula and was joining Stripe as a PM"
+  }
+ ],
+ "breaks": [
+  {
+   "date": "2026-04-01",
+   "why": "Adam moved into a new place in San Francisco."
+  },
+  {
+   "date": "2026-05-20",
+   "why": "Eva moved to San Francisco for her new job at Gensler."
+  }
+ ]
+}

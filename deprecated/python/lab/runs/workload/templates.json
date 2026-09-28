@@ -1,0 +1,1061 @@
+{
+ "examples": 70,
+ "templates": [
+  {
+   "regex": "How much did I spend on lunches out(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "table": "expenses",
+   "op": "sum",
+   "column": "amount",
+   "filters": [
+    {
+     "column": "person_id",
+     "source": "const:Adam Zvada"
+    },
+    {
+     "column": "category",
+     "source": "const:dining"
+    },
+    {
+     "column": "dining_occasion",
+     "source": "const:lunch"
+    }
+   ],
+   "period": "group:period"
+  },
+  {
+   "regex": "How many times did I go out for drinks(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "table": "expenses",
+   "op": "count",
+   "column": "dining_occasion",
+   "filters": [
+    {
+     "column": "person_id",
+     "source": "const:Adam Zvada"
+    },
+    {
+     "column": "category",
+     "source": "const:dining"
+    },
+    {
+     "column": "dining_occasion",
+     "source": "const:drinks"
+    }
+   ],
+   "period": "group:period"
+  },
+  {
+   "regex": "What's my average dinner bill(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "table": "expenses",
+   "op": "avg",
+   "column": "amount",
+   "filters": [
+    {
+     "column": "person_id",
+     "source": "const:Adam Zvada"
+    },
+    {
+     "column": "category",
+     "source": "const:dining"
+    },
+    {
+     "column": "dining_occasion",
+     "source": "const:dinner"
+    }
+   ],
+   "period": "group:period"
+  },
+  {
+   "regex": "How much did a night of drinks cost me on average(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "table": "expenses",
+   "op": "avg",
+   "column": "amount",
+   "filters": [
+    {
+     "column": "person_id",
+     "source": "const:Adam Zvada"
+    },
+    {
+     "column": "category",
+     "source": "const:dining"
+    },
+    {
+     "column": "dining_occasion",
+     "source": "const:drinks"
+    }
+   ],
+   "period": "group:period"
+  },
+  {
+   "regex": "What was my average sleep(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "table": "body_measurements",
+   "op": "avg",
+   "column": "value",
+   "filters": [
+    {
+     "column": "person_id",
+     "source": "const:Adam Zvada"
+    },
+    {
+     "column": "category",
+     "source": "const:sleep"
+    },
+    {
+     "column": "unit",
+     "source": "const:h"
+    }
+   ],
+   "period": "group:period"
+  },
+  {
+   "regex": "How many hours did I sleep on average(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "table": "body_measurements",
+   "op": "avg",
+   "column": "value",
+   "filters": [
+    {
+     "column": "person_id",
+     "source": "const:Adam Zvada"
+    },
+    {
+     "column": "category",
+     "source": "const:sleep"
+    },
+    {
+     "column": "unit",
+     "source": "const:h"
+    }
+   ],
+   "period": "group:period"
+  },
+  {
+   "regex": "What was my lowest weight(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "table": "body_measurements",
+   "op": "min",
+   "column": "value",
+   "filters": [
+    {
+     "column": "person_id",
+     "source": "const:Adam Zvada"
+    },
+    {
+     "column": "category",
+     "source": "const:weight"
+    },
+    {
+     "column": "unit",
+     "source": "const:kg"
+    }
+   ],
+   "period": "group:period"
+  },
+  {
+   "regex": "What's the least I weighed(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "table": "body_measurements",
+   "op": "min",
+   "column": "value",
+   "filters": [
+    {
+     "column": "person_id",
+     "source": "const:Adam Zvada"
+    },
+    {
+     "column": "category",
+     "source": "const:weight"
+    }
+   ],
+   "period": "group:period"
+  },
+  {
+   "regex": "How many times did I go to (?P<merchant>.+?) in (?P<period>\\d{4})\\?",
+   "table": "expenses",
+   "op": "count",
+   "column": "merchant",
+   "filters": [
+    {
+     "column": "person_id",
+     "source": "const:Adam Zvada"
+    },
+    {
+     "column": "merchant",
+     "source": "group:merchant"
+    }
+   ],
+   "period": "group:period"
+  },
+  {
+   "regex": "How many visits to (?P<merchant>.+?) in (?P<period>\\d{4})\\?",
+   "table": "expenses",
+   "op": "count",
+   "column": "merchant",
+   "filters": [
+    {
+     "column": "person_id",
+     "source": "const:Adam Zvada"
+    },
+    {
+     "column": "category",
+     "source": "const:dining"
+    },
+    {
+     "column": "merchant",
+     "source": "group:merchant"
+    }
+   ],
+   "period": "group:period"
+  },
+  {
+   "regex": "What did I spend in total at (?P<merchant>.+?)(?P<period> in \\d{4})?\\?",
+   "table": "expenses",
+   "op": "sum",
+   "column": "amount",
+   "filters": [
+    {
+     "column": "person_id",
+     "source": "const:Adam Zvada"
+    },
+    {
+     "column": "merchant",
+     "source": "group:merchant"
+    }
+   ],
+   "period": "group:period"
+  },
+  {
+   "regex": "How much did I spend at (?P<merchant>.+?)(?P<period> in \\w+ \\d{4}| in \\d{4})?\\?",
+   "table": "expenses",
+   "op": "sum",
+   "column": "amount",
+   "filters": [
+    {
+     "column": "person_id",
+     "source": "const:Adam Zvada"
+    },
+    {
+     "column": "merchant",
+     "source": "group:merchant"
+    }
+   ],
+   "period": "group:period"
+  },
+  {
+   "regex": "(?:What was my average sleep|How many hours did I sleep on average)(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "table": "body_measurements",
+   "op": "avg",
+   "column": "value",
+   "filters": [
+    {
+     "column": "person_id",
+     "source": "const:Adam Zvada"
+    },
+    {
+     "column": "category",
+     "source": "const:sleep"
+    },
+    {
+     "column": "unit",
+     "source": "const:h"
+    }
+   ],
+   "period": "group:period"
+  },
+  {
+   "regex": "How many runs did I do(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)?\\?",
+   "table": "workouts",
+   "op": "count",
+   "column": "distance",
+   "filters": [
+    {
+     "column": "person_id",
+     "source": "const:Adam Zvada"
+    },
+    {
+     "column": "category",
+     "source": "const:run"
+    }
+   ],
+   "period": "group:period"
+  }
+ ],
+ "report": [
+  {
+   "round": 0,
+   "regex": "How much did I spend on lunches out(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 2,
+   "exact": 2,
+   "keep": true,
+   "wrong": []
+  },
+  {
+   "round": 0,
+   "regex": "What was my total lunches out spend(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 1,
+   "exact": 1,
+   "keep": false,
+   "wrong": []
+  },
+  {
+   "round": 0,
+   "regex": "How much did I spend on coffee(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 1,
+   "exact": 1,
+   "keep": false,
+   "wrong": []
+  },
+  {
+   "round": 0,
+   "regex": "How many times did I go out for drinks(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 2,
+   "exact": 2,
+   "keep": true,
+   "wrong": []
+  },
+  {
+   "round": 0,
+   "regex": "How often did I do a grocery run(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 2,
+   "exact": 1,
+   "keep": false,
+   "wrong": [
+    "'How often did I do a grocery run this year?': got {'table': 'expenses', 'op': 'count', 'column': 'occurred_at', 'filters': {'person_id': 'Adam Zvada', 'category': 'groceries'}, 'period': 'year:2026'}, the logged plan is {'table': 'expenses', 'op': 'count', 'column': 'category', 'filters': {'category': 'groceries'}, 'period': 'year:2026'}"
+   ]
+  },
+  {
+   "round": 0,
+   "regex": "How often did I do a grocery run(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 2,
+   "exact": 1,
+   "keep": false,
+   "wrong": [
+    "'How often did I do a grocery run in February 2025?': got {'table': 'expenses', 'op': 'count', 'column': 'category', 'filters': {'person_id': 'Adam Zvada', 'category': 'groceries'}, 'period': 'in:2025-02'}, the logged plan is {'table': 'expenses', 'op': 'count', 'column': 'occurred_at', 'filters': {'category': 'groceries'}, 'period': 'in:2025-02'}"
+   ]
+  },
+  {
+   "round": 0,
+   "regex": "How many times did I buy groceries(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 1,
+   "exact": 1,
+   "keep": false,
+   "wrong": []
+  },
+  {
+   "round": 0,
+   "regex": "How many times did I buy something in a shop or online(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 1,
+   "exact": 1,
+   "keep": false,
+   "wrong": []
+  },
+  {
+   "round": 0,
+   "regex": "How often did I buy a coffee(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 1,
+   "exact": 1,
+   "keep": false,
+   "wrong": []
+  },
+  {
+   "round": 0,
+   "regex": "How many times did I go to (?P<merchant>.+?) in \\d{4}\\?",
+   "matched": 3,
+   "exact": 0,
+   "keep": false,
+   "wrong": [
+    "'How many times did I go to Bistro Monk in 2024?': no group 'period' in the regex",
+    "'How many times did I go to Doubleshot in 2024?': no group 'period' in the regex",
+    "'How many times did I go to Café Lounge in 2024?': no group 'period' in the regex"
+   ]
+  },
+  {
+   "round": 0,
+   "regex": "How many visits to (?P<merchant>.+?) in \\d{4}\\?",
+   "matched": 3,
+   "exact": 0,
+   "keep": false,
+   "wrong": [
+    "'How many visits to Field in 2024?': no group 'period' in the regex",
+    "'How many visits to Cafe Imperial in 2024?': no group 'period' in the regex",
+    "'How many visits to Eska in 2024?': no group 'period' in the regex"
+   ]
+  },
+  {
+   "round": 0,
+   "regex": "How many times did I go to (?P<merchant>.+?) in \\d{4}\\?",
+   "matched": 3,
+   "exact": 0,
+   "keep": false,
+   "wrong": [
+    "'How many times did I go to Bistro Monk in 2024?': no group 'period' in the regex",
+    "'How many times did I go to Doubleshot in 2024?': no group 'period' in the regex",
+    "'How many times did I go to Café Lounge in 2024?': no group 'period' in the regex"
+   ]
+  },
+  {
+   "round": 0,
+   "regex": "How many visits to (?P<merchant>.+?)\\?",
+   "matched": 4,
+   "exact": 1,
+   "keep": false,
+   "wrong": [
+    "'How many visits to Field in 2024?': got {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'person_id': 'Adam Zvada', 'merchant': 'Field'}, 'period': 'all'}, the logged plan is {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'merchant': 'Field'}, 'period': 'year:2024'}",
+    "'How many visits to Cafe Imperial in 2024?': got {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'person_id': 'Adam Zvada', 'merchant': 'Café Imperial'}, 'period': 'all'}, the logged plan is {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'category': 'dining', 'merchant': 'Café Imperial'}, 'period': 'year:2024'}",
+    "'How many visits to Eska in 2024?': got {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'person_id': 'Adam Zvada', 'merchant': 'Eska'}, 'period': 'all'}, the logged plan is {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'merchant': 'Eska'}, 'period': 'year:2024'}"
+   ]
+  },
+  {
+   "round": 0,
+   "regex": "How many visits to (?P<merchant>.+?)\\?",
+   "matched": 4,
+   "exact": 1,
+   "keep": false,
+   "wrong": [
+    "'How many visits to Field in 2024?': got {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'category': 'transport', 'merchant': 'Field'}, 'period': 'all'}, the logged plan is {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'merchant': 'Field'}, 'period': 'year:2024'}",
+    "'How many visits to Cafe Imperial in 2024?': got {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'category': 'transport', 'merchant': 'Café Imperial'}, 'period': 'all'}, the logged plan is {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'category': 'dining', 'merchant': 'Café Imperial'}, 'period': 'year:2024'}",
+    "'How many visits to Eska in 2024?': got {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'category': 'transport', 'merchant': 'Eska'}, 'period': 'all'}, the logged plan is {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'merchant': 'Eska'}, 'period': 'year:2024'}"
+   ]
+  },
+  {
+   "round": 0,
+   "regex": "How many times did I go to (?P<merchant>.+?)\\?",
+   "matched": 4,
+   "exact": 1,
+   "keep": false,
+   "wrong": [
+    "'How many times did I go to Bistro Monk in 2024?': got {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'person_id': 'Adam Zvada', 'merchant': 'Bistro Monk'}, 'period': 'all'}, the logged plan is {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'category': 'dining', 'merchant': 'Bistro Monk'}, 'period': 'year:2024'}",
+    "'How many times did I go to Doubleshot in 2024?': got {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'person_id': 'Adam Zvada', 'merchant': 'Doubleshot'}, 'period': 'all'}, the logged plan is {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'merchant': 'Doubleshot'}, 'period': 'year:2024'}",
+    "'How many times did I go to Café Lounge in 2024?': got {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'person_id': 'Adam Zvada', 'merchant': 'Café Lounge'}, 'period': 'all'}, the logged plan is {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'merchant': 'Café Lounge'}, 'period': 'year:2024'}"
+   ]
+  },
+  {
+   "round": 0,
+   "regex": "How much did I spend at (?P<merchant>.+?) in \\w+ \\d{4}\\?",
+   "matched": 1,
+   "exact": 0,
+   "keep": false,
+   "wrong": [
+    "'How much did I spend at Field in August 2024?': no group 'period' in the regex"
+   ]
+  },
+  {
+   "round": 0,
+   "regex": "What did I spend in total at (?P<merchant>.+?)(?: in \\d{4})?\\?",
+   "matched": 4,
+   "exact": 0,
+   "keep": false,
+   "wrong": [
+    "'What did I spend in total at EMA Espresso Bar?': no group 'period' in the regex",
+    "'What did I spend in total at Vinograf in 2024?': no group 'period' in the regex",
+    "'What did I spend in total at Field?': no group 'period' in the regex"
+   ]
+  },
+  {
+   "round": 0,
+   "regex": "How much did I spend at (?P<merchant>.+?)(?: in \\d{4})?\\?",
+   "matched": 4,
+   "exact": 0,
+   "keep": false,
+   "wrong": [
+    "'How much did I spend at Field in August 2024?': no group 'period' in the regex",
+    "'How much did I spend at Onesip Coffee?': no group 'period' in the regex",
+    "'How much did I spend at Můj šálek kávy in 2025?': no group 'period' in the regex"
+   ]
+  },
+  {
+   "round": 0,
+   "regex": "How much did I spend at (?P<merchant>.+?) in \\d{4}\\?",
+   "matched": 2,
+   "exact": 0,
+   "keep": false,
+   "wrong": [
+    "'How much did I spend at Můj šálek kávy in 2025?': no group 'period' in the regex",
+    "'How much did I spend at Pho Vietnam in 2025?': no group 'period' in the regex"
+   ]
+  },
+  {
+   "round": 0,
+   "regex": "What was my most expensive grocery run in (?P<merchant>.+?)\\?",
+   "matched": 1,
+   "exact": 1,
+   "keep": false,
+   "wrong": []
+  },
+  {
+   "round": 0,
+   "regex": "What's the most I've spent on a single grocery run in (?P<merchant>.+?)\\?",
+   "matched": 1,
+   "exact": 1,
+   "keep": false,
+   "wrong": []
+  },
+  {
+   "round": 0,
+   "regex": "What's the most I've spent on a single coffee in (?P<merchant>.+?)\\?",
+   "matched": 1,
+   "exact": 1,
+   "keep": false,
+   "wrong": []
+  },
+  {
+   "round": 0,
+   "regex": "What was my most expensive ride in (?P<merchant>.+?)\\?",
+   "matched": 1,
+   "exact": 1,
+   "keep": false,
+   "wrong": []
+  },
+  {
+   "round": 0,
+   "regex": "What's my average dinner bill(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 2,
+   "exact": 2,
+   "keep": true,
+   "wrong": []
+  },
+  {
+   "round": 0,
+   "regex": "How much did a night of drinks cost me on average(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 2,
+   "exact": 2,
+   "keep": true,
+   "wrong": []
+  },
+  {
+   "round": 0,
+   "regex": "How much did a ride cost me on average(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 1,
+   "exact": 1,
+   "keep": false,
+   "wrong": []
+  },
+  {
+   "round": 0,
+   "regex": "What's my average grocery run bill(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 1,
+   "exact": 1,
+   "keep": false,
+   "wrong": []
+  },
+  {
+   "round": 0,
+   "regex": "How much did a lunch cost me on average(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 1,
+   "exact": 1,
+   "keep": false,
+   "wrong": []
+  },
+  {
+   "round": 0,
+   "regex": "What was my average sleep(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 4,
+   "exact": 4,
+   "keep": true,
+   "wrong": []
+  },
+  {
+   "round": 0,
+   "regex": "How many hours did I sleep on average(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 4,
+   "exact": 4,
+   "keep": true,
+   "wrong": []
+  },
+  {
+   "round": 0,
+   "regex": "What was my lowest weight(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 4,
+   "exact": 4,
+   "keep": true,
+   "wrong": []
+  },
+  {
+   "round": 0,
+   "regex": "What's the least I weighed(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 4,
+   "exact": 4,
+   "keep": true,
+   "wrong": []
+  },
+  {
+   "round": 0,
+   "regex": "How many runs did I do(?: in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)?\\?",
+   "matched": 4,
+   "exact": 1,
+   "keep": false,
+   "wrong": [
+    "'How many runs did I do in July 2025?': got {'table': 'workouts', 'op': 'count', 'column': 'distance', 'filters': {'person_id': 'Adam Zvada', 'category': 'run'}, 'period': 'all'}, the logged plan is {'table': 'workouts', 'op': 'count', 'column': 'distance', 'filters': {'category': 'run'}, 'period': 'in:2025-07'}",
+    "'How many runs did I do in November 2024?': got {'table': 'workouts', 'op': 'count', 'column': 'distance', 'filters': {'person_id': 'Adam Zvada', 'category': 'run'}, 'period': 'all'}, the logged plan is {'table': 'workouts', 'op': 'count', 'column': '__row__', 'filters': {'category': 'run'}, 'period': 'in:2024-11'}",
+    "'How many runs did I do in May 2026?': got {'table': 'workouts', 'op': 'count', 'column': 'distance', 'filters': {'person_id': 'Adam Zvada', 'category': 'run'}, 'period': 'all'}, the logged plan is {'table': 'workouts', 'op': 'count', 'column': 'distance', 'filters': {'category': 'run'}, 'period': 'in:2026-05'}"
+   ]
+  },
+  {
+   "round": 0,
+   "regex": "How many times did I go running this year\\?",
+   "matched": 1,
+   "exact": 0,
+   "keep": false,
+   "wrong": [
+    "'How many times did I go running this year?': no group 'period' in the regex"
+   ]
+  },
+  {
+   "round": 0,
+   "regex": "How many times did I go running in \\d{4}\\?",
+   "matched": 1,
+   "exact": 0,
+   "keep": false,
+   "wrong": [
+    "'How many times did I go running in 2024?': no group 'period' in the regex"
+   ]
+  },
+  {
+   "round": 0,
+   "regex": "How many runs did I do in \\w+ \\d{4}\\?",
+   "matched": 3,
+   "exact": 0,
+   "keep": false,
+   "wrong": [
+    "'How many runs did I do in July 2025?': no group 'period' in the regex",
+    "'How many runs did I do in November 2024?': no group 'period' in the regex",
+    "'How many runs did I do in May 2026?': no group 'period' in the regex"
+   ]
+  },
+  {
+   "round": 0,
+   "regex": "How many times did I go running in \\w+ \\d{4}\\?",
+   "matched": 2,
+   "exact": 0,
+   "keep": false,
+   "wrong": [
+    "'How many times did I go running in April 2024?': no group 'period' in the regex",
+    "'How many times did I go running in June 2024?': no group 'period' in the regex"
+   ]
+  },
+  {
+   "round": 0,
+   "regex": "How many runs did I do in \\w+ \\d{4}\\?",
+   "matched": 3,
+   "exact": 0,
+   "keep": false,
+   "wrong": [
+    "'How many runs did I do in July 2025?': no group 'period' in the regex",
+    "'How many runs did I do in November 2024?': no group 'period' in the regex",
+    "'How many runs did I do in May 2026?': no group 'period' in the regex"
+   ]
+  },
+  {
+   "round": 0,
+   "regex": "How many times did I go climbing(?: in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 4,
+   "exact": 0,
+   "keep": false,
+   "wrong": [
+    "'How many times did I go climbing in 2024?': no group 'period' in the regex",
+    "'How many times did I go climbing in January 2026?': no group 'period' in the regex",
+    "'How many times did I go climbing this year?': no group 'period' in the regex"
+   ]
+  },
+  {
+   "round": 0,
+   "regex": "How many climbing sessions did I have(?: in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 4,
+   "exact": 0,
+   "keep": false,
+   "wrong": [
+    "'How many climbing sessions did I have in 2025?': no group 'period' in the regex",
+    "'How many climbing sessions did I have in January 2025?': no group 'period' in the regex",
+    "'How many climbing sessions did I have in June 2025?': no group 'period' in the regex"
+   ]
+  },
+  {
+   "round": 1,
+   "regex": "How much did I spend on lunches out(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 2,
+   "exact": 2,
+   "keep": true,
+   "wrong": []
+  },
+  {
+   "round": 1,
+   "regex": "What was my total lunches out spend(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 1,
+   "exact": 1,
+   "keep": false,
+   "wrong": []
+  },
+  {
+   "round": 1,
+   "regex": "How much did I spend on coffee(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 1,
+   "exact": 1,
+   "keep": false,
+   "wrong": []
+  },
+  {
+   "round": 1,
+   "regex": "How many times did I go out for drinks(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 2,
+   "exact": 2,
+   "keep": true,
+   "wrong": []
+  },
+  {
+   "round": 1,
+   "regex": "How often did I do a grocery run in \\w+ \\d{4}\\?",
+   "matched": 1,
+   "exact": 0,
+   "keep": false,
+   "wrong": [
+    "'How often did I do a grocery run in February 2025?': no group 'period' in the regex"
+   ]
+  },
+  {
+   "round": 1,
+   "regex": "How often did I do a grocery run(?: in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 1,
+   "exact": 0,
+   "keep": false,
+   "wrong": [
+    "'How often did I do a grocery run this year?': no group 'period' in the regex"
+   ]
+  },
+  {
+   "round": 1,
+   "regex": "How many times did I buy groceries in \\w+ \\d{4}\\?",
+   "matched": 1,
+   "exact": 0,
+   "keep": false,
+   "wrong": [
+    "'How many times did I buy groceries in July 2026?': no group 'period' in the regex"
+   ]
+  },
+  {
+   "round": 1,
+   "regex": "How many times did I buy something in a shop or online in \\d{4}\\?",
+   "matched": 1,
+   "exact": 0,
+   "keep": false,
+   "wrong": [
+    "'How many times did I buy something in a shop or online in 2024?': no group 'period' in the regex"
+   ]
+  },
+  {
+   "round": 1,
+   "regex": "How often did I buy a coffee(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 1,
+   "exact": 1,
+   "keep": false,
+   "wrong": []
+  },
+  {
+   "round": 1,
+   "regex": "How many times did I go out for drinks(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 2,
+   "exact": 2,
+   "keep": true,
+   "wrong": []
+  },
+  {
+   "round": 1,
+   "regex": "How many times did I go to (?P<merchant>.+?) in (?P<period>\\d{4})\\?",
+   "matched": 3,
+   "exact": 1,
+   "keep": false,
+   "wrong": [
+    "'How many times did I go to Doubleshot in 2024?': got {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'person_id': 'Adam Zvada', 'category': 'dining', 'merchant': 'Doubleshot'}, 'period': 'year:2024'}, the logged plan is {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'merchant': 'Doubleshot'}, 'period': 'year:2024'}",
+    "'How many times did I go to Café Lounge in 2024?': got {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'person_id': 'Adam Zvada', 'category': 'dining', 'merchant': 'Café Lounge'}, 'period': 'year:2024'}, the logged plan is {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'merchant': 'Café Lounge'}, 'period': 'year:2024'}"
+   ]
+  },
+  {
+   "round": 1,
+   "regex": "How many times did I go to (?P<merchant>.+?) in (?P<period>\\d{4})\\?",
+   "matched": 3,
+   "exact": 3,
+   "keep": true,
+   "wrong": []
+  },
+  {
+   "round": 1,
+   "regex": "How many visits to (?P<merchant>.+?) in (?P<period>\\d{4})\\?",
+   "matched": 3,
+   "exact": 3,
+   "keep": true,
+   "wrong": []
+  },
+  {
+   "round": 1,
+   "regex": "How many visits to (?P<merchant>.+?) in (?P<period>\\d{4})\\?",
+   "matched": 3,
+   "exact": 3,
+   "keep": true,
+   "wrong": []
+  },
+  {
+   "round": 1,
+   "regex": "How many times did I go to (?P<merchant>.+?)\\?",
+   "matched": 4,
+   "exact": 1,
+   "keep": false,
+   "wrong": [
+    "'How many times did I go to Bistro Monk in 2024?': got {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'person_id': 'Adam Zvada', 'merchant': 'Bistro Monk'}, 'period': 'all'}, the logged plan is {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'category': 'dining', 'merchant': 'Bistro Monk'}, 'period': 'year:2024'}",
+    "'How many times did I go to Doubleshot in 2024?': got {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'person_id': 'Adam Zvada', 'merchant': 'Doubleshot'}, 'period': 'all'}, the logged plan is {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'merchant': 'Doubleshot'}, 'period': 'year:2024'}",
+    "'How many times did I go to Café Lounge in 2024?': got {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'person_id': 'Adam Zvada', 'merchant': 'Café Lounge'}, 'period': 'all'}, the logged plan is {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'merchant': 'Café Lounge'}, 'period': 'year:2024'}"
+   ]
+  },
+  {
+   "round": 1,
+   "regex": "How many visits to (?P<merchant>.+?)\\?",
+   "matched": 4,
+   "exact": 1,
+   "keep": false,
+   "wrong": [
+    "'How many visits to Field in 2024?': got {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'category': 'transport', 'merchant': 'Field'}, 'period': 'all'}, the logged plan is {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'merchant': 'Field'}, 'period': 'year:2024'}",
+    "'How many visits to Cafe Imperial in 2024?': got {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'category': 'transport', 'merchant': 'Café Imperial'}, 'period': 'all'}, the logged plan is {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'category': 'dining', 'merchant': 'Café Imperial'}, 'period': 'year:2024'}",
+    "'How many visits to Eska in 2024?': got {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'category': 'transport', 'merchant': 'Eska'}, 'period': 'all'}, the logged plan is {'table': 'expenses', 'op': 'count', 'column': 'merchant', 'filters': {'merchant': 'Eska'}, 'period': 'year:2024'}"
+   ]
+  },
+  {
+   "round": 1,
+   "regex": "How many times did I go to (?P<merchant>.+?) in (?P<period>\\d{4})\\?",
+   "matched": 3,
+   "exact": 3,
+   "keep": true,
+   "wrong": []
+  },
+  {
+   "round": 1,
+   "regex": "How many visits to (?P<merchant>.+?) in (?P<period>\\d{4})\\?",
+   "matched": 3,
+   "exact": 3,
+   "keep": true,
+   "wrong": []
+  },
+  {
+   "round": 1,
+   "regex": "How much did I spend at (?P<merchant>.+?) in \\w+ \\d{4}\\?",
+   "matched": 1,
+   "exact": 0,
+   "keep": false,
+   "wrong": [
+    "'How much did I spend at Field in August 2024?': no group 'period' in the regex"
+   ]
+  },
+  {
+   "round": 1,
+   "regex": "What did I spend in total at (?P<merchant>.+?)(?P<period> in \\d{4})?\\?",
+   "matched": 4,
+   "exact": 4,
+   "keep": true,
+   "wrong": []
+  },
+  {
+   "round": 1,
+   "regex": "How much did I spend at (?P<merchant>.+?)(?P<period> in \\w+ \\d{4}| in \\d{4})?\\?",
+   "matched": 4,
+   "exact": 4,
+   "keep": true,
+   "wrong": []
+  },
+  {
+   "round": 1,
+   "regex": "How much did I spend at (?P<merchant>.+?)\\?",
+   "matched": 4,
+   "exact": 1,
+   "keep": false,
+   "wrong": [
+    "'How much did I spend at Field in August 2024?': got {'table': 'expenses', 'op': 'sum', 'column': 'amount', 'filters': {'person_id': 'Adam Zvada', 'category': 'coffee', 'merchant': 'Field'}, 'period': 'all'}, the logged plan is {'table': 'expenses', 'op': 'sum', 'column': 'amount', 'filters': {'merchant': 'Field'}, 'period': 'in:2024-08'}",
+    "'How much did I spend at Můj šálek kávy in 2025?': got {'table': 'expenses', 'op': 'sum', 'column': 'amount', 'filters': {'person_id': 'Adam Zvada', 'category': 'coffee', 'merchant': 'Můj šálek kávy'}, 'period': 'all'}, the logged plan is {'table': 'expenses', 'op': 'sum', 'column': 'amount', 'filters': {'merchant': 'Můj šálek kávy'}, 'period': 'year:2025'}",
+    "'How much did I spend at Pho Vietnam in 2025?': got {'table': 'expenses', 'op': 'sum', 'column': 'amount', 'filters': {'person_id': 'Adam Zvada', 'category': 'coffee', 'merchant': 'Pho Vietnam'}, 'period': 'all'}, the logged plan is {'table': 'expenses', 'op': 'sum', 'column': 'amount', 'filters': {'category': 'dining', 'merchant': 'Pho Vietnam'}, 'period': 'year:2025'}"
+   ]
+  },
+  {
+   "round": 1,
+   "regex": "What's the most I've spent on a single grocery run in (?P<merchant>.+?)\\?",
+   "matched": 1,
+   "exact": 1,
+   "keep": false,
+   "wrong": []
+  },
+  {
+   "round": 1,
+   "regex": "What was my most expensive grocery run in (?P<merchant>.+?)\\?",
+   "matched": 1,
+   "exact": 1,
+   "keep": false,
+   "wrong": []
+  },
+  {
+   "round": 1,
+   "regex": "What's the most I've spent on a single coffee in (?P<merchant>.+?)\\?",
+   "matched": 1,
+   "exact": 1,
+   "keep": false,
+   "wrong": []
+  },
+  {
+   "round": 1,
+   "regex": "What was my most expensive ride in (?P<merchant>.+?)\\?",
+   "matched": 1,
+   "exact": 1,
+   "keep": false,
+   "wrong": []
+  },
+  {
+   "round": 1,
+   "regex": "What's my average dinner bill(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 2,
+   "exact": 2,
+   "keep": true,
+   "wrong": []
+  },
+  {
+   "round": 1,
+   "regex": "How much did a night of drinks cost me on average(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 2,
+   "exact": 2,
+   "keep": true,
+   "wrong": []
+  },
+  {
+   "round": 1,
+   "regex": "How much did a ride cost me on average(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 1,
+   "exact": 1,
+   "keep": false,
+   "wrong": []
+  },
+  {
+   "round": 1,
+   "regex": "What's my average grocery run bill(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 1,
+   "exact": 1,
+   "keep": false,
+   "wrong": []
+  },
+  {
+   "round": 1,
+   "regex": "How much did a lunch cost me on average(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 1,
+   "exact": 1,
+   "keep": false,
+   "wrong": []
+  },
+  {
+   "round": 1,
+   "regex": "(?:What was my average sleep|How many hours did I sleep on average)(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 8,
+   "exact": 8,
+   "keep": true,
+   "wrong": []
+  },
+  {
+   "round": 1,
+   "regex": "What was my lowest weight(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 4,
+   "exact": 4,
+   "keep": true,
+   "wrong": []
+  },
+  {
+   "round": 1,
+   "regex": "What's the least I weighed(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 4,
+   "exact": 4,
+   "keep": true,
+   "wrong": []
+  },
+  {
+   "round": 1,
+   "regex": "How many runs did I do(?P<period> in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)?\\?",
+   "matched": 4,
+   "exact": 4,
+   "keep": true,
+   "wrong": []
+  },
+  {
+   "round": 1,
+   "regex": "How many runs did I do in November \\d{4}\\?",
+   "matched": 1,
+   "exact": 0,
+   "keep": false,
+   "wrong": [
+    "'How many runs did I do in November 2024?': no group 'period' in the regex"
+   ]
+  },
+  {
+   "round": 1,
+   "regex": "How many times did I go running this year\\?",
+   "matched": 1,
+   "exact": 1,
+   "keep": false,
+   "wrong": []
+  },
+  {
+   "round": 1,
+   "regex": "How many times did I go running in \\d{4}\\?",
+   "matched": 1,
+   "exact": 0,
+   "keep": false,
+   "wrong": [
+    "'How many times did I go running in 2024?': no group 'period' in the regex"
+   ]
+  },
+  {
+   "round": 1,
+   "regex": "How many times did I go running in \\w+ \\d{4}\\?",
+   "matched": 2,
+   "exact": 0,
+   "keep": false,
+   "wrong": [
+    "'How many times did I go running in April 2024?': no group 'period' in the regex",
+    "'How many times did I go running in June 2024?': no group 'period' in the regex"
+   ]
+  },
+  {
+   "round": 1,
+   "regex": "How many runs did I do in \\w+ \\d{4}\\?",
+   "matched": 3,
+   "exact": 0,
+   "keep": false,
+   "wrong": [
+    "'How many runs did I do in July 2025?': no group 'period' in the regex",
+    "'How many runs did I do in November 2024?': no group 'period' in the regex",
+    "'How many runs did I do in May 2026?': no group 'period' in the regex"
+   ]
+  },
+  {
+   "round": 1,
+   "regex": "How many times did I go climbing(?: in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 4,
+   "exact": 0,
+   "keep": false,
+   "wrong": [
+    "'How many times did I go climbing in 2024?': no group 'period' in the regex",
+    "'How many times did I go climbing in January 2026?': no group 'period' in the regex",
+    "'How many times did I go climbing this year?': no group 'period' in the regex"
+   ]
+  },
+  {
+   "round": 1,
+   "regex": "How many climbing sessions did I have(?: in \\w+ \\d{4}| in \\d{4}| this year| last year| this month| last month)\\?",
+   "matched": 4,
+   "exact": 0,
+   "keep": false,
+   "wrong": [
+    "'How many climbing sessions did I have in 2025?': no group 'period' in the regex",
+    "'How many climbing sessions did I have in January 2025?': no group 'period' in the regex",
+    "'How many climbing sessions did I have in June 2025?': no group 'period' in the regex"
+   ]
+  }
+ ],
+ "aliases": [
+  {
+   "table": "expenses",
+   "column": "merchant",
+   "words": {}
+  }
+ ],
+ "cost": 0.00582,
+ "past_on_opt": {
+  "det_accuracy": 0.775,
+  "trusted": 70
+ }
+}

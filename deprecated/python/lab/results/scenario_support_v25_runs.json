@@ -1,0 +1,3922 @@
+{
+ "log_rag": {
+  "rows": [
+   {
+    "id": "su01",
+    "type": "semantic_current",
+    "question": "What is the status of ticket #1053?",
+    "gold": "Resolved (on Feb 5, 2026, after being reopened on Feb 1, 2026)",
+    "answer": "Ticket #1053 was resolved again on February 5, 2026, after it was reopened on February 1.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 654,
+    "answer_tokens_in": 539,
+    "route_latency_s": null
+   },
+   {
+    "id": "su02",
+    "type": "semantic_current",
+    "question": "Who owns the billing queue now?",
+    "gold": "Ana Silva (since May 4, 2026)",
+    "answer": "Ana Silva owns the billing queue now.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 882,
+    "answer_tokens_in": 587,
+    "route_latency_s": null
+   },
+   {
+    "id": "su03",
+    "type": "semantic_current",
+    "question": "Which tickets are still open?",
+    "gold": "#1194, #1195, #1196, #1198, #1200, #1201, #1202, #1204, #1205, #1206",
+    "answer": "I don’t know which specific tickets are open. The latest update, from June 29, reports 10 open tickets focused on integrations.",
+    "score": 0.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 861,
+    "answer_tokens_in": 575,
+    "route_latency_s": null
+   },
+   {
+    "id": "su04",
+    "type": "semantic_history",
+    "question": "What was the priority of ticket #1058 before it was escalated?",
+    "gold": "P3 (then P1)",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 899,
+    "answer_tokens_in": 620,
+    "route_latency_s": null
+   },
+   {
+    "id": "su05",
+    "type": "semantic_history",
+    "question": "Who handled billing before Ana?",
+    "gold": "Leo Martins (until Apr 30, 2026)",
+    "answer": "Leo Martins handled billing before Ana Silva took over on May 4, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 775,
+    "answer_tokens_in": 573,
+    "route_latency_s": null
+   },
+   {
+    "id": "su06",
+    "type": "semantic_history",
+    "question": "What plan was Acme on, and who was their contact?",
+    "gold": "Enterprise; Tom Reed (tom@acme.io)",
+    "answer": "Acme Corp was on the Enterprise plan. Their contact was Tom Reed.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1013,
+    "answer_tokens_in": 615,
+    "route_latency_s": null
+   },
+   {
+    "id": "su07",
+    "type": "aggregate",
+    "question": "How much did we refund in Q2?",
+    "gold": "$1,695 (5 refunds)",
+    "answer": "We refunded $1,250 in Q2 (April–June).",
+    "score": 0.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1649,
+    "answer_tokens_in": 773,
+    "route_latency_s": null
+   },
+   {
+    "id": "su08",
+    "type": "aggregate",
+    "question": "How many tickets did Acme open?",
+    "gold": "37",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 861,
+    "answer_tokens_in": 577,
+    "route_latency_s": null
+   },
+   {
+    "id": "su09",
+    "type": "aggregate",
+    "question": "How many tickets were escalated to engineering?",
+    "gold": "22",
+    "answer": "12 tickets were escalated to engineering.",
+    "score": 0.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 684,
+    "answer_tokens_in": 559,
+    "route_latency_s": null
+   },
+   {
+    "id": "su10",
+    "type": "episodic_event",
+    "question": "What happened with ticket #1059?",
+    "gold": "Tom Reed (Acme Corp) opened it on Jan 26, 2026: \"Google Calendar events duplicated\"; assigned to Priya Shah; escalated to engineering as P1 on Jan 27, 2026; resolved on Feb 1, 2026 (a timezone bug in the sync)",
+    "answer": "Ticket #1059 was a timezone bug in the sync. It was closed on Jan 26, assigned to Priya at P3, escalated to engineering at P1 the next day, reopened when Acme reported it was back, and resolved again on Feb 1.",
+    "score": 0.5,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 725,
+    "answer_tokens_in": 553,
+    "route_latency_s": null
+   },
+   {
+    "id": "su11",
+    "type": "episodic_event",
+    "question": "What came out of the April QBR with Acme?",
+    "gold": "They flagged two slow integration tickets and want a named contact for billing",
+    "answer": "The April 2 QBR with Acme surfaced two slow integration tickets, and they requested a named billing contact.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1735,
+    "answer_tokens_in": 881,
+    "route_latency_s": null
+   },
+   {
+    "id": "su12",
+    "type": "episodic_event",
+    "question": "Which tickets came in on Jan 6, 2026?",
+    "gold": "#1043 (Initech, Zoom links missing from invites), #1044 (Globex, SSO login loop with Okta), #1045 (Initech, Charged twice this month)",
+    "answer": "Three tickets came in on Jan 6, 2026: #1044, “SSO login loop with Okta” (Nora Blake, Globex); #1043, “Zoom links missing from invites” (Initech); and #1045, “Charged twice this month” (Initech).",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1754,
+    "answer_tokens_in": 879,
+    "route_latency_s": null
+   },
+   {
+    "id": "su13",
+    "type": "episodic_time",
+    "question": "When was ticket #1053 reopened?",
+    "gold": "Feb 1, 2026",
+    "answer": "Ticket #1053 was reopened on February 1, 2026, at 10:25.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 755,
+    "answer_tokens_in": 571,
+    "route_latency_s": null
+   },
+   {
+    "id": "su14",
+    "type": "episodic_time",
+    "question": "When did Ana start?",
+    "gold": "May 4, 2026",
+    "answer": "Ana Silva started on May 4, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 570,
+    "answer_tokens_in": 543,
+    "route_latency_s": null
+   },
+   {
+    "id": "su15",
+    "type": "episodic_time",
+    "question": "When did we refund Initech, and how much?",
+    "gold": "Jan 22, 2026: $120; Apr 16, 2026: $240",
+    "answer": "We refunded Initech $120 on January 22, 2026, for the January sync outage, and $240 on April 16, 2026, for the April SSO outage.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1566,
+    "answer_tokens_in": 752,
+    "route_latency_s": null
+   },
+   {
+    "id": "su16",
+    "type": "routine",
+    "question": "Who usually handles integration tickets?",
+    "gold": "Priya Shah",
+    "answer": "Priya Shah usually handles integration tickets.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 953,
+    "answer_tokens_in": 591,
+    "route_latency_s": null
+   },
+   {
+    "id": "su17",
+    "type": "routine",
+    "question": "On which day of the week do the most new tickets come in?",
+    "gold": "Mondays",
+    "answer": "Friday has the most new tickets, with 3.",
+    "score": 0.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1650,
+    "answer_tokens_in": 782,
+    "route_latency_s": null
+   },
+   {
+    "id": "su18",
+    "type": "routine",
+    "question": "When is the weekly team sync?",
+    "gold": "Mondays, in the morning (done by about 10:45)",
+    "answer": "The weekly team sync appears to be on Mondays around 10:45 a.m.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 812,
+    "answer_tokens_in": 570,
+    "route_latency_s": null
+   },
+   {
+    "id": "su19",
+    "type": "prospective",
+    "question": "What did I promise Globex, and did we deliver?",
+    "gold": "The CSV export fix by Mar 13; the deadline was missed, it shipped on Mar 19 and Nora confirmed it works",
+    "answer": "You promised Nora at Globex a fix for the CSV export by Friday, March 13, 2026. I don’t know whether it was delivered.",
+    "score": 0.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 867,
+    "answer_tokens_in": 576,
+    "route_latency_s": null
+   },
+   {
+    "id": "su20",
+    "type": "prospective",
+    "question": "When is the next QBR with Acme?",
+    "gold": "Thu Jul 2, 2026 at 15:00 (Zoom)",
+    "answer": "The next QBR with Acme is July 2, 2026, from 3:00 to 4:00 PM on Zoom.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1664,
+    "answer_tokens_in": 862,
+    "route_latency_s": null
+   },
+   {
+    "id": "su21",
+    "type": "prospective",
+    "question": "Do I still owe Umbrella Health anything?",
+    "gold": "A written root-cause report on the June 3 outage, due Jul 3",
+    "answer": "I don’t know. The records show you refunded Umbrella Health $900 on May 28 for an SLA breach, but don’t say whether you owe them anything else.",
+    "score": 0.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1979,
+    "answer_tokens_in": 818,
+    "route_latency_s": null
+   },
+   {
+    "id": "su22",
+    "type": "preference",
+    "question": "How does Acme want to be contacted?",
+    "gold": "By email only, never phone calls",
+    "answer": "Acme wants updates by email and does not want phone calls.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 833,
+    "answer_tokens_in": 583,
+    "route_latency_s": null
+   },
+   {
+    "id": "su23",
+    "type": "preference",
+    "question": "When does Nora at Globex prefer to be called?",
+    "gold": "Before 10am (email otherwise)",
+    "answer": "Nora at Globex prefers a phone call before 10 a.m.; email otherwise.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 664,
+    "answer_tokens_in": 542,
+    "route_latency_s": null
+   },
+   {
+    "id": "su24",
+    "type": "preference",
+    "question": "What did Dana at Umbrella complain about?",
+    "gold": "Being cc'd on our internal threads",
+    "answer": "Dana at Umbrella complained that she was being cc’d on your internal threads again.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 683,
+    "answer_tokens_in": 530,
+    "route_latency_s": null
+   },
+   {
+    "id": "su25",
+    "type": "source",
+    "question": "What exactly did Tom Reed write when opening ticket #1042?",
+    "gold": "\"Android notifications arrive late\": Hello team, we see this: android notifications arrive late. It's blocking a few of our people.",
+    "answer": "“Hello team, we see this: android notifications arrive late. It's blocking a few of our people.”",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 945,
+    "answer_tokens_in": 605,
+    "route_latency_s": null
+   },
+   {
+    "id": "su26",
+    "type": "source",
+    "question": "What did the CSAT comment on ticket #1046 say?",
+    "gold": "3/5: \"ok\"",
+    "answer": "Ben Ortiz’s CSAT comment on ticket #1046 was “ok” (3/5).",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 782,
+    "answer_tokens_in": 569,
+    "route_latency_s": null
+   },
+   {
+    "id": "su27",
+    "type": "source",
+    "question": "What does the new Enterprise SLA say?",
+    "gold": "From June 1: first response within 4 hours, 24/7, and a status update every 8 hours on P1 tickets; Pro stays at 1 business day",
+    "answer": "Starting June 1, Enterprise customers get a first response within 4 hours, 24/7, and a status update every 8 hours on P1 tickets.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1050,
+    "answer_tokens_in": 640,
+    "route_latency_s": null
+   },
+   {
+    "id": "su28",
+    "type": "period",
+    "question": "Who covered the night shift after we moved to 24/7 coverage?",
+    "gold": "Sam Okafor (22:00-06:00, from May 1)",
+    "answer": "Sam covered the night shift (22:00–06:00) when 24/7 coverage began on May 1.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1081,
+    "answer_tokens_in": 658,
+    "route_latency_s": null
+   },
+   {
+    "id": "su29",
+    "type": "period",
+    "question": "Who was running billing when Initech got its first refund?",
+    "gold": "Leo Martins (Jan 22, 2026)",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1013,
+    "answer_tokens_in": 615,
+    "route_latency_s": null
+   },
+   {
+    "id": "su30",
+    "type": "period",
+    "question": "How many tickets came in during the month before 24/7 coverage started?",
+    "gold": "29 (April 2026)",
+    "answer": "Four tickets came in during April, the month before 24/7 coverage started on May 1.",
+    "score": 0.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1727,
+    "answer_tokens_in": 810,
+    "route_latency_s": null
+   },
+   {
+    "id": "su31",
+    "type": "metamemory",
+    "question": "What is Globex's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 726,
+    "answer_tokens_in": 541,
+    "route_latency_s": null
+   },
+   {
+    "id": "su32",
+    "type": "metamemory",
+    "question": "What is Priya's email address?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 726,
+    "answer_tokens_in": 541,
+    "route_latency_s": null
+   },
+   {
+    "id": "su33",
+    "type": "metamemory",
+    "question": "How many seats does Hooli have?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 647,
+    "answer_tokens_in": 537,
+    "route_latency_s": null
+   },
+   {
+    "id": "su34",
+    "type": "forgotten",
+    "question": "What is Carl Weber's email address?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 726,
+    "answer_tokens_in": 541,
+    "route_latency_s": null
+   },
+   {
+    "id": "su35",
+    "type": "forgotten",
+    "question": "Who at Initech opened ticket #1041?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don’t know. The ticket opener’s name is marked as forgotten.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 905,
+    "answer_tokens_in": 599,
+    "route_latency_s": null
+   },
+   {
+    "id": "su36",
+    "type": "forgotten",
+    "question": "Who was our contact at Initech before June?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 1003,
+    "answer_tokens_in": 644,
+    "route_latency_s": null
+   }
+  ],
+  "n": 36,
+  "accuracy": 70.8,
+  "new_spend": 0
+ },
+ "facts_log": {
+  "rows": [
+   {
+    "id": "su01",
+    "type": "semantic_current",
+    "question": "What is the status of ticket #1053?",
+    "gold": "Resolved (on Feb 5, 2026, after being reopened on Feb 1, 2026)",
+    "answer": "Ticket #1053 (“Charged twice this month”) is resolved; it was reopened on February 1, 2026, and resolved again on February 5, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 4451,
+    "answer_tokens_in": 1651,
+    "route_latency_s": null
+   },
+   {
+    "id": "su02",
+    "type": "semantic_current",
+    "question": "Who owns the billing queue now?",
+    "gold": "Ana Silva (since May 4, 2026)",
+    "answer": "Ana Silva owns the billing queue now. She took over on May 4, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3318,
+    "answer_tokens_in": 1356,
+    "route_latency_s": null
+   },
+   {
+    "id": "su03",
+    "type": "semantic_current",
+    "question": "Which tickets are still open?",
+    "gold": "#1194, #1195, #1196, #1198, #1200, #1201, #1202, #1204, #1205, #1206",
+    "answer": "The June 29 team sync reported 10 tickets open, with integrations as the focus. I don’t know the individual ticket names.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2174,
+    "answer_tokens_in": 1038,
+    "route_latency_s": null
+   },
+   {
+    "id": "su04",
+    "type": "semantic_history",
+    "question": "What was the priority of ticket #1058 before it was escalated?",
+    "gold": "P3 (then P1)",
+    "answer": "Ticket #1058 was priority P3 before it was escalated to P1 on January 28, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 4902,
+    "answer_tokens_in": 1760,
+    "route_latency_s": null
+   },
+   {
+    "id": "su05",
+    "type": "semantic_history",
+    "question": "Who handled billing before Ana?",
+    "gold": "Leo Martins (until Apr 30, 2026)",
+    "answer": "Leo Martins handled billing before Ana Silva.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2444,
+    "answer_tokens_in": 1110,
+    "route_latency_s": null
+   },
+   {
+    "id": "su06",
+    "type": "semantic_history",
+    "question": "What plan was Acme on, and who was their contact?",
+    "gold": "Enterprise; Tom Reed (tom@acme.io)",
+    "answer": "Acme Corp was on the Enterprise plan, and their contact was Tom Reed.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3199,
+    "answer_tokens_in": 1300,
+    "route_latency_s": null
+   },
+   {
+    "id": "su07",
+    "type": "aggregate",
+    "question": "How much did we refund in Q2?",
+    "gold": "$1,695 (5 refunds)",
+    "answer": "We refunded **$1,695 USD** in Q2 (April–June), across five refunds.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 4105,
+    "answer_tokens_in": 1519,
+    "route_latency_s": null
+   },
+   {
+    "id": "su08",
+    "type": "aggregate",
+    "question": "How many tickets did Acme open?",
+    "gold": "37",
+    "answer": "Acme opened 93 tickets.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2300,
+    "answer_tokens_in": 1078,
+    "route_latency_s": null
+   },
+   {
+    "id": "su09",
+    "type": "aggregate",
+    "question": "How many tickets were escalated to engineering?",
+    "gold": "22",
+    "answer": "151 tickets were escalated to engineering.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 4453,
+    "answer_tokens_in": 1636,
+    "route_latency_s": null
+   },
+   {
+    "id": "su10",
+    "type": "episodic_event",
+    "question": "What happened with ticket #1059?",
+    "gold": "Tom Reed (Acme Corp) opened it on Jan 26, 2026: \"Google Calendar events duplicated\"; assigned to Priya Shah; escalated to engineering as P1 on Jan 27, 2026; resolved on Feb 1, 2026 (a timezone bug in the sync)",
+    "answer": "Ticket #1059 was about duplicated Google Calendar events caused by a timezone bug in the sync. It was closed on Jan 26, assigned to Priya at P3, escalated to engineering as P1 on Jan 27, reopened after Acme reported it was back on Jan 29, and resolved again on Feb 1, 2026.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3022,
+    "answer_tokens_in": 1236,
+    "route_latency_s": null
+   },
+   {
+    "id": "su11",
+    "type": "episodic_event",
+    "question": "What came out of the April QBR with Acme?",
+    "gold": "They flagged two slow integration tickets and want a named contact for billing",
+    "answer": "The April 2 QBR flagged two slow integration tickets, and Acme wanted a named contact for billing.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 5335,
+    "answer_tokens_in": 2003,
+    "route_latency_s": null
+   },
+   {
+    "id": "su12",
+    "type": "episodic_event",
+    "question": "Which tickets came in on Jan 6, 2026?",
+    "gold": "#1043 (Initech, Zoom links missing from invites), #1044 (Globex, SSO login loop with Okta), #1045 (Initech, Charged twice this month)",
+    "answer": "Three tickets came in on Jan 6, 2026: #1044, “SSO login loop with Okta” (Nora Blake, Globex); #1043, “Zoom links missing from invites” (Initech); and #1045, “Charged twice this month” (Initech).",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 4901,
+    "answer_tokens_in": 1893,
+    "route_latency_s": null
+   },
+   {
+    "id": "su13",
+    "type": "episodic_time",
+    "question": "When was ticket #1053 reopened?",
+    "gold": "Feb 1, 2026",
+    "answer": "Ticket #1053 was reopened on February 1, 2026, at 10:25.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3857,
+    "answer_tokens_in": 1462,
+    "route_latency_s": null
+   },
+   {
+    "id": "su14",
+    "type": "episodic_time",
+    "question": "When did Ana start?",
+    "gold": "May 4, 2026",
+    "answer": "Ana Silva started on May 4, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 4040,
+    "answer_tokens_in": 1551,
+    "route_latency_s": null
+   },
+   {
+    "id": "su15",
+    "type": "episodic_time",
+    "question": "When did we refund Initech, and how much?",
+    "gold": "Jan 22, 2026: $120; Apr 16, 2026: $240",
+    "answer": "We refunded Initech $240 on April 16, 2026, for the April SSO outage.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 4048,
+    "answer_tokens_in": 1502,
+    "route_latency_s": null
+   },
+   {
+    "id": "su16",
+    "type": "routine",
+    "question": "Who usually handles integration tickets?",
+    "gold": "Priya Shah",
+    "answer": "Priya Shah usually handles integration tickets.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2801,
+    "answer_tokens_in": 1200,
+    "route_latency_s": null
+   },
+   {
+    "id": "su17",
+    "type": "routine",
+    "question": "On which day of the week do the most new tickets come in?",
+    "gold": "Mondays",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 5104,
+    "answer_tokens_in": 1805,
+    "route_latency_s": null
+   },
+   {
+    "id": "su18",
+    "type": "routine",
+    "question": "When is the weekly team sync?",
+    "gold": "Mondays, in the morning (done by about 10:45)",
+    "answer": "The weekly team sync is on Mondays, usually around 10:45 a.m.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3099,
+    "answer_tokens_in": 1299,
+    "route_latency_s": null
+   },
+   {
+    "id": "su19",
+    "type": "prospective",
+    "question": "What did I promise Globex, and did we deliver?",
+    "gold": "The CSV export fix by Mar 13; the deadline was missed, it shipped on Mar 19 and Nora confirmed it works",
+    "answer": "You promised Nora Blake at Globex a CSV export fix by March 13, 2026. You missed that deadline, gave her a new ETA of March 19, and the fix was ultimately shipped and confirmed.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 4259,
+    "answer_tokens_in": 1563,
+    "route_latency_s": null
+   },
+   {
+    "id": "su20",
+    "type": "prospective",
+    "question": "When is the next QBR with Acme?",
+    "gold": "Thu Jul 2, 2026 at 15:00 (Zoom)",
+    "answer": "The next QBR with Acme is July 2, 2026, from 3:00 to 4:00 PM on Zoom.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 5635,
+    "answer_tokens_in": 2121,
+    "route_latency_s": null
+   },
+   {
+    "id": "su21",
+    "type": "prospective",
+    "question": "Do I still owe Umbrella Health anything?",
+    "gold": "A written root-cause report on the June 3 outage, due Jul 3",
+    "answer": "I don’t know whether you still owe Umbrella Health anything. The records show you refunded them $900 on May 28, 2026, but don’t say whether any balance remains.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 5855,
+    "answer_tokens_in": 1931,
+    "route_latency_s": null
+   },
+   {
+    "id": "su22",
+    "type": "preference",
+    "question": "How does Acme want to be contacted?",
+    "gold": "By email only, never phone calls",
+    "answer": "Acme wants every update by email and does not want phone calls.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3385,
+    "answer_tokens_in": 1385,
+    "route_latency_s": null
+   },
+   {
+    "id": "su23",
+    "type": "preference",
+    "question": "When does Nora at Globex prefer to be called?",
+    "gold": "Before 10am (email otherwise)",
+    "answer": "Nora at Globex prefers a phone call before 10 a.m.; otherwise, contact her by email.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 4066,
+    "answer_tokens_in": 1532,
+    "route_latency_s": null
+   },
+   {
+    "id": "su24",
+    "type": "preference",
+    "question": "What did Dana at Umbrella complain about?",
+    "gold": "Being cc'd on our internal threads",
+    "answer": "Dana complained about being cc’d on internal threads.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 5278,
+    "answer_tokens_in": 1795,
+    "route_latency_s": null
+   },
+   {
+    "id": "su25",
+    "type": "source",
+    "question": "What exactly did Tom Reed write when opening ticket #1042?",
+    "gold": "\"Android notifications arrive late\": Hello team, we see this: android notifications arrive late. It's blocking a few of our people.",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 4034,
+    "answer_tokens_in": 1494,
+    "route_latency_s": null
+   },
+   {
+    "id": "su26",
+    "type": "source",
+    "question": "What did the CSAT comment on ticket #1046 say?",
+    "gold": "3/5: \"ok\"",
+    "answer": "The CSAT comment on ticket #1046 was “ok.”",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3096,
+    "answer_tokens_in": 1349,
+    "route_latency_s": null
+   },
+   {
+    "id": "su27",
+    "type": "source",
+    "question": "What does the new Enterprise SLA say?",
+    "gold": "From June 1: first response within 4 hours, 24/7, and a status update every 8 hours on P1 tickets; Pro stays at 1 business day",
+    "answer": "Starting June 1, the Enterprise SLA provides 24/7 coverage, a first response within 4 hours, and status updates every 8 hours on P1 tickets.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3949,
+    "answer_tokens_in": 1507,
+    "route_latency_s": null
+   },
+   {
+    "id": "su28",
+    "type": "period",
+    "question": "Who covered the night shift after we moved to 24/7 coverage?",
+    "gold": "Sam Okafor (22:00-06:00, from May 1)",
+    "answer": "Sam Okafor covered the night shift, from 22:00 to 06:00, starting May 1, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3807,
+    "answer_tokens_in": 1481,
+    "route_latency_s": null
+   },
+   {
+    "id": "su29",
+    "type": "period",
+    "question": "Who was running billing when Initech got its first refund?",
+    "gold": "Leo Martins (Jan 22, 2026)",
+    "answer": "Leo Martins was running billing when Initech received its first refund, on January 22, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2593,
+    "answer_tokens_in": 1123,
+    "route_latency_s": null
+   },
+   {
+    "id": "su30",
+    "type": "period",
+    "question": "How many tickets came in during the month before 24/7 coverage started?",
+    "gold": "29 (April 2026)",
+    "answer": "I don’t know. The record says 24/7 coverage began May 1, so the month before was April, but the database count provided is for May, not April.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 4619,
+    "answer_tokens_in": 1676,
+    "route_latency_s": null
+   },
+   {
+    "id": "su31",
+    "type": "metamemory",
+    "question": "What is Globex's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3543,
+    "answer_tokens_in": 1353,
+    "route_latency_s": null
+   },
+   {
+    "id": "su32",
+    "type": "metamemory",
+    "question": "What is Priya's email address?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2992,
+    "answer_tokens_in": 1200,
+    "route_latency_s": null
+   },
+   {
+    "id": "su33",
+    "type": "metamemory",
+    "question": "How many seats does Hooli have?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3843,
+    "answer_tokens_in": 1454,
+    "route_latency_s": null
+   },
+   {
+    "id": "su34",
+    "type": "forgotten",
+    "question": "What is Carl Weber's email address?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2103,
+    "answer_tokens_in": 943,
+    "route_latency_s": null
+   },
+   {
+    "id": "su35",
+    "type": "forgotten",
+    "question": "Who at Initech opened ticket #1041?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don’t know. The ticket opener’s name is marked forgotten.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2538,
+    "answer_tokens_in": 1134,
+    "route_latency_s": null
+   },
+   {
+    "id": "su36",
+    "type": "forgotten",
+    "question": "Who was our contact at Initech before June?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 4065,
+    "answer_tokens_in": 1535,
+    "route_latency_s": null
+   }
+  ],
+  "n": 36,
+  "accuracy": 76.4,
+  "new_spend": 0.0189
+ },
+ "hybrid_r4": {
+  "rows": [
+   {
+    "id": "su01",
+    "type": "semantic_current",
+    "question": "What is the status of ticket #1053?",
+    "gold": "Resolved (on Feb 5, 2026, after being reopened on Feb 1, 2026)",
+    "answer": "Ticket #1053 is resolved.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su02",
+    "type": "semantic_current",
+    "question": "Who owns the billing queue now?",
+    "gold": "Ana Silva (since May 4, 2026)",
+    "answer": "Leo Martins — 2026-04-30 {\"person\": \"Leo Martins\", \"area\": \"billing\", \"end_date\": \"2026-04-30\"}",
+    "score": 0.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su03",
+    "type": "semantic_current",
+    "question": "Which tickets are still open?",
+    "gold": "#1194, #1195, #1196, #1198, #1200, #1201, #1202, #1204, #1205, #1206",
+    "answer": "There are no tickets marked open in the database.",
+    "score": 0.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su04",
+    "type": "semantic_history",
+    "question": "What was the priority of ticket #1058 before it was escalated?",
+    "gold": "P3 (then P1)",
+    "answer": "Ticket #1058 was **P3** before it was escalated.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su05",
+    "type": "semantic_history",
+    "question": "Who handled billing before Ana?",
+    "gold": "Leo Martins (until Apr 30, 2026)",
+    "answer": "Leo Martins handled billing before Ana Silva.",
+    "score": 0.5,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su06",
+    "type": "semantic_history",
+    "question": "What plan was Acme on, and who was their contact?",
+    "gold": "Enterprise; Tom Reed (tom@acme.io)",
+    "answer": "Acme Corp was on the Enterprise plan, and their contact was Tom Reed.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su07",
+    "type": "aggregate",
+    "question": "How much did we refund in Q2?",
+    "gold": "$1,695 (5 refunds)",
+    "answer": "1,695.00 USD (5 rows)",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su08",
+    "type": "aggregate",
+    "question": "How many tickets did Acme open?",
+    "gold": "37",
+    "answer": "93",
+    "score": 0.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su09",
+    "type": "aggregate",
+    "question": "How many tickets were escalated to engineering?",
+    "gold": "22",
+    "answer": "151",
+    "score": 0.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su10",
+    "type": "episodic_event",
+    "question": "What happened with ticket #1059?",
+    "gold": "Tom Reed (Acme Corp) opened it on Jan 26, 2026: \"Google Calendar events duplicated\"; assigned to Priya Shah; escalated to engineering as P1 on Jan 27, 2026; resolved on Feb 1, 2026 (a timezone bug in the sync)",
+    "answer": "Ticket #1059 was about duplicated Google Calendar events at Acme Corp. It was reported Jan 26, 2026, and escalated from P2 to P3, then P1. Acme said the issue had returned, so it was reopened on Jan 29; it was resolved on Feb 1. The recorded cause/fix was a timezone bug in the sync. Priya Shah was assigned.",
+    "score": 0.5,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su11",
+    "type": "episodic_event",
+    "question": "What came out of the April QBR with Acme?",
+    "gold": "They flagged two slow integration tickets and want a named contact for billing",
+    "answer": "Flagged two slow integration tickets; wants a named contact for billing",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su12",
+    "type": "episodic_event",
+    "question": "Which tickets came in on Jan 6, 2026?",
+    "gold": "#1043 (Initech, Zoom links missing from invites), #1044 (Globex, SSO login loop with Okta), #1045 (Initech, Charged twice this month)",
+    "answer": "Ticket #1044, “SSO login loop with Okta,” came in at 8:25 AM on Jan 6, 2026.",
+    "score": 0.5,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su13",
+    "type": "episodic_time",
+    "question": "When was ticket #1053 reopened?",
+    "gold": "Feb 1, 2026",
+    "answer": "Ticket #1053 was reopened on February 1, 2026, at 10:25.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su14",
+    "type": "episodic_time",
+    "question": "When did Ana start?",
+    "gold": "May 4, 2026",
+    "answer": "2026-05-04 — 2026-04-13T17:26 {\"name\": \"Ana Silva\", \"start_date\": \"2026-05-04\"}",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su15",
+    "type": "episodic_time",
+    "question": "When did we refund Initech, and how much?",
+    "gold": "Jan 22, 2026: $120; Apr 16, 2026: $240",
+    "answer": "2026-04-16 {\"category\": \"refund\", \"description\": \"Refund for the April SSO outage\", \"amount\": 240.0, \"currency\": \"USD\", \"date\": \"2026-04-16\", \"organization\": \"Initech\"}",
+    "score": 0.5,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su16",
+    "type": "routine",
+    "question": "Who usually handles integration tickets?",
+    "gold": "Priya Shah",
+    "answer": "Priya Shah usually handles integration tickets.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su17",
+    "type": "routine",
+    "question": "On which day of the week do the most new tickets come in?",
+    "gold": "Mondays",
+    "answer": "Monday, with 47 new tickets.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su18",
+    "type": "routine",
+    "question": "When is the weekly team sync?",
+    "gold": "Mondays, in the morning (done by about 10:45)",
+    "answer": "The weekly team sync is on Mondays. I don’t have a time of day.",
+    "score": 0.5,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su19",
+    "type": "prospective",
+    "question": "What did I promise Globex, and did we deliver?",
+    "gold": "The CSV export fix by Mar 13; the deadline was missed, it shipped on Mar 19 and Nora confirmed it works",
+    "answer": "You promised Nora at Globex the CSV export fix by Friday, March 13. You missed that deadline and gave her a new ETA of March 19; the fix shipped on March 19, and Nora confirmed it worked. So yes, it was delivered, but late.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su20",
+    "type": "prospective",
+    "question": "When is the next QBR with Acme?",
+    "gold": "Thu Jul 2, 2026 at 15:00 (Zoom)",
+    "answer": "2026-07-02T15:00 — 2026-07-02 {\"category\": \"meeting\", \"name\": \"QBR with Acme Corp\", \"date\": \"2026-07-02\", \"organization\": \"Acme Corp\", \"organizer_person\": \"Tom Reed\", \"start_time\": \"2026-07-02T15:00\", \"end_time\": \"2026-07-02T16:00\", \"location\": \"Zoom\"}",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su21",
+    "type": "prospective",
+    "question": "Do I still owe Umbrella Health anything?",
+    "gold": "A written root-cause report on the June 3 outage, due Jul 3",
+    "answer": "Yes. You still owe Umbrella Health a written root-cause report on the June 3, 2026 outage, due July 3, 2026. It’s marked “promised.”",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su22",
+    "type": "preference",
+    "question": "How does Acme want to be contacted?",
+    "gold": "By email only, never phone calls",
+    "answer": "Acme wants updates by email and says never to call.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su23",
+    "type": "preference",
+    "question": "When does Nora at Globex prefer to be called?",
+    "gold": "Before 10am (email otherwise)",
+    "answer": "call before 10am — 2026-01-20T11:39 {\"organization\": \"Globex\", \"channel\": \"phone\", \"preference\": \"call before 10am\"}",
+    "score": 0.5,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su24",
+    "type": "preference",
+    "question": "What did Dana at Umbrella complain about?",
+    "gold": "Being cc'd on our internal threads",
+    "answer": "Dana complained about being cc’d on internal threads again.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su25",
+    "type": "source",
+    "question": "What exactly did Tom Reed write when opening ticket #1042?",
+    "gold": "\"Android notifications arrive late\": Hello team, we see this: android notifications arrive late. It's blocking a few of our people.",
+    "answer": "Tom Reed wrote: “Hello team, we see this: android notifications arrive late. It's blocking a few of our people.”",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su26",
+    "type": "source",
+    "question": "What did the CSAT comment on ticket #1046 say?",
+    "gold": "3/5: \"ok\"",
+    "answer": "The CSAT comment on ticket #1046 was “ok.”",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su27",
+    "type": "source",
+    "question": "What does the new Enterprise SLA say?",
+    "gold": "From June 1: first response within 4 hours, 24/7, and a status update every 8 hours on P1 tickets; Pro stays at 1 business day",
+    "answer": "Effective June 1, 2026, the Enterprise SLA requires a first response within 4 hours, with 24/7 coverage. For P1 tickets, status updates are due every 8 hours.",
+    "score": 0.5,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su28",
+    "type": "period",
+    "question": "Who covered the night shift after we moved to 24/7 coverage?",
+    "gold": "Sam Okafor (22:00-06:00, from May 1)",
+    "answer": "Sam Okafor covered the night shift, from 22:00 to 06:00, starting May 1, 2026.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su29",
+    "type": "period",
+    "question": "Who was running billing when Initech got its first refund?",
+    "gold": "Leo Martins (Jan 22, 2026)",
+    "answer": "Leo Martins was running billing when Initech got its first refund (April 16, 2026).",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su30",
+    "type": "period",
+    "question": "How many tickets came in during the month before 24/7 coverage started?",
+    "gold": "29 (April 2026)",
+    "answer": "26 tickets.",
+    "score": 0.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su31",
+    "type": "metamemory",
+    "question": "What is Globex's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su32",
+    "type": "metamemory",
+    "question": "What is Priya's email address?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su33",
+    "type": "metamemory",
+    "question": "How many seats does Hooli have?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su34",
+    "type": "forgotten",
+    "question": "What is Carl Weber's email address?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su35",
+    "type": "forgotten",
+    "question": "Who at Initech opened ticket #1041?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   },
+   {
+    "id": "su36",
+    "type": "forgotten",
+    "question": "Who was our contact at Initech before June?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [],
+    "evidence_chars": 0,
+    "answer_tokens_in": 0,
+    "route_latency_s": null
+   }
+  ],
+  "n": 36,
+  "accuracy": 76.4,
+  "new_spend": 0.02811
+ },
+ "plus_computed": {
+  "rows": [
+   {
+    "id": "su01",
+    "type": "semantic_current",
+    "question": "What is the status of ticket #1053?",
+    "gold": "Resolved (on Feb 5, 2026, after being reopened on Feb 1, 2026)",
+    "answer": "Ticket #1053 is resolved; it was reopened on February 1, 2026, and resolved again on February 5.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 12161,
+    "answer_tokens_in": 3796,
+    "route_latency_s": null
+   },
+   {
+    "id": "su02",
+    "type": "semantic_current",
+    "question": "Who owns the billing queue now?",
+    "gold": "Ana Silva (since May 4, 2026)",
+    "answer": "Ana Silva owns the billing queue now. She took over on May 4, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 10928,
+    "answer_tokens_in": 3490,
+    "route_latency_s": null
+   },
+   {
+    "id": "su03",
+    "type": "semantic_current",
+    "question": "Which tickets are still open?",
+    "gold": "#1194, #1195, #1196, #1198, #1200, #1201, #1202, #1204, #1205, #1206",
+    "answer": "I don’t know which specific tickets are still open. The latest team sync, on June 29, reported 10 open tickets.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 8143,
+    "answer_tokens_in": 2776,
+    "route_latency_s": null
+   },
+   {
+    "id": "su04",
+    "type": "semantic_history",
+    "question": "What was the priority of ticket #1058 before it was escalated?",
+    "gold": "P3 (then P1)",
+    "answer": "Ticket #1058 was P3 before it was escalated to P1 on January 28, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 12917,
+    "answer_tokens_in": 3971,
+    "route_latency_s": null
+   },
+   {
+    "id": "su05",
+    "type": "semantic_history",
+    "question": "Who handled billing before Ana?",
+    "gold": "Leo Martins (until Apr 30, 2026)",
+    "answer": "Leo Martins handled billing before Ana Silva; his last day was April 30, 2026, and Ana took over on May 4.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 10950,
+    "answer_tokens_in": 3493,
+    "route_latency_s": null
+   },
+   {
+    "id": "su06",
+    "type": "semantic_history",
+    "question": "What plan was Acme on, and who was their contact?",
+    "gold": "Enterprise; Tom Reed (tom@acme.io)",
+    "answer": "Acme Corp was on the Enterprise plan, and their contact was Tom Reed.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 11384,
+    "answer_tokens_in": 3585,
+    "route_latency_s": null
+   },
+   {
+    "id": "su07",
+    "type": "aggregate",
+    "question": "How much did we refund in Q2?",
+    "gold": "$1,695 (5 refunds)",
+    "answer": "We refunded **$1,695 USD** in Q2.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 11656,
+    "answer_tokens_in": 3643,
+    "route_latency_s": null
+   },
+   {
+    "id": "su08",
+    "type": "aggregate",
+    "question": "How many tickets did Acme open?",
+    "gold": "37",
+    "answer": "Acme Corp opened 93 tickets.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 9830,
+    "answer_tokens_in": 3197,
+    "route_latency_s": null
+   },
+   {
+    "id": "su09",
+    "type": "aggregate",
+    "question": "How many tickets were escalated to engineering?",
+    "gold": "22",
+    "answer": "151 tickets were escalated to engineering.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 10907,
+    "answer_tokens_in": 3520,
+    "route_latency_s": null
+   },
+   {
+    "id": "su10",
+    "type": "episodic_event",
+    "question": "What happened with ticket #1059?",
+    "gold": "Tom Reed (Acme Corp) opened it on Jan 26, 2026: \"Google Calendar events duplicated\"; assigned to Priya Shah; escalated to engineering as P1 on Jan 27, 2026; resolved on Feb 1, 2026 (a timezone bug in the sync)",
+    "answer": "Ticket #1059 concerned duplicate Google Calendar events caused by a timezone bug in the sync. It was closed Jan 26, assigned to Priya at P3, escalated to engineering as P1 on Jan 27, reopened Jan 29 after Acme said the issue had returned, and resolved again Feb 1.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 10684,
+    "answer_tokens_in": 3435,
+    "route_latency_s": null
+   },
+   {
+    "id": "su11",
+    "type": "episodic_event",
+    "question": "What came out of the April QBR with Acme?",
+    "gold": "They flagged two slow integration tickets and want a named contact for billing",
+    "answer": "The April 2 QBR flagged two slow integration tickets, and Acme wanted a named contact for billing.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 13963,
+    "answer_tokens_in": 4423,
+    "route_latency_s": null
+   },
+   {
+    "id": "su12",
+    "type": "episodic_event",
+    "question": "Which tickets came in on Jan 6, 2026?",
+    "gold": "#1043 (Initech, Zoom links missing from invites), #1044 (Globex, SSO login loop with Okta), #1045 (Initech, Charged twice this month)",
+    "answer": "Three tickets came in on Jan 6, 2026: #1044, “SSO login loop with Okta” (Nora Blake, Globex); #1043, “Zoom links missing from invites” (Initech); and #1045, “Charged twice this month” (Initech).",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 13682,
+    "answer_tokens_in": 4440,
+    "route_latency_s": null
+   },
+   {
+    "id": "su13",
+    "type": "episodic_time",
+    "question": "When was ticket #1053 reopened?",
+    "gold": "Feb 1, 2026",
+    "answer": "Ticket #1053 was reopened on February 1, 2026, at 10:25.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 10111,
+    "answer_tokens_in": 3258,
+    "route_latency_s": null
+   },
+   {
+    "id": "su14",
+    "type": "episodic_time",
+    "question": "When did Ana start?",
+    "gold": "May 4, 2026",
+    "answer": "Ana started on May 4, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 12954,
+    "answer_tokens_in": 4045,
+    "route_latency_s": null
+   },
+   {
+    "id": "su15",
+    "type": "episodic_time",
+    "question": "When did we refund Initech, and how much?",
+    "gold": "Jan 22, 2026: $120; Apr 16, 2026: $240",
+    "answer": "We refunded Initech $240 on April 16, 2026, for the April SSO outage.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 11588,
+    "answer_tokens_in": 3633,
+    "route_latency_s": null
+   },
+   {
+    "id": "su16",
+    "type": "routine",
+    "question": "Who usually handles integration tickets?",
+    "gold": "Priya Shah",
+    "answer": "Priya Shah usually handles integration tickets; she’s listed as responsible for integrations and was noted handling integrations and SSO.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 8916,
+    "answer_tokens_in": 2965,
+    "route_latency_s": null
+   },
+   {
+    "id": "su17",
+    "type": "routine",
+    "question": "On which day of the week do the most new tickets come in?",
+    "gold": "Mondays",
+    "answer": "I don’t know. The evidence doesn’t establish which weekday has the most new tickets overall.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 13423,
+    "answer_tokens_in": 4122,
+    "route_latency_s": null
+   },
+   {
+    "id": "su18",
+    "type": "routine",
+    "question": "When is the weekly team sync?",
+    "gold": "Mondays, in the morning (done by about 10:45)",
+    "answer": "The weekly team sync is on Mondays, usually around 10:00.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 10892,
+    "answer_tokens_in": 3455,
+    "route_latency_s": null
+   },
+   {
+    "id": "su19",
+    "type": "prospective",
+    "question": "What did I promise Globex, and did we deliver?",
+    "gold": "The CSV export fix by Mar 13; the deadline was missed, it shipped on Mar 19 and Nora confirmed it works",
+    "answer": "You promised Nora Blake at Globex a CSV export fix by March 13, 2026, but missed that deadline and gave her a new ETA of March 19. The fix was eventually shipped, and Nora confirmed it worked.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 10832,
+    "answer_tokens_in": 3462,
+    "route_latency_s": null
+   },
+   {
+    "id": "su20",
+    "type": "prospective",
+    "question": "When is the next QBR with Acme?",
+    "gold": "Thu Jul 2, 2026 at 15:00 (Zoom)",
+    "answer": "The next QBR with Acme is July 2, 2026, from 3:00 to 4:00 p.m. on Zoom.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 14130,
+    "answer_tokens_in": 4530,
+    "route_latency_s": null
+   },
+   {
+    "id": "su21",
+    "type": "prospective",
+    "question": "Do I still owe Umbrella Health anything?",
+    "gold": "A written root-cause report on the June 3 outage, due Jul 3",
+    "answer": "I don’t know whether you still owe Umbrella Health anything. The records show a $900 refund paid to them on May 28 for the May 20 SLA breach, but don’t establish whether there’s any remaining balance.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 13456,
+    "answer_tokens_in": 4038,
+    "route_latency_s": null
+   },
+   {
+    "id": "su22",
+    "type": "preference",
+    "question": "How does Acme want to be contacted?",
+    "gold": "By email only, never phone calls",
+    "answer": "Acme wants every update by email and does not want phone calls.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 12113,
+    "answer_tokens_in": 3850,
+    "route_latency_s": null
+   },
+   {
+    "id": "su23",
+    "type": "preference",
+    "question": "When does Nora at Globex prefer to be called?",
+    "gold": "Before 10am (email otherwise)",
+    "answer": "Nora at Globex prefers a phone call before 10 a.m.; otherwise, email.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 11564,
+    "answer_tokens_in": 3707,
+    "route_latency_s": null
+   },
+   {
+    "id": "su24",
+    "type": "preference",
+    "question": "What did Dana at Umbrella complain about?",
+    "gold": "Being cc'd on our internal threads",
+    "answer": "Dana at Umbrella complained that she was being cc’d on internal threads again.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 13258,
+    "answer_tokens_in": 4034,
+    "route_latency_s": null
+   },
+   {
+    "id": "su25",
+    "type": "source",
+    "question": "What exactly did Tom Reed write when opening ticket #1042?",
+    "gold": "\"Android notifications arrive late\": Hello team, we see this: android notifications arrive late. It's blocking a few of our people.",
+    "answer": "Tom Reed wrote: “Hello team, we see this: android notifications arrive late. It's blocking a few of our people.”",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 11460,
+    "answer_tokens_in": 3649,
+    "route_latency_s": null
+   },
+   {
+    "id": "su26",
+    "type": "source",
+    "question": "What did the CSAT comment on ticket #1046 say?",
+    "gold": "3/5: \"ok\"",
+    "answer": "The CSAT comment on ticket #1046 was “ok” (3/5), submitted by Ben Ortiz on January 17, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 11034,
+    "answer_tokens_in": 3588,
+    "route_latency_s": null
+   },
+   {
+    "id": "su27",
+    "type": "source",
+    "question": "What does the new Enterprise SLA say?",
+    "gold": "From June 1: first response within 4 hours, 24/7, and a status update every 8 hours on P1 tickets; Pro stays at 1 business day",
+    "answer": "Effective June 1, 2026, Enterprise gets 24/7 coverage, a first response within 4 hours, and status updates every 8 hours on P1 tickets.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 12124,
+    "answer_tokens_in": 3776,
+    "route_latency_s": null
+   },
+   {
+    "id": "su28",
+    "type": "period",
+    "question": "Who covered the night shift after we moved to 24/7 coverage?",
+    "gold": "Sam Okafor (22:00-06:00, from May 1)",
+    "answer": "Sam Okafor covered the night shift, working 22:00–06:00 when 24/7 coverage began on May 1, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 12831,
+    "answer_tokens_in": 3966,
+    "route_latency_s": null
+   },
+   {
+    "id": "su29",
+    "type": "period",
+    "question": "Who was running billing when Initech got its first refund?",
+    "gold": "Leo Martins (Jan 22, 2026)",
+    "answer": "Leo Martins was running billing when Initech got its first refund on January 22, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 10503,
+    "answer_tokens_in": 3336,
+    "route_latency_s": null
+   },
+   {
+    "id": "su30",
+    "type": "period",
+    "question": "How many tickets came in during the month before 24/7 coverage started?",
+    "gold": "29 (April 2026)",
+    "answer": "26 tickets came in during April 2026, the month before 24/7 coverage started on May 1.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 13417,
+    "answer_tokens_in": 4141,
+    "route_latency_s": null
+   },
+   {
+    "id": "su31",
+    "type": "metamemory",
+    "question": "What is Globex's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 10711,
+    "answer_tokens_in": 3426,
+    "route_latency_s": null
+   },
+   {
+    "id": "su32",
+    "type": "metamemory",
+    "question": "What is Priya's email address?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 11385,
+    "answer_tokens_in": 3591,
+    "route_latency_s": null
+   },
+   {
+    "id": "su33",
+    "type": "metamemory",
+    "question": "How many seats does Hooli have?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 11262,
+    "answer_tokens_in": 3515,
+    "route_latency_s": null
+   },
+   {
+    "id": "su34",
+    "type": "forgotten",
+    "question": "What is Carl Weber's email address?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 9883,
+    "answer_tokens_in": 3167,
+    "route_latency_s": null
+   },
+   {
+    "id": "su35",
+    "type": "forgotten",
+    "question": "Who at Initech opened ticket #1041?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don’t know. The record identifies the Initech requester as [forgotten], and doesn’t say who opened the ticket.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 8536,
+    "answer_tokens_in": 2888,
+    "route_latency_s": null
+   },
+   {
+    "id": "su36",
+    "type": "forgotten",
+    "question": "Who was our contact at Initech before June?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "routines",
+     "periods"
+    ],
+    "evidence_chars": 8057,
+    "answer_tokens_in": 2678,
+    "route_latency_s": null
+   }
+  ],
+  "n": 36,
+  "accuracy": 79.2,
+  "new_spend": 0.01393
+ },
+ "brain_jev_recall": {
+  "rows": [
+   {
+    "id": "su01",
+    "type": "semantic_current",
+    "question": "What is the status of ticket #1053?",
+    "gold": "Resolved (on Feb 5, 2026, after being reopened on Feb 1, 2026)",
+    "answer": "Ticket #1053 is done: Leo’s commitment was completed on February 5, 2026, and Engineering’s investigation was completed on January 28, 2026.",
+    "score": 0.5,
+    "stores": [
+     "intentions"
+    ],
+    "evidence_chars": 1021,
+    "answer_tokens_in": 626,
+    "route_latency_s": 0.2738020420074463
+   },
+   {
+    "id": "su02",
+    "type": "semantic_current",
+    "question": "Who owns the billing queue now?",
+    "gold": "Ana Silva (since May 4, 2026)",
+    "answer": "Ana Silva owns the billing queue now. She took over on May 4, 2026.",
+    "score": 1.0,
+    "stores": [
+     "intentions",
+     "periods",
+     "log",
+     "episodes"
+    ],
+    "evidence_chars": 9004,
+    "answer_tokens_in": 2985,
+    "route_latency_s": 0.25988101959228516
+   },
+   {
+    "id": "su03",
+    "type": "semantic_current",
+    "question": "Which tickets are still open?",
+    "gold": "#1194, #1195, #1196, #1198, #1200, #1201, #1202, #1204, #1205, #1206",
+    "answer": "The open tickets are **#1041, #1043, #1045, #1047, #1054, #1093, #1094, #1098, #1110, #1111, #1112, #1116, #1118, #1121, #1123, #1124, #1135, #1141, #1143, #1159, #1161, #1163, #1164, #1168, #1172, #1179, #1194, #1195, #1196, #1198, #1200, #1201, #1202, #1204, and #1206**. The latest team-sync log, from June 29, reports 10 tickets open.",
+    "score": 0.5,
+    "stores": [
+     "intentions",
+     "log"
+    ],
+    "evidence_chars": 5167,
+    "answer_tokens_in": 2000,
+    "route_latency_s": 0.39577603340148926
+   },
+   {
+    "id": "su04",
+    "type": "semantic_history",
+    "question": "What was the priority of ticket #1058 before it was escalated?",
+    "gold": "P3 (then P1)",
+    "answer": "I don't know. The evidence says ticket #1058 was escalated to P1, but doesn’t state its priority before escalation.",
+    "score": 0.0,
+    "stores": [
+     "log",
+     "intentions"
+    ],
+    "evidence_chars": 1914,
+    "answer_tokens_in": 981,
+    "route_latency_s": 0.2942841053009033
+   },
+   {
+    "id": "su05",
+    "type": "semantic_history",
+    "question": "Who handled billing before Ana?",
+    "gold": "Leo Martins (until Apr 30, 2026)",
+    "answer": "Leo Martins handled billing before Ana Silva; Leo’s last day was April 30, 2026, and Ana took over on May 4.",
+    "score": 1.0,
+    "stores": [
+     "periods",
+     "facts",
+     "log",
+     "episodes"
+    ],
+    "evidence_chars": 11049,
+    "answer_tokens_in": 3572,
+    "route_latency_s": 0.3540229797363281
+   },
+   {
+    "id": "su06",
+    "type": "semantic_history",
+    "question": "What plan was Acme on, and who was their contact?",
+    "gold": "Enterprise; Tom Reed (tom@acme.io)",
+    "answer": "Acme Corp was on the Enterprise plan, and their contact was Tom Reed.",
+    "score": 1.0,
+    "stores": [
+     "intentions",
+     "log",
+     "episodes",
+     "periods"
+    ],
+    "evidence_chars": 15514,
+    "answer_tokens_in": 5085,
+    "route_latency_s": 0.25906801223754883
+   },
+   {
+    "id": "su07",
+    "type": "aggregate",
+    "question": "How much did we refund in Q2?",
+    "gold": "$1,695 (5 refunds)",
+    "answer": "We refunded **$1,695 USD** in Q2 (April–June 2026), across five refunds.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "periods"
+    ],
+    "evidence_chars": 5955,
+    "answer_tokens_in": 1998,
+    "route_latency_s": 0.32083678245544434
+   },
+   {
+    "id": "su08",
+    "type": "aggregate",
+    "question": "How many tickets did Acme open?",
+    "gold": "37",
+    "answer": "Acme opened 93 tickets.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2300,
+    "answer_tokens_in": 1078,
+    "route_latency_s": 0.3779263496398926
+   },
+   {
+    "id": "su09",
+    "type": "aggregate",
+    "question": "How many tickets were escalated to engineering?",
+    "gold": "22",
+    "answer": "151 tickets were escalated to engineering.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 4453,
+    "answer_tokens_in": 1636,
+    "route_latency_s": 0.33747363090515137
+   },
+   {
+    "id": "su10",
+    "type": "episodic_event",
+    "question": "What happened with ticket #1059?",
+    "gold": "Tom Reed (Acme Corp) opened it on Jan 26, 2026: \"Google Calendar events duplicated\"; assigned to Priya Shah; escalated to engineering as P1 on Jan 27, 2026; resolved on Feb 1, 2026 (a timezone bug in the sync)",
+    "answer": "Ticket #1059 was a timezone bug in the sync. It was closed on January 26, assigned to Priya at P3, escalated to engineering as P1 on January 27, reopened on January 29 when Acme reported it had returned, and resolved again on February 1.",
+    "score": 0.5,
+    "stores": [
+     "log",
+     "intentions"
+    ],
+    "evidence_chars": 1715,
+    "answer_tokens_in": 933,
+    "route_latency_s": 0.2876150608062744
+   },
+   {
+    "id": "su11",
+    "type": "episodic_event",
+    "question": "What came out of the April QBR with Acme?",
+    "gold": "They flagged two slow integration tickets and want a named contact for billing",
+    "answer": "At the April 2 QBR, Acme flagged two slow integration tickets and asked for a named billing contact.",
+    "score": 1.0,
+    "stores": [
+     "episodes",
+     "log",
+     "periods",
+     "intentions"
+    ],
+    "evidence_chars": 11783,
+    "answer_tokens_in": 3916,
+    "route_latency_s": 0.5680458545684814
+   },
+   {
+    "id": "su12",
+    "type": "episodic_event",
+    "question": "Which tickets came in on Jan 6, 2026?",
+    "gold": "#1043 (Initech, Zoom links missing from invites), #1044 (Globex, SSO login loop with Okta), #1045 (Initech, Charged twice this month)",
+    "answer": "Three tickets came in on Jan 6, 2026: #1044, an Okta SSO login loop from Nora Blake at Globex; #1043, missing Zoom links from an unnamed Initech contact; and #1045, a duplicate charge from another unnamed Initech contact.",
+    "score": 1.0,
+    "stores": [
+     "episodes",
+     "log"
+    ],
+    "evidence_chars": 8099,
+    "answer_tokens_in": 2667,
+    "route_latency_s": 0.44562506675720215
+   },
+   {
+    "id": "su13",
+    "type": "episodic_time",
+    "question": "When was ticket #1053 reopened?",
+    "gold": "Feb 1, 2026",
+    "answer": "Ticket #1053 was reopened on February 1, 2026, at 10:25.",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 755,
+    "answer_tokens_in": 571,
+    "route_latency_s": 0.2946150302886963
+   },
+   {
+    "id": "su14",
+    "type": "episodic_time",
+    "question": "When did Ana start?",
+    "gold": "May 4, 2026",
+    "answer": "Ana Silva started on May 4, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log",
+     "episodes",
+     "periods",
+     "facts"
+    ],
+    "evidence_chars": 13090,
+    "answer_tokens_in": 4167,
+    "route_latency_s": 0.332089900970459
+   },
+   {
+    "id": "su15",
+    "type": "episodic_time",
+    "question": "When did we refund Initech, and how much?",
+    "gold": "Jan 22, 2026: $120; Apr 16, 2026: $240",
+    "answer": "We refunded Initech $240 on April 16, 2026, for the April SSO outage.",
+    "score": 0.5,
+    "stores": [
+     "log",
+     "facts",
+     "episodes",
+     "intentions"
+    ],
+    "evidence_chars": 9765,
+    "answer_tokens_in": 3187,
+    "route_latency_s": 0.3490879535675049
+   },
+   {
+    "id": "su16",
+    "type": "routine",
+    "question": "Who usually handles integration tickets?",
+    "gold": "Priya Shah",
+    "answer": "Priya Shah usually handles integration tickets.",
+    "score": 1.0,
+    "stores": [
+     "periods"
+    ],
+    "evidence_chars": 3730,
+    "answer_tokens_in": 1313,
+    "route_latency_s": 0.3439218997955322
+   },
+   {
+    "id": "su17",
+    "type": "routine",
+    "question": "On which day of the week do the most new tickets come in?",
+    "gold": "Mondays",
+    "answer": "I don't know.",
+    "score": 0.0,
+    "stores": [
+     "facts"
+    ],
+    "evidence_chars": 3454,
+    "answer_tokens_in": 1296,
+    "route_latency_s": 0.3058149814605713
+   },
+   {
+    "id": "su18",
+    "type": "routine",
+    "question": "When is the weekly team sync?",
+    "gold": "Mondays, in the morning (done by about 10:45)",
+    "answer": "The weekly team sync is on Mondays at about 10:00.",
+    "score": 0.5,
+    "stores": [
+     "intentions",
+     "routines",
+     "log"
+    ],
+    "evidence_chars": 5790,
+    "answer_tokens_in": 2001,
+    "route_latency_s": 0.2953979969024658
+   },
+   {
+    "id": "su19",
+    "type": "prospective",
+    "question": "What did I promise Globex, and did we deliver?",
+    "gold": "The CSV export fix by Mar 13; the deadline was missed, it shipped on Mar 19 and Nora confirmed it works",
+    "answer": "You promised Nora at Globex the CSV export fix by Friday, March 13, 2026. The fix is still marked not delivered; although sending Nora the Globex CSV was marked done on June 24, that doesn’t confirm the promised fix was delivered.",
+    "score": 0.0,
+    "stores": [
+     "intentions",
+     "log",
+     "episodes"
+    ],
+    "evidence_chars": 7000,
+    "answer_tokens_in": 2364,
+    "route_latency_s": 0.31063032150268555
+   },
+   {
+    "id": "su20",
+    "type": "prospective",
+    "question": "When is the next QBR with Acme?",
+    "gold": "Thu Jul 2, 2026 at 15:00 (Zoom)",
+    "answer": "The next QBR with Acme Corp is July 2, 2026, from 3:00 to 4:00 p.m. on Zoom.",
+    "score": 1.0,
+    "stores": [
+     "intentions",
+     "log",
+     "episodes"
+    ],
+    "evidence_chars": 11668,
+    "answer_tokens_in": 4011,
+    "route_latency_s": 0.30936384201049805
+   },
+   {
+    "id": "su21",
+    "type": "prospective",
+    "question": "Do I still owe Umbrella Health anything?",
+    "gold": "A written root-cause report on the June 3 outage, due Jul 3",
+    "answer": "I don’t know whether you still owe Umbrella Health anything. The records show you refunded them $900 on May 28 for an SLA breach, but don’t establish whether any other amount is owed.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "intentions",
+     "log"
+    ],
+    "evidence_chars": 10161,
+    "answer_tokens_in": 3356,
+    "route_latency_s": 0.44544410705566406
+   },
+   {
+    "id": "su22",
+    "type": "preference",
+    "question": "How does Acme want to be contacted?",
+    "gold": "By email only, never phone calls",
+    "answer": "Acme wants every update by email and never by phone call.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "preferences"
+    ],
+    "evidence_chars": 3732,
+    "answer_tokens_in": 1496,
+    "route_latency_s": 0.32758402824401855
+   },
+   {
+    "id": "su23",
+    "type": "preference",
+    "question": "When does Nora at Globex prefer to be called?",
+    "gold": "Before 10am (email otherwise)",
+    "answer": "Nora at Globex prefers a phone call before 10 a.m.; otherwise, email.",
+    "score": 1.0,
+    "stores": [
+     "preferences",
+     "log",
+     "facts"
+    ],
+    "evidence_chars": 4708,
+    "answer_tokens_in": 1744,
+    "route_latency_s": 0.3349788188934326
+   },
+   {
+    "id": "su24",
+    "type": "preference",
+    "question": "What did Dana at Umbrella complain about?",
+    "gold": "Being cc'd on our internal threads",
+    "answer": "Dana at Umbrella complained that she was being cc’d on internal threads again and asked not to be cc’d.",
+    "score": 1.0,
+    "stores": [
+     "log",
+     "episodes",
+     "preferences"
+    ],
+    "evidence_chars": 5155,
+    "answer_tokens_in": 1871,
+    "route_latency_s": 0.2456960678100586
+   },
+   {
+    "id": "su25",
+    "type": "source",
+    "question": "What exactly did Tom Reed write when opening ticket #1042?",
+    "gold": "\"Android notifications arrive late\": Hello team, we see this: android notifications arrive late. It's blocking a few of our people.",
+    "answer": "“Hello team, we see this: android notifications arrive late. It's blocking a few of our people.”",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 945,
+    "answer_tokens_in": 605,
+    "route_latency_s": 0.5870511531829834
+   },
+   {
+    "id": "su26",
+    "type": "source",
+    "question": "What did the CSAT comment on ticket #1046 say?",
+    "gold": "3/5: \"ok\"",
+    "answer": "Ben Ortiz’s CSAT comment on ticket #1046 was “ok” (3/5).",
+    "score": 1.0,
+    "stores": [
+     "log"
+    ],
+    "evidence_chars": 782,
+    "answer_tokens_in": 569,
+    "route_latency_s": 0.5980007648468018
+   },
+   {
+    "id": "su27",
+    "type": "source",
+    "question": "What does the new Enterprise SLA say?",
+    "gold": "From June 1: first response within 4 hours, 24/7, and a status update every 8 hours on P1 tickets; Pro stays at 1 business day",
+    "answer": "Starting June 1, Enterprise customers get a first response within 4 hours, with 24/7 coverage and status updates every 8 hours on P1 tickets.",
+    "score": 1.0,
+    "stores": [
+     "periods",
+     "log"
+    ],
+    "evidence_chars": 4954,
+    "answer_tokens_in": 1752,
+    "route_latency_s": 0.3452720642089844
+   },
+   {
+    "id": "su28",
+    "type": "period",
+    "question": "Who covered the night shift after we moved to 24/7 coverage?",
+    "gold": "Sam Okafor (22:00-06:00, from May 1)",
+    "answer": "Sam Okafor covered the night shift, working 22:00–06:00, when 24/7 coverage began on May 1.",
+    "score": 1.0,
+    "stores": [
+     "periods",
+     "episodes",
+     "log",
+     "facts"
+    ],
+    "evidence_chars": 11203,
+    "answer_tokens_in": 3626,
+    "route_latency_s": 0.26409292221069336
+   },
+   {
+    "id": "su29",
+    "type": "period",
+    "question": "Who was running billing when Initech got its first refund?",
+    "gold": "Leo Martins (Jan 22, 2026)",
+    "answer": "Leo Martins was running billing when Initech got its first refund on January 22, 2026.",
+    "score": 1.0,
+    "stores": [
+     "periods",
+     "facts",
+     "episodes",
+     "log"
+    ],
+    "evidence_chars": 11734,
+    "answer_tokens_in": 3735,
+    "route_latency_s": 0.26490330696105957
+   },
+   {
+    "id": "su30",
+    "type": "period",
+    "question": "How many tickets came in during the month before 24/7 coverage started?",
+    "gold": "29 (April 2026)",
+    "answer": "26 tickets came in during May 2026, the month before 24/7 coverage started on May 1.",
+    "score": 0.0,
+    "stores": [
+     "periods",
+     "facts"
+    ],
+    "evidence_chars": 6898,
+    "answer_tokens_in": 2286,
+    "route_latency_s": 0.27622509002685547
+   },
+   {
+    "id": "su31",
+    "type": "metamemory",
+    "question": "What is Globex's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 3543,
+    "answer_tokens_in": 1353,
+    "route_latency_s": 0.2505002021789551
+   },
+   {
+    "id": "su32",
+    "type": "metamemory",
+    "question": "What is Priya's email address?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2992,
+    "answer_tokens_in": 1200,
+    "route_latency_s": 0.322418212890625
+   },
+   {
+    "id": "su33",
+    "type": "metamemory",
+    "question": "How many seats does Hooli have?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know. The available records list Hooli’s plan as Starter but don’t state its seat count.",
+    "score": 1.0,
+    "stores": [
+     "periods",
+     "facts"
+    ],
+    "evidence_chars": 6737,
+    "answer_tokens_in": 2162,
+    "route_latency_s": 0.3167421817779541
+   },
+   {
+    "id": "su34",
+    "type": "forgotten",
+    "question": "What is Carl Weber's email address?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log"
+    ],
+    "evidence_chars": 2103,
+    "answer_tokens_in": 943,
+    "route_latency_s": 0.2789270877838135
+   },
+   {
+    "id": "su35",
+    "type": "forgotten",
+    "question": "Who at Initech opened ticket #1041?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don’t know. The ticket opener’s name is marked forgotten.",
+    "score": 1.0,
+    "stores": [
+     "log",
+     "facts"
+    ],
+    "evidence_chars": 2538,
+    "answer_tokens_in": 1134,
+    "route_latency_s": 0.286466121673584
+   },
+   {
+    "id": "su36",
+    "type": "forgotten",
+    "question": "Who was our contact at Initech before June?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don’t know. The Initech contacts shown before June are unnamed or marked forgotten.",
+    "score": 1.0,
+    "stores": [
+     "periods",
+     "facts",
+     "log",
+     "episodes"
+    ],
+    "evidence_chars": 12537,
+    "answer_tokens_in": 3959,
+    "route_latency_s": 0.4318699836730957
+   }
+  ],
+  "n": 36,
+  "accuracy": 73.6,
+  "new_spend": 0.00422
+ },
+ "brain_all": {
+  "rows": [
+   {
+    "id": "su01",
+    "type": "semantic_current",
+    "question": "What is the status of ticket #1053?",
+    "gold": "Resolved (on Feb 5, 2026, after being reopened on Feb 1, 2026)",
+    "answer": "Ticket #1053 is resolved; it was resolved again on February 5, 2026, after being reopened on February 1.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 16792,
+    "answer_tokens_in": 4461,
+    "route_latency_s": null
+   },
+   {
+    "id": "su02",
+    "type": "semantic_current",
+    "question": "Who owns the billing queue now?",
+    "gold": "Ana Silva (since May 4, 2026)",
+    "answer": "Ana Silva owns the billing queue now. She took over on May 4, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 15266,
+    "answer_tokens_in": 4812,
+    "route_latency_s": null
+   },
+   {
+    "id": "su03",
+    "type": "semantic_current",
+    "question": "Which tickets are still open?",
+    "gold": "#1194, #1195, #1196, #1198, #1200, #1201, #1202, #1204, #1205, #1206",
+    "answer": "The open tickets recorded are **#1041, #1043, #1045, #1047, #1054, #1093, #1094, #1098, #1110, #1111, #1112, #1116, #1118, #1121, #1123, #1124, #1135, #1141, #1143, #1159, #1161, #1163, #1164, #1168, #1172, and #1179**. Their noted issues include missing Zoom links, duplicate charges, unused-seat refunds, mobile booking/login problems, failing webhooks, CSV export, duplicated Google Calendar events, late Android notifications, and reports timing out.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 17173,
+    "answer_tokens_in": 4497,
+    "route_latency_s": null
+   },
+   {
+    "id": "su04",
+    "type": "semantic_history",
+    "question": "What was the priority of ticket #1058 before it was escalated?",
+    "gold": "P3 (then P1)",
+    "answer": "Ticket #1058 was priority P3 before it was escalated to P1.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 18193,
+    "answer_tokens_in": 4498,
+    "route_latency_s": null
+   },
+   {
+    "id": "su05",
+    "type": "semantic_history",
+    "question": "Who handled billing before Ana?",
+    "gold": "Leo Martins (until Apr 30, 2026)",
+    "answer": "Leo Martins handled billing before Ana; Leo’s last day was April 30, and Ana took over on May 4, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 16820,
+    "answer_tokens_in": 4188,
+    "route_latency_s": null
+   },
+   {
+    "id": "su06",
+    "type": "semantic_history",
+    "question": "What plan was Acme on, and who was their contact?",
+    "gold": "Enterprise; Tom Reed (tom@acme.io)",
+    "answer": "Acme Corp was on the Enterprise plan. Their contact was Tom Reed.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 23021,
+    "answer_tokens_in": 5355,
+    "route_latency_s": null
+   },
+   {
+    "id": "su07",
+    "type": "aggregate",
+    "question": "How much did we refund in Q2?",
+    "gold": "$1,695 (5 refunds)",
+    "answer": "We refunded **$1,695 USD** in Q2 (April–June): $240, $310, $900, $150, and $95.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 17196,
+    "answer_tokens_in": 5049,
+    "route_latency_s": null
+   },
+   {
+    "id": "su08",
+    "type": "aggregate",
+    "question": "How many tickets did Acme open?",
+    "gold": "37",
+    "answer": "Acme Corp opened 93 tickets in total.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 19032,
+    "answer_tokens_in": 4871,
+    "route_latency_s": null
+   },
+   {
+    "id": "su09",
+    "type": "aggregate",
+    "question": "How many tickets were escalated to engineering?",
+    "gold": "22",
+    "answer": "151 tickets were escalated to engineering.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 14159,
+    "answer_tokens_in": 4192,
+    "route_latency_s": null
+   },
+   {
+    "id": "su10",
+    "type": "episodic_event",
+    "question": "What happened with ticket #1059?",
+    "gold": "Tom Reed (Acme Corp) opened it on Jan 26, 2026: \"Google Calendar events duplicated\"; assigned to Priya Shah; escalated to engineering as P1 on Jan 27, 2026; resolved on Feb 1, 2026 (a timezone bug in the sync)",
+    "answer": "Ticket #1059 reported duplicated Google Calendar events for Acme; it was first closed as a sync timezone bug, assigned to Priya at P3, then escalated to engineering at P1. Acme said the issue returned and it was reopened on Jan 29, then resolved again for good on Feb 1, 2026.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 15339,
+    "answer_tokens_in": 4401,
+    "route_latency_s": null
+   },
+   {
+    "id": "su11",
+    "type": "episodic_event",
+    "question": "What came out of the April QBR with Acme?",
+    "gold": "They flagged two slow integration tickets and want a named contact for billing",
+    "answer": "The April 2 QBR flagged two slow integration tickets, and Acme asked for a named contact for billing.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 20277,
+    "answer_tokens_in": 4929,
+    "route_latency_s": null
+   },
+   {
+    "id": "su12",
+    "type": "episodic_event",
+    "question": "Which tickets came in on Jan 6, 2026?",
+    "gold": "#1043 (Initech, Zoom links missing from invites), #1044 (Globex, SSO login loop with Okta), #1045 (Initech, Charged twice this month)",
+    "answer": "Three tickets came in on Jan 6, 2026: #1044, “SSO login loop with Okta,” from Nora Blake at Globex; #1043, “Zoom links missing from invites,” from an unnamed Initech contact; and #1045, “Charged twice this month,” also from an unnamed Initech contact.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 22037,
+    "answer_tokens_in": 5243,
+    "route_latency_s": null
+   },
+   {
+    "id": "su13",
+    "type": "episodic_time",
+    "question": "When was ticket #1053 reopened?",
+    "gold": "Feb 1, 2026",
+    "answer": "Ticket #1053 was reopened on February 1, 2026, at 10:25.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 14477,
+    "answer_tokens_in": 4312,
+    "route_latency_s": null
+   },
+   {
+    "id": "su14",
+    "type": "episodic_time",
+    "question": "When did Ana start?",
+    "gold": "May 4, 2026",
+    "answer": "Ana Silva started on May 4, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 19054,
+    "answer_tokens_in": 5045,
+    "route_latency_s": null
+   },
+   {
+    "id": "su15",
+    "type": "episodic_time",
+    "question": "When did we refund Initech, and how much?",
+    "gold": "Jan 22, 2026: $120; Apr 16, 2026: $240",
+    "answer": "We refunded Initech $240 on April 16, 2026, for the April SSO outage.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 18328,
+    "answer_tokens_in": 4786,
+    "route_latency_s": null
+   },
+   {
+    "id": "su16",
+    "type": "routine",
+    "question": "Who usually handles integration tickets?",
+    "gold": "Priya Shah",
+    "answer": "Priya Shah usually handles integration tickets; she owns the integrations area.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 14102,
+    "answer_tokens_in": 4027,
+    "route_latency_s": null
+   },
+   {
+    "id": "su17",
+    "type": "routine",
+    "question": "On which day of the week do the most new tickets come in?",
+    "gold": "Mondays",
+    "answer": "I don't know. The evidence doesn’t provide a day-of-week comparison for all new tickets.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 18623,
+    "answer_tokens_in": 4746,
+    "route_latency_s": null
+   },
+   {
+    "id": "su18",
+    "type": "routine",
+    "question": "When is the weekly team sync?",
+    "gold": "Mondays, in the morning (done by about 10:45)",
+    "answer": "The weekly team sync is on Mondays at around 10:00.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 15518,
+    "answer_tokens_in": 4838,
+    "route_latency_s": null
+   },
+   {
+    "id": "su19",
+    "type": "prospective",
+    "question": "What did I promise Globex, and did we deliver?",
+    "gold": "The CSV export fix by Mar 13; the deadline was missed, it shipped on Mar 19 and Nora confirmed it works",
+    "answer": "You promised Nora Blake at Globex a CSV export fix by March 13, 2026, but missed that deadline and gave her March 19 as the new ETA. The ticket says the fix was shipped and Nora confirmed it worked, so yes, you delivered—though the evidence doesn’t specify the exact delivery date.",
+    "score": 0.5,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 18039,
+    "answer_tokens_in": 4504,
+    "route_latency_s": null
+   },
+   {
+    "id": "su20",
+    "type": "prospective",
+    "question": "When is the next QBR with Acme?",
+    "gold": "Thu Jul 2, 2026 at 15:00 (Zoom)",
+    "answer": "The next QBR with Acme is July 2, 2026, from 3:00 to 4:00 p.m. on Zoom. It’s organized by Tom Reed.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 24481,
+    "answer_tokens_in": 5932,
+    "route_latency_s": null
+   },
+   {
+    "id": "su21",
+    "type": "prospective",
+    "question": "Do I still owe Umbrella Health anything?",
+    "gold": "A written root-cause report on the June 3 outage, due Jul 3",
+    "answer": "I don’t know whether you still owe Umbrella Health anything. The records show you refunded them $900 on May 28 for the May 20 SLA breach, but don’t establish whether any other balance is outstanding.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 20401,
+    "answer_tokens_in": 5124,
+    "route_latency_s": null
+   },
+   {
+    "id": "su22",
+    "type": "preference",
+    "question": "How does Acme want to be contacted?",
+    "gold": "By email only, never phone calls",
+    "answer": "Acme wants every update by email and does not want phone calls.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 17569,
+    "answer_tokens_in": 4478,
+    "route_latency_s": null
+   },
+   {
+    "id": "su23",
+    "type": "preference",
+    "question": "When does Nora at Globex prefer to be called?",
+    "gold": "Before 10am (email otherwise)",
+    "answer": "Nora at Globex prefers a phone call before 10am; otherwise, she prefers email.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 16961,
+    "answer_tokens_in": 4967,
+    "route_latency_s": null
+   },
+   {
+    "id": "su24",
+    "type": "preference",
+    "question": "What did Dana at Umbrella complain about?",
+    "gold": "Being cc'd on our internal threads",
+    "answer": "Dana complained about being cc’d on internal threads and asked not to be cc’d.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 18370,
+    "answer_tokens_in": 4242,
+    "route_latency_s": null
+   },
+   {
+    "id": "su25",
+    "type": "source",
+    "question": "What exactly did Tom Reed write when opening ticket #1042?",
+    "gold": "\"Android notifications arrive late\": Hello team, we see this: android notifications arrive late. It's blocking a few of our people.",
+    "answer": "“Hello team, we see this: android notifications arrive late. It's blocking a few of our people.”",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 20755,
+    "answer_tokens_in": 5556,
+    "route_latency_s": null
+   },
+   {
+    "id": "su26",
+    "type": "source",
+    "question": "What did the CSAT comment on ticket #1046 say?",
+    "gold": "3/5: \"ok\"",
+    "answer": "The CSAT comment on ticket #1046 was “ok” (3/5, from Ben Ortiz on January 17, 2026).",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 14224,
+    "answer_tokens_in": 4092,
+    "route_latency_s": null
+   },
+   {
+    "id": "su27",
+    "type": "source",
+    "question": "What does the new Enterprise SLA say?",
+    "gold": "From June 1: first response within 4 hours, 24/7, and a status update every 8 hours on P1 tickets; Pro stays at 1 business day",
+    "answer": "Starting June 1, Enterprise customers get 24/7 coverage, a first response within 4 hours, and status updates every 8 hours on P1 tickets.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 17514,
+    "answer_tokens_in": 5120,
+    "route_latency_s": null
+   },
+   {
+    "id": "su28",
+    "type": "period",
+    "question": "Who covered the night shift after we moved to 24/7 coverage?",
+    "gold": "Sam Okafor (22:00-06:00, from May 1)",
+    "answer": "Sam Okafor covered the night shift, working 22:00–06:00, when 24/7 coverage began on May 1, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 17483,
+    "answer_tokens_in": 4692,
+    "route_latency_s": null
+   },
+   {
+    "id": "su29",
+    "type": "period",
+    "question": "Who was running billing when Initech got its first refund?",
+    "gold": "Leo Martins (Jan 22, 2026)",
+    "answer": "Leo Martins was running billing when Initech received its first refund, $120 for the January sync outage on January 22, 2026.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 16622,
+    "answer_tokens_in": 4715,
+    "route_latency_s": null
+   },
+   {
+    "id": "su30",
+    "type": "period",
+    "question": "How many tickets came in during the month before 24/7 coverage started?",
+    "gold": "29 (April 2026)",
+    "answer": "26 tickets came in during April 2026, the month before 24/7 coverage began on May 1.",
+    "score": 0.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 20726,
+    "answer_tokens_in": 4542,
+    "route_latency_s": null
+   },
+   {
+    "id": "su31",
+    "type": "metamemory",
+    "question": "What is Globex's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 14411,
+    "answer_tokens_in": 4269,
+    "route_latency_s": null
+   },
+   {
+    "id": "su32",
+    "type": "metamemory",
+    "question": "What is Priya's email address?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 15573,
+    "answer_tokens_in": 4373,
+    "route_latency_s": null
+   },
+   {
+    "id": "su33",
+    "type": "metamemory",
+    "question": "How many seats does Hooli have?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know. The evidence lists Hooli’s plan as Starter but doesn’t specify its seat count.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 16377,
+    "answer_tokens_in": 4417,
+    "route_latency_s": null
+   },
+   {
+    "id": "su34",
+    "type": "forgotten",
+    "question": "What is Carl Weber's email address?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 13129,
+    "answer_tokens_in": 3714,
+    "route_latency_s": null
+   },
+   {
+    "id": "su35",
+    "type": "forgotten",
+    "question": "Who at Initech opened ticket #1041?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don’t know who opened ticket #1041; the Initech contact is unnamed in the record.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 17855,
+    "answer_tokens_in": 4609,
+    "route_latency_s": null
+   },
+   {
+    "id": "su36",
+    "type": "forgotten",
+    "question": "Who was our contact at Initech before June?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "facts",
+     "log",
+     "episodes",
+     "routines",
+     "intentions",
+     "preferences",
+     "periods"
+    ],
+    "evidence_chars": 13308,
+    "answer_tokens_in": 3963,
+    "route_latency_s": null
+   }
+  ],
+  "n": 36,
+  "accuracy": 77.8,
+  "new_spend": 0.018
+ },
+ "full_context": {
+  "rows": [
+   {
+    "id": "su01",
+    "type": "semantic_current",
+    "question": "What is the status of ticket #1053?",
+    "gold": "Resolved (on Feb 5, 2026, after being reopened on Feb 1, 2026)",
+    "answer": "Ticket #1053 is closed, resolved for good on February 5, 2026, after it was reopened; the issue was an expired card token.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21109,
+    "route_latency_s": null
+   },
+   {
+    "id": "su02",
+    "type": "semantic_current",
+    "question": "Who owns the billing queue now?",
+    "gold": "Ana Silva (since May 4, 2026)",
+    "answer": "Ana Silva owns the billing queue now. She took it over when she started on May 4, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21106,
+    "route_latency_s": null
+   },
+   {
+    "id": "su03",
+    "type": "semantic_current",
+    "question": "Which tickets are still open?",
+    "gold": "#1194, #1195, #1196, #1198, #1200, #1201, #1202, #1204, #1205, #1206",
+    "answer": "The tickets still open are **#1194** “Charged twice this month,” **#1196** “Google Calendar events duplicated,” **#1198** “Zoom links missing from invites,” **#1200** “SSO login loop with Okta,” **#1201** “iOS app crashes on login,” **#1202** “Invoice shows the wrong seat count,” **#1204** “Webhook deliveries failing,” **#1205** “Invoice shows the wrong seat count,” and **#1206** “Search takes 20 seconds.”",
+    "score": 0.5,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21105,
+    "route_latency_s": null
+   },
+   {
+    "id": "su04",
+    "type": "semantic_history",
+    "question": "What was the priority of ticket #1058 before it was escalated?",
+    "gold": "P3 (then P1)",
+    "answer": "Ticket #1058 was P3 before it was escalated to engineering and raised to P1.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21114,
+    "route_latency_s": null
+   },
+   {
+    "id": "su05",
+    "type": "semantic_history",
+    "question": "Who handled billing before Ana?",
+    "gold": "Leo Martins (until Apr 30, 2026)",
+    "answer": "Leo Martins handled billing before Ana Silva took over on May 4, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21105,
+    "route_latency_s": null
+   },
+   {
+    "id": "su06",
+    "type": "semantic_history",
+    "question": "What plan was Acme on, and who was their contact?",
+    "gold": "Enterprise; Tom Reed (tom@acme.io)",
+    "answer": "Acme Corp is on the Enterprise plan, and their contact is Tom Reed.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21112,
+    "route_latency_s": null
+   },
+   {
+    "id": "su07",
+    "type": "aggregate",
+    "question": "How much did we refund in Q2?",
+    "gold": "$1,695 (5 refunds)",
+    "answer": "We refunded **$1,695 in Q2**: $240, $310, $900, $150, and $95.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21108,
+    "route_latency_s": null
+   },
+   {
+    "id": "su08",
+    "type": "aggregate",
+    "question": "How many tickets did Acme open?",
+    "gold": "37",
+    "answer": "Acme opened 24 tickets.",
+    "score": 0.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21107,
+    "route_latency_s": null
+   },
+   {
+    "id": "su09",
+    "type": "aggregate",
+    "question": "How many tickets were escalated to engineering?",
+    "gold": "22",
+    "answer": "22 tickets were escalated to engineering.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21108,
+    "route_latency_s": null
+   },
+   {
+    "id": "su10",
+    "type": "episodic_event",
+    "question": "What happened with ticket #1059?",
+    "gold": "Tom Reed (Acme Corp) opened it on Jan 26, 2026: \"Google Calendar events duplicated\"; assigned to Priya Shah; escalated to engineering as P1 on Jan 27, 2026; resolved on Feb 1, 2026 (a timezone bug in the sync)",
+    "answer": "Ticket #1059 from Tom Reed at Acme Corp reported duplicated Google Calendar events. Priya took it at P3; it was escalated to engineering as P1, reopened when Acme said the issue returned, then resolved for good on February 1, 2026.",
+    "score": 0.5,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21107,
+    "route_latency_s": null
+   },
+   {
+    "id": "su11",
+    "type": "episodic_event",
+    "question": "What came out of the April QBR with Acme?",
+    "gold": "They flagged two slow integration tickets and want a named contact for billing",
+    "answer": "The April 2 QBR surfaced two slow integration tickets, and Acme asked for a named billing contact.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21111,
+    "route_latency_s": null
+   },
+   {
+    "id": "su12",
+    "type": "episodic_event",
+    "question": "Which tickets came in on Jan 6, 2026?",
+    "gold": "#1043 (Initech, Zoom links missing from invites), #1044 (Globex, SSO login loop with Okta), #1045 (Initech, Charged twice this month)",
+    "answer": "Three tickets came in on Jan 6, 2026: **#1044**, “SSO login loop with Okta” (Globex); **#1043**, “Zoom links missing from invites” (Initech); and **#1045**, “Charged twice this month” (Initech).",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21112,
+    "route_latency_s": null
+   },
+   {
+    "id": "su13",
+    "type": "episodic_time",
+    "question": "When was ticket #1053 reopened?",
+    "gold": "Feb 1, 2026",
+    "answer": "Ticket #1053 was reopened on February 1, 2026, at 10:25.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21107,
+    "route_latency_s": null
+   },
+   {
+    "id": "su14",
+    "type": "episodic_time",
+    "question": "When did Ana start?",
+    "gold": "May 4, 2026",
+    "answer": "Ana Silva started on May 4, 2026.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21104,
+    "route_latency_s": null
+   },
+   {
+    "id": "su15",
+    "type": "episodic_time",
+    "question": "When did we refund Initech, and how much?",
+    "gold": "Jan 22, 2026: $120; Apr 16, 2026: $240",
+    "answer": "We refunded Initech $120 on January 22, 2026, for the January sync outage, and $240 on April 16, 2026, for the April SSO outage.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21110,
+    "route_latency_s": null
+   },
+   {
+    "id": "su16",
+    "type": "routine",
+    "question": "Who usually handles integration tickets?",
+    "gold": "Priya Shah",
+    "answer": "Priya Shah usually handles integration tickets, including sync, calendar, webhook, and SSO issues.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21105,
+    "route_latency_s": null
+   },
+   {
+    "id": "su17",
+    "type": "routine",
+    "question": "On which day of the week do the most new tickets come in?",
+    "gold": "Mondays",
+    "answer": "Monday, with 48 new tickets.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21113,
+    "route_latency_s": null
+   },
+   {
+    "id": "su18",
+    "type": "routine",
+    "question": "When is the weekly team sync?",
+    "gold": "Mondays, in the morning (done by about 10:45)",
+    "answer": "The weekly team sync is on Mondays. The notes don’t specify a set time.",
+    "score": 0.5,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21106,
+    "route_latency_s": null
+   },
+   {
+    "id": "su19",
+    "type": "prospective",
+    "question": "What did I promise Globex, and did we deliver?",
+    "gold": "The CSV export fix by Mar 13; the deadline was missed, it shipped on Mar 19 and Nora confirmed it works",
+    "answer": "You promised Nora at Globex the CSV export fix by Friday, March 13, and missed that deadline, giving her a new ETA of March 19. The fix shipped March 19, and Nora confirmed it worked.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21111,
+    "route_latency_s": null
+   },
+   {
+    "id": "su20",
+    "type": "prospective",
+    "question": "When is the next QBR with Acme?",
+    "gold": "Thu Jul 2, 2026 at 15:00 (Zoom)",
+    "answer": "The next QBR with Acme is Thursday, July 2, 2026, from 3:00 to 4:00 p.m. on Zoom.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21109,
+    "route_latency_s": null
+   },
+   {
+    "id": "su21",
+    "type": "prospective",
+    "question": "Do I still owe Umbrella Health anything?",
+    "gold": "A written root-cause report on the June 3 outage, due Jul 3",
+    "answer": "I don’t see any outstanding amount owed by Umbrella Health. Their latest billing ticket (#1186, unused-seat refund) was resolved on June 23; the $900 SLA-breach refund was already issued on May 28.",
+    "score": 0.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21108,
+    "route_latency_s": null
+   },
+   {
+    "id": "su22",
+    "type": "preference",
+    "question": "How does Acme want to be contacted?",
+    "gold": "By email only, never phone calls",
+    "answer": "Acme wants every update by email and does not want phone calls.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21108,
+    "route_latency_s": null
+   },
+   {
+    "id": "su23",
+    "type": "preference",
+    "question": "When does Nora at Globex prefer to be called?",
+    "gold": "Before 10am (email otherwise)",
+    "answer": "Nora at Globex prefers a phone call before 10 a.m.; otherwise, email.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21110,
+    "route_latency_s": null
+   },
+   {
+    "id": "su24",
+    "type": "preference",
+    "question": "What did Dana at Umbrella complain about?",
+    "gold": "Being cc'd on our internal threads",
+    "answer": "Dana at Umbrella complained that she was being cc’d on your internal threads again and asked you not to cc her.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21108,
+    "route_latency_s": null
+   },
+   {
+    "id": "su25",
+    "type": "source",
+    "question": "What exactly did Tom Reed write when opening ticket #1042?",
+    "gold": "\"Android notifications arrive late\": Hello team, we see this: android notifications arrive late. It's blocking a few of our people.",
+    "answer": "Tom Reed wrote: “Hello team, we see this: android notifications arrive late. It's blocking a few of our people.”",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21112,
+    "route_latency_s": null
+   },
+   {
+    "id": "su26",
+    "type": "source",
+    "question": "What did the CSAT comment on ticket #1046 say?",
+    "gold": "3/5: \"ok\"",
+    "answer": "The CSAT comment on ticket #1046 was “ok” (3/5), from Ben Ortiz.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21112,
+    "route_latency_s": null
+   },
+   {
+    "id": "su27",
+    "type": "source",
+    "question": "What does the new Enterprise SLA say?",
+    "gold": "From June 1: first response within 4 hours, 24/7, and a status update every 8 hours on P1 tickets; Pro stays at 1 business day",
+    "answer": "Starting June 1, Enterprise customers get a first response within 4 hours, 24/7, and status updates every 8 hours on P1 tickets. Pro customers remain at a 1-business-day first-response target.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21107,
+    "route_latency_s": null
+   },
+   {
+    "id": "su28",
+    "type": "period",
+    "question": "Who covered the night shift after we moved to 24/7 coverage?",
+    "gold": "Sam Okafor (22:00-06:00, from May 1)",
+    "answer": "Sam Okafor covered the night shift, from 22:00 to 06:00, starting May 1.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21114,
+    "route_latency_s": null
+   },
+   {
+    "id": "su29",
+    "type": "period",
+    "question": "Who was running billing when Initech got its first refund?",
+    "gold": "Leo Martins (Jan 22, 2026)",
+    "answer": "Leo Martins was running billing when Initech received its first refund: $120 on January 22, 2026, for the January sync outage.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21111,
+    "route_latency_s": null
+   },
+   {
+    "id": "su30",
+    "type": "period",
+    "question": "How many tickets came in during the month before 24/7 coverage started?",
+    "gold": "29 (April 2026)",
+    "answer": "29 tickets came in during April, the month before 24/7 coverage started on May 1.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21115,
+    "route_latency_s": null
+   },
+   {
+    "id": "su31",
+    "type": "metamemory",
+    "question": "What is Globex's phone number?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21107,
+    "route_latency_s": null
+   },
+   {
+    "id": "su32",
+    "type": "metamemory",
+    "question": "What is Priya's email address?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21107,
+    "route_latency_s": null
+   },
+   {
+    "id": "su33",
+    "type": "metamemory",
+    "question": "How many seats does Hooli have?",
+    "gold": "UNKNOWN: never mentioned",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21107,
+    "route_latency_s": null
+   },
+   {
+    "id": "su34",
+    "type": "forgotten",
+    "question": "What is Carl Weber's email address?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21107,
+    "route_latency_s": null
+   },
+   {
+    "id": "su35",
+    "type": "forgotten",
+    "question": "Who at Initech opened ticket #1041?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "I don't know. The requester for ticket #1041 is marked as forgotten.",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21109,
+    "route_latency_s": null
+   },
+   {
+    "id": "su36",
+    "type": "forgotten",
+    "question": "Who was our contact at Initech before June?",
+    "gold": "UNKNOWN: the user asked to forget him",
+    "answer": "Our contact at Initech before June was [forgotten].",
+    "score": 1.0,
+    "stores": [
+     "log_all"
+    ],
+    "evidence_chars": 59267,
+    "answer_tokens_in": 21109,
+    "route_latency_s": null
+   }
+  ],
+  "n": 36,
+  "accuracy": 90.3,
+  "new_spend": 0
+ }
+}
