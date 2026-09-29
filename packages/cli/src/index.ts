@@ -11,7 +11,8 @@ export const help = `fluiddb feedback [options] "specific observation"
   --input <report.json|->   Complete report as JSON; cannot mix with report flags.
   --json                  Receipts always use JSON, including guidance and asks.
 fluiddb skills list
-fluiddb skills read <fluiddb-memory|fluiddb-feedback>
+fluiddb skills read <name|skill-resource-uri>
+  Example: fluiddb skills read skill://fluiddb-memory/references/memory-model.md
 
 Feedback is sent to the FluidDB team through HiveNet. No environment or memory
 context is collected. Use synthetic reproductions; never send private transcripts
@@ -31,10 +32,10 @@ export async function run(args: string[], io: IO): Promise<string> {
     if (rest.length === 1 && rest[0] === "list") return JSON.stringify(Skills.list(), null, 2) + "\n"
     if (rest.length === 2 && rest[0] === "read") {
       const file = Skills.read(rest[1]!)
-      if (!file) throw new Error("Unknown skill; use fluiddb skills list")
+      if (!file) throw new Error("Unknown bundled skill resource; use fluiddb skills list")
       return file.text
     }
-    throw new Error("Use fluiddb skills list or fluiddb skills read <name>")
+    throw new Error("Use fluiddb skills list or fluiddb skills read <name|skill-resource-uri>")
   }
   if (command !== "feedback") throw new Error("Unknown command; use fluiddb --help")
   const { values, positionals } = parseArgs({

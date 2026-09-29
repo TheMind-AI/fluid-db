@@ -1,6 +1,6 @@
 {
   "name": "@fluiddb/mcp",
-  "version": "1.0.0-next.6",
+  "version": "1.0.0-next.7",
   "description": "Person-scoped FluidDB memory tools over MCP stdio and Streamable HTTP",
   "type": "module",
   "exports": {

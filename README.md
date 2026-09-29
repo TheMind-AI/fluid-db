@@ -231,6 +231,23 @@ replies through HiveNet; no memory or environment context is collected automatic
 through the Skills extension, ordinary resources and `fluiddb_read_skill`. The Worker serves agent markdown,
 skills and `/.well-known/agent-feedback.json`. See [feedback integration](docs/agent-feedback.md).
 
+The memory skill explains which work the agent owns and links to the shared
+[memory model](packages/skills/skills/fluiddb-memory/references/memory-model.md): source windows, statements,
+repetition/change groups, embeddings, the dossier, automatic processing and host-configured providers.
+Read it on demand; learning the model requires no database or provider calls.
+
+```ts
+import { Skills } from "@fluiddb/fluiddb/skills"
+
+const model = Skills.read("skill://fluiddb-memory/references/memory-model.md")
+// Include model.text in your application's allowlisted skill with its own tool names and policy.
+```
+
+MCP clients can call `fluiddb_read_skill({ name: "fluiddb-memory", path: "references/memory-model.md" })`
+or read that resource URI. The CLI accepts `fluiddb skills read skill://fluiddb-memory/references/memory-model.md`.
+The Worker serves the same file at `/skills/fluiddb-memory/references/memory-model.md`. Product adapters should
+add their actual tool schemas and scheduling policy, keeping essential save/receipt rules always available.
+
 ## npm preview
 
 The consolidated package is `@fluiddb/fluiddb`, with version 1 previews under the `next` tag and Apache-2.0.

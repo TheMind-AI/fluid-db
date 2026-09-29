@@ -69,19 +69,39 @@ for (const mode of ["legacy", "auto"] as const)
           z.object({ skill: Entry }),
         )
         expect(got.skill).toEqual(entry)
-        const result = await client.readResource({ uri: entry.uri })
-        const text = (result.contents[0] as { text: string }).text
-        const bytes = new TextEncoder().encode(text)
-        expect(bytes.byteLength).toBe(entry.resources[0]!.size)
-        expect(`sha256:${new Uint8Array(await crypto.subtle.digest("SHA-256", bytes)).toHex()}`).toBe(
-          entry.resources[0]!.digest,
-        )
-        const fallback = await client.callTool({
-          name: "fluiddb_read_skill",
-          arguments: { name: entry.frontmatter.name },
-        })
-        expect((fallback.structuredContent as { text: string }).text).toBe(text)
+        for (const resource of entry.resources) {
+          const result = await client.readResource({ uri: resource.uri })
+          const text = (result.contents[0] as { text: string }).text
+          const bytes = new TextEncoder().encode(text)
+          expect(bytes.byteLength).toBe(resource.size)
+          expect(`sha256:${new Uint8Array(await crypto.subtle.digest("SHA-256", bytes)).toHex()}`).toBe(resource.digest)
+          const fallback = await client.callTool({
+            name: "fluiddb_read_skill",
+            arguments: {
+              name: entry.frontmatter.name,
+              ...(resource.uri === entry.uri
+                ? {}
+                : { path: resource.uri.slice(`skill://${entry.frontmatter.name}/`.length) }),
+            },
+          })
+          expect(fallback.isError).not.toBe(true)
+          expect((fallback.structuredContent as { text: string }).text).toBe(text)
+        }
       }
+      const resources = (await client.listResources()).resources
+      expect(new Set(resources.map((r) => r.name)).size).toBe(resources.length)
+      expect(resources.map((r) => r.uri)).toContain("skill://fluiddb-memory/references/memory-model.md")
+      const tools = (await client.listTools()).tools
+      expect(tools.find((tool) => tool.name === "fluiddb_read_skill")?.annotations).toMatchObject({
+        readOnlyHint: true,
+        destructiveHint: false,
+        openWorldHint: false,
+      })
+      expect(tools.some((tool) => tool.name === "fluiddb_remember")).toBe(false)
+      for (const path of ["../../.env", "../fluiddb-feedback/SKILL.md", "https://example.com/skill.md", "missing.md"])
+        expect(
+          (await client.callTool({ name: "fluiddb_read_skill", arguments: { name: "fluiddb-memory", path } })).isError,
+        ).toBe(true)
       await expect(
         client.request({ method: "skills/get", params: { uri: "file:///private" } }, z.object({})),
       ).rejects.toBeDefined()

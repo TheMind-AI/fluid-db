@@ -1,6 +1,6 @@
 {
   "name": "@fluiddb/firestore",
-  "version": "1.0.0-next.6",
+  "version": "1.0.0-next.7",
   "description": "FluidDB firestore storage adapter",
   "type": "module",
   "exports": {

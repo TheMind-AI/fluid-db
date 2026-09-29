@@ -85,6 +85,9 @@ test("CLI skills work offline and reject arbitrary files", async () => {
   const output = io()
   expect(JSON.parse(await run(["skills", "list"], output))).toHaveLength(2)
   expect(await run(["skills", "read", "fluiddb-memory"], output)).toContain("fluiddb_recall")
+  expect(await run(["skills", "read", "skill://fluiddb-memory/references/memory-model.md"], output)).toBe(
+    await Bun.file(new URL("../../skills/skills/fluiddb-memory/references/memory-model.md", import.meta.url)).text(),
+  )
   await expect(run(["skills", "read", "../../.env"], output)).rejects.toBeDefined()
   expect(output.reports).toHaveLength(0)
 })
