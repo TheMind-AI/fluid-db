@@ -18,6 +18,8 @@ try {
   assert.equal(manifest.name, source.name, "Rebuild stale package name")
   assert.equal(manifest.version, source.version, "Rebuild stale version")
   assert.match(manifest.version, /^1\.0\.0-next\.\d+$/, "Use a v1 preview until production quality is established")
+  if (process.env.FLUID_RELEASE_TAG !== undefined)
+    assert.equal(process.env.FLUID_RELEASE_TAG, `v${manifest.version}`, "Release tag must match the package version")
   assert.equal(manifest.repository?.url, workspace.repository.url)
   assert.equal(manifest.repository?.directory, "packages/fluiddb")
   assert.deepEqual(manifest.publishConfig, { access: "public", tag: "next", registry: "https://registry.npmjs.org/" })
@@ -41,7 +43,7 @@ try {
   console.log(`Validated one package: ${manifest.name}@${manifest.version}. This check performs no publishing.`)
   console.log("For a new, verified version with npm authentication and package-name access:")
   console.log(
-    "npm publish ./dist/fluiddb --access public --tag next --ignore-scripts --registry=https://registry.npmjs.org/",
+    `npm publish ./dist/tarballs/fluiddb-fluiddb-${manifest.version}.tgz --access public --tag next --ignore-scripts --registry=https://registry.npmjs.org/`,
   )
 } catch (error) {
   console.error(
