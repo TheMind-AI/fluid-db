@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "@fluiddb/schema",
-  "version": "1.0.0-next.5",
+  "version": "1.0.0-next.6",
   "description": "Contracts for FluidDB: turns, windows, statements, groups, dossiers, recall, API requests",
   "type": "module",
   "exports": {

@@ -84,7 +84,7 @@ export function create(options: Options) {
       }
     return { content: [{ type: "text" as const, text }], structuredContent: data }
   }
-  const server = new McpServer({ name: "fluiddb", version: "1.0.0-next.5" }, { instructions: guide })
+  const server = new McpServer({ name: "fluiddb", version: "1.0.0-next.6" }, { instructions: guide })
   registerSkills(server)
   function tool<I extends z.ZodObject, O extends z.ZodObject>(
     name: string,
