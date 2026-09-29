@@ -14,9 +14,10 @@ Node/NodeNext, MCP/CLI and workerd consumer checks against its actual registry a
 On 2026-09-28, thirteen split packages were published at `1.0.0-next.0`: `@fluiddb/schema`, `@fluiddb/core`,
 `@fluiddb/eval`, `@fluiddb/providers`, `@fluiddb/sql`, `@fluiddb/client`, `@fluiddb/postgres`, `@fluiddb/firestore`,
 `@fluiddb/feedback`, `@fluiddb/skills`, `@fluiddb/mcp`, `@fluiddb/cli` and `@fluiddb/sdk`. Their registry integrity
-values matched the tested tarballs. The maintainer then requested one public distribution. The old previews
-are retired in favor of the combined package; registry cleanup is in progress. No version of the combined
-package depends on them. LLP 0023.003 records the original release history.
+values matched the tested tarballs. The maintainer then requested one public distribution and authorized
+removing those previews. All thirteen were unpublished on 2026-09-29; direct registry checks returned HTTP 404
+for every retired package. The combined package remains available, and none of its versions depend on them.
+Only `@fluiddb/fluiddb` is published going forward. LLP 0023.003 records the release and retirement history.
 
 `npm whoami` confirmed `zvada`, and `npm org ls fluiddb --json` confirmed ownership of the free `@fluiddb`
 organization. The unscoped `fluiddb` publish was rejected because it is too similar to the existing `fluid.db`.
