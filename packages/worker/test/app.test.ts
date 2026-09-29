@@ -89,7 +89,14 @@ describe("the HTTP API", () => {
     const skill = await app.request("/skills/fluiddb-memory/SKILL.md")
     expect(skill.headers.get("content-type")).toContain("text/markdown")
     expect(await skill.text()).toContain("fluiddb_recall")
+    const model = await app.request("/skills/fluiddb-memory/references/memory-model.md")
+    expect(model.status).toBe(200)
+    expect(await model.text()).toBe(
+      await Bun.file(new URL("../../skills/skills/fluiddb-memory/references/memory-model.md", import.meta.url)).text(),
+    )
     expect((await app.request("/skills/not-a-skill/SKILL.md")).status).toBe(404)
+    expect((await app.request("/skills/fluiddb-memory/references/missing.md")).status).toBe(404)
+    expect((await app.request("/skills/fluiddb-memory/%2e%2e/.env")).status).toBe(404)
     expect(called).toBe(false)
   })
 

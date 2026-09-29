@@ -20,7 +20,7 @@ export function registerSkills(server: McpServer) {
     for (const resource of skill.resources) {
       const file = Skills.read(resource.uri)!
       server.registerResource(
-        skill.frontmatter.name,
+        file.uri === skill.uri ? skill.frontmatter.name : file.uri.slice("skill://".length),
         file.uri,
         { description: skill.frontmatter.description, mimeType: file.mimeType, size: resource.size },
         async () => ({ ...cache, contents: [{ uri: file.uri, mimeType: file.mimeType, text: file.text }] }),

@@ -169,3 +169,14 @@ BetterMind's companion change batches migration pages and advances the cursor on
 first-page test with 100 ms database round trips and 500 ms embedding latency falls from 35.54 s to about 3 s.
 That measures one embedder invocation; the OpenAI adapter can split a batch into concurrent HTTP requests.
 The result is not a production latency measurement or a claim about retrieval quality.
+
+## Memory guidance preview: 1.0.0-next.7
+
+This preview adds a shared, tool-independent memory-model reference inside the portable memory skill.
+The SDK, CLI, MCP resources, fallback `fluiddb_read_skill` tool and Worker routes expose identical bundled
+bytes. The fallback tool's optional relative `path` stays restricted to the static catalog. Existing name-only
+calls continue to work. Product hosts can combine this explanation with their own tool names and policy through
+`@fluiddb/fluiddb/skills`, without using an MCP transport or adding provider calls to a memory save.
+
+This release does not change storage, extraction or retrieval behavior. Guidance explains host-configured
+providers and scheduling, and host-authorized proactive notes; it does not enable memory permissions.

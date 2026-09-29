@@ -60,7 +60,9 @@ test("MCP discovers schemas, resources and prompt; read-only tools have no ident
     expect(dossier.structuredContent).toEqual({ dossier: null })
     const bad = await client.callTool({ name: "fluiddb_inspect", arguments: { person: "victim" } })
     expect(bad.isError).toBe(true)
-    expect((await client.listResources()).resources).toHaveLength(4)
+    expect((await client.listResources()).resources.map((resource) => resource.uri)).toContain(
+      "skill://fluiddb-memory/references/memory-model.md",
+    )
     expect((await client.readResource({ uri: "fluiddb://guide" })).contents[0]).toHaveProperty("text")
     expect(
       (await client.getPrompt({ name: "memory_for_reply", arguments: { message: "What do you remember?" } })).messages,

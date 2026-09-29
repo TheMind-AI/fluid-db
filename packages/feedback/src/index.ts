@@ -104,7 +104,7 @@ async function responseBody(response: Response) {
 export function create(options: Options = {}): Service {
   const client = z.strictObject({ name: text(64), version: text(32) }).parse({
     name: options.clientName ?? "fluiddb-sdk",
-    version: options.clientVersion ?? "1.0.0-next.6",
+    version: options.clientVersion ?? "1.0.0-next.7",
   })
   const timeoutMs = options.timeoutMs ?? 10_000
   if (!Number.isSafeInteger(timeoutMs) || timeoutMs < 1) throw new Error("Feedback timeout must be a positive integer")

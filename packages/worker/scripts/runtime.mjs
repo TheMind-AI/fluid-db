@@ -1,5 +1,5 @@
 import assert from "node:assert/strict"
-import { mkdtemp, rm } from "node:fs/promises"
+import { mkdtemp, readFile, rm } from "node:fs/promises"
 import { tmpdir } from "node:os"
 import path from "node:path"
 import { fileURLToPath } from "node:url"
@@ -81,6 +81,13 @@ try {
   assert.equal((await descriptor.json()).slug, "fluiddb")
   const skill = await runtime.dispatchFetch("http://fluid.test/skills/fluiddb-memory/SKILL.md")
   assert.match(await skill.text(), /fluiddb_recall/)
+  const model = await runtime.dispatchFetch("http://fluid.test/skills/fluiddb-memory/references/memory-model.md")
+  assert.equal(model.status, 200)
+  assert.equal(
+    await model.text(),
+    await readFile(path.join(root, "../skills/skills/fluiddb-memory/references/memory-model.md"), "utf8"),
+  )
+  assert.deepEqual(calls, { model: 0, embedding: 0 })
   const docs = await runtime.dispatchFetch("http://fluid.test/llms.txt")
   assert.match(await docs.text(), /<AgentInstructions>/)
   assert.equal((await runtime.dispatchFetch("http://fluid.test/v1/people/sam/status")).status, 401)

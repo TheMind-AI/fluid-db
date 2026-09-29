@@ -46,8 +46,8 @@ export function create(options: Options) {
   // @ref LLP 0023.002#surfaces — public discovery contains no person data and does not proxy submissions
   app.get("/.well-known/agent-feedback.json", (c) => c.json(Feedback.descriptor))
   app.get("/llms.txt", (c) => c.text(agentDocs(new URL("/llms.txt", c.req.url).href)))
-  app.get("/skills/:name/SKILL.md", (c) => {
-    const file = Skills.read(c.req.param("name"))
+  app.get("/skills/*", (c) => {
+    const file = Skills.read(`skill://${c.req.path.slice("/skills/".length)}`)
     return file ? c.body(file.text, 200, { "content-type": "text/markdown; charset=utf-8" }) : c.notFound()
   })
 
