@@ -365,6 +365,16 @@ and ~0.3 s per call.
 
 ## Evaluation
 
+- **Fast retrieval benchmarks do not establish fast product saves.**
+  - [observed] LLP 0024.003.000: managed Live delegates to a Responses model before a real function call;
+    the explicit SDK save itself only embeds and atomically writes. Under controlled database delays,
+    BetterMind's full hydration/repeated checks made host saves grow from 2.3s at 30 facts to 4.3s at 1,000.
+    Scoped guard preparation and selective detail hydration reduced these to 1.7s and 2.8s (26–36% across
+    four fixture sizes), with no SDK version change. Statement/metadata scans remain linear.
+  - Ten short fictional production-adapter embedding requests had median 161ms and maximum 2,602ms, all
+    on the first network attempt. This local sample does not explain the reported 31–35s incident.
+  - [high for controlled operation costs; insufficient for production tail latency or proactivity]
+
 - **First-save erasure needs a generation even before any memory exists.**
   - [observed] LLP 0023.003: independently reproduced a save reading revision=null, waiting for embeddings,
     then committing after another instance erased the empty person. Every adapter now retains a fresh
