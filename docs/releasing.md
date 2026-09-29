@@ -76,7 +76,9 @@ npm trust list @fluiddb/fluiddb
 ```
 
 npm requires an interactive passkey check for this trust configuration. The publisher was created on
-2026-09-29 with publish permission. Its first tagged release still needs end-to-end verification. The authorization is bound to the
+2026-09-29 with publish permission. The `v1.0.0-next.6` release verified publishing and fresh registry consumers
+end to end in [GitHub Actions](https://github.com/TheMind-AI/fluid-db/actions/runs/36562857689), with npm provenance.
+The authorization is bound to the
 repository and workflow filename above. Do not treat a merged workflow as proof that npm trust is configured;
 verify the trust listing. See the official [npm trust command](https://docs.npmjs.com/cli/v11/commands/npm-trust/)
 and [trusted publishing guide](https://docs.npmjs.com/trusted-publishers/).
@@ -152,7 +154,8 @@ the API, migrate production accounts, or upload TestFlight.
 
 The `v1.0.0-next.5` tag passed verification but did not publish: npm interpreted the unprefixed artifact path
 as a GitHub repository. The publishing command now prefixes local paths with `./`. The failed tag is retained;
-`next.6` carries the same SDK implementation and is the next release attempt.
+`next.6` carries the same SDK implementation and was published successfully through the trusted GitHub workflow.
+The registry's integrity matches the verified CI tarball; receipts are in `.context/releases/1.0.0-next.6/`.
 
 This preview adds bounded independent `rememberMany` saves across the SDK and HTTP service. A batch preserves
 individual source sessions, dates, pinning and retry identity while sharing embedding work and one atomic
