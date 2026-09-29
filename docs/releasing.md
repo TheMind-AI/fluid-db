@@ -18,7 +18,8 @@ On 2026-09-28, thirteen split packages were published at `1.0.0-next.0`: `@fluid
 `@fluiddb/eval`, `@fluiddb/providers`, `@fluiddb/sql`, `@fluiddb/client`, `@fluiddb/postgres`, `@fluiddb/firestore`,
 `@fluiddb/feedback`, `@fluiddb/skills`, `@fluiddb/mcp`, `@fluiddb/cli` and `@fluiddb/sdk`. Their registry integrity
 values matched the tested tarballs. The maintainer then requested one public distribution. The old previews
-remain published; they have not been unpublished or deprecated. LLP 0023.003 records that history.
+are retired in favor of the combined package; registry cleanup is in progress. No version of the combined
+package depends on them. LLP 0023.003 records the original release history.
 
 `npm whoami` confirmed `zvada`, and `npm org ls fluiddb --json` confirmed ownership of the free `@fluiddb`
 organization. The unscoped `fluiddb` publish was rejected because it is too similar to the existing `fluid.db`.
@@ -77,7 +78,8 @@ npm trust github @fluiddb/fluiddb --repo TheMind-AI/fluid-db --file publish.yml 
 npm trust list @fluiddb/fluiddb
 ```
 
-npm requires an interactive passkey check for this trust configuration. The authorization is bound to the
+npm requires an interactive passkey check for this trust configuration. The publisher was created on
+2026-09-29 with publish permission. Its first tagged release still needs end-to-end verification. The authorization is bound to the
 repository and workflow filename above. Do not treat a merged workflow as proof that npm trust is configured;
 verify the trust listing. See the official [npm trust command](https://docs.npmjs.com/cli/v11/commands/npm-trust/)
 and [trusted publishing guide](https://docs.npmjs.com/trusted-publishers/).
@@ -148,3 +150,17 @@ fresh backend registry install. The final backend API check passed 553 tests (13
 incomplete older chunk formats, and report source drift during read-only inspection. Do not merge the backend
 against an unpublished version or a local tarball dependency. Preview publication and code merge do not deploy
 the API, migrate production accounts, or upload TestFlight.
+
+## Batch-save release candidate: 1.0.0-next.5
+
+This candidate adds bounded independent `rememberMany` saves across the SDK and HTTP service. A batch preserves
+individual source sessions, dates, pinning and retry identity while sharing embedding work and one atomic
+revision-guarded commit. Built-in stores support processed-ID batches; custom Store implementations must support
+the `Changes.turns` list form before using this API. Corrections continue to use single-save `remember`.
+
+Local verification covers mixed new/duplicate saves, provider failure, cancellation and erasure races,
+forgotten IDs, all database adapters, HTTP/Worker persistence across restart, and the packaged Node consumer.
+BetterMind's companion change batches migration pages and advances the cursor only after commit. A synthetic
+first-page test with 100 ms database round trips and 500 ms embedding latency falls from 35.54 s to about 3 s.
+That measures one embedder invocation; the OpenAI adapter can split a batch into concurrent HTTP requests.
+The result is not a production latency measurement or a claim about retrieval quality.

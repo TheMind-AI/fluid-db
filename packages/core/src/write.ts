@@ -9,6 +9,11 @@ const Rows = {
   ids: z.array(z.string().min(1).max(200)),
 }
 
+/** Atomic imports can mark processed IDs from several original sessions. */
+export function turnBatches(changes: Changes): { session: string; ids: string[] }[] {
+  return changes.turns ? (Array.isArray(changes.turns) ? changes.turns : [changes.turns]) : []
+}
+
 // Every row of a write is checked before a store applies any of it, so a bad write changes nothing. Messages name
 // what is wrong, never whose data it is.
 export function check(person: string, changes: Changes) {
@@ -28,7 +33,16 @@ export function check(person: string, changes: Changes) {
     if (!(x.vector instanceof Float32Array) || !x.vector.length) throw new Error("a vector of the write is empty")
     if (!x.vector.every(Number.isFinite)) throw new Error("a vector of the write contains non-finite values")
   }
-  Rows.ids.parse(changes.turns?.ids ?? [])
+  const sessions = new Map<string, string>()
+  for (const batch of turnBatches(changes)) {
+    Id.Info.parse(batch.session)
+    Rows.ids.parse(batch.ids)
+    for (const id of batch.ids) {
+      if (sessions.has(id) && sessions.get(id) !== batch.session)
+        throw new Error("a processed ID belongs to multiple sessions in one write")
+      sessions.set(id, batch.session)
+    }
+  }
   Rows.ids.parse(changes.dossier?.windows ?? [])
   Rows.ids.parse(changes.drop?.log ?? [])
 }

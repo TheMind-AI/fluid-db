@@ -142,8 +142,8 @@ export function store(): Store {
       for (const x of changes.vectors ?? []) {
         db.vectors.set(key(person, x.id), { id: x.id, kind: x.kind, person, vector: Vector.unit(x.vector) })
       }
-      for (const id of changes.turns?.ids ?? [])
-        db.turns.set(key(person, id), { person, session: changes.turns!.session })
+      for (const batch of Write.turnBatches(changes))
+        for (const id of batch.ids) db.turns.set(key(person, id), { person, session: batch.session })
       if (changes.dossier) {
         db.dossiers.set(person, structuredClone(changes.dossier.info))
         for (const id of changes.dossier.windows) {

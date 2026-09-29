@@ -1,6 +1,7 @@
 import { describe, expect, test } from "bun:test"
 import { Testing } from "@fluiddb/core/testing"
 import { ProviderError } from "@fluiddb/core"
+import { Client } from "../../client/src/client"
 import { App } from "../src/app"
 import { Host } from "../src/host"
 import { day, host, outage, session, turn } from "./fixture"
@@ -23,6 +24,39 @@ function api(model = Testing.model(), embedder = Testing.embedder()) {
 }
 
 describe("the HTTP API", () => {
+  test("the bound HTTP client saves a mixed-session batch with durable retries and forgetting", async () => {
+    const { host: h } = host()
+    const app = App.create({ token, people: () => Host.serve(h) })
+    const client = Client.create({
+      url: "https://fluid.test",
+      token,
+      fetch: (async (url: string, init?: RequestInit) => app.request(url, init)) as typeof fetch,
+    })
+    const person = client.person("p1")
+    const inputs = ["first", "second"].map((session) => ({
+      id: session,
+      session,
+      text: `Fictional ${session} fact.`,
+      kind: "life" as const,
+      at: "2026-09-01T00:00:00.000Z",
+      origin: "import" as const,
+      pinned: false,
+    }))
+    const saved = await person.rememberMany(inputs)
+    expect(saved.map((item) => item.statement.session)).toEqual(["first", "second"])
+    expect((await person.rememberMany(inputs)).every((item) => item.duplicate)).toBe(true)
+    expect((await client.person("p2").inspect()).items).toEqual([])
+    await person.forget({ session: "first" })
+    await expect(person.rememberMany(inputs)).rejects.toThrow("forgotten")
+    expect((await person.inspect()).items).toHaveLength(1)
+    const denied = await app.request("/v1/people/p1/remember/batch", {
+      method: "POST",
+      body: JSON.stringify(inputs),
+      headers: { "content-type": "application/json" },
+    })
+    expect(denied.status).toBe(401)
+  })
+
   test("health needs no token; person APIs do", async () => {
     const { call } = api()
     expect((await call("GET", "/health", undefined, {})).status).toBe(200)

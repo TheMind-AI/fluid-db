@@ -12,6 +12,10 @@ SDK, core, schema or adapter packages are needed.
 
 ## Product SDK
 
+For migrations or independent bulk saves, `person.rememberMany([...])` accepts 1–20 memories with stable save
+IDs and their original sessions, dates and pinning. It batches embedding and commits all new memories atomically.
+Exact retries do not duplicate facts or revive forgotten saves. Corrections use `person.remember({ replaces })`.
+
 ```ts
 import { Memory, Person, OpenAI, Shim } from "@fluiddb/fluiddb"
 import { FirestoreRest } from "@fluiddb/fluiddb/firestore/rest"

@@ -91,9 +91,34 @@ try {
   assert.equal(answer.recall.retold.statement.text, fact)
   assert.equal((await call("GET", "/v1/people/another/status")).statements, 0)
 
+  const batch = Array.from({ length: 20 }, (_, i) => ({
+    id: `import-${i}`,
+    session: `source-${i}`,
+    text: `Fictional imported fact ${i}.`,
+    at: turns[0].at,
+    kind: "life",
+    pinned: false,
+    origin: "import",
+  }))
+  const saved = await call("POST", "/v1/people/batch/remember/batch", batch)
+  assert.equal(saved.length, 20)
+  assert.equal(
+    saved.every((result) => !result.duplicate),
+    true,
+  )
+
   // A new runtime must read committed rows, including vector blobs, from the previous object's SQLite.
   await runtime.dispose()
   runtime = new Miniflare(options)
+  assert.equal((await call("GET", "/v1/people/batch/status")).statements, 20)
+  assert.equal(
+    (await call("POST", "/v1/people/batch/remember/batch", batch)).every((r) => r.duplicate),
+    true,
+  )
+  await call("POST", "/v1/people/batch/forget", { session: "source-0" })
+  await call("POST", "/v1/people/batch/remember/batch", batch, 409)
+  assert.equal((await call("GET", "/v1/people/batch/status")).statements, 19)
+  await call("DELETE", "/v1/people/batch")
   assert.equal((await call("GET", "/v1/people/sam/status")).statements, 1)
   assert.equal((await call("POST", "/v1/people/sam/recall", ask)).recall.statements.length, 1)
   assert.equal((await call("POST", "/v1/people/sam/sessions/s1/turns?wait=true", { turns })).turns, 0)

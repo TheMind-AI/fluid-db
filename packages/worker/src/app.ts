@@ -88,6 +88,10 @@ export function create(options: Options) {
     const id = person(c)
     return reply(c, await options.people(id).remember(id, Api.Remember.parse(await body(c))))
   })
+  app.post("/v1/people/:person/remember/batch", async (c) => {
+    const id = person(c)
+    return reply(c, await options.people(id).rememberMany(id, Api.RememberMany.parse(await body(c))))
+  })
   app.post("/v1/people/:person/inspect", async (c) => {
     const id = person(c)
     return reply(c, await options.people(id).inspect(id, Api.Inspect.parse(await body(c))))

@@ -94,7 +94,8 @@ async function plan(person: string, changes: Changes, reader: Reader): Promise<M
   for (const x of changes.groups ?? []) add(record("group", x.id, { ...x }))
   for (const x of changes.vectors ?? [])
     add(record("vector", x.id, { vectorKind: x.kind, vector: Array.from(Vector.unit(x.vector)) }))
-  for (const id of changes.turns?.ids ?? []) add(record("turn", id, { session: changes.turns!.session }))
+  for (const batch of Write.turnBatches(changes))
+    for (const id of batch.ids) add(record("turn", id, { session: batch.session }))
   if (changes.dossier) {
     add(record("dossier", "current", { ...changes.dossier.info }))
     for (const id of changes.dossier.windows) {

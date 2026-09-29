@@ -122,6 +122,12 @@ old dossier. Call `fold` afterwards. This protects stored state; a model-generat
 check, not an authority over an explicit fact. Reuse a save ID only for the identical request. Reusing a forgotten
 save ID is rejected. A new authorized save needs a new ID.
 
+For imports, `await memory.rememberMany([firstFact, secondFact])` accepts 1–20 independent saves with distinct
+stable IDs. Each item uses the same fields as `remember`, except `replaces`; preserve original sessions, dates,
+pinning and `origin: "import"`. New facts share embedding work and commit atomically. Mixed saved/new retries are
+supported; changed or forgotten IDs reject the batch. Provider adapters may split inputs into bounded HTTP
+requests. Advance the host's import cursor only after the save returns, and reuse the same IDs on retry.
+
 These inspection/evidence methods are the server-side data surface for a memory viewer: page through records,
 show source windows, distinguish inferred statements from explicit saves, and show correction dates. BetterMind's
 viewer can consume this through an application mapper; its current internal records are not structurally identical.

@@ -113,6 +113,30 @@ export function store(kit: Kit, make: () => Promise<Store> | Store) {
       expect(await store.turns.seen("p1", ["a", "b", "c"])).toEqual(["a", "b", "c"])
     })
 
+    test("batched processed IDs retain cross-session tombstones and reject ambiguous ownership atomically", async () => {
+      const store = await make()
+      await store.write("p1", {
+        turns: [
+          { session: "s1", ids: ["a"] },
+          { session: "s2", ids: ["b"] },
+        ],
+      })
+      await store.write("p1", { drop: { session: "s1" } })
+      expect(await store.turns.seen("p1", ["a", "b"])).toEqual(["a", "b"])
+      expect(await store.turns.seen("p2", ["a", "b"])).toEqual([])
+      await expect(
+        store.write("p1", {
+          windows: [window("invalid", "p1", "s1", 1)],
+          turns: [
+            { session: "s1", ids: ["c"] },
+            { session: "s2", ids: ["c"] },
+          ],
+        }),
+      ).rejects.toThrow()
+      expect(await store.windows.get("p1", ["invalid"])).toEqual([])
+      expect(await store.turns.seen("p1", ["c"])).toEqual([])
+    })
+
     test("raw log: immutable originals, scoped reads, erasure and replay tombstones", async () => {
       const store = await make()
       const turn: Turn.Info = { id: "t1", role: "person", text: "original words", at: at(1) }

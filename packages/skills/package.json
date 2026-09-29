@@ -1,6 +1,6 @@
 {
   "name": "@fluiddb/skills",
-  "version": "1.0.0-next.4",
+  "version": "1.0.0-next.5",
   "description": "Portable FluidDB memory and feedback skills with verified MCP manifests",
   "type": "module",
   "exports": {

@@ -257,14 +257,9 @@ export function store(sql: Sql) {
         blob(Vector.unit(x.vector)),
       )
     }
-    if (changes.turns) {
-      for (const id of changes.turns.ids) {
-        sql.run(
-          "INSERT OR REPLACE INTO fluid_turns (person, id, session) VALUES (?, ?, ?)",
-          person,
-          id,
-          changes.turns.session,
-        )
+    for (const batch of Write.turnBatches(changes)) {
+      for (const id of batch.ids) {
+        sql.run("INSERT OR REPLACE INTO fluid_turns (person, id, session) VALUES (?, ?, ?)", person, id, batch.session)
       }
     }
     if (changes.dossier) {

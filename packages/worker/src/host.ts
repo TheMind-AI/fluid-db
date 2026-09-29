@@ -224,6 +224,15 @@ export function create(deps: Deps) {
         }
         return result
       }),
+    rememberMany: (person: string, input: Api.RememberMany): Promise<Api.Remembered[]> =>
+      serial(async () => {
+        const results = await memory.rememberMany({ memories: input, person })
+        if (results.some((result) => !result.duplicate)) {
+          revisions.set(person, (revisions.get(person) ?? 0) + 1)
+          await alarm.set(now() + settings.delay * 1000)
+        }
+        return results
+      }),
     inspect: (person: string, input: Api.Inspect) => memory.inspect(person, input),
     evidence: (person: string, input: Api.Evidence) => memory.evidence(person, input),
     // Turns of the session still waiting go too; the dossier is rewritten soon after.
@@ -305,6 +314,7 @@ export interface Service {
   recall(person: string, ask: Api.Ask): Promise<Result<Api.Answer>>
   dossier(person: string): Promise<Result<Dossier.Info | null>>
   remember(person: string, request: Api.Remember): Promise<Result<Api.Remembered>>
+  rememberMany(person: string, request: Api.RememberMany): Promise<Result<Api.Remembered[]>>
   inspect(person: string, request: Api.Inspect): Promise<Result<Api.Page>>
   evidence(person: string, request: Api.Evidence): Promise<Result<Api.Sources>>
   source(person: string, request: Api.Source): Promise<Result<Api.SourcePage>>
@@ -322,6 +332,7 @@ export function serve(host: Host): Service {
     recall: (person, ask) => settle(() => host.recall(person, ask)),
     dossier: (person) => settle(() => host.dossier(person)),
     remember: (person, request) => settle(() => host.remember(person, request)),
+    rememberMany: (person, request) => settle(() => host.rememberMany(person, request)),
     inspect: (person, request) => settle(() => host.inspect(person, request)),
     evidence: (person, request) => settle(() => host.evidence(person, request)),
     source: (person, request) => settle(() => host.source(person, request)),
