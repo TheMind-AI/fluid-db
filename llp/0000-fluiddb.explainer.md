@@ -68,6 +68,7 @@ live here as numbered, living documents, and code points at them with `@ref` com
 | 0024 / 0024.000 | RFC / Research | TypeScript replay evaluation protocol and engineering verification |
 | 0024.001 / 0024.001.000 | RFC / Research | Swappable SDK components, portable evaluator, and real-provider comparison |
 | 0024.002 / 0024.002.000 | RFC / Research | Longer product continuity, complete legacy import and native loading recovery |
+| 0024.003 / 0024.003.000 | RFC / Research | Product save latency: controlled adapter comparison, guard phases and real embedding timings |
 
 ## Where things live
 
