@@ -151,7 +151,11 @@ incomplete older chunk formats, and report source drift during read-only inspect
 against an unpublished version or a local tarball dependency. Preview publication and code merge do not deploy
 the API, migrate production accounts, or upload TestFlight.
 
-## Batch-save release candidate: 1.0.0-next.5
+## Batch-save release candidate: 1.0.0-next.6
+
+The `v1.0.0-next.5` tag passed verification but did not publish: npm interpreted the unprefixed artifact path
+as a GitHub repository. The publishing command now prefixes local paths with `./`. The failed tag is retained;
+`next.6` carries the same SDK implementation and is the next release attempt.
 
 This candidate adds bounded independent `rememberMany` saves across the SDK and HTTP service. A batch preserves
 individual source sessions, dates, pinning and retry identity while sharing embedding work and one atomic

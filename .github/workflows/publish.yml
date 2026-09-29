@@ -38,7 +38,7 @@ jobs:
           shopt -s nullglob
           artifacts=(release/*.tgz)
           test "${#artifacts[@]}" -eq 1
-          npm publish "${artifacts[0]}" --access public --tag next --ignore-scripts --registry=https://registry.npmjs.org/
+          npm publish "./${artifacts[0]}" --access public --tag next --ignore-scripts --registry=https://registry.npmjs.org/
 
   verify-registry:
     needs: publish

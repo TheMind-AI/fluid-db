@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "@fluiddb/core",
-  "version": "1.0.0-next.5",
+  "version": "1.0.0-next.6",
   "description": "FluidDB core: the ports and the memory (windows, statements, links, dossier, picker, detector)",
   "type": "module",
   "exports": {

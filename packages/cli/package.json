@@ -1,6 +1,6 @@
 {
   "name": "@fluiddb/cli",
-  "version": "1.0.0-next.5",
+  "version": "1.0.0-next.6",
   "description": "FluidDB feedback and portable memory skills from the command line",
   "type": "module",
   "exports": {
