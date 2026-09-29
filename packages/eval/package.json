@@ -1,6 +1,6 @@
 {
   "name": "@fluiddb/eval",
-  "version": "1.0.0-next.4",
+  "version": "1.0.0-next.5",
   "description": "Portable FluidDB SDK evaluation and paired component comparisons",
   "type": "module",
   "exports": {

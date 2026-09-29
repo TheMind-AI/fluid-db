@@ -9,6 +9,7 @@ export interface Service {
   recall(ask: Api.Ask, call?: Call): Promise<Api.Answer>
   dossier(call?: Call): Promise<Dossier.Info | undefined>
   remember(input: Api.Remember, call?: Call): Promise<Api.Remembered>
+  rememberMany(input: Api.RememberMany, call?: Call): Promise<Api.Remembered[]>
   inspect(query?: Api.Inspect, call?: Call): Promise<Api.Page>
   evidence(query: Api.Evidence, call?: Call): Promise<Api.Sources>
   source(input: Api.Source, call?: Call): Promise<Api.SourcePage>
@@ -34,6 +35,7 @@ export function bind(memory: Memory.Service, id: string): Service {
       return memory.dossier(person)
     },
     remember: (input, call) => memory.remember({ ...input, person }, call),
+    rememberMany: (memories, call) => memory.rememberMany({ person, memories }, call),
     inspect: (query, call) => memory.inspect(person, query, call),
     evidence: (query, call) => memory.evidence(person, query, call),
     source: (input, call) => memory.source(person, input, call),

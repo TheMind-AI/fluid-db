@@ -62,6 +62,7 @@ export interface Deps {
 
 export interface Service {
   remember(input: { person: string } & Api.Remember, call?: Call): Promise<Api.Remembered>
+  rememberMany(input: { person: string; memories: Api.RememberMany }, call?: Call): Promise<Api.Remembered[]>
   inspect(person: string, query?: Api.Inspect, call?: Call): Promise<Api.Page>
   evidence(person: string, query: Api.Evidence, call?: Call): Promise<Api.Sources>
   // Adds a session's turns: windows, and statements linked to what was said before. Turns already ingested are
@@ -571,6 +572,8 @@ export function create(deps: Deps): Service {
         const result = await Save.remember(store, embedder, person, request, call)
         return result
       }),
+    rememberMany: (input, call) =>
+      serial(input.person, () => Save.rememberMany(store, embedder, input.person, input.memories, call)),
     inspect: (person, query, call) => Inspect.page(store, person, query, call),
     evidence: (person, query, call) => Inspect.evidence(store, person, query, call),
     ingest: (input, call) => serial(input.person, () => ingest(input, call)),

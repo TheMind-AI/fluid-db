@@ -78,7 +78,7 @@ export interface Changes {
   groups?: Group.Info[]
   vectors?: Entry[]
   // Turns ingested, so they are skipped when sent again.
-  turns?: { session: string; ids: string[] }
+  turns?: { session: string; ids: string[] } | { session: string; ids: string[] }[]
   // The dossier, and the windows it now includes.
   dossier?: { info: Dossier.Info; windows: string[] }
   drop?: {

@@ -42,6 +42,9 @@ export class Person extends DurableObject<Config.Vars> implements Host.Service {
   remember(person: string, request: Api.Remember) {
     return this.service.remember(person, request)
   }
+  rememberMany(person: string, request: Api.RememberMany) {
+    return this.service.rememberMany(person, request)
+  }
   inspect(person: string, request: Api.Inspect) {
     return this.service.inspect(person, request)
   }

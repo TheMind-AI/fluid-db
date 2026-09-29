@@ -80,6 +80,8 @@ export function create(options: Options) {
     },
     remember: (id: string, request: Api.Remember, call?: Call) =>
       send("POST", `${path(id)}/remember`, Api.Remembered, Api.Remember.parse(request), call),
+    rememberMany: (id: string, request: Api.RememberMany, call?: Call) =>
+      send("POST", `${path(id)}/remember/batch`, Api.RememberedMany, Api.RememberMany.parse(request), call),
     inspect: (id: string, request: Api.Inspect = {}, call?: Call) =>
       send("POST", `${path(id)}/inspect`, Api.Page, Api.Inspect.parse(request), call),
     evidence: (id: string, request: Api.Evidence, call?: Call) =>
@@ -106,6 +108,7 @@ export function create(options: Options) {
         recall: (ask, call) => api.recall(id, ask, call),
         dossier: (call) => api.dossier(id, call),
         remember: (request, call) => api.remember(id, request, call),
+        rememberMany: (request, call) => api.rememberMany(id, request, call),
         inspect: (request, call) => api.inspect(id, request, call),
         evidence: (request, call) => api.evidence(id, request, call),
         source: (request, call) => api.source(id, request, call),

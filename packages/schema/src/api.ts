@@ -51,12 +51,25 @@ export const Remember = z.strictObject({
 })
 export type Remember = z.input<typeof Remember>
 
+// Independent saves share transport and commit work. Corrections still use remember.
+export const RememberMany = z
+  .array(Remember.omit({ replaces: true }))
+  .min(1)
+  .max(20)
+  .superRefine((items, ctx) => {
+    if (new Set(items.map((item) => item.id)).size !== items.length)
+      ctx.addIssue({ code: "custom", message: "Each save in a batch needs a distinct ID." })
+  })
+export type RememberMany = z.input<typeof RememberMany>
+
 export const Remembered = z.strictObject({
   saved: z.literal(true),
   duplicate: z.boolean(),
   statement: Statement.Info,
 })
 export type Remembered = z.infer<typeof Remembered>
+
+export const RememberedMany = z.array(Remembered).min(1).max(20)
 
 export const Inspect = z.strictObject({
   kind: z.enum(["statements", "windows"]).default("statements"),
