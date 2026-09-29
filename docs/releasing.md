@@ -1,16 +1,13 @@
 # npm release and backend integration
 
-The newest published preview is **one public package, @fluiddb/fluiddb at 1.0.0-next.4**. SDK, adapters, MCP, evaluation,
+The public distribution is **one package, @fluiddb/fluiddb**. SDK, adapters, MCP, evaluation,
 feedback and skills are entry points of that package. The internal workspaces stay private. The maintainer
 selected this name on 2026-09-28. Local tests do not publish or reserve names.
 
-Install the newest complete preview with `npm install @fluiddb/fluiddb@next`, or pin `1.0.0-next.4` as the backend
-does. `next` resolves to `1.0.0-next.4`; `latest` remains `1.0.0-next.1`. Publication succeeded after the maintainer's
-fresh passkey check. Registry tarball integrity matches the verified artifact, and a fresh install
-with an empty npm cache passed the external Node/NodeNext, MCP/CLI and workerd consumer checks. The backend also
-passes its API checks with the exact registry dependency. Receipts and consumer checks are in
-`.context/releases/1.0.0-next.4/`; backend evidence is in its `.context/next4-registry-api.log`. Initial registry metadata delays cleared
-after processing.
+Install the newest complete preview with `npm install @fluiddb/fluiddb@next`, or pin the exact preview your
+backend has verified. Check current tags with `npm view @fluiddb/fluiddb dist-tags`. Prereleases are published
+to `next`; do not assume `latest` points to the newest preview. Every release must pass the external
+Node/NodeNext, MCP/CLI and workerd consumer checks against its actual registry artifact before a backend pins it.
 
 ## Names and existing previews
 
@@ -151,13 +148,13 @@ incomplete older chunk formats, and report source drift during read-only inspect
 against an unpublished version or a local tarball dependency. Preview publication and code merge do not deploy
 the API, migrate production accounts, or upload TestFlight.
 
-## Batch-save release candidate: 1.0.0-next.6
+## Batch-save preview: 1.0.0-next.6
 
 The `v1.0.0-next.5` tag passed verification but did not publish: npm interpreted the unprefixed artifact path
 as a GitHub repository. The publishing command now prefixes local paths with `./`. The failed tag is retained;
 `next.6` carries the same SDK implementation and is the next release attempt.
 
-This candidate adds bounded independent `rememberMany` saves across the SDK and HTTP service. A batch preserves
+This preview adds bounded independent `rememberMany` saves across the SDK and HTTP service. A batch preserves
 individual source sessions, dates, pinning and retry identity while sharing embedding work and one atomic
 revision-guarded commit. Built-in stores support processed-ID batches; custom Store implementations must support
 the `Changes.turns` list form before using this API. Corrections continue to use single-save `remember`.
